@@ -1,7 +1,7 @@
 <?php
 /**
  * @wordpress-plugin
- * Plugin Name: Live Chat Button
+ * Plugin Name: Easy Sale Badges For Woocommerce
  * Plugin URI: https://www.asanaplugins.com/product/whatsapp-chat-wordpress/?utm_source=whatsapp-chat-wordpress&utm_campaign=live-chat-button&utm_medium=link
  * Description: WhatsApp Chat for WordPress and WooCommerce
  * Tags: whatsapp, whatsapp chat, whatsapp floating button, whatsapp support, whatsapp message, whatsapp business, whatsapp group, WhatsApp WooCommerce, whatsapp WordPress, whatsapp icon, click to chat
