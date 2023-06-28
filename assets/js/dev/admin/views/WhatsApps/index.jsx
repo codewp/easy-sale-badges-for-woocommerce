@@ -157,10 +157,7 @@ export default function WhatsApps() {
 				<h1 className="asnp-heading-inline">
 					{ __( 'Badges', 'asnp-easy-whatsapp' ) }
 				</h1>
-				<Link
-					to={ `/whatsapp/new` }
-					className="asnp-btn asnp-btn-primary"
-				>
+				<Link to={ `/badge/new` } className="asnp-btn asnp-btn-primary">
 					{ __( 'Add New', 'asnp-easy-whatsapp' ) }
 				</Link>
 			</div>

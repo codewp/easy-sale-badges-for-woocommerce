@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { __ } from '@wordpress/i18n';
 import Tippy from '@tippyjs/react';
 import { TwitterPicker, ChromePicker } from 'react-color';
@@ -8,6 +8,11 @@ const StyleOptions = ( props ) => {
 	const [ selectedBadgeColor, setSelectedBadgeColor ] = useState(
 		props.badgeColor
 	);
+	const [ disableHeight, setDisableHeight ] = useState( false );
+	const [ disableWidth, setDisabeWidth ] = useState( false );
+	const [ disableR, setDisableR ] = useState( false );
+	const [ disableL, setDisableL ] = useState( false );
+
 	const colors = [
 		'#095e54',
 		'#9333ea',
@@ -45,8 +50,71 @@ const StyleOptions = ( props ) => {
 		'#e5e7eb',
 		'#FFF3E4',
 	];
+
+	useEffect( () => {
+		if (
+			props.badgeStyles == 'badge2' ||
+			props.badgeStyles == 'badge3' ||
+			props.badgeStyles == 'badge4' ||
+			props.badgeStyles == 'badge5' ||
+			props.badgeStyles == 'badge6' ||
+			props.badgeStyles == 'badge7' ||
+			props.badgeStyles == 'badge8' ||
+			props.badgeStyles == 'badge9' ||
+			props.badgeStyles == 'badge10' ||
+			props.badgeStyles == 'badge12'
+		) {
+			setDisableHeight( true );
+		} else {
+			setDisableHeight( false );
+		}
+
+		if (
+			props.badgePositionX == 'left' &&
+			( props.badgeStyles == 'badge2' ||
+				props.badgeStyles == 'badge3' ||
+				props.badgeStyles == 'badge4' )
+		) {
+			setDisableR( true );
+			setDisableL( false );
+		} else if (
+			props.badgePositionX == 'right' &&
+			( props.badgeStyles == 'badge2' ||
+				props.badgeStyles == 'badge3' ||
+				props.badgeStyles == 'badge4' )
+		) {
+			setDisableR( false );
+			setDisableL( true );
+		} else if (
+			props.badgeStyles == 'badge5' ||
+			props.badgeStyles == 'badge6' ||
+			props.badgeStyles == 'badge8' ||
+			props.badgeStyles == 'badge9' ||
+			props.badgeStyles == 'badge10' ||
+			props.badgeStyles == 'badge11' ||
+			props.badgeStyles == 'badge12' ||
+			props.badgeStyles == 'badge13'
+		) {
+			setDisableR( true );
+			setDisableL( true );
+		} else if (
+			props.badgeStyles == 'badge1' ||
+			props.badgeStyles == 'badge7'
+		) {
+			setDisableR( false );
+			setDisableL( false );
+		}
+
+		if ( props.badgeStyles == 'badge11' ) {
+			setDisabeWidth( true );
+		} else if ( props.badgeStyles == 'badge13' ) {
+			setDisabeWidth( true );
+		} else {
+			setDisabeWidth( false );
+		}
+	}, [ props.badgeStyles, props.badgePositionX ] );
 	return (
-		<div className='asnp-ew-line'>
+		<div className="asnp-ew-line">
 			<div className="asnp-w-[25rem]">
 				<div className="asnp-mt-[1rem]">
 					<Tippy
@@ -103,7 +171,7 @@ const StyleOptions = ( props ) => {
 								<div className="asnp-w-full asnp-flex asnp-relative asnp-px-5 asnp-py-2 asnp-transition-all asnp-ease-in asnp-duration-75 asnp-bg-white  asnp-rounded-md group-hover:asnp-bg-opacity-0">
 									<span className="asnp-flex asnp-w-[25rem] asnp-my-2">
 										{ __(
-											'Badge Color',
+											'Label Color',
 											'asnp-easy-whatsapp'
 										) }
 									</span>
@@ -127,10 +195,15 @@ const StyleOptions = ( props ) => {
 						</span>
 						<div className="asnp-w-[11rem]">
 							<input
+								disabled={ disableWidth }
 								type="number"
 								min="0"
 								max="200"
-								className="asnp-text-field"
+								className={
+									disableWidth
+										? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
+										: 'asnp-text-field'
+								}
 								placeholder="0"
 								value={ props.widthBadge }
 								onChange={ ( e ) =>
@@ -148,10 +221,15 @@ const StyleOptions = ( props ) => {
 						</span>
 						<div className="asnp-w-[11rem] asnp-ml-4">
 							<input
+								disabled={ disableHeight }
 								type="number"
 								min="0"
 								max="200"
-								className="asnp-text-field"
+								className={
+									disableHeight
+										? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
+										: 'asnp-text-field'
+								}
 								placeholder="0"
 								value={ props.heightBadge }
 								onChange={ ( e ) =>
@@ -174,8 +252,13 @@ const StyleOptions = ( props ) => {
 						</span>
 						<div className="asnp-w-[11rem]">
 							<input
+								disabled={ disableL }
 								type="number"
-								className="asnp-text-field"
+								className={
+									disableL
+										? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
+										: 'asnp-text-field'
+								}
 								placeholder="0"
 								value={ props.topLeftRadius }
 								onChange={ ( e ) =>
@@ -193,8 +276,13 @@ const StyleOptions = ( props ) => {
 						</span>
 						<div className="asnp-w-[11rem] asnp-ml-4">
 							<input
+								disabled={ disableR }
 								type="number"
-								className="asnp-text-field"
+								className={
+									disableR
+										? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
+										: 'asnp-text-field'
+								}
 								placeholder="0"
 								value={ props.topRightRadius }
 								onChange={ ( e ) =>
@@ -214,8 +302,13 @@ const StyleOptions = ( props ) => {
 						</span>
 						<div className="asnp-w-[11rem]">
 							<input
+								disabled={ disableL }
 								type="number"
-								className="asnp-text-field"
+								className={
+									disableL
+										? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
+										: 'asnp-text-field'
+								}
 								placeholder="0"
 								value={ props.bottomLeftRadius }
 								onChange={ ( e ) =>
@@ -233,8 +326,13 @@ const StyleOptions = ( props ) => {
 						</span>
 						<div className="asnp-w-[11rem] asnp-ml-4">
 							<input
+								disabled={ disableR }
 								type="number"
-								className="asnp-text-field"
+								className={
+									disableR
+										? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
+										: 'asnp-text-field'
+								}
 								placeholder="0"
 								value={ props.bottomRightRadius }
 								onChange={ ( e ) =>
@@ -260,7 +358,6 @@ const StyleOptions = ( props ) => {
 							<input
 								type="number"
 								className="asnp-text-field"
-								placeholder="0"
 								value={ props.zIndex }
 								onChange={ ( e ) =>
 									props.onChange( 'zIndex', e.target.value )

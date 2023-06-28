@@ -7,33 +7,30 @@ import { IMAGES_URL } from '../../../utils/constants';
 
 const General = ( props ) => {
 	return (
-		<>
-			<h2>
-				{ __( 'How to redirect WhatsApp URL', 'asnp-easy-whatsapp' ) }
-			</h2>
-			<div className="asnp-flex asnp-flex-row asnp-mt-10 md:asnp-w-[16rem] asnp-w-[10rem] asnp-justify-between">
+		<div>
+			<div className="asnp-flex asnp-flex-row asnp-mt-10 md:asnp-w-[23rem] asnp-w-[16rem] asnp-justify-between">
 				<h2 className="asnp-field-title md:asnp-min-w-1/3">
-					{ __( 'Open in new tab', 'asnp-easy-whatsapp' ) }
+					{ __( 'Show default "Sale" label', 'asnp-easy-whatsapp' ) }
 				</h2>
 				<div>
 					<Toggle
-						value={ 'true' == props.openNewTab }
+						value={ 'true' == props.showLabel }
 						onChange={ ( value ) =>
 							props.onChange(
-								'openNewTab',
+								'showLabel',
 								value ? 'true' : 'false'
 							)
 						}
 					/>
 				</div>
 			</div>
-			<div className="asnp-flex asnp-flex-row asnp-mt-10 md:asnp-w-[16rem] asnp-w-[10rem]">
+			<div className="asnp-flex asnp-flex-row asnp-mt-10 md:asnp-w-[23rem] asnp-w-[17rem]">
 				<h2 className="asnp-field-title md:asnp-min-w-1/3">
-					{ __( 'Powered By', 'asnp-easy-whatsapp' ) }
+					{ __(
+						'Product Display for a Single Item',
+						'asnp-easy-whatsapp'
+					) }
 				</h2>
-				<div className="asnp-text-red-600 asnp-text-base asnp-uppercase asnp-ml-[0.3rem]">
-					{ __( '(Pro)', 'asnp-easy-whatsapp' ) }
-				</div>
 				<div className="asnp-ml-[0.5rem] asnp-cursor-pointer asnp-mt-[0.2rem]">
 					<Tippy
 						interactive={ true }
@@ -52,10 +49,15 @@ const General = ( props ) => {
 						</div>
 					</Tippy>
 				</div>
-				<div className="asnp-ml-12">
+				<div className="asnp-ml-[53px]">
 					<Toggle
-						value={ 1 }
-						onChange={ ( value ) => ( value ? 1 : 0 ) }
+						value={ 'true' == props.showSingleProduct }
+						onChange={ ( value ) =>
+							props.onChange(
+								'showSingleProduct',
+								value ? 'true' : 'false'
+							)
+						}
 					/>
 				</div>
 			</div>
@@ -205,7 +207,7 @@ const General = ( props ) => {
 			>
 				{ __( 'Save Changes', 'asnp-easy-whatsapp' ) }
 			</button>
-		</>
+		</div>
 	);
 };
 

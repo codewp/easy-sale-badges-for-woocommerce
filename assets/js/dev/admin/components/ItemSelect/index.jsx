@@ -71,6 +71,7 @@ const ItemSelect = ( {
 
 	return (
 		<AsyncSelect
+			className="!asnp-w-[20rem]"
 			value={ selectedOption }
 			onChange={ updateSelect }
 			isMulti={ isMulti }

@@ -208,7 +208,6 @@ const AdvancedOptions = (props) => {
 							<input
 								type="number"
 								className="asnp-text-field"
-								placeholder="0"
 								value={ props.zIndexAdv }
 								onChange={ ( e ) =>
 									props.onChange( 'zIndexAdv', e.target.value )

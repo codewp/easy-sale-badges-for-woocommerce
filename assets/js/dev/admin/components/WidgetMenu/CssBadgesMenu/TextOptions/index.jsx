@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { __ } from '@wordpress/i18n';
 import Tippy from '@tippyjs/react';
 import { TwitterPicker, ChromePicker } from 'react-color';
@@ -45,18 +45,34 @@ const TextOptions = ( props ) => {
 		'#e5e7eb',
 		'#FFF3E4',
 	];
+	const [ disableLineHeight, setDisableLineHeight ] = useState( false );
+
+	useEffect( () => {
+		if (
+			props.badgeStyles == 'badge7' ||
+			props.badgeStyles == 'badge8' ||
+			props.badgeStyles == 'badge9' ||
+			props.badgeStyles == 'badge10' ||
+			props.badgeStyles == 'badge12'
+		) {
+			setDisableLineHeight( true );
+		} else {
+			setDisableLineHeight( false );
+		}
+	}, [ props.badgeStyles ] );
+
 	return (
-		<div className='asnp-ew-line'>
+		<div className="asnp-ew-line">
 			<div className="asnp-w-[25rem]">
 				<div className="asnp-mt-[1rem]">
 					<label>
 						<span className="asnp-field-title">
-							{ __( 'Badge Label', 'asnp-easy-whatsapp' ) }
+							{ __( 'Label', 'asnp-easy-whatsapp' ) }
 						</span>
 						<input
 							type="text"
 							className="asnp-text-field"
-							placeholder="Badge Label"
+							placeholder="Label"
 							value={ props.badgeLabel }
 							onChange={ ( e ) =>
 								props.onChange( 'badgeLabel', e.target.value )
@@ -169,8 +185,13 @@ const TextOptions = ( props ) => {
 						</span>
 						<div className="asnp-w-[25rem]">
 							<input
+								disabled={ disableLineHeight }
 								type="number"
-								className="asnp-text-field"
+								className={
+									disableLineHeight
+										? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
+										: 'asnp-text-field'
+								}
 								min="0"
 								max="100"
 								placeholder="0"

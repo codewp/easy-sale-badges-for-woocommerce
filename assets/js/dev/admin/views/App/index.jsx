@@ -4,10 +4,8 @@ import { Routes, Route, NavLink, useLocation } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import Content from './Content';
 import WhatsApps from '../../views/WhatsApps';
-import WhatsApp from '../../views/WhatsApp';
+import Badge from '../../views/Badge';
 import Settings from '../../views/Settings';
-import Accounts from '../Accounts';
-import Account from '../Account';
 import Loading from '../../components/Loading';
 import Snackbar from './../../components/Snackbar';
 import { WhatsAppsContextProvider } from '../../contexts/WhatsApps';
@@ -46,21 +44,12 @@ export default function App() {
 						className={ ( { isActive } ) =>
 							'asnp-nav-tab-item' +
 							( isActive ||
-							-1 !== location.pathname.search( 'whatsapp/' )
+							-1 !== location.pathname.search( 'badge/' )
 								? ' asnp-nav-tab-active'
 								: '' )
 						}
 					>
 						{ __( 'Badges', 'asnp-easy-whatsapp' ) }
-					</NavLink>
-					<NavLink
-						to="/account"
-						className={ ( { isActive } ) =>
-							'asnp-nav-tab-item' +
-							( isActive ? ' asnp-nav-tab-active' : '' )
-						}
-					>
-						{ __( 'Account', 'asnp-easy-whatsapp' ) }
 					</NavLink>
 					<NavLink
 						to="/settings"
@@ -105,22 +94,17 @@ export default function App() {
 							>
 								<Routes location={ location }>
 									<Route path="/" element={ <Content /> }>
-										<Route index element={ <WhatsApps /> } />
 										<Route
-											path="whatsapp"
+											index
 											element={ <WhatsApps /> }
 										/>
 										<Route
-											path="whatsapp/:id"
-											element={ <WhatsApp /> }
+											path="badge"
+											element={ <WhatsApps /> }
 										/>
 										<Route
-											path="account"
-											element={ <Accounts /> }
-										/>
-										<Route
-											path="account/:id"
-											element={ <Account /> }
+											path="badge/:id"
+											element={ <Badge /> }
 										/>
 										<Route
 											path="settings"

@@ -3,7 +3,7 @@ import { __ } from '@wordpress/i18n';
 
 const Opacity = ( props ) => {
 	return (
-		<div className='asnp-ew-line'>
+		<div className='asnp-ew-line asnp-mt-6'>
 			<label className="asnp-space-y-1">
 				<span className="asnp-field-title asnp-text-base asnp-font-semibold">
 					{ __( 'Opacity', 'asnp-easy-whatsapp' ) }
@@ -36,7 +36,7 @@ const Opacity = ( props ) => {
 							{ __( 'Rotation', 'asnp-easy-whatsapp' ) }
 						</span>
 					</label>
-					<div className="asnp-flex asnp-justify-between">
+					<div className="asnp-flex">
 						<div className="asnp-relative asnp-pt-1">
 							<input
 								type="range"
@@ -62,7 +62,7 @@ const Opacity = ( props ) => {
 								</span>
 							</div>
 						</div>
-						<div className="asnp-relative asnp-pt-1">
+						<div className="asnp-relative asnp-pt-1 asnp-ml-8">
 							<input
 								type="range"
 								className="asnp-form-range asnp-w-[21rem] asnp-h-6 asnp-p-0 asnp-bg-transparent focus:asnp-outline-none focus:asnp-ring-0 focus:asnp-shadow-none asnp-cursor-pointer"

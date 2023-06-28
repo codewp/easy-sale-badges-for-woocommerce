@@ -12,7 +12,7 @@ const AdvancedOpacityAndPos = ( props ) => {
 			<div className="asnp-relative asnp-pt-1">
 				<input
 					type="range"
-					className="asnp-form-range asnp-w-full asnp-h-6 asnp-p-0 asnp-bg-transparent focus:asnp-outline-none focus:asnp-ring-0 focus:asnp-shadow-none asnp-cursor-pointer"
+					className="asnp-form-range asnp-w-[21rem] asnp-h-6 asnp-p-0 asnp-bg-transparent focus:asnp-outline-none focus:asnp-ring-0 focus:asnp-shadow-none asnp-cursor-pointer"
 					min="0"
 					max="1"
 					step="0.01"
@@ -21,7 +21,7 @@ const AdvancedOpacityAndPos = ( props ) => {
 						props.onChange( 'opacity', e.target.value )
 					}
 				/>
-				<div className="asnp-w-full asnp-flex asnp-justify-between asnp-text-xs asnp-px-2">
+				<div className="asnp-w-[21rem] asnp-flex asnp-justify-between asnp-text-xs asnp-px-2">
 					<span>0%</span>
 					<span>25%</span>
 					<span>50%</span>

@@ -3,7 +3,13 @@ import React, { useState } from 'react';
 const TimePicker = ( { index, time, updateTime } ) => {
 	return (
 		<div>
-			<select disabled className="asnp-ml-3">
+			<select
+				className="asnp-ml-3"
+				value={ time.start }
+				onChange={ ( e ) =>
+					updateTime( index, 'start', e.target.value )
+				}
+			>
 				<option value="00:00">00:00</option>
 				<option value="00:30">00:30</option>
 				<option value="01:00">01:00</option>
@@ -54,7 +60,11 @@ const TimePicker = ( { index, time, updateTime } ) => {
 				<option value="23:30">23:30</option>
 				<option value="23:59">23:59</option>
 			</select>
-			<select disabled className="asnp-ml-2">
+			<select
+				className="asnp-ml-2"
+				value={ time.end }
+				onChange={ ( e ) => updateTime( index, 'end', e.target.value ) }
+			>
 				<option value="00:00">00:00</option>
 				<option value="00:30">00:30</option>
 				<option value="01:00">01:00</option>

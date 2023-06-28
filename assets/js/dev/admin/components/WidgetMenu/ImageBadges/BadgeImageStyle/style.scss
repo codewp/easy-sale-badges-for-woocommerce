@@ -1,24 +1,27 @@
-.scrollbar\:\!w-1\.5::-webkit-scrollbar {
-	width: 0.375rem !important;
+.asnp-scrollBarImageB {
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
-.scrollbar\:bg-transparent::-webkit-scrollbar {
-	background-color: transparent;
+.asnp-scrollBarImageB::-webkit-scrollbar {
+	width: 8px;
+	height: 5px;
+	display: block;
+}
+.asnp-scrollBarImageB::-webkit-scrollbar-thumb {
+	background: #9ca3af;
+	border-radius: 8px;
+}
+.asnp-scrollBarImageB::-webkit-scrollbar-thumb:hover {
+	background: rgb( 196, 201, 211 );
 }
 
-.scrollbar\:\!h-1\.5::-webkit-scrollbar {
-	height: 0.375rem !important;
+.asnp-containerImage {
+	width: 8rem;
+	height: 7rem;
+	display: flex;
+	border-radius: 1rem;
+	justify-content: center;
+	border-width: 1px;
+	cursor: pointer;
 }
-
-.scrollbar-track\:\!bg-slate-500\/\[0\.16\]::-webkit-scrollbar-track {
-	background-color: rgb( 100 116 139/0.16 ) !important;
-}
-
-.scrollbar-thumb\:\!bg-slate-300::-webkit-scrollbar-thumb {
-	--tw-bg-opacity: 1 !important;
-	background-color: rgb( 215 219 216 / var( --tw-bg-opacity ) ) !important;
-}
-
-
-
-

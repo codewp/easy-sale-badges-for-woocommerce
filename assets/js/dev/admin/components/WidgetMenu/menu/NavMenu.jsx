@@ -19,43 +19,43 @@ const NavMenu = ( props ) => {
 					href="#"
 					onClick={ ( e ) => {
 						e.preventDefault();
-						setPage( '1', 'cssBadges' );
+						setPage( '1', 'cssLabel' );
 					} }
 					className={
-						( 'cssBadges' === activeMenu
+						( 'cssLabel' === activeMenu
 							? ' asnp-nav-tab-active'
 							: '' ) + ' asnp-nav-tab-item'
 					}
 				>
-					{ __( 'CSS Badges', 'asnp-easy-whatsapp' ) }
+					{ __( 'CSS Labels', 'asnp-easy-whatsapp' ) }
 				</a>
 				<a
 					href="#"
 					onClick={ ( e ) => {
 						e.preventDefault();
-						setPage( '2', 'imageBadges' );
+						setPage( '2', 'imageLabels' );
 					} }
 					className={
-						( 'imageBadges' === activeMenu
+						( 'imageLabels' === activeMenu
 							? ' asnp-nav-tab-active'
 							: '' ) + ' asnp-nav-tab-item'
 					}
 				>
-					{ __( 'Image Badges', 'asnp-easy-whatsapp' ) }
+					{ __( 'Image Labels', 'asnp-easy-whatsapp' ) }
 				</a>
 				<a
 					href="#"
 					onClick={ ( e ) => {
 						e.preventDefault();
-						setPage( '3', 'advancedBadges' );
+						setPage( '3', 'advancedLabels' );
 					} }
 					className={
-						( 'advancedBadges' === activeMenu
+						( 'advancedLabels' === activeMenu
 							? ' asnp-nav-tab-active'
 							: '' ) + ' asnp-nav-tab-item'
 					}
 				>
-					{ __( 'Advanced Badges', 'asnp-easy-whatsapp' ) }
+					{ __( 'Advanced Labels', 'asnp-easy-whatsapp' ) }
 				</a>
 				<a
 					href="#"
@@ -86,63 +86,26 @@ const NavMenu = ( props ) => {
 					{ __( 'Products Selection', 'asnp-easy-whatsapp' ) }
 				</a>
 			</nav>
-			<div className="asnp-w-[38rem] md:asnp-w-[41rem] lg:asnp-w-[45rem]">
-				{ activeStatus == 1 && (
-					<MenuItem
-						badge={ props.badge }
-						onChange={ props.onChange }
-						updateDays={ props.updateDays }
-						addWooCommerceItem={ props.addWooCommerceItem }
-						updateWooCommerceItem={ props.updateWooCommerceItem }
-						deleteWooCommerceItem={ props.deleteWooCommerceItem }
-					/>
-				) }
-				{ activeStatus == 2 && (
-					<MenuItem
-						badge={ props.badge }
-						onChange={ props.onChange }
-						updateDays={ props.updateDays }
-						addWooCommerceItem={ props.addWooCommerceItem }
-						updateWooCommerceItem={ props.updateWooCommerceItem }
-						deleteWooCommerceItem={ props.deleteWooCommerceItem }
-						addExludedPageUrl={ props.addExludedPageUrl }
-						deleteExludedPageUrl={ props.deleteExludedPageUrl }
-						updateExcludedPagesUrl={ props.updateExcludedPagesUrl }
-						addPagesUrl={ props.addPagesUrl }
-						deletePageUrl={ props.deletePageUrl }
-						updatePagesUrl={ props.updatePagesUrl }
-					/>
-				) }
-				{ activeStatus == 3 && (
-					<MenuItem
-						badge={ props.badge }
-						onChange={ props.onChange }
-						updateDays={ props.updateDays }
-						addWooCommerceItem={ props.addWooCommerceItem }
-						updateWooCommerceItem={ props.updateWooCommerceItem }
-						deleteWooCommerceItem={ props.deleteWooCommerceItem }
-					/>
-				) }
-				{ activeStatus == 4 && (
-					<MenuItem
-						badge={ props.badge }
-						onChange={ props.onChange }
-						updateDays={ props.updateDays }
-						addWooCommerceItem={ props.addWooCommerceItem }
-						updateWooCommerceItem={ props.updateWooCommerceItem }
-						deleteWooCommerceItem={ props.deleteWooCommerceItem }
-					/>
-				) }
-				{ activeStatus == 5 && (
-					<MenuItem
-						badge={ props.badge }
-						onChange={ props.onChange }
-						updateDays={ props.updateDays }
-						addWooCommerceItem={ props.addWooCommerceItem }
-						updateWooCommerceItem={ props.updateWooCommerceItem }
-						deleteWooCommerceItem={ props.deleteWooCommerceItem }
-					/>
-				) }
+			<div className="asnp-w-[45rem] md:asnp-w-[48rem] lg:asnp-w-[52rem]">
+				<MenuItem
+					badge={ props.badge }
+					onChange={ props.onChange }
+					updateDays={ props.updateDays }
+					addWooCommerceItem={ props.addWooCommerceItem }
+					updateWooCommerceItem={ props.updateWooCommerceItem }
+					deleteWooCommerceItem={ props.deleteWooCommerceItem }
+					addWooCommerceItemOr={ props.addWooCommerceItemOr }
+					updateWooCommerceItemOr={ props.updateWooCommerceItemOr }
+					deleteWooCommerceItemOr={ props.deleteWooCommerceItemOr }
+					addExludedPageUrl={ props.addExludedPageUrl }
+					deleteExludedPageUrl={ props.deleteExludedPageUrl }
+					updateExcludedPagesUrl={ props.updateExcludedPagesUrl }
+					addPagesUrl={ props.addPagesUrl }
+					deletePageUrl={ props.deletePageUrl }
+					updatePagesUrl={ props.updatePagesUrl }
+					updateAvailability={ props.updateAvailability }
+					activeStatus={ activeStatus }
+				/>
 			</div>
 		</div>
 	);

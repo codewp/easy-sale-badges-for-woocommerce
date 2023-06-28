@@ -1,0 +1,21 @@
+.asnp-scrollBarImageB {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.asnp-scrollBarImageB::-webkit-scrollbar {
+	width: 8px;
+	height: 5px;
+	display: block;
+}
+.asnp-scrollBarImageB::-webkit-scrollbar-thumb {
+	background: #9ca3af;
+	border-radius: 8px;
+}
+.asnp-scrollBarImageB::-webkit-scrollbar-thumb:hover {
+	background: rgb( 196, 201, 211 );
+}
+
+
+
+

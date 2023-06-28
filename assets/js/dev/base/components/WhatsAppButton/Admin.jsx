@@ -82,7 +82,7 @@ const Admin = ( {
 									className="asnp-ew-productBadge"
 									style={ {
 										width: `${ badge.widthBadgeImg }px`,
-										height: `90px`,
+										height: `${ badge.widthBadgeImg }px`,
 										inset: `${ insetProperty }`,
 									} }
 								>
@@ -126,6 +126,7 @@ const Admin = ( {
 													style={ {
 														transform: `${ horizAndvert }`,
 														fontSize: `${ badge.fontSizeText }px`,
+														fontWeight: '700',
 													} }
 												>
 													{ badge.badgeLabel }

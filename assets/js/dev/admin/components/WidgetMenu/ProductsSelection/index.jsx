@@ -1,10 +1,11 @@
 import React from 'react';
 import { __ } from '@wordpress/i18n';
 import Toggle from '../../Toggle';
+import WooCommerce from './WooCommerce';
 
 const ProductsSelection = ( props ) => {
 	return (
-		<div className="asnp-w-[25rem]">
+		<div>
 			<div className="asnp-w-[25rem] asnp-mt-2 asnp-text-lg asnp-font-semibold">
 				{ __( 'Products Selection', 'asnp-easy-whatsapp' ) }
 			</div>
@@ -29,18 +30,18 @@ const ProductsSelection = ( props ) => {
 					<span className="asnp-field-title">
 						{ __( 'Product List', 'asnp-easy-whatsapp' ) }
 					</span>
-					<select
-						className="asnp-block asnp-select-field"
-						value={ props.caption }
-						onChange={ ( e ) => {
-							props.onChange( 'caption', e.target.value );
-						} }
-					>
-						<option value="All">
-							{ __( 'All', 'asnp-easy-whatsapp' ) }
-						</option>
-					</select>
 				</label>
+				<WooCommerce
+					onChange={ props.onChange }
+					woocommerceItems={ props.woocommerceItems }
+					woocommerceItemsOr={ props.woocommerceItemsOr }
+					addWooCommerceItem={ props.addWooCommerceItem }
+					updateWooCommerceItem={ props.updateWooCommerceItem }
+					deleteWooCommerceItem={ props.deleteWooCommerceItem }
+					addWooCommerceItemOr={ props.addWooCommerceItemOr }
+					updateWooCommerceItemOr={ props.updateWooCommerceItemOr }
+					deleteWooCommerceItemOr={ props.deleteWooCommerceItemOr }
+				/>
 			</div>
 		</div>
 	);
