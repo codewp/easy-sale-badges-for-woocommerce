@@ -1,0 +1,51 @@
+#asnp-whatsapp-wrapper {
+	margin-left: -20px;
+	.asnp-view {
+		padding: 20px;
+	}
+
+	.asnp-ew-fade-enter {
+		opacity: 0;
+	}
+	.asnp-ew-fade-enter-active {
+		opacity: 1;
+		transition: opacity 500ms ease-in;
+	}
+	.asnp-ew-fade-exit {
+		opacity: 0;
+	}
+	.asnp-ew-fade-exit-active {
+		opacity: 0;
+		display: none;
+	}
+}
+
+.asnp-app a {
+	text-decoration: none !important;
+}
+.asnp-ew-goPro {
+	color: rgb( 23, 184, 23 ) !important;
+	font-weight: 700 !important;
+	border-bottom-width: 2px;
+	border-color: rgb( 23, 184, 23 );
+}
+
+/* Notices */
+.update-nag,
+.notice,
+.woocommerce-message {
+	display: none !important;
+}
+
+/* Overflow issue fix with react css transition */
+body.overflow-hidden {
+	overflow-y: hidden !important;
+}
+
+.asnp-itemselect {
+	input {
+		&:focus {
+			box-shadow: unset;
+		}
+	}
+}

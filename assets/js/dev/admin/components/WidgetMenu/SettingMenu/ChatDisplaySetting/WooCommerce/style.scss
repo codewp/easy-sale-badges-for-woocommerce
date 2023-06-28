@@ -1,0 +1,24 @@
+.scrollbar\:\!w-1\.5::-webkit-scrollbar {
+	width: 0.375rem !important;
+}
+
+.scrollbar\:bg-transparent::-webkit-scrollbar {
+	background-color: transparent;
+}
+
+.scrollbar\:\!h-1\.5::-webkit-scrollbar {
+	height: 0.375rem !important;
+}
+
+.scrollbar-track\:\!bg-slate-500\/\[0\.16\]::-webkit-scrollbar-track {
+	background-color: rgb( 100 116 139/0.16 ) !important;
+}
+
+.scrollbar-thumb\:\!bg-slate-300::-webkit-scrollbar-thumb {
+	--tw-bg-opacity: 1 !important;
+	background-color: rgb( 215 219 216 / var( --tw-bg-opacity ) ) !important;
+}
+
+
+
+

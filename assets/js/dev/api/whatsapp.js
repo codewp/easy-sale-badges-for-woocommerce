@@ -1,0 +1,210 @@
+import apiFetch from '@wordpress/api-fetch';
+import { __ } from '@wordpress/i18n';
+import { API_ROOT } from './constants';
+
+export const getItems = async ( data = {} ) => {
+	try {
+		const response = await apiFetch( {
+			path: `${ API_ROOT }/whatsapp`,
+		} );
+		if ( response ) {
+			return response;
+		}
+
+		throw new Error(
+			__( 'There was an error on gettings items.', 'asnp-easy-whatsapp' )
+		);
+	} catch ( error ) {
+		throw error;
+	}
+};
+
+export const getItem = async ( id ) => {
+	id = null != id ? id * 1 : 0;
+	if ( isNaN( id ) || 0 >= id ) {
+		throw new Error(
+			__( 'ID is required to get an item.', 'asnp-easy-whatsapp' )
+		);
+	}
+
+	try {
+		const response = await apiFetch( {
+			path: `${ API_ROOT }/whatsapp/${ id }`,
+			method: 'GET',
+		} );
+
+		if ( response ) {
+			return response;
+		}
+
+		throw new Error(
+			__(
+				'There was an error on getting the item.',
+				'asnp-easy-whatsapp'
+			)
+		);
+	} catch ( error ) {
+		throw error;
+	}
+};
+
+export const save = async ( data ) => {
+	if ( ! data ) {
+		throw new Error( __( 'Data is required.', 'asnp-easy-whatsapp' ) );
+	}
+
+	if ( data.id && ! isNaN( data.id * 1 ) && 0 < data.id * 1 ) {
+		return update( data );
+	}
+
+	return create( data );
+};
+
+export const create = async ( data ) => {
+	if ( ! data ) {
+		throw new Error(
+			__( 'Data is required to create an item.', 'asnp-easy-whatsapp' )
+		);
+	}
+
+	try {
+		const response = await apiFetch( {
+			path: `${ API_ROOT }/whatsapp`,
+			method: 'POST',
+			data,
+		} );
+
+		if ( response ) {
+			return response;
+		}
+
+		throw new Error(
+			__(
+				'There was an error on creating the item.',
+				'asnp-easy-whatsapp'
+			)
+		);
+	} catch ( error ) {
+		throw error;
+	}
+};
+
+export const update = async ( data ) => {
+	if ( ! data ) {
+		throw new Error(
+			__( 'Data is required to update an item.', 'asnp-easy-whatsapp' )
+		);
+	} else if ( ! data.id || isNaN( data.id * 1 ) || 0 >= data.id * 1 ) {
+		throw new Error(
+			__( 'Item ID is required to update it.', 'asnp-easy-whatsapp' )
+		);
+	}
+
+	try {
+		const response = await apiFetch( {
+			path: `${ API_ROOT }/whatsapp/${ data.id }`,
+			method: 'POST',
+			data,
+		} );
+
+		if ( response ) {
+			return response;
+		}
+
+		throw new Error(
+			__(
+				'There was an error on updating the item.',
+				'asnp-easy-whatsapp'
+			)
+		);
+	} catch ( error ) {
+		throw error;
+	}
+};
+
+export const deleteItem = async ( id ) => {
+	id *= 1;
+	if ( isNaN( id ) || 0 >= id ) {
+		throw new Error(
+			__( 'ID is required to delete an item.', 'asnp-easy-whatsapp' )
+		);
+	}
+
+	try {
+		const response = await apiFetch( {
+			path: `${ API_ROOT }/whatsapp/${ id }`,
+			method: 'DELETE',
+		} );
+
+		if ( response ) {
+			return response;
+		}
+
+		throw new Error(
+			__(
+				'There was an error on deleting the item.',
+				'asnp-easy-whatsapp'
+			)
+		);
+	} catch ( error ) {
+		throw error;
+	}
+};
+
+export const duplicate = async ( id ) => {
+	id *= 1;
+	if ( isNaN( id ) || 0 >= id ) {
+		throw new Error(
+			__( 'ID is required to duplicate an item.', 'asnp-easy-whatsapp' )
+		);
+	}
+
+	try {
+		const response = await apiFetch( {
+			path: `${ API_ROOT }/whatsapp/duplicate/${ id }`,
+			method: 'POST',
+		} );
+
+		if ( response ) {
+			return response;
+		}
+
+		throw new Error(
+			__(
+				'There was an error on duplicating the item.',
+				'asnp-easy-whatsapp'
+			)
+		);
+	} catch ( error ) {
+		throw error;
+	}
+};
+
+export const reorder = async ( data ) => {
+	if ( ! data || ! data.items || ! data.items.length ) {
+		throw new Error(
+			__( 'Items is required for reordering.', 'asnp-easy-whatsapp' )
+		);
+	}
+
+	try {
+		const response = await apiFetch( {
+			path: `${ API_ROOT }/whatsapp/reorder`,
+			method: 'POST',
+			data,
+		} );
+
+		if ( response ) {
+			return response;
+		}
+
+		throw new Error(
+			__(
+				'There was an error on duplicating the item.',
+				'asnp-easy-whatsapp'
+			)
+		);
+	} catch ( error ) {
+		throw error;
+	}
+};

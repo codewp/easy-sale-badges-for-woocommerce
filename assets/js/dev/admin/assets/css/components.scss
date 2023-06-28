@@ -1,0 +1,59 @@
+@layer components {
+	.asnp-app {
+		.asnp-btn {
+			@apply asnp-py-2 asnp-px-4 asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none;
+		}
+		.asnp-btn-primary {
+			@apply asnp-bg-indigo-500 asnp-text-white hover:asnp-text-white hover:asnp-bg-indigo-700 focus:asnp-text-white focus:asnp-outline-none;
+		}
+		.asnp-btn-secondary {
+			@apply asnp-bg-gray-100 asnp-text-black hover:asnp-text-black hover:asnp-bg-gray-200 focus:asnp-text-black focus:asnp-outline-none focus:asnp-bg-gray-200;
+		}
+		.asnp-btn-delete {
+			@apply asnp-bg-rose-500 asnp-text-white hover:asnp-text-white hover:asnp-bg-rose-600 focus:asnp-text-white focus:asnp-outline-none;
+		}
+		.asnp-btn-green {
+			@apply asnp-bg-green-500 asnp-text-white hover:asnp-text-white hover:asnp-bg-green-600 focus:asnp-text-white focus:asnp-outline-none;
+		}
+		.asnp-btn-custom {
+			@apply asnp-text-white hover:asnp-text-white  focus:asnp-text-white focus:asnp-outline-none;
+		}
+
+		.asnp-nav-tab-item {
+			@apply asnp-text-gray-600 asnp-py-4 asnp-px-6 asnp-block asnp-font-medium hover:asnp-text-indigo-500 focus:asnp-outline-none focus:asnp-shadow-none;
+			&.asnp-nav-tab-active {
+				@apply asnp-text-indigo-500 asnp-border-b-2 asnp-font-medium asnp-border-indigo-500;
+			}
+		}
+
+		.asnp-heading-inline {
+			@apply asnp-text-gray-700 asnp-text-lg asnp-font-semibold asnp-inline-block asnp-pt-1 !important;
+		}
+
+		.asnp-field-title {
+			@apply asnp-text-gray-700 asnp-font-semibold !important;
+		}
+		.asnp-text-field {
+			@apply asnp-border-0 asnp-border-b-2 asnp-border-gray-200 asnp-w-full asnp-py-2 asnp-px-4 asnp-bg-white asnp-text-gray-700 asnp-placeholder-gray-400 asnp-text-base focus:asnp-outline-none focus:asnp-ring-0 focus:asnp-border-indigo-600 hover:asnp-border-indigo-400 !important;
+		}
+		.asnp-select-field {
+			@apply asnp-w-full asnp-h-[2.2rem] asnp-py-2 asnp-pl-4 asnp-border-0 asnp-border-b-2 asnp-border-gray-200 focus:asnp-ring-0 focus:asnp-border-indigo-600 hover:asnp-border-indigo-400 !important;
+		}
+		.asnp-textarea-field {
+			@apply asnp-w-full asnp-py-2 asnp-px-4 asnp-border-0 asnp-border-b-2  asnp-border-gray-200 asnp-text-gray-700 asnp-text-base focus:asnp-ring-0 focus:asnp-border-indigo-600 hover:asnp-border-indigo-400 !important;
+		}
+		.asnp-checkbox-field {
+			@apply asnp-border-gray-300 asnp-border-2 asnp-text-black focus:asnp-border-gray-300 focus:asnp-ring-black asnp-rounded !important;
+		}
+		.wccs-dropdown-element {
+			.asnp-text-field,
+			.asnp-select-field {
+				@apply asnp-border-gray-400 focus:asnp-border-indigo-600 hover:asnp-border-indigo-400 !important;
+			}
+		}
+
+		.asnp-error-msg {
+			@apply asnp-text-rose-600 !important;
+		}
+	}
+}
