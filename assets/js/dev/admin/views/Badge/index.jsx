@@ -85,20 +85,9 @@ const defaultBadge = {
 	},
 	useTimezone: 0,
 	timezone: '',
-	buttonText: __( 'Start Chat', 'asnp-easy-whatsapp' ),
-	mobile: 'true',
-	desktop: 'true',
-	timeOnPage: 0,
-	showBtn: 1,
 	woocommerceItems: [],
 	woocommerceItemsOr: [],
-	woocommerceItemsConditions: 'any',
-	excludedPagesUrl: [],
-	pagesUrl: [],
-	accounts: [],
-	iconTextColor: '#32cd32',
-	scrollbarHeight: '290',
-	bottom: '24',
+	woocommerceItemsConditions: 'any',	
 };
 
 export default function Badge() {
