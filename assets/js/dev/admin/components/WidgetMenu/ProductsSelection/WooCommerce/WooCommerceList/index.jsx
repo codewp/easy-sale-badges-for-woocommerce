@@ -1,15 +1,11 @@
 import React from 'react';
 import { __ } from '@wordpress/i18n';
-import { XIcon } from '@heroicons/react/solid';
 import ItemSelect from './../../../../ItemSelect/index';
 
 const types = {
 	products: __( 'Products', 'asnp-easy-whatsapp' ),
-	excluded_products: __( 'Excluded Products', 'asnp-easy-whatsapp' ),
 	categories: __( 'Categories', 'asnp-easy-whatsapp' ),
-	excluded_categories: __( 'Excluded Categories', 'asnp-easy-whatsapp' ),
 	tags: __( 'Tags', 'asnp-easy-whatsapp' ),
-	excluded_tags: __( 'Excluded Tags', 'asnp-easy-whatsapp' ),
 };
 
 const WooCommerceList = ( { item, onDelete, onChange, add } ) => {
@@ -17,6 +13,7 @@ const WooCommerceList = ( { item, onDelete, onChange, add } ) => {
 		<div className="asnp-w-full asnp-mb-4 asnp-flex asnp-mt-5">
 			<select
 				className="asnp-select-field !asnp-w-48 asnp-mt-2"
+				value={ types[ item.type ] }
 				onChange={ ( e ) => {
 					updateType( e.target.value );
 				} }

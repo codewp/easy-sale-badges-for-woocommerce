@@ -159,7 +159,7 @@ export default function Badge() {
 	const addGroup = () => {
 		setBadge( ( prev ) => ( {
 			...prev,
-			items: [ ...prev.items, initialItem ],
+			items: [ ...prev.items, [ initialItem ] ],
 		} ) );
 	};
 
