@@ -27,14 +27,14 @@ const WooCommerce = ( { onChange } ) => {
 	return (
 		<div className="asnp-mt-4">
 			<div className="asnp-w-full asnp-mb-4">
-				{ badge.items.map( ( groupIndex ,index ) => (
+				{ badge.items.map( ( groupIndex, index ) => (
 					<div key={ groupIndex }>
 						<label className="asnp-block asnp-space-y-1">
 							<span className="asnp-field-title">
 								{ __( 'Or', 'asnp-easy-whatsapp' ) }
 							</span>
 						</label>
-						{ badge.items[ index ].map( ( item ) => (
+						{ badge.items[ index ].map( ( item, index ) => (
 							<div key={ index }>
 								<div className="asnp-w-full asnp-mb-4 asnp-flex asnp-mt-5">
 									<select
@@ -88,9 +88,7 @@ const WooCommerce = ( { onChange } ) => {
 										}
 										<button
 											className="asnp-mb-4 asnp-ml-3 asnp-mt-2 asnp-btn-primary asnp-py-1 asnp-h-[2rem] asnp-w-[4rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
-											onClick={ () =>
-												addItem( groupIndex )
-											}
+											onClick={ () => addItem( index ) }
 										>
 											{ __(
 												'and',
