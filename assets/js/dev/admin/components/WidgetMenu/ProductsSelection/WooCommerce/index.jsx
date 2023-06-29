@@ -98,7 +98,7 @@ const WooCommerce = ( { onChange } ) => {
 										<button
 											className="asnp-mb-4 asnp-ml-3 asnp-mt-2 asnp-btn-primary asnp-py-1 asnp-h-[2rem] asnp-w-[4rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
 											onClick={ () =>
-												addItem( groupIndex )
+												addItem( groupIndex, index )
 											}
 										>
 											{ __(

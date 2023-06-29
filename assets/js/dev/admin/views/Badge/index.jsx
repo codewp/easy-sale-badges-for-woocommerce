@@ -177,10 +177,16 @@ export default function Badge() {
 		} );
 	};
 
-	const addItem = ( groupIndex ) => {
+	const addItem = ( groupIndex, index ) => {
 		setBadge( ( prev ) => {
 			const updatedItems = prev.items.map( ( group, i ) =>
-				i === groupIndex ? [ ...group, { ...initialItem } ] : group
+				i === groupIndex
+					? [
+							...group.slice( 0, index ),
+							{ ...initialItem },
+							...group.slice( index + 1 ),
+					  ]
+					: group
 			);
 			return { ...prev, items: updatedItems };
 		} );
