@@ -16,36 +16,34 @@ const WooCommerce = ( { onChange } ) => {
 		updateItem,
 		deleteItem,
 	} = useContext( BadgeContext );
-	const [ items, setItems ] = useState( [] );
-	const [ or, setOr ] = useState( false );
-
-	const updateType = ( value ) => {
-		setItems( [] );
-		setType( value );
-	};
 
 	return (
 		<div className="asnp-mt-4">
 			<div className="asnp-w-full asnp-mb-4">
-				{ badge.items.map( ( groupIndex, index, item ) => (
-					<div key={ index }>
+				{ badge.items.map( ( group, groupIndex ) => (
+					<div key={ groupIndex }>
 						<label className="asnp-block asnp-space-y-1">
 							<span className="asnp-field-title">
 								{ __( 'Or', 'asnp-easy-whatsapp' ) }
 							</span>
 						</label>
-						{ badge.items[ index ].map( () => (
-							<div>
-								<div
-									className="asnp-w-full asnp-mb-4 asnp-flex asnp-mt-5"
-									key={ groupIndex }
-								>
+						{ group.map( ( item, index ) => (
+							<div key={ index }>
+								<div className="asnp-w-full asnp-mb-4 asnp-flex asnp-mt-5">
 									<select
 										className="asnp-select-field !asnp-w-48 asnp-mt-2"
-										value={ badge.items.type }
-										onChange={ ( e ) => {
-											updateType( e.target.value );
-										} }
+										value={
+											badge.items[ groupIndex ][ index ]
+												.type
+										}
+										onChange={ ( e ) =>
+											updateItem(
+												groupIndex,
+												index,
+												'type',
+												e.target.value
+											)
+										}
 									>
 										<option value={ 'products' }>
 											{ __(
@@ -99,7 +97,9 @@ const WooCommerce = ( { onChange } ) => {
 										}
 										<button
 											className="asnp-mb-4 asnp-ml-3 asnp-mt-2 asnp-btn-primary asnp-py-1 asnp-h-[2rem] asnp-w-[4rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
-											onClick={ () => addItem( index ) }
+											onClick={ () =>
+												addItem( groupIndex )
+											}
 										>
 											{ __(
 												'and',
