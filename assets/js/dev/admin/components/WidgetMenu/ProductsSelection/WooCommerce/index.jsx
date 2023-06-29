@@ -28,14 +28,14 @@ const WooCommerce = ( { onChange } ) => {
 		<div className="asnp-mt-4">
 			<div className="asnp-w-full asnp-mb-4">
 				{ badge.items.map( ( groupIndex, index ) => (
-					<div key={ groupIndex }>
+					<div key={ index }>
 						<label className="asnp-block asnp-space-y-1">
 							<span className="asnp-field-title">
 								{ __( 'Or', 'asnp-easy-whatsapp' ) }
 							</span>
 						</label>
-						{ badge.items[ index ].map( ( item, index ) => (
-							<div key={ index }>
+						{ badge.items[ index ].map( ( item ) => (
+							<div>
 								<div className="asnp-w-full asnp-mb-4 asnp-flex asnp-mt-5">
 									<select
 										className="asnp-select-field !asnp-w-48 asnp-mt-2"
@@ -98,7 +98,7 @@ const WooCommerce = ( { onChange } ) => {
 										<button
 											className="asnp-mb-4 asnp-mt-2 asnp-ml-3 asnp-btn-delete asnp-py-1 asnp-h-[2rem] asnp-w-[4rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
 											onClick={ () =>
-												deleteItem( index )
+												deleteItem( groupIndex, index )
 											}
 										>
 											{ __(
