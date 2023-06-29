@@ -27,18 +27,22 @@ const WooCommerce = ( { onChange } ) => {
 	return (
 		<div className="asnp-mt-4">
 			<div className="asnp-w-full asnp-mb-4">
-				{ badge.items.map( ( groupIndex, index ) => (
+				{ badge.items.map( ( groupIndex, index, item ) => (
 					<div key={ index }>
 						<label className="asnp-block asnp-space-y-1">
 							<span className="asnp-field-title">
 								{ __( 'Or', 'asnp-easy-whatsapp' ) }
 							</span>
 						</label>
-						{ badge.items[ index ].map( ( item ) => (
+						{ badge.items[ index ].map( () => (
 							<div>
-								<div className="asnp-w-full asnp-mb-4 asnp-flex asnp-mt-5">
+								<div
+									className="asnp-w-full asnp-mb-4 asnp-flex asnp-mt-5"
+									key={ groupIndex }
+								>
 									<select
 										className="asnp-select-field !asnp-w-48 asnp-mt-2"
+										value={ badge.items.type }
 										onChange={ ( e ) => {
 											updateType( e.target.value );
 										} }
@@ -83,7 +87,14 @@ const WooCommerce = ( { onChange } ) => {
 											<ItemSelect
 												items={ item }
 												type={ type }
-												onChange={ setItems }
+												onChange={ ( value ) =>
+													updateItem(
+														groupIndex,
+														index,
+														'items',
+														value
+													)
+												}
 											/>
 										}
 										<button
