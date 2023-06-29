@@ -87,8 +87,6 @@ const defaultBadge = {
 	timezone: '',
 	selectedDateFrom: '',
 	selectedDateTo: '',
-	woocommerceItems: [],
-	woocommerceItemsOr: [],
 	woocommerceItemsConditions: 'any',
 	items: [
 		[
