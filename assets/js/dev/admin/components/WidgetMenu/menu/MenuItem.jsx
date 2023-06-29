@@ -58,7 +58,7 @@ const MenuItem = ( props ) => {
 					/>
 					<Position
 						onChange={ props.onChange }
-						badgeStyles={props.badge.badgeStyles}
+						badgeStyles={ props.badge.badgeStyles }
 						badgePositionY={ props.badge.badgePositionY }
 						badgePositionX={ props.badge.badgePositionX }
 						badgePositionTop={ props.badge.badgePositionTop }
@@ -132,6 +132,8 @@ const MenuItem = ( props ) => {
 
 			{ props.activeStatus == 4 && (
 				<Schedule
+					selectedDateFrom={ props.badge.selectedDateFrom }
+					selectedDateTo={ props.badge.selectedDateTo }
 					updateAvailability={ props.updateAvailability }
 					availability={ props.badge.availability }
 					alwaysOnline={ props.badge.alwaysOnline }

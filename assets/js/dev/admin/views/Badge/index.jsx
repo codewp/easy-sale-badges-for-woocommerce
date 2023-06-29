@@ -85,9 +85,11 @@ const defaultBadge = {
 	},
 	useTimezone: 0,
 	timezone: '',
+	selectedDateFrom: '',
+	selectedDateTo: '',
 	woocommerceItems: [],
 	woocommerceItemsOr: [],
-	woocommerceItemsConditions: 'any',	
+	woocommerceItemsConditions: 'any',
 };
 
 export default function Badge() {
@@ -283,15 +285,6 @@ export default function Badge() {
 		setBadge( ( prev ) => ( { ...prev, pagesUrl } ) );
 	};
 
-	let accounts = badge.accounts;
-	if (
-		! accounts.length &&
-		badge.tempAccounts &&
-		badge.tempAccounts.length
-	) {
-		accounts = badge.tempAccounts;
-	}
-
 	const updateAvailability = ( day, field, value ) => {
 		if ( ! badge.availability[ day ] ) {
 			return;
@@ -382,12 +375,16 @@ export default function Badge() {
 								onChange={ updateBadge }
 								updateAvailability={ updateAvailability }
 								updateWooCommerceItem={ updateWooCommerceItem }
-								updateWooCommerceItemOr={ updateWooCommerceItemOr }
+								updateWooCommerceItemOr={
+									updateWooCommerceItemOr
+								}
 								setTemplate={ setTemplate }
 								addWooCommerceItem={ addWooCommerceItem }
 								deleteWooCommerceItem={ deleteWooCommerceItem }
 								addWooCommerceItemOr={ addWooCommerceItemOr }
-								deleteWooCommerceItemOr={ deleteWooCommerceItemOr }
+								deleteWooCommerceItemOr={
+									deleteWooCommerceItemOr
+								}
 								addExludedPageUrl={ addExludedPageUrl }
 								deleteExludedPageUrl={ deleteExludedPageUrl }
 								updateExcludedPagesUrl={

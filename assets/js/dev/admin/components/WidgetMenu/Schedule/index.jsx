@@ -7,7 +7,6 @@ import AvailabilityDay from '../../AvailabilityDay';
 import TimeZone from './../../TimeZone/index';
 
 const Schedule = ( props ) => {
-
 	let timeItems = [];
 	for ( let dayName in props.availability ) {
 		timeItems.push(
@@ -31,7 +30,15 @@ const Schedule = ( props ) => {
 						<span className="asnp-field-title">
 							{ __( 'From Date / Time', 'asnp-easy-whatsapp' ) }
 						</span>
-						<Datetime />
+						<Datetime
+							value={ props.selectedDateFrom }
+							onChange={ ( momentObj ) =>
+								props.onChange(
+									'selectedDateFrom',
+									momentObj.toDate()
+								)
+							}
+						/>
 					</label>
 				</div>
 				<div className="asnp-mt-3 asnp-ml-8">
@@ -39,7 +46,15 @@ const Schedule = ( props ) => {
 						<span className="asnp-field-title">
 							{ __( 'To Date / Time', 'asnp-easy-whatsapp' ) }
 						</span>
-						<Datetime />
+						<Datetime
+							value={ props.selectedDateTo }
+							onChange={ ( momentObj ) =>
+								props.onChange(
+									'selectedDateTo',
+									momentObj.toDate()
+								)
+							}
+						/>
 					</label>
 				</div>
 			</div>
