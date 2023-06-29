@@ -145,14 +145,6 @@ const MenuItem = ( props ) => {
 				<ProductsSelection
 					onChange={ props.onChange }
 					useProductFilter={ props.badge.useProductFilter }
-					woocommerceItems={ props.badge.woocommerceItems }
-					woocommerceItemsOr={ props.badge.woocommerceItemsOr }
-					addWooCommerceItem={ props.addWooCommerceItem }
-					updateWooCommerceItem={ props.updateWooCommerceItem }
-					deleteWooCommerceItem={ props.deleteWooCommerceItem }
-					addWooCommerceItemOr={ props.addWooCommerceItemOr }
-					updateWooCommerceItemOr={ props.updateWooCommerceItemOr }
-					deleteWooCommerceItemOr={ props.deleteWooCommerceItemOr }
 				/>
 			) }
 		</div>

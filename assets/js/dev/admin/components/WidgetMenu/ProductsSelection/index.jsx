@@ -31,17 +31,7 @@ const ProductsSelection = ( props ) => {
 						{ __( 'Product List', 'asnp-easy-whatsapp' ) }
 					</span>
 				</label>
-				<WooCommerce
-					onChange={ props.onChange }
-					woocommerceItems={ props.woocommerceItems }
-					woocommerceItemsOr={ props.woocommerceItemsOr }
-					addWooCommerceItem={ props.addWooCommerceItem }
-					updateWooCommerceItem={ props.updateWooCommerceItem }
-					deleteWooCommerceItem={ props.deleteWooCommerceItem }
-					addWooCommerceItemOr={ props.addWooCommerceItemOr }
-					updateWooCommerceItemOr={ props.updateWooCommerceItemOr }
-					deleteWooCommerceItemOr={ props.deleteWooCommerceItemOr }
-				/>
+				<WooCommerce onChange={ props.onChange } />
 			</div>
 		</div>
 	);

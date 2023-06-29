@@ -21,20 +21,8 @@ const Menu = ( props ) => {
 				<NavMenu
 					badge={ props.badge }
 					onChange={ props.onChange }
-					updateAvailability={props.updateAvailability}
+					updateAvailability={ props.updateAvailability }
 					updateDays={ props.updateDays }
-					addWooCommerceItem={ props.addWooCommerceItem }
-					addWooCommerceItemOr={ props.addWooCommerceItemOr }
-					updateWooCommerceItem={ props.updateWooCommerceItem }
-					updateWooCommerceItemOr={ props.updateWooCommerceItemOr }
-					deleteWooCommerceItem={ props.deleteWooCommerceItem }
-					deleteWooCommerceItemOr={ props.deleteWooCommerceItemOr }
-					addExludedPageUrl={ props.addExludedPageUrl }
-					deleteExludedPageUrl={ props.deleteExludedPageUrl }
-					updateExcludedPagesUrl={ props.updateExcludedPagesUrl }
-					addPagesUrl={ props.addPagesUrl }
-					deletePageUrl={ props.deletePageUrl }
-					updatePagesUrl={ props.updatePagesUrl }
 				/>
 			</div>
 		</DropProvider>

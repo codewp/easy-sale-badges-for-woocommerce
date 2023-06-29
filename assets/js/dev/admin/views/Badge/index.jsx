@@ -7,8 +7,8 @@ import WhatsAppButton from '@easy-whatsapp/base-components/WhatsAppButton';
 import { WhatsAppsContext, Action } from '../../contexts/WhatsApps';
 import Toggle from '../../components/Toggle';
 import { AppContext } from './../../contexts/App';
-import { WhatsAppContext } from '../../contexts/WhatsApp';
 import { IMAGES_URL } from './../../utils/constants';
+import { BadgeContext } from '../../contexts/Badge';
 
 const defaultBadge = {
 	title: 'WhatsApp',
@@ -90,6 +90,14 @@ const defaultBadge = {
 	woocommerceItems: [],
 	woocommerceItemsOr: [],
 	woocommerceItemsConditions: 'any',
+	items: [
+		[
+			{ type: 'product', products: '' },
+			{ type: 'category', categories: '' },
+		],
+		[ {} ],
+		[ {}, {}, {} ],
+	],
 };
 
 export default function Badge() {
@@ -102,6 +110,7 @@ export default function Badge() {
 			: true
 	);
 	const { setLoading, setMessage, settings } = useContext( AppContext );
+	const [ type, setType ] = useState( 'products' );
 
 	console.log( badge );
 
@@ -142,6 +151,73 @@ export default function Badge() {
 			...prev,
 			[ field ]: value,
 		} ) );
+	};
+
+	const initialItem = {
+		type: type,
+		products: '',
+	};
+
+	const addGroup = () => {
+		setBadge( ( prev ) => ( {
+			...prev,
+			items: [ ...prev.items, initialItem ],
+		} ) );
+	};
+
+	const deleteGroup = ( index ) => {
+		setBadge( ( prev ) => {
+			const updatedItems = [ ...prev.items ];
+			const filteredItems = updatedItems.filter(
+				( item, idx ) => idx !== index
+			);
+
+			return {
+				...prev,
+				items: filteredItems,
+			};
+		} );
+	};
+
+	const addItem = ( groupIndex ) => {
+		setBadge( ( prev ) => {
+			const updatedItems = prev.items.map( ( group, i ) =>
+				i === groupIndex ? [ ...group, { ...initialItem } ] : group
+			);
+			return { ...prev, items: updatedItems };
+		} );
+	};
+
+	const updateItem = ( groupIndex, index, field, value ) => {
+		setBadge( ( prev ) => {
+			const updatedItems = prev.items.map( ( group, i ) =>
+				i === groupIndex
+					? [
+							...group.slice( 0, index ),
+							{ ...group[ index ], [ field ]: value },
+							...group.slice( index + 1 ),
+					  ]
+					: group
+			);
+			return { ...prev, items: updatedItems };
+		} );
+	};
+
+	const deleteItem = ( groupIndex, index ) => {
+		setBadge( ( prev ) => {
+			let items = [ ...prev.items ];
+			let group = [ ...items[ groupIndex ] ];
+			group = group.filter( ( item, idx ) => idx !== index );
+			if ( ! group.length ) {
+				items = items.filter( ( item, idx ) => idx !== groupIndex );
+			} else {
+				items[ groupIndex ] = group;
+			}
+			return {
+				...prev,
+				items,
+			};
+		} );
 	};
 
 	const save = async () => {
@@ -190,101 +266,6 @@ export default function Badge() {
 		}
 	};
 
-	const addWooCommerceItem = ( item ) => {
-		setBadge( ( prev ) => ( {
-			...prev,
-			woocommerceItems: [ ...prev.woocommerceItems, item ],
-		} ) );
-	};
-	const addWooCommerceItemOr = ( item ) => {
-		setBadge( ( prev ) => ( {
-			...prev,
-			woocommerceItemsOr: [ ...prev.woocommerceItemsOr, item ],
-		} ) );
-	};
-
-	const updateWooCommerceItem = ( index, field, value ) => {
-		let woocommerceItems = [ ...whatsapp.woocommerceItems ];
-		let bundle = { ...woocommerceItems[ index ], [ field ]: value };
-		woocommerceItems[ index ] = bundle;
-		setBadge( ( prev ) => ( { ...prev, woocommerceItems } ) );
-	};
-	const updateWooCommerceItemOr = ( index, field, value ) => {
-		let woocommerceItemsOr = [ ...whatsapp.woocommerceItemsOr ];
-		let bundle = { ...woocommerceItemsOr[ index ], [ field ]: value };
-		woocommerceItemsOr[ index ] = bundle;
-		setBadge( ( prev ) => ( { ...prev, woocommerceItemsOr } ) );
-	};
-
-	const deleteWooCommerceItem = ( index ) => {
-		setBadge( ( prev ) => {
-			return {
-				...prev,
-				woocommerceItems: prev.woocommerceItems.filter(
-					( item, idx ) => index !== idx
-				),
-			};
-		} );
-	};
-	const deleteWooCommerceItemOr = ( index ) => {
-		setBadge( ( prev ) => {
-			return {
-				...prev,
-				woocommerceItemsOr: prev.woocommerceItemsOr.filter(
-					( item, idx ) => index !== idx
-				),
-			};
-		} );
-	};
-
-	const addExludedPageUrl = ( value ) => {
-		setBadge( ( prev ) => ( {
-			...prev,
-			excludedPagesUrl: [ ...prev.excludedPagesUrl, value ],
-		} ) );
-	};
-
-	const deleteExludedPageUrl = ( index ) => {
-		setBadge( ( prev ) => {
-			return {
-				...prev,
-				excludedPagesUrl: prev.excludedPagesUrl.filter(
-					( item, idx ) => index !== idx
-				),
-			};
-		} );
-	};
-
-	const updateExcludedPagesUrl = ( index, value ) => {
-		let excludedPagesUrl = [ ...whatsapp.excludedPagesUrl ];
-		excludedPagesUrl[ index ] = value;
-		setBadge( ( prev ) => ( { ...prev, excludedPagesUrl } ) );
-	};
-
-	const addPagesUrl = ( value ) => {
-		setBadge( ( prev ) => ( {
-			...prev,
-			pagesUrl: [ ...prev.pagesUrl, value ],
-		} ) );
-	};
-
-	const deletePageUrl = ( index ) => {
-		setBadge( ( prev ) => {
-			return {
-				...prev,
-				pagesUrl: prev.pagesUrl.filter(
-					( item, idx ) => index !== idx
-				),
-			};
-		} );
-	};
-
-	const updatePagesUrl = ( index, value ) => {
-		let pagesUrl = [ ...whatsapp.pagesUrl ];
-		pagesUrl[ index ] = value;
-		setBadge( ( prev ) => ( { ...prev, pagesUrl } ) );
-	};
-
 	const updateAvailability = ( day, field, value ) => {
 		if ( ! badge.availability[ day ] ) {
 			return;
@@ -297,20 +278,18 @@ export default function Badge() {
 	};
 
 	return (
-		<WhatsAppContext.Provider
+		<BadgeContext.Provider
 			value={ {
 				badge,
 				updateBadge,
-				updateWooCommerceItem,
 				setTemplate,
-				addWooCommerceItem,
-				deleteWooCommerceItem,
-				addExludedPageUrl,
-				deleteExludedPageUrl,
-				updateExcludedPagesUrl,
-				addPagesUrl,
-				deletePageUrl,
-				updatePagesUrl,
+				type,
+				setType,
+				addGroup,
+				deleteGroup,
+				addItem,
+				updateItem,
+				deleteItem,
 			} }
 		>
 			<div className="asnp-relative">
@@ -374,25 +353,7 @@ export default function Badge() {
 								badge={ badge }
 								onChange={ updateBadge }
 								updateAvailability={ updateAvailability }
-								updateWooCommerceItem={ updateWooCommerceItem }
-								updateWooCommerceItemOr={
-									updateWooCommerceItemOr
-								}
 								setTemplate={ setTemplate }
-								addWooCommerceItem={ addWooCommerceItem }
-								deleteWooCommerceItem={ deleteWooCommerceItem }
-								addWooCommerceItemOr={ addWooCommerceItemOr }
-								deleteWooCommerceItemOr={
-									deleteWooCommerceItemOr
-								}
-								addExludedPageUrl={ addExludedPageUrl }
-								deleteExludedPageUrl={ deleteExludedPageUrl }
-								updateExcludedPagesUrl={
-									updateExcludedPagesUrl
-								}
-								addPagesUrl={ addPagesUrl }
-								deletePageUrl={ deletePageUrl }
-								updatePagesUrl={ updatePagesUrl }
 							/>
 						</div>
 						<div className="asnp-w-full asnp-bg-gray-200 asnp-flex">
@@ -405,6 +366,6 @@ export default function Badge() {
 					</div>
 				</div>
 			</div>
-		</WhatsAppContext.Provider>
+		</BadgeContext.Provider>
 	);
 }

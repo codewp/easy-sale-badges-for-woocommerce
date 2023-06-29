@@ -1,36 +1,27 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { __ } from '@wordpress/i18n';
 import WooCommerceList from './WooCommerceList';
 import './style.scss';
 import ItemSelect from './../../../ItemSelect/index';
+import { BadgeContext } from '../../../../contexts/Badge';
 
-const WooCommerce = ( {
-	woocommerceItems,
-	woocommerceItemsOr,
-	updateWooCommerceItem,
-	addWooCommerceItem,
-	deleteWooCommerceItem,
-	updateWooCommerceItemOr,
-	addWooCommerceItemOr,
-	deleteWooCommerceItemOr,
-	onChange,
-} ) => {
-	const [ type, setType ] = useState( 'products' );
+const WooCommerce = ( { onChange } ) => {
+	const {
+		type,
+		setType,
+		addGroup,
+		badge,
+		deleteGroup,
+		addItem,
+		updateItem,
+		deleteItem,
+	} = useContext( BadgeContext );
 	const [ items, setItems ] = useState( [] );
 	const [ or, setOr ] = useState( false );
 
 	const updateType = ( value ) => {
 		setItems( [] );
 		setType( value );
-	};
-
-	const add = () => {
-		addWooCommerceItem( { type, items } );
-		setItems( [] );
-	};
-	const addOr = () => {
-		addWooCommerceItemOr( { type, items } );
-		setItems( [] );
 	};
 
 	return (
@@ -74,27 +65,23 @@ const WooCommerce = ( {
 						}
 						<button
 							className="asnp-mb-4 asnp-ml-3 asnp-mt-2 asnp-btn-primary asnp-py-1 asnp-h-[2rem] asnp-w-[4rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
-							onClick={ add }
+							onClick={ () => {
+								addGroup();
+							} }
 						>
 							{ __( 'and', 'asnp-easy-whatsapp' ) }
 						</button>
 					</div>
 				</div>
 				<div className="asnp-block asnp-h-auto asnp-space-y-2">
-					{ woocommerceItems.map( ( item, index ) => (
+					{ badge.items.map( ( item, index ) => (
 						<div key={ index }>
 							<WooCommerceList
-								add={ add }
+								add={ () => addItem( index ) }
 								item={ item }
-								onDelete={ () =>
-									deleteWooCommerceItem( index )
-								}
+								onDelete={ () => deleteItem( index ) }
 								onChange={ ( value ) =>
-									updateWooCommerceItem(
-										index,
-										'items',
-										value
-									)
+									updateItem( index, 'items', value )
 								}
 							/>
 						</div>
@@ -109,13 +96,13 @@ const WooCommerce = ( {
 					<button
 						className="asnp-mb-4 asnp-ml-3 asnp-mt-2 asnp-btn-primary asnp-py-1 asnp-h-[2rem] asnp-w-[8rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
 						onClick={ () => {
-							addOr();
+							addGroup();
 							setOr( true );
 						} }
 					>
 						{ __( 'Add "Or" Group', 'asnp-easy-whatsapp' ) }
 					</button>
-					{ woocommerceItemsOr.map( ( item, index ) => (
+					{ badge.items.map( ( item, index ) => (
 						<div key={ index }>
 							{ or ? (
 								<label className="asnp-block asnp-space-y-1">
@@ -128,20 +115,11 @@ const WooCommerce = ( {
 							) }
 							<WooCommerceList
 								add={ () => {
-									addOr();
+									addGroup();
 									setOr( false );
 								} }
 								item={ item }
-								onDelete={ () =>
-									deleteWooCommerceItemOr( index )
-								}
-								onChange={ ( value ) =>
-									updateWooCommerceItemOr(
-										index,
-										'items',
-										value
-									)
-								}
+								onDelete={ () => deleteGroup( index ) }
 							/>
 						</div>
 					) ) }
