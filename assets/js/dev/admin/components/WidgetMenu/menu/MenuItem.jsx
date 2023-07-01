@@ -1,5 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { CSSTransition } from 'react-transition-group';
+import React, { useContext } from 'react';
 import { __ } from '@wordpress/i18n';
 import TextOptions from './../CssBadgesMenu/TextOptions/index';
 import BadgeStyles from '../CssBadgesMenu/BadgeStyles';
@@ -15,8 +14,11 @@ import AdvancedBadgeStyle from '../AdvancedBadges/AdvancedBadgeStyle';
 import BadgeImageStyle from './../ImageBadges/BadgeImageStyle/index';
 import Schedule from '../Schedule';
 import AdvancedOpacityAndPos from '../AdvancedBadges/AdvancedOpacityAndPos';
+import { BadgeContext } from '../../../contexts/Badge';
 
 const MenuItem = ( props ) => {
+	const { badgeImageFile, setBadgeImageFile } = useContext( BadgeContext );
+
 	return (
 		<div className="asnp-w-full">
 			{ props.activeStatus == 1 && (
@@ -76,7 +78,10 @@ const MenuItem = ( props ) => {
 						badgeImage={ props.badge.badgeImage }
 						imgbadge={ props.badge.imgbadge }
 					/>
-					<UploadImage />
+					<UploadImage
+						badgeImageFile={ badgeImageFile }
+						setBadgeImageFile={ setBadgeImageFile }
+					/>
 					<Options
 						onChange={ props.onChange }
 						badgePositionY={ props.badge.badgePositionY }

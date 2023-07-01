@@ -102,10 +102,12 @@ export default function Badge() {
 	);
 	const { setLoading, setMessage, settings } = useContext( AppContext );
 	const [ type, setType ] = useState( 'products' );
+	const [ badgeImageFile, setBadgeImageFile ] = useState( null );
 
 	console.log( badge );
 
 	useEffect( () => {
+		setBadgeImageFile( null );
 		if ( ! params.id || 'new' === params.id ) {
 			setBadge( { ...defaultBadge } );
 			return;
@@ -143,6 +145,24 @@ export default function Badge() {
 			[ field ]: value,
 		} ) );
 	};
+
+	useEffect( () => {
+		// badge file deleted.
+		if ( '' === badgeImageFile ) {
+			updateBadge( 'badgeImage', '' );
+			return;
+		} else if ( ! badgeImageFile ) {
+			return;
+		}
+
+		const reader = new FileReader();
+		reader.readAsDataURL( badgeImageFile );
+		reader.onload = function () {
+			updateBadge( 'badgeImage', reader.result );
+		};
+
+		return () => reader.abort();
+	}, [ badgeImageFile ] );
 
 	const initialItem = {
 		type: type,
@@ -287,6 +307,8 @@ export default function Badge() {
 				addItem,
 				updateItem,
 				deleteItem,
+				badgeImageFile,
+				setBadgeImageFile,
 			} }
 		>
 			<div className="asnp-relative">
