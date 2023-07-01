@@ -31,11 +31,10 @@ const Schedule = ( props ) => {
 							{ __( 'From Date / Time', 'asnp-easy-whatsapp' ) }
 						</span>
 						<Datetime
-							value={ props.selectedDateFrom }
 							onChange={ ( momentObj ) =>
 								props.onChange(
 									'selectedDateFrom',
-									momentObj.format('YYYY-MM-DD HH:mm:ss')
+									momentObj.format( 'YYYY-MM-DD HH:mm:ss' )
 								)
 							}
 						/>
@@ -47,11 +46,10 @@ const Schedule = ( props ) => {
 							{ __( 'To Date / Time', 'asnp-easy-whatsapp' ) }
 						</span>
 						<Datetime
-							value={ props.selectedDateTo }
 							onChange={ ( momentObj ) =>
 								props.onChange(
 									'selectedDateTo',
-									momentObj.format('YYYY-MM-DD HH:mm:ss')
+									momentObj.format( 'YYYY-MM-DD HH:mm:ss' )
 								)
 							}
 						/>
