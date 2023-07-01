@@ -22,11 +22,13 @@ const WooCommerce = ( { onChange } ) => {
 			<div className="asnp-w-full asnp-mb-4">
 				{ badge.items.map( ( group, groupIndex ) => (
 					<div key={ groupIndex }>
-						<label className="asnp-block asnp-space-y-1">
-							<span className="asnp-field-title">
-								{ __( 'Or', 'asnp-easy-whatsapp' ) }
-							</span>
-						</label>
+						{ groupIndex >= 1 && (
+							<label className="asnp-block asnp-space-y-1">
+								<span className="asnp-field-title">
+									{ __( 'Or', 'asnp-easy-whatsapp' ) }
+								</span>
+							</label>
+						) }
 						{ group.map( ( item, index ) => (
 							<div key={ index }>
 								<div className="asnp-w-full asnp-mb-4 asnp-flex asnp-mt-5">
