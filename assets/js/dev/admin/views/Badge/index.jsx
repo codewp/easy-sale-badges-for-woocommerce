@@ -88,14 +88,7 @@ const defaultBadge = {
 	selectedDateFrom: '',
 	selectedDateTo: '',
 	woocommerceItemsConditions: 'any',
-	items: [
-		[
-			{ type: 'product', products: '' },
-			{ type: 'category', categories: '' },
-		],
-		[ {} ],
-		[ {}, {}, {} ],
-	],
+	items: [],
 };
 
 export default function Badge() {
@@ -184,7 +177,7 @@ export default function Badge() {
 					? [
 							...group.slice( 0, index ),
 							{ ...initialItem },
-							...group.slice( index + 1 ),
+							...group.slice( index ),
 					  ]
 					: group
 			);

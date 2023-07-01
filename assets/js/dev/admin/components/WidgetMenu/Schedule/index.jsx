@@ -35,7 +35,7 @@ const Schedule = ( props ) => {
 							onChange={ ( momentObj ) =>
 								props.onChange(
 									'selectedDateFrom',
-									momentObj.toDate()
+									momentObj.format('YYYY-MM-DD HH:mm:ss')
 								)
 							}
 						/>
@@ -51,7 +51,7 @@ const Schedule = ( props ) => {
 							onChange={ ( momentObj ) =>
 								props.onChange(
 									'selectedDateTo',
-									momentObj.toDate()
+									momentObj.format('YYYY-MM-DD HH:mm:ss')
 								)
 							}
 						/>
