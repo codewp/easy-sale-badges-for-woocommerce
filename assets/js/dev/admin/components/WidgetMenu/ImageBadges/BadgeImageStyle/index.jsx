@@ -3654,7 +3654,7 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'badgeValen4' );
+								props.onChange( 'badgeImage', 'badgeValen9' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 183 );
@@ -3662,7 +3662,7 @@ const BadgeImageStyle = ( props ) => {
 						>
 							<img
 								className="asnp-h-full asnp-w-full asnp-border-none"
-								src={ IMAGES_URL + 'badgeValen4.png' }
+								src={ IMAGES_URL + 'badgeValen9.png' }
 							/>
 						</div>
 						<div
@@ -3673,7 +3673,7 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'badgeValen5' );
+								props.onChange( 'badgeImage', 'badgeValen10' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 184 );
@@ -3681,7 +3681,163 @@ const BadgeImageStyle = ( props ) => {
 						>
 							<img
 								className="asnp-h-full asnp-w-full asnp-border-none"
-								src={ IMAGES_URL + 'badgeValen5.png' }
+								src={ IMAGES_URL + 'badgeValen10.png' }
+							/>
+						</div>
+					</div>
+					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-4">
+						<div
+							className={
+								( selected === 185
+									? 'asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
+							}
+							onClick={ () => {
+								props.onChange( 'badgeImage', 'badgeValen11' );
+								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadge', 'true' );
+								setSelected( 185 );
+							} }
+						>
+							<img
+								className="asnp-h-full asnp-w-full asnp-border-none"
+								src={ IMAGES_URL + 'badgeValen11.png' }
+							/>
+						</div>
+						<div
+							className={
+								( selected === 186
+									? 'asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
+							}
+							onClick={ () => {
+								props.onChange( 'badgeImage', 'badgeValen12' );
+								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadge', 'true' );
+								setSelected( 186 );
+							} }
+						>
+							<img
+								className="asnp-h-full asnp-w-full asnp-border-none"
+								src={ IMAGES_URL + 'badgeValen12.png' }
+							/>
+						</div>
+						<div
+							className={
+								( selected === 187
+									? 'asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
+							}
+							onClick={ () => {
+								props.onChange( 'badgeImage', 'badgeValen13' );
+								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadge', 'true' );
+								setSelected( 187 );
+							} }
+						>
+							<img
+								className="asnp-h-full asnp-w-full asnp-border-none"
+								src={ IMAGES_URL + 'badgeValen13.png' }
+							/>
+						</div>
+						<div
+							className={
+								( selected === 188
+									? 'asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
+							}
+							onClick={ () => {
+								props.onChange( 'badgeImage', 'badgeValen14' );
+								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadge', 'true' );
+								setSelected( 188 );
+							} }
+						>
+							<img
+								className="asnp-h-full asnp-w-full asnp-border-none"
+								src={ IMAGES_URL + 'badgeValen14.png' }
+							/>
+						</div>
+						<div
+							className={
+								( selected === 189
+									? 'asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
+							}
+							onClick={ () => {
+								props.onChange( 'badgeImage', 'badgeValen15' );
+								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadge', 'true' );
+								setSelected( 189 );
+							} }
+						>
+							<img
+								className="asnp-h-full asnp-w-full asnp-border-none"
+								src={ IMAGES_URL + 'badgeValen15.png' }
+							/>
+						</div>
+					</div>
+					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-4">
+						<div
+							className={
+								( selected === 190
+									? 'asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
+							}
+							onClick={ () => {
+								props.onChange( 'badgeImage', 'badgeValen16' );
+								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadge', 'true' );
+								setSelected( 190 );
+							} }
+						>
+							<img
+								className="asnp-h-full asnp-w-full asnp-border-none"
+								src={ IMAGES_URL + 'badgeValen16.png' }
+							/>
+						</div>
+						<div
+							className={
+								( selected === 191
+									? 'asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
+							}
+							onClick={ () => {
+								props.onChange( 'badgeImage', 'badgeValen17' );
+								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadge', 'true' );
+								setSelected( 191 );
+							} }
+						>
+							<img
+								className="asnp-h-full asnp-w-full asnp-border-none"
+								src={ IMAGES_URL + 'badgeValen17.png' }
+							/>
+						</div>
+						<div
+							className={
+								( selected === 192
+									? 'asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
+							}
+							onClick={ () => {
+								props.onChange( 'badgeImage', 'badgeValen18' );
+								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadge', 'true' );
+								setSelected( 192 );
+							} }
+						>
+							<img
+								className="asnp-h-full asnp-w-full asnp-border-none"
+								src={ IMAGES_URL + 'badgeValen18.png' }
 							/>
 						</div>
 					</div>

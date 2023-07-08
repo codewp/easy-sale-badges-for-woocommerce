@@ -1812,6 +1812,36 @@ export default function BadgeCssandAdv( badge ) {
 		case 'badgeValen8':
 			icon = 'badgeValen8.png';
 			break;
+		case 'badgeValen9':
+			icon = 'badgeValen9.png';
+			break;
+		case 'badgeValen10':
+			icon = 'badgeValen10.png';
+			break;
+		case 'badgeValen11':
+			icon = 'badgeValen11.png';
+			break;
+		case 'badgeValen12':
+			icon = 'badgeValen12.png';
+			break;
+		case 'badgeValen13':
+			icon = 'badgeValen13.png';
+			break;
+		case 'badgeValen14':
+			icon = 'badgeValen14.png';
+			break;
+		case 'badgeValen15':
+			icon = 'badgeValen15.png';
+			break;
+		case 'badgeValen16':
+			icon = 'badgeValen16.png';
+			break;
+		case 'badgeValen17':
+			icon = 'badgeValen17.png';
+			break;
+		case 'badgeValen18':
+			icon = 'badgeValen18.png';
+			break;
 		default:
 			icon = '';
 	}
