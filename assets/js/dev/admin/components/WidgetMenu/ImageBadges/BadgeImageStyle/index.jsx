@@ -3139,7 +3139,7 @@ const BadgeImageStyle = ( props ) => {
 					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-4">
 						<div
 							className={
-								( selected === 157
+								( selected === 'blackF1'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3148,7 +3148,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'bfriday1' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 157 );
+								setSelected( 'blackF1' );
 							} }
 						>
 							<img
@@ -3158,7 +3158,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 158
+								( selected === 'blackF2'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3167,7 +3167,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'bfriday2' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 158 );
+								setSelected( 'blackF2' );
 							} }
 						>
 							<img
@@ -3177,7 +3177,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 159
+								( selected === 'blackF3'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3186,7 +3186,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'bfriday3' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 159 );
+								setSelected( 'blackF3' );
 							} }
 						>
 							<img
@@ -3196,7 +3196,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 160
+								( selected === 'blackF4'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3205,7 +3205,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'bfriday4' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 160 );
+								setSelected( 'blackF4' );
 							} }
 						>
 							<img
@@ -3215,7 +3215,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 161
+								( selected === 'blackF5'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3224,7 +3224,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'bfriday5' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 161 );
+								setSelected( 'blackF5' );
 							} }
 						>
 							<img
@@ -3236,7 +3236,7 @@ const BadgeImageStyle = ( props ) => {
 					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-4">
 						<div
 							className={
-								( selected === 162
+								( selected === 'blackF6'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3245,7 +3245,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'bfriday6' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 162 );
+								setSelected( 'blackF6' );
 							} }
 						>
 							<img
@@ -3255,7 +3255,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 163
+								( selected === 'blackF7'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3264,7 +3264,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'bfriday7' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 163 );
+								setSelected( 'blackF7' );
 							} }
 						>
 							<img
@@ -3274,7 +3274,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 164
+								( selected === 'blackF8'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3283,7 +3283,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'bfriday8' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 164 );
+								setSelected( 'blackF8' );
 							} }
 						>
 							<img
@@ -3293,7 +3293,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 165
+								( selected === 'blackF9'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3302,7 +3302,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'bfriday9' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 165 );
+								setSelected( 'blackF9' );
 							} }
 						>
 							<img
@@ -3312,7 +3312,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 166
+								( selected === 'blackF10'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3321,7 +3321,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'bfriday10' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 166 );
+								setSelected( 'blackF10' );
 							} }
 						>
 							<img
@@ -3333,7 +3333,7 @@ const BadgeImageStyle = ( props ) => {
 					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-4">
 						<div
 							className={
-								( selected === 167
+								( selected === 'blackF11'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3342,7 +3342,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'bfriday11' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 167 );
+								setSelected( 'blackF11' );
 							} }
 						>
 							<img
@@ -3352,7 +3352,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 168
+								( selected === 'blackF12'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3361,7 +3361,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'bfriday12' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 168 );
+								setSelected( 'blackF12' );
 							} }
 						>
 							<img
@@ -3371,7 +3371,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 169
+								( selected === 'blackF13'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3380,7 +3380,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'bfriday13' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 169 );
+								setSelected( 'blackF13' );
 							} }
 						>
 							<img
@@ -3390,7 +3390,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 170
+								( selected === 'blackF14'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3399,7 +3399,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'bfriday14' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 170 );
+								setSelected( 'blackF14' );
 							} }
 						>
 							<img
@@ -3409,7 +3409,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 171
+								( selected === 'blackF15'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3418,7 +3418,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'bfriday15' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 171 );
+								setSelected( 'blackF15' );
 							} }
 						>
 							<img
@@ -3430,7 +3430,7 @@ const BadgeImageStyle = ( props ) => {
 					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-4">
 						<div
 							className={
-								( selected === 172
+								( selected === 'blackF16'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3439,7 +3439,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'bfriday16' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 172 );
+								setSelected( 'blackF16' );
 							} }
 						>
 							<img
@@ -3449,7 +3449,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 173
+								( selected === 'blackF17'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3458,7 +3458,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'bfriday17' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 173 );
+								setSelected( 'blackF17' );
 							} }
 						>
 							<img
@@ -3468,7 +3468,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 174
+								( selected === 'blackF18'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3477,7 +3477,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'bfriday18' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 174 );
+								setSelected( 'blackF' );
 							} }
 						>
 							<img
@@ -3494,7 +3494,7 @@ const BadgeImageStyle = ( props ) => {
 					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-4">
 						<div
 							className={
-								( selected === 175
+								( selected === 'valent1'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3503,7 +3503,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'badgeValen1' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 175 );
+								setSelected( 'valent1' );
 							} }
 						>
 							<img
@@ -3513,7 +3513,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 176
+								( selected === 'valent2'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3522,7 +3522,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'badgeValen2' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 176 );
+								setSelected( 'valent2' );
 							} }
 						>
 							<img
@@ -3532,7 +3532,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 177
+								( selected === 'valent3'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-py-2 asnp-px-8 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3541,7 +3541,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'badgeValen3' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 177 );
+								setSelected( 'valent3' );
 							} }
 						>
 							<img
@@ -3551,7 +3551,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 178
+								( selected === 'valent4'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3560,7 +3560,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'badgeValen4' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 178 );
+								setSelected( 'valent4' );
 							} }
 						>
 							<img
@@ -3570,7 +3570,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 179
+								( selected === 'valent5'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-py-2 asnp-px-8 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3579,7 +3579,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'badgeValen5' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 179 );
+								setSelected( 'valent5' );
 							} }
 						>
 							<img
@@ -3591,7 +3591,7 @@ const BadgeImageStyle = ( props ) => {
 					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-4">
 						<div
 							className={
-								( selected === 180
+								( selected === 'valent6'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3600,7 +3600,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'badgeValen6' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 180 );
+								setSelected( 'valent6' );
 							} }
 						>
 							<img
@@ -3610,7 +3610,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 181
+								( selected === 'valent7'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3619,7 +3619,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'badgeValen7' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 181 );
+								setSelected( 'valent7' );
 							} }
 						>
 							<img
@@ -3629,7 +3629,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 182
+								( selected === 'valent8'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-py-2 asnp-px-8 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3638,7 +3638,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'badgeValen8' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 182 );
+								setSelected( 'valent8' );
 							} }
 						>
 							<img
@@ -3648,7 +3648,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 183
+								( selected === 'valent9'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-6 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3657,7 +3657,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'badgeValen9' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 183 );
+								setSelected( 'valent9' );
 							} }
 						>
 							<img
@@ -3667,7 +3667,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 184
+								( selected === 'valent10'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-6 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3676,7 +3676,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'badgeValen10' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 184 );
+								setSelected( 'valent10' );
 							} }
 						>
 							<img
@@ -3688,7 +3688,7 @@ const BadgeImageStyle = ( props ) => {
 					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-4">
 						<div
 							className={
-								( selected === 185
+								( selected === 'valent11'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3697,7 +3697,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'badgeValen11' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 185 );
+								setSelected( 'valent11' );
 							} }
 						>
 							<img
@@ -3707,7 +3707,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 186
+								( selected === 'valent12'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3716,7 +3716,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'badgeValen12' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 186 );
+								setSelected( 'valent12' );
 							} }
 						>
 							<img
@@ -3726,7 +3726,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 187
+								( selected === 'valent13'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3735,7 +3735,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'badgeValen13' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 187 );
+								setSelected( 'valent13' );
 							} }
 						>
 							<img
@@ -3745,7 +3745,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 188
+								( selected === 'valent14'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3754,7 +3754,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'badgeValen14' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 188 );
+								setSelected( 'valent14' );
 							} }
 						>
 							<img
@@ -3764,7 +3764,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 189
+								( selected === 'valent15'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3773,7 +3773,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'badgeValen15' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 189 );
+								setSelected( 'valent15' );
 							} }
 						>
 							<img
@@ -3785,7 +3785,7 @@ const BadgeImageStyle = ( props ) => {
 					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-4">
 						<div
 							className={
-								( selected === 190
+								( selected === 'valent16'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3794,7 +3794,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'badgeValen16' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 190 );
+								setSelected( 'valent16' );
 							} }
 						>
 							<img
@@ -3804,7 +3804,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 191
+								( selected === 'valent17'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3813,7 +3813,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'badgeValen17' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 191 );
+								setSelected( 'valent17' );
 							} }
 						>
 							<img
@@ -3823,7 +3823,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 						<div
 							className={
-								( selected === 192
+								( selected === 'valent18'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
@@ -3832,7 +3832,7 @@ const BadgeImageStyle = ( props ) => {
 								props.onChange( 'badgeImage', 'badgeValen18' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadge', 'true' );
-								setSelected( 192 );
+								setSelected( 'valent18' );
 							} }
 						>
 							<img
