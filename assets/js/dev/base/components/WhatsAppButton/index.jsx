@@ -119,6 +119,11 @@ const WhatsAppButton = ( {
 		badgeIconTwo,
 		bdgeAdvanced,
 		icon,
+		badgeTimerDiv,
+		badgeTimerDays,
+		badgeTimerHours,
+		badgeTimerMin,
+		badgeTimerSec,
 	} = BadgeCssandAdv( badge );
 
 	if ( 'front' === site ) {
@@ -145,6 +150,11 @@ const WhatsAppButton = ( {
 			badgeIcon={ badgeIcon }
 			badgeIconOne={ badgeIconOne }
 			badgeIconTwo={ badgeIconTwo }
+			badgeTimerDiv={ badgeTimerDiv }
+			badgeTimerDays={ badgeTimerDays }
+			badgeTimerHours={ badgeTimerHours }
+			badgeTimerMin={ badgeTimerMin }
+			badgeTimerSec={ badgeTimerSec }
 			bdgeAdvanced={ bdgeAdvanced }
 			horizAndvert={ horizAndvert }
 		/>

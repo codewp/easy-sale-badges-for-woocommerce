@@ -156,6 +156,7 @@ const MenuItem = ( props ) => {
 			{ props.activeStatus == 6 && (
 				<Timer
 					onChange={ props.onChange }
+					useTimer={ props.badge.useTimer }
 				/>
 			) }
 		</div>

@@ -213,6 +213,11 @@ export default function BadgeCssandAdv( badge ) {
 	let badgeIconTwo = '';
 	let bdgeAdvanced = '';
 	let icon = '';
+	let badgeTimerDiv = '';
+	let badgeTimerDays = '';
+	let badgeTimerHours = '';
+	let badgeTimerMin = '';
+	let badgeTimerSec = '';
 
 	switch ( badge.badgeStyles ) {
 		case 'badge1':
@@ -1846,5 +1851,28 @@ export default function BadgeCssandAdv( badge ) {
 			icon = '';
 	}
 
-	return { badgeIcon, badgeIconOne, badgeIconTwo, bdgeAdvanced, icon };
+	switch ( badge.badgeTimer ) {
+		case 'Timer1':
+			icon = 'badgeValen18.png';
+			break;
+		default:
+			badgeTimerDiv = '';
+			badgeTimerDays = '';
+			badgeTimerHours = '';
+			badgeTimerMin = '';
+			badgeTimerSec = '';
+	}
+
+	return {
+		badgeIcon,
+		badgeIconOne,
+		badgeIconTwo,
+		bdgeAdvanced,
+		icon,
+		badgeTimerDiv,
+		badgeTimerDays,
+		badgeTimerHours,
+		badgeTimerMin,
+		badgeTimerSec,
+	};
 }

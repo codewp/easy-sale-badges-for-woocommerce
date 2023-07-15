@@ -11,9 +11,29 @@ const Admin = ( {
 	icon,
 	horizAndvert,
 	bdgeAdvanced,
+	badgeTimerDiv,
+	badgeTimerDays,
+	badgeTimerHours,
+	badgeTimerMin,
+	badgeTimerSec,
 } ) => {
 	const Span = styled.div`
 		${ badgeIcon }
+	`;
+	const Div = styled.div`
+		${ badgeTimerDiv }
+	`;
+	const DivOne = styled.div`
+		${ badgeTimerDays }
+	`;
+	const DivTwo = styled.div`
+		${ badgeTimerHours }
+	`;
+	const DivThree = styled.div`
+		${ badgeTimerMin }
+	`;
+	const DivFour = styled.div`
+		${ badgeTimerSec }
 	`;
 	const SpanOne = styled.div`
 		${ badgeIconOne }
@@ -137,7 +157,8 @@ const Admin = ( {
 								</div>
 							) }
 							{ badge.imgbadge == 'false' &&
-								badge.imgbadgeAdv == 'false' && (
+								badge.imgbadgeAdv == 'false' &&
+								badge.useTimerBadge == 'false' && (
 									<div
 										className="asnp-ew-productBadge"
 										style={ {
@@ -174,6 +195,47 @@ const Admin = ( {
 										</Span>
 									</div>
 								) }
+							{ badge.useTimerBadge == 'true' && (
+								<div
+									className="asnp-ew-productBadge"
+									style={ {
+										inset: `${ insetProperty }`,
+									} }
+								>
+									<Div
+										className="asnp-ew-productBadge2"
+										style={ {
+											color: `${ badge.textColor }`,
+											fontSize: `${ badge.fontSizeText }px`,
+											lineHeight: `${ badge.lineHeightText }px`,
+											opacity: `${ badge.opacity }`,
+											borderTopLeftRadius: `${ badge.topLeftRadius }px`,
+											borderTopRightRadius: `${ badge.topRightRadius }px`,
+											borderBottomLeftRadius: `${ badge.bottomLeftRadius }px`,
+											borderBottomRightRadius: `${ badge.bottomRightRadius }px`,
+											zIndex: `${ badge.zIndex }`,
+											transform: `rotateX(${ badge.rotationX }deg) rotateY(${ badge.rotationY }deg) rotateZ(${ badge.rotationZ }deg)`,
+										} }
+									>
+										<DivOne>
+											<span>1</span>
+											<span>2</span>
+										</DivOne>
+										<DivTwo>
+											<span>1</span>
+											<span>2</span>
+										</DivTwo>
+										<DivThree>
+											<span>1</span>
+											<span>2</span>
+										</DivThree>
+										<DivFour>
+											<span>1</span>
+											<span>2</span>
+										</DivFour>
+									</Div>
+								</div>
+							) }
 						</div>
 					</div>
 				</div>

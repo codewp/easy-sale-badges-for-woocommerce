@@ -89,6 +89,9 @@ const defaultBadge = {
 	selectedDateTo: '',
 	woocommerceItemsConditions: 'any',
 	items: [],
+	useTimer: 'false',
+	useTimerBadge: 'false',
+	badgeTimer: '',
 };
 
 export default function Badge() {
