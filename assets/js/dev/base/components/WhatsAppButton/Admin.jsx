@@ -12,10 +12,9 @@ const Admin = ( {
 	horizAndvert,
 	bdgeAdvanced,
 	badgeTimerDiv,
-	badgeTimerDays,
-	badgeTimerHours,
-	badgeTimerMin,
-	badgeTimerSec,
+	badgeTimerCont,
+	Label,
+	TimerDate,
 } ) => {
 	const Span = styled.div`
 		${ badgeIcon }
@@ -24,16 +23,13 @@ const Admin = ( {
 		${ badgeTimerDiv }
 	`;
 	const DivOne = styled.div`
-		${ badgeTimerDays }
+		${ badgeTimerCont }
 	`;
-	const DivTwo = styled.div`
-		${ badgeTimerHours }
+	const Time = styled.div`
+		${ TimerDate }
 	`;
-	const DivThree = styled.div`
-		${ badgeTimerMin }
-	`;
-	const DivFour = styled.div`
-		${ badgeTimerSec }
+	const LabelTimer = styled.div`
+		${ Label }
 	`;
 	const SpanOne = styled.div`
 		${ badgeIconOne }
@@ -202,37 +198,23 @@ const Admin = ( {
 										inset: `${ insetProperty }`,
 									} }
 								>
-									<Div
-										className="asnp-ew-productBadge2"
-										style={ {
-											color: `${ badge.textColor }`,
-											fontSize: `${ badge.fontSizeText }px`,
-											lineHeight: `${ badge.lineHeightText }px`,
-											opacity: `${ badge.opacity }`,
-											borderTopLeftRadius: `${ badge.topLeftRadius }px`,
-											borderTopRightRadius: `${ badge.topRightRadius }px`,
-											borderBottomLeftRadius: `${ badge.bottomLeftRadius }px`,
-											borderBottomRightRadius: `${ badge.bottomRightRadius }px`,
-											zIndex: `${ badge.zIndex }`,
-											transform: `rotateX(${ badge.rotationX }deg) rotateY(${ badge.rotationY }deg) rotateZ(${ badge.rotationZ }deg)`,
-										} }
-									>
+									<Div>
 										<DivOne>
-											<span>1</span>
-											<span>2</span>
+											<Time>3</Time>
+											<LabelTimer>Days</LabelTimer>
 										</DivOne>
-										<DivTwo>
-											<span>1</span>
-											<span>2</span>
-										</DivTwo>
-										<DivThree>
-											<span>1</span>
-											<span>2</span>
-										</DivThree>
-										<DivFour>
-											<span>1</span>
-											<span>2</span>
-										</DivFour>
+										<DivOne>
+											<Time>12</Time>
+											<LabelTimer>Hours</LabelTimer>
+										</DivOne>
+										<DivOne>
+											<Time>28</Time>
+											<LabelTimer>Min</LabelTimer>
+										</DivOne>
+										<DivOne>
+											<Time>57</Time>
+											<LabelTimer>Sec</LabelTimer>
+										</DivOne>
 									</Div>
 								</div>
 							) }

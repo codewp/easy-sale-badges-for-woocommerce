@@ -214,10 +214,9 @@ export default function BadgeCssandAdv( badge ) {
 	let bdgeAdvanced = '';
 	let icon = '';
 	let badgeTimerDiv = '';
-	let badgeTimerDays = '';
-	let badgeTimerHours = '';
-	let badgeTimerMin = '';
-	let badgeTimerSec = '';
+	let badgeTimerCont = '';
+	let TimerDate = '';
+	let Label = '';
 
 	switch ( badge.badgeStyles ) {
 		case 'badge1':
@@ -1852,15 +1851,44 @@ export default function BadgeCssandAdv( badge ) {
 	}
 
 	switch ( badge.badgeTimer ) {
-		case 'Timer1':
-			icon = 'badgeValen18.png';
+		case 'timer1':
+			badgeTimerDiv = `
+			display: inline-block;
+			position: absolute;
+			left: ${ badge.badgePositionX == 'right' ? '' : '30px' };
+			right: ${ badge.badgePositionX == 'right' ? '30px' : '' };
+            height: 60px;
+			width: 270px;
+			opacity: ${ badge.opacity };
+			border-radius: 10px;
+			background-color: red;
+			`;
+			badgeTimerCont = `
+			display: inline-block;
+			padding: 6px 20px;
+			color: #FFFFFF;
+			width: 66px;
+			`;
+			TimerDate = `
+			display: block;
+			font-weight: 700;
+			text-shadow: 0px 2px 1px rgba(0,0,0,0.15);
+			line-height:30px;
+			font-size:24px;
+			`;
+			Label = `  
+			color: #FFFFFF;
+			display: block;
+			font-weight: 400;
+			font-size: 9px;
+			line-height: 11px;
+			text-shadow: 0px 2px 1px rgba(0,0,0,0.15);`;
 			break;
 		default:
 			badgeTimerDiv = '';
-			badgeTimerDays = '';
-			badgeTimerHours = '';
-			badgeTimerMin = '';
-			badgeTimerSec = '';
+			badgeTimerCont = '';
+			TimerDate = '';
+			Label = '';
 	}
 
 	return {
@@ -1870,9 +1898,8 @@ export default function BadgeCssandAdv( badge ) {
 		bdgeAdvanced,
 		icon,
 		badgeTimerDiv,
-		badgeTimerDays,
-		badgeTimerHours,
-		badgeTimerMin,
-		badgeTimerSec,
+		badgeTimerCont,
+		TimerDate,
+		Label,
 	};
 }
