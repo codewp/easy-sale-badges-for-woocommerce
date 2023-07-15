@@ -15,6 +15,7 @@ import BadgeImageStyle from './../ImageBadges/BadgeImageStyle/index';
 import Schedule from '../Schedule';
 import AdvancedOpacityAndPos from '../AdvancedBadges/AdvancedOpacityAndPos';
 import { BadgeContext } from '../../../contexts/Badge';
+import Timer from '../Timer';
 
 const MenuItem = ( props ) => {
 	const { badgeImageFile, setBadgeImageFile } = useContext( BadgeContext );
@@ -150,6 +151,11 @@ const MenuItem = ( props ) => {
 				<ProductsSelection
 					onChange={ props.onChange }
 					useProductFilter={ props.badge.useProductFilter }
+				/>
+			) }
+			{ props.activeStatus == 6 && (
+				<Timer
+					onChange={ props.onChange }
 				/>
 			) }
 		</div>

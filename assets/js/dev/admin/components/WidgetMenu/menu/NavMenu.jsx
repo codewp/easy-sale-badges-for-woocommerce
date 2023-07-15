@@ -85,6 +85,20 @@ const NavMenu = ( props ) => {
 				>
 					{ __( 'Products Selection', 'asnp-easy-whatsapp' ) }
 				</a>
+				<a
+					href="#"
+					onClick={ ( e ) => {
+						e.preventDefault();
+						setPage( '6', 'timer' );
+					} }
+					className={
+						( 'timer' === activeMenu
+							? ' asnp-nav-tab-active'
+							: '' ) + ' asnp-nav-tab-item'
+					}
+				>
+					{ __( 'Timer', 'asnp-easy-whatsapp' ) }
+				</a>
 			</nav>
 			<div className="asnp-w-[45rem] md:asnp-w-[48rem] lg:asnp-w-[52rem]">
 				<MenuItem
