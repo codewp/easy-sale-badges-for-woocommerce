@@ -8,7 +8,7 @@ import { IMAGES_URL } from '../../../utils/constants';
 const General = ( props ) => {
 	return (
 		<div>
-			<div className="asnp-flex asnp-flex-row asnp-mt-10 md:asnp-w-[23rem] asnp-w-[16rem] asnp-justify-between">
+			<div className="asnp-flex asnp-flex-row md:asnp-w-[23rem] asnp-w-[16rem] asnp-justify-between">
 				<h2 className="asnp-field-title md:asnp-min-w-1/3">
 					{ __( 'Show default "Sale" label', 'asnp-easy-whatsapp' ) }
 				</h2>
