@@ -1858,26 +1858,21 @@ export default function BadgeCssandAdv( badge ) {
 			width: 270px;
 			opacity: ${ badge.opacity };
 			border-radius: 10px;
-			background-color: red;
 			`;
 			badgeTimerCont = `
 			display: inline-block;
 			padding: 6px 20px;
-			color: #FFFFFF;
 			width: 66px;
 			`;
 			TimerDate = `
 			display: block;
 			font-weight: 700;
 			text-shadow: 0px 2px 1px rgba(0,0,0,0.15);
-			line-height:30px;
-			font-size:24px;
 			`;
 			Label = `  
-			color: #FFFFFF;
 			display: block;
 			font-weight: 400;
-			font-size: 9px;
+			font-size: 10px;
 			line-height: 11px;
 			text-shadow: 0px 2px 1px rgba(0,0,0,0.15);`;
 			break;

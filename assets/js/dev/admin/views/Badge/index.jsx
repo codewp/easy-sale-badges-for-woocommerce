@@ -95,6 +95,9 @@ const defaultBadge = {
 	labelHoursTimer: 'Hours',
 	labelMinTimer: 'Min',
 	labelSecTimer: 'Sec',
+	fontSizeLabelTimer: '24',
+	lineHeightLabelTimer: '30',
+	bgColorTimer: 'red',
 };
 
 export default function Badge() {

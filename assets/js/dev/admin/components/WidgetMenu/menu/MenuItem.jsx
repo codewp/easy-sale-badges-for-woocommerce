@@ -160,8 +160,8 @@ const MenuItem = ( props ) => {
 					onChange={ props.onChange }
 					useTimerBadge={ props.badge.useTimerBadge }
 					textColor={ props.badge.textColor }
-					fontSizeText={ props.badge.fontSizeText }
-					lineHeightText={ props.badge.lineHeightText }
+					fontSizeLabelTimer={ props.badge.fontSizeLabelTimer }
+					lineHeightLabelTimer={ props.badge.lineHeightLabelTimer }
 					badgePositionY={ props.badge.badgePositionY }
 					badgePositionX={ props.badge.badgePositionX }
 					badgePositionTop={ props.badge.badgePositionTop }

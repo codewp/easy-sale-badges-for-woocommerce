@@ -206,29 +206,64 @@ const Admin = ( {
 									className="asnp-ew-productBadge"
 									style={ {
 										inset: `${ insetProperty }`,
+										opacity: `${ badge.opacity }`,
+										zIndex: `${ badge.zIndex }`,
 									} }
 								>
-									<Div>
+									<Div
+										style={ {
+											color: `${ badge.textColor }`,
+											backgroundColor: `${ badge.bgColorTimer }`,
+										} }
+									>
 										<DivOne>
-											<Time>3</Time>
+											<Time
+												style={ {
+													fontSize: `${ badge.fontSizeLabelTimer }px`,
+													lineHeight: `${ badge.lineHeightLabelTimer }px`,
+												} }
+											>
+												3
+											</Time>
 											<LabelTimer>
 												{ badge.labelDayTimer }
 											</LabelTimer>
 										</DivOne>
 										<DivOne>
-											<Time>12</Time>
+											<Time
+												style={ {
+													fontSize: `${ badge.fontSizeLabelTimer }px`,
+													lineHeight: `${ badge.lineHeightLabelTimer }px`,
+												} }
+											>
+												12
+											</Time>
 											<LabelTimer>
 												{ badge.labelHoursTimer }
 											</LabelTimer>
 										</DivOne>
 										<DivOne>
-											<Time>28</Time>
+											<Time
+												style={ {
+													fontSize: `${ badge.fontSizeLabelTimer }px`,
+													lineHeight: `${ badge.lineHeightLabelTimer }px`,
+												} }
+											>
+												28
+											</Time>
 											<LabelTimer>
 												{ badge.labelMinTimer }
 											</LabelTimer>
 										</DivOne>
 										<DivOne>
-											<Time>57</Time>
+											<Time
+												style={ {
+													fontSize: `${ badge.fontSizeLabelTimer }px`,
+													lineHeight: `${ badge.lineHeightLabelTimer }px`,
+												} }
+											>
+												57
+											</Time>
 											<LabelTimer>
 												{ badge.labelSecTimer }
 											</LabelTimer>
