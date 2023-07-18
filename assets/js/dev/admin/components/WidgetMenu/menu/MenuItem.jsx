@@ -17,6 +17,8 @@ import AdvancedOpacityAndPos from '../AdvancedBadges/AdvancedOpacityAndPos';
 import { BadgeContext } from '../../../contexts/Badge';
 import Timer from '../Timer';
 
+import './style.scss';
+
 const MenuItem = ( props ) => {
 	const { badgeImageFile, setBadgeImageFile } = useContext( BadgeContext );
 

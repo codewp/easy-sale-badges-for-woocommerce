@@ -444,7 +444,7 @@ const Timer = ( props ) => {
 					</label>
 				</div>
 			</div>
-			<div className="asnp-ew-line">
+			<div className="asnp-ew-line asnp-mt-6">
 				<label className="asnp-space-y-1">
 					<span className="asnp-field-title asnp-text-base asnp-font-semibold">
 						{ __( 'Opacity', 'asnp-easy-whatsapp' ) }
@@ -471,7 +471,7 @@ const Timer = ( props ) => {
 					</div>
 				</div>
 			</div>
-			<div className="asnp-ew-line">
+			<div className="asnp-ew-line asnp-mt-6">
 				<div className="asnp-mt-4">
 					<span className="asnp-field-title asnp-text-base asnp-font-semibold">
 						{ __( 'Label Position', 'asnp-easy-whatsapp' ) }
@@ -495,7 +495,7 @@ const Timer = ( props ) => {
 							<button
 								type="button"
 								className={
-									'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
+									'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
 									( props.badgePositionY == 'bottom' &&
 										'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
 								}
@@ -508,8 +508,24 @@ const Timer = ( props ) => {
 							>
 								{ __( 'Bottom', 'asnp-easy-whatsapp' ) }
 							</button>
+							<button
+								type="button"
+								className={
+									'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
+									( props.badgePositionY == 'Center' &&
+										'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
+								}
+								onClick={ () => {
+									props.onChange(
+										'badgePositionY',
+										'Center'
+									);
+								} }
+							>
+								{ __( 'Center', 'asnp-easy-whatsapp' ) }
+							</button>
 						</div>
-						<div className="asnp-w-[10rem] asnp-flex" role="group">
+						<div className="asnp-w-[10rem] asnp-flex asnp-ml-24" role="group">
 							<button
 								disabled={ disEleven }
 								type="button"
