@@ -157,6 +157,17 @@ const MenuItem = ( props ) => {
 				<Timer
 					onChange={ props.onChange }
 					useTimer={ props.badge.useTimer }
+					textColor={ props.badge.textColor }
+					fontSizeText={ props.badge.fontSizeText }
+					lineHeightText={ props.badge.lineHeightText }
+					badgePositionY={ props.badge.badgePositionY }
+					badgePositionX={ props.badge.badgePositionX }
+					badgePositionTop={ props.badge.badgePositionTop }
+					badgePositionBottom={ props.badge.badgePositionBottom }
+					badgePositionLeft={ props.badge.badgePositionLeft }
+					badgePositionRight={ props.badge.badgePositionRight }
+					zIndexAdv={ props.badge.zIndexAdv }
+					opacity={ props.badge.opacity }
 				/>
 			) }
 		</div>
