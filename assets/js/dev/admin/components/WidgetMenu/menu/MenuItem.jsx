@@ -158,7 +158,7 @@ const MenuItem = ( props ) => {
 			{ props.activeStatus == 6 && (
 				<Timer
 					onChange={ props.onChange }
-					useTimer={ props.badge.useTimer }
+					useTimerBadge={ props.badge.useTimerBadge }
 					textColor={ props.badge.textColor }
 					fontSizeText={ props.badge.fontSizeText }
 					lineHeightText={ props.badge.lineHeightText }

@@ -57,6 +57,16 @@ const Admin = ( {
 		badge.badgePositionX == 'right'
 	) {
 		insetProperty = `auto ${ badge.badgePositionRight }px ${ badge.badgePositionBottom }px auto`;
+	} else if (
+		badge.badgePositionY == 'top' &&
+		badge.badgePositionX == 'center'
+	) {
+		insetProperty = `${ badge.badgePositionTop }px auto auto 55px`;
+	} else if (
+		badge.badgePositionY == 'bottom' &&
+		badge.badgePositionX == 'center'
+	) {
+		insetProperty = `auto auto ${ badge.badgePositionBottom }px 55px`;
 	}
 
 	let heightContBadge = '';

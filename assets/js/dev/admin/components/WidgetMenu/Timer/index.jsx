@@ -34,6 +34,9 @@ const Timer = ( props ) => {
 		if ( props.badgePositionX === 'left' ) {
 			setDisablePositionRight( true );
 			setDisablePositionLeft( false );
+		} else if ( props.badgePositionX === 'center' ) {
+			setDisablePositionRight( true );
+			setDisablePositionLeft( true );
 		} else {
 			setDisablePositionLeft( true );
 			setDisablePositionRight( false );
@@ -102,10 +105,10 @@ const Timer = ( props ) => {
 						{ __( 'Status', 'asnp-easy-whatsapp' ) }
 					</span>
 					<Toggle
-						value={ 'true' == props.useTimer }
+						value={ 'true' == props.useTimerBadge }
 						onChange={ ( value ) =>
 							props.onChange(
-								'useTimer',
+								'useTimerBadge',
 								value ? 'true' : 'false'
 							)
 						}

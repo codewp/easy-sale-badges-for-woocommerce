@@ -89,7 +89,6 @@ const defaultBadge = {
 	selectedDateTo: '',
 	woocommerceItemsConditions: 'any',
 	items: [],
-	useTimer: 'false',
 	useTimerBadge: 'false',
 	badgeTimer: '',
 	labelDayTimer: 'Days',

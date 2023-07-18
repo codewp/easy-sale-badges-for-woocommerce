@@ -1854,9 +1854,6 @@ export default function BadgeCssandAdv( badge ) {
 		case 'timer1':
 			badgeTimerDiv = `
 			display: inline-block;
-			position: absolute;
-			left: ${ badge.badgePositionX == 'right' ? '' : '30px' };
-			right: ${ badge.badgePositionX == 'right' ? '30px' : '' };
             height: 60px;
 			width: 270px;
 			opacity: ${ badge.opacity };
