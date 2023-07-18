@@ -210,12 +210,7 @@ const Admin = ( {
 										zIndex: `${ badge.zIndex }`,
 									} }
 								>
-									<Div
-										style={ {
-											color: `${ badge.textColor }`,
-											backgroundColor: `${ badge.bgColorTimer }`,
-										} }
-									>
+									<Div>
 										<DivOne>
 											<Time
 												style={ {

@@ -1854,15 +1854,46 @@ export default function BadgeCssandAdv( badge ) {
 		case 'timer1':
 			badgeTimerDiv = `
 			display: inline-block;
+			color: ${ badge.textColor };
             height: 60px;
 			width: 270px;
 			opacity: ${ badge.opacity };
+			background-color: ${ badge.bgColorTimer };
 			border-radius: 10px;
 			`;
 			badgeTimerCont = `
 			display: inline-block;
 			padding: 6px 20px;
 			width: 66px;
+			`;
+			TimerDate = `
+			display: block;
+			font-weight: 700;
+			text-shadow: 0px 2px 1px rgba(0,0,0,0.15);
+			`;
+			Label = `  
+			display: block;
+			font-weight: 400;
+			font-size: 10px;
+			line-height: 11px;
+			text-shadow: 0px 2px 1px rgba(0,0,0,0.15);`;
+			break;
+		case 'timer2':
+			badgeTimerDiv = `
+			display: grid;
+			gap: 10px;
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+			color: ${ badge.textColor };
+            height: 60px;
+			width: 270px;
+			opacity: ${ badge.opacity };			
+			`;
+			badgeTimerCont = `
+			display: inline-block;
+			padding: 6px 20px;
+			width: 66px;
+			border: 2px solid ${ badge.bgColorTimer };
+			border-radius: 12px;
 			`;
 			TimerDate = `
 			display: block;
