@@ -92,6 +92,10 @@ const defaultBadge = {
 	useTimer: 'false',
 	useTimerBadge: 'false',
 	badgeTimer: '',
+	labelDayTimer: 'Days',
+	labelHoursTimer: 'Hours',
+	labelMinTimer: 'Min',
+	labelSecTimer: 'Sec',
 };
 
 export default function Badge() {

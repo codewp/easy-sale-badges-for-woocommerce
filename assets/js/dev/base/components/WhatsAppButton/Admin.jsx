@@ -201,19 +201,27 @@ const Admin = ( {
 									<Div>
 										<DivOne>
 											<Time>3</Time>
-											<LabelTimer>Days</LabelTimer>
+											<LabelTimer>
+												{ badge.labelDayTimer }
+											</LabelTimer>
 										</DivOne>
 										<DivOne>
 											<Time>12</Time>
-											<LabelTimer>Hours</LabelTimer>
+											<LabelTimer>
+												{ badge.labelHoursTimer }
+											</LabelTimer>
 										</DivOne>
 										<DivOne>
 											<Time>28</Time>
-											<LabelTimer>Min</LabelTimer>
+											<LabelTimer>
+												{ badge.labelMinTimer }
+											</LabelTimer>
 										</DivOne>
 										<DivOne>
 											<Time>57</Time>
-											<LabelTimer>Sec</LabelTimer>
+											<LabelTimer>
+												{ badge.labelSecTimer }
+											</LabelTimer>
 										</DivOne>
 									</Div>
 								</div>

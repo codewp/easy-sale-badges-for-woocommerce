@@ -170,6 +170,10 @@ const MenuItem = ( props ) => {
 					badgePositionRight={ props.badge.badgePositionRight }
 					zIndexAdv={ props.badge.zIndexAdv }
 					opacity={ props.badge.opacity }
+					labelDayTimer={ props.badge.labelDayTimer }
+					labelHoursTimer={ props.badge.labelHoursTimer }
+					labelMinTimer={ props.badge.labelMinTimer }
+					labelSecTimer={ props.badge.labelSecTimer }
 				/>
 			) }
 		</div>

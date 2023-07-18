@@ -273,25 +273,6 @@ const Timer = ( props ) => {
 			</div>
 			<div className="asnp-ew-line">
 				<div className="asnp-w-[25rem]">
-					<div className="asnp-mt-[1rem]">
-						<label>
-							<span className="asnp-field-title">
-								{ __( 'Badge Label', 'asnp-easy-whatsapp' ) }
-							</span>
-							<input
-								type="text"
-								className="asnp-text-field"
-								placeholder="Badge Label"
-								value={ props.badgeLabel }
-								onChange={ ( e ) =>
-									props.onChange(
-										'badgeLabel',
-										e.target.value
-									)
-								}
-							/>
-						</label>
-					</div>
 					<div className="asnp-mt-3">
 						<Tippy
 							trigger="click"
@@ -495,7 +476,7 @@ const Timer = ( props ) => {
 							<button
 								type="button"
 								className={
-									'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
+									'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
 									( props.badgePositionY == 'bottom' &&
 										'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
 								}
@@ -508,24 +489,11 @@ const Timer = ( props ) => {
 							>
 								{ __( 'Bottom', 'asnp-easy-whatsapp' ) }
 							</button>
-							<button
-								type="button"
-								className={
-									'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-									( props.badgePositionY == 'Center' &&
-										'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
-								}
-								onClick={ () => {
-									props.onChange(
-										'badgePositionY',
-										'Center'
-									);
-								} }
-							>
-								{ __( 'Center', 'asnp-easy-whatsapp' ) }
-							</button>
 						</div>
-						<div className="asnp-w-[10rem] asnp-flex asnp-ml-24" role="group">
+						<div
+							className="asnp-w-[10rem] asnp-flex asnp-ml-24"
+							role="group"
+						>
 							<button
 								disabled={ disEleven }
 								type="button"
@@ -542,7 +510,22 @@ const Timer = ( props ) => {
 							>
 								{ __( 'Left', 'asnp-easy-whatsapp' ) }
 							</button>
-
+							<button
+								type="button"
+								className={
+									'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
+									( props.badgePositionX == 'center' &&
+										'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
+								}
+								onClick={ () => {
+									props.onChange(
+										'badgePositionX',
+										'center'
+									);
+								} }
+							>
+								{ __( 'Center', 'asnp-easy-whatsapp' ) }
+							</button>
 							<button
 								disabled={ disEleven }
 								type="button"
@@ -668,6 +651,85 @@ const Timer = ( props ) => {
 								onChange={ ( e ) =>
 									props.onChange(
 										'badgePositionRight',
+										e.target.value
+									)
+								}
+							/>
+						</div>
+					</label>
+				</div>
+				<div className="asnp-mt-8">
+					<span className="asnp-field-title asnp-text-base asnp-font-semibold">
+						{ __( 'Labels', 'asnp-easy-whatsapp' ) }
+					</span>
+				</div>
+				<div className="asnp-flex asnp-mt-3">
+					<label>
+						<span className="asnp-field-title">
+							{ __( 'Days', 'asnp-easy-whatsapp' ) }
+						</span>
+						<div className="asnp-w-[11rem]">
+							<input
+								type="text"
+								className="asnp-text-field"
+								value={ props.labelDayTimer }
+								onChange={ ( e ) =>
+									props.onChange(
+										'labelDayTimer',
+										e.target.value
+									)
+								}
+							/>
+						</div>
+					</label>
+					<label>
+						<span className="asnp-field-title asnp-ml-7">
+							{ __( 'Hours', 'asnp-easy-whatsapp' ) }
+						</span>
+						<div className="asnp-w-[11rem] asnp-ml-7">
+							<input
+								type="text"
+								className="asnp-text-field"
+								value={ props.labelHoursTimer }
+								onChange={ ( e ) =>
+									props.onChange(
+										'labelHoursTimer',
+										e.target.value
+									)
+								}
+							/>
+						</div>
+					</label>
+					<label>
+						<span className="asnp-field-title asnp-ml-7">
+							{ __( 'Minutes', 'asnp-easy-whatsapp' ) }
+						</span>
+						<div className="asnp-w-[11rem] asnp-ml-7">
+							<input
+								type="text"
+								className="asnp-text-field"
+								value={ props.labelMinTimer }
+								onChange={ ( e ) =>
+									props.onChange(
+										'labelMinTimer',
+										e.target.value
+									)
+								}
+							/>
+						</div>
+					</label>
+					<label>
+						<span className="asnp-field-title asnp-ml-7">
+							{ __( 'Seconds', 'asnp-easy-whatsapp' ) }
+						</span>
+						<div className="asnp-w-[11rem] asnp-ml-7">
+							<input
+								type="text"
+								className="asnp-text-field"
+								value={ props.labelSecTimer }
+								onChange={ ( e ) =>
+									props.onChange(
+										'labelSecTimer',
 										e.target.value
 									)
 								}
