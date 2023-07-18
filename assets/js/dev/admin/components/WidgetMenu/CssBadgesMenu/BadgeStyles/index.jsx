@@ -27,6 +27,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 'false' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								setSelected( 1 );
 							} }
 						>
@@ -46,6 +47,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeStyles', 'badge2' );
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 'false' );
+								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								setSelected( 2 );
 							} }
@@ -67,6 +69,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 'false' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadgeAdv', 'false' );
 								setSelected( 3 );
 							} }
 						>
@@ -87,6 +90,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 'false' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadgeAdv', 'false' );
 								setSelected( 4 );
 							} }
 						>
@@ -106,6 +110,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeStyles', 'badge5' );
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 'false' );
+								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								setSelected( 5 );
 							} }
@@ -129,6 +134,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 'false' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadgeAdv', 'false' );
 								setSelected( 6 );
 							} }
 						>
@@ -148,6 +154,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeStyles', 'badge7' );
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 'false' );
+								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								setSelected( 7 );
 							} }
@@ -169,6 +176,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 'false' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadgeAdv', 'false' );
 								setSelected( 8 );
 							} }
 						>
@@ -189,6 +197,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 'false' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadgeAdv', 'false' );
 								setSelected( 9 );
 							} }
 						>
@@ -208,6 +217,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeStyles', 'badge10' );
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 'false' );
+								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								setSelected( 10 );
 							} }
@@ -231,6 +241,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 'false' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadgeAdv', 'false' );
 								setSelected( 11 );
 							} }
 						>
@@ -251,6 +262,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 'false' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadgeAdv', 'false' );
 								setSelected( 12 );
 							} }
 						>
@@ -270,6 +282,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeStyles', 'badge13' );
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 'false' );
+								props.onChange( 'imgbadgeAdv', 'false' );
 								props.onChange( 'imgbadgeAdv', 'false' );
 								setSelected( 13 );
 							} }

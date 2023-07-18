@@ -28,6 +28,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bigSale1' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale1' );
 							} }
@@ -47,6 +48,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bigSale2' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale2' );
 							} }
@@ -66,6 +68,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bigSale3' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale3' );
 							} }
@@ -85,6 +88,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bigSale4' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale4' );
 							} }
@@ -104,6 +108,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bigSale5' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale5' );
 							} }
@@ -125,6 +130,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'sale1' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale6' );
 							} }
@@ -144,6 +150,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'sale2' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale7' );
 							} }
@@ -163,6 +170,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'sale3' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale8' );
 							} }
@@ -182,6 +190,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'sale4' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale9' );
 							} }
@@ -201,6 +210,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'sale5' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale10' );
 							} }
@@ -222,6 +232,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'sale6' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale11' );
 							} }
@@ -241,6 +252,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bigSaleCir1' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale12' );
 							} }
@@ -260,6 +272,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bigSaleCir2' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale13' );
 							} }
@@ -279,6 +292,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bigSaleCir3' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale14' );
 							} }
@@ -298,6 +312,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bigSaleCir4' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale15' );
 							} }
@@ -323,6 +338,7 @@ const BadgeImageStyle = ( props ) => {
 									'bigSalBanneer1'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale16' );
 							} }
@@ -345,6 +361,7 @@ const BadgeImageStyle = ( props ) => {
 									'bigSalBanneerr2'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale17' );
 							} }
@@ -367,6 +384,7 @@ const BadgeImageStyle = ( props ) => {
 									'bigSalBanneer3'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale18' );
 							} }
@@ -389,6 +407,7 @@ const BadgeImageStyle = ( props ) => {
 									'bigSalBanneer4'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale19' );
 							} }
@@ -411,6 +430,7 @@ const BadgeImageStyle = ( props ) => {
 									'bigSalBanneer5'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale20' );
 							} }
@@ -432,6 +452,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bigSaleFont1' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale21' );
 							} }
@@ -451,6 +472,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bigSaleFont2' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale22' );
 							} }
@@ -470,6 +492,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bigSaleFont3' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale23' );
 							} }
@@ -489,6 +512,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bigSaleFont4' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale24' );
 							} }
@@ -508,6 +532,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bigSaleFont5' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale25' );
 							} }
@@ -529,6 +554,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'hotSale1' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale26' );
 							} }
@@ -548,6 +574,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'hotSale2' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale27' );
 							} }
@@ -567,6 +594,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'hotSale3' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale28' );
 							} }
@@ -586,6 +614,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'hotSale4' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale29' );
 							} }
@@ -605,6 +634,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'hotSale5' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale30' );
 							} }
@@ -627,6 +657,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleKind1' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale31' );
 							} }
@@ -646,6 +677,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleKind2' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale32' );
 							} }
@@ -665,6 +697,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleKind3' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale33' );
 							} }
@@ -684,6 +717,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleKind4' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale34' );
 							} }
@@ -703,6 +737,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleKind5' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale35' );
 							} }
@@ -724,6 +759,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleKind6' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale36' );
 							} }
@@ -743,6 +779,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleKindNew1' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale37' );
 							} }
@@ -762,6 +799,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleKindNew2' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale38' );
 							} }
@@ -781,6 +819,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleKindNew3' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale39' );
 							} }
@@ -800,6 +839,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleKindNew4' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale40' );
 							} }
@@ -821,6 +861,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleKind7' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale41' );
 							} }
@@ -840,6 +881,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleNew1' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale42' );
 							} }
@@ -859,6 +901,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleNew2' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale43' );
 							} }
@@ -878,6 +921,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleNew3' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale44' );
 							} }
@@ -897,6 +941,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleNew4' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale45' );
 							} }
@@ -918,6 +963,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleNew5' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale46' );
 							} }
@@ -937,6 +983,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleNew6' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale47' );
 							} }
@@ -956,6 +1003,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleNew7' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale48' );
 							} }
@@ -975,6 +1023,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleNew8' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale49' );
 							} }
@@ -994,6 +1043,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleNew9' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale50' );
 							} }
@@ -1015,6 +1065,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleHuge' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale51' );
 							} }
@@ -1034,6 +1085,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleHuge2' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale52' );
 							} }
@@ -1053,6 +1105,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleHuge3' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale53' );
 							} }
@@ -1072,6 +1125,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleHuge4' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale54' );
 							} }
@@ -1091,6 +1145,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'saleHuge5' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'sale55' );
 							} }
@@ -1120,6 +1175,7 @@ const BadgeImageStyle = ( props ) => {
 									'percentageCircle1'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent1' );
 							} }
@@ -1142,6 +1198,7 @@ const BadgeImageStyle = ( props ) => {
 									'percentageCircle2'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent2' );
 							} }
@@ -1164,6 +1221,7 @@ const BadgeImageStyle = ( props ) => {
 									'percentageCircle3'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent3' );
 							} }
@@ -1186,6 +1244,7 @@ const BadgeImageStyle = ( props ) => {
 									'percentageCircle4'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent4' );
 							} }
@@ -1208,6 +1267,7 @@ const BadgeImageStyle = ( props ) => {
 									'percentageCircle5'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent5' );
 							} }
@@ -1232,6 +1292,7 @@ const BadgeImageStyle = ( props ) => {
 									'percentageSale1'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent6' );
 							} }
@@ -1254,6 +1315,7 @@ const BadgeImageStyle = ( props ) => {
 									'percentageSale2'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent7' );
 							} }
@@ -1276,6 +1338,7 @@ const BadgeImageStyle = ( props ) => {
 									'percentageSale3'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent8' );
 							} }
@@ -1298,6 +1361,7 @@ const BadgeImageStyle = ( props ) => {
 									'percentageSale4'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent9' );
 							} }
@@ -1320,6 +1384,7 @@ const BadgeImageStyle = ( props ) => {
 									'percentageSale5'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent10' );
 							} }
@@ -1344,6 +1409,7 @@ const BadgeImageStyle = ( props ) => {
 									'percentageSale6'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent11' );
 							} }
@@ -1366,6 +1432,7 @@ const BadgeImageStyle = ( props ) => {
 									'percentageSale7'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent12' );
 							} }
@@ -1388,6 +1455,7 @@ const BadgeImageStyle = ( props ) => {
 									'percentageSale8'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent13' );
 							} }
@@ -1410,6 +1478,7 @@ const BadgeImageStyle = ( props ) => {
 									'percentageSale9'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent14' );
 							} }
@@ -1432,6 +1501,7 @@ const BadgeImageStyle = ( props ) => {
 									'percentageSale10'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent15' );
 							} }
@@ -1456,6 +1526,7 @@ const BadgeImageStyle = ( props ) => {
 									'percentageSale11'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent16' );
 							} }
@@ -1478,6 +1549,7 @@ const BadgeImageStyle = ( props ) => {
 									'percentageSale12'
 								);
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent17' );
 							} }
@@ -1497,6 +1569,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'percentage1' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent18' );
 							} }
@@ -1516,6 +1589,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'percentage2' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent19' );
 							} }
@@ -1535,6 +1609,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'percentage3' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent20' );
 							} }
@@ -1556,6 +1631,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'percentage4' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent21' );
 							} }
@@ -1575,6 +1651,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'perBanner1' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent22' );
 							} }
@@ -1594,6 +1671,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'perBanner2' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent23' );
 							} }
@@ -1613,6 +1691,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'perBanner3' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent24' );
 							} }
@@ -1632,6 +1711,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bannerPerc1' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent25' );
 							} }
@@ -1653,6 +1733,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bannerPerc2' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent26' );
 							} }
@@ -1672,6 +1753,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bannerPerc3' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent27' );
 							} }
@@ -1691,6 +1773,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bannerPerc4' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent28' );
 							} }
@@ -1710,6 +1793,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bannerPerc5' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent29' );
 							} }
@@ -1729,6 +1813,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bannerPerc6' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent30' );
 							} }
@@ -1750,6 +1835,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bannerPerc7' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent31' );
 							} }
@@ -1769,6 +1855,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bannerPerc8' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent32' );
 							} }
@@ -1788,6 +1875,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bannerPerc9' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent33' );
 							} }
@@ -1807,6 +1895,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bannerPerc10' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent34' );
 							} }
@@ -1826,6 +1915,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bannerPerc11' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent35' );
 							} }
@@ -1847,6 +1937,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bannerPerc12' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent36' );
 							} }
@@ -1866,6 +1957,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'perc1' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent37' );
 							} }
@@ -1885,6 +1977,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'perc2' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent38' );
 							} }
@@ -1904,6 +1997,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'perc3' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent39' );
 							} }
@@ -1923,6 +2017,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'perc4' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent40' );
 							} }
@@ -1944,6 +2039,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'perc8' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent41' );
 							} }
@@ -1963,6 +2059,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'perc9' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent42' );
 							} }
@@ -1982,6 +2079,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'perc10' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent43' );
 							} }
@@ -2001,6 +2099,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'perc11' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent44' );
 							} }
@@ -2020,6 +2119,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'perc12' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'percent45' );
 							} }
@@ -2046,6 +2146,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'coming1' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'coming1' );
 							} }
@@ -2065,6 +2166,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'coming2' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'coming2' );
 							} }
@@ -2084,6 +2186,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'coming3' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'coming3' );
 							} }
@@ -2103,6 +2206,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'coming4' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'coming4' );
 							} }
@@ -2122,6 +2226,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'coming5' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'coming5' );
 							} }
@@ -2143,6 +2248,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'coming6' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'coming6' );
 							} }
@@ -2162,6 +2268,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'coming7' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'coming7' );
 							} }
@@ -2181,6 +2288,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'coming8' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'coming8' );
 							} }
@@ -2200,6 +2308,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'coming9' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'coming9' );
 							} }
@@ -2219,6 +2328,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'coming10' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'coming10' );
 							} }
@@ -2240,6 +2350,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'coming11' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'coming11' );
 							} }
@@ -2259,6 +2370,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'coming12' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'coming12' );
 							} }
@@ -2278,6 +2390,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'coming13' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'coming13' );
 							} }
@@ -2297,6 +2410,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'coming14' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'coming14' );
 							} }
@@ -2316,6 +2430,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'coming15' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'coming15' );
 							} }
@@ -2337,6 +2452,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'coming16' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'coming16' );
 							} }
@@ -2363,6 +2479,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'preoOrder1' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'preOrder1' );
 							} }
@@ -2382,6 +2499,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'preoOrder2' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'preOrder2' );
 							} }
@@ -2401,6 +2519,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'preoOrder3' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'preOrder3' );
 							} }
@@ -2420,6 +2539,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'preoOrder4' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'preOrder4' );
 							} }
@@ -2439,6 +2559,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'preoOrder5' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'preOrder5' );
 							} }
@@ -2460,6 +2581,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'preoOrder6' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'preOrder6' );
 							} }
@@ -2479,6 +2601,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'preoOrder7' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'preOrder7' );
 							} }
@@ -2498,6 +2621,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'preoOrder8' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'preOrder8' );
 							} }
@@ -2517,6 +2641,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'preoOrder9' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'preOrder9' );
 							} }
@@ -2536,6 +2661,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'preoOrder10' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'preOrder10' );
 							} }
@@ -2557,6 +2683,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'preoOrder11' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'preOrder11' );
 							} }
@@ -2576,6 +2703,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'preoOrder12' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'preOrder12' );
 							} }
@@ -2595,6 +2723,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'preoOrder13' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'preOrder13' );
 							} }
@@ -2614,6 +2743,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'preoOrder14' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'preOrder14' );
 							} }
@@ -2633,6 +2763,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'preoOrder15' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'preOrder15' );
 							} }
@@ -2657,6 +2788,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free1' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free1' );
 							} }
@@ -2676,6 +2808,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free2' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free2' );
 							} }
@@ -2695,6 +2828,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free3' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free3' );
 							} }
@@ -2714,6 +2848,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free4' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free4' );
 							} }
@@ -2733,6 +2868,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free5' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free5' );
 							} }
@@ -2754,6 +2890,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free6' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free6' );
 							} }
@@ -2773,6 +2910,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free7' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free7' );
 							} }
@@ -2792,6 +2930,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free8' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free8' );
 							} }
@@ -2811,6 +2950,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free9' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free9' );
 							} }
@@ -2830,6 +2970,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free10' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free10' );
 							} }
@@ -2851,6 +2992,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free11' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free11' );
 							} }
@@ -2870,6 +3012,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free12' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free12' );
 							} }
@@ -2889,6 +3032,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free13' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free13' );
 							} }
@@ -2908,6 +3052,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free14' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free14' );
 							} }
@@ -2927,6 +3072,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free15' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free15' );
 							} }
@@ -2948,6 +3094,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free16' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free16' );
 							} }
@@ -2967,6 +3114,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free17' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free17' );
 							} }
@@ -2986,6 +3134,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free18' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free18' );
 							} }
@@ -3005,6 +3154,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free19' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free19' );
 							} }
@@ -3024,6 +3174,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free20' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free20' );
 							} }
@@ -3045,6 +3196,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free21' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free21' );
 							} }
@@ -3064,6 +3216,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free22' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free22' );
 							} }
@@ -3083,6 +3236,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free23' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free23' );
 							} }
@@ -3102,6 +3256,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free24' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free24' );
 							} }
@@ -3121,6 +3276,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'free25' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'free25' );
 							} }
@@ -3147,6 +3303,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bfriday1' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'blackF1' );
 							} }
@@ -3166,6 +3323,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bfriday2' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'blackF2' );
 							} }
@@ -3185,6 +3343,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bfriday3' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'blackF3' );
 							} }
@@ -3204,6 +3363,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bfriday4' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'blackF4' );
 							} }
@@ -3223,6 +3383,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bfriday5' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'blackF5' );
 							} }
@@ -3244,6 +3405,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bfriday6' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'blackF6' );
 							} }
@@ -3263,6 +3425,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bfriday7' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'blackF7' );
 							} }
@@ -3282,6 +3445,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bfriday8' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'blackF8' );
 							} }
@@ -3301,6 +3465,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bfriday9' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'blackF9' );
 							} }
@@ -3320,6 +3485,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bfriday10' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'blackF10' );
 							} }
@@ -3341,6 +3507,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bfriday11' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'blackF11' );
 							} }
@@ -3360,6 +3527,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bfriday12' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'blackF12' );
 							} }
@@ -3379,6 +3547,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bfriday13' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'blackF13' );
 							} }
@@ -3398,6 +3567,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bfriday14' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'blackF14' );
 							} }
@@ -3417,6 +3587,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bfriday15' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'blackF15' );
 							} }
@@ -3438,6 +3609,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bfriday16' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'blackF16' );
 							} }
@@ -3457,6 +3629,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bfriday17' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'blackF17' );
 							} }
@@ -3476,6 +3649,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'bfriday18' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'blackF' );
 							} }
@@ -3502,6 +3676,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'badgeValen1' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'valent1' );
 							} }
@@ -3521,6 +3696,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'badgeValen2' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'valent2' );
 							} }
@@ -3540,6 +3716,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'badgeValen3' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'valent3' );
 							} }
@@ -3559,6 +3736,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'badgeValen4' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'valent4' );
 							} }
@@ -3578,6 +3756,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'badgeValen5' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'valent5' );
 							} }
@@ -3599,6 +3778,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'badgeValen6' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'valent6' );
 							} }
@@ -3618,6 +3798,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'badgeValen7' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'valent7' );
 							} }
@@ -3637,6 +3818,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'badgeValen8' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'valent8' );
 							} }
@@ -3656,6 +3838,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'badgeValen9' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'valent9' );
 							} }
@@ -3675,6 +3858,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'badgeValen10' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'valent10' );
 							} }
@@ -3696,6 +3880,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'badgeValen11' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'valent11' );
 							} }
@@ -3715,6 +3900,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'badgeValen12' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'valent12' );
 							} }
@@ -3734,6 +3920,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'badgeValen13' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'valent13' );
 							} }
@@ -3753,6 +3940,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'badgeValen14' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'valent14' );
 							} }
@@ -3772,6 +3960,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'badgeValen15' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'valent15' );
 							} }
@@ -3793,6 +3982,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'badgeValen16' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'valent16' );
 							} }
@@ -3812,6 +4002,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'badgeValen17' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'valent17' );
 							} }
@@ -3831,6 +4022,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeImage', 'badgeValen18' );
 								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'useTimerBadge', 'false' );
 								props.onChange( 'imgbadge', 'true' );
 								setSelected( 'valent18' );
 							} }
