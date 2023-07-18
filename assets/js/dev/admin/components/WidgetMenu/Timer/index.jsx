@@ -7,6 +7,8 @@ import Tippy from '@tippyjs/react';
 import { TwitterPicker, ChromePicker } from 'react-color';
 import { PlusIcon } from '@heroicons/react/solid';
 
+import './style.scss';
+
 const Timer = ( props ) => {
 	const [ selected, setSelected ] = useState( null );
 	const [ selectedTextColor, setSelectedTextColor ] = useState(
@@ -168,7 +170,7 @@ const Timer = ( props ) => {
 									( selected === 1
 										? 'asnp-border-indigo-700'
 										: 'asnp-border-white' ) +
-									'  asnp-containerBadgeStyle hover:asnp-border-indigo-700'
+									' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
 								}
 								onClick={ () => {
 									props.onChange( 'badgeStyles', '' );
@@ -182,7 +184,7 @@ const Timer = ( props ) => {
 							>
 								<img
 									className="asnp-h-full asnp-w-full asnp-border-none"
-									src={ IMAGES_URL + 'badge1.svg' }
+									src={ IMAGES_URL + 'badgeTimer1.png' }
 								/>
 							</div>
 							<div
@@ -190,7 +192,7 @@ const Timer = ( props ) => {
 									( selected === 2
 										? 'asnp-border-indigo-700'
 										: 'asnp-border-white' ) +
-									' asnp-py-6 asnp-px-2 asnp-containerBadgeStyle hover:asnp-border-indigo-700'
+									' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
 								}
 								onClick={ () => {
 									props.onChange( 'badgeStyles', '' );
@@ -204,73 +206,7 @@ const Timer = ( props ) => {
 							>
 								<img
 									className="asnp-h-full asnp-w-full asnp-border-none"
-									src={ IMAGES_URL + 'badge2.svg' }
-								/>
-							</div>
-							<div
-								className={
-									( selected === 3
-										? 'asnp-border-indigo-700'
-										: 'asnp-border-white' ) +
-									' asnp-py-6 asnp-px-2 asnp-containerBadgeStyle hover:asnp-border-indigo-700'
-								}
-								onClick={ () => {
-									props.onChange( 'badgeStyles', '' );
-									props.onChange( 'badgeAdv', '' );
-									props.onChange( 'badgeTimer', 'timer3' );
-									props.onChange( 'useTimerBadge', 'true' );
-									props.onChange( 'imgbadge', 'false' );
-									props.onChange( 'imgbadgeAdv', 'false' );
-									setSelected( 3 );
-								} }
-							>
-								<img
-									className="asnp-h-full asnp-w-full asnp-border-none"
-									src={ IMAGES_URL + 'badge3.svg' }
-								/>
-							</div>
-							<div
-								className={
-									( selected === 4
-										? 'asnp-border-indigo-700'
-										: 'asnp-border-white' ) +
-									' asnp-py-6 asnp-px-2 asnp-containerBadgeStyle hover:asnp-border-indigo-700'
-								}
-								onClick={ () => {
-									props.onChange( 'badgeStyles', '' );
-									props.onChange( 'badgeAdv', '' );
-									props.onChange( 'badgeTimer', 'timer4' );
-									props.onChange( 'useTimerBadge', 'true' );
-									props.onChange( 'imgbadge', 'false' );
-									props.onChange( 'imgbadgeAdv', 'false' );
-									setSelected( 4 );
-								} }
-							>
-								<img
-									className="asnp-h-full asnp-w-full asnp-border-none"
-									src={ IMAGES_URL + 'badge4.svg' }
-								/>
-							</div>
-							<div
-								className={
-									( selected === 5
-										? 'asnp-border-indigo-700'
-										: 'asnp-border-white' ) +
-									' asnp-py-4 asnp-px-6 asnp-containerBadgeStyle hover:asnp-border-indigo-700'
-								}
-								onClick={ () => {
-									props.onChange( 'badgeStyles', '' );
-									props.onChange( 'badgeAdv', '' );
-									props.onChange( 'badgeTimer', 'timer5' );
-									props.onChange( 'useTimerBadge', 'true' );
-									props.onChange( 'imgbadge', 'false' );
-									props.onChange( 'imgbadgeAdv', 'false' );
-									setSelected( 5 );
-								} }
-							>
-								<img
-									className="asnp-h-full asnp-w-full asnp-border-none"
-									src={ IMAGES_URL + 'badge5.svg' }
+									src={ IMAGES_URL + 'badgeTimer1.png' }
 								/>
 							</div>
 						</div>

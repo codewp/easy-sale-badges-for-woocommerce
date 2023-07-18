@@ -97,7 +97,7 @@ const defaultBadge = {
 	labelSecTimer: 'Sec',
 	fontSizeLabelTimer: '24',
 	lineHeightLabelTimer: '30',
-	bgColorTimer: 'red',
+	bgColorTimer: '#EB144C',
 };
 
 export default function Badge() {
