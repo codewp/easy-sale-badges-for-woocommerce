@@ -23,7 +23,8 @@
 			"AsanaPlugins\\WhatsApp\\": "src/"
 		},
 		"files": [
-			"src/Helpers.php"
+			"src/Helpers.php",
+			"src/Helpers/Badges.php"
 		]
 	},
 	"autoload-dev": {
