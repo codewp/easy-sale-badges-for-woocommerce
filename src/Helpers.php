@@ -263,3 +263,11 @@ function register_polyfills() {
 function is_pro_active() {
 	return defined( 'ASNP_EWHATSAPP_PRO_VERSION' );
 }
+
+function add_custom_style( $style ) {
+	if ( empty( $style ) ) {
+		return;
+	}
+
+	get_plugin()->container()->get( CustomStyles::class )->add_style( $style );
+}

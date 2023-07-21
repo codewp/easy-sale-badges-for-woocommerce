@@ -126,6 +126,7 @@ final class Plugin {
 		Install::init();
 
 		$this->container->get( Assets::class )->init();
+		$this->container->get( CustomStyles::class )->init();
 
 		if ( class_exists( 'WooCommerce' ) ) {
 			if ( string_to_bool( get_plugin()->settings->get_setting( 'woocommerceEnabled', true ) ) ) {
@@ -142,6 +143,12 @@ final class Plugin {
 	}
 
 	protected function register_dependencies() {
+		$this->container()->register(
+			CustomStyles::class,
+			function( Container $container ) {
+				return new CustomStyles();
+			}
+		);
 		$this->container()->register(
 			AccountModel::class,
 			function( Container $container ) {
