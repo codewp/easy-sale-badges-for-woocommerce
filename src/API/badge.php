@@ -20,6 +20,8 @@ class BadgeOutput {
 
     public function output_badge( $badge ) {
         switch ( $badge->type ) {
+            case 'css':
+                return output_css_badge( $badge );
             case 'timer':
                 return output_timer_badge( $badge );
 
@@ -28,7 +30,7 @@ class BadgeOutput {
         }
     }
 
-    public function output_timer_badge( $badge ) {
+    public function output_css_badge( $badge ) {
         $span_style = '';
         if ( isset( $badge->opacity ) && 0 < strlen( trim( $badge->opacity ) ) ) {
             $span_style .= 'opacity: ' . absint( $badge->opacity ) . ';';
@@ -85,7 +87,17 @@ class BadgeOutput {
                     width: ' . $badge->widthBadge . 'px;
                     background: ' . $badge->badgeColor . ';
                     border-radius: 3px;
-                    ';
+                    color: ' . $badge->textColor . ';
+                    font-size: ' . $badge->fontSizeText . 'px;
+                    line-height: ' . $badge->lineHeightText . 'px;
+                    opacity: ' . $badge->opacity . ';
+                    border-top-left-radius: ' . $badge->topLeftRadius . 'px;
+                    border-top-right-radius: ' . $badge->topRightRadius . 'px;
+                    border-bottom-left-radius: ' . $badge->bottomLeftRadius . 'px;
+                    border-bottom-right-radius: ' . $badge->bottomRightRadius . 'px;
+                    z-index: ' . $badge->zIndex . ';
+                    transform: rotateX(' . $badge->rotationX . 'deg) rotateY(' . $badge->rotationY . 'deg) rotateZ(' . $badge->rotationZ . 'deg);
+                ';
                     $badge_icon_style2 = '
                     &::before {
                         border-left-color: transparent !important;
@@ -114,8 +126,17 @@ class BadgeOutput {
                         height: ' . $badge->heightBadge . 'px;
                         width: ' . $badge->widthBadge . 'px;
                         line-height: 30px;
-                        color: #fff;
-                        ';
+                        color: ' . $badge->textColor . ';
+                        font-size: ' . $badge->fontSizeText . 'px;
+                        line-height: ' . $badge->lineHeightText . 'px;
+                        opacity: ' . $badge->opacity . ';
+                        border-top-left-radius: ' . $badge->topLeftRadius . 'px;
+                        border-top-right-radius: ' . $badge->topRightRadius . 'px;
+                        border-bottom-left-radius: ' . $badge->bottomLeftRadius . 'px;
+                        border-bottom-right-radius: ' . $badge->bottomRightRadius . 'px;
+                        z-index: ' . $badge->zIndex . ';
+                        transform: rotateX(' . $badge->rotationX . 'deg) rotateY(' . $badge->rotationY . 'deg) rotateZ(' . $badge->rotationZ . 'deg);
+                ';
                         $badge_icon_style .= '
                         &::after {
                             content: \'\';
@@ -148,6 +169,16 @@ class BadgeOutput {
                             box-sizing: border-box;
                             border-bottom-right-radius: 1px !important;
                             border-top-right-radius: 1px !important;
+                            color: ' . $badge->textColor . ';
+                            font-size: ' . $badge->fontSizeText . 'px;
+                            line-height: ' . $badge->lineHeightText . 'px;
+                            opacity: ' . $badge->opacity . ';
+                            border-top-left-radius: ' . $badge->topLeftRadius . 'px;
+                            border-top-right-radius: ' . $badge->topRightRadius . 'px;
+                            border-bottom-left-radius: ' . $badge->bottomLeftRadius . 'px;
+                            border-bottom-right-radius: ' . $badge->bottomRightRadius . 'px;
+                            z-index: ' . $badge->zIndex . ';
+                            transform: rotateX(' . $badge->rotationX . 'deg) rotateY(' . $badge->rotationY . 'deg) rotateZ(' . $badge->rotationZ . 'deg);
                             ';
                             $badge_icon_style .= '
                             &::before {
@@ -198,6 +229,19 @@ class BadgeOutput {
         echo '<span date-time="' . sanitize_text_field( $badge->endTime ) . '"></span>';
         echo '</span>';
         echo '</div>';
+        echo '</div>';
+
+
+        // Css Badge
+        echo '<div class="asnp-esb-badge asnp-esb-timer-badge" style="display: none;">';
+        echo '<div style="' . esc_attr( $span_style ) . '">';
+        echo '<span class="asnp-esb-inner-span"> style="' . esc_attr( $inner_span_style ) . '"></span>';
+        echo '<div class="asnp-esb-badge asnp-esb-timer-badge" style="display: none;">';
+        echo '<span class="asnp-esb-badge asnp-esb-timer-badge" style="display: none;"></span>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+
     }
 
     public function output_image_badge( $badge ) {
