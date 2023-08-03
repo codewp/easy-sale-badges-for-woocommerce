@@ -1,51 +1,8 @@
 import React from 'react';
 import { __ } from '@wordpress/i18n';
-import Toggle from '../../Toggle';
 
 const WooCommerce = ( props ) => {
-	const optionsLoopPosition = [
-		{
-			value: 'before_shop_loop_item_thumbnail',
-			label: 'Before product thumbnail',
-		},
-		{
-			value: 'after_shop_loop_item_thumbnail',
-			label: 'After product thumbnail',
-		},
-		{
-			value: 'before_shop_loop_item_title',
-			label: 'Before product title',
-		},
-		{
-			value: 'after_shop_loop_item_title',
-			label: 'After product title',
-		},
-		{
-			value: 'before_shop_loop_item_rating',
-			label: 'Before product rating',
-		},
-		{
-			value: 'after_shop_loop_item_rating',
-			label: 'After product rating',
-		},
-		{
-			value: 'before_shop_loop_item_price',
-			label: 'Before product price',
-		},
-		{
-			value: 'after_shop_loop_item_price',
-			label: 'After product price',
-		},
-		{
-			value: 'after_shop_loop_item',
-			label: 'After shop loop item',
-		},
-		{
-			value: 'shop_loop',
-			label: 'Shop loop',
-		},
-	];
-
+	
 	return (
 		<div className="asnp-max-w-lg asnp-grid asnp-grid-cols-1 asnp-gap-8">
 			<div>
