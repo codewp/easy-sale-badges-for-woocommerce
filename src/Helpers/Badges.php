@@ -29,6 +29,14 @@ function output_badge( $badge ) {
 }
 
 function output_css_badge( $badge ) {
+	if ( ! $badge ) {
+		return;
+	}
+
+	$dynamic_style = '';
+
+	add_custom_style( $dynamic_style );
+
 	$span_style = '';
 	if ( isset( $badge->opacity ) && 0 < strlen( trim( $badge->opacity ) ) ) {
 		$span_style .= 'opacity: ' . absint( $badge->opacity ) . ';';
@@ -217,7 +225,9 @@ function output_css_badge( $badge ) {
 			// Add additional cases as needed
 	}
 	 		// Add before after css to the $this->style;
-	  		
+			 if ( ! empty( $badge->prop ) ) {
+				$dynamic_style .= ' .asnp-esb-badge::before { color: red; }';
+			}
 
 			echo '<div class="asnp-esb-badge asnp-esb-timer-badge" style="display: none;">';
 			echo '<span style="' . esc_attr( $span_style ) . '">';
