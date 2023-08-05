@@ -53,33 +53,11 @@ function output_css_badge($badge)
 	}
 
 	$badge_icon_style = '';
-	$badge_icon_stylebefore = '';
-	$badge_icon_styleafter = '';
 	$dynamic_styles = '';
 
 	switch ($badge->badgeStyles) {
 		case 'badge1':
-			$badge_icon_style = '
-			background-color: ' . $badge->badgeColor . ';
-			top: 0px;
-			left: 0px;
-			height: ' . $badge->heightBadge . 'px;
-			width: ' . $badge->widthBadge . 'px;
-			position: absolute;
-			opacity: ' . $badge->opacity . ';
-			text-align: center;
-			text-shadow: none;
-			color: ' . $badge->textColor . ';
-			font-size: ' . $badge->fontSizeText . 'px;
-			line-height: ' . $badge->lineHeightText . 'px;
-			opacity: ' . $badge->opacity . ';
-			border-top-left-radius: ' . $badge->topLeftRadius . 'px;
-			border-top-right-radius: ' . $badge->topRightRadius . 'px;
-			border-bottom-left-radius: ' . $badge->bottomLeftRadius . 'px;
-			border-bottom-right-radius: ' . $badge->bottomRightRadius . 'px;
-			z-index: ' . $badge->zIndex . ';
-			transform: rotateX(' . $badge->rotationX . 'deg) rotateY(' . $badge->rotationY . 'deg) rotateZ(' . $badge->rotationZ . 'deg);
-			';
+			$badge_icon_style = '';
 			break;
 		case 'badge2':
 			$badge_icon_style = '
@@ -87,7 +65,8 @@ function output_css_badge($badge)
 			display: inline-block;
 			position: absolute;
 			opacity: ' . $badge->opacity . ';
-			left: 0px;
+			left: ' . ($badge->badgePositionX == 'right' ? 'auto' : '0px') . ';
+			right: ' . ($badge->badgePositionX == 'right' ? '0px' : '') . ';
 			top: 0px;
 			height: ' . $badge->heightBadge . 'px;
 			width: ' . $badge->widthBadge . 'px;
@@ -104,18 +83,19 @@ function output_css_badge($badge)
 			z-index: ' . $badge->zIndex . ';
 			transform: rotateX(' . $badge->rotationX . 'deg) rotateY(' . $badge->rotationY . 'deg) rotateZ(' . $badge->rotationZ . 'deg);
 			';
-			$badge_icon_stylebefore = '
-			.asnp-esb-badge::before {
+			$badge_icon_style2 = '
+			&::before {
 				border-left-color: transparent !important;
 				display: inline-block;
 				content: \'\';
 				position: absolute;
-				right: -20px;
+				right: ' . ($badge->badgePositionX == 'right' ? 'auto' : '-20px') . ';
+				left: ' . ($badge->badgePositionX == 'right' ? '-20px' : '') . ';
 				top: 0;
 				border: 9px solid transparent;
 				border-width: 15px 15px;
 				border-color: ' . $badge->badgeColor . ';
-				transform: rotate(180deg);
+				transform: ' . ($badge->badgePositionX == 'right' ? 'rotate(0)' : 'rotate(180deg)') . ';
 				}
 				';
 			break;
@@ -142,7 +122,7 @@ function output_css_badge($badge)
 			z-index: ' . $badge->zIndex . ';
 			transform: rotateX(' . $badge->rotationX . 'deg) rotateY(' . $badge->rotationY . 'deg) rotateZ(' . $badge->rotationZ . 'deg);
 			';
-			$badge_icon_styleafter .= '
+			$badge_icon_style .= '
 				&::after {
 					content: \'\';
 					position: absolute;
@@ -185,7 +165,7 @@ function output_css_badge($badge)
 			z-index: ' . $badge->zIndex . ';
 			transform: rotateX(' . $badge->rotationX . 'deg) rotateY(' . $badge->rotationY . 'deg) rotateZ(' . $badge->rotationZ . 'deg);
 			';
-			$badge_icon_stylebefore .= '
+			$badge_icon_style .= '
 			    &::before {
 				    position: absolute;
 				    right: ' . ($badge->badgePositionX == 'right' ? 'auto' : '-14px') . ';
@@ -223,22 +203,24 @@ function output_css_badge($badge)
 		// Add additional cases as needed
 	}
 
-	if (!empty($badge->badgePositionX) && $badge->badgePositionX == 'right' && !empty($badge->badgeStyles) && $badge->badgeStyles == 'badge1') {
-		$dynamic_styles .= '
-			left: auto;
-			right:0px;
-			';
-		$badge_icon_stylebefore = '';
-	} else if (!empty($badge->badgePositionX) && $badge->badgePositionX == 'right' && !empty($badge->badgeStyles) && $badge->badgeStyles == 'badge2') {
-		$dynamic_styles .= '	
-			left: auto;
-			right:0px;
-			';
-		$badge_icon_stylebefore .= '.asnp-esb-badge::before { 
-			right: auto;
-			left: -20px;
-			transform: rotate(0);	
-			}';
+	if (!empty($badge->badgeStyles) && $badge->badgeStyles == 'badge1') {
+		$dynamic_styles .= '.asnp-esb-badge {';
+		$dynamic_styles .= ' background-color: ' . $badge->badgeColor . 'px;';
+		$dynamic_styles .= ' height: ' . $badge->heightBadge . 'px;';
+		$dynamic_styles .= ' width: ' . $badge->widthBadge . 'px;';
+		$dynamic_styles .= ' left: ' . ($badge->badgePositionX == 'right' ? 'auto' : '0px') . 'px;';
+		$dynamic_styles .= ' right: ' . ($badge->badgePositionX == 'right' ? '0px' : '') . 'px;';
+		$dynamic_styles .= ' font-size: ' . $badge->heightBadge . 'px;';
+		$dynamic_styles .= ' line-height: ' . $badge->heightBadge . 'px;';
+		$dynamic_styles .= ' opacity: ' . $badge->opacity . 'px;';
+		$dynamic_styles .= ' border-top-left-radius: ' . $badge->topLeftRadius . 'px;';
+		$dynamic_styles .= ' border-top-right-radius: ' . $badge->topRightRadius . 'px;';
+		$dynamic_styles .= ' border-bottom-left-radius: ' . $badge->bottomLeftRadius . 'px;';
+		$dynamic_styles .= ' border-bottom-right-radius: ' . $badge->bottomRightRadius . 'px;';
+		$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
+		$dynamic_styles .= ' transform:   rotateX(' . $badge->rotationX . 'deg) rotateY(' . $badge->rotationY . 'deg) rotateZ(' . $badge->rotationZ . 'deg);';
+		$dynamic_styles .= ' opacity: ' . $badge->opacity . 'px;';
+		$dynamic_styles .= '}';
 	}
 
 
