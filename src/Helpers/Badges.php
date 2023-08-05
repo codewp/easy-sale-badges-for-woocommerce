@@ -223,13 +223,13 @@ function output_css_badge($badge)
 		// Add additional cases as needed
 	}
 
-	if (!empty($badge->badgePositionX) && $badge->badgePositionX == 'right' && $badge->badgeStyles == 'badge1') {
+	if (!empty($badge->badgePositionX) && $badge->badgePositionX == 'right' && !empty($badge->badgeStyles) && $badge->badgeStyles == 'badge1') {
 		$dynamic_styles .= '
 			left: auto;
 			right:0px;
 			';
-			$badge_icon_stylebefore = '';
-	} else if (!empty($badge->badgePositionX) && $badge->badgePositionX == 'right' && $badge->badgeStyles == 'badge2') {
+		$badge_icon_stylebefore = '';
+	} else if (!empty($badge->badgePositionX) && $badge->badgePositionX == 'right' && !empty($badge->badgeStyles) && $badge->badgeStyles == 'badge2') {
 		$dynamic_styles .= '	
 			left: auto;
 			right:0px;
