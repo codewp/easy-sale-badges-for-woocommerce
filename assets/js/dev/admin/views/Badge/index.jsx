@@ -50,7 +50,7 @@ const defaultBadge = {
 	badgeAdv: '',
 	imgbadgeAdv: 'false',
 	mainBg: '#5F536D',
-	SecondBg: '#25ad25',
+	secondBg: '#25ad25',
 	zIndexAdv: '',
 	alwaysOnline: 1,
 	availability: {

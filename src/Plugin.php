@@ -5,9 +5,9 @@ namespace AsanaPlugins\WhatsApp;
 use AsanaPlugins\WhatsApp\Registry\Container;
 use AsanaPlugins\WhatsApp\Admin\Admin;
 use AsanaPlugins\WhatsApp\API\RestApi;
-use AsanaPlugins\WhatsApp\Models\WhatsAppModel;
+use AsanaPlugins\WhatsApp\Models\BadgeModel;
 use AsanaPlugins\WhatsApp\Models\AccountModel;
-use AsanaPlugins\WhatsApp\ShortCode\ChatShortCode;
+use AsanaPlugins\WhatsApp\ShortCode\BadgeShortCode;
 use AsanaPlugins\WhatsApp\WooCommerce\WooCommerceHooks;
 
 defined( 'ABSPATH' ) || exit;
@@ -139,7 +139,7 @@ final class Plugin {
 	}
 
 	public function add_shortcodes() {
-		add_shortcode( 'asnp_chat', ChatShortCode::class . '::output' );
+		add_shortcode( 'asnp_badge', BadgeShortCode::class . '::output' );
 	}
 
 	protected function register_dependencies() {
@@ -156,9 +156,9 @@ final class Plugin {
 			}
 		);
 		$this->container()->register(
-			WhatsAppModel::class,
+			BadgeModel::class,
 			function( Container $container ) {
-				return new WhatsAppModel();
+				return new BadgeModel();
 			}
 		);
 		$this->container()->register(
