@@ -4,7 +4,7 @@ namespace AsanaPlugins\WhatsApp\Models;
 
 defined( 'ABSPATH' ) || exit;
 
-class WhatsAppModel extends BaseModel {
+class BadgeModel extends BaseModel {
 
 	/**
 	 * Constructor.
@@ -14,7 +14,7 @@ class WhatsAppModel extends BaseModel {
 	public function __construct() {
 		global $wpdb;
 
-		$this->table_name  = $wpdb->prefix . 'asnp_ewhatsapp_whatsapp';
+		$this->table_name  = $wpdb->prefix . 'asnp_wesb_badge';
 		$this->primary_key = 'id';
 		$this->version     = '1.0';
 	}
@@ -29,7 +29,7 @@ class WhatsAppModel extends BaseModel {
 	public function get_columns() {
 		return array(
 			'id'      => '%d',
-			'name'    => '%s',
+			'title'   => '%s',
 			'type'    => '%s',
 			'status'  => '%d',
 			'options' => '%s',
@@ -58,7 +58,7 @@ class WhatsAppModel extends BaseModel {
 		}
 
 		$args = wp_parse_args( $args, $this->get_column_defaults() );
-		$id   = $this->insert( $args, 'whatsapp' );
+		$id   = $this->insert( $args, 'badge' );
 
 		return $id ? $id : false;
 	}
@@ -120,20 +120,10 @@ class WhatsAppModel extends BaseModel {
 			$where .= " AND `id` IN( {$ids} )";
 		}
 
-		// Specific type.
-		if ( ! empty( $args['type'] ) ) {
-			if ( is_array( $args['type'] ) ) {
-				$types = implode( "','", array_map( 'esc_sql', $args['type'] ) );
-			} else {
-				$types = esc_sql( $args['type'] );
-			}
-			$where .= " AND `type` IN( '{$types}' )";
-		}
-
-		// Search by name.
-		if ( ! empty( $args['name'] ) ) {
-			$where        .= ' AND LOWER(`name`) LIKE %s';
-			$select_args[] = '%' . $wpdb->esc_like( strtolower( sanitize_text_field( $args['name'] ) ) ) . '%';
+		// Search by title.
+		if ( ! empty( $args['title'] ) ) {
+			$where        .= ' AND LOWER(`title`) LIKE %s';
+			$select_args[] = '%' . $wpdb->esc_like( strtolower( sanitize_text_field( $args['title'] ) ) ) . '%';
 		}
 
 		// Status.
@@ -184,7 +174,7 @@ class WhatsAppModel extends BaseModel {
 		}
 
 		unset( $item['id'] );
-		$item['name'] = sprintf( '%s (Copy)', $item['name'] );
+		$item['title'] = sprintf( '%s (Copy)', sanitize_text_field( $item['title'] ) );
 
 		return $this->add( $item );
 	}

@@ -9,7 +9,7 @@ class Install {
 	/**
 	 * Plugin version option name.
 	 */
-	const VERSION_OPTION = 'asnp_ewhatsapp_version';
+	const VERSION_OPTION = 'asnp_wesb_version';
 
 	public static function init() {
 		add_action( 'init', array( __CLASS__, 'check_version' ), 5 );
@@ -31,7 +31,7 @@ class Install {
 
 		if ( ! $version_option || $requires_update ) {
 			self::install();
-			do_action( 'asnp_ewhatsapp_updated' );
+			do_action( 'asnp_wesb_updated' );
 		}
 	}
 
@@ -41,24 +41,24 @@ class Install {
 		}
 
 		// Check if we are not already running this routine.
-		if ( 'yes' === get_transient( 'asnp_ewhatsapp_installing' ) ) {
+		if ( 'yes' === get_transient( 'asnp_wesb_installing' ) ) {
 			return;
 		}
 
 		// If we made it till here nothing is running yet, lets set the transient now.
-		set_transient( 'asnp_ewhatsapp_installing', 'yes', MINUTE_IN_SECONDS * 10 );
+		set_transient( 'asnp_wesb_installing', 'yes', MINUTE_IN_SECONDS * 10 );
 
-		if ( ! defined( 'ASNP_EWHATSAPP_INSTALLING' ) ) {
-			define( 'ASNP_EWHATSAPP_INSTALLING', true );
+		if ( ! defined( 'ASNP_WESB_INSTALLING' ) ) {
+			define( 'ASNP_WESB_INSTALLING', true );
 		}
 
 		self::create_tables();
 		self::update_version();
 		self::maybe_update_db_version();
 
-		delete_transient( 'asnp_ewhatsapp_installing' );
+		delete_transient( 'asnp_wesb_installing' );
 
-		do_action( 'asnp_ewhatsapp_installed' );
+		do_action( 'asnp_wesb_installed' );
 	}
 
 	public static function create_tables() {
@@ -80,30 +80,19 @@ class Install {
 		}
 
 		$tables = "
-CREATE TABLE {$wpdb->prefix}asnp_ewhatsapp_whatsapp (
+CREATE TABLE {$wpdb->prefix}asnp_wesb_badge (
 	id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-	name varchar(200) NOT NULL DEFAULT '',
-	type varchar(20) NOT NULL DEFAULT '',
+	title varchar(200) NOT NULL DEFAULT '',
 	status TINYINT NOT NULL DEFAULT '1',
 	options longtext NULL,
-	PRIMARY KEY  (id)
+	PRIMARY KEY (id)
 ) $collate;
-CREATE TABLE {$wpdb->prefix}asnp_ewhatsapp_account (
+CREATE TABLE {$wpdb->prefix}asnp_wesb_product_badge (
 	id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-	name varchar(200) NOT NULL DEFAULT '',
-	type varchar(10) NOT NULL DEFAULT '',
-	accountNumber text NULL,
-	caption varchar(20) NOT NULL DEFAULT '',
-	customCaption text NULL,
-	alwaysOnline TINYINT NOT NULL DEFAULT '1',
-	avatar text NULL,
-	availability text NULL,
-	textMessage longtext NULL,
-	useTimezone TINYINT NOT NULL DEFAULT '0',
-	timezone varchar(50) NOT NULL DEFAULT '',
-	PRIMARY KEY  (id)
-) $collate;
-		";
+	product_id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+	badge text NULL,
+	PRIMARY KEY (id)
+) $collate;";
 
 		return $tables;
 	}
@@ -130,7 +119,7 @@ CREATE TABLE {$wpdb->prefix}asnp_ewhatsapp_account (
 	 * @param string|null $version New URL Coupons DB version or null.
 	 */
 	public static function update_db_version( $version = null ) {
-		update_option( 'asnp_ewhatsapp_db_version', is_null( $version ) ? get_plugin()->version : $version );
+		update_option( 'asnp_wesb_db_version', is_null( $version ) ? get_plugin()->version : $version );
 	}
 
 	/**
@@ -143,7 +132,8 @@ CREATE TABLE {$wpdb->prefix}asnp_ewhatsapp_account (
 		global $wpdb;
 
 		$tables = array(
-			"{$wpdb->prefix}asnp_ewhatsapp_whatsapp",
+			"{$wpdb->prefix}asnp_wesb_badge",
+			"{$wpdb->prefix}asnp_wesb_product_badge",
 		);
 
 		/**
@@ -153,7 +143,7 @@ CREATE TABLE {$wpdb->prefix}asnp_ewhatsapp_account (
 		 *
 		 * @param array $tables An array of WooCommerce-specific database table names.
 		 */
-		$tables = apply_filters( 'asnp_ewhatsapp_install_get_tables', $tables );
+		$tables = apply_filters( 'asnp_wesb_install_get_tables', $tables );
 
 		return $tables;
 	}
