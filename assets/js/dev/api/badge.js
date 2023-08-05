@@ -5,7 +5,7 @@ import { API_ROOT } from './constants';
 export const getItems = async ( data = {} ) => {
 	try {
 		const response = await apiFetch( {
-			path: `${ API_ROOT }/whatsapp`,
+			path: `${ API_ROOT }/badge`,
 		} );
 		if ( response ) {
 			return response;
@@ -29,7 +29,7 @@ export const getItem = async ( id ) => {
 
 	try {
 		const response = await apiFetch( {
-			path: `${ API_ROOT }/whatsapp/${ id }`,
+			path: `${ API_ROOT }/badge/${ id }`,
 			method: 'GET',
 		} );
 
@@ -69,7 +69,7 @@ export const create = async ( data ) => {
 
 	try {
 		const response = await apiFetch( {
-			path: `${ API_ROOT }/whatsapp`,
+			path: `${ API_ROOT }/badge`,
 			method: 'POST',
 			data,
 		} );
@@ -102,7 +102,7 @@ export const update = async ( data ) => {
 
 	try {
 		const response = await apiFetch( {
-			path: `${ API_ROOT }/whatsapp/${ data.id }`,
+			path: `${ API_ROOT }/badge/${ data.id }`,
 			method: 'POST',
 			data,
 		} );
@@ -132,7 +132,7 @@ export const deleteItem = async ( id ) => {
 
 	try {
 		const response = await apiFetch( {
-			path: `${ API_ROOT }/whatsapp/${ id }`,
+			path: `${ API_ROOT }/badge/${ id }`,
 			method: 'DELETE',
 		} );
 
@@ -161,7 +161,7 @@ export const duplicate = async ( id ) => {
 
 	try {
 		const response = await apiFetch( {
-			path: `${ API_ROOT }/whatsapp/duplicate/${ id }`,
+			path: `${ API_ROOT }/badge/duplicate/${ id }`,
 			method: 'POST',
 		} );
 
@@ -189,7 +189,7 @@ export const reorder = async ( data ) => {
 
 	try {
 		const response = await apiFetch( {
-			path: `${ API_ROOT }/whatsapp/reorder`,
+			path: `${ API_ROOT }/badge/reorder`,
 			method: 'POST',
 			data,
 		} );
