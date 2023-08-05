@@ -2,67 +2,67 @@
 
 namespace AsanaPlugins\WhatsApp\Helpers\Badges;
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 use function AsanaPlugins\WhatsApp\add_custom_style;
 
-function output_badges( $badges ) {
-	if ( empty( $badges ) ) {
+function output_badges($badges)
+{
+	if (empty($badges)) {
 		return;
 	}
 
-	foreach ( $badges as $badge ) {
-		output_badge( $badge );
+	foreach ($badges as $badge) {
+		output_badge($badge);
 	}
 }
 
-function output_badge( $badge ) {
-	switch ( $badge->type ) {
+function output_badge($badge)
+{
+	switch ($badge->type) {
 		case 'css':
-			return output_css_badge( $badge );
+			return output_css_badge($badge);
 		case 'timer':
-			return output_timer_badge( $badge );
+			return output_timer_badge($badge);
 
 		case 'image':
-			return output_image_badge( $badge );
+			return output_image_badge($badge);
 	}
 }
 
-function output_css_badge( $badge ) {
-	if ( ! $badge ) {
+function output_css_badge($badge)
+{
+	if (!$badge) {
 		return;
 	}
 
-	$dynamic_style = '';
-
-	add_custom_style( $dynamic_style );
-
 	$span_style = '';
-	if ( isset( $badge->opacity ) && 0 < strlen( trim( $badge->opacity ) ) ) {
-		$span_style .= 'opacity: ' . absint( $badge->opacity ) . ';';
+	if (isset($badge->opacity) && 0 < strlen(trim($badge->opacity))) {
+		$span_style .= 'opacity: ' . absint($badge->opacity) . ';';
 	}
-	if ( ! empty( $badge->color ) && 0 < strlen( trim( $badge->color ) ) ) {
-		$span_style .= ' color: ' . sanitize_text_field( trim( $badge->color ) ) . ';';
+	if (!empty($badge->color) && 0 < strlen(trim($badge->color))) {
+		$span_style .= ' color: ' . sanitize_text_field(trim($badge->color)) . ';';
 	}
-	if ( isset( $badge->font_size ) && 0 < strlen( trim( $badge->opacity ) ) ) {
-		$span_style .= ' font-size: ' . absint( $badge->font_size ) . 'px;';
+	if (isset($badge->font_size) && 0 < strlen(trim($badge->opacity))) {
+		$span_style .= ' font-size: ' . absint($badge->font_size) . 'px;';
 	}
 
 	$inner_span_style = '';
-	if ( isset( $badge->font_size ) && 0 < strlen( trim( $badge->opacity ) ) ) {
-		$inner_span_style .= ' font-size: ' . absint( $badge->font_size ) . 'px;';
+	if (isset($badge->font_size) && 0 < strlen(trim($badge->opacity))) {
+		$inner_span_style .= ' font-size: ' . absint($badge->font_size) . 'px;';
 	}
 
 	$badge_icon_style = '';
-	$badge_icon_style2 = '';
+	$badge_icon_stylebefore = '';
+	$badge_icon_styleafter = '';
+	$dynamic_styles = '';
 
 	switch ($badge->badgeStyles) {
 		case 'badge1':
 			$badge_icon_style = '
 			background-color: ' . $badge->badgeColor . ';
 			top: 0px;
-			left: ' . ($badge->badgePositionX == 'right' ? 'auto' : '0px') . ';
-			right: ' . ($badge->badgePositionX == 'right' ? '0px' : '') . ';
+			left: 0px;
 			height: ' . $badge->heightBadge . 'px;
 			width: ' . $badge->widthBadge . 'px;
 			position: absolute;
@@ -87,8 +87,7 @@ function output_css_badge( $badge ) {
 			display: inline-block;
 			position: absolute;
 			opacity: ' . $badge->opacity . ';
-			left: ' . ($badge->badgePositionX == 'right' ? 'auto' : '0px') . ';
-			right: ' . ($badge->badgePositionX == 'right' ? '0px' : '') . ';
+			left: 0px;
 			top: 0px;
 			height: ' . $badge->heightBadge . 'px;
 			width: ' . $badge->widthBadge . 'px;
@@ -105,22 +104,21 @@ function output_css_badge( $badge ) {
 			z-index: ' . $badge->zIndex . ';
 			transform: rotateX(' . $badge->rotationX . 'deg) rotateY(' . $badge->rotationY . 'deg) rotateZ(' . $badge->rotationZ . 'deg);
 			';
-			$badge_icon_style2 = '
-			&::before {
+			$badge_icon_stylebefore = '
+			.asnp-esb-badge::before {
 				border-left-color: transparent !important;
 				display: inline-block;
 				content: \'\';
 				position: absolute;
-				right: ' . ($badge->badgePositionX == 'right' ? 'auto' : '-20px') . ';
-				left: ' . ($badge->badgePositionX == 'right' ? '-20px' : '') . ';
+				right: -20px;
 				top: 0;
 				border: 9px solid transparent;
 				border-width: 15px 15px;
 				border-color: ' . $badge->badgeColor . ';
-				transform: ' . ($badge->badgePositionX == 'right' ? 'rotate(0)' : 'rotate(180deg)') . ';
+				transform: rotate(180deg);
 				}
 				';
-				break;
+			break;
 		case 'badge3':
 			$badge_icon_style = '
 			position: absolute;
@@ -144,7 +142,7 @@ function output_css_badge( $badge ) {
 			z-index: ' . $badge->zIndex . ';
 			transform: rotateX(' . $badge->rotationX . 'deg) rotateY(' . $badge->rotationY . 'deg) rotateZ(' . $badge->rotationZ . 'deg);
 			';
-				$badge_icon_style .= '
+			$badge_icon_styleafter .= '
 				&::after {
 					content: \'\';
 					position: absolute;
@@ -158,7 +156,7 @@ function output_css_badge( $badge ) {
 					border-radius: ' . ($badge->badgePositionX == 'right' ? '3px 0px 0px 3px' : '0 3px 3px 0') . ';
 					}
 					';
-					break;
+			break;
 		case 'badge4':
 			$badge_icon_style = '
 			border-radius: 3px;
@@ -187,7 +185,7 @@ function output_css_badge( $badge ) {
 			z-index: ' . $badge->zIndex . ';
 			transform: rotateX(' . $badge->rotationX . 'deg) rotateY(' . $badge->rotationY . 'deg) rotateZ(' . $badge->rotationZ . 'deg);
 			';
-			    $badge_icon_style .= '
+			$badge_icon_stylebefore .= '
 			    &::before {
 				    position: absolute;
 				    right: ' . ($badge->badgePositionX == 'right' ? 'auto' : '-14px') . ';
@@ -207,7 +205,7 @@ function output_css_badge( $badge ) {
 				    border-right: ' . ($badge->badgePositionX == 'right' ? '15px solid ' . $badge->badgeColor : '') . ';
 						}
 						';
-				$badge_icon_style .= '
+			$badge_icon_style .= '
 				&::after {
 					display: block;
 					content: \'\';
@@ -221,47 +219,56 @@ function output_css_badge( $badge ) {
 					top: calc(100% / 2 - 4px);
 						}
 						';
-						break;
-			// Add additional cases as needed
+			break;
+		// Add additional cases as needed
 	}
-	 		// Add before after css to the $this->style;
-			 if ( ! empty( $badge->prop ) ) {
-				$dynamic_style .= ' .asnp-esb-badge::before { color: red; }';
-			}
 
-			echo '<div class="asnp-esb-badge asnp-esb-timer-badge" style="display: none;">';
-			echo '<span style="' . esc_attr( $span_style ) . '">';
-			echo '<span class="asnp-esb-inner-span"> style="' . esc_attr( $inner_span_style ) . '"></span>';
-			echo '<span date-time="' . sanitize_text_field( $badge->endTime ) . '"></span>';
-			echo '</span>';
-			echo '</div>';
-			echo '</div>';
+	if (!empty($badge->badgePositionX) && $badge->badgePositionX == 'right' && $badge->badgeStyles == 'badge1') {
+		$dynamic_styles .= '
+			left: auto;
+			right:0px;
+			';
+			$badge_icon_stylebefore = '';
+	} else if (!empty($badge->badgePositionX) && $badge->badgePositionX == 'right' && $badge->badgeStyles == 'badge2') {
+		$dynamic_styles .= '	
+			left: auto;
+			right:0px;
+			';
+		$badge_icon_stylebefore .= '.asnp-esb-badge::before { 
+			right: auto;
+			left: -20px;
+			transform: rotate(0);	
+			}';
+	}
 
 
-			// Css Badge
-			echo '<div class="asnp-esb-badge asnp-esb-timer-badge" style="display: none;">';
-			echo '<div style="' . esc_attr( $span_style ) . '">';
-			echo '<span class="asnp-esb-inner-span"> style="' . esc_attr( $inner_span_style ) . '"></span>';
-			echo '<div class="asnp-esb-badge asnp-esb-timer-badge" style="display: none;">';
-			echo '<span class="asnp-esb-badge asnp-esb-timer-badge" style="display: none;"></span>';
-			echo '</div>';
-			echo '</div>';
-			echo '</div>';
+	add_custom_style($dynamic_styles);
 
+	// Css Badge
+	echo '<div class="asnp-esb-badge asnp-esb-timer-badge" style="display: none;">';
+	echo '<div style="' . esc_attr($span_style) . '">';
+	echo '<span class="asnp-esb-inner-span"> style="' . esc_attr($inner_span_style) . '"></span>';
+	echo '<div class="asnp-esb-badge asnp-esb-timer-badge" style="display: none;">';
+	echo '<span class="asnp-esb-badge asnp-esb-timer-badge" style="display: none;"></span>';
+	echo '</div>';
+	echo '</div>';
+	echo '</div>';
 }
 
-function output_timer_badge( $badge ) {
-	if ( ! $badge ) {
+function output_timer_badge($badge)
+{
+	if (!$badge) {
 		return;
 	}
 
 	$dynamic_style = '';
 
-	add_custom_style( $dynamic_style );
+	add_custom_style($dynamic_style);
 }
 
-function output_image_badge( $badge ) {
-	if ( ! $badge ) {
+function output_image_badge($badge)
+{
+	if (!$badge) {
 		return;
 	}
 }
