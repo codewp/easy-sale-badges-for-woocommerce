@@ -306,7 +306,7 @@ class Badge extends BaseController {
 
 		foreach ( $request->get_params() as $key => $value ) {
 			// Excluded fields.
-			if ( in_array( $key, array( '_locale', 'id', 'name', 'status', 'type' ) ) ) {
+			if ( in_array( $key, array( '_locale', 'id', 'title', 'status' ) ) ) {
 				continue;
 			}
 
@@ -387,12 +387,12 @@ class Badge extends BaseController {
 				case 'alwaysOnline':
 				case 'useTimezone':
 				case 'useTimerBadge':
-						if ( isset( $value ) ) {
-							$options[ $key ] = WhatsApp\string_to_bool( $value ) ? 1 : 0;
-						} elseif ( ! $id && isset( $defaults[ $key ] ) ) {
-							$options[ $key ] = $defaults[ $key ];
-						}
-						break;
+					if ( isset( $value ) ) {
+						$options[ $key ] = WhatsApp\string_to_bool( $value ) ? 1 : 0;
+					} elseif ( ! $id && isset( $defaults[ $key ] ) ) {
+						$options[ $key ] = $defaults[ $key ];
+					}
+					break;
 
 				// Zindex options.
 				case 'zIndex':
