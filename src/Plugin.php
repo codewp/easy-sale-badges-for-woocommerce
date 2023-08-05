@@ -6,7 +6,6 @@ use AsanaPlugins\WhatsApp\Registry\Container;
 use AsanaPlugins\WhatsApp\Admin\Admin;
 use AsanaPlugins\WhatsApp\API\RestApi;
 use AsanaPlugins\WhatsApp\Models\BadgeModel;
-use AsanaPlugins\WhatsApp\Models\AccountModel;
 use AsanaPlugins\WhatsApp\ShortCode\BadgeShortCode;
 use AsanaPlugins\WhatsApp\WooCommerce\WooCommerceHooks;
 
@@ -147,12 +146,6 @@ final class Plugin {
 			CustomStyles::class,
 			function( Container $container ) {
 				return new CustomStyles();
-			}
-		);
-		$this->container()->register(
-			AccountModel::class,
-			function( Container $container ) {
-				return new AccountModel();
 			}
 		);
 		$this->container()->register(

@@ -5,7 +5,6 @@ namespace AsanaPlugins\WhatsApp\Models;
 defined( 'ABSPATH' ) || exit;
 
 use AsanaPlugins\WhatsApp;
-use AsanaPlugins\WhatsApp\Models\AccountModel;
 
 class ItemsModel {
 
@@ -42,34 +41,6 @@ class ItemsModel {
 
 		$products = wc_get_products( $args );
 		return ! empty( $products ) ? self::prepare_product_items( $products, $args['type'] ) : array();
-	}
-
-	public static function get_accounts( array $args = array() ) {
-		$args['output'] = empty( $args['id'] ) ? OBJECT : OBJECT_K;
-		$model          = WhatsApp\get_plugin()->container()->get( AccountModel::class );
-		$items          = $model->get_items( $args );
-		if ( empty( $items ) ) {
-			return [];
-		}
-
-		if ( empty( $args['id'] ) ) {
-			foreach ( $items as &$item ) {
-				$item->value = (int) $item->id;
-				$item->label = sanitize_text_field( $item->name );
-			}
-			return $items;
-		}
-
-		// Keep ordering based on given IDs.
-		$accounts = [];
-		foreach ( $args['id'] as $id ) {
-			if ( isset( $items[ $id ] ) ) {
-				$items[ $id ]->value = (int) $items[ $id ]->id;
-				$items[ $id ]->label = sanitize_text_field( $items[ $id ]->name );
-				$accounts[]          = $items[ $id ];
-			}
-		}
-		return $accounts;
 	}
 
 	protected static function prepare_product_items( array $products, $allowed_types = array( 'simple', 'variation' ) ) {

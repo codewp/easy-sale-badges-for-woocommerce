@@ -1,2 +1,1 @@
-export * from './whatsapp';
-export * from './account';
+export * from './badge';

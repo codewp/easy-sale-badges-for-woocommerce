@@ -11,7 +11,7 @@ abstract class BaseController extends \WP_REST_Controller {
 	 *
 	 * @var string
 	 */
-	protected $namespace = 'asnp-easy-whatsapp/v1';
+	protected $namespace = 'asnp-easy-sale-badges/v1';
 
 	/**
 	 * Route base.

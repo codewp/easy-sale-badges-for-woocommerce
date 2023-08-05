@@ -1,1 +1,1 @@
-export const API_ROOT = '/asnp-easy-whatsapp/v1';
+export const API_ROOT = '/asnp-easy-sale-badges/v1';
