@@ -11,7 +11,7 @@ import { IMAGES_URL } from './../../utils/constants';
 import { BadgeContext } from '../../contexts/Badge';
 
 const defaultBadge = {
-	title: 'WhatsApp',
+	title: 'Badge',
 	status: 1,
 	badgeLabel: 'Sale',
 	textColor: '#ffffff',

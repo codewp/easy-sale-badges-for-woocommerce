@@ -37,7 +37,6 @@ const MenuItem = ( props ) => {
 					<BadgeStyles
 						onChange={ props.onChange }
 						badgeStyles={ props.badge.badgeStyles }
-						imgbadge={ props.badge.imgbadge }
 					/>
 					<StyleOptions
 						onChange={ props.onChange }
