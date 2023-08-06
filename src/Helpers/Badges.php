@@ -6,33 +6,30 @@ defined('ABSPATH') || exit;
 
 use function AsanaPlugins\WhatsApp\add_custom_style;
 
-function output_badges($badges)
-{
-	if (empty($badges)) {
+function output_badges( $badges ) {
+	if ( empty( $badges ) ) {
 		return;
 	}
 
-	foreach ($badges as $badge) {
-		output_badge($badge);
+	foreach ( $badges as $badge ) {
+		output_badge( $badge );
 	}
 }
 
-function output_badge($badge)
-{
-	if (!empty($badge->badgeStyles)) {
-		return output_css_badge($badge);
-	} else if (isset($badge->imgbadge) && $badge->imgbadge == 1) {
-		return output_image_badge($badge);
-	} else if (isset($badge->imgbadgeAdv) && $badge->imgbadgeAdv == 1) {
-		return output_imageAdv_badge($badge);
-	} else if (isset($badge->useTimerBadge) && $badge->useTimerBadge == 1) {
-		return output_timer_badge($badge);
+function output_badge( $badge ) {
+	if ( ! empty( $badge->badgeStyles ) ) {
+		return output_css_badge( $badge );
+	} elseif ( isset( $badge->imgbadge ) && $badge->imgbadge == 1 ) {
+		return output_image_badge( $badge );
+	} elseif ( isset( $badge->imgbadgeAdv ) && $badge->imgbadgeAdv == 1 ) {
+		return output_imageAdv_badge( $badge );
+	} elseif ( isset( $badge->useTimerBadge ) && $badge->useTimerBadge == 1 ) {
+		return output_timer_badge( $badge );
 	}
 }
 
-function output_css_badge($badge)
-{
-	if (!$badge) {
+function output_css_badge( $badge ) {
+	if ( ! $badge ) {
 		return;
 	}
 
@@ -81,12 +78,14 @@ function output_css_badge($badge)
 
 	if (
 		isset($badge->badgeStyles) &&
-		$badge->badgeStyles == 'badge5' ||
-		$badge->badgeStyles == 'badge6' ||
-		$badge->badgeStyles == 'badge7' ||
-		$badge->badgeStyles == 'badge8' ||
-		$badge->badgeStyles == 'badge9' ||
-		$badge->badgeStyles == 'badge10'
+		(
+			$badge->badgeStyles == 'badge5' ||
+			$badge->badgeStyles == 'badge6' ||
+			$badge->badgeStyles == 'badge7' ||
+			$badge->badgeStyles == 'badge8' ||
+			$badge->badgeStyles == 'badge9' ||
+			$badge->badgeStyles == 'badge10'
+		)
 	) {
 		$heightContBadge = $badge->widthBadge . 'px';
 	} else {
@@ -100,27 +99,31 @@ function output_css_badge($badge)
 		$horizAndvert = 'scaleX(-1)';
 	} elseif (isset($badge->horizontal) && $badge->horizontal == 0 && isset($badge->vertical) && $badge->vertical == 1) {
 		$horizAndvert = 'scaleY(-1)';
-	} else {
-		$horizAndvert = '';
 	}
 
 	if (
-		isset($badge->badgeStyles) && $badge->badgeStyles == 'badge5' &&
-		isset($badge->badgePositionY) && $badge->badgePositionY == 'bottom' &&
-		(isset($badge->badgePositionX) && $badge->badgePositionX == 'left' || isset($badge->badgePositionX) && $badge->badgePositionX == 'right')
+		isset( $badge->badgeStyles ) && $badge->badgeStyles == 'badge5' &&
+		isset( $badge->badgePositionY ) && $badge->badgePositionY == 'bottom' &&
+		(
+			( isset( $badge->badgePositionX ) && $badge->badgePositionX == 'left' ) ||
+			( isset( $badge->badgePositionX ) && $badge->badgePositionX == 'right' )
+		)
 	) {
 		$horizAndvert = 'scaleX(-1) scaleY(-1)';
-	} else if (
-		isset($badge->badgeStyles) && $badge->badgeStyles == 'badge6' &&
-		isset($badge->badgePositionY) && $badge->badgePositionY == 'bottom' &&
-		(isset($badge->badgePositionX) && $badge->badgePositionX == 'left' || isset($badge->badgePositionX) && $badge->badgePositionX == 'right')
+	} elseif (
+		isset( $badge->badgeStyles ) && $badge->badgeStyles == 'badge6' &&
+		isset( $badge->badgePositionY ) && $badge->badgePositionY == 'bottom' &&
+		(
+			( isset( $badge->badgePositionX ) && $badge->badgePositionX == 'left' ) ||
+			( isset( $badge->badgePositionX ) && $badge->badgePositionX == 'right' )
+		)
 	) {
 		$horizAndvert = 'scaleX(-1) scaleY(-1)';
 	}
 
 	$dynamic_styles = '';
 
-	switch ($badge->badgeStyles) {
+	switch ( $badge->badgeStyles ) {
 		case 'badge1':
 			$dynamic_styles .= '.asnp-esb-productBadge {';
 			$dynamic_styles .= ' width: ' . $widthContBadge . ';';
@@ -195,39 +198,37 @@ function output_css_badge($badge)
 	}
 
 
-	add_custom_style($dynamic_styles);
+	add_custom_style( $dynamic_styles );
 
 	// Css Badge
 	echo '<div class="asnp-esb-productBadge">';
 	echo '<div class="asnp-esb-badge">';
 	echo '<span class="asnp-esb-inner-span2"></span>';
 	echo '<div class="asnp-esb-inner-span1">';
-	echo '<div style="transform: ' . $horizAndvert . '">' . $badge->badgeLabel . '</div>';
+	echo '<div style="transform: ' . esc_attr( $horizAndvert ) . '">' . esc_html__( $badge->badgeLabel, 'asnp-easy-whatsapp' ) . '</div>';
 	echo '</div>';
 	echo '</div>';
 	echo '</div>';
 }
 
-function output_timer_badge($badge)
-{
-	if (!$badge) {
+function output_timer_badge( $badge ) {
+	if ( ! $badge ) {
 		return;
 	}
 
-	$dynamic_style = '';
+	$dynamic_styles = '';
 
-	add_custom_style($dynamic_style);
+	add_custom_style( $dynamic_styles );
 }
 
-function output_image_badge($badge)
-{
-	if (!$badge) {
+function output_image_badge( $badge ) {
+	if ( ! $badge ) {
 		return;
 	}
 }
-function output_imageAdv_badge($badge)
-{
-	if (!$badge) {
+
+function output_imageAdv_badge( $badge ) {
+	if ( ! $badge ) {
 		return;
 	}
 }
