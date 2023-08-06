@@ -182,8 +182,8 @@ function output_css_badge($badge)
 			$dynamic_styles .= ' width: ' . $badge->widthBadge . 'px;';
 			$dynamic_styles .= ' left: ' . ($badge->badgePositionX == 'right' ? 'auto' : '0px') . ';';
 			$dynamic_styles .= ' right: ' . ($badge->badgePositionX == 'right' ? '0px' : '') . ';';
-			$dynamic_styles .= ' font-size: ' . $badge->heightBadge . 'px;';
-			$dynamic_styles .= ' line-height: ' . $badge->heightBadge . 'px;';
+			$dynamic_styles .= ' font-size: ' . $badge->fontSizeText . 'px;';
+			$dynamic_styles .= ' line-height: ' . $badge->lineHeightText . 'px;';
 			$dynamic_styles .= ' opacity: ' . $badge->opacity . 'px;';
 			$dynamic_styles .= ' border-top-left-radius: ' . $badge->topLeftRadius . 'px;';
 			$dynamic_styles .= ' border-top-right-radius: ' . $badge->topRightRadius . 'px;';
