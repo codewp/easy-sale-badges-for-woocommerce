@@ -103,7 +103,7 @@ const Admin = ( {
 								backgroundImage: `url(${ IMAGES_URL }headphone-k.png)`,
 							} }
 						>
-							{ badge.imgbadge == 'true' && (
+							{ badge.imgbadge == 1 && (
 								<div
 									className="asnp-ew-productBadge"
 									style={ {
@@ -124,7 +124,7 @@ const Admin = ( {
 									</span>
 								</div>
 							) }
-							{ badge.imgbadgeAdv == 'true' && (
+							{ badge.imgbadgeAdv == 1 && (
 								<div
 									className="asnp-ew-productBadge"
 									style={ {
@@ -162,9 +162,9 @@ const Admin = ( {
 									</span>
 								</div>
 							) }
-							{ badge.imgbadge == 'false' &&
-								badge.imgbadgeAdv == 'false' &&
-								badge.useTimerBadge == 'false' && (
+							{ badge.imgbadge == 0 &&
+								badge.imgbadgeAdv == 0 &&
+								badge.useTimerBadge == 0 && (
 									<div
 										className="asnp-ew-productBadge"
 										style={ {
@@ -201,7 +201,7 @@ const Admin = ( {
 										</Span>
 									</div>
 								) }
-							{ badge.useTimerBadge == 'true' && (
+							{ badge.useTimerBadge == 1 && (
 								<div
 									className="asnp-ew-productBadge"
 									style={ {

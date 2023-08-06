@@ -23,9 +23,9 @@ const BadgeStyles = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge1' );
 								props.onChange( 'badgeAdv', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
-								props.onChange( 'useTimerBadge', 'false' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'useTimerBadge', 0 );
 							} }
 						>
 							<img
@@ -43,9 +43,9 @@ const BadgeStyles = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge2' );
 								props.onChange( 'badgeAdv', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
 							} }
 						>
 							<img
@@ -63,9 +63,9 @@ const BadgeStyles = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge3' );
 								props.onChange( 'badgeAdv', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
 							} }
 						>
 							<img
@@ -83,9 +83,9 @@ const BadgeStyles = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge4' );
 								props.onChange( 'badgeAdv', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
 							} }
 						>
 							<img
@@ -103,9 +103,9 @@ const BadgeStyles = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge5' );
 								props.onChange( 'badgeAdv', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
 							} }
 						>
 							<img
@@ -125,9 +125,9 @@ const BadgeStyles = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge6' );
 								props.onChange( 'badgeAdv', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
 							} }
 						>
 							<img
@@ -145,9 +145,9 @@ const BadgeStyles = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge7' );
 								props.onChange( 'badgeAdv', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
 							} }
 						>
 							<img
@@ -165,9 +165,9 @@ const BadgeStyles = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge8' );
 								props.onChange( 'badgeAdv', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
 							} }
 						>
 							<img
@@ -185,9 +185,9 @@ const BadgeStyles = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge9' );
 								props.onChange( 'badgeAdv', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
 							} }
 						>
 							<img
@@ -205,9 +205,9 @@ const BadgeStyles = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge10' );
 								props.onChange( 'badgeAdv', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
 							} }
 						>
 							<img
@@ -227,9 +227,9 @@ const BadgeStyles = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge11' );
 								props.onChange( 'badgeAdv', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
 							} }
 						>
 							<img
@@ -247,9 +247,9 @@ const BadgeStyles = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge12' );
 								props.onChange( 'badgeAdv', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
 							} }
 						>
 							<img
@@ -267,9 +267,9 @@ const BadgeStyles = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge13' );
 								props.onChange( 'badgeAdv', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
-								props.onChange( 'imgbadgeAdv', 'false' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
 							} }
 						>
 							<img

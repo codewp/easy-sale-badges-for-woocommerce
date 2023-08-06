@@ -52,12 +52,12 @@ const AvailabilityDay = ( { updateAvailability, day, name } ) => {
 						type="checkbox"
 						id={ name }
 						value={ name }
-						checked={ 'true' === day.available }
+						checked={ 1 === day.available }
 						onChange={ ( e ) =>
 							updateAvailability(
 								name,
 								'available',
-								e.target.checked ? 'true' : 'false'
+								e.target.checked ? 1 : 0
 							)
 						}
 					/>

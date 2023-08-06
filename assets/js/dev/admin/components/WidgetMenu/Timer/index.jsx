@@ -110,11 +110,11 @@ const Timer = ( props ) => {
 						{ __( 'Status', 'asnp-easy-whatsapp' ) }
 					</span>
 					<Toggle
-						value={ 'true' == props.useTimerBadge }
+						value={ 1 == props.useTimerBadge }
 						onChange={ ( value ) =>
 							props.onChange(
 								'useTimerBadge',
-								value ? 'true' : 'false'
+								value ? 1 : 0
 							)
 						}
 					/>
@@ -176,9 +176,9 @@ const Timer = ( props ) => {
 									props.onChange( 'badgeStyles', '' );
 									props.onChange( 'badgeAdv', '' );
 									props.onChange( 'badgeTimer', 'timer1' );
-									props.onChange( 'useTimerBadge', 'true' );
-									props.onChange( 'imgbadge', 'false' );
-									props.onChange( 'imgbadgeAdv', 'false' );
+									props.onChange( 'useTimerBadge', 1 );
+									props.onChange( 'imgbadge', 0 );
+									props.onChange( 'imgbadgeAdv', 0 );
 									setSelected( 1 );
 								} }
 							>
@@ -198,9 +198,9 @@ const Timer = ( props ) => {
 									props.onChange( 'badgeStyles', '' );
 									props.onChange( 'badgeAdv', '' );
 									props.onChange( 'badgeTimer', 'timer2' );
-									props.onChange( 'useTimerBadge', 'true' );
-									props.onChange( 'imgbadge', 'false' );
-									props.onChange( 'imgbadgeAdv', 'false' );
+									props.onChange( 'useTimerBadge', 1 );
+									props.onChange( 'imgbadge', 0 );
+									props.onChange( 'imgbadgeAdv', 0 );
 									setSelected( 2 );
 								} }
 							>

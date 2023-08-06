@@ -15,11 +15,11 @@ const ProductsSelection = ( props ) => {
 				</span>
 				<div className="asnp-ml-2">
 					<Toggle
-						value={ 'true' == props.useProductFilter }
+						value={ 1 == props.useProductFilter }
 						onChange={ ( value ) =>
 							props.onChange(
 								'useProductFilter',
-								value ? 'true' : 'false'
+								value ? 1 : 0
 							)
 						}
 					/>

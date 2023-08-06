@@ -66,11 +66,11 @@ const WhatsAppButton = ( {
 	}
 
 	let horizAndvert;
-	if ( badge.horizontal === 'true' && badge.vertical === 'true' ) {
+	if ( badge.horizontal === 1 && badge.vertical === 1 ) {
 		horizAndvert = 'scaleX( -1 ) ScaleY(-1)';
-	} else if ( badge.horizontal === 'true' && badge.vertical === 'false' ) {
+	} else if ( badge.horizontal === 1 && badge.vertical === 0 ) {
 		horizAndvert = 'scaleX( -1 )';
-	} else if ( badge.horizontal === 'false' && badge.vertical === 'true' ) {
+	} else if ( badge.horizontal === 0 && badge.vertical === 1 ) {
 		horizAndvert = 'ScaleY(-1)';
 	} else {
 		horizAndvert = '';
@@ -95,20 +95,20 @@ const WhatsAppButton = ( {
 			badge.badgePositionY == 'bottom' &&
 			badge.badgePositionX == 'left'
 		) {
-			setHoriz( 'true' );
-			setVert( 'true' );
+			setHoriz( 1 );
+			setVert( 1 );
 			setRotationz( '270' );
 		} else if (
 			badge.badgeStyles == 'badge5' &&
 			badge.badgePositionY == 'bottom' &&
 			badge.badgePositionX == 'right'
 		) {
-			setHoriz( 'true' );
-			setVert( 'true' );
+			setHoriz( 1 );
+			setVert( 1 );
 			setRotationz( '90' );
 		} else {
-			setHoriz( 'false' );
-			setVert( 'false' );
+			setHoriz( 0 );
+			setVert( 0 );
 			setRotationz( '0' );
 		}
 	}, [ badge.badgeStyles ] );

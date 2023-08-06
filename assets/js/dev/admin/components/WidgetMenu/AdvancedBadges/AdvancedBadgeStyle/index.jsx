@@ -20,9 +20,9 @@ const AdvancedBadgeStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeAdv', 'bdgAdvanced1' );
 								props.onChange( 'badgeStyles', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'useTimerBadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'true' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'useTimerBadge', 0 );
+								props.onChange( 'imgbadgeAdv', 1 );
 								setSelected( 1 );
 							} }
 						>
@@ -41,9 +41,9 @@ const AdvancedBadgeStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeAdv', 'bdgAdvanced2' );
 								props.onChange( 'badgeStyles', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'useTimerBadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'true' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'useTimerBadge', 0 );
+								props.onChange( 'imgbadgeAdv', 1 );
 								setSelected( 2 );
 							} }
 						>
@@ -62,9 +62,9 @@ const AdvancedBadgeStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeAdv', 'bdgAdvanced3' );
 								props.onChange( 'badgeStyles', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'useTimerBadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'true' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'useTimerBadge', 0 );
+								props.onChange( 'imgbadgeAdv', 1 );
 								setSelected( 3 );
 							} }
 						>
@@ -83,9 +83,9 @@ const AdvancedBadgeStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeAdv', 'bdgAdvanced4' );
 								props.onChange( 'badgeStyles', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'useTimerBadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'true' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'useTimerBadge', 0 );
+								props.onChange( 'imgbadgeAdv', 1 );
 								setSelected( 4 );
 							} }
 						>
@@ -106,9 +106,9 @@ const AdvancedBadgeStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeAdv', 'bdgAdvanced5' );
 								props.onChange( 'badgeStyles', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'useTimerBadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'true' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'useTimerBadge', 0 );
+								props.onChange( 'imgbadgeAdv', 1 );
 								setSelected( 5 );
 							} }
 						>
@@ -127,9 +127,9 @@ const AdvancedBadgeStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeAdv', 'bdgAdvanced6' );
 								props.onChange( 'badgeStyles', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'useTimerBadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'true' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'useTimerBadge', 0 );
+								props.onChange( 'imgbadgeAdv', 1 );
 								setSelected( 6 );
 							} }
 						>
@@ -148,9 +148,9 @@ const AdvancedBadgeStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeAdv', 'bdgAdvanced7' );
 								props.onChange( 'badgeStyles', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'useTimerBadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'true' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'useTimerBadge', 0 );
+								props.onChange( 'imgbadgeAdv', 1 );
 								setSelected( 7 );
 							} }
 						>
@@ -169,9 +169,9 @@ const AdvancedBadgeStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeAdv', 'bdgAdvanced8' );
 								props.onChange( 'badgeStyles', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'useTimerBadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'true' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'useTimerBadge', 0 );
+								props.onChange( 'imgbadgeAdv', 1 );
 								setSelected( 8 );
 							} }
 						>
@@ -192,9 +192,9 @@ const AdvancedBadgeStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeAdv', 'bdgAdvanced9' );
 								props.onChange( 'badgeStyles', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'useTimerBadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'true' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'useTimerBadge', 0 );
+								props.onChange( 'imgbadgeAdv', 1 );
 								setSelected( 9 );
 							} }
 						>
@@ -213,9 +213,9 @@ const AdvancedBadgeStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeAdv', 'bdgAdvanced10' );
 								props.onChange( 'badgeStyles', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'useTimerBadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'true' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'useTimerBadge', 0 );
+								props.onChange( 'imgbadgeAdv', 1 );
 								setSelected( 10 );
 							} }
 						>
@@ -234,9 +234,9 @@ const AdvancedBadgeStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeAdv', 'bdgAdvanced11' );
 								props.onChange( 'badgeStyles', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'useTimerBadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'true' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'useTimerBadge', 0 );
+								props.onChange( 'imgbadgeAdv', 1 );
 								setSelected( 11 );
 							} }
 						>
@@ -255,9 +255,9 @@ const AdvancedBadgeStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange( 'badgeAdv', 'bdgAdvanced12' );
 								props.onChange( 'badgeStyles', '' );
-								props.onChange( 'imgbadge', 'false' );
-								props.onChange( 'useTimerBadge', 'false' );
-								props.onChange( 'imgbadgeAdv', 'true' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'useTimerBadge', 0 );
+								props.onChange( 'imgbadgeAdv', 1 );
 								setSelected( 12 );
 							} }
 						>

@@ -125,11 +125,11 @@ const Opacity = ( props ) => {
 								type="checkbox"
 								id="inlineCheckbox1"
 								value="true"
-								checked={ 'true' == props.horizontal }
+								checked={ 1 == props.horizontal }
 								onChange={ ( e ) =>
 									props.onChange(
 										'horizontal',
-										e.target.checked ? 'true' : 'false'
+										e.target.checked ? 1 : 0
 									)
 								}
 							/>
@@ -148,11 +148,11 @@ const Opacity = ( props ) => {
 								type="checkbox"
 								id="inlineCheckbox2"
 								value="true"
-								checked={ 'true' == props.vertical }
+								checked={ 1 == props.vertical }
 								onChange={ ( e ) =>
 									props.onChange(
 										'vertical',
-										e.target.checked ? 'true' : 'false'
+										e.target.checked ? 1 : 0
 									)
 								}
 							/>
