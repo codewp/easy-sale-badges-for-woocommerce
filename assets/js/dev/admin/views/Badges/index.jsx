@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
 import * as BadgeApi from '@easy-whatsapp/api/badge';
 import {
-	WhatsAppsContext,
+	BadgesContext,
 	fetchItemsIfNeeded,
 	Action,
-} from '../../contexts/WhatsApps';
+} from '../../contexts/Badges';
 import Toggle from '../../components/Toggle';
 import WarningModal from '../../components/WarningModal';
 import { AppContext } from '../../contexts/App';
@@ -14,7 +14,7 @@ import { TrashIcon, PencilIcon, DuplicateIcon } from '@heroicons/react/solid';
 import Alert from '../../components/Alert';
 
 export default function Badges() {
-	const { state, dispatch } = useContext( WhatsAppsContext );
+	const { state, dispatch } = useContext( BadgesContext );
 	const { loading, setLoading, setMessage } = useContext( AppContext );
 	const [ showDeleteModal, setShowDeleteModal ] = useState( false );
 	const [ deleteId, setDeleteId ] = useState( 0 );
@@ -22,6 +22,7 @@ export default function Badges() {
 	useEffect( () => {
 		setLoading( state.isLoading );
 	}, [ state.isLoading ] );
+
 
 	const duplicate = async ( id ) => {
 		setLoading( true );
@@ -239,7 +240,7 @@ export default function Badges() {
 														to={ `/badge/${ item.id }` }
 													>
 														{ __(
-															item.name,
+															item.title,
 															'asnp-easy-whatsapp'
 														) }
 													</Link>

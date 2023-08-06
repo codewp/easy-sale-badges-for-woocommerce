@@ -1,9 +1,9 @@
 import React, { createContext, useReducer, useEffect } from 'react';
 import { initialState, Reducer, fetchItemsIfNeeded } from './Reducer';
 
-export const WhatsAppsContext = createContext();
+export const BadgesContext = createContext();
 
-export const WhatsAppsContextProvider = ( { children } ) => {
+export const BadgesContextProvider = ( { children } ) => {
 	const [ state, dispatch ] = useReducer( Reducer, initialState );
 
 	useEffect( () => {
@@ -20,7 +20,7 @@ export const WhatsAppsContextProvider = ( { children } ) => {
 	};
 
 	return (
-		<WhatsAppsContext.Provider
+		<BadgesContext.Provider
 			value={ {
 				state,
 				getItem,
@@ -28,6 +28,6 @@ export const WhatsAppsContextProvider = ( { children } ) => {
 			} }
 		>
 			{ children }
-		</WhatsAppsContext.Provider>
+		</BadgesContext.Provider>
 	);
 };

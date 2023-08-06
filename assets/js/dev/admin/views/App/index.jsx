@@ -8,7 +8,7 @@ import Badge from '../../views/Badge';
 import Settings from '../../views/Settings';
 import Loading from '../../components/Loading';
 import Snackbar from './../../components/Snackbar';
-import { WhatsAppsContextProvider } from '../../contexts/WhatsApps';
+import { BadgesContextProvider } from '../../contexts/Badges';
 import { AppContext } from '../../contexts/App';
 import { defaultSettings } from '../../utils/constants';
 import * as SettingsApi from '@easy-whatsapp/api/settings';
@@ -78,7 +78,7 @@ export default function App() {
 					setSettings,
 				} }
 			>
-					<WhatsAppsContextProvider>
+					<BadgesContextProvider>
 						<Loading loading={ loading } />
 						<Snackbar
 							message={ message }
@@ -112,7 +112,7 @@ export default function App() {
 								</Routes>
 							</CSSTransition>
 						</TransitionGroup>
-					</WhatsAppsContextProvider>
+					</BadgesContextProvider>
 			</AppContext.Provider>
 		</div>
 	);

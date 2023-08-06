@@ -4,7 +4,7 @@ import { __ } from '@wordpress/i18n';
 import * as BadgeApi from '@easy-whatsapp/api/badge';
 import Menu from '../../components/WidgetMenu/menu/Menu';
 import WhatsAppButton from '@easy-whatsapp/base-components/WhatsAppButton';
-import { WhatsAppsContext, Action } from '../../contexts/WhatsApps';
+import { BadgesContext, Action } from '../../contexts/Badges';
 import Toggle from '../../components/Toggle';
 import { AppContext } from './../../contexts/App';
 import { IMAGES_URL } from './../../utils/constants';
@@ -103,7 +103,7 @@ const defaultBadge = {
 export default function Badge() {
 	const params = useParams();
 	const [ badge, setBadge ] = useState( { ...defaultBadge } );
-	const { getItem, dispatch } = useContext( WhatsAppsContext );
+	const { getItem, dispatch } = useContext( BadgesContext );
 	const [ template, setTemplate ] = useState(
 		params.id && ! isNaN( params.id * 1 ) && 0 < params.id * 1
 			? false

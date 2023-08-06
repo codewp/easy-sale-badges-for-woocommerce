@@ -1,12 +1,12 @@
 import * as BadgeApi from '@easy-whatsapp/api/badge';
 
 export const Action = {
-	SET_ITEMS: 'whatsapp/setItems',
-	ADD_ITEM: 'whatsapp/addItem',
-	UPDATE_ITEM: 'whatsapp/updateItem',
-	DELETE_ITEM: 'whatsapp/deleteItem',
-	SET_IS_LOADING: 'whatsapp/setIsLoading',
-	SET_LOADED: 'whatsapp/setLoaded',
+	SET_ITEMS: 'badge/setItems',
+	ADD_ITEM: 'badge/addItem',
+	UPDATE_ITEM: 'badge/updateItem',
+	DELETE_ITEM: 'badge/deleteItem',
+	SET_IS_LOADING: 'badge/setIsLoading',
+	SET_LOADED: 'badge/setLoaded',
 };
 
 export const fetchItems = async ( dispatch ) => {
