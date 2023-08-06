@@ -19,14 +19,14 @@ function output_badges($badges)
 
 function output_badge($badge)
 {
-	switch ($badge->type) {
-		case 'css':
-			return output_css_badge($badge);
-		case 'timer':
-			return output_timer_badge($badge);
-
-		case 'image':
-			return output_image_badge($badge);
+	if (!empty($badge->badgeStyles)) {
+		return output_css_badge($badge);
+	} else if (isset($badge->imgbadge) && $badge->imgbadge == 1) {
+		return output_image_badge($badge);
+	} else if (isset($badge->imgbadgeAdv) && $badge->imgbadgeAdv == 1) {
+		return output_imageAdv_badge($badge);
+	} else if (isset($badge->useTimerBadge) && $badge->useTimerBadge == 1) {
+		return output_timer_badge($badge);
 	}
 }
 
@@ -53,50 +53,53 @@ function output_css_badge($badge)
 	}
 
 	$insetProperty = '';
-	if ($badge->badgePositionY == 'top' && $badge->badgePositionX == 'left') {
+	if (
+		isset($badge->badgePositionY) && 'top' === $badge->badgePositionY &&
+		isset($badge->badgePositionX) && 'left' === $badge->badgePositionX
+	) {
 		$insetProperty = $badge->badgePositionTop . 'px auto auto ' . $badge->badgePositionLeft . 'px';
-	} else if ($badge->badgePositionY == 'top' && $badge->badgePositionX == 'right') {
+	} elseif (isset($badge->badgePositionY) && $badge->badgePositionY === 'top' && isset($badge->badgePositionX) && $badge->badgePositionX === 'right') {
 		$insetProperty = $badge->badgePositionTop . 'px ' . $badge->badgePositionRight . 'px auto auto';
-	} else if ($badge->badgePositionY == 'bottom' && $badge->badgePositionX == 'left') {
+	} elseif (isset($badge->badgePositionY) && $badge->badgePositionY === 'bottom' && isset($badge->badgePositionX) && $badge->badgePositionX === 'left') {
 		$insetProperty = 'auto auto ' . $badge->badgePositionBottom . 'px ' . $badge->badgePositionLeft . 'px';
-	} else if ($badge->badgePositionY == 'bottom' && $badge->badgePositionX == 'right') {
+	} elseif (isset($badge->badgePositionY) && $badge->badgePositionY === 'bottom' && isset($badge->badgePositionX) && $badge->badgePositionX === 'right') {
 		$insetProperty = 'auto ' . $badge->badgePositionRight . 'px ' . $badge->badgePositionBottom . 'px auto';
-	} else if ($badge->badgePositionY == 'top' && $badge->badgePositionX == 'center') {
+	} elseif (isset($badge->badgePositionY) && $badge->badgePositionY === 'top' && isset($badge->badgePositionX) && $badge->badgePositionX === 'center') {
 		$insetProperty = $badge->badgePositionTop . 'px auto auto 55px';
-	} else if ($badge->badgePositionY == 'bottom' && $badge->badgePositionX == 'center') {
+	} elseif (isset($badge->badgePositionY) && $badge->badgePositionY === 'bottom' && isset($badge->badgePositionX) && $badge->badgePositionX === 'center') {
 		$insetProperty = 'auto auto ' . $badge->badgePositionBottom . 'px 55px';
 	}
 
 	$heightContBadge = '';
 	$widthContBadge = '';
 
-	if ($badge->badgeStyles == 'badge11') {
+	if (isset($badge->badgeStyles) && $badge->badgeStyles == 'badge11') {
 		$widthContBadge = '100%';
 	} else {
-		$widthContBadge = $badge['widthBadge'] . 'px';
+		$widthContBadge = $badge->widthBadge . 'px';
 	}
 
 	$horizAndvert = '';
-	if ($badge->horizontal === 1 && $badge->vertical === 1) {
+	if (isset($badge->horizontal) && $badge->horizontal == 1 && isset($badge->vertical) && $badge->vertical == 1) {
 		$horizAndvert = 'scaleX(-1) scaleY(-1)';
-	} else if ($badge->horizontal === 1 && $badge->vertical === 0) {
+	} elseif (isset($badge->horizontal) && $badge->horizontal == 1 && isset($badge->vertical) && $badge->vertical == 0) {
 		$horizAndvert = 'scaleX(-1)';
-	} else if ($badge->horizontal === 0 && $badge->vertical === 1) {
+	} elseif (isset($badge->horizontal) && $badge->horizontal == 0 && isset($badge->vertical) && $badge->vertical == 1) {
 		$horizAndvert = 'scaleY(-1)';
 	} else {
 		$horizAndvert = '';
 	}
 
 	if (
-		$badge->badgeStyles == 'badge5' &&
-		$badge->badgePositionY == 'bottom' &&
-		($badge->badgePositionX == 'left' || $badge->badgePositionX == 'right')
+		isset($badge->badgeStyles) && $badge->badgeStyles == 'badge5' &&
+		isset($badge->badgePositionY) && $badge->badgePositionY == 'bottom' &&
+		(isset($badge->badgePositionX) && $badge->badgePositionX == 'left' || isset($badge->badgePositionX) && $badge->badgePositionX == 'right')
 	) {
 		$horizAndvert = 'scaleX(-1) scaleY(-1)';
 	} else if (
-		$badge->badgeStyles == 'badge6' &&
-		$badge->badgePositionY == 'bottom' &&
-		($badge->badgePositionX == 'left' || $badge->badgePositionX == 'right')
+		isset($badge->badgeStyles) && $badge->badgeStyles == 'badge6' &&
+		isset($badge->badgePositionY) && $badge->badgePositionY == 'bottom' &&
+		(isset($badge->badgePositionX) && $badge->badgePositionX == 'left' || isset($badge->badgePositionX) && $badge->badgePositionX == 'right')
 	) {
 		$horizAndvert = 'scaleX(-1) scaleY(-1)';
 	}
@@ -183,9 +186,9 @@ function output_css_badge($badge)
 	// Css Badge
 	echo '<div class="asnp-esb-productBadge" style="display: none;">';
 	echo '<div class="asnp-esb-badge">';
-	echo '<span class="asnp-esb-inner-span2"> style="' . esc_attr($inner_span_style) . '"></span>';
+	echo '<span class="asnp-esb-inner-span2"></span>';
 	echo '<div class="asnp-esb-inner-span1" style="display: none;">';
-	echo '<div class="asnp-esb-timer-badge" style="display: none; transform: ' . $horizAndvert . '">' . $badge->badgeLabel . '</div>';
+	echo '<div style="transform: ' . $horizAndvert . '">' . $badge->badgeLabel . '</div>';
 	echo '</div>';
 	echo '</div>';
 	echo '</div>';
@@ -203,6 +206,12 @@ function output_timer_badge($badge)
 }
 
 function output_image_badge($badge)
+{
+	if (!$badge) {
+		return;
+	}
+}
+function output_imageAdv_badge($badge)
 {
 	if (!$badge) {
 		return;
