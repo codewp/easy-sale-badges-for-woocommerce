@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
-import * as WhatsAppApi from '@easy-whatsapp/api/whatsapp';
+import * as BadgeApi from '@easy-whatsapp/api/badge';
 import {
 	WhatsAppsContext,
 	fetchItemsIfNeeded,
@@ -26,7 +26,7 @@ export default function WhatsApps() {
 	const duplicate = async ( id ) => {
 		setLoading( true );
 		try {
-			let response = await WhatsAppApi.duplicate( id );
+			let response = await BadgeApi.duplicate( id );
 			if ( response && response.id ) {
 				await fetchItemsIfNeeded( state, dispatch, { force: true } );
 				setMessage( {
@@ -74,7 +74,7 @@ export default function WhatsApps() {
 		setLoading( true );
 
 		try {
-			let response = await WhatsAppApi.deleteItem( deleteId );
+			let response = await BadgeApi.deleteItem( deleteId );
 			setLoading( false );
 			if ( response && response.id ) {
 				dispatch( {
@@ -115,7 +115,7 @@ export default function WhatsApps() {
 		} );
 		setLoading( true );
 		try {
-			let response = await WhatsAppApi.update( {
+			let response = await BadgeApi.update( {
 				id: item.id,
 				[ field ]: value,
 			} );

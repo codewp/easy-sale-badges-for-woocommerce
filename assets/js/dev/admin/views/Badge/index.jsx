@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
-import * as WhatsAppApi from '@easy-whatsapp/api/whatsapp';
+import * as BadgeApi from '@easy-whatsapp/api/badge';
 import Menu from '../../components/WidgetMenu/menu/Menu';
 import WhatsAppButton from '@easy-whatsapp/base-components/WhatsAppButton';
 import { WhatsAppsContext, Action } from '../../contexts/WhatsApps';
@@ -135,7 +135,7 @@ export default function Badge() {
 			const fetchItem = async ( id ) => {
 				setLoading( true );
 				try {
-					let response = await WhatsAppApi.getItem( id );
+					let response = await BadgeApi.getItem( id );
 					if ( response && response.item ) {
 						setBadge( { ...defaultBadge, ...response.item } );
 					}
@@ -247,21 +247,10 @@ export default function Badge() {
 	};
 
 	const save = async () => {
-		if ( ! badge.accounts || ! badge.accounts.length ) {
-			setMessage( {
-				message: __(
-					'Please add an account to the whatsapp.',
-					'asnp-easy-whatsapp'
-				),
-				type: 'error',
-			} );
-			return;
-		}
-
 		setLoading( true );
 
 		try {
-			let response = await WhatsAppApi.save( badge );
+			let response = await BadgeApi.save( badge );
 			setLoading( false );
 			if ( response && response.item ) {
 				setBadge( { ...defaultBadge, ...response.item } );

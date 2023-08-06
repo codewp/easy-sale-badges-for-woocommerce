@@ -1,4 +1,4 @@
-import * as WhatsAppApi from '@easy-whatsapp/api/whatsapp';
+import * as BadgeApi from '@easy-whatsapp/api/badge';
 
 export const Action = {
 	SET_ITEMS: 'whatsapp/setItems',
@@ -15,7 +15,7 @@ export const fetchItems = async ( dispatch ) => {
 			type: Action.SET_IS_LOADING,
 			payload: true,
 		} );
-		let response = await WhatsAppApi.getItems();
+		let response = await BadgeApi.getItems();
 		if ( response && response.items ) {
 			dispatch( {
 				type: Action.SET_ITEMS,

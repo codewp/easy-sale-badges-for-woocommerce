@@ -9,7 +9,6 @@ import Settings from '../../views/Settings';
 import Loading from '../../components/Loading';
 import Snackbar from './../../components/Snackbar';
 import { WhatsAppsContextProvider } from '../../contexts/WhatsApps';
-import { AccountsContextProvider } from '../../contexts/Accounts';
 import { AppContext } from '../../contexts/App';
 import { defaultSettings } from '../../utils/constants';
 import * as SettingsApi from '@easy-whatsapp/api/settings';
@@ -79,7 +78,6 @@ export default function App() {
 					setSettings,
 				} }
 			>
-				<AccountsContextProvider>
 					<WhatsAppsContextProvider>
 						<Loading loading={ loading } />
 						<Snackbar
@@ -115,7 +113,6 @@ export default function App() {
 							</CSSTransition>
 						</TransitionGroup>
 					</WhatsAppsContextProvider>
-				</AccountsContextProvider>
 			</AppContext.Provider>
 		</div>
 	);
