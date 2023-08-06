@@ -332,7 +332,7 @@ function output_css_badge($badge)
 
 	// Css Badge
 	echo '<div class="asnp-esb-productBadge" style="display: none;">';
-	echo '<div style="' . esc_attr($span_style) . '">';
+	echo '<div class="asnp-esb-badge">';
 	echo '<span class="asnp-esb-inner-span2"> style="' . esc_attr($inner_span_style) . '"></span>';
 	echo '<div class="asnp-esb-inner-span1" style="display: none;">';
 	echo '<div class="asnp-esb-timer-badge" style="display: none; transform: ' . $horizAndvert . '">' . $badge->badgeLabel . '</div>';
