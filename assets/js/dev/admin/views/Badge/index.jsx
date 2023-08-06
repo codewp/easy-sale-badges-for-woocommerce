@@ -100,6 +100,12 @@ const defaultBadge = {
 	bgColorTimer: '#EB144C',
 };
 
+const initialItem = {
+	type: 'products',
+	selectType: 'included',
+	products: '',
+};
+
 export default function Badge() {
 	const params = useParams();
 	const [ badge, setBadge ] = useState( { ...defaultBadge } );
@@ -110,10 +116,7 @@ export default function Badge() {
 			: true
 	);
 	const { setLoading, setMessage, settings } = useContext( AppContext );
-	const [ type, setType ] = useState( 'products' );
 	const [ badgeImageFile, setBadgeImageFile ] = useState( null );
-
-	console.log( badge );
 
 	useEffect( () => {
 		setBadgeImageFile( null );
@@ -172,11 +175,6 @@ export default function Badge() {
 
 		return () => reader.abort();
 	}, [ badgeImageFile ] );
-
-	const initialItem = {
-		type: type,
-		products: '',
-	};
 
 	const addGroup = () => {
 		setBadge( ( prev ) => ( {
@@ -298,8 +296,6 @@ export default function Badge() {
 				badge,
 				updateBadge,
 				setTemplate,
-				type,
-				setType,
 				addGroup,
 				deleteGroup,
 				addItem,

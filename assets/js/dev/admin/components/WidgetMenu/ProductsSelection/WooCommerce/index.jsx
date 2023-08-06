@@ -6,16 +6,9 @@ import ItemSelect from './../../../ItemSelect/index';
 import { BadgeContext } from '../../../../contexts/Badge';
 
 const WooCommerce = ( { onChange } ) => {
-	const {
-		type,
-		setType,
-		addGroup,
-		badge,
-		deleteGroup,
-		addItem,
-		updateItem,
-		deleteItem,
-	} = useContext( BadgeContext );
+	const { addGroup, badge, addItem, updateItem, deleteItem } = useContext(
+		BadgeContext
+	);
 
 	return (
 		<div className="asnp-mt-4">
@@ -68,14 +61,28 @@ const WooCommerce = ( { onChange } ) => {
 											) }
 										</option>
 									</select>
-									<select className="asnp-select-field !asnp-w-48 asnp-mt-2 asnp-ml-4">
-										<option value={ 'categories' }>
+									<select
+										className="asnp-select-field !asnp-w-48 asnp-mt-2 asnp-ml-4"
+										value={
+											badge.items[ groupIndex ][ index ]
+												.selectType
+										}
+										onChange={ ( e ) =>
+											updateItem(
+												groupIndex,
+												index,
+												'selectType',
+												e.target.value
+											)
+										}
+									>
+										<option value="included">
 											{ __(
 												'Included',
 												'asnp-easy-whatsapp'
 											) }
 										</option>
-										<option value={ 'excluded_categories' }>
+										<option value="excluded">
 											{ __(
 												'Excluded',
 												'asnp-easy-whatsapp'
@@ -86,7 +93,11 @@ const WooCommerce = ( { onChange } ) => {
 										{
 											<ItemSelect
 												items={ item }
-												type={ type }
+												type={
+													badge.items[ groupIndex ][
+														index
+													].type
+												}
 												onChange={ ( value ) =>
 													updateItem(
 														groupIndex,
