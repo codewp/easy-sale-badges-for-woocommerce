@@ -198,10 +198,10 @@ function output_css_badge($badge)
 	add_custom_style($dynamic_styles);
 
 	// Css Badge
-	echo '<div class="asnp-esb-productBadge" style="display: none;">';
+	echo '<div class="asnp-esb-productBadge">';
 	echo '<div class="asnp-esb-badge">';
 	echo '<span class="asnp-esb-inner-span2"></span>';
-	echo '<div class="asnp-esb-inner-span1" style="display: none;">';
+	echo '<div class="asnp-esb-inner-span1">';
 	echo '<div style="transform: ' . $horizAndvert . '">' . $badge->badgeLabel . '</div>';
 	echo '</div>';
 	echo '</div>';
