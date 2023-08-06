@@ -1,8 +1,8 @@
-.asnp-ew-wrapper {
+.asnp-esb-wrapper {
 	height: 100%;
 	width: 100%;
 }
-.asnp-ew-wrapper a {
+.asnp-esb-wrapper a {
 	text-decoration: none;
 	box-sizing: border-box;
 	font-family: 'Source Sans Pro', 'HelveticaNeue-Light',
@@ -13,33 +13,33 @@
 	font-weight: 400;
 }
 
-.asnp-ew-containerAd {
+.asnp-esb-containerAd {
 	position: sticky;
 	top: 40px;
 	display: flex;
 	margin-left: 100px;
 }
 
-.asnp-ew-product {
+.asnp-esb-product {
 	position: relative;
 	border-radius: 6px;
 	background-color: white;
 	padding: 35px 30px 40px 30px;
 	width: 430px;
 }
-.asnp-ew-productLable {
+.asnp-esb-productLable {
 	display: flex;
 	justify-content: flex-start;
 	font-size: large;
 	font-weight: 700;
 }
-.asnp-ew-product2 {
+.asnp-esb-product2 {
 	display: flex;
 	justify-content: flex-start;
 	width: 100%;
 	position: relative;
 }
-.asnp-ew-productImg {
+.asnp-esb-productImg {
 	position: relative;
 	height: 375px;
 	background-color: rgb( 219, 223, 228 );
@@ -50,7 +50,7 @@
 	font-size: 12px;
 }
 
-.asnp-ew-productBadge {
+.asnp-esb-productBadge {
 	position: absolute;
 }
 
@@ -61,23 +61,20 @@
 	position: absolute;
 }
 
-
-
-.asnp-ew-productBadge2 {
+.asnp-esb-productBadge2 {
 	top: 0px;
 	left: 0px;
 	text-align: center;
 	text-shadow: none;
-	line-height: 30px;
 }
 
-.asnp-ew-svg1 {
+.asnp-esb-svg1 {
 	position: absolute;
 	z-index: 0;
 	width: 100px;
 	height: 80px;
 }
-.asnp-ew-svg2 {
+.asnp-esb-svg2 {
 	position: absolute;
 	z-index: 0;
 	width: 130px;

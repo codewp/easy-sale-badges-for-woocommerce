@@ -75,6 +75,7 @@ const WhatsAppButton = ( {
 	} else {
 		horizAndvert = '';
 	}
+	
 	if (
 		badge.badgeStyles == 'badge5' &&
 		badge.badgePositionY == 'bottom' &&

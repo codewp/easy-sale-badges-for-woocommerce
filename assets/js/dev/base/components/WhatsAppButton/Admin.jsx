@@ -92,20 +92,20 @@ const Admin = ( {
 	}
 
 	return (
-		<div className="asnp-ew-wrapper">
-			<div className="asnp-ew-containerAd">
-				<div className="asnp-ew-product">
-					<label className="asnp-ew-productLable">Preview</label>
-					<div className="asnp-ew-product2">
+		<div className="asnp-esb-wrapper">
+			<div className="asnp-esb-containerAd">
+				<div className="asnp-esb-product">
+					<label className="asnp-esb-productLable">Previesb</label>
+					<div className="asnp-esb-product2">
 						<div
-							className="asnp-ew-productImg"
+							className="asnp-esb-productImg"
 							style={ {
 								backgroundImage: `url(${ IMAGES_URL }headphone-k.png)`,
 							} }
 						>
 							{ badge.imgbadge == 1 && (
 								<div
-									className="asnp-ew-productBadge"
+									className="asnp-esb-productBadge"
 									style={ {
 										width: `${ badge.widthBadgeImg }px`,
 										height: `${ badge.widthBadgeImg }px`,
@@ -126,7 +126,7 @@ const Admin = ( {
 							) }
 							{ badge.imgbadgeAdv == 1 && (
 								<div
-									className="asnp-ew-productBadge"
+									className="asnp-esb-productBadge"
 									style={ {
 										width: `${ badge.widthBadgeImg }px`,
 										height: '90px',
@@ -166,7 +166,7 @@ const Admin = ( {
 								badge.imgbadgeAdv == 0 &&
 								badge.useTimerBadge == 0 && (
 									<div
-										className="asnp-ew-productBadge"
+										className="asnp-esb-productBadge"
 										style={ {
 											width: `${ widthContBadge }`,
 											height: `${ heightContBadge }`,
@@ -174,7 +174,7 @@ const Admin = ( {
 										} }
 									>
 										<Span
-											className="asnp-ew-productBadge2"
+											className="asnp-esb-productBadge2"
 											style={ {
 												color: `${ badge.textColor }`,
 												fontSize: `${ badge.fontSizeText }px`,
@@ -203,7 +203,7 @@ const Admin = ( {
 								) }
 							{ badge.useTimerBadge == 1 && (
 								<div
-									className="asnp-ew-productBadge"
+									className="asnp-esb-productBadge"
 									style={ {
 										inset: `${ insetProperty }`,
 										opacity: `${ badge.opacity }`,
