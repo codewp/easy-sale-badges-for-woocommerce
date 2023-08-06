@@ -79,6 +79,20 @@ function output_css_badge($badge)
 		$widthContBadge = $badge->widthBadge . 'px';
 	}
 
+	if (
+		isset($badge->badgeStyles) &&
+		$badge->badgeStyles == 'badge5' ||
+		$badge->badgeStyles == 'badge6' ||
+		$badge->badgeStyles == 'badge7' ||
+		$badge->badgeStyles == 'badge8' ||
+		$badge->badgeStyles == 'badge9' ||
+		$badge->badgeStyles == 'badge10'
+	) {
+		$heightContBadge = $badge->widthBadge . 'px';
+	} else {
+		$heightContBadge = $badge->heightBadge . 'px';
+	}
+
 	$horizAndvert = '';
 	if (isset($badge->horizontal) && $badge->horizontal == 1 && isset($badge->vertical) && $badge->vertical == 1) {
 		$horizAndvert = 'scaleX(-1) scaleY(-1)';
