@@ -203,31 +203,81 @@ function output_css_badge($badge)
 		// Add additional cases as needed
 	}
 
-	if (!empty($badge->badgeStyles) && $badge->badgeStyles == 'badge1') {
-		$dynamic_styles .= '.asnp-esb-badge {';
-		$dynamic_styles .= ' background-color: ' . $badge->badgeColor . 'px;';
-		$dynamic_styles .= ' height: ' . $badge->heightBadge . 'px;';
-		$dynamic_styles .= ' width: ' . $badge->widthBadge . 'px;';
-		$dynamic_styles .= ' left: ' . ($badge->badgePositionX == 'right' ? 'auto' : '0px') . 'px;';
-		$dynamic_styles .= ' right: ' . ($badge->badgePositionX == 'right' ? '0px' : '') . 'px;';
-		$dynamic_styles .= ' font-size: ' . $badge->heightBadge . 'px;';
-		$dynamic_styles .= ' line-height: ' . $badge->heightBadge . 'px;';
-		$dynamic_styles .= ' opacity: ' . $badge->opacity . 'px;';
-		$dynamic_styles .= ' border-top-left-radius: ' . $badge->topLeftRadius . 'px;';
-		$dynamic_styles .= ' border-top-right-radius: ' . $badge->topRightRadius . 'px;';
-		$dynamic_styles .= ' border-bottom-left-radius: ' . $badge->bottomLeftRadius . 'px;';
-		$dynamic_styles .= ' border-bottom-right-radius: ' . $badge->bottomRightRadius . 'px;';
-		$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
-		$dynamic_styles .= ' transform:   rotateX(' . $badge->rotationX . 'deg) rotateY(' . $badge->rotationY . 'deg) rotateZ(' . $badge->rotationZ . 'deg);';
-		$dynamic_styles .= ' opacity: ' . $badge->opacity . 'px;';
-		$dynamic_styles .= '}';
+	switch (!empty($badge->badgeStyles)) {
+		case 'badge1':
+			$dynamic_styles .= '.asnp-esb-badge {';
+			$dynamic_styles .= ' background-color: ' . $badge->badgeColor . 'px;';
+			$dynamic_styles .= ' height: ' . $badge->heightBadge . 'px;';
+			$dynamic_styles .= ' width: ' . $badge->widthBadge . 'px;';
+			$dynamic_styles .= ' left: ' . ($badge->badgePositionX == 'right' ? 'auto' : '0px') . ';';
+			$dynamic_styles .= ' right: ' . ($badge->badgePositionX == 'right' ? '0px' : '') . ';';
+			$dynamic_styles .= ' font-size: ' . $badge->heightBadge . 'px;';
+			$dynamic_styles .= ' line-height: ' . $badge->heightBadge . 'px;';
+			$dynamic_styles .= ' opacity: ' . $badge->opacity . 'px;';
+			$dynamic_styles .= ' border-top-left-radius: ' . $badge->topLeftRadius . 'px;';
+			$dynamic_styles .= ' border-top-right-radius: ' . $badge->topRightRadius . 'px;';
+			$dynamic_styles .= ' border-bottom-left-radius: ' . $badge->bottomLeftRadius . 'px;';
+			$dynamic_styles .= ' border-bottom-right-radius: ' . $badge->bottomRightRadius . 'px;';
+			$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
+			$dynamic_styles .= ' transform:   rotateX(' . $badge->rotationX . 'deg) rotateY(' . $badge->rotationY . 'deg) rotateZ(' . $badge->rotationZ . 'deg);';
+			$dynamic_styles .= '}';
+			break;
+		case 'badge2':
+			$dynamic_styles .= '.asnp-esb-badge {';
+			$dynamic_styles .= ' background-color: ' . $badge->badgeColor . 'px;';
+			$dynamic_styles .= ' height: ' . $badge->heightBadge . 'px;';
+			$dynamic_styles .= ' width: ' . $badge->widthBadge . 'px;';
+			$dynamic_styles .= ' left: ' . ($badge->badgePositionX == 'right' ? 'auto' : '0px') . ';';
+			$dynamic_styles .= ' right: ' . ($badge->badgePositionX == 'right' ? '0px' : '') . ';';
+			$dynamic_styles .= ' font-size: ' . $badge->heightBadge . 'px;';
+			$dynamic_styles .= ' line-height: ' . $badge->heightBadge . 'px;';
+			$dynamic_styles .= ' opacity: ' . $badge->opacity . 'px;';
+			$dynamic_styles .= ' border-top-left-radius: ' . $badge->topLeftRadius . 'px;';
+			$dynamic_styles .= ' border-top-right-radius: ' . $badge->topRightRadius . 'px;';
+			$dynamic_styles .= ' border-bottom-left-radius: ' . $badge->bottomLeftRadius . 'px;';
+			$dynamic_styles .= ' border-bottom-right-radius: ' . $badge->bottomRightRadius . 'px;';
+			$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
+			$dynamic_styles .= ' transform:   rotateX(' . $badge->rotationX . 'deg) rotateY(' . $badge->rotationY . 'deg) rotateZ(' . $badge->rotationZ . 'deg);';
+			$dynamic_styles .= '}';
+			$dynamic_styles .= '.asnp-esb-badge::before {';
+			$dynamic_styles .= ' border-left-color: transparent !important;';
+			$dynamic_styles .= ' display: inline-block;';
+			$dynamic_styles .= ' content: \'\';';
+			$dynamic_styles .= ' position: absolute;';
+			$dynamic_styles .= ' right: ' . ($badge->badgePositionX == 'right' ? 'auto' : '-20px') . ';';
+			$dynamic_styles .= ' left: ' . ($badge->badgePositionX == 'right' ? '-20px' : '') . ';';
+			$dynamic_styles .= ' top: 0;';
+			$dynamic_styles .= ' border: 9px solid transparent;';
+			$dynamic_styles .= ' border-width: 15px 15px;';
+			$dynamic_styles .= ' border-color: ' . $badge->badgeColor . 'px;';
+			$dynamic_styles .= ' transform: ' . ($badge->badgePositionX == 'right' ? 'rotate(0)' : 'rotate(180deg)') . ';';
+			$dynamic_styles .= '}';
+			break;
+
+		default:
+			$dynamic_styles .= '.asnp-esb-badge {';
+			$dynamic_styles .= ' background-color: ' . $badge->badgeColor . 'px;';
+			$dynamic_styles .= ' height: ' . $badge->heightBadge . 'px;';
+			$dynamic_styles .= ' width: ' . $badge->widthBadge . 'px;';
+			$dynamic_styles .= ' left: ' . ($badge->badgePositionX == 'right' ? 'auto' : '0px') . ';';
+			$dynamic_styles .= ' right: ' . ($badge->badgePositionX == 'right' ? '0px' : '') . ';';
+			$dynamic_styles .= ' font-size: ' . $badge->heightBadge . 'px;';
+			$dynamic_styles .= ' line-height: ' . $badge->heightBadge . 'px;';
+			$dynamic_styles .= ' opacity: ' . $badge->opacity . 'px;';
+			$dynamic_styles .= ' border-top-left-radius: ' . $badge->topLeftRadius . 'px;';
+			$dynamic_styles .= ' border-top-right-radius: ' . $badge->topRightRadius . 'px;';
+			$dynamic_styles .= ' border-bottom-left-radius: ' . $badge->bottomLeftRadius . 'px;';
+			$dynamic_styles .= ' border-bottom-right-radius: ' . $badge->bottomRightRadius . 'px;';
+			$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
+			$dynamic_styles .= ' transform:   rotateX(' . $badge->rotationX . 'deg) rotateY(' . $badge->rotationY . 'deg) rotateZ(' . $badge->rotationZ . 'deg);';
+			$dynamic_styles .= '}';
 	}
 
 
 	add_custom_style($dynamic_styles);
 
 	// Css Badge
-	echo '<div class="asnp-esb-badge asnp-esb-timer-badge" style="display: none;">';
+	echo '<div class="asnp-esb-badge" style="display: none;">';
 	echo '<div style="' . esc_attr($span_style) . '">';
 	echo '<span class="asnp-esb-inner-span"> style="' . esc_attr($inner_span_style) . '"></span>';
 	echo '<div class="asnp-esb-badge asnp-esb-timer-badge" style="display: none;">';
