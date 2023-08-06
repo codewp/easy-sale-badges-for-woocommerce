@@ -90,7 +90,7 @@ CREATE TABLE {$wpdb->prefix}asnp_wesb_badge (
 CREATE TABLE {$wpdb->prefix}asnp_wesb_product_badge (
 	id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
 	product_id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-	badge text NULL,
+	badge longtext NULL,
 	PRIMARY KEY (id)
 ) $collate;";
 
