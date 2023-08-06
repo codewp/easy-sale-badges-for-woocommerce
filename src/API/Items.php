@@ -37,22 +37,22 @@ class Items extends BaseController {
 	 * @return WP_Error|WP_REST_Response
 	 */
 	public function search_items( $request ) {
-		if ( empty( $request['search'] ) ) {
-			return new \WP_Error( 'asnp_ewhatsapp_search_term_required', __( 'Search term is required.', 'asnp-easy-whatsapp' ), array( 'status' => 400 ) );
-		}
+		try {
+			if ( empty( $request['search'] ) ) {
+				throw new \Exception( __( 'Search term is required.', 'asnp-easy-whatsapp' ) );
+			}
 
-		if ( empty( $request['type'] ) ) {
-			return new \WP_Error( 'asnp_ewhatsapp_type_required', __( 'Type is required.', 'asnp-easy-whatsapp' ), array( 'status' => 400 ) );
-		}
+			if ( empty( $request['type'] ) ) {
+				throw new \Exception( __( 'Type is required.', 'asnp-easy-whatsapp' ) );
+			}
 
-		$search = sanitize_text_field( wp_unslash( $request['search'] ) );
-		if ( empty( $search ) ) {
-			return new \WP_Error( 'asnp_ewhatsapp_search_term_required', __( 'Search term is required.', 'asnp-easy-whatsapp' ), array( 'status' => 400 ) );
-		}
+			$search = sanitize_text_field( wp_unslash( $request['search'] ) );
+			if ( empty( $search ) ) {
+				throw new \Exception( __( 'Search term is required.', 'asnp-easy-whatsapp' ) );
+			}
 
-		$items = [];
-		if ( 'products' === $request['type'] ) {
-			try {
+			$items = [];
+			if ( 'products' === $request['type'] ) {
 				$items = ItemsModel::search_products(
 					array(
 						'search' => $search,
@@ -62,20 +62,16 @@ class Items extends BaseController {
 						),
 					)
 				);
-			} catch ( \Exception $e ) {
-				return new \WP_Error( 'asnp_ewhatsapp_error_in_searching_items', $e->getMessage(), array( 'status' => 400 ) );
+			} else {
+				$items = apply_filters( 'asnp_wesb_items_api_' . __FUNCTION__, $items, $search, $request );
 			}
-		} elseif ( 'accounts' === $request['type'] ) {
-			$items = ItemsModel::get_accounts( [ 'name' => $search ] );
-		} else {
-			$items = apply_filters( 'asnp_ewhatsapp_items_api_' . __FUNCTION__, $items, $search, $request );
-		}
 
-		return new \WP_REST_Response(
-			array(
+			return rest_ensure_response( [
 				'items' => $items,
-			)
-		);
+			] );
+		} catch ( \Exception $e ) {
+			return new \WP_Error( 'asnp_wesb_rest_items_error', $e->getMessage(), array( 'status' => 400 ) );
+		}
 	}
 
 	/**
@@ -85,41 +81,37 @@ class Items extends BaseController {
 	 * @return WP_Error|WP_REST_Response
 	 */
 	public function get_items( $request ) {
-		if ( empty( $request['items'] ) ) {
-			return new \WP_Error( 'asnp_ewhatsapp_items_required', __( 'Items is required.', 'asnp-easy-whatsapp' ), array( 'status' => 400 ) );
-		}
+		try {
+			if ( empty( $request['items'] ) ) {
+				throw new \Exception( __( 'Items are required.', 'asnp-easy-whatsapp' ) );
+			}
 
-		if ( empty( $request['type'] ) ) {
-			return new \WP_Error( 'asnp_ewhatsapp_type_required', __( 'Type is required.', 'asnp-easy-whatsapp' ), array( 'status' => 400 ) );
-		}
+			if ( empty( $request['type'] ) ) {
+				throw new \Exception( __( 'Type is required.', 'asnp-easy-whatsapp' ) );
+			}
 
-		$items = $request['items'];
-		if ( ! is_array( $items ) ) {
-			$items = explode( ',', $items );
-		}
+			$items = $request['items'];
+			if ( ! is_array( $items ) ) {
+				$items = explode( ',', $items );
+			}
 
-		if ( 'products' === $request['type'] ) {
-			try {
+			if ( 'products' === $request['type'] ) {
 				$items = ItemsModel::get_products(
 					array(
 						'type'    => array( 'simple', 'variation' ),
 						'include' => array_filter( array_map( 'absint', $items ) ),
 					)
 				);
-			} catch ( \Exception $e ) {
-				return new \WP_Error( 'asnp_ewhatsapp_error_in_getting_items', $e->getMessage(), array( 'status' => 400 ) );
+			} else {
+				$items = apply_filters( 'asnp_wesb_items_api_' . __FUNCTION__, [], $items, $request );
 			}
-		} elseif ( 'accounts' === $request['type'] ) {
-			$items = ItemsModel::get_accounts( [ 'id' => array_filter( array_map( 'absint', $items ) ) ] );
-		} else {
-			$items = apply_filters( 'asnp_ewhatsapp_items_api_' . __FUNCTION__, [], $items, $request );
-		}
 
-		return new \WP_REST_Response(
-			array(
+			return rest_ensure_response( [
 				'items' => $items,
-			)
-		);
+			] );
+		} catch ( \Exception $e ) {
+			return new \WP_Error( 'asnp_wesb_rest_items_error', $e->getMessage(), array( 'status' => 400 ) );
+		}
 	}
 
 }
