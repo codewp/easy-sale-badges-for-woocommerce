@@ -12,6 +12,7 @@ import WarningModal from '../../components/WarningModal';
 import { AppContext } from '../../contexts/App';
 import { TrashIcon, PencilIcon, DuplicateIcon } from '@heroicons/react/solid';
 import Alert from '../../components/Alert';
+import { IMAGES_URL } from './../../utils/constants';
 
 export default function Badges() {
 	const { state, dispatch } = useContext( BadgesContext );
@@ -22,7 +23,6 @@ export default function Badges() {
 	useEffect( () => {
 		setLoading( state.isLoading );
 	}, [ state.isLoading ] );
-
 
 	const duplicate = async ( id ) => {
 		setLoading( true );
@@ -214,6 +214,15 @@ export default function Badges() {
 												className="asnp-px-6 asnp-py-3 asnp-text-left asnp-text-xs asnp-font-medium asnp-text-gray-500 asnp-uppercase asnp-tracking-wider"
 											>
 												{ __(
+													'Preview',
+													'asnp-easy-whatsapp'
+												) }
+											</th>
+											<th
+												scope="col"
+												className="asnp-px-6 asnp-py-3 asnp-text-left asnp-text-xs asnp-font-medium asnp-text-gray-500 asnp-uppercase asnp-tracking-wider"
+											>
+												{ __(
 													'Status',
 													'asnp-easy-whatsapp'
 												) }
@@ -250,6 +259,20 @@ export default function Badges() {
 														[asnp_chat id="
 														{ item.id }"]
 													</code>
+												</td>
+												<td className="asnp-px-2 asnp-py-4 asnp-whitespace-nowrap">
+													<Link
+														className="focus:!asnp-shadow-none"
+														to={ `/badge/${ item.id }` }
+													>
+														<img
+															className="asnp-h-[5rem]"
+															src={
+																IMAGES_URL +
+																'badge1.svg'
+															}
+														/>
+													</Link>
 												</td>
 												<td className="asnp-px-6 asnp-py-4 asnp-whitespace-nowrap">
 													<Toggle
