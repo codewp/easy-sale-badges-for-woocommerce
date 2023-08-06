@@ -9,7 +9,7 @@ const AdvancedOptions = (props) => {
 		props.mainBg
 	);
 	const [ selectedSecondBadgeColor, setSelectedSecondBadgeColor ] = useState(
-		props.SecondBg
+		props.secondBg
 	);
 	const colors = [
 		'#095e54',
@@ -137,7 +137,7 @@ const AdvancedOptions = (props) => {
 									}
 									onChange={ ( color ) => {
 										props.onChange(
-											'SecondBg',
+											'secondBg',
 											color.hex
 										);
 									} }
@@ -158,7 +158,7 @@ const AdvancedOptions = (props) => {
 												}
 												onChange={ ( color ) => {
 													props.onChange(
-														'SecondBg',
+														'secondBg',
 														color.hex
 													);
 												} }

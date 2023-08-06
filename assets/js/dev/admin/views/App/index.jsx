@@ -3,7 +3,7 @@ import { __ } from '@wordpress/i18n';
 import { Routes, Route, NavLink, useLocation } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import Content from './Content';
-import WhatsApps from '../../views/WhatsApps';
+import Badges from '../Badges';
 import Badge from '../../views/Badge';
 import Settings from '../../views/Settings';
 import Loading from '../../components/Loading';
@@ -94,11 +94,11 @@ export default function App() {
 									<Route path="/" element={ <Content /> }>
 										<Route
 											index
-											element={ <WhatsApps /> }
+											element={ <Badges /> }
 										/>
 										<Route
 											path="badge"
-											element={ <WhatsApps /> }
+											element={ <Badges /> }
 										/>
 										<Route
 											path="badge/:id"

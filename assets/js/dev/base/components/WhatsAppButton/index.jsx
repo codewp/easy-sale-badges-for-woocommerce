@@ -19,40 +19,40 @@ const WhatsAppButton = ( {
 
 	if ( badge.badgeAdv == 'bdgAdvanced1' ) {
 		badge.mainBg = '#141E27';
-		badge.SecondBg = '#AD2525';
+		badge.secondBg = '#AD2525';
 	} else if ( badge.badgeAdv == 'bdgAdvanced2' ) {
 		badge.mainBg = '#F78DA7';
-		badge.SecondBg = '#DABECA';
+		badge.secondBg = '#DABECA';
 	} else if ( badge.badgeAdv == 'bdgAdvanced3' ) {
 		badge.mainBg = '#37116F';
-		badge.SecondBg = '#43AA8B';
+		badge.secondBg = '#43AA8B';
 	} else if ( badge.badgeAdv == 'bdgAdvanced4' ) {
 		badge.mainBg = '#FF9F24';
-		badge.SecondBg = '#EADB45';
+		badge.secondBg = '#EADB45';
 	} else if ( badge.badgeAdv == 'bdgAdvanced5' ) {
 		badge.mainBg = '#141E27';
-		badge.SecondBg = '#EB144C';
+		badge.secondBg = '#EB144C';
 	} else if ( badge.badgeAdv == 'bdgAdvanced6' ) {
 		badge.mainBg = '#006D77';
-		badge.SecondBg = '#E5E7EB';
+		badge.secondBg = '#E5E7EB';
 	} else if ( badge.badgeAdv == 'bdgAdvanced7' ) {
 		badge.mainBg = '#F77F00';
-		badge.SecondBg = '#EB144C';
+		badge.secondBg = '#EB144C';
 	} else if ( badge.badgeAdv == 'bdgAdvanced8' ) {
 		badge.mainBg = '#F78DA7';
-		badge.SecondBg = '#006D77';
+		badge.secondBg = '#006D77';
 	} else if ( badge.badgeAdv == 'bdgAdvanced9' ) {
 		badge.mainBg = '#141E27';
-		badge.SecondBg = '#EB144C';
+		badge.secondBg = '#EB144C';
 	} else if ( badge.badgeAdv == 'bdgAdvanced10' ) {
 		badge.mainBg = '#006D77';
-		badge.SecondBg = '#FFD488';
+		badge.secondBg = '#FFD488';
 	} else if ( badge.badgeAdv == 'bdgAdvanced11' ) {
 		badge.mainBg = '#6A20C8';
-		badge.SecondBg = '#A43BC9';
+		badge.secondBg = '#A43BC9';
 	} else if ( badge.badgeAdv == 'bdgAdvanced12' ) {
 		badge.mainBg = '#D05262';
-		badge.SecondBg = '#6C1907';
+		badge.secondBg = '#6C1907';
 	}
 
 	if ( badge.badgeStyles === 'badge2' ) {

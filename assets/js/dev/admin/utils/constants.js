@@ -727,7 +727,7 @@ export default function BadgeCssandAdv( badge ) {
 			left: ${ badge.badgePositionX == 'right' ? '5px' : '13px' };
 			`;
 			badgeIconTwo = `
-			background-color: ${ badge.SecondBg };
+			background-color: ${ badge.secondBg };
 			display: block;
 			padding: 0px 5px;
 			z-index: 1;
@@ -744,7 +744,7 @@ export default function BadgeCssandAdv( badge ) {
 				border-width: 10px 6px;
 				border-style: solid;
                 z-index: -1;
-                border-color:${ badge.SecondBg } ${ badge.SecondBg } ${ badge.SecondBg } transparent !important;
+                border-color:${ badge.secondBg } ${ badge.secondBg } ${ badge.secondBg } transparent !important;
 				left: -11px;
 			}
 			&::after {
@@ -756,7 +756,7 @@ export default function BadgeCssandAdv( badge ) {
 	            right: -11px;
                 border-width: 10px 6px;
                 border-style: solid;
-                border-color:${ badge.SecondBg } transparent ${ badge.SecondBg } ${ badge.SecondBg }  !important;
+                border-color:${ badge.secondBg } transparent ${ badge.secondBg } ${ badge.secondBg }  !important;
 			`;
 			break;
 		case 'bdgAdvanced2':
@@ -795,7 +795,7 @@ export default function BadgeCssandAdv( badge ) {
 			left: ${ badge.badgePositionX == 'right' ? '5px' : '13px' };
 			`;
 			badgeIconTwo = `
-			background-color: ${ badge.SecondBg };
+			background-color: ${ badge.secondBg };
 			display: block;
 			padding: 0px 5px;
 			z-index: 1;
@@ -812,7 +812,7 @@ export default function BadgeCssandAdv( badge ) {
 				border-width: 10px 6px;
 				border-style: solid;
                 z-index: -1;
-                border-color:${ badge.SecondBg } ${ badge.SecondBg } ${ badge.SecondBg } transparent !important;
+                border-color:${ badge.secondBg } ${ badge.secondBg } ${ badge.secondBg } transparent !important;
 				left: -11px;
 			}
 			&::after {
@@ -824,7 +824,7 @@ export default function BadgeCssandAdv( badge ) {
 	            right: -11px;
                 border-width: 10px 6px;
                 border-style: solid;
-                border-color:${ badge.SecondBg } transparent ${ badge.SecondBg } ${ badge.SecondBg }  !important;
+                border-color:${ badge.secondBg } transparent ${ badge.secondBg } ${ badge.secondBg }  !important;
 			`;
 			break;
 		case 'bdgAdvanced3':
@@ -863,7 +863,7 @@ export default function BadgeCssandAdv( badge ) {
 			left: ${ badge.badgePositionX == 'right' ? '5px' : '13px' };
 			`;
 			badgeIconTwo = `
-			background-color: ${ badge.SecondBg };
+			background-color: ${ badge.secondBg };
 			display: block;
 			padding: 0px 5px;
 			z-index: 1;
@@ -880,7 +880,7 @@ export default function BadgeCssandAdv( badge ) {
 				border-width: 10px 6px;
 				border-style: solid;
                 z-index: -1;
-                border-color:${ badge.SecondBg } ${ badge.SecondBg } ${ badge.SecondBg } transparent !important;
+                border-color:${ badge.secondBg } ${ badge.secondBg } ${ badge.secondBg } transparent !important;
 				left: -11px;
 			}
 			&::after {
@@ -892,7 +892,7 @@ export default function BadgeCssandAdv( badge ) {
 	            right: -11px;
                 border-width: 10px 6px;
                 border-style: solid;
-                border-color:${ badge.SecondBg } transparent ${ badge.SecondBg } ${ badge.SecondBg }  !important;
+                border-color:${ badge.secondBg } transparent ${ badge.secondBg } ${ badge.secondBg }  !important;
 			`;
 			break;
 		case 'bdgAdvanced4':
@@ -931,7 +931,7 @@ export default function BadgeCssandAdv( badge ) {
 			left: ${ badge.badgePositionX == 'right' ? '5px' : '13px' };
 			`;
 			badgeIconTwo = `
-			background-color: ${ badge.SecondBg };
+			background-color: ${ badge.secondBg };
 			display: block;
 			padding: 0px 5px;
 			z-index: 1;
@@ -948,7 +948,7 @@ export default function BadgeCssandAdv( badge ) {
 				border-width: 10px 6px;
 				border-style: solid;
                 z-index: -1;
-                border-color:${ badge.SecondBg } ${ badge.SecondBg } ${ badge.SecondBg } transparent !important;
+                border-color:${ badge.secondBg } ${ badge.secondBg } ${ badge.secondBg } transparent !important;
 				left: -11px;
 			}
 			&::after {
@@ -960,7 +960,7 @@ export default function BadgeCssandAdv( badge ) {
 	            right: -11px;
                 border-width: 10px 6px;
                 border-style: solid;
-                border-color:${ badge.SecondBg } transparent ${ badge.SecondBg } ${ badge.SecondBg }  !important;
+                border-color:${ badge.secondBg } transparent ${ badge.secondBg } ${ badge.secondBg }  !important;
 			`;
 			break;
 		case 'bdgAdvanced5':
@@ -979,7 +979,7 @@ export default function BadgeCssandAdv( badge ) {
 			left: ${ badge.badgePositionX == 'right' ? '' : '13px' };
 			`;
 			badgeIconTwo = `
-			background-color: ${ badge.SecondBg };
+			background-color: ${ badge.secondBg };
 			display: block;
 			padding: 0px 5px;
 			z-index: 1;
@@ -997,7 +997,7 @@ export default function BadgeCssandAdv( badge ) {
 				border-width: 10px 6px;
 				border-style: solid;
                 z-index: -1;
-                border-color:${ badge.SecondBg } ${ badge.SecondBg } ${ badge.SecondBg } transparent !important;
+                border-color:${ badge.secondBg } ${ badge.secondBg } ${ badge.secondBg } transparent !important;
 				left: -11px;
 			}
 			&::after {
@@ -1009,7 +1009,7 @@ export default function BadgeCssandAdv( badge ) {
 	            right: -11px;
                 border-width: 10px 6px;
                 border-style: solid;
-                border-color:${ badge.SecondBg } transparent ${ badge.SecondBg } ${ badge.SecondBg }  !important;
+                border-color:${ badge.secondBg } transparent ${ badge.secondBg } ${ badge.secondBg }  !important;
 			`;
 			break;
 		case 'bdgAdvanced6':
@@ -1028,7 +1028,7 @@ export default function BadgeCssandAdv( badge ) {
 			left: ${ badge.badgePositionX == 'right' ? '' : '13px' };
 			`;
 			badgeIconTwo = `
-			background-color: ${ badge.SecondBg };
+			background-color: ${ badge.secondBg };
 			display: block;
 			padding: 0px 5px;
 			z-index: 1;
@@ -1046,7 +1046,7 @@ export default function BadgeCssandAdv( badge ) {
 				border-width: 10px 6px;
 				border-style: solid;
                 z-index: -1;
-                border-color:${ badge.SecondBg } ${ badge.SecondBg } ${ badge.SecondBg } transparent !important;
+                border-color:${ badge.secondBg } ${ badge.secondBg } ${ badge.secondBg } transparent !important;
 				left: -11px;
 			}
 			&::after {
@@ -1058,7 +1058,7 @@ export default function BadgeCssandAdv( badge ) {
 	            right: -11px;
                 border-width: 10px 6px;
                 border-style: solid;
-                border-color:${ badge.SecondBg } transparent ${ badge.SecondBg } ${ badge.SecondBg }  !important;
+                border-color:${ badge.secondBg } transparent ${ badge.secondBg } ${ badge.secondBg }  !important;
 			`;
 			break;
 		case 'bdgAdvanced7':
@@ -1077,7 +1077,7 @@ export default function BadgeCssandAdv( badge ) {
 			left: ${ badge.badgePositionX == 'right' ? '' : '13px' };
 			`;
 			badgeIconTwo = `
-			background-color: ${ badge.SecondBg };
+			background-color: ${ badge.secondBg };
 			display: block;
 			padding: 0px 5px;
 			z-index: 1;
@@ -1095,7 +1095,7 @@ export default function BadgeCssandAdv( badge ) {
 				border-width: 10px 6px;
 				border-style: solid;
                 z-index: -1;
-                border-color:${ badge.SecondBg } ${ badge.SecondBg } ${ badge.SecondBg } transparent !important;
+                border-color:${ badge.secondBg } ${ badge.secondBg } ${ badge.secondBg } transparent !important;
 				left: -11px;
 			}
 			&::after {
@@ -1107,7 +1107,7 @@ export default function BadgeCssandAdv( badge ) {
 	            right: -11px;
                 border-width: 10px 6px;
                 border-style: solid;
-                border-color:${ badge.SecondBg } transparent ${ badge.SecondBg } ${ badge.SecondBg }  !important;
+                border-color:${ badge.secondBg } transparent ${ badge.secondBg } ${ badge.secondBg }  !important;
 			`;
 			break;
 		case 'bdgAdvanced8':
@@ -1126,7 +1126,7 @@ export default function BadgeCssandAdv( badge ) {
 			left: ${ badge.badgePositionX == 'right' ? '' : '13px' };
 			`;
 			badgeIconTwo = `
-			background-color: ${ badge.SecondBg };
+			background-color: ${ badge.secondBg };
 			display: block;
 			padding: 0px 5px;
 			z-index: 1;
@@ -1144,7 +1144,7 @@ export default function BadgeCssandAdv( badge ) {
 				border-width: 10px 6px;
 				border-style: solid;
                 z-index: -1;
-                border-color:${ badge.SecondBg } ${ badge.SecondBg } ${ badge.SecondBg } transparent !important;
+                border-color:${ badge.secondBg } ${ badge.secondBg } ${ badge.secondBg } transparent !important;
 				left: -11px;
 			}
 			&::after {
@@ -1156,11 +1156,11 @@ export default function BadgeCssandAdv( badge ) {
 	            right: -11px;
                 border-width: 10px 6px;
                 border-style: solid;
-                border-color:${ badge.SecondBg } transparent ${ badge.SecondBg } ${ badge.SecondBg }  !important;
+                border-color:${ badge.secondBg } transparent ${ badge.secondBg } ${ badge.secondBg }  !important;
 			`;
 			break;
 		case 'bdgAdvanced9':
-			bdgeAdvanced = SVGADVANCED3( badge.mainBg, badge.SecondBg );
+			bdgeAdvanced = SVGADVANCED3( badge.mainBg, badge.secondBg );
 			badgeIconOne = `
 			position: relative;
             letter-spacing: 0.52px;
@@ -1186,7 +1186,7 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			break;
 		case 'bdgAdvanced10':
-			bdgeAdvanced = SVGADVANCED3( badge.mainBg, badge.SecondBg );
+			bdgeAdvanced = SVGADVANCED3( badge.mainBg, badge.secondBg );
 			badgeIconOne = `
 			position: relative;
             letter-spacing: 0.52px;
@@ -1212,7 +1212,7 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			break;
 		case 'bdgAdvanced11':
-			bdgeAdvanced = SVGADVANCED3( badge.mainBg, badge.SecondBg );
+			bdgeAdvanced = SVGADVANCED3( badge.mainBg, badge.secondBg );
 			badgeIconOne = `
 			position: relative;
             letter-spacing: 0.52px;
@@ -1238,7 +1238,7 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			break;
 		case 'bdgAdvanced12':
-			bdgeAdvanced = SVGADVANCED3( badge.mainBg, badge.SecondBg );
+			bdgeAdvanced = SVGADVANCED3( badge.mainBg, badge.secondBg );
 			badgeIconOne = `
 			position: relative;
             letter-spacing: 0.52px;

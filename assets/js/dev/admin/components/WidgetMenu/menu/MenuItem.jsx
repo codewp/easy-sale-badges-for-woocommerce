@@ -119,7 +119,7 @@ const MenuItem = ( props ) => {
 					<AdvancedOptions
 						onChange={ props.onChange }
 						mainBg={ props.badge.mainBg }
-						SecondBg={ props.badge.SecondBg }
+						secondBg={ props.badge.secondBg }
 						zIndexAdv={ props.badge.zIndexAdv }
 					/>
 					<AdvancedOpacityAndPos

@@ -13,7 +13,7 @@ import { AppContext } from '../../contexts/App';
 import { TrashIcon, PencilIcon, DuplicateIcon } from '@heroicons/react/solid';
 import Alert from '../../components/Alert';
 
-export default function WhatsApps() {
+export default function Badges() {
 	const { state, dispatch } = useContext( WhatsAppsContext );
 	const { loading, setLoading, setMessage } = useContext( AppContext );
 	const [ showDeleteModal, setShowDeleteModal ] = useState( false );
@@ -236,7 +236,7 @@ export default function WhatsApps() {
 												</td>
 												<td className="asnp-px-6 asnp-py-4 asnp-whitespace-nowrap">
 													<Link
-														to={ `/whatsapp/${ item.id }` }
+														to={ `/badge/${ item.id }` }
 													>
 														{ __(
 															item.name,
@@ -266,7 +266,7 @@ export default function WhatsApps() {
 												</td>
 												<td className="asnp-inline-flex asnp-space-x-1 asnp-px-6 asnp-py-4 asnp-whitespace-nowrap">
 													<Link
-														to={ `/whatsapp/${ item.id }` }
+														to={ `/badge/${ item.id }` }
 														className="asnp-btn asnp-btn-primary"
 													>
 														<PencilIcon className="asnp-h-5 asnp-w-4 " />
