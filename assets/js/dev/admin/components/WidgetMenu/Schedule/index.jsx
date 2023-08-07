@@ -1,116 +1,142 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { __ } from '@wordpress/i18n';
 import 'react-datetime/css/react-datetime.css';
 import Datetime from 'react-datetime';
-import Toggle from './../../Toggle/index';
-import AvailabilityDay from '../../AvailabilityDay';
-import TimeZone from './../../TimeZone/index';
+import ItemSelect from '../../ItemSelect';
+
+const initialDateTime = {
+	type: 'date',
+	start: '',
+	end: '',
+	startTime: '00:00',
+	endTime: '00:00',
+	date: '',
+	days: [],
+};
+
+const options = [
+	{ value: 'Saturday', label: 'Saturday' },
+	{ value: 'Sunday', label: 'Sunday' },
+	{ value: 'Monday', label: 'Monday' },
+	{ value: 'Tuesday', label: 'Tuesday' },
+	{ value: 'Wednesday', label: 'Wednesday' },
+	{ value: 'Thursday', label: 'Thursday' },
+	{ value: 'Friday', label: 'Friday' },
+];
 
 const Schedule = ( props ) => {
-	let timeItems = [];
-	for ( let dayName in props.availability ) {
-		timeItems.push(
-			<AvailabilityDay
-				key={ dayName }
-				name={ dayName }
-				day={ props.availability[ dayName ] }
-				updateAvailability={ props.updateAvailability }
-			/>
-		);
-	}
+	const [ selectTime, setSelectTime ] = useState( { ...initialDateTime } );
+
+	const updateTime = ( field, value ) => {
+		setSelectTime( ( prev ) => ( {
+			...prev,
+			[ field ]: value,
+		} ) );
+	};
+
+	const updateDays = ( item ) => {
+		setSelectTime( ( prev ) => ( {
+			...prev,
+			days: [ ...prev.days, item ],
+		} ) );
+	};
+
 	return (
 		<div className="asnp-w-full">
 			<div className="asnp-w-[25rem] asnp-mt-2 asnp-text-lg asnp-font-semibold">
 				{ __( 'Schedule', 'asnp-easy-whatsapp' ) }
 			</div>
 
-			<div className="asnp-flex">
-				<div className="asnp-mt-3">
-					<label className="asnp-block asnp-space-y-1">
-						<span className="asnp-field-title">
-							{ __( 'From Date / Time', 'asnp-easy-whatsapp' ) }
-						</span>
-						<Datetime
-							onChange={ ( momentObj ) =>
-								props.onChange(
-									'selectedDateFrom',
-									momentObj.format( 'YYYY-MM-DD HH:mm:ss' )
-								)
-							}
-						/>
-					</label>
-				</div>
-				<div className="asnp-mt-3 asnp-ml-8">
-					<label className="asnp-block asnp-space-y-1">
-						<span className="asnp-field-title">
-							{ __( 'To Date / Time', 'asnp-easy-whatsapp' ) }
-						</span>
-						<Datetime
-							onChange={ ( momentObj ) =>
-								props.onChange(
-									'selectedDateTo',
-									momentObj.format( 'YYYY-MM-DD HH:mm:ss' )
-								)
-							}
-						/>
-					</label>
-				</div>
-			</div>
-			<div className="asnp-ew-line"></div>
-			<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold">
-				{ __(
-					'RESTRICT SCHEDULE ONLY ON WEEKDAYS',
-					'asnp-easy-whatsapp'
-				) }
-				<div className="asnp-space-y-1 asnp-mt-6">
-					<label className="asnp-inline-flex asnp-space-x-2 asnp-items-center">
-						<h2 className="asnp-field-title">
-							{ __( 'All Days', 'asnp-easy-whatsapp' ) }
-						</h2>
-						<Toggle
-							value={ 1 == props.alwaysOnline }
-							onChange={ ( value ) =>
-								props.onChange( 'alwaysOnline', value ? 1 : 0 )
-							}
-						/>
-					</label>
-				</div>
-			</div>
-			{ 0 == props.alwaysOnline && (
-				<div className="asnp-block  asnp-bg-white asnp-py-4 asnp-px-2 asnp-mt-8">
-					<label className="asnp-field-title">
-						{ __( 'Custom Availability', 'asnp-easy-whatsapp' ) }
-					</label>
-					<div>{ timeItems }</div>
-					<div className="asnp-mt-8">
-						<label className="asnp-inline-flex asnp-space-x-2 asnp-items-center">
-							<h2 className="asnp-field-title asnp-w-[8rem]">
-								{ __( 'Use Timezone', 'asnp-easy-whatsapp' ) }
-							</h2>
-							<Toggle
-								value={ 1 == props.useTimezone }
-								onChange={ ( value ) =>
-									props.onChange(
-										'useTimezone',
-										value ? 1 : 0
-									)
-								}
-							/>
-						</label>
-						<label className="asnp-block">
-							{ __(
-								'Use specific timezone for this account',
-								'asnp-easy-whatsapp'
-							) }
-						</label>
-					</div>
-					{ 1 == props.useTimezone && (
-						<div className="asnp-mt-4 asnp-max-w-lg">
-							<TimeZone onChange={ props.onChange } />
+			<div className="asnp-w-full asnp-mb-4 asnp-flex asnp-mt-5">
+				<select
+					className="asnp-select-field !asnp-w-48 asnp-mt-5"
+					value={ selectTime.type }
+					onChange={ ( e ) => updateTime( 'type', e.target.value ) }
+				>
+					<option value={ 'date' }>
+						{ __( 'Date', 'asnp-easy-whatsapp' ) }
+					</option>
+
+					<option value={ 'dateTime' }>
+						{ __( 'Date Time', 'asnp-easy-whatsapp' ) }
+					</option>
+
+					<option value={ 'time' }>
+						{ __( 'Time', 'asnp-easy-whatsapp' ) }
+					</option>
+					<option value={ 'days' }>
+						{ __( 'Days', 'asnp-easy-whatsapp' ) }
+					</option>
+				</select>
+				{ selectTime.type === 'date' && (
+					<div className="asnp-flex asnp-ml-8">
+						<div>
+							<label className="asnp-block asnp-space-y-1">
+								<span className="asnp-field-title">
+									{ __(
+										'From Date / Time',
+										'asnp-easy-whatsapp'
+									) }
+								</span>
+								<Datetime
+									onChange={ ( momentObj ) =>
+										updateTime(
+											'start',
+											momentObj.format(
+												'YYYY-MM-DD HH:mm:ss'
+											)
+										)
+									}
+								/>
+							</label>
 						</div>
-					) }
+						<div className="asnp-ml-8">
+							<label className="asnp-block asnp-space-y-1">
+								<span className="asnp-field-title">
+									{ __(
+										'To Date / Time',
+										'asnp-easy-whatsapp'
+									) }
+								</span>
+								<Datetime
+									onChange={ ( momentObj ) =>
+										updateTime(
+											'end',
+											momentObj.format(
+												'YYYY-MM-DD HH:mm:ss'
+											)
+										)
+									}
+								/>
+							</label>
+						</div>
+					</div>
+				) }
+				{ selectTime.type === 'days' && (
+					<div className="asnp-flex asnp-ml-8">
+						<ItemSelect
+							items={ options }
+							type="days"
+							onChange={(selectedDays) => updateDays(selectedDays)}
+						/>
+					</div>
+				) }
+
+				<div className="asnp-itemselect asnp-ml-5 asnp-flex asnp-mt-4">
+					<button
+						className="asnp-mb-4 asnp-ml-3 asnp-mt-2 asnp-btn-primary asnp-py-1 asnp-h-[2rem] asnp-w-[4rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
+						onClick={ () => addItem( groupIndex, index + 1 ) }
+					>
+						{ __( 'Add', 'asnp-easy-whatsapp' ) }
+					</button>
+					<button
+						className="asnp-mb-4 asnp-mt-2 asnp-ml-3 asnp-btn-delete asnp-py-1 asnp-h-[2rem] asnp-w-[4rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
+						onClick={ () => deleteItem( groupIndex, index ) }
+					>
+						{ __( 'Delete', 'asnp-easy-whatsapp' ) }
+					</button>
 				</div>
-			) }
+			</div>
 		</div>
 	);
 };

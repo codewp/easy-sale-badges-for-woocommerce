@@ -5,7 +5,7 @@ import './style.scss';
 import ItemSelect from './../../../ItemSelect/index';
 import { BadgeContext } from '../../../../contexts/Badge';
 
-const WooCommerce = ( { onChange } ) => {
+const WooCommerce = () => {
 	const { addGroup, badge, addItem, updateItem, deleteItem } = useContext(
 		BadgeContext
 	);

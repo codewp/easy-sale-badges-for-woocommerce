@@ -64,8 +64,15 @@ const ItemSelect = ( {
 
 	const updateSelect = ( selected ) => {
 		setSelectedOption( selected );
-		if ( items !== selected ) {
-			onChange( selected );
+		if ( type === 'days' ) {
+			const selectedDays = selected
+				? selected.map( ( option ) => option.value )
+				: [];
+			onChange( selectedDays );
+		} else {
+			if ( items !== selected ) {
+				onChange( selected );
+			}
 		}
 	};
 
