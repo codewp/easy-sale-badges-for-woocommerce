@@ -4,6 +4,8 @@ import 'react-datetime/css/react-datetime.css';
 import Datetime from 'react-datetime';
 import ItemSelect from '../../ItemSelect';
 
+import './style.scss';
+
 const initialDateTime = {
 	type: 'date',
 	start: '',
@@ -27,9 +29,11 @@ const Schedule = ( props ) => {
 	const updateDays = ( item ) => {
 		setSelectTime( ( prev ) => ( {
 			...prev,
-			days: [ ...prev.days, item ],
+			days: [ item ],
 		} ) );
 	};
+
+	console.log( selectTime );
 
 	return (
 		<div className="asnp-w-full">
@@ -103,7 +107,7 @@ const Schedule = ( props ) => {
 					</div>
 				) }
 				{ selectTime.type === 'days' && (
-					<div className="asnp-flex asnp-ml-8">
+					<div className="asnp-flex asnp-ml-8 asnp-mt-4 asnp-inputWeek">
 						<ItemSelect
 							items={ selectTime.days }
 							type="days"

@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { __ } from '@wordpress/i18n';
-import WooCommerceList from './WooCommerceList';
-import './style.scss';
 import ItemSelect from './../../../ItemSelect/index';
 import { BadgeContext } from '../../../../contexts/Badge';
+
+import './style.scss';
 
 const WooCommerce = () => {
 	const { addGroup, badge, addItem, updateItem, deleteItem } = useContext(
