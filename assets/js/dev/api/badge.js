@@ -4,8 +4,21 @@ import { API_ROOT } from './constants';
 
 export const getItems = async ( data = {} ) => {
 	try {
+		let query = '';
+		if (
+			null != data.page &&
+			! isNaN( data.page * 1 ) &&
+			0 < data.page * 1
+		) {
+			query += '?page=' + data.page * 1;
+		}
+
+		if ( null != data.search ) {
+			query += ( query.length ? '&' : '?' ) + 'search=' + data.search;
+		}
+
 		const response = await apiFetch( {
-			path: `${ API_ROOT }/badge`,
+			path: `${ API_ROOT }/badge${ query }`,
 		} );
 		if ( response ) {
 			return response;

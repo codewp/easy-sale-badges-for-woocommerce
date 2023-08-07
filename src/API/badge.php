@@ -98,8 +98,13 @@ class Badge extends BaseController {
 	 */
 	public function get_items( $request ) {
 		try {
+			$page  = ! empty( $request['page'] ) ? absint( $request['page'] ) : 1;
 			$model = get_plugin()->container()->get( BadgeModel::class );
-			$items = $model->get_items();
+			$items = $model->get_items( [
+				'offset' => $page * 20 - 20,
+				'number' => 20,
+				'title'  => ! empty( $request['search'] ) ? sanitize_text_field( $request['search'] ) : '',
+			] );
 
 			return rest_ensure_response( [
 				'items' => $items,
