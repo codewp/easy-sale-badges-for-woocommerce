@@ -2,6 +2,16 @@ import React, { useState, useEffect } from 'react';
 import AsyncSelect from 'react-select/async';
 import * as ItemsApi from '@easy-whatsapp/api/items';
 
+const options = [
+	{ value: 'Saturday', label: 'Saturday' },
+	{ value: 'Sunday', label: 'Sunday' },
+	{ value: 'Monday', label: 'Monday' },
+	{ value: 'Tuesday', label: 'Tuesday' },
+	{ value: 'Wednesday', label: 'Wednesday' },
+	{ value: 'Thursday', label: 'Thursday' },
+	{ value: 'Friday', label: 'Friday' },
+];
+
 const ItemSelect = ( {
 	items,
 	type,
@@ -76,6 +86,13 @@ const ItemSelect = ( {
 		}
 	};
 
+	const loadWeekdays = ( search, callback ) => {
+		const filteredOptions = options.filter( ( option ) =>
+			option.label.toLowerCase().includes( search.toLowerCase() )
+		);
+		callback( filteredOptions );
+	};
+
 	return (
 		<AsyncSelect
 			className="!asnp-w-[20rem]"
@@ -83,8 +100,10 @@ const ItemSelect = ( {
 			onChange={ updateSelect }
 			isMulti={ isMulti }
 			cacheOptions={ cacheOptions }
-			loadOptions={ ( search ) =>
-				ItemsApi.searchItems( { type, search } )
+			loadOptions={
+				type === 'days'
+					? loadWeekdays
+					: ( search ) => ItemsApi.searchItems( { type, search } )
 			}
 			isClearable={ isClearable }
 		/>

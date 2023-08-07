@@ -14,16 +14,6 @@ const initialDateTime = {
 	days: [],
 };
 
-const options = [
-	{ value: 'Saturday', label: 'Saturday' },
-	{ value: 'Sunday', label: 'Sunday' },
-	{ value: 'Monday', label: 'Monday' },
-	{ value: 'Tuesday', label: 'Tuesday' },
-	{ value: 'Wednesday', label: 'Wednesday' },
-	{ value: 'Thursday', label: 'Thursday' },
-	{ value: 'Friday', label: 'Friday' },
-];
-
 const Schedule = ( props ) => {
 	const [ selectTime, setSelectTime ] = useState( { ...initialDateTime } );
 
@@ -115,9 +105,11 @@ const Schedule = ( props ) => {
 				{ selectTime.type === 'days' && (
 					<div className="asnp-flex asnp-ml-8">
 						<ItemSelect
-							items={ options }
+							items={ selectTime.days }
 							type="days"
-							onChange={(selectedDays) => updateDays(selectedDays)}
+							onChange={ ( selectedDays ) =>
+								updateDays( selectedDays )
+							}
 						/>
 					</div>
 				) }
