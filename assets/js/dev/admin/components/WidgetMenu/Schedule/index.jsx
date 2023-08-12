@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { __ } from '@wordpress/i18n';
-import 'react-datetime/css/react-datetime.css';
 import Datetime from 'react-datetime';
 import ItemSelect from '../../ItemSelect';
 import TimePicker from './../../TimePicker';
 
+import 'react-datetime/css/react-datetime.css';
 import './style.scss';
 
 const initialDateTime = {

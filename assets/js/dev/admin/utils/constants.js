@@ -22,7 +22,7 @@ export const IMAGES_URL = `${ PLUGIN_URL }assets/images/`;
 export const SVGADVANCED2 = ( b ) => {
 	return (
 		<svg
-			className="asnp-ew-svg1"
+			className="asnp-esb-svg1"
 			width="135"
 			height="142"
 			viewBox="0 0 135 142"
@@ -152,7 +152,7 @@ export const SVGADVANCED2 = ( b ) => {
 export const SVGADVANCED3 = ( m, s ) => {
 	return (
 		<svg
-			className="asnp-ew-svg2"
+			className="asnp-esb-svg2"
 			width="201"
 			height="201"
 			viewBox="0 0 201 201"
@@ -694,7 +694,7 @@ export default function BadgeCssandAdv( badge ) {
 		case 'bdgAdvanced1':
 			bdgeAdvanced = (
 				<svg
-					className="asnp-ew-svg1"
+					className="asnp-esb-svg1"
 					width="94"
 					height="101"
 					viewBox="0 0 94 101"
@@ -762,7 +762,7 @@ export default function BadgeCssandAdv( badge ) {
 		case 'bdgAdvanced2':
 			bdgeAdvanced = (
 				<svg
-					className="asnp-ew-svg1"
+					className="asnp-esb-svg1"
 					width="94"
 					height="101"
 					viewBox="0 0 94 101"
@@ -830,7 +830,7 @@ export default function BadgeCssandAdv( badge ) {
 		case 'bdgAdvanced3':
 			bdgeAdvanced = (
 				<svg
-					className="asnp-ew-svg1"
+					className="asnp-esb-svg1"
 					width="94"
 					height="101"
 					viewBox="0 0 94 101"
@@ -898,7 +898,7 @@ export default function BadgeCssandAdv( badge ) {
 		case 'bdgAdvanced4':
 			bdgeAdvanced = (
 				<svg
-					className="asnp-ew-svg1"
+					className="asnp-esb-svg1"
 					width="94"
 					height="101"
 					viewBox="0 0 94 101"
