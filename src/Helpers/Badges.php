@@ -231,13 +231,13 @@ function output_css_badge( $badge ) {
 		if ( isset( $badge->badgePositionX ) ) {
 			$dynamic_styles .= ' right: ' . ($badge->badgePositionX == 'right' ? 'auto' : '-20px') . ';';
 			}
-			if ( isset( $badge->badgePositionX ) ) {
+		if ( isset( $badge->badgePositionX ) ) {
 			$dynamic_styles .= ' left: ' . ($badge->badgePositionX == 'right' ? '-20px' : '') . ';';
 			}
 			$dynamic_styles .= ' top: 0;';
 			$dynamic_styles .= ' border: 9px solid transparent;';
 			$dynamic_styles .= ' border-width: 15px 15px;';
-			if ( isset( $badge->badgeColor ) ) {
+		if ( isset( $badge->badgeColor ) ) {
 			$dynamic_styles .= ' border-color: ' . $badge->badgeColor . 'px;';
 			}
 			$dynamic_styles .= ' transform: ' . ($badge->badgePositionX == 'right' ? 'rotate(0)' : 'rotate(180deg)') . ';';

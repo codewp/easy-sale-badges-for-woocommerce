@@ -3,6 +3,7 @@ import { __ } from '@wordpress/i18n';
 import 'react-datetime/css/react-datetime.css';
 import Datetime from 'react-datetime';
 import ItemSelect from '../../ItemSelect';
+import TimePicker from './../../TimePicker';
 
 import './style.scss';
 
@@ -115,6 +116,11 @@ const Schedule = ( props ) => {
 								updateDays( selectedDays )
 							}
 						/>
+					</div>
+				) }
+				{ selectTime.type === 'time' && (
+					<div className="asnp-flex asnp-ml-8 asnp-mt-6">
+						<TimePicker selectTime={ selectTime } onChange={ updateTime } />
 					</div>
 				) }
 

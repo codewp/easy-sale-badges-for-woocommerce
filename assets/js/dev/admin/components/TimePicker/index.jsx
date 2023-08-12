@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { __ } from '@wordpress/i18n';
 
-const TimePicker = ( { index, time, updateTime } ) => {
+const TimePicker = ( { onChange, selectTime } ) => {
 	return (
-		<div>
+		<div className="asnp-flex">
+			<div className="asnp-mt-2">
+				{ __( 'Start:', 'asnp-easy-whatsapp' ) }
+			</div>
 			<select
-				className="asnp-ml-3"
-				value={ time.start }
-				onChange={ ( e ) =>
-					updateTime( index, 'start', e.target.value )
-				}
+				className="asnp-ml-2 asnp-select-field"
+				value={ selectTime.startTime }
+				onChange={ ( e ) => onChange( 'startTime', e.target.value ) }
 			>
 				<option value="00:00">00:00</option>
 				<option value="00:30">00:30</option>
@@ -60,10 +62,14 @@ const TimePicker = ( { index, time, updateTime } ) => {
 				<option value="23:30">23:30</option>
 				<option value="23:59">23:59</option>
 			</select>
+
+			<div className="asnp-ml-6 asnp-mt-2">
+				{ __( 'End:', 'asnp-easy-whatsapp' ) }
+			</div>
 			<select
-				className="asnp-ml-2"
-				value={ time.end }
-				onChange={ ( e ) => updateTime( index, 'end', e.target.value ) }
+				className="asnp-ml-2 asnp-select-field"
+				value={ selectTime.endTime }
+				onChange={ ( e ) => onChange( 'endTime', e.target.value ) }
 			>
 				<option value="00:00">00:00</option>
 				<option value="00:30">00:30</option>
