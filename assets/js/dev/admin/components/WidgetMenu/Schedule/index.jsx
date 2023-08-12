@@ -74,6 +74,50 @@ const Schedule = ( props ) => {
 									) }
 								</span>
 								<Datetime
+									dateFormat="YYYY-MM-DD"
+									timeFormat={ false }
+									onChange={ ( momentObj ) =>
+										updateTime(
+											'start',
+											momentObj.format( 'YYYY-MM-DD' )
+										)
+									}
+								/>
+							</label>
+						</div>
+						<div className="asnp-ml-8">
+							<label className="asnp-block asnp-space-y-1">
+								<span className="asnp-field-title">
+									{ __(
+										'To Date / Time',
+										'asnp-easy-whatsapp'
+									) }
+								</span>
+								<Datetime
+									dateFormat="YYYY-MM-DD"
+									timeFormat={ false }
+									onChange={ ( momentObj ) =>
+										updateTime(
+											'end',
+											momentObj.format( 'YYYY-MM-DD' )
+										)
+									}
+								/>
+							</label>
+						</div>
+					</div>
+				) }
+				{ selectTime.type === 'dateTime' && (
+					<div className="asnp-flex asnp-ml-8">
+						<div>
+							<label className="asnp-block asnp-space-y-1">
+								<span className="asnp-field-title">
+									{ __(
+										'From Date / Time',
+										'asnp-easy-whatsapp'
+									) }
+								</span>
+								<Datetime
 									onChange={ ( momentObj ) =>
 										updateTime(
 											'start',
@@ -120,7 +164,10 @@ const Schedule = ( props ) => {
 				) }
 				{ selectTime.type === 'time' && (
 					<div className="asnp-flex asnp-ml-8 asnp-mt-6">
-						<TimePicker selectTime={ selectTime } onChange={ updateTime } />
+						<TimePicker
+							selectTime={ selectTime }
+							onChange={ updateTime }
+						/>
 					</div>
 				) }
 
