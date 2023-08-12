@@ -98,7 +98,7 @@ const defaultBadge = {
 	fontSizeLabelTimer: '24',
 	lineHeightLabelTimer: '30',
 	bgColorTimer: '#EB144C',
-	days:[]
+	days: [],
 };
 
 const initialItem = {

@@ -34,7 +34,6 @@ const Schedule = ( props ) => {
 		} ) );
 	};
 
-	console.log( selectTime );
 
 	return (
 		<div className="asnp-w-full">

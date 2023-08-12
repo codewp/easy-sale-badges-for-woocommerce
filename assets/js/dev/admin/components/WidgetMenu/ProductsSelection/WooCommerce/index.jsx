@@ -92,7 +92,11 @@ const WooCommerce = () => {
 									<div className="asnp-itemselect asnp-ml-5 asnp-flex">
 										{
 											<ItemSelect
-												items={ item }
+												items={
+													badge.items[ groupIndex ][
+														index
+													].products
+												}
 												type={
 													badge.items[ groupIndex ][
 														index
@@ -102,7 +106,7 @@ const WooCommerce = () => {
 													updateItem(
 														groupIndex,
 														index,
-														'items',
+														'products',
 														value
 													)
 												}

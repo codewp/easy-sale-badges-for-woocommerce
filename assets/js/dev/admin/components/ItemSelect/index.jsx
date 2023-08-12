@@ -11,15 +11,15 @@ const options = [
 	{ value: 'Thursday', label: 'Thursday' },
 	{ value: 'Friday', label: 'Friday' },
 ];
-
-const ItemSelect = ( {
+export default function ItemsSelect( {
 	items,
 	type,
 	onChange,
 	isMulti = true,
-	cacheOptions = false,
+	cacheOptions = true,
 	isClearable = true,
-} ) => {
+	disabled = false,
+} ) {
 	const [ selectedOption, setSelectedOption ] = useState( null );
 
 	useEffect( () => {
@@ -63,9 +63,9 @@ const ItemSelect = ( {
 			let options = await ItemsApi.getItems( { type, items } );
 			if ( options && options.length ) {
 				if ( ! isMulti ) {
-					updateSelect( options[ 0 ] );
+					setSelectedOption( options[ 0 ] );
 				} else {
-					updateSelect( options );
+					setSelectedOption( options );
 				}
 			}
 		};
@@ -106,8 +106,7 @@ const ItemSelect = ( {
 					: ( search ) => ItemsApi.searchItems( { type, search } )
 			}
 			isClearable={ isClearable }
+			isDisabled={ disabled }
 		/>
 	);
-};
-
-export default ItemSelect;
+}
