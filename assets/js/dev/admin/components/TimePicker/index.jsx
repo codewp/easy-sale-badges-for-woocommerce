@@ -1,7 +1,7 @@
 import React from 'react';
 import { __ } from '@wordpress/i18n';
 
-const TimePicker = ( { onChange, selectTime } ) => {
+const TimePicker = ( { onChange, badge, groupIndex, index } ) => {
 	return (
 		<div className="asnp-flex">
 			<div className="asnp-mt-2">
@@ -9,8 +9,10 @@ const TimePicker = ( { onChange, selectTime } ) => {
 			</div>
 			<select
 				className="asnp-ml-2 asnp-select-field"
-				value={ selectTime.startTime }
-				onChange={ ( e ) => onChange( 'startTime', e.target.value ) }
+				value={ badge.schedule[ groupIndex ][ index ].startTime }
+				onChange={ ( e ) =>
+					onChange( groupIndex, index, 'startTime', e.target.value )
+				}
 			>
 				<option value="00:00">00:00</option>
 				<option value="00:30">00:30</option>
@@ -68,8 +70,10 @@ const TimePicker = ( { onChange, selectTime } ) => {
 			</div>
 			<select
 				className="asnp-ml-2 asnp-select-field"
-				value={ selectTime.endTime }
-				onChange={ ( e ) => onChange( 'endTime', e.target.value ) }
+				value={ badge.schedule[ groupIndex ][ index ].endTime }
+				onChange={ ( e ) =>
+					onChange( groupIndex, index, 'endTime', e.target.value )
+				}
 			>
 				<option value="00:00">00:00</option>
 				<option value="00:30">00:30</option>

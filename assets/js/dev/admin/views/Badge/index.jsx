@@ -98,12 +98,35 @@ const defaultBadge = {
 	lineHeightLabelTimer: '30',
 	bgColorTimer: '#EB144C',
 	days: [],
+	schedule: [
+		[
+			{
+				type: 'date',
+				start: '',
+				end: '',
+				startTime: '00:00',
+				endTime: '00:00',
+				date: '',
+				days: [],
+			},
+		],
+	],
 };
 
 const initialItem = {
 	type: 'products',
 	selectType: 'included',
 	products: '',
+};
+
+const initialDateTime = {
+	type: 'date',
+	start: '',
+	end: '',
+	startTime: '00:00',
+	endTime: '00:00',
+	date: '',
+	days: [],
 };
 
 export default function Badge() {
@@ -185,6 +208,13 @@ export default function Badge() {
 		} ) );
 	};
 
+	const addGroupSchedule = () => {
+		setBadge( ( prev ) => ( {
+			...prev,
+			schedule: [ ...prev.schedule, [ initialDateTime ] ],
+		} ) );
+	};
+
 	const deleteGroup = ( index ) => {
 		setBadge( ( prev ) => {
 			const updatedItems = [ ...prev.items ];
@@ -214,6 +244,36 @@ export default function Badge() {
 		} );
 	};
 
+	const addSchedule = ( groupIndex, index ) => {
+		setBadge( ( prev ) => {
+			const updatedSchedules = prev.schedule.map( ( group, i ) =>
+				i === groupIndex
+					? [
+							...group.slice( 0, index ),
+							{ ...initialDateTime },
+							...group.slice( index ),
+					  ]
+					: group
+			);
+			return { ...prev, schedule: updatedSchedules };
+		} );
+	};
+
+	const updateDaysSchedule = ( groupIndex, index, field, value ) => {
+		setBadge( ( prev ) => {
+			const updatedSchedules = prev.schedule.map( ( group, i ) =>
+				i === groupIndex
+					? [
+							...group.slice( 0, index ),
+							{ ...group[ index ], [ field ]: [ value ] },
+							...group.slice( index + 1 ),
+					  ]
+					: group
+			);
+			return { ...prev, schedule: updatedSchedules };
+		} );
+	};
+
 	const updateItem = ( groupIndex, index, field, value ) => {
 		setBadge( ( prev ) => {
 			const updatedItems = prev.items.map( ( group, i ) =>
@@ -226,6 +286,21 @@ export default function Badge() {
 					: group
 			);
 			return { ...prev, items: updatedItems };
+		} );
+	};
+
+	const updateSchedule = ( groupIndex, index, field, value ) => {
+		setBadge( ( prev ) => {
+			const updatedSchedules = prev.schedule.map( ( group, i ) =>
+				i === groupIndex
+					? [
+							...group.slice( 0, index ),
+							{ ...group[ index ], [ field ]: value },
+							...group.slice( index + 1 ),
+					  ]
+					: group
+			);
+			return { ...prev, schedule: updatedSchedules };
 		} );
 	};
 
@@ -242,6 +317,25 @@ export default function Badge() {
 			return {
 				...prev,
 				items,
+			};
+		} );
+	};
+
+	const deleteSchedule = ( groupIndex, index ) => {
+		setBadge( ( prev ) => {
+			let schedule = [ ...prev.schedule ];
+			let group = [ ...schedule[ groupIndex ] ];
+			group = group.filter( ( item, idx ) => idx !== index );
+			if ( ! group.length ) {
+				schedule = schedule.filter(
+					( item, idx ) => idx !== groupIndex
+				);
+			} else {
+				schedule[ groupIndex ] = group;
+			}
+			return {
+				...prev,
+				schedule,
 			};
 		} );
 	};
@@ -305,6 +399,11 @@ export default function Badge() {
 				deleteItem,
 				badgeImageFile,
 				setBadgeImageFile,
+				addSchedule,
+				updateSchedule,
+				addGroupSchedule,
+				updateDaysSchedule,
+				deleteSchedule,
 			} }
 		>
 			<div className="asnp-relative">
