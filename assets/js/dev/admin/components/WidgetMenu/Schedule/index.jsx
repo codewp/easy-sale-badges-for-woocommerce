@@ -81,7 +81,7 @@ const Schedule = () => {
 										<label className="asnp-block asnp-space-y-1">
 											<span className="asnp-field-title">
 												{ __(
-													'From Date / Time',
+													'From Date',
 													'asnp-easy-whatsapp'
 												) }
 											</span>
@@ -105,7 +105,7 @@ const Schedule = () => {
 										<label className="asnp-block asnp-space-y-1">
 											<span className="asnp-field-title">
 												{ __(
-													'To Date / Time',
+													'To Date',
 													'asnp-easy-whatsapp'
 												) }
 											</span>
@@ -145,7 +145,7 @@ const Schedule = () => {
 														index,
 														'start',
 														momentObj.format(
-															'YYYY-MM-DD HH:mm:ss'
+															'YYYY-MM-DD HH:mm'
 														)
 													)
 												}
@@ -167,7 +167,7 @@ const Schedule = () => {
 														index,
 														'end',
 														momentObj.format(
-															'YYYY-MM-DD HH:mm:ss'
+															'YYYY-MM-DD HH:mm'
 														)
 													)
 												}

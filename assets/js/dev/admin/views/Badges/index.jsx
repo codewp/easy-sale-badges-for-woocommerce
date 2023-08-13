@@ -260,7 +260,7 @@ export default function Badges() {
 														{ item.id }"]
 													</code>
 												</td>
-												<td className="asnp-px-6 asnp-py-4 asnp-whitespace-nowrap">
+												<td className="asnp-px-6 asnp-whitespace-nowrap">
 													<Link
 														className="focus:!asnp-shadow-none"
 														to={ `/badge/${ item.id }` }
