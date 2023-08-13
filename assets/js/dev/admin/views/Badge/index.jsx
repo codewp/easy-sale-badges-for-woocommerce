@@ -429,13 +429,13 @@ export default function Badge() {
 						</div>
 						<label className="asnp-block asnp-space-y-1">
 							<span className="asnp-field-title">
-								{ __( 'Title', 'asnp-easy-whatsapp' ) }
+								{ __( 'Name', 'asnp-easy-whatsapp' ) }
 							</span>
 							<input
 								type="text"
 								className="asnp-block asnp-text-field"
 								value={ badge.title }
-								placeholder="Title"
+								placeholder="Name"
 								onChange={ ( e ) =>
 									updateBadge( 'title', e.target.value )
 								}
