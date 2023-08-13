@@ -9,22 +9,6 @@ const ProductsSelection = ( props ) => {
 			<div className="asnp-w-[25rem] asnp-mt-2 asnp-text-lg asnp-font-semibold">
 				{ __( 'Products Selection', 'asnp-easy-whatsapp' ) }
 			</div>
-			<label className="asnp-block asnp-mt-4 asnp-space-y-2">
-				<span className="asnp-field-title asnp-ml-1">
-					{ __( 'Use custom product filter', 'asnp-easy-whatsapp' ) }
-				</span>
-				<div className="asnp-ml-2">
-					<Toggle
-						value={ 1 == props.useProductFilter }
-						onChange={ ( value ) =>
-							props.onChange(
-								'useProductFilter',
-								value ? 1 : 0
-							)
-						}
-					/>
-				</div>
-			</label>
 			<div className="asnp-mt-3">
 				<label className="asnp-block asnp-space-y-1">
 					<span className="asnp-field-title">

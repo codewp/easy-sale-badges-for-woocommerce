@@ -151,7 +151,6 @@ const MenuItem = ( props ) => {
 			{ props.activeStatus == 5 && (
 				<ProductsSelection
 					onChange={ props.onChange }
-					useProductFilter={ props.badge.useProductFilter }
 				/>
 			) }
 			{ props.activeStatus == 6 && (

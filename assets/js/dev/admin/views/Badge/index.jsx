@@ -38,7 +38,6 @@ const defaultBadge = {
 	badgePositionBottom: '0',
 	badgePositionLeft: '0',
 	badgePositionRight: '0',
-	useProductFilter: 0,
 	badgeImage: '',
 	imgbadge: 0,
 	widthBadgeImg: '90',
@@ -88,7 +87,7 @@ const defaultBadge = {
 	selectedDateFrom: '',
 	selectedDateTo: '',
 	woocommerceItemsConditions: 'any',
-	items: [],
+	items: [ [ { type: 'products', selectType: 'included', products: '' } ] ],
 	useTimerBadge: 0,
 	badgeTimer: '',
 	labelDayTimer: 'Days',
@@ -118,6 +117,8 @@ export default function Badge() {
 	);
 	const { setLoading, setMessage, settings } = useContext( AppContext );
 	const [ badgeImageFile, setBadgeImageFile ] = useState( null );
+
+	console.log( badge );
 
 	useEffect( () => {
 		setBadgeImageFile( null );
