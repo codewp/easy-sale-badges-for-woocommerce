@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { __ } from '@wordpress/i18n';
+import { __, sprintf } from '@wordpress/i18n';
 import Datetime from 'react-datetime';
 import ItemSelect from '../../ItemSelect';
 import TimePicker from './../../TimePicker';
@@ -242,7 +242,9 @@ const Schedule = () => {
 						addGroupSchedule();
 					} }
 				>
-					{ __( 'Add "Or" Group', 'asnp-easy-whatsapp' ) }
+					{ badge.schedule.length
+						? sprintf( __( '%s Or Group', 'asnp-easy-whatsapp' ), '+' )
+						: __( 'Schedule', 'asnp-easy-whatsapp' ) }
 				</button>
 			</div>
 		</div>
