@@ -59,6 +59,29 @@ function get_timezone_string() {
 	return ! empty( $tzstring ) ? $tzstring : 'UTC';
 }
 
+function get_term_hierarchy_name( $term_id, $taxonomy, $separator = '/', $nicename = false, $visited = array() ) {
+	$chain = '';
+	$term = get_term( $term_id, $taxonomy );
+
+	if ( is_wp_error( $term ) ) {
+		return '';
+	}
+
+	$name = $term->name;
+	if ( $nicename ) {
+		$name = $term->slug;
+	}
+
+	if ( $term->parent && ( $term->parent != $term->term_id ) && ! in_array( $term->parent, $visited ) ) {
+		$visited[] = $term->parent;
+		$chain     .= get_term_hierarchy_name( $term->parent, $taxonomy, $separator, $nicename, $visited );
+	}
+
+	$chain .= $name . $separator;
+
+	return $chain;
+}
+
 function register_polyfills() {
 	global $wp_version;
 
