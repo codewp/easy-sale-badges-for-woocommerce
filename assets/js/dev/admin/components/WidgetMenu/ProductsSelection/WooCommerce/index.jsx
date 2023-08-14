@@ -106,7 +106,7 @@ const WooCommerce = () => {
 													updateItem(
 														groupIndex,
 														index,
-														'products',
+														'items',
 														value
 													)
 												}

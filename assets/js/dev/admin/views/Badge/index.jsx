@@ -87,7 +87,7 @@ const defaultBadge = {
 	selectedDateFrom: '',
 	selectedDateTo: '',
 	woocommerceItemsConditions: 'any',
-	items: [ [ { type: 'products', selectType: 'included', products: '' } ] ],
+	items: [ [ { type: 'products', selectType: 'included', items: '' } ] ],
 	useTimerBadge: 0,
 	badgeTimer: '',
 	labelDayTimer: 'Days',
