@@ -87,7 +87,7 @@ const defaultBadge = {
 	selectedDateFrom: '',
 	selectedDateTo: '',
 	woocommerceItemsConditions: 'any',
-	items: [ [ { type: 'products', selectType: 'included', items: '' } ] ],
+	items: [ [ { type: 'products', selectType: 'included', items: [] } ] ],
 	useTimerBadge: 0,
 	badgeTimer: '',
 	labelDayTimer: 'Days',
@@ -275,28 +275,21 @@ export default function Badge() {
 	};
 
 	const updateItem = ( groupIndex, index, field, value ) => {
+		let update = { [ field ]: value };
+		if ( 'type' === field ) {
+			update.items = [];
+		}
+
 		setBadge( ( prev ) => {
 			const updatedItems = prev.items.map( ( group, i ) =>
 				i === groupIndex
 					? [
 							...group.slice( 0, index ),
-							{ ...group[ index ], [ field ]: value },
+							{ ...group[ index ], ...update },
 							...group.slice( index + 1 ),
 					  ]
 					: group
 			);
-
-			if (
-				field === 'type' &&
-				( value === 'products' ||
-					value === 'categories' ||
-					value === 'tags' )
-			) {
-				const newGroup = [ ...updatedItems[ groupIndex ] ];
-				newGroup[ index ].items = null;
-				updatedItems[ groupIndex ] = newGroup;
-			}
-
 			return { ...prev, items: updatedItems };
 		} );
 	};

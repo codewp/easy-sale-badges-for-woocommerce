@@ -110,6 +110,7 @@ const WooCommerce = () => {
 														value
 													)
 												}
+												cacheOptions={ false }
 											/>
 										}
 										<button
