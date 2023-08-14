@@ -10,6 +10,22 @@ import { AppContext } from './../../contexts/App';
 import { IMAGES_URL } from './../../utils/constants';
 import { BadgeContext } from '../../contexts/Badge';
 
+const initialItem = {
+	type: 'products',
+	selectType: 'included',
+	items: [],
+};
+
+const initialDateTime = {
+	type: 'date',
+	start: '',
+	end: '',
+	startTime: '00:00',
+	endTime: '00:00',
+	date: '',
+	days: [],
+};
+
 const defaultBadge = {
 	title: 'Badge',
 	status: 1,
@@ -87,7 +103,7 @@ const defaultBadge = {
 	selectedDateFrom: '',
 	selectedDateTo: '',
 	woocommerceItemsConditions: 'any',
-	items: [ [ { type: 'products', selectType: 'included', items: [] } ] ],
+	items: [ [ { ...initialItem } ] ],
 	useTimerBadge: 0,
 	badgeTimer: '',
 	labelDayTimer: 'Days',
@@ -98,35 +114,7 @@ const defaultBadge = {
 	lineHeightLabelTimer: '30',
 	bgColorTimer: '#EB144C',
 	days: [],
-	schedule: [
-		[
-			{
-				type: 'date',
-				start: '',
-				end: '',
-				startTime: '00:00',
-				endTime: '00:00',
-				date: '',
-				days: [],
-			},
-		],
-	],
-};
-
-const initialItem = {
-	type: 'products',
-	selectType: 'included',
-	products: '',
-};
-
-const initialDateTime = {
-	type: 'date',
-	start: '',
-	end: '',
-	startTime: '00:00',
-	endTime: '00:00',
-	date: '',
-	days: [],
+	schedule: [],
 };
 
 export default function Badge() {
