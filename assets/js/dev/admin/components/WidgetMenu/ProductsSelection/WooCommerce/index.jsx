@@ -95,7 +95,7 @@ const WooCommerce = () => {
 												items={
 													badge.items[ groupIndex ][
 														index
-													].products
+													].items
 												}
 												type={
 													badge.items[ groupIndex ][
