@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react';
 import { __, sprintf } from '@wordpress/i18n';
 import Datetime from 'react-datetime';
-import ItemSelect from '../../ItemSelect';
 import TimePicker from './../../TimePicker';
 import { BadgeContext } from '../../../contexts/Badge';
+import DaysOfWeekSelect from '../../DaysOfWeek';
 
 import 'react-datetime/css/react-datetime.css';
 import './style.scss';
@@ -179,12 +179,11 @@ const Schedule = () => {
 							{ badge.schedule[ groupIndex ][ index ].type ===
 								'days' && (
 								<div className="asnp-flex asnp-ml-8 asnp-mt-4 asnp-inputWeek">
-									<ItemSelect
-										items={
+									<DaysOfWeekSelect
+										value={
 											badge.items[ groupIndex ][ index ]
 												.days
 										}
-										type="days"
 										onChange={ ( value ) =>
 											updateDaysSchedule(
 												groupIndex,
@@ -243,7 +242,10 @@ const Schedule = () => {
 					} }
 				>
 					{ badge.schedule.length
-						? sprintf( __( '%s Or Group', 'asnp-easy-whatsapp' ), '+' )
+						? sprintf(
+								__( '%s Or Group', 'asnp-easy-whatsapp' ),
+								'+'
+						  )
 						: __( 'Schedule', 'asnp-easy-whatsapp' ) }
 				</button>
 			</div>

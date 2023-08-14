@@ -136,7 +136,7 @@ const Timer = ( props ) => {
 							onChange={ ( momentObj ) =>
 								props.onChange(
 									'selectedDateFrom',
-									momentObj.format( 'YYYY-MM-DD HH:mm:ss' )
+									momentObj.format( 'YYYY-MM-DD HH:mm' )
 								)
 							}
 						/>
@@ -151,7 +151,7 @@ const Timer = ( props ) => {
 							onChange={ ( momentObj ) =>
 								props.onChange(
 									'selectedDateTo',
-									momentObj.format( 'YYYY-MM-DD HH:mm:ss' )
+									momentObj.format( 'YYYY-MM-DD HH:mm' )
 								)
 							}
 						/>
