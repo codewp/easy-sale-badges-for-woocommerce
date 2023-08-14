@@ -2,34 +2,19 @@ import apiFetch from '@wordpress/api-fetch';
 import { __ } from '@wordpress/i18n';
 import { API_ROOT } from './constants';
 
-const getItemType = ( type ) => {
-	switch ( type ) {
-		case 'products':
-		case 'excluded_products':
-			return 'products';
-		case 'categories':
-		case 'excluded_categories':
-			return 'categories';
-		case 'tags':
-		case 'excluded_tags':
-			return 'tags';
-	}
-
-	return type;
-};
-
 export const getItems = async ( data ) => {
 	if ( ! data ) {
-		throw new Error( __( 'Data is required.', 'asnp-easy-whatsapp' ) );
+		throw new Error(
+			__( 'Data is required.', 'asnp-easy-product-bundles' )
+		);
 	} else if ( ! data.type ) {
-		throw new Error( __( 'Type is required.', 'asnp-easy-whatsapp' ) );
+		throw new Error(
+			__( 'Type is required.', 'asnp-easy-product-bundles' )
+		);
 	} else if ( ! data.items ) {
-		throw new Error( __( 'Items are required.', 'asnp-easy-whatsapp' ) );
-	}
-
-	data.type = getItemType( data.type );
-	if ( ! data.type.length ) {
-		throw new Error( __( 'Invalid type.', 'asnp-easy-whatsapp' ) );
+		throw new Error(
+			__( 'Items are required.', 'asnp-easy-product-bundles' )
+		);
 	}
 
 	try {
@@ -44,7 +29,10 @@ export const getItems = async ( data ) => {
 		}
 
 		throw new Error(
-			__( 'There was an error on getting items.', 'asnp-easy-whatsapp' )
+			__(
+				'There was an error on getting items.',
+				'asnp-easy-product-bundles'
+			)
 		);
 	} catch ( error ) {
 		throw error;
@@ -53,18 +41,17 @@ export const getItems = async ( data ) => {
 
 export const searchItems = async ( data ) => {
 	if ( ! data ) {
-		throw new Error( __( 'Data is required.', 'asnp-easy-whatsapp' ) );
-	} else if ( ! data.type ) {
-		throw new Error( __( 'Type is required.', 'asnp-easy-whatsapp' ) );
-	} else if ( ! data.search ) {
 		throw new Error(
-			__( 'Search value is required.', 'asnp-easy-whatsapp' )
+			__( 'Data is required.', 'asnp-easy-product-bundles' )
 		);
-	}
-
-	data.type = getItemType( data.type );
-	if ( ! data.type.length ) {
-		throw new Error( __( 'Invalid type.', 'asnp-easy-whatsapp' ) );
+	} else if ( ! data.type ) {
+		throw new Error(
+			__( 'Type is required.', 'asnp-easy-product-bundles' )
+		);
+	} else if ( null == data.search ) {
+		throw new Error(
+			__( 'Search value is required.', 'asnp-easy-product-bundles' )
+		);
 	}
 
 	try {
@@ -78,7 +65,10 @@ export const searchItems = async ( data ) => {
 		}
 
 		throw new Error(
-			__( 'There was an error on searching items.', 'asnp-easy-whatsapp' )
+			__(
+				'There was an error on searching items.',
+				'asnp-easy-product-bundles'
+			)
 		);
 	} catch ( error ) {
 		throw error;

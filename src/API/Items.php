@@ -62,9 +62,17 @@ class Items extends BaseController {
 						),
 					)
 				);
-			} else {
+			  } elseif ( 'categories' === $request['type'] ) {
+	
+				$items = ItemsModel::get_categories( array( 'name__like' => $search ) );
+	
+			  }  elseif ( 'tags' === $request['type'] ) {
+		
+				$items = ItemsModel::get_tags( array( 'name__like' => $search ) );
+	
+			  } else {
 				$items = apply_filters( 'asnp_wesb_items_api_' . __FUNCTION__, $items, $search, $request );
-			}
+			  }
 
 			return rest_ensure_response( [
 				'items' => $items,
@@ -97,14 +105,22 @@ class Items extends BaseController {
 
 			if ( 'products' === $request['type'] ) {
 				$items = ItemsModel::get_products(
-					array(
-						'type'    => array( 'simple', 'variation' ),
-						'include' => array_filter( array_map( 'absint', $items ) ),
-					)
+				  array(
+					'type'    => array( 'simple', 'variation' ),
+					'include' => array_filter( array_map( 'absint', $items ) ),
+				  )
 				);
-			} else {
+			  } elseif ( 'categories' === $request['type'] ) {
+	
+				$items = ItemsModel::get_categories( array( 'include' => array_filter( array_map( 'absint', $req_items ) ) ) );
+	
+			  }  elseif ( 'tags' === $request['type'] ) {
+		
+				$items = ItemsModel::get_tags( array( 'include' => array_filter( array_map( 'absint', $req_items ) ) ) );
+	
+			  } else {
 				$items = apply_filters( 'asnp_wesb_items_api_' . __FUNCTION__, [], $items, $request );
-			}
+			  }
 
 			return rest_ensure_response( [
 				'items' => $items,
