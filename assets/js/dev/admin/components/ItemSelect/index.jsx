@@ -61,7 +61,7 @@ export default function ItemsSelect( {
 			}
 		};
 		fetchItems();
-	}, [ items ] );
+	}, [ items, type ] );
 
 	const updateSelect = ( selected ) => {
 		setSelectedOption( selected );

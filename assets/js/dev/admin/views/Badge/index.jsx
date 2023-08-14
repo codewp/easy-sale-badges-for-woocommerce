@@ -285,6 +285,18 @@ export default function Badge() {
 					  ]
 					: group
 			);
+
+			if (
+				field === 'type' &&
+				( value === 'products' ||
+					value === 'categories' ||
+					value === 'tags' )
+			) {
+				const newGroup = [ ...updatedItems[ groupIndex ] ];
+				newGroup[ index ].items = null;
+				updatedItems[ groupIndex ] = newGroup;
+			}
+
 			return { ...prev, items: updatedItems };
 		} );
 	};
