@@ -2,9 +2,6 @@
 
 namespace AsanaPlugins\WhatsApp;
 
-use AsanaPlugins\WhatsApp\Models\ItemsModel;
-use AsanaPlugins\WhatsApp\Validator\ProductValidator;
-
 function get_plugin() {
 	return Plugin::instance();
 }
@@ -119,4 +116,10 @@ function add_custom_style( $style ) {
 	}
 
 	get_plugin()->container()->get( CustomStyles::class )->add_style( $style );
+}
+
+function display_sale_badges( $product ) {
+	if ( ! $product ) {
+		return;
+	}
 }

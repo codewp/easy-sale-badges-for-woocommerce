@@ -127,11 +127,7 @@ final class Plugin {
 		$this->container->get( Assets::class )->init();
 		$this->container->get( CustomStyles::class )->init();
 
-		if ( class_exists( 'WooCommerce' ) ) {
-			if ( string_to_bool( get_plugin()->settings->get_setting( 'woocommerceEnabled', true ) ) ) {
-				WooCommerceHooks::init();
-			}
-		}
+		Hooks::init();
 
 		add_action( 'init', [ $this, 'add_shortcodes' ] );
 		add_filter( 'upload_dir', [ $this, 'upload_dir' ] );

@@ -22,7 +22,7 @@ function output_badge( $badge ) {
 	} elseif ( isset( $badge->imgbadge ) && $badge->imgbadge == 1 ) {
 		return output_image_badge( $badge );
 	} elseif ( isset( $badge->imgbadgeAdv ) && $badge->imgbadgeAdv == 1 ) {
-		return output_imageAdv_badge( $badge );
+		return output_image_adv_badge( $badge );
 	} elseif ( isset( $badge->useTimerBadge ) && $badge->useTimerBadge == 1 ) {
 		return output_timer_badge( $badge );
 	}
@@ -329,7 +329,7 @@ function output_image_badge( $badge ) {
 	}
 }
 
-function output_imageAdv_badge( $badge ) {
+function output_image_adv_badge( $badge ) {
 	if ( ! $badge ) {
 		return;
 	}
