@@ -67,37 +67,6 @@ const defaultBadge = {
 	mainBg: '#5F536D',
 	secondBg: '#25ad25',
 	zIndexAdv: '',
-	alwaysOnline: 1,
-	availability: {
-		saturday: {
-			available: 1,
-			times: [ { start: '09:00', end: '17:00' } ],
-		},
-		sunday: {
-			available: 1,
-			times: [ { start: '09:00', end: '17:00' } ],
-		},
-		monday: {
-			available: 1,
-			times: [ { start: '09:00', end: '17:00' } ],
-		},
-		tuesday: {
-			available: 1,
-			times: [ { start: '09:00', end: '17:00' } ],
-		},
-		wednesday: {
-			available: 1,
-			times: [ { start: '09:00', end: '17:00' } ],
-		},
-		thursday: {
-			available: 1,
-			times: [ { start: '09:00', end: '17:00' } ],
-		},
-		friday: {
-			available: 1,
-			times: [ { start: '09:00', end: '17:00' } ],
-		},
-	},
 	useTimezone: 0,
 	timezone: '',
 	selectedDateFrom: '',
@@ -113,7 +82,6 @@ const defaultBadge = {
 	fontSizeLabelTimer: '24',
 	lineHeightLabelTimer: '30',
 	bgColorTimer: '#EB144C',
-	days: [],
 	schedule: [],
 };
 

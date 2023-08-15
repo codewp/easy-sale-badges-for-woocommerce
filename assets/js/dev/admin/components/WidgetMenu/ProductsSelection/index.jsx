@@ -1,6 +1,5 @@
 import React from 'react';
 import { __ } from '@wordpress/i18n';
-import Toggle from '../../Toggle';
 import WooCommerce from './WooCommerce';
 
 const ProductsSelection = ( props ) => {

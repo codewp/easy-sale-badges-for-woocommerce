@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { __, sprintf } from '@wordpress/i18n';
 import Datetime from 'react-datetime';
 import TimePicker from './../../TimePicker';
@@ -234,7 +234,7 @@ const Schedule = () => {
 										addSchedule( groupIndex, index + 1 )
 									}
 								>
-									{ __( 'Add', 'asnp-easy-whatsapp' ) }
+									{ __( 'And', 'asnp-easy-whatsapp' ) }
 								</button>
 								<button
 									className="asnp-mb-4 asnp-mt-2 asnp-ml-3 asnp-btn-delete asnp-py-1 asnp-h-[2rem] asnp-w-[4rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
@@ -249,12 +249,15 @@ const Schedule = () => {
 					) ) }
 				</div>
 			) ) }
+
 			<div className="asnp-mt-4 asnp-block asnp-h-auto asnp-space-y-2">
-				<label className="asnp-block asnp-space-y-1">
-					<span className="asnp-field-title">
-						{ __( 'Or', 'asnp-easy-whatsapp' ) }
-					</span>
-				</label>
+				{ badge.schedule.length > 1 && (
+					<label className="asnp-block asnp-space-y-1">
+						<span className="asnp-field-title">
+							{ __( 'Or', 'asnp-easy-whatsapp' ) }
+						</span>
+					</label>
+				) }
 				<button
 					className="asnp-mb-4 asnp-ml-3 asnp-mt-2 asnp-btn-primary asnp-py-1 asnp-h-[2rem] asnp-w-[8rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
 					onClick={ () => {
@@ -266,7 +269,7 @@ const Schedule = () => {
 								__( '%s Or Group', 'asnp-easy-whatsapp' ),
 								'+'
 						  )
-						: __( 'Schedule', 'asnp-easy-whatsapp' ) }
+						: __( 'Add Schedule', 'asnp-easy-whatsapp' ) }
 				</button>
 			</div>
 		</div>
