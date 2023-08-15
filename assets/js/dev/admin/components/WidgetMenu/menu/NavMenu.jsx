@@ -13,7 +13,7 @@ const NavMenu = ( props ) => {
 	};
 
 	return (
-		<div className="asnp-bg-white asnp-pl-[1rem] asnp-pr-[1rem] asnp-pb-[1rem]">
+		<div className="asnp-bg-white asnp-p-4">
 			<nav className="asnp-flex asnp-flex-col sm:asnp-flex-row ">
 				<a
 					href="#"

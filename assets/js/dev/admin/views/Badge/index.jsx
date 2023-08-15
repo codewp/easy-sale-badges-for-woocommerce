@@ -89,11 +89,6 @@ export default function Badge() {
 	const params = useParams();
 	const [ badge, setBadge ] = useState( { ...defaultBadge } );
 	const { getItem, dispatch } = useContext( BadgesContext );
-	const [ template, setTemplate ] = useState(
-		params.id && ! isNaN( params.id * 1 ) && 0 < params.id * 1
-			? false
-			: true
-	);
 	const { setLoading, setMessage, settings } = useContext( AppContext );
 	const [ badgeImageFile, setBadgeImageFile ] = useState( null );
 
@@ -352,7 +347,6 @@ export default function Badge() {
 			value={ {
 				badge,
 				updateBadge,
-				setTemplate,
 				addGroup,
 				deleteGroup,
 				addItem,
@@ -428,7 +422,6 @@ export default function Badge() {
 								badge={ badge }
 								onChange={ updateBadge }
 								updateAvailability={ updateAvailability }
-								setTemplate={ setTemplate }
 							/>
 						</div>
 						<div className="asnp-w-full asnp-bg-gray-200 asnp-flex">
