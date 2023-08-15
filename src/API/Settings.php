@@ -60,16 +60,10 @@ class Settings extends BaseController {
 			}
 
 			switch ( $key ) {
-				case 'woocommerceEnabled':
-				case 'openNewTab':
-				case 'poweredBy':
-					$data[ $key ] = 'true' === $value || true === $value ? 'true' : 'false';
-					break;
-
-				case 'urlDesktop':
-				case 'urlMobile':
-				case 'woocommerceBtnPosition':
-				case 'woocommerceCssSelector':
+				case 'singlePosition':
+				case 'loopPosition':
+				case 'singleCustomHooks':
+				case 'loopCustomHooks':
 				case 'licenseKey':
 					$data[ $key ] = sanitize_text_field( $value );
 					break;
