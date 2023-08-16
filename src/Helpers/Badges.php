@@ -300,17 +300,23 @@ function output_css_badge( $badge ) {
 	}
 
 
+	$dynamic_styles = apply_filters( 'asnp_wesb_css_badge_styles', $dynamic_styles, $badge );
+
 	add_custom_style( $dynamic_styles );
 
 	// Css Badge
-	echo '<div class="asnp-esb-productBadge">';
-	echo '<div class="asnp-esb-badge">';
-	echo '<span class="asnp-esb-inner-span2"></span>';
-	echo '<div class="asnp-esb-inner-span1">';
-	echo '<div style="transform: ' . esc_attr( $horizAndvert ) . '">' . esc_html__( $badge->badgeLabel, 'asnp-easy-whatsapp' ) . '</div>';
-	echo '</div>';
-	echo '</div>';
-	echo '</div>';
+	$output = '<div class="asnp-esb-productBadge">';
+	$output .= '<div class="asnp-esb-badge">';
+	$output .= '<span class="asnp-esb-inner-span2"></span>';
+	$output .= '<div class="asnp-esb-inner-span1">';
+	$output .= '<div style="transform: ' . esc_attr( $horizAndvert ) . '">' . esc_html__( $badge->badgeLabel, 'asnp-easy-whatsapp' ) . '</div>';
+	$output .= '</div>';
+	$output .= '</div>';
+	$output .= '</div>';
+
+	$output = apply_filters( 'asnp_wesb_css_badge', $output, $badge );
+
+	echo $badge;
 }
 
 function output_timer_badge( $badge ) {
