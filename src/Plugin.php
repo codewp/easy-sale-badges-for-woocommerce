@@ -162,6 +162,17 @@ final class Plugin {
 				return new Assets();
 			}
 		);
+
+		if ( $this->is_request( 'frontend' ) ) {
+			$this->container()->register(
+				Badges::class,
+				function( Container $container ) {
+					$model = $container->get( BadgeModel::class );
+					$items = $model->get_items( [ 'number' => -1, 'status' => 1 ] );
+					return new Badges( $items );
+				}
+			);
+		}
 	}
 
 	/**

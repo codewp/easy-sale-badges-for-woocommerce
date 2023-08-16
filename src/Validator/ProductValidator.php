@@ -1,4 +1,5 @@
 <?php
+
 namespace AsanaPlugins\WhatsApp\Validator;
 
 defined( 'ABSPATH' ) || exit;

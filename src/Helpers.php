@@ -122,4 +122,11 @@ function display_sale_badges( $product ) {
 	if ( ! $product ) {
 		return;
 	}
+
+	$badges = get_plugin()->container()->get( Badges::class );
+	if ( ! $badges ) {
+		return;
+	}
+
+	return $badges->display_badges( $product );
 }

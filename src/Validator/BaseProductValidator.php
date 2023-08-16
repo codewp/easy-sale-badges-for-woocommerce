@@ -5,21 +5,29 @@ defined( 'ABSPATH' ) || exit;
 
 abstract class BaseProductValidator {
 
-	public static function valid_product( $whatsapp, $product ) {
-		if ( ! $whatsapp || empty( $whatsapp->woocommerceItems ) ) {
+	public static function valid_product( $badge, $product ) {
+		if ( ! $badge || empty( $badge->items ) ) {
 			return false;
 		}
 
-		$match_mode = isset( $whatsapp->woocommmerceItemsConditions ) && in_array( $whatsapp->woocommmerceItemsConditions, [ 'any', 'all' ], true ) ? $whatsapp->woocommmerceItemsConditions : 'any';
-		foreach ( $whatsapp->woocommerceItems as $item ) {
-			if ( 'any' === $match_mode && static::is_valid( $item, $product ) ) {
+		foreach ( $badge->items as $item ) {
+			if ( empty( $group ) ) {
+				continue;
+			}
+
+			$valid = true;
+			foreach ( $group as $item ) {
+				if ( ! static::is_valid( $item, $product ) ) {
+					$valid = false;
+					break;
+				}
+			}
+			if ( $valid ) {
 				return true;
-			} elseif ( 'all' === $match_mode && ! static::is_valid( $item, $product ) ) {
-				return false;
 			}
 		}
 
-		return 'all' === $match_mode;
+		return false;
 	}
 
 	public static function is_valid( $item, $product ) {
@@ -58,7 +66,78 @@ abstract class BaseProductValidator {
 			return false;
 		}
 
-		return in_array( $product, static::get_items( $item['items'] ) );
+		$items = static::get_items( $item['items'] );
+		if ( empty( $items ) ) {
+			return false;
+		}
+
+		if ( isset( $item->selectType ) && 'excluded' === $item->selectType ) {
+			return ! in_array( $product, $items );
+		}
+
+		return in_array( $product, $items );
+	}
+
+	public static function is_valid_categories( $item, $product ) {
+		if ( empty( $item ) || ! $product ) {
+			return false;
+		}
+
+		if ( empty( $item['items'] ) ) {
+			return false;
+		}
+
+		$product = is_numeric( $product ) ? $product : $product->get_id();
+		if ( 0 >= $product ) {
+			return false;
+		}
+
+		$categories = self::get_items( $item['items'] );
+		if ( empty( $categories ) ) {
+			return false;
+		}
+
+		$product_categories = wc_get_product_cat_ids( $product );
+		if ( empty( $product_categories ) ) {
+			return false;
+		}
+
+		if ( isset( $item->selectType ) && 'excluded' === $item->selectType ) {
+			return empty( array_intersect( $product_categories, $categories ) );
+		}
+
+		return ! empty( array_intersect( $product_categories, $categories ) );
+	}
+
+	public static function is_valid_tags( $item, $product ) {
+		if ( empty( $item ) || ! $product ) {
+			return false;
+		}
+
+		if ( empty( $item['items'] ) ) {
+			return false;
+		}
+
+		$product = is_numeric( $product ) ? $product : $product->get_id();
+		if ( 0 >= $product ) {
+			return false;
+		}
+
+		$tags = self::get_items( $item['items'] );
+		if ( empty( $tags ) ) {
+			return true;
+		}
+
+		$product_tags = wc_get_product_term_ids( $product, 'product_tag' );
+		if ( empty( $product_tags ) ) {
+			return false;
+		}
+
+		if ( isset( $item->selectType ) && 'excluded' === $item->selectType ) {
+			return empty( array_intersect( $product_tags, $tags ) );
+		}
+
+		return ! empty( array_intersect( $product_tags, $tags ) );
 	}
 
 	protected static function get_items( $items ) {
@@ -66,7 +145,15 @@ abstract class BaseProductValidator {
 			return [];
 		}
 
-		return array_filter( array_map( 'absint', explode( ',', $items ) ) );
+		$ids = [];
+		foreach ( $items as $item ) {
+			if ( ! empty( $item->value ) && 0 < absint( $item->value ) ) {
+				$ids[] = absint( $item->value );
+			} elseif ( is_numeric( $item ) && 0 < absint( $item ) ) {
+				$ids[] = absint( $item );
+			}
+		}
+		return $ids;
 	}
 
 }
