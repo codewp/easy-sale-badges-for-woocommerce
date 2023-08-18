@@ -94,11 +94,13 @@ function output_css_badge( $badge ) {
 	}
 
 	$horizAndvert = '';
-	if (isset($badge->horizontal) && $badge->horizontal == 1 && isset($badge->vertical) && $badge->vertical == 1) {
-		$horizAndvert = 'scaleX(-1) scaleY(-1)';
-	} elseif (isset($badge->horizontal) && $badge->horizontal == 1 && isset($badge->vertical) && $badge->vertical == 0) {
-		$horizAndvert = 'scaleX(-1)';
-	} elseif (isset($badge->horizontal) && $badge->horizontal == 0 && isset($badge->vertical) && $badge->vertical == 1) {
+	if ( ! empty( $badge->horizontal ) ) {
+		if ( ! empty( $badge->vertical ) ) {
+			$horizAndvert = 'scaleX(-1) scaleY(-1)';
+		} else {
+			$horizAndvert = 'scaleX(-1)';
+		}
+	} elseif ( ! empty( $badge->vertical ) ) {
 		$horizAndvert = 'scaleY(-1)';
 	}
 
@@ -316,7 +318,7 @@ function output_css_badge( $badge ) {
 
 	$output = apply_filters( 'asnp_wesb_css_badge', $output, $badge );
 
-	echo $badge;
+	echo $output;
 }
 
 function output_timer_badge( $badge ) {
