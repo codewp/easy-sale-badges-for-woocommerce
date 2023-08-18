@@ -10,7 +10,7 @@ abstract class BaseProductValidator {
 			return false;
 		}
 
-		foreach ( $badge->items as $item ) {
+		foreach ( $badge->items as $group ) {
 			if ( empty( $group ) ) {
 				continue;
 			}
@@ -147,7 +147,9 @@ abstract class BaseProductValidator {
 
 		$ids = [];
 		foreach ( $items as $item ) {
-			if ( ! empty( $item->value ) && 0 < absint( $item->value ) ) {
+			if ( is_array( $item ) && ! empty( $item['value'] ) && 0 < absint( $item['value'] ) ) {
+				$ids[] = absint( $item['value'] );
+			} elseif ( is_object( $item ) && ! empty( $item->value ) && 0 < absint( $item->value ) ) {
 				$ids[] = absint( $item->value );
 			} elseif ( is_numeric( $item ) && 0 < absint( $item ) ) {
 				$ids[] = absint( $item );
