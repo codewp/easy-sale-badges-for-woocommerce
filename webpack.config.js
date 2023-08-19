@@ -1,6 +1,7 @@
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 const TerserPlugin = require( 'terser-webpack-plugin' );
 const CssMinimizerPlugin = require( 'css-minimizer-webpack-plugin' );
+const RemoveFilesPlugin = require( './bin/remove-files-webpack-plugin' );
 const path = require( 'path' );
 const { get } = require( 'lodash' );
 const postcssConfig = require( './postcss.config' );
@@ -82,30 +83,17 @@ let adminConfig = {
 	],
 };
 
-let frontConfig = {
+let stylingConfig = {
 	mode: NODE_ENV,
 	entry: {
-		whatsapp: './assets/js/dev/whatsapp/index.jsx',
+		badge: './assets/css/scss/badge/style.scss',
 	},
 	output: {
-		filename: './assets/js/[name]/index.js',
 		path: __dirname,
-		library: [ '[modulename]' ],
-		libraryTarget: 'this',
+		filename: `[name]-style.js`,
 	},
-	externals,
 	module: {
 		rules: [
-			{
-				parser: {
-					amd: false,
-				},
-			},
-			{
-				test: /\.(js|jsx)$/,
-				exclude: /node_modules/,
-				loader: 'babel-loader',
-			},
 			{ test: /\.md$/, use: 'raw-loader' },
 			{
 				test: /\.s?css$/,
@@ -124,14 +112,11 @@ let frontConfig = {
 			},
 		],
 	},
-	resolve: {
-		extensions: [ '*', '.js', '.jsx' ],
-		alias: aliases,
-	},
 	plugins: [
 		new MiniCssExtractPlugin( {
 			filename: './assets/css/[name]/style.css',
 		} ),
+		new RemoveFilesPlugin( `./*style.js` ),
 	],
 };
 
@@ -141,12 +126,18 @@ const productionConfig = {
 	},
 };
 
+const stylingProductionConfig = {
+	optimization: {
+		minimizer: [ new CssMinimizerPlugin() ],
+	},
+};
+
 if ( 'production' === NODE_ENV ) {
 	adminConfig = { ...adminConfig, ...productionConfig };
-	frontConfig = { ...frontConfig, ...productionConfig };
+	stylingConfig = { ...stylingConfig, ...stylingProductionConfig };
 } else {
 	adminConfig.devtool = process.env.SOURCEMAP || 'source-map';
-	frontConfig.devtool = process.env.SOURCEMAP || 'source-map';
+	stylingConfig.devtool = process.env.SOURCEMAP || 'source-map';
 }
 
-module.exports = [ adminConfig, frontConfig ];
+module.exports = [ adminConfig, stylingConfig ];

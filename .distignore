@@ -34,3 +34,4 @@ tailwind.config.js
 eslintrc.js
 stylelintrc.json
 /assets/js/dev/
+/assets/css/scss/
