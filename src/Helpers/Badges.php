@@ -128,13 +128,13 @@ function output_css_badge( $badge ) {
 	switch ( $badge->badgeStyles ) {
 		case 'badge1':
 			$dynamic_styles .= '.asnp-esb-productBadge {';
-			if ( isset( $badge->widthContBadge ) ) {
+			if ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $widthContBadge . ';';
 			}
-			if ( isset( $badge->heightContBadge ) ) {
+			if ( isset( $badge->heightBadge ) ) {
 				$dynamic_styles .= ' height: ' . $heightContBadge . ';';
 			}
-			if ( isset( $badge->insetProperty ) ) {
+			if ( isset( $badge->badgePositionTop ) ) {
 					$dynamic_styles .= ' inset: ' . $insetProperty . ';';
 			}
 			$dynamic_styles .= '}';
@@ -154,6 +154,9 @@ function output_css_badge( $badge ) {
 			}
 			if ( isset( $badge->badgePositionX ) && 'right' === $badge->badgePositionX ) {
 				$dynamic_styles .= ' right: 0px;';
+			}
+			if ( isset( $badge->textColor ) ) {
+				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
 			}
 			if ( isset( $badge->fontSizeText ) ) {
 				$dynamic_styles .= ' font-size: ' . $badge->fontSizeText . 'px;';
@@ -179,7 +182,7 @@ function output_css_badge( $badge ) {
 			if ( isset( $badge->zIndex ) ) {
 				$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
-
+			
 			$transform = '';
 			if ( isset( $badge->rotationX ) ) {
 				$transform .= ' rotateX(' . esc_html( $badge->rotationX ) . 'deg)';
