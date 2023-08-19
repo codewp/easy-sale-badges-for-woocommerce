@@ -85,7 +85,7 @@ class Hooks {
 	}
 
 	public static function loop_hooks() {
-		$loop_position = WCCS()->settings->get_setting( 'loop_sale_badge_position', 'before_shop_loop_item_thumbnail' );
+		$loop_position = get_plugin()->settings->get_setting( 'loop_sale_badge_position', 'before_shop_loop_item_thumbnail' );
 
 		if ( empty( $loop_position ) || 'none' === $loop_position ) {
 			return self::loop_custom_hooks();
