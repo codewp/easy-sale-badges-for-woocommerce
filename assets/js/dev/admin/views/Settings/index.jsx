@@ -111,6 +111,10 @@ export default function Settings() {
 						enabled={ settings.woocommerceEnabled }
 						btnPosition={ settings.woocommerceBtnPosition }
 						cssSelector={ settings.woocommerceCssSelector }
+						loopPosition={ settings.loopPosition }
+						singlePosition={ settings.singlePosition }
+						singleCustomHooks={ settings.singleCustomHooks }
+						loopCustomHooks={ settings.loopCustomHooks }
 					/>
 				) }
 				{ 'analytics' === activeMenu && <Analytics onSave={ save } /> }

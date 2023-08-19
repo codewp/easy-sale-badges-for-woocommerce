@@ -141,7 +141,7 @@ function output_css_badge( $badge ) {
 
 			$dynamic_styles .= '.asnp-esb-badge {';
 			if ( isset( $badge->badgeColor ) ) {
-				$dynamic_styles .= ' background-color: ' . $badge->badgeColor . 'px;';
+				$dynamic_styles .= ' background-color: ' . $badge->badgeColor . ';';
 			}
 			if ( isset( $badge->heightBadge ) ) {
 				$dynamic_styles .= ' height: ' . $badge->heightBadge . 'px;';
@@ -162,7 +162,7 @@ function output_css_badge( $badge ) {
 				$dynamic_styles .= ' line-height: ' . $badge->lineHeightText . 'px;';
 			}
 			if ( isset( $badge->opacity ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacity . 'px;';
+				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
 			}
 			if ( isset( $badge->topLeftRadius ) ) {
 				$dynamic_styles .= ' border-top-left-radius: ' . $badge->topLeftRadius . 'px;';
@@ -329,7 +329,6 @@ function output_css_badge( $badge ) {
 			if ( ! empty( $transform ) ) {
 				$dynamic_styles .= ' transform:' . $transform;
 			}
-
 			$dynamic_styles .= '}';
 			break;
 	}
