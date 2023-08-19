@@ -18,6 +18,14 @@ class Badges {
 		$this->badges = $badges;
 	}
 
+	public function get_badges() {
+		return $this->badges;
+	}
+
+	public function set_badges( array $badges ) {
+		$this->badges = $badges;
+	}
+
 	public function display_badges( $product ) {
 		$badges = $this->get_valid_badges( $product );
 		if ( empty( $badges ) ) {

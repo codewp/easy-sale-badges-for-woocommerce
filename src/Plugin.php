@@ -7,7 +7,6 @@ use AsanaPlugins\WhatsApp\Admin\Admin;
 use AsanaPlugins\WhatsApp\API\RestApi;
 use AsanaPlugins\WhatsApp\Models\BadgeModel;
 use AsanaPlugins\WhatsApp\ShortCode\BadgeShortCode;
-use AsanaPlugins\WhatsApp\WooCommerce\WooCommerceHooks;
 
 defined( 'ABSPATH' ) || exit;
 

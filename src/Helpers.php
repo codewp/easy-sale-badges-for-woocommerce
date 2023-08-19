@@ -130,3 +130,13 @@ function display_sale_badges( $product ) {
 
 	return $badges->display_badges( $product );
 }
+
+function has_active_sale_badges() {
+	$badges = get_plugin()->container()->get( Badges::class );
+	if ( ! $badges ) {
+		return false;
+	}
+
+	$all_badges = $badges->get_badges();
+	return ! empty( $all_badges );
+}
