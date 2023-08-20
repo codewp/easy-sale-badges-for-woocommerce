@@ -551,7 +551,6 @@ export default function BadgeCssandAdv( badge ) {
 			opacity: ${ badge.opacity };
 			top: 0px;
 			left: 0px;
-			color: white;
 			text-align: center;
 			border-radius: 3px 3px ${ badge.widthBadge / 2.38 }px ${
 				badge.widthBadge / 2.38
