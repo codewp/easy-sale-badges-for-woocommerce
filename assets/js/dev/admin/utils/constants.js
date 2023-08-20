@@ -489,7 +489,6 @@ export default function BadgeCssandAdv( badge ) {
 			right:${ badge.badgePositionX == 'right' ? '0px' : '' };
 			height: ${ badge.widthBadge }px;
 			width: ${ badge.widthBadge }px;		
-            color: #d1d2d8;
             position: absolute;
             z-index: 99;
             top: 0px;
@@ -516,7 +515,6 @@ export default function BadgeCssandAdv( badge ) {
 			opacity: ${ badge.opacity };
 			top: 0px;
 			left: 0px;
-			color: white;
 			transform: translate3d(0, 0, 0);
 			border-top-right-radius: 3px;
 			border-top-left-radius: 3px;
