@@ -195,7 +195,7 @@ class Hooks {
 	}
 
 	public static function display_sale_badge() {
-		global $product;
+		$product = get_current_product();
 		if ( ! $product ) {
 			return;
 		}

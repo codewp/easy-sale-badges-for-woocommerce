@@ -140,3 +140,27 @@ function has_active_sale_badges() {
 	$all_badges = $badges->get_badges();
 	return ! empty( $all_badges );
 }
+
+function get_current_product() {
+	global $product;
+
+	if ( $product && is_a( $product, 'WC_Product' ) ) {
+		return $product;
+	}
+
+	global $post;
+	if ( ! $post ) {
+		return false;
+	}
+
+	if ( is_a( $post, 'WC_Product' ) ) {
+		return $post;
+	}
+
+	$woo_product = wc_get_product( $post->ID );
+	if ( $woo_product && is_a( $woo_product, 'WC_Product' ) ) {
+		return $woo_product;
+	}
+
+	return false;
+}
