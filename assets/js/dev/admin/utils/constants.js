@@ -464,7 +464,6 @@ export default function BadgeCssandAdv( badge ) {
 		case 'badge7':
 			badgeIcon = `
 			background-color: ${ badge.badgeColor };
-			color: #d1d2d8;
 			position: absolute;
 			z-index: 99;
 			top: 0px;
