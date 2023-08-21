@@ -17,7 +17,7 @@ function output_badges( $badges ) {
 }
 
 function output_badge( $badge ) {
-	if ( ! empty( $badge->badgeStyles ) ) {
+	if ( ! empty( $badge->badgeStyles ) && isset( $badge->imgbadge ) && isset( $badge->imgbadgeAdv ) && isset( $badge->useTimerBadge ) && $badge->imgbadge == 0 && $badge->imgbadgeAdv == 0 && $badge->useTimerBadge == 0   ) {
 		return output_css_badge( $badge );
 	} elseif ( isset( $badge->imgbadge ) && $badge->imgbadge == 1 ) {
 		return output_image_badge( $badge );
@@ -1461,10 +1461,10 @@ function output_image_badge( $badge ) {
 			$dynamic_styles .= ' position: absolute;';
 
 			if ( isset( $badge->opacityImg ) ) {
-			$dynamic_styles .= ' opacity: ' . $badge->opacityImg . 'px;';
+			$dynamic_styles .= ' opacity: ' . $badge->opacityImg . ';';
 			}
 			if ( isset( $badge->zIndexImg ) ) {
-			$dynamic_styles .= ' z-index: ' . $badge->zIndexImg . 'px;';
+			$dynamic_styles .= ' z-index: ' . $badge->zIndexImg . ';';
 			}
 
 			$transform = '';

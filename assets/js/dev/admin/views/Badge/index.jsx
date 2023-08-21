@@ -57,7 +57,7 @@ const defaultBadge = {
 	badgeImage: '',
 	imgbadge: 0,
 	widthBadgeImg: '90',
-	zIndexImg: '',
+	zIndexImg: '9999',
 	opacityImg: '1',
 	rotationXImg: '0',
 	rotationYImg: '0',
