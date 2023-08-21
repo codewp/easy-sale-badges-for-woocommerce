@@ -160,7 +160,12 @@ const Timer = ( props ) => {
 					<div className="asnp-w-[25rem] asnp-text-lg asnp-font-semibold">
 						{ __( 'Timer Styles', 'asnp-easy-whatsapp' ) }
 					</div>
-					<div className="asnp-relative asnp-mb-3 asnp-mt-3 asnp-h-[20rem] asnp-pb-2 asnp-flex asnp-flex-col asnp-border-[1px] asnp-border-gray-300 asnp-rounded-2xl">
+					<div className="asnp-relative asnp-mb-3 asnp-mt-3 asnp-h-[30rem] asnp-flex asnp-flex-col asnp-border-2 asnp-rounded-md asnp-pr-1 asnp-pb-4 asnp-scrollBarImageB">
+						<div className="asnp-w-full asnp-ml-8 asnp-mt-6 asnp-mb-2 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
+							<label>
+								{ __( 'Horizontal', 'asnp-easy-whatsapp' ) }
+							</label>
+						</div>
 						<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-1">
 							<div
 								className={
@@ -223,6 +228,57 @@ const Timer = ( props ) => {
 									props.onChange( 'imgbadge', 0 );
 									props.onChange( 'imgbadgeAdv', 0 );
 									setSelected( 3 );
+								} }
+							>
+								<img
+									className="asnp-h-full asnp-w-full asnp-border-none"
+									src={ IMAGES_URL + 'badgeTimer1.png' }
+								/>
+							</div>
+							<div
+								className={
+									( selected === 4
+										? 'asnp-border-indigo-700'
+										: 'asnp-border-white' ) +
+									' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
+								}
+								onClick={ () => {
+									props.onChange( 'badgeStyles', '' );
+									props.onChange( 'badgeAdv', '' );
+									props.onChange( 'badgeTimer', 'timer4' );
+									props.onChange( 'useTimerBadge', 1 );
+									props.onChange( 'imgbadge', 0 );
+									props.onChange( 'imgbadgeAdv', 0 );
+									setSelected( 4 );
+								} }
+							>
+								<img
+									className="asnp-h-full asnp-w-full asnp-border-none"
+									src={ IMAGES_URL + 'badgeTimer1.png' }
+								/>
+							</div>
+						</div>
+						<div className="asnp-w-full asnp-ml-8 asnp-mt-6 asnp-mb-2 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
+							<label>
+								{ __( 'Vertical', 'asnp-easy-whatsapp' ) }
+							</label>
+						</div>
+						<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-1">
+							<div
+								className={
+									( selected === 5
+										? 'asnp-border-indigo-700'
+										: 'asnp-border-white' ) +
+									' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
+								}
+								onClick={ () => {
+									props.onChange( 'badgeStyles', '' );
+									props.onChange( 'badgeAdv', '' );
+									props.onChange( 'badgeTimer', 'timer5' );
+									props.onChange( 'useTimerBadge', 1 );
+									props.onChange( 'imgbadge', 0 );
+									props.onChange( 'imgbadgeAdv', 0 );
+									setSelected( 5 );
 								} }
 							>
 								<img
