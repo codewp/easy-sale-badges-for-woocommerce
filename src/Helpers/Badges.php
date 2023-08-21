@@ -1092,15 +1092,15 @@ function output_css_badge( $badge ) {
 
 		case 'badge12':
 			$dynamic_styles .= '.asnp-esb-productBadge {';
-				if ( isset( $badge->widthBadge ) ) {
+			if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
-				}
-				if ( isset( $badge->heightBadge ) ) {
+			}
+			if ( isset( $badge->heightBadge ) ) {
 					$dynamic_styles .= ' height: ' . $heightContBadge . ';';
-				}
-				if ( isset( $badge->badgePositionTop ) ) {
+			}
+			if ( isset( $badge->badgePositionTop ) ) {
 						$dynamic_styles .= ' inset: ' . $insetProperty . ';';
-				}
+			}
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-badge {';
@@ -1300,7 +1300,7 @@ function output_css_badge( $badge ) {
 		break;
 
 		default:
-		$dynamic_styles .= '.asnp-esb-productBadge {';
+			$dynamic_styles .= '.asnp-esb-productBadge {';
 			if ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $widthContBadge . ';';
 			}
@@ -1443,9 +1443,9 @@ function output_image_badge( $badge ) {
  	}
 
 
-		$dynamic_styles = '';
+			$dynamic_styles = '';
 
-		$dynamic_styles .= '.asnp-esb-productBadge {';
+			$dynamic_styles .= '.asnp-esb-productBadge {';
 			if ( isset( $badge->widthBadgeImg ) ) {
 			$dynamic_styles .= ' height: ' . $badge->widthBadgeImg . 'px;';
 			}
