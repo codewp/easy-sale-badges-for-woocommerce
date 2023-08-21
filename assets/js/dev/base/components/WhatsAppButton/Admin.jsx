@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { __ } from '@wordpress/i18n';
 import styled from 'styled-components';
 
@@ -37,6 +37,12 @@ const Admin = ( {
 	const SpanTwo = styled.div`
 		${ badgeIconTwo }
 	`;
+	const [ timer, setTimer ] = useState( {
+		days: 0,
+		hours: 0,
+		minutes: 0,
+		seconds: 0,
+	} );
 
 	let insetProperty = '';
 
@@ -91,6 +97,40 @@ const Admin = ( {
 		heightContBadge = `${ badge.heightBadge }px`;
 	}
 
+	useEffect( () => {
+		if ( badge.useTimerBadge == 1 ) {
+			const interval = setInterval( updateTimer, 1000 );
+			return () => clearInterval( interval );
+		}
+	}, [badge.selectedDateTo] );
+
+	const updateTimer = () => {
+		const toDate = new Date( badge.selectedDateTo );
+		const now = new Date();
+		const timeDifference = toDate - now;
+
+		if ( timeDifference > 0 ) {
+			const days = Math.floor( timeDifference / ( 1000 * 60 * 60 * 24 ) );
+			const hours = Math.floor(
+				( timeDifference % ( 1000 * 60 * 60 * 24 ) ) /
+					( 1000 * 60 * 60 )
+			);
+			const minutes = Math.floor(
+				( timeDifference % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 )
+			);
+			const seconds = Math.floor(
+				( timeDifference % ( 1000 * 60 ) ) / 1000
+			);
+
+			setTimer( {
+				days,
+				hours,
+				minutes,
+				seconds,
+			} );
+		}
+	};
+
 	return (
 		<div className="asnp-esb-wrapper">
 			<div className="asnp-esb-containerAd">
@@ -122,7 +162,9 @@ const Admin = ( {
 									>
 										<img
 											src={
-												IMAGES_URL + badge.badgeImage +'.png'
+												IMAGES_URL +
+												badge.badgeImage +
+												'.png'
 											}
 										/>
 									</span>
@@ -222,7 +264,7 @@ const Admin = ( {
 													lineHeight: `${ badge.lineHeightLabelTimer }px`,
 												} }
 											>
-												3
+												{ timer.days }
 											</Time>
 											<LabelTimer>
 												{ badge.labelDayTimer }
@@ -235,7 +277,7 @@ const Admin = ( {
 													lineHeight: `${ badge.lineHeightLabelTimer }px`,
 												} }
 											>
-												12
+												{ timer.hours }
 											</Time>
 											<LabelTimer>
 												{ badge.labelHoursTimer }
@@ -248,7 +290,7 @@ const Admin = ( {
 													lineHeight: `${ badge.lineHeightLabelTimer }px`,
 												} }
 											>
-												28
+												{ timer.minutes }
 											</Time>
 											<LabelTimer>
 												{ badge.labelMinTimer }
@@ -261,7 +303,7 @@ const Admin = ( {
 													lineHeight: `${ badge.lineHeightLabelTimer }px`,
 												} }
 											>
-												57
+												{ timer.seconds }
 											</Time>
 											<LabelTimer>
 												{ badge.labelSecTimer }
