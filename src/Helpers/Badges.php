@@ -1308,7 +1308,7 @@ function output_css_badge( $badge ) {
 				$dynamic_styles .= ' height: ' . $heightContBadge . ';';
 			}
 			if ( isset( $badge->badgePositionTop ) ) {
-					$dynamic_styles .= ' inset: ' . $insetProperty . ';';
+				$dynamic_styles .= ' inset: ' . $insetProperty . ';';
 			}
 			$dynamic_styles .= '}';
 
@@ -1408,6 +1408,97 @@ function output_image_badge( $badge ) {
 	if ( ! $badge ) {
 		return;
 	}
+
+	$insetProperty = '';
+	if ( ! empty( $badge->badgePositionX ) && ! empty( $badge->badgePositionY ) ) {
+		if ( 'top' === $badge->badgePositionY ) {
+			if ( 'left' === $badge->badgePositionX ) {
+				if ( isset( $badge->badgePositionTop ) && isset( $badge->badgePositionLeft ) ) {
+					$insetProperty = $badge->badgePositionTop . 'px auto auto ' . $badge->badgePositionLeft . 'px';
+				}
+			} elseif ( 'right' === $badge->badgePositionX ) {
+				if ( isset( $badge->badgePositionTop ) && isset( $badge->badgePositionRight ) ) {
+					$insetProperty = $badge->badgePositionTop . 'px ' . $badge->badgePositionRight . 'px auto auto';
+				}
+			} elseif ( 'center' === $badge->badgePositionX ) {
+				if ( isset( $badge->badgePositionTop ) ) {
+					$insetProperty = $badge->badgePositionTop . 'px auto auto 55px';
+				}
+			}
+		} elseif ( 'bottom' === $badge->badgePositionY ) {
+			if ( 'left' === $badge->badgePositionX ) {
+				if ( isset( $badge->badgePositionBottom ) && isset( $badge->badgePositionLeft ) ) {
+					$insetProperty = 'auto auto ' . $badge->badgePositionBottom . 'px ' . $badge->badgePositionLeft . 'px';
+				}
+			} elseif ( 'right' === $badge->badgePositionX ) {
+				if ( isset( $badge->badgePositionBottom ) && isset( $badge->badgePositionRight ) ) {
+					$insetProperty = 'auto ' . $badge->badgePositionRight . 'px ' . $badge->badgePositionBottom . 'px auto';
+				}
+			} elseif ( 'center' === $badge->badgePositionX ) {
+				if ( isset( $badge->badgePositionBottom ) ) {
+					$insetProperty = 'auto auto ' . $badge->badgePositionBottom . 'px 55px';
+				}
+			}
+		}
+ 	}
+
+
+		$dynamic_styles = '';
+
+		$dynamic_styles .= '.asnp-esb-productBadge {';
+			if ( isset( $badge->widthBadgeImg ) ) {
+			$dynamic_styles .= ' height: ' . $badge->widthBadgeImg . 'px;';
+			}
+			if ( isset( $badge->widthBadgeImg ) ) {
+			$dynamic_styles .= ' width: ' . $badge->widthBadgeImg . 'px;';
+			}
+			if ( isset( $badge->badgePositionTop ) ) {
+			$dynamic_styles .= ' inset: ' . $insetProperty . ';';
+			}
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.asnp-esb-badgeImg {';
+			$dynamic_styles .= ' position: absolute;';
+
+			if ( isset( $badge->opacityImg ) ) {
+			$dynamic_styles .= ' opacity: ' . $badge->opacityImg . 'px;';
+			}
+			if ( isset( $badge->zIndexImg ) ) {
+			$dynamic_styles .= ' z-index: ' . $badge->zIndexImg . 'px;';
+			}
+
+			$transform = '';
+			if ( isset( $badge->rotationXImg ) ) {
+				$transform .= ' rotateX(' . esc_html( $badge->rotationXImg ) . 'deg)';
+			}
+			if ( isset( $badge->rotationYImg ) ) {
+				$transform .= ' rotateY(' . esc_html( $badge->rotationYImg ) . 'deg) ';
+			}
+			if ( isset( $badge->rotationZImg ) ) {
+				$transform .= ' rotateZ(' . esc_html( $badge->rotationZImg ) . 'deg);';
+			}
+			if ( ! empty( $transform ) ) {
+				$dynamic_styles .= ' transform:' . $transform;
+			}
+
+			$dynamic_styles .= '}';
+
+			$dynamic_styles = apply_filters( 'asnp_wesb_image_badge_styles', $dynamic_styles, $badge );
+
+			add_custom_style( $dynamic_styles );
+
+
+			// Image Badge
+			$output = '<div class="asnp-esb-productBadge">';
+			$output .= '<span class="asnp-esb-badgeImg">';
+			$output .= '<img />';
+			$output .= '</span>';
+			$output .= '</div>';
+
+			$output = apply_filters( 'asnp_wesb_image_badge', $output, $badge );
+
+			echo $output;
+
 }
 
 function output_image_adv_badge( $badge ) {
