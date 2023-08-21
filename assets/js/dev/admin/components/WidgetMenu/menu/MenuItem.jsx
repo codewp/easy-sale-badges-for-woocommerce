@@ -172,6 +172,8 @@ const MenuItem = ( props ) => {
 					labelHoursTimer={ props.badge.labelHoursTimer }
 					labelMinTimer={ props.badge.labelMinTimer }
 					labelSecTimer={ props.badge.labelSecTimer }
+					selectedDateFrom={ props.badge.selectedDateFrom }
+					selectedDateTo={ props.badge.selectedDateTo }
 				/>
 			) }
 		</div>

@@ -112,10 +112,7 @@ const Timer = ( props ) => {
 					<Toggle
 						value={ 1 == props.useTimerBadge }
 						onChange={ ( value ) =>
-							props.onChange(
-								'useTimerBadge',
-								value ? 1 : 0
-							)
+							props.onChange( 'useTimerBadge', value ? 1 : 0 )
 						}
 					/>
 				</label>
