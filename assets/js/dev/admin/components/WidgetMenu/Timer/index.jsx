@@ -288,7 +288,7 @@ const Timer = ( props ) => {
 							</div>
 							<div
 								className={
-									( selected === 4
+									( selected === 6
 										? 'asnp-border-indigo-700'
 										: 'asnp-border-white' ) +
 									' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
@@ -296,11 +296,11 @@ const Timer = ( props ) => {
 								onClick={ () => {
 									props.onChange( 'badgeStyles', '' );
 									props.onChange( 'badgeAdv', '' );
-									props.onChange( 'badgeTimer', 'timer4' );
+									props.onChange( 'badgeTimer', 'timer6' );
 									props.onChange( 'useTimerBadge', 1 );
 									props.onChange( 'imgbadge', 0 );
 									props.onChange( 'imgbadgeAdv', 0 );
-									setSelected( 4 );
+									setSelected( 6 );
 								} }
 							>
 								<img
