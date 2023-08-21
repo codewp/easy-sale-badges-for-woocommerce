@@ -17,14 +17,14 @@ function output_badges( $badges ) {
 }
 
 function output_badge( $badge ) {
-	if ( ! empty( $badge->badgeStyles ) && isset( $badge->imgbadge ) && isset( $badge->imgbadgeAdv ) && isset( $badge->useTimerBadge ) && $badge->imgbadge == 0 && $badge->imgbadgeAdv == 0 && $badge->useTimerBadge == 0   ) {
-		return output_css_badge( $badge );
-	} elseif ( isset( $badge->imgbadge ) && $badge->imgbadge == 1 ) {
+	if ( isset( $badge->imgbadge ) && $badge->imgbadge == 1 ) {
 		return output_image_badge( $badge );
 	} elseif ( isset( $badge->imgbadgeAdv ) && $badge->imgbadgeAdv == 1 ) {
 		return output_image_adv_badge( $badge );
 	} elseif ( isset( $badge->useTimerBadge ) && $badge->useTimerBadge == 1 ) {
 		return output_timer_badge( $badge );
+	} elseif ( ! empty( $badge->badgeStyles ) ) {
+		return output_css_badge( $badge );
 	}
 }
 
@@ -182,7 +182,7 @@ function output_css_badge( $badge ) {
 			if ( isset( $badge->zIndex ) ) {
 				$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
-			
+
 			$transform = '';
 			if ( isset( $badge->rotationX ) ) {
 				$transform .= ' rotateX(' . esc_html( $badge->rotationX ) . 'deg)';
@@ -659,7 +659,7 @@ function output_css_badge( $badge ) {
 					$dynamic_styles .= ' border-right: ' . ( $badge->badgePositionX == 'right' ? '' . $badge->widthBadge .'px solid'. $badge->badgeColor . '' : 'none' ) . ';';
 					$dynamic_styles .= ' border-left: ' . ( $badge->badgePositionX == 'right' ? '' : '' . $badge->widthBadge .'px solid'. $badge->badgeColor . '' ) . ';';
 				}
-	
+
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' border-bottom: ' . $badge->widthBadge . 'px solid transparent;';
 				}
@@ -1223,7 +1223,7 @@ function output_css_badge( $badge ) {
 			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' top: 0px;';
 			$dynamic_styles .= ' border-radius: 3px;';
-		
+
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background: ' . $badge->badgeColor . ';';
 			}
@@ -1489,7 +1489,7 @@ function output_image_badge( $badge ) {
 
 			$image = '';
 			if ( ! empty( $badge->badgeImage ) ) {
-				$image = '<img src="' . esc_url( ASNP_EWHATSAPP_PLUGIN_URL ) . 'assets/images/' . esc_attr( $badge->badgeImage ) . '.png" />'; 
+				$image = '<img src="' . esc_url( ASNP_EWHATSAPP_PLUGIN_URL ) . 'assets/images/' . esc_attr( $badge->badgeImage ) . '.png" />';
 			}
 
 
