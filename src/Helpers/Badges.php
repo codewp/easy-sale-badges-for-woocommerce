@@ -1399,9 +1399,133 @@ function output_timer_badge( $badge ) {
 		return;
 	}
 
-	$dynamic_styles = '';
+	$insetProperty = '';
+	if ( ! empty( $badge->badgePositionX ) && ! empty( $badge->badgePositionY ) ) {
+		if ( 'top' === $badge->badgePositionY ) {
+			if ( 'left' === $badge->badgePositionX ) {
+				if ( isset( $badge->badgePositionTop ) && isset( $badge->badgePositionLeft ) ) {
+					$insetProperty = $badge->badgePositionTop . 'px auto auto ' . $badge->badgePositionLeft . 'px';
+				}
+			} elseif ( 'right' === $badge->badgePositionX ) {
+				if ( isset( $badge->badgePositionTop ) && isset( $badge->badgePositionRight ) ) {
+					$insetProperty = $badge->badgePositionTop . 'px ' . $badge->badgePositionRight . 'px auto auto';
+				}
+			} elseif ( 'center' === $badge->badgePositionX ) {
+				if ( isset( $badge->badgePositionTop ) ) {
+					$insetProperty = $badge->badgePositionTop . 'px auto auto 55px';
+				}
+			}
+		} elseif ( 'bottom' === $badge->badgePositionY ) {
+			if ( 'left' === $badge->badgePositionX ) {
+				if ( isset( $badge->badgePositionBottom ) && isset( $badge->badgePositionLeft ) ) {
+					$insetProperty = 'auto auto ' . $badge->badgePositionBottom . 'px ' . $badge->badgePositionLeft . 'px';
+				}
+			} elseif ( 'right' === $badge->badgePositionX ) {
+				if ( isset( $badge->badgePositionBottom ) && isset( $badge->badgePositionRight ) ) {
+					$insetProperty = 'auto ' . $badge->badgePositionRight . 'px ' . $badge->badgePositionBottom . 'px auto';
+				}
+			} elseif ( 'center' === $badge->badgePositionX ) {
+				if ( isset( $badge->badgePositionBottom ) ) {
+					$insetProperty = 'auto auto ' . $badge->badgePositionBottom . 'px 55px';
+				}
+			}
+		}
+ 	}
 
-	add_custom_style( $dynamic_styles );
+			$dynamic_styles = '';
+
+			switch ( $badge->badgeTimer ) {
+				case 'timer1':
+
+			$dynamic_styles .= '.asnp-esb-productBadge {';
+			if ( isset( $badge->zIndex ) ) {
+					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
+			}
+			if ( isset( $badge->opacity ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			}
+			if ( isset( $badge->badgePositionTop ) ) {
+			$dynamic_styles .= ' inset: ' . $insetProperty . ';';
+			}
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.asnp-esb-timer1 {';
+			$dynamic_styles .= ' display: inline-block;';
+			$dynamic_styles .= ' height: 60px;';
+			$dynamic_styles .= ' width: 270px;';
+			$dynamic_styles .= ' border-radius: 10px;';
+
+			if ( isset( $badge->bgColorTimer ) ) {
+				$dynamic_styles .= ' background-color: ' . $badge->bgColorTimer . ';';
+			}
+			if ( isset( $badge->textColor ) ) {
+				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
+			}
+			if ( isset( $badge->opacity ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			}
+		
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.asnp-esb-timer2 {';
+			$dynamic_styles .= ' display: inline-block;';
+			$dynamic_styles .= ' padding: 6px 20px;';
+			$dynamic_styles .= ' width: 66px;';		
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.asnp-esb-timer3 {';
+			$dynamic_styles .= ' display: block;';
+			$dynamic_styles .= ' font-weight: 700;';
+			$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';		
+			
+			if ( isset( $badge->fontSizeLabelTimer ) ) {
+				$dynamic_styles .= ' font-size: ' . $badge->fontSizeLabelTimer . 'px;';
+			}
+			if ( isset( $badge->lineHeightLabelTimer ) ) {
+				$dynamic_styles .= ' line-height: ' . $badge->lineHeightLabelTimer . 'px;';
+			}
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.asnp-esb-timer4 {';
+			$dynamic_styles .= ' font-weight: 400;';
+			$dynamic_styles .= ' font-size: 10px;';
+			$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';		
+			$dynamic_styles .= '}';
+
+			break;
+			
+			}
+
+
+			$dynamic_styles = apply_filters( 'asnp_wesb_timer_badge_styles', $dynamic_styles, $badge );
+
+			add_custom_style( $dynamic_styles );
+
+			// Timer Badge
+			$output = '<div class="asnp-esb-productBadge">';
+			$output .= '<div class="asnp-esb-timer1">';
+			$output .= '<div class="asnp-esb-timer2">';
+			$output .= '<div class="asnp-esb-timer3">3</div>';
+			$output .= '<div class="asnp-esb-timer4">' . esc_html__( $badge->labelDayTimer, 'asnp-easy-whatsapp' ) . '</div>';
+			$output .= '</div>';
+			$output .= '<div class="asnp-esb-timer2">';
+			$output .= '<div class="asnp-esb-timer3">15</div>';
+			$output .= '<div class="asnp-esb-timer4">' . esc_html__( $badge->labelHoursTimer, 'asnp-easy-whatsapp' ) . '</div>';
+			$output .= '</div>';
+			$output .= '<div class="asnp-esb-timer2">';
+			$output .= '<div class="asnp-esb-timer3">20</div>';
+			$output .= '<div class="asnp-esb-timer4">' . esc_html__( $badge->labelMinTimer, 'asnp-easy-whatsapp' ) . '</div>';
+			$output .= '</div>';
+			$output .= '<div class="asnp-esb-timer2">';
+			$output .= '<div class="asnp-esb-timer3">15</div>';
+			$output .= '<div class="asnp-esb-timer4">' . esc_html__( $badge->labelSecTimer, 'asnp-easy-whatsapp' ) . '</div>';
+			$output .= '</div>';
+			$output .= '</div>';
+			$output .= '</div>';
+
+			$output = apply_filters( 'asnp_wesb_timer_badge', $output, $badge );
+
+			echo $output;
 }
 
 function output_image_badge( $badge ) {
