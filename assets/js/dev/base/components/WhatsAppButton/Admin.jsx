@@ -120,7 +120,11 @@ const Admin = ( {
 											transform: `rotateX(${ badge.rotationXImg }deg) rotateY(${ badge.rotationYImg }deg) rotateZ(${ badge.rotationZImg }deg)`,
 										} }
 									>
-										<img src={ IMAGES_URL + icon } />
+										<img
+											src={
+												IMAGES_URL + badge.badgeImage +'.png'
+											}
+										/>
 									</span>
 								</div>
 							) }

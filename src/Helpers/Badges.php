@@ -1487,11 +1487,16 @@ function output_image_badge( $badge ) {
 
 			add_custom_style( $dynamic_styles );
 
+			$image = '';
+			if ( ! empty( $badge->badgeImage ) ) {
+				$image = '<img src="' . esc_url( ASNP_EWHATSAPP_PLUGIN_URL ) . 'assets/images/' . esc_attr( $badge->badgeImage ) . '.png" />'; 
+			}
+
 
 			// Image Badge
 			$output = '<div class="asnp-esb-productBadge">';
 			$output .= '<span class="asnp-esb-badgeImg">';
-			$output .= '<img />';
+			$output .= $image;
 			$output .= '</span>';
 			$output .= '</div>';
 
