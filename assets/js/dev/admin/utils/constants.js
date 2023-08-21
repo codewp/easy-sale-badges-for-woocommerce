@@ -1319,6 +1319,33 @@ export default function BadgeCssandAdv( badge ) {
 			line-height: 11px;
 			text-shadow: 0px 2px 1px rgba(0,0,0,0.15);`;
 			break;
+			case 'timer3':
+			badgeTimerDiv = `
+			display: grid;
+			color: ${ badge.textColor };
+            height: 270px;
+			width: 60px;
+			opacity: ${ badge.opacity };
+			background-color: ${ badge.bgColorTimer };
+			border-radius: 10px;
+			`;
+			badgeTimerCont = `
+			display: inline-block;
+			padding: 6px 20px;
+			width: 66px;
+			`;
+			TimerDate = `
+			display: block;
+			font-weight: 700;
+			text-shadow: 0px 2px 1px rgba(0,0,0,0.15);
+			`;
+			Label = `  
+			display: block;
+			font-weight: 400;
+			font-size: 10px;
+			line-height: 11px;
+			text-shadow: 0px 2px 1px rgba(0,0,0,0.15);`;
+			break;
 		default:
 			badgeTimerDiv = '';
 			badgeTimerCont = '';

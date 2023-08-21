@@ -207,6 +207,52 @@ const Timer = ( props ) => {
 								/>
 							</div>
 						</div>
+						<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-1">
+							<div
+								className={
+									( selected === 3
+										? 'asnp-border-indigo-700'
+										: 'asnp-border-white' ) +
+									' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
+								}
+								onClick={ () => {
+									props.onChange( 'badgeStyles', '' );
+									props.onChange( 'badgeAdv', '' );
+									props.onChange( 'badgeTimer', 'timer3' );
+									props.onChange( 'useTimerBadge', 1 );
+									props.onChange( 'imgbadge', 0 );
+									props.onChange( 'imgbadgeAdv', 0 );
+									setSelected( 3 );
+								} }
+							>
+								<img
+									className="asnp-h-full asnp-w-full asnp-border-none"
+									src={ IMAGES_URL + 'badgeTimer1.png' }
+								/>
+							</div>
+							<div
+								className={
+									( selected === 4
+										? 'asnp-border-indigo-700'
+										: 'asnp-border-white' ) +
+									' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
+								}
+								onClick={ () => {
+									props.onChange( 'badgeStyles', '' );
+									props.onChange( 'badgeAdv', '' );
+									props.onChange( 'badgeTimer', 'timer4' );
+									props.onChange( 'useTimerBadge', 1 );
+									props.onChange( 'imgbadge', 0 );
+									props.onChange( 'imgbadgeAdv', 0 );
+									setSelected( 4 );
+								} }
+							>
+								<img
+									className="asnp-h-full asnp-w-full asnp-border-none"
+									src={ IMAGES_URL + 'badgeTimer1.png' }
+								/>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
