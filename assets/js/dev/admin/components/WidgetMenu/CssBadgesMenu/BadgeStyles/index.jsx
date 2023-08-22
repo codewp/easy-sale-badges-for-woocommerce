@@ -262,7 +262,7 @@ const BadgeStyles = ( props ) => {
 								( props.badgeStyles === 'badge13'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-white' ) +
-								' asnp-py-1 asnp-px-5 asnp-containerBadgeStyle hover:asnp-border-indigo-700'
+								' asnp-py-1 asnp-px-8 asnp-containerBadgeStyle hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge13' );

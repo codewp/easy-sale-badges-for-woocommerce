@@ -8,7 +8,6 @@ const Admin = ( {
 	badgeIcon,
 	badgeIconOne,
 	badgeIconTwo,
-	icon,
 	horizAndvert,
 	bdgeAdvanced,
 	badgeTimerDiv,

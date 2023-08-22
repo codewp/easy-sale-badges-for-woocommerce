@@ -4,7 +4,7 @@ import Tippy from '@tippyjs/react';
 import { TwitterPicker, ChromePicker } from 'react-color';
 import { PlusIcon } from '@heroicons/react/solid';
 
-const AdvancedOptions = (props) => {
+const AdvancedOptions = ( props ) => {
 	const [ selectedMainBadgeColor, setSelectedMainBadgeColor ] = useState(
 		props.mainBg
 	);
@@ -64,10 +64,7 @@ const AdvancedOptions = (props) => {
 										setSelectedMainBadgeColor( color.hex )
 									}
 									onChange={ ( color ) => {
-										props.onChange(
-											'mainBg',
-											color.hex
-										);
+										props.onChange( 'mainBg', color.hex );
 									} }
 									colors={ colors }
 								/>
@@ -136,10 +133,7 @@ const AdvancedOptions = (props) => {
 										setSelectedSecondBadgeColor( color.hex )
 									}
 									onChange={ ( color ) => {
-										props.onChange(
-											'secondBg',
-											color.hex
-										);
+										props.onChange( 'secondBg', color.hex );
 									} }
 									colors={ colors }
 								/>
@@ -150,7 +144,9 @@ const AdvancedOptions = (props) => {
 									content={
 										<div>
 											<ChromePicker
-												color={ selectedSecondBadgeColor }
+												color={
+													selectedSecondBadgeColor
+												}
 												onChangeComplete={ ( color ) =>
 													setSelectedSecondBadgeColor(
 														color.hex
@@ -210,7 +206,10 @@ const AdvancedOptions = (props) => {
 								className="asnp-text-field"
 								value={ props.zIndexAdv }
 								onChange={ ( e ) =>
-									props.onChange( 'zIndexAdv', e.target.value )
+									props.onChange(
+										'zIndexAdv',
+										e.target.value
+									)
 								}
 							/>
 						</div>
