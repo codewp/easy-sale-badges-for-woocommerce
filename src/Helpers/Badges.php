@@ -1447,7 +1447,7 @@ function output_timer_badge( $badge ) {
 			switch ( $badge->badgeTimer ) {
 			case 'timer1':
 
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$dynamic_styles .= '.asnp-esb-productBadgeTimer {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
@@ -1503,7 +1503,7 @@ function output_timer_badge( $badge ) {
 			break;
 			
 			case 'timer2':
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$dynamic_styles .= '.asnp-esb-productBadgeTimer {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
@@ -1564,7 +1564,7 @@ function output_timer_badge( $badge ) {
 			break;
 
 			case 'timer3':
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$dynamic_styles .= '.asnp-esb-productBadgeTimer {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
@@ -1624,7 +1624,7 @@ function output_timer_badge( $badge ) {
 			break;
 
 			case 'timer4':
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$dynamic_styles .= '.asnp-esb-productBadgeTimer {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
@@ -1683,7 +1683,7 @@ function output_timer_badge( $badge ) {
 
 			break;
 			case 'timer5':
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$dynamic_styles .= '.asnp-esb-productBadgeTimer {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
@@ -1741,7 +1741,7 @@ function output_timer_badge( $badge ) {
 			break;
 
 			case 'timer6':
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$dynamic_styles .= '.asnp-esb-productBadgeTimer {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
@@ -1799,7 +1799,7 @@ function output_timer_badge( $badge ) {
 
 			break;
 			case 'timer7':
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$dynamic_styles .= '.asnp-esb-productBadgeTimer {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
@@ -1858,7 +1858,7 @@ function output_timer_badge( $badge ) {
 			break;
 
 			case 'timer8':
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$dynamic_styles .= '.asnp-esb-productBadgeTimer {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
@@ -1924,8 +1924,8 @@ function output_timer_badge( $badge ) {
 			add_custom_style( $dynamic_styles );
 
 			// Timer Badge
-			$output = '<div class="asnp-esb-productBadge">';
-			$output .= '<div class="asnp-esb-timer1">';
+			$output = '<div  class="asnp-esb-productBadgeTimer">';
+			$output .= '<div style="margin-bottom: 15px;" class="asnp-esb-timer1">';
 			$output .= '<div class="asnp-esb-timer2">';
 			$output .= '<div class="asnp-esb-timer3">3</div>';
 			$output .= '<div class="asnp-esb-timer4">' . esc_html__( $badge->labelDayTimer, 'asnp-easy-whatsapp' ) . '</div>';
