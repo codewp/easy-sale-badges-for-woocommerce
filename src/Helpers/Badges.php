@@ -1518,6 +1518,7 @@ function output_timer_badge( $badge ) {
 			$dynamic_styles .= '.asnp-esb-timer1 {';
 			$dynamic_styles .= ' display: grid;';
 			$dynamic_styles .= ' gap: 5px;';
+			$dynamic_styles .= ' width: 100px;';
 			$dynamic_styles .= ' grid-template-columns: 1fr 1fr 1fr 1fr;';
 
 
@@ -1579,6 +1580,7 @@ function output_timer_badge( $badge ) {
 			$dynamic_styles .= '.asnp-esb-timer1 {';
 			$dynamic_styles .= ' display: grid;';
 			$dynamic_styles .= ' gap: 5px;';
+			$dynamic_styles .= ' width: 100px;';
 			$dynamic_styles .= ' grid-template-columns: 1fr 1fr 1fr 1fr;';
 
 
@@ -1593,7 +1595,8 @@ function output_timer_badge( $badge ) {
 
 			$dynamic_styles .= '.asnp-esb-timer2 {';
 			$dynamic_styles .= ' display: inline-block;';
-			$dynamic_styles .= ' padding: 13px 26px;';
+			$dynamic_styles .= ' padding: 5px 20px;';
+			$dynamic_styles .= ' width: 70px;';
 			$dynamic_styles .= ' border-radius: 50%;';
 			
 			if ( isset( $badge->bgColorTimer ) ) {
@@ -1639,6 +1642,7 @@ function output_timer_badge( $badge ) {
 			$dynamic_styles .= '.asnp-esb-timer1 {';
 			$dynamic_styles .= ' display: grid;';
 			$dynamic_styles .= ' gap: 5px;';
+			$dynamic_styles .= ' width: 100px;';
 			$dynamic_styles .= ' grid-template-columns: 1fr 1fr 1fr 1fr;';
 
 
@@ -1653,7 +1657,8 @@ function output_timer_badge( $badge ) {
 
 			$dynamic_styles .= '.asnp-esb-timer2 {';
 			$dynamic_styles .= ' display: inline-block;';
-			$dynamic_styles .= ' padding: 13px 24px;';
+			$dynamic_styles .= ' padding: 5px 20px;';
+			$dynamic_styles .= ' width: 70px;';
 			$dynamic_styles .= ' border-radius: 50%;';
 			
 			if ( isset( $badge->bgColorTimer ) ) {
@@ -1698,6 +1703,7 @@ function output_timer_badge( $badge ) {
 			$dynamic_styles .= '.asnp-esb-timer1 {';
 			$dynamic_styles .= ' display: grid;';
 			$dynamic_styles .= ' border-radius: 10px;';
+			$dynamic_styles .= ' width: 66px;';
 
 			if ( isset( $badge->bgColorTimer ) ) {
 				$dynamic_styles .= ' background-color: ' . $badge->bgColorTimer . ';';
