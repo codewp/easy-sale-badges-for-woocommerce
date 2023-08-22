@@ -11,6 +11,7 @@ import './style.scss';
 
 const Timer = ( props ) => {
 	const [ selected, setSelected ] = useState( null );
+	const [ selectHorizVert, setSelectHorizVert ] = useState( 'horiz' );
 	const [ selectedTextColor, setSelectedTextColor ] = useState(
 		props.textColor
 	);
@@ -29,6 +30,9 @@ const Timer = ( props ) => {
 		if ( props.badgePositionY === 'top' ) {
 			setDisablePositionButtom( true );
 			setDisablePositionTop( false );
+		} else if ( props.badgePositionY === 'center' ) {
+			setDisablePositionTop( true );
+			setDisablePositionButtom( true );
 		} else {
 			setDisablePositionTop( true );
 			setDisablePositionButtom( false );
@@ -47,6 +51,19 @@ const Timer = ( props ) => {
 			setDisablePositionRight( false );
 		}
 	}, [ props.badgePositionX ] );
+
+	useEffect( () => {
+		if (
+			props.badgeTimer == 'timer1' ||
+			props.badgeTimer == 'timer2' ||
+			props.badgeTimer == 'timer3' ||
+			props.badgeTimer == 'timer4'
+		) {
+			setSelectHorizVert( 'horiz' );
+		} else {
+			setSelectHorizVert( 'vert' );
+		}
+	}, [ props.badgeTimer ] );
 
 	useEffect( () => {
 		if (
@@ -619,93 +636,212 @@ const Timer = ( props ) => {
 					<span className="asnp-field-title asnp-text-base asnp-font-semibold">
 						{ __( 'Label Position', 'asnp-easy-whatsapp' ) }
 					</span>
-					<div className="asnp-w-full asnp-flex asnp-rounded-md asnp-mt-3">
-						<div className="asnp-w-[10rem] asnp-flex" role="group">
-							<button
-								type="button"
-								className={
-									'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-l-lg asnp-border   asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-									( props.badgePositionY == 'top' &&
-										'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
-								}
-								onClick={ () => {
-									props.onChange( 'badgePositionY', 'top' );
-								} }
+					{ selectHorizVert === 'horiz' && (
+						<div className="asnp-w-full asnp-flex asnp-rounded-md asnp-mt-3">
+							<div
+								className="asnp-w-[10rem] asnp-flex"
+								role="group"
 							>
-								{ __( 'Top', 'asnp-easy-whatsapp' ) }
-							</button>
+								<button
+									type="button"
+									className={
+										'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-l-lg asnp-border   asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
+										( props.badgePositionY == 'top' &&
+											'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
+									}
+									onClick={ () => {
+										props.onChange(
+											'badgePositionY',
+											'top'
+										);
+									} }
+								>
+									{ __( 'Top', 'asnp-easy-whatsapp' ) }
+								</button>
 
-							<button
-								type="button"
-								className={
-									'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-									( props.badgePositionY == 'bottom' &&
-										'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
-								}
-								onClick={ () => {
-									props.onChange(
-										'badgePositionY',
-										'bottom'
-									);
-								} }
+								<button
+									type="button"
+									className={
+										'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
+										( props.badgePositionY == 'bottom' &&
+											'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
+									}
+									onClick={ () => {
+										props.onChange(
+											'badgePositionY',
+											'bottom'
+										);
+									} }
+								>
+									{ __( 'Bottom', 'asnp-easy-whatsapp' ) }
+								</button>
+							</div>
+							<div
+								className="asnp-w-[10rem] asnp-flex asnp-ml-24"
+								role="group"
 							>
-								{ __( 'Bottom', 'asnp-easy-whatsapp' ) }
-							</button>
+								<button
+									disabled={ disEleven }
+									type="button"
+									className={
+										disEleven
+											? 'asnp-opacity-20 asnp-cursor-not-allowed asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-l-lg asnp-border   asnp-border-gray-200'
+											: 'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-l-lg asnp-border   asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
+											  ( props.badgePositionX ==
+													'left' &&
+													'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
+									}
+									onClick={ () => {
+										props.onChange(
+											'badgePositionX',
+											'left'
+										);
+									} }
+								>
+									{ __( 'Left', 'asnp-easy-whatsapp' ) }
+								</button>
+								<button
+									type="button"
+									className={
+										'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
+										( props.badgePositionX == 'center' &&
+											'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
+									}
+									onClick={ () => {
+										props.onChange(
+											'badgePositionX',
+											'center'
+										);
+									} }
+								>
+									{ __( 'Center', 'asnp-easy-whatsapp' ) }
+								</button>
+								<button
+									disabled={ disEleven }
+									type="button"
+									className={
+										disEleven
+											? 'asnp-opacity-20 asnp-cursor-not-allowed asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200'
+											: 'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
+											  ( props.badgePositionX ==
+													'right' &&
+													'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
+									}
+									onClick={ () => {
+										props.onChange(
+											'badgePositionX',
+											'right'
+										);
+									} }
+								>
+									{ __( 'Right', 'asnp-easy-whatsapp' ) }
+								</button>
+							</div>
 						</div>
-						<div
-							className="asnp-w-[10rem] asnp-flex asnp-ml-24"
-							role="group"
-						>
-							<button
-								disabled={ disEleven }
-								type="button"
-								className={
-									disEleven
-										? 'asnp-opacity-20 asnp-cursor-not-allowed asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-l-lg asnp-border   asnp-border-gray-200'
-										: 'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-l-lg asnp-border   asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-										  ( props.badgePositionX == 'left' &&
-												'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
-								}
-								onClick={ () => {
-									props.onChange( 'badgePositionX', 'left' );
-								} }
+					) }
+					{ selectHorizVert === 'vert' && (
+						<div className="asnp-w-full asnp-flex asnp-rounded-md asnp-mt-3">
+							<div
+								className="asnp-w-[10rem] asnp-flex"
+								role="group"
 							>
-								{ __( 'Left', 'asnp-easy-whatsapp' ) }
-							</button>
-							<button
-								type="button"
-								className={
-									'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-									( props.badgePositionX == 'center' &&
-										'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
-								}
-								onClick={ () => {
-									props.onChange(
-										'badgePositionX',
-										'center'
-									);
-								} }
+								<button
+									disabled={ disEleven }
+									type="button"
+									className={
+										disEleven
+											? 'asnp-opacity-20 asnp-cursor-not-allowed asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-l-lg asnp-border   asnp-border-gray-200'
+											: 'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-l-lg asnp-border   asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
+											  ( props.badgePositionY ==
+													'top' &&
+													'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
+									}
+									onClick={ () => {
+										props.onChange(
+											'badgePositionY',
+											'top'
+										);
+									} }
+								>
+									{ __( 'Top', 'asnp-easy-whatsapp' ) }
+								</button>
+								<button
+									type="button"
+									className={
+										'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
+										( props.badgePositionY == 'center' &&
+											'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
+									}
+									onClick={ () => {
+										props.onChange(
+											'badgePositionY',
+											'center'
+										);
+									} }
+								>
+									{ __( 'Center', 'asnp-easy-whatsapp' ) }
+								</button>
+								<button
+									disabled={ disEleven }
+									type="button"
+									className={
+										disEleven
+											? 'asnp-opacity-20 asnp-cursor-not-allowed asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200'
+											: 'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
+											  ( props.badgePositionY ==
+													'bottom' &&
+													'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
+									}
+									onClick={ () => {
+										props.onChange(
+											'badgePositionY',
+											'bottom'
+										);
+									} }
+								>
+									{ __( 'Bottom', 'asnp-easy-whatsapp' ) }
+								</button>
+							</div>
+							<div
+								className="asnp-w-[10rem] asnp-flex asnp-ml-24"
+								role="group"
 							>
-								{ __( 'Center', 'asnp-easy-whatsapp' ) }
-							</button>
-							<button
-								disabled={ disEleven }
-								type="button"
-								className={
-									disEleven
-										? 'asnp-opacity-20 asnp-cursor-not-allowed asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200'
-										: 'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-										  ( props.badgePositionX == 'right' &&
-												'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
-								}
-								onClick={ () => {
-									props.onChange( 'badgePositionX', 'right' );
-								} }
-							>
-								{ __( 'Right', 'asnp-easy-whatsapp' ) }
-							</button>
+								<button
+									type="button"
+									className={
+										'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-l-lg asnp-border   asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
+										( props.badgePositionX == 'left' &&
+											'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
+									}
+									onClick={ () => {
+										props.onChange(
+											'badgePositionX',
+											'left'
+										);
+									} }
+								>
+									{ __( 'Left', 'asnp-easy-whatsapp' ) }
+								</button>
+
+								<button
+									type="button"
+									className={
+										'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
+										( props.badgePositionX == 'right' &&
+											'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
+									}
+									onClick={ () => {
+										props.onChange(
+											'badgePositionX',
+											'right'
+										);
+									} }
+								>
+									{ __( 'Right', 'asnp-easy-whatsapp' ) }
+								</button>
+							</div>
 						</div>
-					</div>
+					) }
 				</div>
 				<div className="asnp-mt-8">
 					<span className="asnp-field-title asnp-text-base asnp-font-semibold">

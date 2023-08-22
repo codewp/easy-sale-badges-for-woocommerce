@@ -1291,8 +1291,8 @@ export default function BadgeCssandAdv( badge ) {
 		case 'timer2':
 			badgeTimerDiv = `
 			display: grid;
-			gap: 10px;
-			grid-template-columns: repeat(4, minmax(0, 1fr));
+			gap: 5px;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
 			color: ${ badge.textColor };
 			opacity: ${ badge.opacity };			
 			`;

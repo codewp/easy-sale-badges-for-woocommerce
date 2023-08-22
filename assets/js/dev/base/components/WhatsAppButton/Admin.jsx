@@ -72,6 +72,16 @@ const Admin = ( {
 		badge.badgePositionX == 'center'
 	) {
 		insetProperty = `auto auto ${ badge.badgePositionBottom }px 55px`;
+	} else if (
+		badge.badgePositionY == 'center' &&
+		badge.badgePositionX == 'left'
+	) {
+		insetProperty = `70px auto auto ${ badge.badgePositionLeft }px`;
+	} else if (
+		badge.badgePositionY == 'center' &&
+		badge.badgePositionX == 'right'
+	) {
+		insetProperty = `70px ${ badge.badgePositionRight }px auto auto`;
 	}
 
 	let heightContBadge = '';
@@ -101,7 +111,7 @@ const Admin = ( {
 			const interval = setInterval( updateTimer, 1000 );
 			return () => clearInterval( interval );
 		}
-	}, [badge.selectedDateTo] );
+	}, [ badge.selectedDateTo ] );
 
 	const updateTimer = () => {
 		const toDate = new Date( badge.selectedDateTo );
