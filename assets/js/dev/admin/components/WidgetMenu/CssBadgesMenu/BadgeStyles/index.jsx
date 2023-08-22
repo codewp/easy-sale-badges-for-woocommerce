@@ -45,7 +45,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 0 );
 								props.onChange( 'imgbadgeAdv', 0 );
-								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'useTimerBadge', 0 );
 							} }
 						>
 							<img
@@ -65,7 +65,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 0 );
 								props.onChange( 'imgbadgeAdv', 0 );
-								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'useTimerBadge', 0 );
 							} }
 						>
 							<img
@@ -85,7 +85,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 0 );
 								props.onChange( 'imgbadgeAdv', 0 );
-								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'useTimerBadge', 0 );
 							} }
 						>
 							<img
@@ -105,7 +105,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 0 );
 								props.onChange( 'imgbadgeAdv', 0 );
-								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'useTimerBadge', 0 );
 							} }
 						>
 							<img
@@ -127,7 +127,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 0 );
 								props.onChange( 'imgbadgeAdv', 0 );
-								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'useTimerBadge', 0 );
 							} }
 						>
 							<img
@@ -147,7 +147,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 0 );
 								props.onChange( 'imgbadgeAdv', 0 );
-								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'useTimerBadge', 0 );
 							} }
 						>
 							<img
@@ -167,7 +167,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 0 );
 								props.onChange( 'imgbadgeAdv', 0 );
-								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'useTimerBadge', 0 );
 							} }
 						>
 							<img
@@ -187,7 +187,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 0 );
 								props.onChange( 'imgbadgeAdv', 0 );
-								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'useTimerBadge', 0 );
 							} }
 						>
 							<img
@@ -207,7 +207,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 0 );
 								props.onChange( 'imgbadgeAdv', 0 );
-								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'useTimerBadge', 0 );
 							} }
 						>
 							<img
@@ -229,7 +229,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 0 );
 								props.onChange( 'imgbadgeAdv', 0 );
-								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'useTimerBadge', 0 );
 							} }
 						>
 							<img
@@ -249,7 +249,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 0 );
 								props.onChange( 'imgbadgeAdv', 0 );
-								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'useTimerBadge', 0 );
 							} }
 						>
 							<img
@@ -269,7 +269,7 @@ const BadgeStyles = ( props ) => {
 								props.onChange( 'badgeAdv', '' );
 								props.onChange( 'imgbadge', 0 );
 								props.onChange( 'imgbadgeAdv', 0 );
-								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'useTimerBadge', 0 );
 							} }
 						>
 							<img
