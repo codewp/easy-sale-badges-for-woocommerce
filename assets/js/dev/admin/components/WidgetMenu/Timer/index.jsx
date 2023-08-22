@@ -161,7 +161,7 @@ const Timer = ( props ) => {
 						{ __( 'Timer Styles', 'asnp-easy-whatsapp' ) }
 					</div>
 					<div className="asnp-relative asnp-mb-3 asnp-mt-3 asnp-h-[30rem] asnp-flex asnp-flex-col asnp-border-2 asnp-rounded-md asnp-pr-1 asnp-pb-4 asnp-scrollBarImageB">
-						<div className="asnp-w-full asnp-ml-8 asnp-mt-6 asnp-mb-2 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
+						<div className="asnp-w-full asnp-ml-8 asnp-mt-4 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
 							<label>
 								{ __( 'Horizontal', 'asnp-easy-whatsapp' ) }
 							</label>
@@ -208,7 +208,7 @@ const Timer = ( props ) => {
 							>
 								<img
 									className="asnp-h-full asnp-w-full asnp-border-none"
-									src={ IMAGES_URL + 'badgeTimer1.png' }
+									src={ IMAGES_URL + 'badgeTimer2.png' }
 								/>
 							</div>
 						</div>
@@ -232,7 +232,7 @@ const Timer = ( props ) => {
 							>
 								<img
 									className="asnp-h-full asnp-w-full asnp-border-none"
-									src={ IMAGES_URL + 'badgeTimer1.png' }
+									src={ IMAGES_URL + 'badgeTimer3.png' }
 								/>
 							</div>
 							<div
@@ -254,11 +254,11 @@ const Timer = ( props ) => {
 							>
 								<img
 									className="asnp-h-full asnp-w-full asnp-border-none"
-									src={ IMAGES_URL + 'badgeTimer1.png' }
+									src={ IMAGES_URL + 'badgeTimer4.png' }
 								/>
 							</div>
 						</div>
-						<div className="asnp-w-full asnp-ml-8 asnp-mt-6 asnp-mb-2 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
+						<div className="asnp-w-full asnp-ml-8 asnp-mt-4 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
 							<label>
 								{ __( 'Vertical', 'asnp-easy-whatsapp' ) }
 							</label>
@@ -269,7 +269,7 @@ const Timer = ( props ) => {
 									( selected === 5
 										? 'asnp-border-indigo-700'
 										: 'asnp-border-white' ) +
-									' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
+									' asnp-py-8 asnp-px-4 asnp-containerBadgeTimerV hover:asnp-border-indigo-700'
 								}
 								onClick={ () => {
 									props.onChange( 'badgeStyles', '' );
@@ -283,7 +283,7 @@ const Timer = ( props ) => {
 							>
 								<img
 									className="asnp-h-full asnp-w-full asnp-border-none"
-									src={ IMAGES_URL + 'badgeTimer1.png' }
+									src={ IMAGES_URL + 'badgeTimerV1.png' }
 								/>
 							</div>
 							<div

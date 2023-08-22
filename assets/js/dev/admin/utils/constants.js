@@ -1268,7 +1268,7 @@ export default function BadgeCssandAdv( badge ) {
 			display: inline-block;
 			color: ${ badge.textColor };
             height: 60px;
-			width: 270px;
+			width: 265px;
 			opacity: ${ badge.opacity };
 			background-color: ${ badge.bgColorTimer };
 			border-radius: 10px;
@@ -1323,7 +1323,7 @@ export default function BadgeCssandAdv( badge ) {
 			badgeTimerDiv = `
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr 1fr;
-			gap:2px;
+			gap:5px;
 			color: ${ badge.textColor };
             height: 66px;
 			width: 270px;
@@ -1331,8 +1331,8 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			badgeTimerCont = `
 			display: inline-block;
-			padding: 13px 25px;
-			width: 66px;
+			padding: 13px 26px;
+			width: 70px;
 			border-radius: 50%;
 			background-color: ${ badge.bgColorTimer };
 
@@ -1352,8 +1352,8 @@ export default function BadgeCssandAdv( badge ) {
 			case 'timer4':
 			badgeTimerDiv = `
 			display: grid;
-			gap: 10px;
-			grid-template-columns: repeat(4, minmax(0, 1fr));
+			gap: 5px;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
 			color: ${ badge.textColor };
             height: 60px;
 			width: 270px;
@@ -1361,8 +1361,8 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			badgeTimerCont = `
 			display: inline-block;
-			padding: 13px 25px;
-			width: 66px;
+			padding: 13px 26px;
+			width: 70px;
 			border: 2px solid ${ badge.bgColorTimer };
 			border-radius: 50%;
 			`;

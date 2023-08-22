@@ -17,8 +17,17 @@
 }
 
 .asnp-containerBadgeTimer {
-	width: 18rem;
+	width: 19rem;
 	height: 8rem;
+	display: flex;
+	border-radius: 1rem;
+	justify-content: center;
+	border-width: 1px;
+	cursor: pointer;
+}
+.asnp-containerBadgeTimerV {
+	width: 8rem;
+	height: 18rem;
 	display: flex;
 	border-radius: 1rem;
 	justify-content: center;
