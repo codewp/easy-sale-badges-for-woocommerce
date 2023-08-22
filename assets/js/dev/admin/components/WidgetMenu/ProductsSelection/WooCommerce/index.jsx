@@ -46,6 +46,18 @@ const WooCommerce = () => {
 												'asnp-easy-whatsapp'
 											) }
 										</option>
+										<option value={ 'stockstatus' }>
+											{ __(
+												'Stock status',
+												'asnp-easy-whatsapp'
+											) }
+										</option>
+										<option value={ 'isonsale' }>
+											{ __(
+												'Is On Sale',
+												'asnp-easy-whatsapp'
+											) }
+										</option>
 
 										<option value={ 'categories' }>
 											{ __(
@@ -90,7 +102,11 @@ const WooCommerce = () => {
 										</option>
 									</select>
 									<div className="asnp-itemselect asnp-ml-5 asnp-flex">
-										{
+										{ badge.items[ groupIndex ][ index ]
+											.type ==
+											( 'products' ||
+												'categories' ||
+												'tags' ) && (
 											<ItemSelect
 												items={
 													badge.items[ groupIndex ][
@@ -112,7 +128,71 @@ const WooCommerce = () => {
 												}
 												cacheOptions={ false }
 											/>
-										}
+										) }
+										{ badge.items[ groupIndex ][ index ]
+											.type == 'stockstatus' && (
+											<select
+												className="asnp-select-field !asnp-w-48 asnp-mt-2 asnp-ml-4"
+												value={
+													badge.items[ groupIndex ][
+														index
+													].items
+												}
+												onChange={ ( e ) =>
+													updateItem(
+														groupIndex,
+														index,
+														'items',
+														e.target.value
+													)
+												}
+											>
+												<option value="instock">
+													{ __(
+														'In Stock',
+														'asnp-easy-whatsapp'
+													) }
+												</option>
+												<option value="outofstock ">
+													{ __(
+														'Out of Stock',
+														'asnp-easy-whatsapp'
+													) }
+												</option>
+											</select>
+										) }
+										{ badge.items[ groupIndex ][ index ]
+											.type == 'isonsale' && (
+											<select
+												className="asnp-select-field !asnp-w-48 asnp-mt-2 asnp-ml-4"
+												value={
+													badge.items[ groupIndex ][
+														index
+													].items
+												}
+												onChange={ ( e ) =>
+													updateItem(
+														groupIndex,
+														index,
+														'items',
+														e.target.value
+													)
+												}
+											>
+												<option value="yes">
+													{ __(
+														'Yes',
+														'asnp-easy-whatsapp'
+													) }
+												</option>
+												<option value="outofstock ">
+													{ __(
+														'No',
+														'asnp-easy-whatsapp'
+													) }
+												</option>
+											</select>
+										) }
 										<button
 											className="asnp-mb-4 asnp-ml-3 asnp-mt-2 asnp-btn-primary asnp-py-1 asnp-h-[2rem] asnp-w-[4rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
 											onClick={ () =>
