@@ -73,40 +73,48 @@ const WooCommerce = () => {
 											) }
 										</option>
 									</select>
-									<select
-										className="asnp-select-field !asnp-w-48 asnp-mt-2 asnp-ml-4"
-										value={
+									{ badge.items[ groupIndex ][ index ].type ==
+									'isonsale' ? (
+										''
+									) : (
+										<select
+											className="asnp-select-field !asnp-w-48 asnp-mt-2 asnp-ml-4"
+											value={
+												badge.items[ groupIndex ][
+													index
+												].selectType
+											}
+											onChange={ ( e ) =>
+												updateItem(
+													groupIndex,
+													index,
+													'selectType',
+													e.target.value
+												)
+											}
+										>
+											<option value="included">
+												{ __(
+													'Included',
+													'asnp-easy-whatsapp'
+												) }
+											</option>
+											<option value="excluded">
+												{ __(
+													'Excluded',
+													'asnp-easy-whatsapp'
+												) }
+											</option>
+										</select>
+									) }
+
+									<div className="asnp-ml-5 asnp-flex">
+										{ ( badge.items[ groupIndex ][ index ]
+											.type === 'products' ||
 											badge.items[ groupIndex ][ index ]
-												.selectType
-										}
-										onChange={ ( e ) =>
-											updateItem(
-												groupIndex,
-												index,
-												'selectType',
-												e.target.value
-											)
-										}
-									>
-										<option value="included">
-											{ __(
-												'Included',
-												'asnp-easy-whatsapp'
-											) }
-										</option>
-										<option value="excluded">
-											{ __(
-												'Excluded',
-												'asnp-easy-whatsapp'
-											) }
-										</option>
-									</select>
-									<div className="asnp-itemselect asnp-ml-5 asnp-flex">
-										{ badge.items[ groupIndex ][ index ]
-											.type ==
-											( 'products' ||
-												'categories' ||
-												'tags' ) && (
+												.type === 'categories' ||
+											badge.items[ groupIndex ][ index ]
+												.type === 'tags' ) && (
 											<ItemSelect
 												items={
 													badge.items[ groupIndex ][
@@ -132,7 +140,7 @@ const WooCommerce = () => {
 										{ badge.items[ groupIndex ][ index ]
 											.type == 'stockstatus' && (
 											<select
-												className="asnp-select-field !asnp-w-48 asnp-mt-2 asnp-ml-4"
+												className="asnp-select-field !asnp-w-[16rem] asnp-mt-2 asnp-ml-4"
 												value={
 													badge.items[ groupIndex ][
 														index
@@ -193,6 +201,8 @@ const WooCommerce = () => {
 												</option>
 											</select>
 										) }
+									</div>
+									<div className="asnp-flex">
 										<button
 											className="asnp-mb-4 asnp-ml-3 asnp-mt-2 asnp-btn-primary asnp-py-1 asnp-h-[2rem] asnp-w-[4rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
 											onClick={ () =>
