@@ -1401,7 +1401,6 @@ export default function BadgeCssandAdv( badge ) {
 			gap: 5px;
 			color: ${ badge.textColor };
 			opacity: ${ badge.opacity };
-			border-radius: 10px;
 			`;
 			badgeTimerCont = `
 			display: inline-block;
@@ -1428,7 +1427,6 @@ export default function BadgeCssandAdv( badge ) {
 			gap: 5px;
 			color: ${ badge.textColor };
 			opacity: ${ badge.opacity };
-			border-radius: 10px;
 			`;
 			badgeTimerCont = `
 			display: inline-block;
@@ -1455,7 +1453,6 @@ export default function BadgeCssandAdv( badge ) {
 			gap: 5px;
 			color: ${ badge.textColor };
 			opacity: ${ badge.opacity };
-			border-radius: 10px;
 			`;
 			badgeTimerCont = `
 			display: inline-block;
