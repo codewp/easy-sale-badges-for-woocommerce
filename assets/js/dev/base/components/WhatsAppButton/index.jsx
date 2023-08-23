@@ -64,7 +64,7 @@ const WhatsAppButton = ( {
 	} else if ( badge.badgeStyles === 'badge4' ) {
 		badge.heightBadge = '30';
 	} else if ( badge.badgeStyles === 'badge13' ) {
-		badge.widthBadge = '70';
+		badge.widthBadge = '50';
 	}
 
 	let horizAndvert;
