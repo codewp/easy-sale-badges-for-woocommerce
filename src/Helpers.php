@@ -118,7 +118,7 @@ function add_custom_style( $style ) {
 	get_plugin()->container()->get( CustomStyles::class )->add_style( $style );
 }
 
-function display_sale_badges( $product ) {
+function display_sale_badges( $product, $hide = false ) {
 	if ( ! $product ) {
 		return;
 	}
@@ -128,7 +128,7 @@ function display_sale_badges( $product ) {
 		return;
 	}
 
-	return $badges->display_badges( $product );
+	return $badges->display_badges( $product, $hide );
 }
 
 function has_active_sale_badges() {

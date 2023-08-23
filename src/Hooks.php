@@ -25,54 +25,54 @@ class Hooks {
 			case 'before_single_item_images':
 				$priority = has_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images' );
 				if ( $priority ) {
-					add_action( 'woocommerce_before_single_product_summary', array( __CLASS__, 'display_sale_badge' ), $priority - 1 );
+					add_action( 'woocommerce_before_single_product_summary', array( __CLASS__, 'single_dispaly_sale_badge' ), $priority - 1 );
 				} else {
-					add_action( 'woocommerce_before_single_product_summary', array( __CLASS__, 'display_sale_badge' ), 19 );
+					add_action( 'woocommerce_before_single_product_summary', array( __CLASS__, 'single_dispaly_sale_badge' ), 19 );
 				}
 				break;
 
 			case 'after_single_item_images':
 				$priority = has_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images' );
 				if ( $priority ) {
-					add_action( 'woocommerce_before_single_product_summary', array( __CLASS__, 'display_sale_badge' ), $priority + 1 );
+					add_action( 'woocommerce_before_single_product_summary', array( __CLASS__, 'single_dispaly_sale_badge' ), $priority + 1 );
 				} else {
-					add_action( 'woocommerce_before_single_product_summary', array( __CLASS__, 'display_sale_badge' ), 21 );
+					add_action( 'woocommerce_before_single_product_summary', array( __CLASS__, 'single_dispaly_sale_badge' ), 21 );
 				}
 				break;
 
 			case 'before_single_item_title':
 				$priority = has_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title' );
 				if ( $priority ) {
-					add_action( 'woocommerce_single_product_summary', array( __CLASS__, 'display_sale_badge' ), $priority - 1 );
+					add_action( 'woocommerce_single_product_summary', array( __CLASS__, 'single_dispaly_sale_badge' ), $priority - 1 );
 				} else {
-					add_action( 'woocommerce_single_product_summary', array( __CLASS__, 'display_sale_badge' ), 4 );
+					add_action( 'woocommerce_single_product_summary', array( __CLASS__, 'single_dispaly_sale_badge' ), 4 );
 				}
 				break;
 
 			case 'after_single_item_title':
 				$priority = has_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title' );
 				if ( $priority ) {
-					add_action( 'woocommerce_single_product_summary', array( __CLASS__, 'display_sale_badge' ), $priority + 1 );
+					add_action( 'woocommerce_single_product_summary', array( __CLASS__, 'single_dispaly_sale_badge' ), $priority + 1 );
 				} else {
-					add_action( 'woocommerce_single_product_summary', array( __CLASS__, 'display_sale_badge' ), 6 );
+					add_action( 'woocommerce_single_product_summary', array( __CLASS__, 'single_dispaly_sale_badge' ), 6 );
 				}
 				break;
 
 			case 'before_single_item_price':
 				$priority = has_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price' );
 				if ( $priority ) {
-					add_action( 'woocommerce_single_product_summary', array( __CLASS__, 'display_sale_badge' ), $priority - 1 );
+					add_action( 'woocommerce_single_product_summary', array( __CLASS__, 'single_dispaly_sale_badge' ), $priority - 1 );
 				} else {
-					add_action( 'woocommerce_single_product_summary', array( __CLASS__, 'display_sale_badge' ), 9 );
+					add_action( 'woocommerce_single_product_summary', array( __CLASS__, 'single_dispaly_sale_badge' ), 9 );
 				}
 				break;
 
 			case 'after_single_item_price':
 				$priority = has_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price' );
 				if ( $priority ) {
-					add_action( 'woocommerce_single_product_summary', array( __CLASS__, 'display_sale_badge' ), $priority + 1 );
+					add_action( 'woocommerce_single_product_summary', array( __CLASS__, 'single_dispaly_sale_badge' ), $priority + 1 );
 				} else {
-					add_action( 'woocommerce_single_product_summary', array( __CLASS__, 'display_sale_badge' ), 11 );
+					add_action( 'woocommerce_single_product_summary', array( __CLASS__, 'single_dispaly_sale_badge' ), 11 );
 				}
 				break;
 		}
@@ -82,7 +82,7 @@ class Hooks {
 		$custom_hooks = get_plugin()->settings->get_setting( 'singleCustomHooks', '' );
 		$custom_hooks = apply_filters( 'asnp_wesb_single_custom_hooks', $custom_hooks );
 
-		self::add_custom_hooks( $custom_hooks );
+		self::add_custom_hooks( $custom_hooks, array( __CLASS__, 'single_dispaly_sale_badge' ) );
 	}
 
 	public static function loop_hooks() {
@@ -180,18 +180,31 @@ class Hooks {
 		$custom_hooks = get_plugin()->settings->get_setting( 'loopCustomHooks', '' );
 		$custom_hooks = apply_filters( 'asnp_wesb_loop_custom_hooks', $custom_hooks );
 
-		self::add_custom_hooks( $custom_hooks );
+		self::add_custom_hooks( $custom_hooks, array( __CLASS__, 'display_sale_badge' ) );
 	}
 
-	public static function add_custom_hooks( $custom_hooks ) {
+	public static function add_custom_hooks( $custom_hooks, $callback ) {
 		if ( empty( $custom_hooks ) || ! strlen( trim( $custom_hooks ) ) ) {
+			return;
+		}
+
+		if ( ! $callback || ! is_callable( $callback ) ) {
 			return;
 		}
 
 		$custom_hooks = array_map( 'trim', explode( ',', trim( $custom_hooks ) ) );
 		foreach ( $custom_hooks as $hook ) {
-			add_action( $hook, array( __CLASS__, 'display_sale_badge' ), apply_filters( 'asnp_wesb_sale_badge_custom_hook_priority', 99, $hook ) );
+			add_action( $hook, $callback, apply_filters( 'asnp_wesb_sale_badge_custom_hook_priority', 99, $hook ) );
 		}
+	}
+
+	public static function single_dispaly_sale_badge() {
+		$product = get_current_product();
+		if ( ! $product ) {
+			return;
+		}
+
+		display_sale_badges( $product, true );
 	}
 
 	public static function display_sale_badge() {

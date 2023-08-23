@@ -83,6 +83,59 @@ let adminConfig = {
 	],
 };
 
+let frontConfig = {
+	mode: NODE_ENV,
+	entry: {
+		badge: './assets/js/dev/badge/index.js',
+	},
+	output: {
+		filename: './assets/js/[name]/index.js',
+		path: __dirname,
+		library: [ '[modulename]' ],
+		libraryTarget: 'this',
+	},
+	externals,
+	module: {
+		rules: [
+			{
+				parser: {
+					amd: false,
+				},
+			},
+			{
+				test: /\.(js|jsx)$/,
+				exclude: /node_modules/,
+				loader: 'babel-loader',
+			},
+			{ test: /\.md$/, use: 'raw-loader' },
+			{
+				test: /\.s?css$/,
+				use: [
+					MiniCssExtractPlugin.loader,
+					'css-loader',
+					{
+						loader: 'postcss-loader',
+						options: { postcssOptions: postcssConfig },
+					},
+				],
+			},
+			{
+				test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/,
+				loader: 'url-loader',
+			},
+		],
+	},
+	resolve: {
+		extensions: [ '*', '.js', '.jsx' ],
+		alias: aliases,
+	},
+	plugins: [
+		new MiniCssExtractPlugin( {
+			filename: './assets/css/[name]/style.css',
+		} ),
+	],
+};
+
 let stylingConfig = {
 	mode: NODE_ENV,
 	entry: {
@@ -134,10 +187,12 @@ const stylingProductionConfig = {
 
 if ( 'production' === NODE_ENV ) {
 	adminConfig = { ...adminConfig, ...productionConfig };
+	frontConfig = { ...frontConfig, ...productionConfig };
 	stylingConfig = { ...stylingConfig, ...stylingProductionConfig };
 } else {
 	adminConfig.devtool = process.env.SOURCEMAP || 'source-map';
+	frontConfig.devtool = process.env.SOURCEMAP || 'source-map';
 	stylingConfig.devtool = process.env.SOURCEMAP || 'source-map';
 }
 
-module.exports = [ adminConfig, stylingConfig ];
+module.exports = [ adminConfig, frontConfig, stylingConfig ];

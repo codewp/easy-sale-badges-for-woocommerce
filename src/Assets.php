@@ -16,6 +16,13 @@ class Assets {
 				'asnp-wesb-badge',
 				apply_filters( 'asnp_wesb_badge_style', $this->get_url( 'badge/style', 'css' ) )
 			);
+			wp_enqueue_script(
+				'asnp-wesb-badge',
+				apply_filters( 'asnp_wesb_badge_script', $this->get_url( 'badge/index', 'js' ) ),
+				array( 'jquery' ),
+				ASNP_EWHATSAPP_VERSION,
+				true
+			);
 		}
 	}
 

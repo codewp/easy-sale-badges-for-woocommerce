@@ -68,6 +68,7 @@ phpunit.xml
 # Ignore dev files.
 /assets/css/admin/
 /assets/js/admin/admin/
+/assets/js/badge/
 /assets/css/badge/
 /assets/css/whatsapp/
 /assets/js/whatsapp/
