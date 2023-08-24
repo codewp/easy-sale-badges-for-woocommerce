@@ -195,7 +195,6 @@ const Admin = ( {
 											height: '90px',
 											opacity: `${ badge.opacityImg }`,
 											zIndex: `${ badge.zIndexImg }`,
-
 											position: 'absolute',
 											transform: `rotateX(${ badge.rotationXImg }deg) rotateY(${ badge.rotationYImg }deg) rotateZ(${ badge.rotationZImg }deg)`,
 										} }

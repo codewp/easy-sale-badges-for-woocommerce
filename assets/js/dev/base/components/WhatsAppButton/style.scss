@@ -54,10 +54,10 @@
 	position: absolute;
 }
 
-.asnp-esb-badge{
+.asnp-esb-badge {
 	top: 0px;
 	text-align: center;
-    text-shadow: none;
+	text-shadow: none;
 	position: absolute;
 }
 
@@ -79,5 +79,11 @@
 	z-index: 0;
 	width: 130px;
 	height: 120px;
-	
+}
+
+.asnp-esb-svg3 {
+	position: absolute;
+	z-index: 0;
+	height: 120px;
+	margin-left: 30px;
 }
