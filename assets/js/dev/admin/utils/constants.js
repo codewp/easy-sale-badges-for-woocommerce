@@ -798,27 +798,7 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			break;
 		case 'bdgAdvanced2':
-			bdgeAdvanced = (
-				<svg
-					className="asnp-esb-svg1"
-					width="94"
-					height="101"
-					viewBox="0 0 94 101"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<path
-						d="M85.0357 7.89259C63.8562 14.5349 46.91 0 46.91 0C46.91 0 29.9638 14.5349 8.78433 7.89259C-2.00019 18.2728 -12.0121 76.002 46.91 100.09C105.826 76.002 95.8137 18.2728 85.0357 7.89259Z"
-						fill={ `${ badge.mainBg }` }
-					/>
-					<path
-						d="M46.91 93.5128C19.4455 81.4656 10.4011 62.1704 7.68057 47.9156C4.92114 33.4523 7.95327 20.5845 11.1672 14.7628C14.1019 15.3749 17.0886 15.6875 20.0818 15.6875C20.0818 15.6875 20.0818 15.6875 20.0883 15.6875C32.1194 15.6875 41.8067 10.7318 46.91 7.44326C52.0133 10.7318 61.7006 15.6875 73.7317 15.6875C76.7249 15.6875 79.7116 15.3749 82.6463 14.7628C85.8603 20.5845 88.8924 33.4458 86.1329 47.9156C83.419 62.1704 74.3745 81.4721 46.91 93.5128Z"
-						stroke="#EBEBEB"
-						strokeWidth="4"
-						strokeMiterlimit="10"
-					/>
-				</svg>
-			);
+			bdgeAdvanced = SVGADVANCED2( badge.mainBg );
 			badgeIconOne = `
 			position: relative;
             letter-spacing: 0.52px;
@@ -829,16 +809,17 @@ export default function BadgeCssandAdv( badge ) {
             text-align: center;
             font-size: 14px;
 			opacity: ${ badge.opacity };
-	        top:${ badge.badgePositionY == 'bottom' ? '36px' : '23px' } ;
-			left: ${ badge.badgePositionX == 'right' ? '5px' : '13px' };
+			top:${ badge.badgePositionY == 'bottom' ? '36px' : '28px' } ;
+			left: ${ badge.badgePositionX == 'right' ? '' : '13px' };
 			`;
 			badgeIconTwo = `
 			background-color: ${ badge.secondBg };
 			display: block;
 			padding: 0px 5px;
 			z-index: 1;
-			width: 72px;
-			margin-top:10px;
+			height: 22px;
+			width: 80px;
+			margin-top:5px;
 			line-height: 20px;
 			text-transform: uppercase;
 			&::before {
@@ -846,7 +827,7 @@ export default function BadgeCssandAdv( badge ) {
 				position: absolute;
 				width: 0;
 				height: 0;
-				top: 5px;
+				top: 0px;
 				border-width: 10px 6px;
 				border-style: solid;
                 z-index: -1;
@@ -858,7 +839,7 @@ export default function BadgeCssandAdv( badge ) {
                 position: absolute;
                 width: 0;
                 height: 0;
-                top: 5px;
+                top: 0px;
 	            right: -11px;
                 border-width: 10px 6px;
                 border-style: solid;
@@ -866,27 +847,7 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			break;
 		case 'bdgAdvanced3':
-			bdgeAdvanced = (
-				<svg
-					className="asnp-esb-svg1"
-					width="94"
-					height="101"
-					viewBox="0 0 94 101"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<path
-						d="M85.0357 7.89259C63.8562 14.5349 46.91 0 46.91 0C46.91 0 29.9638 14.5349 8.78433 7.89259C-2.00019 18.2728 -12.0121 76.002 46.91 100.09C105.826 76.002 95.8137 18.2728 85.0357 7.89259Z"
-						fill={ `${ badge.mainBg }` }
-					/>
-					<path
-						d="M46.91 93.5128C19.4455 81.4656 10.4011 62.1704 7.68057 47.9156C4.92114 33.4523 7.95327 20.5845 11.1672 14.7628C14.1019 15.3749 17.0886 15.6875 20.0818 15.6875C20.0818 15.6875 20.0818 15.6875 20.0883 15.6875C32.1194 15.6875 41.8067 10.7318 46.91 7.44326C52.0133 10.7318 61.7006 15.6875 73.7317 15.6875C76.7249 15.6875 79.7116 15.3749 82.6463 14.7628C85.8603 20.5845 88.8924 33.4458 86.1329 47.9156C83.419 62.1704 74.3745 81.4721 46.91 93.5128Z"
-						stroke="#EBEBEB"
-						strokeWidth="4"
-						strokeMiterlimit="10"
-					/>
-				</svg>
-			);
+			bdgeAdvanced = SVGADVANCED3( badge.mainBg, badge.secondBg );
 			badgeIconOne = `
 			position: relative;
             letter-spacing: 0.52px;
@@ -897,385 +858,21 @@ export default function BadgeCssandAdv( badge ) {
             text-align: center;
             font-size: 14px;
 			opacity: ${ badge.opacity };
-	        top:${ badge.badgePositionY == 'bottom' ? '36px' : '23px' } ;
-			left: ${ badge.badgePositionX == 'right' ? '5px' : '13px' };
+	        top:${ badge.badgePositionY == 'bottom' ? '30px' : '23px' } ;
+			right: ${ badge.badgePositionX == 'right' ? '30px' : '' };
 			`;
 			badgeIconTwo = `
-			background-color: ${ badge.secondBg };
 			display: block;
-			padding: 0px 5px;
+			padding: 2px 5px;
 			z-index: 1;
-			width: 72px;
-			margin-top:10px;
+			height: 30px;
+			width: 118px;
+			margin-top: 5px;
 			line-height: 20px;
 			text-transform: uppercase;
-			&::before {
-				content: '';
-				position: absolute;
-				width: 0;
-				height: 0;
-				top: 5px;
-				border-width: 10px 6px;
-				border-style: solid;
-                z-index: -1;
-                border-color:${ badge.secondBg } ${ badge.secondBg } ${ badge.secondBg } transparent !important;
-				left: -11px;
-			}
-			&::after {
-				content: '';
-                position: absolute;
-                width: 0;
-                height: 0;
-                top: 5px;
-	            right: -11px;
-                border-width: 10px 6px;
-                border-style: solid;
-                border-color:${ badge.secondBg } transparent ${ badge.secondBg } ${ badge.secondBg }  !important;
 			`;
 			break;
 		case 'bdgAdvanced4':
-			bdgeAdvanced = (
-				<svg
-					className="asnp-esb-svg1"
-					width="94"
-					height="101"
-					viewBox="0 0 94 101"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<path
-						d="M85.0357 7.89259C63.8562 14.5349 46.91 0 46.91 0C46.91 0 29.9638 14.5349 8.78433 7.89259C-2.00019 18.2728 -12.0121 76.002 46.91 100.09C105.826 76.002 95.8137 18.2728 85.0357 7.89259Z"
-						fill={ `${ badge.mainBg }` }
-					/>
-					<path
-						d="M46.91 93.5128C19.4455 81.4656 10.4011 62.1704 7.68057 47.9156C4.92114 33.4523 7.95327 20.5845 11.1672 14.7628C14.1019 15.3749 17.0886 15.6875 20.0818 15.6875C20.0818 15.6875 20.0818 15.6875 20.0883 15.6875C32.1194 15.6875 41.8067 10.7318 46.91 7.44326C52.0133 10.7318 61.7006 15.6875 73.7317 15.6875C76.7249 15.6875 79.7116 15.3749 82.6463 14.7628C85.8603 20.5845 88.8924 33.4458 86.1329 47.9156C83.419 62.1704 74.3745 81.4721 46.91 93.5128Z"
-						stroke="#EBEBEB"
-						strokeWidth="4"
-						strokeMiterlimit="10"
-					/>
-				</svg>
-			);
-			badgeIconOne = `
-			position: relative;
-            letter-spacing: 0.52px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            text-align: center;
-            font-size: 14px;
-			opacity: ${ badge.opacity };
-	        top:${ badge.badgePositionY == 'bottom' ? '36px' : '23px' } ;
-			left: ${ badge.badgePositionX == 'right' ? '5px' : '13px' };
-			`;
-			badgeIconTwo = `
-			background-color: ${ badge.secondBg };
-			display: block;
-			padding: 0px 5px;
-			z-index: 1;
-			width: 72px;
-			margin-top:10px;
-			line-height: 20px;
-			text-transform: uppercase;
-			&::before {
-				content: '';
-				position: absolute;
-				width: 0;
-				height: 0;
-				top: 5px;
-				border-width: 10px 6px;
-				border-style: solid;
-                z-index: -1;
-                border-color:${ badge.secondBg } ${ badge.secondBg } ${ badge.secondBg } transparent !important;
-				left: -11px;
-			}
-			&::after {
-				content: '';
-                position: absolute;
-                width: 0;
-                height: 0;
-                top: 5px;
-	            right: -11px;
-                border-width: 10px 6px;
-                border-style: solid;
-                border-color:${ badge.secondBg } transparent ${ badge.secondBg } ${ badge.secondBg }  !important;
-			`;
-			break;
-		case 'bdgAdvanced5':
-			bdgeAdvanced = SVGADVANCED2( badge.mainBg );
-			badgeIconOne = `
-			position: relative;
-            letter-spacing: 0.52px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            text-align: center;
-            font-size: 14px;
-			opacity: ${ badge.opacity };
-			top:${ badge.badgePositionY == 'bottom' ? '36px' : '28px' } ;
-			left: ${ badge.badgePositionX == 'right' ? '' : '13px' };
-			`;
-			badgeIconTwo = `
-			background-color: ${ badge.secondBg };
-			display: block;
-			padding: 0px 5px;
-			z-index: 1;
-			height: 22px;
-			width: 80px;
-			margin-top:5px;
-			line-height: 20px;
-			text-transform: uppercase;
-			&::before {
-				content: '';
-				position: absolute;
-				width: 0;
-				height: 0;
-				top: 0px;
-				border-width: 10px 6px;
-				border-style: solid;
-                z-index: -1;
-                border-color:${ badge.secondBg } ${ badge.secondBg } ${ badge.secondBg } transparent !important;
-				left: -11px;
-			}
-			&::after {
-				content: '';
-                position: absolute;
-                width: 0;
-                height: 0;
-                top: 0px;
-	            right: -11px;
-                border-width: 10px 6px;
-                border-style: solid;
-                border-color:${ badge.secondBg } transparent ${ badge.secondBg } ${ badge.secondBg }  !important;
-			`;
-			break;
-		case 'bdgAdvanced6':
-			bdgeAdvanced = SVGADVANCED2( badge.mainBg );
-			badgeIconOne = `
-			position: relative;
-            letter-spacing: 0.52px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            text-align: center;
-            font-size: 14px;
-			opacity: ${ badge.opacity };
-			top:${ badge.badgePositionY == 'bottom' ? '36px' : '28px' } ;
-			left: ${ badge.badgePositionX == 'right' ? '' : '13px' };
-			`;
-			badgeIconTwo = `
-			background-color: ${ badge.secondBg };
-			display: block;
-			padding: 0px 5px;
-			z-index: 1;
-			height: 22px;
-			width: 80px;
-			margin-top:5px;
-			line-height: 20px;
-			text-transform: uppercase;
-			&::before {
-				content: '';
-				position: absolute;
-				width: 0;
-				height: 0;
-				top: 0px;
-				border-width: 10px 6px;
-				border-style: solid;
-                z-index: -1;
-                border-color:${ badge.secondBg } ${ badge.secondBg } ${ badge.secondBg } transparent !important;
-				left: -11px;
-			}
-			&::after {
-				content: '';
-                position: absolute;
-                width: 0;
-                height: 0;
-                top: 0px;
-	            right: -11px;
-                border-width: 10px 6px;
-                border-style: solid;
-                border-color:${ badge.secondBg } transparent ${ badge.secondBg } ${ badge.secondBg }  !important;
-			`;
-			break;
-		case 'bdgAdvanced7':
-			bdgeAdvanced = SVGADVANCED2( badge.mainBg );
-			badgeIconOne = `
-			position: relative;
-            letter-spacing: 0.52px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            text-align: center;
-            font-size: 14px;
-			opacity: ${ badge.opacity };
-			top:${ badge.badgePositionY == 'bottom' ? '36px' : '28px' } ;
-			left: ${ badge.badgePositionX == 'right' ? '' : '13px' };
-			`;
-			badgeIconTwo = `
-			background-color: ${ badge.secondBg };
-			display: block;
-			padding: 0px 5px;
-			z-index: 1;
-			height: 22px;
-			width: 80px;
-			margin-top:5px;
-			line-height: 20px;
-			text-transform: uppercase;
-			&::before {
-				content: '';
-				position: absolute;
-				width: 0;
-				height: 0;
-				top: 0px;
-				border-width: 10px 6px;
-				border-style: solid;
-                z-index: -1;
-                border-color:${ badge.secondBg } ${ badge.secondBg } ${ badge.secondBg } transparent !important;
-				left: -11px;
-			}
-			&::after {
-				content: '';
-                position: absolute;
-                width: 0;
-                height: 0;
-                top: 0px;
-	            right: -11px;
-                border-width: 10px 6px;
-                border-style: solid;
-                border-color:${ badge.secondBg } transparent ${ badge.secondBg } ${ badge.secondBg }  !important;
-			`;
-			break;
-		case 'bdgAdvanced8':
-			bdgeAdvanced = SVGADVANCED2( badge.mainBg );
-			badgeIconOne = `
-			position: relative;
-            letter-spacing: 0.52px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            text-align: center;
-            font-size: 14px;
-			opacity: ${ badge.opacity };
-	        top:${ badge.badgePositionY == 'bottom' ? '36px' : '28px' } ;
-			left: ${ badge.badgePositionX == 'right' ? '' : '13px' };
-			`;
-			badgeIconTwo = `
-			background-color: ${ badge.secondBg };
-			display: block;
-			padding: 0px 5px;
-			z-index: 1;
-			height: 22px;
-			width: 80px;
-			margin-top:5px;
-			line-height: 20px;
-			text-transform: uppercase;
-			&::before {
-				content: '';
-				position: absolute;
-				width: 0;
-				height: 0;
-				top: 0px;
-				border-width: 10px 6px;
-				border-style: solid;
-                z-index: -1;
-                border-color:${ badge.secondBg } ${ badge.secondBg } ${ badge.secondBg } transparent !important;
-				left: -11px;
-			}
-			&::after {
-				content: '';
-                position: absolute;
-                width: 0;
-                height: 0;
-                top: 0px;
-	            right: -11px;
-                border-width: 10px 6px;
-                border-style: solid;
-                border-color:${ badge.secondBg } transparent ${ badge.secondBg } ${ badge.secondBg }  !important;
-			`;
-			break;
-		case 'bdgAdvanced9':
-			bdgeAdvanced = SVGADVANCED3( badge.mainBg, badge.secondBg );
-			badgeIconOne = `
-			position: relative;
-            letter-spacing: 0.52px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            text-align: center;
-            font-size: 14px;
-			opacity: ${ badge.opacity };
-	        top:${ badge.badgePositionY == 'bottom' ? '30px' : '23px' } ;
-			right: ${ badge.badgePositionX == 'right' ? '30px' : '' };
-			`;
-			badgeIconTwo = `
-			display: block;
-			padding: 2px 5px;
-			z-index: 1;
-			height: 30px;
-			width: 118px;
-			margin-top: 5px;
-			line-height: 20px;
-			text-transform: uppercase;
-			`;
-			break;
-		case 'bdgAdvanced10':
-			bdgeAdvanced = SVGADVANCED3( badge.mainBg, badge.secondBg );
-			badgeIconOne = `
-			position: relative;
-            letter-spacing: 0.52px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            text-align: center;
-            font-size: 14px;
-			opacity: ${ badge.opacity };
-	        top:${ badge.badgePositionY == 'bottom' ? '30px' : '23px' } ;
-			right: ${ badge.badgePositionX == 'right' ? '30px' : '' };
-			`;
-			badgeIconTwo = `
-			display: block;
-			padding: 2px 5px;
-			z-index: 1;
-			height: 30px;
-			width: 118px;
-			margin-top: 5px;
-			line-height: 20px;
-			text-transform: uppercase;
-			`;
-			break;
-		case 'bdgAdvanced11':
-			bdgeAdvanced = SVGADVANCED3( badge.mainBg, badge.secondBg );
-			badgeIconOne = `
-			position: relative;
-            letter-spacing: 0.52px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            text-align: center;
-            font-size: 14px;
-			opacity: ${ badge.opacity };
-			top:${ badge.badgePositionY == 'bottom' ? '30px' : '23px' } ;
-			right: ${ badge.badgePositionX == 'right' ? '30px' : '' };
-			`;
-			badgeIconTwo = `
-			display: block;
-			padding: 2px 5px;
-			z-index: 1;
-			height: 30px;
-			width: 118px;
-			margin-top: 5px;
-			line-height: 20px;
-			text-transform: uppercase;
-			`;
-			break;
-		case 'bdgAdvanced12':
 			bdgeAdvanced = SVGADVANCED4( badge.mainBg, badge.secondBg );
 			badgeIconOne = `
 			position: relative;
@@ -1302,7 +899,72 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			break;
 		default:
-			bdgeAdvanced = '';
+			bdgeAdvanced = (
+				<svg
+					className="asnp-esb-svg1"
+					width="94"
+					height="101"
+					viewBox="0 0 94 101"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M85.0357 7.89259C63.8562 14.5349 46.91 0 46.91 0C46.91 0 29.9638 14.5349 8.78433 7.89259C-2.00019 18.2728 -12.0121 76.002 46.91 100.09C105.826 76.002 95.8137 18.2728 85.0357 7.89259Z"
+						fill={ `${ badge.mainBg }` }
+					/>
+					<path
+						d="M46.91 93.5128C19.4455 81.4656 10.4011 62.1704 7.68057 47.9156C4.92114 33.4523 7.95327 20.5845 11.1672 14.7628C14.1019 15.3749 17.0886 15.6875 20.0818 15.6875C20.0818 15.6875 20.0818 15.6875 20.0883 15.6875C32.1194 15.6875 41.8067 10.7318 46.91 7.44326C52.0133 10.7318 61.7006 15.6875 73.7317 15.6875C76.7249 15.6875 79.7116 15.3749 82.6463 14.7628C85.8603 20.5845 88.8924 33.4458 86.1329 47.9156C83.419 62.1704 74.3745 81.4721 46.91 93.5128Z"
+						stroke="#EBEBEB"
+						strokeWidth="4"
+						strokeMiterlimit="10"
+					/>
+				</svg>
+			);
+			badgeIconOne = `
+			position: relative;
+            letter-spacing: 0.52px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            text-align: center;
+            font-size: 14px;
+			opacity: ${ badge.opacity };
+	        top:${ badge.badgePositionY == 'bottom' ? '36px' : '23px' } ;
+			left: ${ badge.badgePositionX == 'right' ? '5px' : '13px' };
+			`;
+			badgeIconTwo = `
+			background-color: ${ badge.secondBg };
+			display: block;
+			padding: 0px 5px;
+			z-index: 1;
+			width: 72px;
+			margin-top:10px;
+			line-height: 20px;
+			text-transform: uppercase;
+			&::before {
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 0;
+				top: 5px;
+				border-width: 10px 6px;
+				border-style: solid;
+                z-index: -1;
+                border-color:${ badge.secondBg } ${ badge.secondBg } ${ badge.secondBg } transparent !important;
+				left: -11px;
+			}
+			&::after {
+				content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                top: 5px;
+	            right: -11px;
+                border-width: 10px 6px;
+                border-style: solid;
+                border-color:${ badge.secondBg } transparent ${ badge.secondBg } ${ badge.secondBg }  !important;
+			`;
 	}
 
 	switch ( badge.badgeTimer ) {
