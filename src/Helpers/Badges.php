@@ -1936,6 +1936,124 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			break;
 
+			default:
+			$dynamic_styles .= '.asnp-esb-productBadgeTimer {';
+				if ( isset( $badge->zIndex ) ) {
+						$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
+				}
+				if ( isset( $badge->opacity ) ) {
+					$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+				}
+				if ( isset( $badge->badgePositionTop ) ) {
+				$dynamic_styles .= ' inset: ' . $insetProperty . ';';
+				}
+				$dynamic_styles .= '}';
+	
+				$dynamic_styles .= '.asnp-esb-timer1 {';
+				$dynamic_styles .= ' display: inline-block;';
+				$dynamic_styles .= ' border-radius: 10px;';
+	
+				if ( isset( $badge->bgColorTimer ) ) {
+					$dynamic_styles .= ' background-color: ' . $badge->bgColorTimer . ';';
+				}
+				if ( isset( $badge->textColor ) ) {
+					$dynamic_styles .= ' color: ' . $badge->textColor . ';';
+				}
+				if ( isset( $badge->opacity ) ) {
+					$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+				}
+	
+				$dynamic_styles .= '}';
+	
+				$dynamic_styles .= '.asnp-esb-timer2 {';
+				$dynamic_styles .= ' display: inline-block;';
+				$dynamic_styles .= ' padding: 6px 20px;';
+				$dynamic_styles .= ' width: 70px;';
+				$dynamic_styles .= '}';
+	
+				$dynamic_styles .= '.asnp-esb-timer3 {';
+				$dynamic_styles .= ' display: block;';
+				$dynamic_styles .= ' font-weight: 700;';
+				$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
+	
+				if ( isset( $badge->fontSizeLabelTimer ) ) {
+					$dynamic_styles .= ' font-size: ' . $badge->fontSizeLabelTimer . 'px;';
+				}
+				if ( isset( $badge->lineHeightLabelTimer ) ) {
+					$dynamic_styles .= ' line-height: ' . $badge->lineHeightLabelTimer . 'px;';
+				}
+				$dynamic_styles .= '}';
+	
+				$dynamic_styles .= '.asnp-esb-timer4 {';
+				$dynamic_styles .= ' font-weight: 400;';
+				$dynamic_styles .= ' font-size: 10px;';
+				$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
+				$dynamic_styles .= '}';
+	
+				break;
+	
+				case 'timer2':
+				$dynamic_styles .= '.asnp-esb-productBadgeTimer {';
+				if ( isset( $badge->zIndex ) ) {
+						$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
+				}
+				if ( isset( $badge->opacity ) ) {
+					$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+				}
+				if ( isset( $badge->badgePositionTop ) ) {
+				$dynamic_styles .= ' inset: ' . $insetProperty . ';';
+				}
+				$dynamic_styles .= '}';
+	
+				$dynamic_styles .= '.asnp-esb-timer1 {';
+				$dynamic_styles .= ' display: grid;';
+				$dynamic_styles .= ' gap: 5px;';
+				$dynamic_styles .= ' width: 100px;';
+				$dynamic_styles .= ' grid-template-columns: 1fr 1fr 1fr 1fr;';
+	
+	
+				if ( isset( $badge->textColor ) ) {
+					$dynamic_styles .= ' color: ' . $badge->textColor . ';';
+				}
+				if ( isset( $badge->opacity ) ) {
+					$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+				}
+	
+				$dynamic_styles .= '}';
+	
+				$dynamic_styles .= '.asnp-esb-timer2 {';
+				$dynamic_styles .= ' display: inline-block;';
+				$dynamic_styles .= ' padding: 6px 20px;';
+				$dynamic_styles .= ' width: 70px;';
+				$dynamic_styles .= ' border-radius: 12px;';
+	
+				if ( isset( $badge->bgColorTimer ) ) {
+					$dynamic_styles .= ' border: 2px solid ' . $badge->bgColorTimer . ';';
+				}
+	
+				$dynamic_styles .= '}';
+	
+				$dynamic_styles .= '.asnp-esb-timer3 {';
+				$dynamic_styles .= ' display: block;';
+				$dynamic_styles .= ' font-weight: 700;';
+				$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
+	
+				if ( isset( $badge->fontSizeLabelTimer ) ) {
+					$dynamic_styles .= ' font-size: ' . $badge->fontSizeLabelTimer . 'px;';
+				}
+				if ( isset( $badge->lineHeightLabelTimer ) ) {
+					$dynamic_styles .= ' line-height: ' . $badge->lineHeightLabelTimer . 'px;';
+				}
+				$dynamic_styles .= '}';
+	
+				$dynamic_styles .= '.asnp-esb-timer4 {';
+				$dynamic_styles .= ' font-weight: 400;';
+				$dynamic_styles .= ' font-size: 10px;';
+				$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
+				$dynamic_styles .= '}';
+	
+				break;
+
 			}
 
 

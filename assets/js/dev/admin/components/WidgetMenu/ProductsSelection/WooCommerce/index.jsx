@@ -115,27 +115,29 @@ const WooCommerce = () => {
 												.type === 'categories' ||
 											badge.items[ groupIndex ][ index ]
 												.type === 'tags' ) && (
-											<ItemSelect
-												items={
-													badge.items[ groupIndex ][
-														index
-													].items
-												}
-												type={
-													badge.items[ groupIndex ][
-														index
-													].type
-												}
-												onChange={ ( value ) =>
-													updateItem(
-														groupIndex,
-														index,
-														'items',
-														value
-													)
-												}
-												cacheOptions={ false }
-											/>
+											<div className="asnp-itemselect">
+												<ItemSelect
+													items={
+														badge.items[
+															groupIndex
+														][ index ].items
+													}
+													type={
+														badge.items[
+															groupIndex
+														][ index ].type
+													}
+													onChange={ ( value ) =>
+														updateItem(
+															groupIndex,
+															index,
+															'items',
+															value
+														)
+													}
+													cacheOptions={ false }
+												/>
+											</div>
 										) }
 										{ badge.items[ groupIndex ][ index ]
 											.type == 'stockstatus' && (
