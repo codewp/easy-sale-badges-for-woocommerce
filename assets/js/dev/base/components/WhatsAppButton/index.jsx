@@ -57,16 +57,6 @@ const WhatsAppButton = ( {
 		}
 	}, [ badge.badgeAdv ] );
 
-	if ( badge.badgeStyles === 'badge2' ) {
-		badge.heightBadge = '30';
-	} else if ( badge.badgeStyles === 'badge3' ) {
-		badge.heightBadge = '30';
-	} else if ( badge.badgeStyles === 'badge4' ) {
-		badge.heightBadge = '30';
-	} else if ( badge.badgeStyles === 'badge13' ) {
-		badge.widthBadge = '50';
-	}
-
 	let horizAndvert;
 	if ( badge.horizontal === 1 && badge.vertical === 1 ) {
 		horizAndvert = 'scaleX( -1 ) ScaleY(-1)';
@@ -158,6 +148,7 @@ const WhatsAppButton = ( {
 			Label={ Label }
 			bdgeAdvanced={ bdgeAdvanced }
 			horizAndvert={ horizAndvert }
+			updateBadge={ updateBadge }
 		/>
 	);
 };

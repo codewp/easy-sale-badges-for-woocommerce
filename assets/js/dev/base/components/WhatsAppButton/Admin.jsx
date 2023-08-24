@@ -14,6 +14,7 @@ const Admin = ( {
 	badgeTimerCont,
 	Label,
 	TimerDate,
+	updateBadge,
 } ) => {
 	const Span = styled.div`
 		${ badgeIcon }
@@ -105,6 +106,30 @@ const Admin = ( {
 	} else {
 		heightContBadge = `${ badge.heightBadge }px`;
 	}
+
+	useEffect( () => {
+		if (
+			( badge.badgeStyles === 'badge2' ||
+				badge.badgeStyles === 'badge3' ||
+				badge.badgeStyles === 'badge4' ) &&
+			badge.badgePositionX === 'left'
+		) {
+			updateBadge( 'heightBadge', '30' );
+			updateBadge( 'topRightRadius', '0' );
+			updateBadge( 'bottomRightRadius', '0' );
+		} else if (
+			( badge.badgeStyles === 'badge2' ||
+				badge.badgeStyles === 'badge3' ||
+				badge.badgeStyles === 'badge4' ) &&
+			badge.badgePositionX === 'right'
+		) {
+			updateBadge( 'heightBadge', '30' );
+			updateBadge( 'topLeftRadius', '0' );
+			updateBadge( 'bottomLeftRadius', '0' );
+		} else if ( badge.badgeStyles == 'badge13' ) {
+			badge.widthBadge = '50';
+		}
+	}, [ badge.badgeStyles, badge.badgePositionX ] );
 
 	useEffect( () => {
 		if ( badge.useTimerBadge == 1 ) {

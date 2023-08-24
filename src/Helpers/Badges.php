@@ -350,7 +350,6 @@ function output_css_badge( $badge, $hide = false ) {
 			if ( isset( $badge->zIndex ) ) {
 				$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
-			$dynamic_styles .= ' border-radius: 3px;';
 
 			$transform = '';
 			if ( isset( $badge->rotationX ) ) {
@@ -443,13 +442,10 @@ function output_css_badge( $badge, $hide = false ) {
 			if ( isset( $badge->zIndex ) ) {
 				$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
-			$dynamic_styles .= ' border-radius: 3px;';
 			$dynamic_styles .= ' display: inline-block;';
 			$dynamic_styles .= ' padding: 0px 15px;';
 			$dynamic_styles .= ' top: 0px;';
 			$dynamic_styles .= ' box-sizing: border-box;';
-			$dynamic_styles .= ' border-bottom-right-radius: 1px !important;';
-			$dynamic_styles .= ' border-top-right-radius: 1px !important;';
 			$transform = '';
 			if ( isset( $badge->rotationX ) ) {
 				$transform .= ' rotateX(' . esc_html( $badge->rotationX ) . 'deg)';
