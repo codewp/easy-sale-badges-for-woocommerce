@@ -44,9 +44,6 @@ jQuery( window ).on(
 				'undefined' !== typeof asnpWesbBadgeData.singleContainer
 			) {
 				container = asnpWesbBadgeData.singleContainer.trim();
-				if ( 0 !== container.indexOf( '.' ) ) {
-					container = '.' + container;
-				}
 			}
 
 			let moved = false;
