@@ -88,24 +88,26 @@ const Admin = ( {
 	let heightContBadge = '';
 	let widthContBadge = '';
 
-	if ( badge.badgeStyles == 'badge11' ) {
-		widthContBadge = '100%';
-	} else {
-		widthContBadge = `${ badge.widthBadge }px`;
-	}
+	useEffect( () => {		
+		if (
+			badge.badgeStyles == 'badge5' ||
+			badge.badgeStyles == 'badge6' ||
+			badge.badgeStyles == 'badge7' ||
+			badge.badgeStyles == 'badge8' ||
+			badge.badgeStyles == 'badge9' ||
+			badge.badgeStyles == 'badge10'
+		) {
+			heightContBadge = `${ badge.widthBadge }px`;
+		} else {
+			heightContBadge = `${ badge.heightBadge }px`;
+		}
 
-	if (
-		badge.badgeStyles == 'badge5' ||
-		badge.badgeStyles == 'badge6' ||
-		badge.badgeStyles == 'badge7' ||
-		badge.badgeStyles == 'badge8' ||
-		badge.badgeStyles == 'badge9' ||
-		badge.badgeStyles == 'badge10'
-	) {
-		heightContBadge = `${ badge.widthBadge }px`;
-	} else {
-		heightContBadge = `${ badge.heightBadge }px`;
-	}
+		if ( badge.badgeStyles == 'badge11' ) {
+			widthContBadge = '100%';
+		} else {
+			widthContBadge = `${ badge.widthBadge }px`;
+		}
+	}, [ badge.badgeStyles ] );
 
 	useEffect( () => {
 		if (
@@ -124,6 +126,15 @@ const Admin = ( {
 			badge.badgePositionX === 'right'
 		) {
 			updateBadge( 'heightBadge', '30' );
+			updateBadge( 'topLeftRadius', '0' );
+			updateBadge( 'bottomLeftRadius', '0' );
+		} else if (
+			badge.badgeStyles === 'badge5' &&
+			( badge.badgePositionX === 'right' ||
+				badge.badgePositionX === 'left' )
+		) {
+			updateBadge( 'topRightRadius', '0' );
+			updateBadge( 'bottomRightRadius', '0' );
 			updateBadge( 'topLeftRadius', '0' );
 			updateBadge( 'bottomLeftRadius', '0' );
 		} else if ( badge.badgeStyles == 'badge13' ) {

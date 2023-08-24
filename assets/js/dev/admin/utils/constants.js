@@ -442,7 +442,7 @@ export default function BadgeCssandAdv( badge ) {
 						? `-${ badge.widthBadge / 2.22 }px`
 						: ''
 				};
-				top: ${ badge.widthBadge / 12 }px ;
+				top: ${ badge.widthBadge / 7 }px ;
 
 			`;
 			break;
