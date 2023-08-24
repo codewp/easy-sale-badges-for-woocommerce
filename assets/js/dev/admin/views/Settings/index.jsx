@@ -5,6 +5,7 @@ import WooCommerce from '../../components/Settings/Woocommrece';
 import * as SettingsApi from '@easy-whatsapp/api/settings';
 import { AppContext } from '../../contexts/App';
 import Analytics from '../../components/Analytics';
+import SinglePage from './../../components/SinglePage';
 
 export default function Settings() {
 	const [ activeMenu, setActiveMenu ] = useState( 'general' );
@@ -80,6 +81,21 @@ export default function Settings() {
 						href="#"
 						onClick={ ( e ) => {
 							e.preventDefault();
+							setActiveMenu( 'singlepage' );
+						} }
+						className={
+							'asnp-nav-tab-item' +
+							( 'singlepage' === activeMenu
+								? ' asnp-nav-tab-active'
+								: '' )
+						}
+					>
+						{ __( 'Single Page ', 'asnp-easy-whatsapp' ) }
+					</a>
+					<a
+						href="#"
+						onClick={ ( e ) => {
+							e.preventDefault();
 							setActiveMenu( 'analytics' );
 						} }
 						className={
@@ -115,6 +131,14 @@ export default function Settings() {
 						singlePosition={ settings.singlePosition }
 						singleCustomHooks={ settings.singleCustomHooks }
 						loopCustomHooks={ settings.loopCustomHooks }
+					/>
+				) }
+				{ 'singlepage' === activeMenu && (
+					<SinglePage
+						onChange={ updateSettings }
+						onSave={ save }
+						showBadgeProductPage={ settings.showBadgeProductPage }
+						singleContainer={ settings.singleContainer }
 					/>
 				) }
 				{ 'analytics' === activeMenu && <Analytics onSave={ save } /> }

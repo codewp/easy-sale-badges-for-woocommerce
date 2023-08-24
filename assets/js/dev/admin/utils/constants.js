@@ -12,6 +12,8 @@ export const defaultSettings = {
 	loopPosition: 'before_shop_loop_item_thumbnail',
 	singleCustomHooks: '',
 	loopCustomHooks: '',
+	showBadgeProductPage: '',
+	singleContainer: '',
 	googleAnalytics: 0,
 	facebookPixel: 0,
 	timezone: whatsappData.timezone,
