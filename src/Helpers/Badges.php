@@ -82,12 +82,15 @@ function output_css_badge( $badge, $hide = false ) {
 			$badge->badgeStyles == 'badge5' ||
 			$badge->badgeStyles == 'badge6' ||
 			$badge->badgeStyles == 'badge7' ||
-			$badge->badgeStyles == 'badge8' ||
-			$badge->badgeStyles == 'badge9' ||
-			$badge->badgeStyles == 'badge10'
+			$badge->badgeStyles == 'badge8'
 		)
 	) {
 		$heightContBadge = $badge->widthBadge . 'px';
+	} elseif ( isset( $badge->widthBadge ) && isset( $badge->badgeStyles ) && (
+			$badge->badgeStyles == 'badge9' ||
+			$badge->badgeStyles == 'badge10' ) 
+		) {
+		$heightContBadge = $badge->heightBadge - 15 . 'px';
 	} elseif ( isset( $badge->heightBadge ) ) {
 		$heightContBadge = $badge->heightBadge . 'px';
 	}

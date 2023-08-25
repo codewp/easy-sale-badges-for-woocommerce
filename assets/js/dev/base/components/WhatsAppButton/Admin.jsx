@@ -92,11 +92,14 @@ const Admin = ( {
 		badge.badgeStyles == 'badge5' ||
 		badge.badgeStyles == 'badge6' ||
 		badge.badgeStyles == 'badge7' ||
-		badge.badgeStyles == 'badge8' ||
+		badge.badgeStyles == 'badge8'
+	) {
+		heightContBadge = `${ badge.widthBadge }px`;
+	} else if (
 		badge.badgeStyles == 'badge9' ||
 		badge.badgeStyles == 'badge10'
 	) {
-		heightContBadge = `${ badge.widthBadge }px`;
+		heightContBadge = `${ badge.widthBadge - 15 }px`;
 	} else {
 		heightContBadge = `${ badge.heightBadge }px`;
 	}
