@@ -1106,9 +1106,6 @@ function output_css_badge( $badge, $hide = false ) {
 			if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
 			}
-			if ( isset( $badge->heightBadge ) ) {
-					$dynamic_styles .= ' height: ' . $heightContBadge . ';';
-			}
 			if ( isset( $badge->badgePositionTop ) ) {
 						$dynamic_styles .= ' inset: ' . $insetProperty . ';';
 			}
@@ -1148,8 +1145,8 @@ function output_css_badge( $badge, $hide = false ) {
 			}
 
 			if ( isset( $badge->badgePositionX ) ) {
-				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '20px' ) . ';';
-				$dynamic_styles .= ' right: ' . ( $badge->badgePositionX == 'right' ? '20px' : 'auto' ) . ';';
+				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '12px' ) . ';';
+				$dynamic_styles .= ' right: ' . ( $badge->badgePositionX == 'right' ? '12px' : 'auto' ) . ';';
 			}
 
 			if ( isset( $badge->badgePositionY ) ) {
@@ -1181,7 +1178,7 @@ function output_css_badge( $badge, $hide = false ) {
 			$dynamic_styles .= ' top: -5px;';
 			$dynamic_styles .= ' width: 0;';
 			$dynamic_styles .= ' content: \'\';';
-			$dynamic_styles .= ' height: 26px;';
+			$dynamic_styles .= ' height: 17px;';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' border-style: solid;';
@@ -1200,7 +1197,7 @@ function output_css_badge( $badge, $hide = false ) {
 			$dynamic_styles .= ' top: 8px;';
 			$dynamic_styles .= ' width: 0;';
 			$dynamic_styles .= ' content: \'\';';
-			$dynamic_styles .= ' height: 27px;';
+			$dynamic_styles .= ' height: 17px;';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' border-style: solid;';

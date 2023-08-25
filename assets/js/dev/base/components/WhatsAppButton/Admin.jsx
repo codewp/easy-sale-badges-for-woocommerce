@@ -100,6 +100,8 @@ const Admin = ( {
 		badge.badgeStyles == 'badge10'
 	) {
 		heightContBadge = `${ badge.widthBadge - 15 }px`;
+	} else if ( badge.badgeStyles == 'badge12' ) {
+		heightContBadge = '';
 	} else {
 		heightContBadge = `${ badge.heightBadge }px`;
 	}

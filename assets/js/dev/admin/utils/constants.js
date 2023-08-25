@@ -642,8 +642,8 @@ export default function BadgeCssandAdv( badge ) {
 			font-weight: 400;
 			opacity: ${ badge.opacity };
 			background-color: ${ badge.badgeColor };
-			left: ${ badge.badgePositionX == 'right' ? 'auto' : '20px' };
-			right: ${ badge.badgePositionX == 'right' ? '20px' : 'auto' };
+			left: ${ badge.badgePositionX == 'right' ? 'auto' : '12px' };
+			right: ${ badge.badgePositionX == 'right' ? '12px' : 'auto' };
 			height:  30px !important;
 			width: ${ badge.widthBadge }px;
 			line-height: 30px !important;
