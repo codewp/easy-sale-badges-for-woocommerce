@@ -2183,7 +2183,39 @@ function output_image_adv_badge( $badge, $hide = false ) {
 		}
  	}
 
+	 $horizAndvert = '';
+	 if ( ! empty( $badge->horizontal ) ) {
+		 if ( ! empty( $badge->vertical ) ) {
+			 $horizAndvert = 'scaleX(-1) scaleY(-1)';
+		 } else {
+			 $horizAndvert = 'scaleX(-1)';
+		 }
+	 } elseif ( ! empty( $badge->vertical ) ) {
+		 $horizAndvert = 'scaleY(-1)';
+	 }
+ 
+	 if (
+		 isset( $badge->badgeStyles ) && $badge->badgeStyles == 'badge5' &&
+		 isset( $badge->badgePositionY ) && $badge->badgePositionY == 'bottom' &&
+		 (
+			 ( isset( $badge->badgePositionX ) && $badge->badgePositionX == 'left' ) ||
+			 ( isset( $badge->badgePositionX ) && $badge->badgePositionX == 'right' )
+		 )
+	 ) {
+		 $horizAndvert = 'scaleX(-1) scaleY(-1)';
+	 } elseif (
+		 isset( $badge->badgeStyles ) && $badge->badgeStyles == 'badge6' &&
+		 isset( $badge->badgePositionY ) && $badge->badgePositionY == 'bottom' &&
+		 (
+			 ( isset( $badge->badgePositionX ) && $badge->badgePositionX == 'left' ) ||
+			 ( isset( $badge->badgePositionX ) && $badge->badgePositionX == 'right' )
+		 )
+	 ) {
+		 $horizAndvert = 'scaleX(-1) scaleY(-1)';
+	 }
+
 	 $dynamic_styles = '';
+	 $svgAdv='';
 
 	 switch ( $badge->badgeAdv ) {
 		case 'bdgAdvanced1':
@@ -2297,30 +2329,54 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '.asnp-esb-advbadge3 {';				
 			$dynamic_styles .= ' font-weight: 700;';
+			$dynamic_styles .= ' transform: ' . $horizAndvert . 'px;';
 
 			if ( isset( $badge->fontSizeText ) ) {
 				$dynamic_styles .= ' font-size: ' . $badge->fontSizeText . 'px;';
 			}
 			$dynamic_styles .= '}';
+
+			$svgAdv.='
+			<svg
+			class="asnp-esb-svg1"
+			width="94"
+			height="101"
+			viewBox="0 0 94 101"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+			>
+			<path
+			d="M85.0357 7.89259C63.8562 14.5349 46.91 0 46.91 0C46.91 0 29.9638 14.5349 8.78433 7.89259C-2.00019 18.2728 -12.0121 76.002 46.91 100.09C105.826 76.002 95.8137 18.2728 85.0357 7.89259Z"
+			fill="' . $badge->mainBg . '" />
+			<path
+			d="M46.91 93.5128C19.4455 81.4656 10.4011 62.1704 7.68057 47.9156C4.92114 33.4523 7.95327 20.5845 11.1672 14.7628C14.1019 15.3749 17.0886 15.6875 20.0818 15.6875C20.0818 15.6875 20.0818 15.6875 20.0883 15.6875C32.1194 15.6875 41.8067 10.7318 46.91 7.44326C52.0133 10.7318 61.7006 15.6875 73.7317 15.6875C76.7249 15.6875 79.7116 15.3749 82.6463 14.7628C85.8603 20.5845 88.8924 33.4458 86.1329 47.9156C83.419 62.1704 74.3745 81.4721 46.91 93.5128Z"
+			stroke="#EBEBEB"
+			strokeWidth="4"
+			strokeMiterlimit="10"
+			/>
+			</svg>';
 			break;
 
 		}
 
-	$dynamic_styles = apply_filters( 'asnp_wesb_image_badge_styles', $dynamic_styles, $badge, $hide );
+	$dynamic_styles = apply_filters( 'asnp_wesb_advanced_badge_styles', $dynamic_styles, $badge, $hide );
 
 	add_custom_style( $dynamic_styles );
+
+	
 	
 	$class_names = 'asnp-esb-badge-element asnp-esb-productBadge';
 	if ( $hide ) {
 		$class_names .= ' asnp-esb-badge-hidden';
 	}
 
-	$class_names = apply_filters( 'asnp_wesb_image_badge_class_names', $class_names, $badge, $hide );
+	$class_names = apply_filters( 'asnp_wesb_advanced_badge_class_names', $class_names, $badge, $hide );
 
 	// Advanced Badge
 	$output = '<div class="' . esc_attr( $class_names ) . '"' . ( $hide ? ' style="display: none;"' : '' ) . '>';
 	$output .= '<span class="asnp-esb-advbadgeCont">';
 	$output .= '<div class="asnp-esb-advbadge1">';
+	$output .= $svgAdv;
 	$output .= '<div class="asnp-esb-advbadge2">';
 	$output .= '<div class="asnp-esb-advbadge3">' . esc_html__( $badge->badgeLabel, 'asnp-easy-whatsapp' ) . '</div>';
 	$output .= '</div>';
@@ -2328,7 +2384,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 	$output .= '</span>';
 	$output .= '</div>';
 
-	$output = apply_filters( 'asnp_wesb_image_badge', $output, $badge, $hide );
+	$output = apply_filters( 'asnp_wesb_advanced_badge', $output, $badge, $hide );
 
 	echo $output;
 }
