@@ -2017,8 +2017,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			$class_names = apply_filters( 'asnp_wesb_timer_badge_class_names', $class_names, $badge, $hide );
 
 			// Timer Badge
-			$output = '<div class="' . esc_attr( $class_names ) . '"' . ( $hide ? ' style="display: none;"' : '' ) . '>';
-			$output .= '<div style="margin-bottom: 15px;" class="asnp-esb-timer1">';
+			$output = '<div class="' . esc_attr( $class_names ) . '"' . ( $hide ? ' ' : ' style="display: none;"' ) . '>';
+			$output .= '<div class="asnp-esb-timer1">';
 			$output .= '<div class="asnp-esb-timer2">';
 			$output .= '<div class="asnp-esb-timer3">3</div>';
 			$output .= '<div class="asnp-esb-timer4">' . esc_html__( $badge->labelDayTimer, 'asnp-easy-whatsapp' ) . '</div>';
