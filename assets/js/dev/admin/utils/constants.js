@@ -760,7 +760,7 @@ export default function BadgeCssandAdv( badge ) {
             text-decoration: none;
             text-align: center;
             font-size: 14px;
-			opacity: ${ badge.opacity };
+			opacity: ${ badge.opacityImg };
 	        top:${ badge.badgePositionY == 'bottom' ? '36px' : '23px' } ;
 			left: ${ badge.badgePositionX == 'right' ? '5px' : '13px' };
 			`;

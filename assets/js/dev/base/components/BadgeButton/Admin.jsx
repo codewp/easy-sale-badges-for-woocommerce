@@ -237,7 +237,6 @@ const Admin = ( {
 								>
 									<span
 										style={ {
-											width: `${ widthContBadge + 5 }`,
 											color: `${ badge.textColor }`,
 											height: '90px',
 											opacity: `${ badge.opacityImg }`,
