@@ -223,9 +223,9 @@ const WooCommerce = ( props ) => {
 					</div>
 					<select
 						className="asnp-block asnp-select-field md:asnp-w-2/3 !asnp-h-12"
-						value={ props.timerBadgePosition }
+						value={ props.timerPosition }
 						onChange={ ( e ) =>
-							props.onChange( 'timerBadgePosition', e.target.value )
+							props.onChange( 'timerPosition', e.target.value )
 						}
 					>
 						<option value="onimage">
