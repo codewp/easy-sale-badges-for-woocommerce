@@ -211,6 +211,39 @@ const WooCommerce = ( props ) => {
 				</label>
 			</div>
 
+			<div>
+				<label className="asnp-block asnp-space-y-2 asnp-max-w-lg">
+					<div className="asnp-flex">
+						<h2 className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
+							{ __(
+								'Timer badge position',
+								'asnp-easy-whatsapp'
+							) }
+						</h2>
+					</div>
+					<select
+						className="asnp-block asnp-select-field md:asnp-w-2/3 !asnp-h-12"
+						value={ props.timerBadgePosition }
+						onChange={ ( e ) =>
+							props.onChange( 'timerBadgePosition', e.target.value )
+						}
+					>
+						<option value="onimage">
+							{ __(
+								'On image',
+								'asnp-easy-whatsapp'
+							) }
+						</option>
+						<option value="outofimage">
+							{ __(
+								'Out of image',
+								'asnp-easy-whatsapp'
+							) }
+						</option>	
+					</select>
+				</label>		
+			</div>
+
 			<button
 				className="asnp-btn asnp-btn-primary asnp-mb-2 asnp-w-[8rem]"
 				type="button"

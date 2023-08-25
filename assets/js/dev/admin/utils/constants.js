@@ -14,6 +14,7 @@ export const defaultSettings = {
 	loopCustomHooks: '',
 	showBadgeProductPage: '',
 	singleContainer: '',
+	timerBadgePosition: 'outofimage',
 	googleAnalytics: 0,
 	facebookPixel: 0,
 	timezone: whatsappData.timezone,
