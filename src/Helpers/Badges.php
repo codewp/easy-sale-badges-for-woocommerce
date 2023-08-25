@@ -4,6 +4,7 @@ namespace AsanaPlugins\WhatsApp\Helpers\Badges;
 
 defined('ABSPATH') || exit;
 
+use function AsanaPlugins\WhatsApp\get_plugin;
 use function AsanaPlugins\WhatsApp\add_custom_style;
 
 function output_badges( $badges, $hide = false ) {
@@ -88,7 +89,7 @@ function output_css_badge( $badge, $hide = false ) {
 		$heightContBadge = $badge->widthBadge . 'px';
 	} elseif ( isset( $badge->widthBadge ) && isset( $badge->badgeStyles ) && (
 			$badge->badgeStyles == 'badge9' ||
-			$badge->badgeStyles == 'badge10' ) 
+			$badge->badgeStyles == 'badge10' )
 		) {
 		$heightContBadge = $badge->heightBadge - 15 . 'px';
 	} elseif ( isset( $badge->heightBadge ) ) {
@@ -1954,11 +1955,11 @@ function output_timer_badge( $badge, $hide = false ) {
 				$dynamic_styles .= ' inset: ' . $insetProperty . ';';
 				}
 				$dynamic_styles .= '}';
-	
+
 				$dynamic_styles .= '.asnp-esb-timer1 {';
 				$dynamic_styles .= ' display: inline-block;';
 				$dynamic_styles .= ' border-radius: 10px;';
-	
+
 				if ( isset( $badge->bgColorTimer ) ) {
 					$dynamic_styles .= ' background-color: ' . $badge->bgColorTimer . ';';
 				}
@@ -1968,20 +1969,20 @@ function output_timer_badge( $badge, $hide = false ) {
 				if ( isset( $badge->opacity ) ) {
 					$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
 				}
-	
+
 				$dynamic_styles .= '}';
-	
+
 				$dynamic_styles .= '.asnp-esb-timer2 {';
 				$dynamic_styles .= ' display: inline-block;';
 				$dynamic_styles .= ' padding: 6px 11px;';
 				$dynamic_styles .= ' width: 59px;';
 				$dynamic_styles .= '}';
-	
+
 				$dynamic_styles .= '.asnp-esb-timer3 {';
 				$dynamic_styles .= ' display: block;';
 				$dynamic_styles .= ' font-weight: 700;';
 				$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
-	
+
 				if ( isset( $badge->fontSizeLabelTimer ) ) {
 					$dynamic_styles .= ' font-size: ' . $badge->fontSizeLabelTimer . 'px;';
 				}
@@ -1989,13 +1990,13 @@ function output_timer_badge( $badge, $hide = false ) {
 					$dynamic_styles .= ' line-height: ' . $badge->lineHeightLabelTimer . 'px;';
 				}
 				$dynamic_styles .= '}';
-	
+
 				$dynamic_styles .= '.asnp-esb-timer4 {';
 				$dynamic_styles .= ' font-weight: 400;';
 				$dynamic_styles .= ' font-size: 10px;';
 				$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
 				$dynamic_styles .= '}';
-	
+
 				break;
 			}
 
@@ -2005,7 +2006,9 @@ function output_timer_badge( $badge, $hide = false ) {
 			add_custom_style( $dynamic_styles );
 
 			$class_names = 'asnp-esb-badge-element asnp-esb-productBadgeTimer';
-			if ( $hide ) {
+			if ( $hide && 'outOfImage' === get_plugin()->settings->get_setting( 'timerPosition', 'outOfImage' ) ) {
+				$class_names .= ' asnp-esb-badge-timer-out-of-image';
+			} elseif ( $hide ) {
 				$class_names .= ' asnp-esb-badge-hidden';
 			}
 
@@ -2193,7 +2196,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 	 } elseif ( ! empty( $badge->vertical ) ) {
 		 $horizAndvert = 'scaleY(-1)';
 	 }
- 
+
 	 if (
 		 isset( $badge->badgeStyles ) && $badge->badgeStyles == 'badge5' &&
 		 isset( $badge->badgePositionY ) && $badge->badgePositionY == 'bottom' &&
@@ -2230,7 +2233,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-advbadgeCont {';				
+			$dynamic_styles .= '.asnp-esb-advbadgeCont {';
 			$dynamic_styles .= ' height: 90px;';
 			$dynamic_styles .= ' position: absolute;';
 
@@ -2261,7 +2264,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-advbadge1 {';				
+			$dynamic_styles .= '.asnp-esb-advbadge1 {';
 			$dynamic_styles .= ' position: relative;';
 			$dynamic_styles .= ' letter-spacing: 0.52px;';
 			$dynamic_styles .= ' display: flex;';
@@ -2283,7 +2286,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-advbadge2 {';				
+			$dynamic_styles .= '.asnp-esb-advbadge2 {';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' padding: 0px 5px;';
 			$dynamic_styles .= ' z-index: 1;';
@@ -2296,7 +2299,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 				$dynamic_styles .= ' background-color: ' . $badge->secondBg . ';';
 			}
 			$dynamic_styles .= '}';
-			$dynamic_styles .= '.asnp-esb-advbadge2::after {';				
+			$dynamic_styles .= '.asnp-esb-advbadge2::after {';
 			$dynamic_styles .= ' content: \'\';';
 			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' width: 0;';
@@ -2311,7 +2314,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-advbadge2::before {';				
+			$dynamic_styles .= '.asnp-esb-advbadge2::before {';
 			$dynamic_styles .= ' content: \'\';';
 			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' width: 0;';
@@ -2327,7 +2330,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-advbadge3 {';				
+			$dynamic_styles .= '.asnp-esb-advbadge3 {';
 			$dynamic_styles .= ' font-weight: 700;';
 			$dynamic_styles .= ' transform: ' . $horizAndvert . 'px;';
 
@@ -2363,8 +2366,8 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 	add_custom_style( $dynamic_styles );
 
-	
-	
+
+
 	$class_names = 'asnp-esb-badge-element asnp-esb-productBadge';
 	if ( $hide ) {
 		$class_names .= ' asnp-esb-badge-hidden';
