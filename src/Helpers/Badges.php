@@ -2005,11 +2005,10 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			add_custom_style( $dynamic_styles );
 
-			$class_names = 'asnp-esb-badge-element';
+			$class_names = 'asnp-esb-badge-element asnp-esb-productBadgeTimer';
 			if ( $hide && 'outOfImage' === get_plugin()->settings->get_setting( 'timerPosition', 'outOfImage' ) ) {
 				$class_names .= ' asnp-esb-badge-timer-out-of-image';
-			} elseif ( $hide && 'onImage' === get_plugin()->settings->get_setting( 'timerPosition', 'onImage' ) ) {
-				$class_names .= ' asnp-esb-productBadgeTimer';
+				$hide        = false;
 			} elseif ( $hide ) {
 				$class_names .= ' asnp-esb-badge-hidden';
 			}
