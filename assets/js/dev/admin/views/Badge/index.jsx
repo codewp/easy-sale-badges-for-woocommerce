@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
 import * as BadgeApi from '@easy-whatsapp/api/badge';
 import Menu from '../../components/WidgetMenu/menu/Menu';
-import WhatsAppButton from '@easy-whatsapp/base-components/WhatsAppButton';
+import BadgeButton from '@easy-whatsapp/base-components/BadgeButton';
 import { BadgesContext, Action } from '../../contexts/Badges';
 import Toggle from '../../components/Toggle';
 import { AppContext } from './../../contexts/App';
@@ -425,7 +425,7 @@ export default function Badge() {
 							/>
 						</div>
 						<div className="asnp-w-full asnp-bg-gray-200 asnp-flex">
-							<WhatsAppButton
+							<BadgeButton
 								IMAGES_URL={ IMAGES_URL }
 								badge={ badge }
 								updateBadge={ updateBadge }

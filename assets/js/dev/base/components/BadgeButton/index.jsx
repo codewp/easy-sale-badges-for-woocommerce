@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { __ } from '@wordpress/i18n';
 import Admin from './Admin';
-import Front from './Front';
+import BadgeCssandAdv from '../../../admin/utils/constants';
+import { toBool } from '../../utils';
 
 import './style.scss';
-import { toBool } from '../../utils';
-import BadgeCssandAdv from '../../../admin/utils/constants';
 
-const WhatsAppButton = ( {
+const BadgeButton = ( {
 	badge,
-	site = 'admin',
 	IMAGES_URL = '',
 	updateBadge,
 } ) => {
@@ -118,22 +116,6 @@ const WhatsAppButton = ( {
 		Label,
 	} = BadgeCssandAdv( badge );
 
-	if ( 'front' === site ) {
-		return (
-			<Front
-				whatsapp={ whatsapp }
-				open={ open }
-				setOpen={ setOpen }
-				loader={ loader }
-				getCaption={ getCaption }
-				icon={ icon }
-				settings={ settings }
-				buttonEl={ buttonEl }
-				getWhatsAppUrl={ getWhatsAppUrl }
-				IMAGES_URL={ IMAGES_URL }
-			/>
-		);
-	}
 	return (
 		<Admin
 			badge={ badge }
@@ -153,4 +135,4 @@ const WhatsAppButton = ( {
 	);
 };
 
-export default WhatsAppButton;
+export default BadgeButton;

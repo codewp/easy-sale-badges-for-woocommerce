@@ -1,10 +1,10 @@
 import React from 'react';
-import WhatsAppButton from '@easy-whatsapp/base-components/WhatsAppButton';
+import BadgeButton from '@easy-whatsapp/base-components/BadgeButton';
 import { getSettings, IMAGES_URL } from '../../utils';
 
 export default function App( { whatsapp } ) {
 	return (
-		<WhatsAppButton
+		<BadgeButton
 			whatsapp={ whatsapp }
 			site="front"
 			settings={ getSettings() }
