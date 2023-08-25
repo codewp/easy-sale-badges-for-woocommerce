@@ -717,6 +717,18 @@ function output_css_badge( $badge, $hide = false ) {
 			if ( isset( $badge->lineHeightText ) ) {
 				$dynamic_styles .= ' line-height: ' . $badge->lineHeightText . 'px;';
 			}
+			if ( isset( $badge->topLeftRadius ) ) {
+				$dynamic_styles .= ' border-top-left-radius: ' . $badge->topLeftRadius . 'px;';
+			}
+			if ( isset( $badge->topRightRadius ) ) {
+				$dynamic_styles .= ' border-top-right-radius: ' . $badge->topRightRadius . 'px;';
+			}
+			if ( isset( $badge->bottomLeftRadius ) ) {
+				$dynamic_styles .= ' border-bottom-left-radius: ' . $badge->bottomLeftRadius . 'px;';
+			}
+			if ( isset( $badge->bottomRightRadius ) ) {
+				$dynamic_styles .= ' border-bottom-right-radius: ' . $badge->bottomRightRadius . 'px;';
+			}
 			if ( isset( $badge->opacity ) ) {
 				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
 			}

@@ -53,6 +53,7 @@ const TextOptions = ( props ) => {
 			props.badgeStyles == 'badge8' ||
 			props.badgeStyles == 'badge9' ||
 			props.badgeStyles == 'badge10' ||
+			props.badgeStyles == 'badge11' ||
 			props.badgeStyles == 'badge12'
 		) {
 			setDisableLineHeight( true );

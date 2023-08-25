@@ -88,26 +88,24 @@ const Admin = ( {
 	let heightContBadge = '';
 	let widthContBadge = '';
 
-	useEffect( () => {		
-		if (
-			badge.badgeStyles == 'badge5' ||
-			badge.badgeStyles == 'badge6' ||
-			badge.badgeStyles == 'badge7' ||
-			badge.badgeStyles == 'badge8' ||
-			badge.badgeStyles == 'badge9' ||
-			badge.badgeStyles == 'badge10'
-		) {
-			heightContBadge = `${ badge.widthBadge }px`;
-		} else {
-			heightContBadge = `${ badge.heightBadge }px`;
-		}
+	if (
+		badge.badgeStyles == 'badge5' ||
+		badge.badgeStyles == 'badge6' ||
+		badge.badgeStyles == 'badge7' ||
+		badge.badgeStyles == 'badge8' ||
+		badge.badgeStyles == 'badge9' ||
+		badge.badgeStyles == 'badge10'
+	) {
+		heightContBadge = `${ badge.widthBadge }px`;
+	} else {
+		heightContBadge = `${ badge.heightBadge }px`;
+	}
 
-		if ( badge.badgeStyles == 'badge11' ) {
-			widthContBadge = '100%';
-		} else {
-			widthContBadge = `${ badge.widthBadge }px`;
-		}
-	}, [ badge.badgeStyles ] );
+	if ( badge.badgeStyles == 'badge11' ) {
+		widthContBadge = '100%';
+	} else {
+		widthContBadge = `${ badge.widthBadge }px`;
+	}
 
 	useEffect( () => {
 		if (
@@ -129,7 +127,14 @@ const Admin = ( {
 			updateBadge( 'topLeftRadius', '0' );
 			updateBadge( 'bottomLeftRadius', '0' );
 		} else if (
-			badge.badgeStyles === 'badge5' &&
+			( badge.badgeStyles === 'badge5' ||
+				badge.badgeStyles === 'badge6' ||
+				badge.badgeStyles === 'badge8' ||
+				badge.badgeStyles === 'badge9' ||
+				badge.badgeStyles === 'badge10' ||
+				badge.badgeStyles === 'badge11' ||
+				badge.badgeStyles === 'badge12' ||
+				badge.badgeStyles === 'badge13' ) &&
 			( badge.badgePositionX === 'right' ||
 				badge.badgePositionX === 'left' )
 		) {
@@ -137,8 +142,9 @@ const Admin = ( {
 			updateBadge( 'bottomRightRadius', '0' );
 			updateBadge( 'topLeftRadius', '0' );
 			updateBadge( 'bottomLeftRadius', '0' );
-		} else if ( badge.badgeStyles == 'badge13' ) {
-			badge.widthBadge = '50';
+		}
+		if ( badge.badgeStyles == 'badge13' ) {
+			updateBadge( 'widthBadge', '50' );
 		}
 	}, [ badge.badgeStyles, badge.badgePositionX ] );
 
