@@ -68,3 +68,10 @@ jQuery( window ).on(
 		init();
 	}
 );
+
+const timerBadge = (timer) => {
+    const {from, to, now} = timer;
+
+}
+
+timerBadge( {from: '2023-08-25', to: '2023-08027', now: '2023-08-25'})

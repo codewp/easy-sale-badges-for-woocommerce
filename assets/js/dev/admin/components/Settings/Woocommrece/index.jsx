@@ -228,13 +228,13 @@ const WooCommerce = ( props ) => {
 							props.onChange( 'timerPosition', e.target.value )
 						}
 					>
-						<option value="onimage">
+						<option value="onImage">
 							{ __(
 								'On image',
 								'asnp-easy-whatsapp'
 							) }
 						</option>
-						<option value="outofimage">
+						<option value="outOfImage">
 							{ __(
 								'Out of image',
 								'asnp-easy-whatsapp'
