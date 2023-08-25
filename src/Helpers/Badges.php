@@ -2006,11 +2006,15 @@ function output_timer_badge( $badge, $hide = false ) {
 			add_custom_style( $dynamic_styles );
 
 			$class_names = 'asnp-esb-badge-element asnp-esb-productBadgeTimer';
-			if ( $hide && 'outOfImage' === get_plugin()->settings->get_setting( 'timerPosition', 'outOfImage' ) ) {
-				$class_names .= ' asnp-esb-badge-timer-out-of-image';
-				$hide        = false;
-			} elseif ( $hide ) {
-				$class_names .= ' asnp-esb-badge-hidden';
+
+			if ( $hide ) {
+				$timer_position = get_plugin()->settings->get_setting( 'timerPosition', 'outOfImage' );
+				if ( 'outOfImage' === $timer_position ) {
+					$class_names .= ' asnp-esb-badge-timer-out-of-image';
+					$hide        = false;
+				} elseif ( 'onImage' === $timer_position ) {
+					$class_names .= ' asnp-esb-badge-hidden asnp-esb-badge-timer-on-image';
+				}
 			}
 
 			$class_names = apply_filters( 'asnp_wesb_timer_badge_class_names', $class_names, $badge, $hide );
