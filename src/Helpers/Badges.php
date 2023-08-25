@@ -1716,7 +1716,7 @@ function output_timer_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '.asnp-esb-timer1 {';
 			$dynamic_styles .= ' display: grid;';
 			$dynamic_styles .= ' border-radius: 10px;';
-			$dynamic_styles .= ' width: 66px;';
+			$dynamic_styles .= ' width: 55px;';
 
 			if ( isset( $badge->bgColorTimer ) ) {
 				$dynamic_styles .= ' background-color: ' . $badge->bgColorTimer . ';';
@@ -1733,8 +1733,8 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '.asnp-esb-timer2 {';
 			$dynamic_styles .= ' display: inline-block;';
-			$dynamic_styles .= ' padding: 6px 11px;';
-			$dynamic_styles .= ' width: 59px;';
+			$dynamic_styles .= ' padding: 6px 13px;';
+			$dynamic_styles .= ' width: 55px;';
 
 			$dynamic_styles .= '}';
 
@@ -1775,7 +1775,7 @@ function output_timer_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '.asnp-esb-timer1 {';
 			$dynamic_styles .= ' display: grid;';
 			$dynamic_styles .= ' gap: 5px;';
-			$dynamic_styles .= ' width: 66px;';
+			$dynamic_styles .= ' width: 55px;';
 
 
 			if ( isset( $badge->textColor ) ) {
@@ -1789,8 +1789,8 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '.asnp-esb-timer2 {';
 			$dynamic_styles .= ' display: inline-block;';
-			$dynamic_styles .= ' padding: 6px 11px;';
-			$dynamic_styles .= ' height: 59px;';
+			$dynamic_styles .= ' padding: 6px 13px;';
+			$dynamic_styles .= ' height: 55px;';
 			$dynamic_styles .= ' border-radius: 10px;';
 
 			if ( isset( $badge->bgColorTimer ) ) {
@@ -1835,7 +1835,7 @@ function output_timer_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '.asnp-esb-timer1 {';
 			$dynamic_styles .= ' display: grid;';
 			$dynamic_styles .= ' gap: 7px;';
-			$dynamic_styles .= ' width: 66px;';
+			$dynamic_styles .= ' width: 55px;';
 
 
 			if ( isset( $badge->textColor ) ) {
@@ -1849,9 +1849,9 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '.asnp-esb-timer2 {';
 			$dynamic_styles .= ' display: inline-block;';
-			$dynamic_styles .= ' padding: 8px 22px;';
+			$dynamic_styles .= ' padding: 7px 19px;';
 			$dynamic_styles .= ' border-radius: 50%;';
-			$dynamic_styles .= ' height: 60px;';
+			$dynamic_styles .= ' height: 55px;';
 
 
 			if ( isset( $badge->bgColorTimer ) ) {
@@ -1897,7 +1897,7 @@ function output_timer_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '.asnp-esb-timer1 {';
 			$dynamic_styles .= ' display: grid;';
 			$dynamic_styles .= ' gap: 7px;';
-			$dynamic_styles .= ' width: 66px;';
+			$dynamic_styles .= ' width: 55px;';
 
 
 			if ( isset( $badge->textColor ) ) {
@@ -1911,9 +1911,9 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '.asnp-esb-timer2 {';
 			$dynamic_styles .= ' display: inline-block;';
-			$dynamic_styles .= ' padding: 8px 22px;';
+			$dynamic_styles .= ' padding: 7px 19px;';
 			$dynamic_styles .= ' border-radius: 50%;';
-			$dynamic_styles .= ' height: 60px;';
+			$dynamic_styles .= ' height: 55px;';
 
 			if ( isset( $badge->bgColorTimer ) ) {
 				$dynamic_styles .= ' border: 2px solid ' . $badge->bgColorTimer . ';';
