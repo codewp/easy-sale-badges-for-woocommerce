@@ -131,7 +131,7 @@ export default function Settings() {
 						singlePosition={ settings.singlePosition }
 						singleCustomHooks={ settings.singleCustomHooks }
 						loopCustomHooks={ settings.loopCustomHooks }
-						timerBadgePosition={ settings.timerBadgePosition }
+						timerPosition={ settings.timerPosition }
 					/>
 				) }
 				{ 'singlepage' === activeMenu && (
