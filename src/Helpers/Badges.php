@@ -2086,7 +2086,7 @@ function output_image_badge( $badge, $hide = false ) {
 
 	 $dynamic_styles = '';
 
-	$dynamic_styles = '.asnp-esb-productBadge {';
+	$dynamic_styles = '.asnp-esb-imgBadge {';
 	if ( isset( $badge->widthBadgeImg ) ) {
 		$dynamic_styles .= ' height: ' . $badge->widthBadgeImg . 'px;';
 	}
@@ -2133,7 +2133,7 @@ function output_image_badge( $badge, $hide = false ) {
 		$image = '<img src="' . esc_url( ASNP_EWHATSAPP_PLUGIN_URL ) . 'assets/images/' . esc_attr( $badge->badgeImage ) . '.png" />';
 	}
 
-	$class_names = 'asnp-esb-badge-element asnp-esb-productBadge';
+	$class_names = 'asnp-esb-badge-element asnp-esb-imgBadge';
 	if ( $hide ) {
 		$class_names .= ' asnp-esb-badge-hidden';
 	}
@@ -2227,7 +2227,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 	 switch ( $badge->badgeAdv ) {
 		case 'bdgAdvanced1':
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$dynamic_styles .= '.asnp-esb-advBadge {';
 			if ( isset( $badge->widthBadgeImg ) ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadgeImg . ';';
 			}
@@ -2373,7 +2373,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 
 
-	$class_names = 'asnp-esb-badge-element asnp-esb-productBadge';
+	$class_names = 'asnp-esb-badge-element asnp-esb-advBadge';
 	if ( $hide ) {
 		$class_names .= ' asnp-esb-badge-hidden';
 	}
