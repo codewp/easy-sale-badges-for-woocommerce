@@ -2289,22 +2289,10 @@ function output_image_adv_badge( $badge, $hide = false ) {
 		case 'bdgAdvanced1':
 			$dynamic_styles .= '.asnp-esb-advBadge {';
 			if ( isset( $badge->widthBadgeImg ) ) {
-				$dynamic_styles .= ' width: ' . $badge->widthBadgeImg . ';';
+				$dynamic_styles .= ' width: ' . $badge->widthBadgeImg . 'px;';
 			}
 			if ( isset( $badge->badgePositionTop ) ) {
 					$dynamic_styles .= ' inset: ' . $insetProperty . ';';
-			}
-			$dynamic_styles .= ' height: 90px;';
-
-			$dynamic_styles .= '}';
-
-			$dynamic_styles .= '.asnp-esb-advbadgeCont {';
-			$dynamic_styles .= ' height: 90px;';
-			$dynamic_styles .= ' position: absolute;';
-
-
-			if ( isset( $badge->textColor ) ) {
-				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
 			}
 			if ( isset( $badge->opacityImg ) ) {
 				$dynamic_styles .= ' opacity: ' . $badge->opacityImg . ';';
@@ -2312,6 +2300,18 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			if ( isset( $badge->zIndexImg ) ) {
 				$dynamic_styles .= ' z-index: ' . $badge->zIndexImg . ';';
 			}
+			$dynamic_styles .= ' height: 90px;';
+
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.asnp-esb-advbadgeCont {';
+			$dynamic_styles .= ' height: 90px;';
+
+
+			if ( isset( $badge->textColor ) ) {
+				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
+			}
+			
 
 			$transform = '';
 			if ( isset( $badge->rotationX ) ) {
@@ -2370,7 +2370,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			$dynamic_styles .= ' width: 0;';
 			$dynamic_styles .= ' height: 0;';
 			$dynamic_styles .= ' top: 5px;';
-			$dynamic_styles .= ' right: -11px;';
+			$dynamic_styles .= ' right: -2px;';
 			$dynamic_styles .= ' border-width: 10px 6px;';
 			$dynamic_styles .= ' border-style: solid;';
 
@@ -2388,7 +2388,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			$dynamic_styles .= ' z-index: -1;';
 			$dynamic_styles .= ' border-width: 10px 6px;';
 			$dynamic_styles .= ' border-style: solid;';
-			$dynamic_styles .= ' left: -11px;';
+			$dynamic_styles .= ' left: -2px;';
 
 			if ( isset( $badge->secondBg ) ) {
 				$dynamic_styles .= ' border-color: ' . $badge->secondBg . '  ' . $badge->secondBg . ' ' . $badge->secondBg . ' transparent !important;';
