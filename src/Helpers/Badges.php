@@ -2284,10 +2284,12 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 	 $dynamic_styles = '';
 	 $svgAdv='';
+	 $adv_uniq='';
 
 	 switch ( $badge->badgeAdv ) {
-		case 'bdgAdvanced1':
-			$dynamic_styles .= '.asnp-esb-advBadge {';
+		 case 'bdgAdvanced1':
+			$adv_uniq='a1';
+			$dynamic_styles .= '.asnp-esb-advBadge-'. $adv_uniq .' {';
 			if ( isset( $badge->widthBadgeImg ) ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadgeImg . 'px;';
 			}
@@ -2304,7 +2306,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-advbadgeCont {';
+			$dynamic_styles .= '.asnp-esb-advbadgeCont-'. $adv_uniq .' {';
 			$dynamic_styles .= ' height: 90px;';
 
 
@@ -2329,7 +2331,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-advbadge1 {';
+			$dynamic_styles .= '.asnp-esb-advbadge1-'. $adv_uniq .' {';
 			$dynamic_styles .= ' position: relative;';
 			$dynamic_styles .= ' letter-spacing: 0.52px;';
 			$dynamic_styles .= ' display: flex;';
@@ -2351,7 +2353,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-advbadge2 {';
+			$dynamic_styles .= '.asnp-esb-advbadge2-'. $adv_uniq .' {';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' padding: 0px 5px;';
 			$dynamic_styles .= ' z-index: 1;';
@@ -2364,13 +2366,13 @@ function output_image_adv_badge( $badge, $hide = false ) {
 				$dynamic_styles .= ' background-color: ' . $badge->secondBg . ';';
 			}
 			$dynamic_styles .= '}';
-			$dynamic_styles .= '.asnp-esb-advbadge2::after {';
+			$dynamic_styles .= '.asnp-esb-advbadge2-'. $adv_uniq .'::after {';
 			$dynamic_styles .= ' content: \'\';';
 			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' width: 0;';
 			$dynamic_styles .= ' height: 0;';
 			$dynamic_styles .= ' top: 5px;';
-			$dynamic_styles .= ' right: -2px;';
+			$dynamic_styles .= ' right: -7px;';
 			$dynamic_styles .= ' border-width: 10px 6px;';
 			$dynamic_styles .= ' border-style: solid;';
 
@@ -2379,7 +2381,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-advbadge2::before {';
+			$dynamic_styles .= '.asnp-esb-advbadge2-'. $adv_uniq .'::before {';
 			$dynamic_styles .= ' content: \'\';';
 			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' width: 0;';
@@ -2388,14 +2390,14 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			$dynamic_styles .= ' z-index: -1;';
 			$dynamic_styles .= ' border-width: 10px 6px;';
 			$dynamic_styles .= ' border-style: solid;';
-			$dynamic_styles .= ' left: 2px;';
+			$dynamic_styles .= ' left: -7px;';
 
 			if ( isset( $badge->secondBg ) ) {
 				$dynamic_styles .= ' border-color: ' . $badge->secondBg . '  ' . $badge->secondBg . ' ' . $badge->secondBg . ' transparent !important;';
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-advbadge3 {';
+			$dynamic_styles .= '.asnp-esb-advbadge3-'. $adv_uniq .' {';
 			$dynamic_styles .= ' font-weight: 700;';
 			$dynamic_styles .= ' transform: ' . $horizAndvert . 'px;';
 
@@ -2425,7 +2427,8 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			</svg>';
 			break;
 		case 'bdgAdvanced2':
-			$dynamic_styles .= '.asnp-esb-advBadge {';
+			$adv_uniq='a2';
+			$dynamic_styles .= '.asnp-esb-advBadge-'. $adv_uniq .' {';
 			if ( isset( $badge->widthBadgeImg ) ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadgeImg . 'px;';
 			}
@@ -2441,7 +2444,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			$dynamic_styles .= ' height: 90px;';
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-advbadgeCont {';
+			$dynamic_styles .= '.asnp-esb-advbadgeCont-'. $adv_uniq .' {';
 			$dynamic_styles .= ' height: 90px;';
 
 
@@ -2466,7 +2469,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-advbadge1 {';
+			$dynamic_styles .= '.asnp-esb-advbadge1-'. $adv_uniq .' {';
 			$dynamic_styles .= ' position: relative;';
 			$dynamic_styles .= ' letter-spacing: 0.52px;';
 			$dynamic_styles .= ' display: flex;';
@@ -2480,7 +2483,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 				$dynamic_styles .= ' opacity: ' . $badge->opacityImg . ';';
 			}
 			if ( isset( $badge->badgePositionY ) ) {
-				$dynamic_styles .= ' top: ' . ( $badge->badgePositionY == 'bottom' ? '36px' : '23px' ) . ';';
+				$dynamic_styles .= ' top: ' . ( $badge->badgePositionY == 'bottom' ? '36px' : '28px' ) . ';';
 			}
 			if ( isset( $badge->badgePositionX ) ) {
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? '5px' : '13px' ) . ';';
@@ -2488,7 +2491,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-advbadge2 {';
+			$dynamic_styles .= '.asnp-esb-advbadge2-'. $adv_uniq .' {';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' padding: 0px 5px;';
 			$dynamic_styles .= ' z-index: 1;';
@@ -2502,7 +2505,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 				$dynamic_styles .= ' background-color: ' . $badge->secondBg . ';';
 			}
 			$dynamic_styles .= '}';
-			$dynamic_styles .= '.asnp-esb-advbadge2::after {';
+			$dynamic_styles .= '.asnp-esb-advbadge2-'. $adv_uniq .'::after {';
 			$dynamic_styles .= ' content: \'\';';
 			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' width: 0;';
@@ -2517,7 +2520,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-advbadge2::before {';
+			$dynamic_styles .= '.asnp-esb-advbadge2-'. $adv_uniq .'::before {';
 			$dynamic_styles .= ' content: \'\';';
 			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' width: 0;';
@@ -2533,7 +2536,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-advbadge3 {';
+			$dynamic_styles .= '.asnp-esb-advbadge3-'. $adv_uniq .' {';
 			$dynamic_styles .= ' font-weight: 700;';
 			$dynamic_styles .= ' transform: ' . $horizAndvert . 'px;';
 
@@ -2678,7 +2681,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 
 
-	$class_names = 'asnp-esb-badge-element asnp-esb-advBadge';
+	$class_names = 'asnp-esb-badge-element asnp-esb-advBadge asnp-esb-advBadge-'. $adv_uniq .'';
 	if ( $hide ) {
 		$class_names .= ' asnp-esb-badge-hidden';
 	}
@@ -2687,11 +2690,11 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 	// Advanced Badge
 	$output = '<div class="' . esc_attr( $class_names ) . '"' . ( $hide ? ' style="display: none;"' : '' ) . '>';
-	$output .= '<span class="asnp-esb-advbadgeCont">';
-	$output .= '<div class="asnp-esb-advbadge1">';
+	$output .= '<span class="asnp-esb-advbadgeCont-'. $adv_uniq .'">';
+	$output .= '<div class="asnp-esb-advbadge1-'. $adv_uniq .'">';
 	$output .= $svgAdv;
-	$output .= '<div class="asnp-esb-advbadge2">';
-	$output .= '<div class="asnp-esb-advbadge3">' . esc_html__( $badge->badgeLabel, 'asnp-easy-whatsapp' ) . '</div>';
+	$output .= '<div class="asnp-esb-advbadge2-'. $adv_uniq .'">';
+	$output .= '<div class="asnp-esb-advbadge3-'. $adv_uniq .'">' . esc_html__( $badge->badgeLabel, 'asnp-easy-whatsapp' ) . '</div>';
 	$output .= '</div>';
 	$output .= '</div>';
 	$output .= '</span>';
