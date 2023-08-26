@@ -2144,8 +2144,9 @@ function output_image_badge( $badge, $hide = false ) {
  	}
 
 	 $dynamic_styles = '';
+	 $img_uniq = $badge->badgeImage;
 
-	$dynamic_styles = '.asnp-esb-imgBadge {';
+	$dynamic_styles = '.asnp-esb-imgBadge-'. $img_uniq .' {';
 	if ( isset( $badge->widthBadgeImg ) ) {
 		$dynamic_styles .= ' height: ' . $badge->widthBadgeImg . 'px;';
 	}
@@ -2164,7 +2165,7 @@ function output_image_badge( $badge, $hide = false ) {
 
 	$dynamic_styles .= '}';
 
-	$dynamic_styles .= '.asnp-esb-badgeImg {';
+	$dynamic_styles .= '.asnp-esb-badgeImg-'. $img_uniq .' {';
 
 	
 	$transform = '';
@@ -2192,7 +2193,7 @@ function output_image_badge( $badge, $hide = false ) {
 		$image = '<img src="' . esc_url( ASNP_EWHATSAPP_PLUGIN_URL ) . 'assets/images/' . esc_attr( $badge->badgeImage ) . '.png" />';
 	}
 
-	$class_names = 'asnp-esb-badge-element asnp-esb-imgBadge';
+	$class_names = 'asnp-esb-badge-element asnp-esb-imgBadge asnp-esb-imgBadge-'. $img_uniq .'';
 	if ( $hide ) {
 		$class_names .= ' asnp-esb-badge-hidden';
 	}
@@ -2201,7 +2202,7 @@ function output_image_badge( $badge, $hide = false ) {
 
 	// Image Badge
 	$output = '<div class="' . esc_attr( $class_names ) . '"' . ( $hide ? ' style="display: none;"' : '' ) . '>';
-	$output .= '<span class="asnp-esb-badgeImg">';
+	$output .= '<span class="asnp-esb-badgeImg-'. $img_uniq .'">';
 	$output .= $image;
 	$output .= '</span>';
 	$output .= '</div>';
