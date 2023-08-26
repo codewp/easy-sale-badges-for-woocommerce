@@ -146,6 +146,11 @@ function output_css_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
+			$dynamic_styles .= ' position: absolute;';
+			$dynamic_styles .= ' text-align: center;';
+			$dynamic_styles .= ' text-shadow: none;';
+			$dynamic_styles .= ' font-weight: 600;';
+			
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background-color: ' . $badge->badgeColor . ';';
 			}
@@ -221,6 +226,10 @@ function output_css_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
+			$dynamic_styles .= ' position: absolute;';
+			$dynamic_styles .= ' text-align: center;';
+			$dynamic_styles .= ' text-shadow: none;';
+			$dynamic_styles .= ' font-weight: 600;';
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background-color: ' . $badge->badgeColor . ';';
 			}
@@ -316,6 +325,10 @@ function output_css_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
+			$dynamic_styles .= ' position: absolute;';
+			$dynamic_styles .= ' text-align: center;';
+			$dynamic_styles .= ' text-shadow: none;';
+			$dynamic_styles .= ' font-weight: 600;';
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background-color: ' . $badge->badgeColor . ';';
 			}
@@ -409,6 +422,10 @@ function output_css_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
+			$dynamic_styles .= ' position: absolute;';
+			$dynamic_styles .= ' text-align: center;';
+			$dynamic_styles .= ' text-shadow: none;';
+			$dynamic_styles .= ' font-weight: 600;';
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background-color: ' . $badge->badgeColor . ';';
 			}
@@ -521,8 +538,11 @@ function output_css_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
-			$dynamic_styles .= ' display: block;';
+			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' text-align: center;';
+			$dynamic_styles .= ' text-shadow: none;';
+			$dynamic_styles .= ' font-weight: 600;';
+			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' overflow: hidden;';
 			$dynamic_styles .= ' z-index: 10;';
 
@@ -603,9 +623,12 @@ function output_css_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
+			$dynamic_styles .= ' position: absolute;';
+			$dynamic_styles .= ' text-align: center;';
+			$dynamic_styles .= ' text-shadow: none;';
+			$dynamic_styles .= ' font-weight: 600;';
 			$dynamic_styles .= ' margin: 0;';
 			$dynamic_styles .= ' padding: 0;';
-			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' top: 0px;';
 			$dynamic_styles .= ' font-weight: 400;';
 			$dynamic_styles .= ' border-radius: 0;';
@@ -706,6 +729,10 @@ function output_css_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
+			$dynamic_styles .= ' position: absolute;';
+			$dynamic_styles .= ' text-align: center;';
+			$dynamic_styles .= ' text-shadow: none;';
+			$dynamic_styles .= ' font-weight: 600;';
 			$dynamic_styles .= ' top: 0px;';
 			$dynamic_styles .= ' z-index: 99;';
 			$dynamic_styles .= ' border-radius: 3px;;';
@@ -797,9 +824,11 @@ function output_css_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
 			$dynamic_styles .= ' position: absolute;';
+			$dynamic_styles .= ' text-align: center;';
+			$dynamic_styles .= ' text-shadow: none;';
+			$dynamic_styles .= ' font-weight: 600;';
 			$dynamic_styles .= ' top: 0px;';
 			$dynamic_styles .= ' left: 0px;';
-			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' border-radius: 50% !important;';
 			$dynamic_styles .= '  z-index: 99;';
 
@@ -877,6 +906,9 @@ function output_css_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
 			$dynamic_styles .= ' position: absolute;';
+			$dynamic_styles .= ' text-align: center;';
+			$dynamic_styles .= ' text-shadow: none;';
+			$dynamic_styles .= ' font-weight: 600;';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' z-index: 1;';
 			$dynamic_styles .= ' top: 0px;';
@@ -974,6 +1006,9 @@ function output_css_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '.asnp-esb-badge {';
 			$dynamic_styles .= ' position: absolute;';
+			$dynamic_styles .= ' text-align: center;';
+			$dynamic_styles .= ' text-shadow: none;';
+			$dynamic_styles .= ' font-weight: 600;';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' z-index: 1;';
 			$dynamic_styles .= ' top: 0px;';
@@ -1052,6 +1087,9 @@ function output_css_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
+			$dynamic_styles .= ' text-align: center;';
+			$dynamic_styles .= ' text-shadow: none;';
+			$dynamic_styles .= ' font-weight: 600;';
 			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' width: 100%;';
@@ -1126,10 +1164,13 @@ function output_css_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
+			$dynamic_styles .= ' position: absolute;';
+			$dynamic_styles .= ' text-align: center;';
+			$dynamic_styles .= ' text-shadow: none;';
+			$dynamic_styles .= ' font-weight: 600;';
 			$dynamic_styles .= ' display: inline-block;';
 			$dynamic_styles .= ' padding: 0px 7px;';
 			$dynamic_styles .= ' text-align: center;';
-			$dynamic_styles .= ' position: relative;';
 			$dynamic_styles .= ' font-size: 14px;';
 			$dynamic_styles .= ' font-weight: 400;';
 			$dynamic_styles .= ' height:  30px !important;';
@@ -1241,6 +1282,9 @@ function output_css_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
+			$dynamic_styles .= ' text-align: center;';
+			$dynamic_styles .= ' text-shadow: none;';
+			$dynamic_styles .= ' font-weight: 600;';
 			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' display: inline-block;';
 			$dynamic_styles .= ' position: absolute;';
