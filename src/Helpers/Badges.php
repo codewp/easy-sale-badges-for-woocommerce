@@ -1004,7 +1004,7 @@ function output_css_badge( $badge, $hide = false ) {
 				}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
 			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' text-shadow: none;';
