@@ -128,10 +128,12 @@ function output_css_badge( $badge, $hide = false ) {
 	}
 
 	$dynamic_styles = '';
+	$badge_css='';
 
 	switch ( $badge->badgeStyles ) {
 		case 'badge1':
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$badge_css ='b1';
+			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 			if ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $widthContBadge . ';';
 			}
@@ -143,7 +145,7 @@ function output_css_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background-color: ' . $badge->badgeColor . ';';
 			}
@@ -205,7 +207,8 @@ function output_css_badge( $badge, $hide = false ) {
 			break;
 
 		case 'badge2':
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$badge_css ='b2';
+			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
 				}
@@ -217,7 +220,7 @@ function output_css_badge( $badge, $hide = false ) {
 				}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background-color: ' . $badge->badgeColor . ';';
 			}
@@ -276,7 +279,7 @@ function output_css_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge::before {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .'::before {';
 			$dynamic_styles .= ' border-left-color: transparent !important;';
 			$dynamic_styles .= ' display: inline-block;';
 			$dynamic_styles .= ' content: \'\';';
@@ -299,7 +302,8 @@ function output_css_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '}';
 		break;
 		case 'badge3':
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$badge_css ='b3';
+			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
 				}
@@ -311,7 +315,7 @@ function output_css_badge( $badge, $hide = false ) {
 				}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background-color: ' . $badge->badgeColor . ';';
 			}
@@ -370,7 +374,7 @@ function output_css_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge::after {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .'::after {';
 			$dynamic_styles .= ' width: 20px;';
 			$dynamic_styles .= ' height: 100%;';
 			$dynamic_styles .= ' bottom: 0px;';
@@ -391,7 +395,8 @@ function output_css_badge( $badge, $hide = false ) {
 		break;
 
 		case 'badge4':
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$badge_css ='b4';
+			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
 				}
@@ -403,7 +408,7 @@ function output_css_badge( $badge, $hide = false ) {
 				}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background-color: ' . $badge->badgeColor . ';';
 			}
@@ -465,7 +470,7 @@ function output_css_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge::after {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .'::after {';
 			$dynamic_styles .= ' content: \'\';';
 			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' display: block;';
@@ -480,7 +485,7 @@ function output_css_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge::before {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .'::before {';
 			$dynamic_styles .= ' top: 0px;';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' width: 0;';
@@ -502,7 +507,8 @@ function output_css_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '}';
 		break;
 		case 'badge5':
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$badge_css ='b5';
+			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
 				}
@@ -514,7 +520,7 @@ function output_css_badge( $badge, $hide = false ) {
 				}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' overflow: hidden;';
@@ -561,7 +567,7 @@ function output_css_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-inner-span1 {';
+			$dynamic_styles .= '.asnp-esb-inner-span1-'. $badge_css .' {';
 			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' z-index: 12;';
@@ -583,7 +589,8 @@ function output_css_badge( $badge, $hide = false ) {
 		break;
 
 		case 'badge6':
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$badge_css ='b6';
+			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
 				}
@@ -595,7 +602,7 @@ function output_css_badge( $badge, $hide = false ) {
 				}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
 			$dynamic_styles .= ' margin: 0;';
 			$dynamic_styles .= ' padding: 0;';
 			$dynamic_styles .= ' text-align: center;';
@@ -649,7 +656,7 @@ function output_css_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-inner-span2 {';
+			$dynamic_styles .= '.asnp-esb-inner-span2-'. $badge_css .' {';
 				$dynamic_styles .= ' width: 0;';
 				$dynamic_styles .= ' height: 0;';
 				$dynamic_styles .= ' display: block;';
@@ -665,7 +672,7 @@ function output_css_badge( $badge, $hide = false ) {
 				}
 				$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-inner-span1 {';
+			$dynamic_styles .= '.asnp-esb-inner-span1-'. $badge_css .' {';
 			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' z-index: 14;';
 			$dynamic_styles .= ' top: 4.02px;';
@@ -685,7 +692,8 @@ function output_css_badge( $badge, $hide = false ) {
 		break;
 
 		case 'badge7':
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$badge_css ='b7';
+			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
 				}
@@ -697,7 +705,7 @@ function output_css_badge( $badge, $hide = false ) {
 				}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
 			$dynamic_styles .= ' top: 0px;';
 			$dynamic_styles .= ' z-index: 99;';
 			$dynamic_styles .= ' border-radius: 3px;;';
@@ -763,7 +771,7 @@ function output_css_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-inner-span1 {';
+			$dynamic_styles .= '.asnp-esb-inner-span1-'. $badge_css .' {';
 			$dynamic_styles .= ' transform: translateY(-50%);';
 			$dynamic_styles .= ' position: relative;';
 			$dynamic_styles .= ' line-height: 16px;';
@@ -774,7 +782,8 @@ function output_css_badge( $badge, $hide = false ) {
 		break;
 
 		case 'badge8':
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$badge_css ='b8';
+			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
 				}
@@ -786,7 +795,7 @@ function output_css_badge( $badge, $hide = false ) {
 				}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
 			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' top: 0px;';
 			$dynamic_styles .= ' left: 0px;';
@@ -842,7 +851,7 @@ function output_css_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-inner-span1 {';
+			$dynamic_styles .= '.asnp-esb-inner-span1-'. $badge_css .' {';
 			$dynamic_styles .= ' transform: translateY(-50%);';
 			$dynamic_styles .= ' position: relative;';
 			$dynamic_styles .= ' line-height: 16px;';
@@ -853,7 +862,8 @@ function output_css_badge( $badge, $hide = false ) {
 		break;
 
 		case 'badge9':
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$badge_css ='b9';
+			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
 				}
@@ -865,7 +875,7 @@ function output_css_badge( $badge, $hide = false ) {
 				}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
 			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' z-index: 1;';
@@ -924,7 +934,7 @@ function output_css_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge::after {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .'::after {';
 			$dynamic_styles .= ' content: \'\';';
 			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' height: 0;';
@@ -938,7 +948,7 @@ function output_css_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-inner-span1 {';
+			$dynamic_styles .= '.asnp-esb-inner-span1-'. $badge_css .' {';
 			$dynamic_styles .= ' transform: translateY(-50%);';
 			$dynamic_styles .= ' position: relative;';
 			$dynamic_styles .= ' line-height: 16px;';
@@ -949,7 +959,8 @@ function output_css_badge( $badge, $hide = false ) {
 		break;
 
 		case 'badge10':
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$badge_css ='b10';
+			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
 				}
@@ -1017,7 +1028,7 @@ function output_css_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-inner-span1 {';
+			$dynamic_styles .= '.asnp-esb-inner-span1-'. $badge_css .' {';
 			$dynamic_styles .= ' transform: translateY(-50%);';
 			$dynamic_styles .= ' position: relative;';
 			$dynamic_styles .= ' line-height: 16px;';
@@ -1027,7 +1038,8 @@ function output_css_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '}';
 		break;
 		case 'badge11':
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$badge_css ='b11';
+			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
 				}
@@ -1039,7 +1051,7 @@ function output_css_badge( $badge, $hide = false ) {
 				}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
 			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' width: 100%;';
@@ -1092,7 +1104,7 @@ function output_css_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-inner-span1 {';
+			$dynamic_styles .= '.asnp-esb-inner-span1-'. $badge_css .' {';
 			$dynamic_styles .= ' transform: translateY(-50%);';
 			$dynamic_styles .= ' position: relative;';
 			$dynamic_styles .= ' line-height: 16px;';
@@ -1103,7 +1115,8 @@ function output_css_badge( $badge, $hide = false ) {
 		break;
 
 		case 'badge12':
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$badge_css ='b12';
+			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 			if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
 			}
@@ -1112,7 +1125,7 @@ function output_css_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
 			$dynamic_styles .= ' display: inline-block;';
 			$dynamic_styles .= ' padding: 0px 7px;';
 			$dynamic_styles .= ' text-align: center;';
@@ -1174,7 +1187,7 @@ function output_css_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge::after {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .'::after {';
 			$dynamic_styles .= ' right: -5px;';
 			$dynamic_styles .= ' top: -5px;';
 			$dynamic_styles .= ' width: 0;';
@@ -1193,7 +1206,7 @@ function output_css_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge::before {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .'::before {';
 			$dynamic_styles .= ' left: -7px;';
 			$dynamic_styles .= ' top: 8px;';
 			$dynamic_styles .= ' width: 0;';
@@ -1214,7 +1227,8 @@ function output_css_badge( $badge, $hide = false ) {
 
 		break;
 		case 'badge13':
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$badge_css ='b13';
+			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
 				}
@@ -1226,7 +1240,7 @@ function output_css_badge( $badge, $hide = false ) {
 				}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
 			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' display: inline-block;';
 			$dynamic_styles .= ' position: absolute;';
@@ -1282,7 +1296,7 @@ function output_css_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge::before {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .'::before {';
 			$dynamic_styles .= ' border-left-color: transparent !important;';
 			$dynamic_styles .= ' display: inline-block;';
 			$dynamic_styles .= ' position: absolute;';
@@ -1309,7 +1323,8 @@ function output_css_badge( $badge, $hide = false ) {
 		break;
 
 		default:
-			$dynamic_styles .= '.asnp-esb-productBadge {';
+			$badge_css ='b1';
+			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 			if ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $widthContBadge . ';';
 			}
@@ -1321,7 +1336,7 @@ function output_css_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-badge {';
+			$dynamic_styles .= '.asnp-esb-badge-'. $badge_css .' {';
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background-color: ' . $badge->badgeColor . ';';
 			}
@@ -1388,7 +1403,7 @@ function output_css_badge( $badge, $hide = false ) {
 
 	add_custom_style( $dynamic_styles );
 
-	$class_names = 'asnp-esb-badge-element asnp-esb-productBadge';
+	$class_names = 'asnp-esb-badge-element asnp-esb-productBadge asnp-esb-productBadge-'. $badge_css .' ';
 	if ( $hide ) {
 		$class_names .= ' asnp-esb-badge-hidden';
 	}
@@ -1397,9 +1412,9 @@ function output_css_badge( $badge, $hide = false ) {
 
 	// Css Badge
 	$output = '<div class="' . esc_attr( $class_names ) . '"' . ( $hide ? ' style="display: none;"' : '' ) . '>';
-	$output .= '<div class="asnp-esb-badge">';
-	$output .= '<span class="asnp-esb-inner-span2"></span>';
-	$output .= '<div class="asnp-esb-inner-span1">';
+	$output .= '<div class="asnp-esb-badge-'. $badge_css .'">';
+	$output .= '<span class="asnp-esb-inner-span2-'. $badge_css .'"></span>';
+	$output .= '<div class="asnp-esb-inner-span1-'. $badge_css .'">';
 	$output .= '<div style="transform: ' . esc_attr( $horizAndvert ) . '">' . esc_html__( $badge->badgeLabel, 'asnp-easy-whatsapp' ) . '</div>';
 	$output .= '</div>';
 	$output .= '</div>';
