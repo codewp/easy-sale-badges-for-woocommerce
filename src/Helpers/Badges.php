@@ -2096,18 +2096,18 @@ function output_image_badge( $badge, $hide = false ) {
 	if ( isset( $badge->badgePositionTop ) ) {
 		$dynamic_styles .= ' inset: ' . $insetProperty . ';';
 	}
-	$dynamic_styles .= '}';
-
-	$dynamic_styles .= '.asnp-esb-badgeImg {';
-	$dynamic_styles .= ' position: absolute;';
-
-	if ( isset( $badge->opacityImg ) ) {
-		$dynamic_styles .= ' opacity: ' . $badge->opacityImg . ';';
-	}
 	if ( isset( $badge->zIndexImg ) ) {
 		$dynamic_styles .= ' z-index: ' . $badge->zIndexImg . ';';
 	}
+	if ( isset( $badge->opacityImg ) ) {
+		$dynamic_styles .= ' opacity: ' . $badge->opacityImg . ';';
+	}
 
+	$dynamic_styles .= '}';
+
+	$dynamic_styles .= '.asnp-esb-badgeImg {';
+
+	
 	$transform = '';
 	if ( isset( $badge->rotationXImg ) ) {
 		$transform .= ' rotateX(' . esc_html( $badge->rotationXImg ) . 'deg)';
