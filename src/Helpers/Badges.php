@@ -2388,7 +2388,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			$dynamic_styles .= ' z-index: -1;';
 			$dynamic_styles .= ' border-width: 10px 6px;';
 			$dynamic_styles .= ' border-style: solid;';
-			$dynamic_styles .= ' left: -2px;';
+			$dynamic_styles .= ' left: 2px;';
 
 			if ( isset( $badge->secondBg ) ) {
 				$dynamic_styles .= ' border-color: ' . $badge->secondBg . '  ' . $badge->secondBg . ' ' . $badge->secondBg . ' transparent !important;';
@@ -2421,6 +2421,251 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			stroke="#EBEBEB"
 			strokeWidth="4"
 			strokeMiterlimit="10"
+			/>
+			</svg>';
+			break;
+		case 'bdgAdvanced2':
+			$dynamic_styles .= '.asnp-esb-advBadge {';
+			if ( isset( $badge->widthBadgeImg ) ) {
+				$dynamic_styles .= ' width: ' . $badge->widthBadgeImg . 'px;';
+			}
+			if ( isset( $badge->badgePositionTop ) ) {
+					$dynamic_styles .= ' inset: ' . $insetProperty . ';';
+			}
+			if ( isset( $badge->opacityImg ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityImg . ';';
+			}
+			if ( isset( $badge->zIndexImg ) ) {
+				$dynamic_styles .= ' z-index: ' . $badge->zIndexImg . ';';
+			}
+			$dynamic_styles .= ' height: 90px;';
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.asnp-esb-advbadgeCont {';
+			$dynamic_styles .= ' height: 90px;';
+
+
+			if ( isset( $badge->textColor ) ) {
+				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
+			}
+			
+
+			$transform = '';
+			if ( isset( $badge->rotationX ) ) {
+				$transform .= ' rotateX(' . esc_html( $badge->rotationX ) . 'deg)';
+			}
+			if ( isset( $badge->rotationY ) ) {
+				$transform .= ' rotateY(' . esc_html( $badge->rotationY ) . 'deg) ';
+			}
+			if ( isset( $badge->rotationZ ) ) {
+				$transform .= ' rotateZ(' . esc_html( $badge->rotationZ ) . 'deg);';
+			}
+			if ( ! empty( $transform ) ) {
+				$dynamic_styles .= ' transform:' . $transform;
+			}
+
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.asnp-esb-advbadge1 {';
+			$dynamic_styles .= ' position: relative;';
+			$dynamic_styles .= ' letter-spacing: 0.52px;';
+			$dynamic_styles .= ' display: flex;';
+			$dynamic_styles .= ' justify-content: center;';
+			$dynamic_styles .= ' align-items: center;';
+			$dynamic_styles .= ' text-decoration: none;';
+			$dynamic_styles .= ' text-align: center;';
+			$dynamic_styles .= ' font-size: 14px;';
+
+			if ( isset( $badge->opacityImg ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityImg . ';';
+			}
+			if ( isset( $badge->badgePositionY ) ) {
+				$dynamic_styles .= ' top: ' . ( $badge->badgePositionY == 'bottom' ? '36px' : '23px' ) . ';';
+			}
+			if ( isset( $badge->badgePositionX ) ) {
+				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? '5px' : '13px' ) . ';';
+			}
+
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.asnp-esb-advbadge2 {';
+			$dynamic_styles .= ' display: block;';
+			$dynamic_styles .= ' padding: 0px 5px;';
+			$dynamic_styles .= ' z-index: 1;';
+			$dynamic_styles .= ' width: 80px;';
+			$dynamic_styles .= ' height: 22px;';
+			$dynamic_styles .= ' margin-top:5px;';
+			$dynamic_styles .= ' line-height: 20px;';
+			$dynamic_styles .= ' text-transform: uppercase;';
+
+			if ( isset( $badge->secondBg ) ) {
+				$dynamic_styles .= ' background-color: ' . $badge->secondBg . ';';
+			}
+			$dynamic_styles .= '}';
+			$dynamic_styles .= '.asnp-esb-advbadge2::after {';
+			$dynamic_styles .= ' content: \'\';';
+			$dynamic_styles .= ' position: absolute;';
+			$dynamic_styles .= ' width: 0;';
+			$dynamic_styles .= ' height: 0;';
+			$dynamic_styles .= ' top: 0px;';
+			$dynamic_styles .= ' right: -7px;';
+			$dynamic_styles .= ' border-width: 10px 6px;';
+			$dynamic_styles .= ' border-style: solid;';
+
+			if ( isset( $badge->secondBg ) ) {
+				$dynamic_styles .= ' border-color: ' . $badge->secondBg . ' transparent ' . $badge->secondBg . ' ' . $badge->secondBg . ' !important;';
+			}
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.asnp-esb-advbadge2::before {';
+			$dynamic_styles .= ' content: \'\';';
+			$dynamic_styles .= ' position: absolute;';
+			$dynamic_styles .= ' width: 0;';
+			$dynamic_styles .= ' height: 0;';
+			$dynamic_styles .= ' top: 0px;';
+			$dynamic_styles .= ' z-index: -1;';
+			$dynamic_styles .= ' border-width: 10px 6px;';
+			$dynamic_styles .= ' border-style: solid;';
+			$dynamic_styles .= ' left: -7px;';
+
+			if ( isset( $badge->secondBg ) ) {
+				$dynamic_styles .= ' border-color: ' . $badge->secondBg . '  ' . $badge->secondBg . ' ' . $badge->secondBg . ' transparent !important;';
+			}
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.asnp-esb-advbadge3 {';
+			$dynamic_styles .= ' font-weight: 700;';
+			$dynamic_styles .= ' transform: ' . $horizAndvert . 'px;';
+
+			if ( isset( $badge->fontSizeText ) ) {
+				$dynamic_styles .= ' font-size: ' . $badge->fontSizeText . 'px;';
+			}
+			$dynamic_styles .= '}';
+
+			$svgAdv.='
+			<svg
+			class="asnp-esb-svg1"
+			width="135"
+			height="142"
+			viewBox="0 0 135 142"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+			>
+			<path
+				d="M67.5 141.44C58.3874 141.44 49.548 139.57 41.2232 135.881C33.1853 132.317 25.9671 127.222 19.7691 120.728C13.571 114.234 8.70276 106.672 5.30544 98.2503C1.78517 89.5284 0 80.2673 0 70.72C0 61.1726 1.78517 51.9116 5.30544 43.1897C8.70731 34.7683 13.571 27.2059 19.7691 20.7121C25.9671 14.2184 33.1853 9.11792 41.2232 5.55855C49.548 1.87034 58.3874 0 67.5 0C76.6126 0 85.452 1.87034 93.7768 5.55855C101.815 9.1227 109.033 14.2184 115.231 20.7121C121.429 27.2059 126.297 34.7683 129.695 43.1897C133.215 51.9116 135 61.1726 135 70.72C135 80.2673 133.215 89.5284 129.695 98.2503C126.293 106.672 121.429 114.234 115.231 120.728C109.033 127.222 101.815 132.322 93.7768 135.881C85.452 139.57 76.6126 141.44 67.5 141.44Z"
+				fill="' . $badge->mainBg . '" />
+				/>
+			<path
+				d="M68.347 9.53781C69.0028 10.1151 69.0848 11.1362 68.5383 11.8233C67.9873 12.5103 67.0127 12.5962 66.3569 12.0236C65.7011 11.4463 65.6192 10.4253 66.1656 9.7382C66.7167 9.05113 67.6912 8.96049 68.347 9.53781Z"
+				fill="white"
+			/>
+			<path
+				d="M68.347 129.412C69.0028 129.989 69.0848 131.01 68.5383 131.697C67.9873 132.384 67.0127 132.47 66.3569 131.897C65.7011 131.32 65.6192 130.299 66.1656 129.612C66.7167 128.925 67.6912 128.839 68.347 129.412Z"
+				fill="white"
+			/>
+			<path
+				d="M11.1392 67.8524C11.7949 68.4298 11.8769 69.4508 11.3304 70.1379C10.7794 70.825 9.80483 70.9108 9.14904 70.3383C8.49326 69.761 8.4113 68.7399 8.95778 68.0529C9.50427 67.3658 10.4834 67.2751 11.1392 67.8524Z"
+				fill="white"
+			/>
+			<path
+				d="M12.6875 56.8976C13.3433 57.4749 13.4253 58.496 12.8788 59.183C12.3278 59.8701 11.3532 59.956 10.6974 59.3834C10.0416 58.8061 9.95968 57.785 10.5062 57.098C11.0527 56.4109 12.0318 56.3203 12.6875 56.8976Z"
+				fill="white"
+			/>
+			<path
+				d="M13.2022 82.2808C13.3843 83.154 12.856 84.0224 12.0226 84.2132C11.1893 84.4041 10.3604 83.8506 10.1783 82.9774C9.9961 82.1043 10.5244 81.2359 11.3578 81.0451C12.1957 80.8542 13.02 81.4077 13.2022 82.2808Z"
+				fill="white"
+			/>
+			<path
+				d="M17.9976 96.0794C18.1797 96.9526 17.6515 97.8209 16.8181 98.0118C15.9847 98.2026 15.1558 97.6492 14.9737 96.776C14.7915 95.9029 15.3198 95.0345 16.1532 94.8436C16.9911 94.648 17.8154 95.2015 17.9976 96.0794Z"
+				fill="white"
+			/>
+			<path
+				d="M26.2313 109.969C26.4134 110.842 25.8852 111.71 25.0518 111.901C24.2184 112.092 23.3895 111.538 23.2074 110.665C23.0252 109.792 23.5535 108.924 24.3869 108.733C25.2203 108.537 26.0491 109.091 26.2313 109.969Z"
+				fill="white"
+			/>
+			<path
+				d="M38.0399 120.227C38.2221 121.1 37.6938 121.968 36.8604 122.159C36.027 122.35 35.1982 121.797 35.016 120.923C34.8338 120.05 35.3621 119.182 36.1955 118.991C37.0335 118.796 37.8577 119.349 38.0399 120.227Z"
+				fill="white"
+			/>
+			<path
+				d="M52.3123 127.274C52.4944 128.147 51.9661 129.016 51.1328 129.206C50.2994 129.397 49.4705 128.844 49.2884 127.971C49.1062 127.098 49.6345 126.229 50.4679 126.038C51.3013 125.847 52.1301 126.401 52.3123 127.274Z"
+				fill="white"
+			/>
+			<path
+				d="M15.9346 45.3129C16.5904 45.8902 16.6723 46.9113 16.1258 47.5984C15.5748 48.2854 14.6002 48.3713 13.9445 47.7987C13.2887 47.2214 13.2067 46.2004 13.7532 45.5133C14.2997 44.8262 15.2788 44.7356 15.9346 45.3129Z"
+				fill="white"
+			/>
+			<path
+				d="M21.5861 34.8399C22.2419 35.4173 22.3239 36.4383 21.7774 37.1254C21.2264 37.8125 20.2518 37.8983 19.596 37.3258C18.9402 36.7485 18.8583 35.7274 19.4048 35.0403C19.9512 34.3485 20.9303 34.2626 21.5861 34.8399Z"
+				fill="white"
+			/>
+			<path
+				d="M28.4218 26.3089C29.0775 26.8862 29.1595 27.9072 28.613 28.5943C28.062 29.2814 27.0874 29.3673 26.4316 28.7947C25.7759 28.2174 25.6939 27.1963 26.2404 26.5093C26.7914 25.8222 27.7705 25.7315 28.4218 26.3089Z"
+				fill="white"
+			/>
+			<path
+				d="M37.5253 18.3885C38.1811 18.9659 38.2631 19.9869 37.7166 20.674C37.1655 21.3611 36.1909 21.447 35.5352 20.8744C34.8794 20.2971 34.7974 19.276 35.3439 18.5889C35.8904 17.9019 36.8695 17.8112 37.5253 18.3885Z"
+				fill="white"
+			/>
+			<path
+				d="M47.5897 13.3644C48.2455 13.9417 48.3275 14.9628 47.781 15.6498C47.23 16.3369 46.2554 16.4228 45.5996 15.8502C44.9438 15.2729 44.8619 14.2519 45.4083 13.5648C45.9594 12.8777 46.9385 12.7918 47.5897 13.3644Z"
+				fill="white"
+			/>
+			<path
+				d="M57.9684 10.473C58.6242 11.0503 58.7061 12.0714 58.1596 12.7584C57.6086 13.4455 56.634 13.5314 55.9783 12.9588C55.3225 12.3815 55.2405 11.3605 55.787 10.6734C56.338 9.98632 57.3126 9.89566 57.9684 10.473Z"
+				fill="white"
+			/>
+			<path
+				d="M123.865 67.8524C123.21 68.4298 123.128 69.4508 123.674 70.1379C124.225 70.825 125.2 70.9108 125.855 70.3383C126.511 69.761 126.593 68.7399 126.047 68.0529C125.496 67.3658 124.517 67.2751 123.865 67.8524Z"
+				fill="white"
+			/>
+			<path
+				d="M122.317 56.8976C121.661 57.4749 121.579 58.496 122.126 59.183C122.677 59.8701 123.651 59.956 124.307 59.3834C124.963 58.8061 125.045 57.785 124.498 57.098C123.947 56.4109 122.968 56.3203 122.317 56.8976Z"
+				fill="white"
+			/>
+			<path
+				d="M121.798 82.2808C121.616 83.154 122.144 84.0224 122.977 84.2132C123.811 84.4041 124.64 83.8506 124.822 82.9774C125.004 82.1043 124.476 81.2359 123.642 81.0451C122.809 80.8542 121.98 81.4077 121.798 82.2808Z"
+				fill="white"
+			/>
+			<path
+				d="M117.002 96.0794C116.82 96.9526 117.349 97.8209 118.182 98.0118C119.015 98.2026 119.844 97.6492 120.026 96.776C120.208 95.9029 119.68 95.0345 118.847 94.8436C118.009 94.648 117.185 95.2015 117.002 96.0794Z"
+				fill="white"
+			/>
+			<path
+				d="M108.769 109.969C108.587 110.842 109.115 111.71 109.948 111.901C110.782 112.092 111.61 111.538 111.793 110.665C111.975 109.792 111.446 108.924 110.613 108.733C109.78 108.537 108.951 109.091 108.769 109.969Z"
+				fill="white"
+			/>
+			<path
+				d="M96.9601 120.227C96.7779 121.1 97.3062 121.968 98.1396 122.159C98.973 122.35 99.8018 121.797 99.984 120.923C100.166 120.05 99.6378 119.182 98.8044 118.991C97.9711 118.8 97.1422 119.349 96.9601 120.227Z"
+				fill="white"
+			/>
+			<path
+				d="M82.6877 127.274C82.5056 128.147 83.0338 129.016 83.8672 129.206C84.7006 129.397 85.5294 128.844 85.7116 127.971C85.8938 127.098 85.3655 126.229 84.5321 126.038C83.6987 125.847 82.8699 126.401 82.6877 127.274Z"
+				fill="white"
+			/>
+			<path
+				d="M119.065 45.3129C118.41 45.8902 118.328 46.9113 118.874 47.5984C119.425 48.2854 120.4 48.3713 121.056 47.7987C121.711 47.2214 121.793 46.2004 121.247 45.5133C120.7 44.8262 119.721 44.7356 119.065 45.3129Z"
+				fill="white"
+			/>
+			<path
+				d="M113.418 34.8399C112.763 35.4173 112.681 36.4383 113.227 37.1254C113.778 37.8125 114.753 37.8983 115.408 37.3258C116.064 36.7485 116.146 35.7274 115.6 35.0403C115.049 34.3485 114.07 34.2626 113.418 34.8399Z"
+				fill="white"
+			/>
+			<path
+				d="M106.578 26.3089C105.922 26.8862 105.84 27.9073 106.387 28.5943C106.938 29.2814 107.913 29.3673 108.568 28.7947C109.224 28.2174 109.306 27.1964 108.76 26.5093C108.209 25.8222 107.234 25.7316 106.578 26.3089Z"
+				fill="white"
+			/>
+			<path
+				d="M97.4792 18.3885C96.8235 18.9659 96.7415 19.9869 97.288 20.674C97.839 21.3611 98.8136 21.447 99.4693 20.8744C100.125 20.2971 100.207 19.276 99.6606 18.5889C99.1096 17.9019 98.1305 17.8112 97.4792 18.3885Z"
+				fill="white"
+			/>
+			<path
+				d="M87.4103 13.3644C86.7545 13.9417 86.6725 14.9628 87.219 15.6498C87.77 16.3369 88.7446 16.4228 89.4004 15.8502C90.0562 15.2729 90.1381 14.2519 89.5917 13.5648C89.0406 12.8777 88.0661 12.7918 87.4103 13.3644Z"
+				fill="white"
+			/>
+			<path
+				d="M77.0316 10.473C76.3758 11.0503 76.2938 12.0714 76.8403 12.7584C77.3914 13.4455 78.3659 13.5314 79.0217 12.9588C79.6775 12.3815 79.7595 11.3605 79.213 10.6734C78.662 9.98632 77.6874 9.89566 77.0316 10.473Z"
+				fill="white"
 			/>
 			</svg>';
 			break;
