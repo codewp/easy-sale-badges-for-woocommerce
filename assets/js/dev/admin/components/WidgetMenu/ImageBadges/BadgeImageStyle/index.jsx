@@ -26,7 +26,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bigSale1' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bigSale1.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -46,7 +49,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bigSale2' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bigSale2.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -66,7 +72,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bigSale3' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bigSale3.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -86,7 +95,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bigSale4' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bigSale4.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -106,7 +118,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bigSale5' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bigSale5.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -128,7 +143,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'sale1' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'sale1.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -148,7 +166,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'sale2' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'sale2.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -168,7 +189,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'sale3' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'sale3.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -188,7 +212,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'sale4' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'sale4.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -208,7 +235,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'sale5' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'sale5.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -230,7 +260,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'sale6' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'sale6.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -250,7 +283,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bigSaleCir1' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bigSaleCir1.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -270,7 +306,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bigSaleCir2' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bigSaleCir2.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -290,7 +329,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bigSaleCir3' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bigSaleCir3.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -310,7 +352,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bigSaleCir4' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bigSaleCir4.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -335,7 +380,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'bigSalBanneer1'
+									IMAGES_URL + 'bigSalBanneer1.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -358,7 +403,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'bigSalBanneerr2'
+									IMAGES_URL + 'bigSalBanneerr2.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -381,7 +426,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'bigSalBanneer3'
+									IMAGES_URL + 'bigSalBanneer3.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -404,7 +449,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'bigSalBanneer4'
+									IMAGES_URL + 'bigSalBanneer4.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -427,7 +472,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'bigSalBanneer5'
+									IMAGES_URL + 'bigSalBanneer5.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -450,7 +495,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-pt-6 asnp-pr-2 asnp-pl-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bigSaleFont1' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bigSaleFont1.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -470,7 +518,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-pt-6 asnp-pr-2 asnp-pl-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bigSaleFont2' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bigSaleFont2.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -490,7 +541,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-pt-6 asnp-pr-2 asnp-pl-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bigSaleFont3' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bigSaleFont3.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -510,7 +564,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-pt-6 asnp-pr-2 asnp-pl-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bigSaleFont4' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bigSaleFont4.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -530,7 +587,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-pt-6 asnp-pr-2 asnp-pl-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bigSaleFont5' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bigSaleFont5.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -552,7 +612,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'hotSale1' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'hotSale1.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -572,7 +635,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'hotSale2' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'hotSale2.png.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -592,7 +658,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'hotSale3' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'hotSale3.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -612,7 +681,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'hotSale4' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'hotSale4.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -632,7 +704,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'hotSale5' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'hotSale5.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -655,7 +730,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-px-3 asnp-py-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleKind1' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleKind1.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -675,7 +753,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleKind2' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleKind2.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -695,7 +776,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleKind3' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleKind3.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -715,7 +799,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleKind4' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleKind4.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -735,7 +822,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-h-[8rem] asnp-px-8 asnp-py-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleKind5' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleKind5.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -757,7 +847,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleKind6' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleKind6.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -777,7 +870,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleKindNew1' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleKindNew1.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -797,7 +893,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleKindNew2' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleKindNew2.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -817,7 +916,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleKindNew3' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleKindNew3.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -837,7 +939,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleKindNew4' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleKindNew4.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -859,7 +964,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleKind7' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleKind7.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -879,7 +987,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleNew1' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleNew1.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -899,7 +1010,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleNew2' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleNew2.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -919,7 +1033,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleNew3' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleNew3.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -939,7 +1056,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleNew4' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleNew4.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -961,7 +1081,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleNew5' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleNew5.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -981,7 +1104,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleNew6' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleNew6.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1001,7 +1127,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleNew7' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleNew7.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1021,7 +1150,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleNew8' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleNew8.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1041,7 +1173,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleNew9' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleNew9.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1063,7 +1198,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-px-6 asnp-py3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleHuge' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleHuge.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1083,7 +1221,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-px-6 asnp-py3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleHuge2' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleHuge2.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1103,7 +1244,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-px-6 asnp-py3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleHuge3' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleHuge3.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1123,7 +1267,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-px-6 asnp-py3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleHuge4' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleHuge4.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1143,7 +1290,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-px-6 asnp-py3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'saleHuge5' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'saleHuge5.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1172,7 +1322,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'percentageCircle1'
+									IMAGES_URL + 'percentageCircle1.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -1195,7 +1345,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'percentageCircle2'
+									IMAGES_URL + 'percentageCircle2.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -1218,7 +1368,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'percentageCircle3'
+									IMAGES_URL + 'percentageCircle3.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -1241,7 +1391,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'percentageCircle4'
+									IMAGES_URL + 'percentageCircle4.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -1264,7 +1414,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'percentageCircle5'
+									IMAGES_URL + 'percentageCircle5.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -1289,7 +1439,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'percentageSale1'
+									IMAGES_URL + 'percentageSale1.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -1312,7 +1462,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'percentageSale2'
+									IMAGES_URL + 'percentageSale2.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -1335,7 +1485,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'percentageSale3'
+									IMAGES_URL + 'percentageSale3.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -1358,7 +1508,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'percentageSale4'
+									IMAGES_URL + 'percentageSale4.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -1381,7 +1531,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'percentageSale5'
+									IMAGES_URL + 'percentageSale5.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -1406,7 +1556,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'percentageSale6'
+									IMAGES_URL + 'percentageSale6.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -1429,7 +1579,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'percentageSale7'
+									IMAGES_URL + 'percentageSale7.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -1452,7 +1602,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'percentageSale8'
+									IMAGES_URL + 'percentageSale8.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -1475,7 +1625,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'percentageSale9'
+									IMAGES_URL + 'percentageSale9.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -1498,7 +1648,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'percentageSale10'
+									IMAGES_URL + 'percentageSale10.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -1523,7 +1673,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'percentageSale11'
+									IMAGES_URL + 'percentageSale11.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -1546,7 +1696,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									'percentageSale12'
+									IMAGES_URL + 'percentageSale12.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -1567,7 +1717,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'percentage1' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'percentage1.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1587,7 +1740,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'percentage2' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'percentage2.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1607,7 +1763,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'percentage3' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'percentage3.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1629,7 +1788,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'percentage4' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'percentage4.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1649,7 +1811,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'perBanner1' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'perBanner1.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1669,7 +1834,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'perBanner2' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'perBanner2.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1689,7 +1857,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'perBanner3' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'perBanner3.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1709,7 +1880,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bannerPerc1' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bannerPerc1.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1731,7 +1905,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bannerPerc2' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bannerPerc2.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1751,7 +1928,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bannerPerc3' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bannerPerc3.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1771,7 +1951,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bannerPerc4' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bannerPerc4.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1791,7 +1974,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bannerPerc5' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bannerPerc5.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1811,7 +1997,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bannerPerc6' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bannerPerc6.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1833,7 +2022,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bannerPerc7' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bannerPerc7.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1853,7 +2045,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bannerPerc8' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bannerPerc8.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1873,7 +2068,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bannerPerc9' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bannerPerc9.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1893,7 +2091,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bannerPerc10' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bannerPerc10.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1913,7 +2114,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bannerPerc11' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bannerPerc11.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1935,7 +2139,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bannerPerc12' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bannerPerc12.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1955,7 +2162,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-2 asnp-px-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'perc1' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'perc1.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1975,7 +2185,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-2 asnp-px-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'perc2' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'perc2.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -1995,7 +2208,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-2 asnp-px-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'perc3' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'perc3.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2015,7 +2231,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-2 asnp-px-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'perc4' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'perc4.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2037,7 +2256,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'perc8' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'perc8.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2057,7 +2279,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'perc9' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'perc9.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2077,7 +2302,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'perc10' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'perc10.png'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2097,7 +2325,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-2 asnp-px-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'perc11' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'perc11'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2117,7 +2348,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-2 asnp-px-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'perc12' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'perc12'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2144,7 +2378,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'coming1' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'coming1'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2164,7 +2401,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'coming2' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'coming2'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2184,7 +2424,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'coming3' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'coming3'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2204,7 +2447,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'coming4' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'coming4'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2224,7 +2470,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'coming5' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'coming5'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2246,7 +2495,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'coming6' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'coming6'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2266,7 +2518,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'coming7' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'coming7'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2286,7 +2541,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'coming8' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'coming8'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2306,7 +2564,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'coming9' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'coming9'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2326,7 +2587,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'coming10' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'coming10'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2348,7 +2612,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'coming11' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'coming11'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2368,7 +2635,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'coming12' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'coming12'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2388,7 +2658,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'coming13' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'coming13'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2408,7 +2681,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-2 asnp-px-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'coming14' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'coming14'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2428,7 +2704,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-2 asnp-px-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'coming15' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'coming15'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2450,7 +2729,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-2 asnp-px-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'coming16' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'coming16'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2477,7 +2759,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'preoOrder1' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'preoOrder1'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2497,7 +2782,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'preoOrder2' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'preoOrder2'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2517,7 +2805,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'preoOrder3' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'preoOrder3'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2537,7 +2828,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'preoOrder4' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'preoOrder4'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2557,7 +2851,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'preoOrder5' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'preoOrder5'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2579,7 +2876,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'preoOrder6' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'preoOrder6'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2599,7 +2899,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'preoOrder7' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'preoOrder7'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2619,7 +2922,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'preoOrder8' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'preoOrder8'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2639,7 +2945,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'preoOrder9' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'preoOrder9'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2659,7 +2968,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'preoOrder10' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'preoOrder10'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2681,7 +2993,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'preoOrder11' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'preoOrder11'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2701,7 +3016,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'preoOrder12' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'preoOrder12'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2721,7 +3039,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'preoOrder13' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'preoOrder13'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2741,7 +3062,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'preoOrder14' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'preoOrder14'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2761,7 +3085,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'preoOrder15' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'preoOrder15'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2786,7 +3113,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-4 asnp-px-9 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free1' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free1'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2806,7 +3136,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-4 asnp-px-9 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free2' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free2'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2826,7 +3159,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-4 asnp-px-9 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free3' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free3'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2846,7 +3182,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-4 asnp-px-9 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free4' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free4'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2866,7 +3205,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-4 asnp-px-9 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free5' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free5'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2888,7 +3230,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free6' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free6'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2908,7 +3253,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free7' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free7'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2928,7 +3276,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free8' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free8'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2948,7 +3299,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free9' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free9'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2968,7 +3322,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free10' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free10'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -2990,7 +3347,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-4 asnp-px-9 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free11' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free11'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3010,7 +3370,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-4 asnp-px-9 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free12' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free12'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3030,7 +3393,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-4 asnp-px-9 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free13' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free13'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3050,7 +3416,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free14' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free14'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3070,7 +3439,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free15' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free15'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3092,7 +3464,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free16' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free16'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3112,7 +3487,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free17' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free17'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3132,7 +3510,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free18' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free18'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3152,7 +3533,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-4 asnp-px-9 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free19' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free19'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3172,7 +3556,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-4 asnp-px-9 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free20' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free20'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3194,7 +3581,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-4 asnp-px-9 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free21' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free21'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3214,7 +3604,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-4 asnp-px-9 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free22' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free22'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3234,7 +3627,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free23' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free23'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3254,7 +3650,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free24' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free24'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3274,7 +3673,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'free25' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'free25'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3301,7 +3703,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bfriday1' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bfriday1'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3321,7 +3726,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bfriday2' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bfriday2'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3341,7 +3749,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bfriday3' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bfriday3'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3361,7 +3772,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bfriday4' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bfriday4'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3381,7 +3795,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bfriday5' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bfriday5'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3403,7 +3820,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bfriday6' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bfriday6'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3423,7 +3843,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bfriday7' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bfriday7'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3443,7 +3866,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bfriday8' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bfriday8'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3463,7 +3889,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bfriday9' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bfriday9'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3483,7 +3912,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bfriday10' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bfriday10'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3505,7 +3937,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bfriday11' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bfriday11'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3525,7 +3960,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bfriday12' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bfriday12'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3545,7 +3983,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bfriday13' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bfriday13'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3565,7 +4006,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bfriday14' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bfriday14'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3585,7 +4029,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bfriday15' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bfriday15'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3607,7 +4054,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bfriday16' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bfriday16'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3627,7 +4077,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bfriday17' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bfriday17'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3647,7 +4100,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'bfriday18' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'bfriday18'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3674,7 +4130,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'badgeValen1' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'badgeValen1'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3694,7 +4153,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'badgeValen2' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'badgeValen2'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3714,7 +4176,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-2 asnp-px-8 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'badgeValen3' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'badgeValen3'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3734,7 +4199,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'badgeValen4' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'badgeValen4'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3754,7 +4222,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-2 asnp-px-8 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'badgeValen5' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'badgeValen5'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3776,7 +4247,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'badgeValen6' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'badgeValen6'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3796,7 +4270,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'badgeValen7' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'badgeValen7'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3816,7 +4293,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-2 asnp-px-8 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'badgeValen8' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'badgeValen8'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3836,7 +4316,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'badgeValen9' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'badgeValen9'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3856,7 +4339,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'badgeValen10' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'badgeValen10'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3878,7 +4364,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'badgeValen11' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'badgeValen11'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3898,7 +4387,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'badgeValen12' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'badgeValen12'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3918,7 +4410,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'badgeValen13' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'badgeValen13'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3938,7 +4433,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-py-8 asnp-px-2 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'badgeValen14' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'badgeValen14'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3958,7 +4456,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'badgeValen15' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'badgeValen15'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -3980,7 +4481,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'badgeValen16' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'badgeValen16'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -4000,7 +4504,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'badgeValen17' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'badgeValen17'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );
@@ -4020,7 +4527,10 @@ const BadgeImageStyle = ( props ) => {
 								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
-								props.onChange( 'badgeImage', 'badgeValen18' );
+								props.onChange(
+									'badgeImage',
+									IMAGES_URL + 'badgeValen18'
+								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
 								props.onChange( 'imgbadge', 1 );

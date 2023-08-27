@@ -91,7 +91,6 @@ export default function Badge() {
 	const { getItem, dispatch } = useContext( BadgesContext );
 	const { setLoading, setMessage, settings } = useContext( AppContext );
 	const [ badgeImageFile, setBadgeImageFile ] = useState( null );
-	const [ imgbdg, setImgbdg ] = useState( IMAGES_URL + 'bigSale1.png' );
 
 	console.log( badge );
 
@@ -136,22 +135,21 @@ export default function Badge() {
 	};
 
 	useEffect( () => {
-		if ( '' === badgeImageFile || badgeImageFile === null ) {
-			setImgbdg( IMAGES_URL + badge.badgeImage + '.png' );
+		if ( '' === badgeImageFile ) {
+			updateBadge( 'badgeImage', '' );
 			return;
 		} else if ( ! badgeImageFile ) {
-			setImgbdg( IMAGES_URL + badge.badgeImage + '.png' );
 			return;
 		}
 
 		const reader = new FileReader();
 		reader.readAsDataURL( badgeImageFile );
 		reader.onload = function () {
-			setImgbdg( reader.result );
+			updateBadge( 'badgeImage', reader.result );
 		};
 
 		return () => reader.abort();
-	}, [ badgeImageFile, badge.badgeImage ] );
+	}, [ badgeImageFile ] );
 
 	const addGroup = () => {
 		setBadge( ( prev ) => ( {
@@ -430,7 +428,6 @@ export default function Badge() {
 								IMAGES_URL={ IMAGES_URL }
 								badge={ badge }
 								updateBadge={ updateBadge }
-								imgbdg={ imgbdg }
 							/>
 						</div>
 					</div>

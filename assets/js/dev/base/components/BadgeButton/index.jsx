@@ -10,7 +10,6 @@ const BadgeButton = ( {
 	badge,
 	IMAGES_URL = '',
 	updateBadge,
-	imgbdg,
 } ) => {
 	const [ horiz, setHoriz ] = useState( toBool( badge.horizontal ) );
 	const [ vert, setVert ] = useState( toBool( badge.vertical ) );
@@ -132,7 +131,6 @@ const BadgeButton = ( {
 			bdgeAdvanced={ bdgeAdvanced }
 			horizAndvert={ horizAndvert }
 			updateBadge={ updateBadge }
-			imgbdg={ imgbdg }
 		/>
 	);
 };

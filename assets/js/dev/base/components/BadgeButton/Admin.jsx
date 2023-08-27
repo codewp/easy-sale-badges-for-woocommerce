@@ -15,7 +15,6 @@ const Admin = ( {
 	Label,
 	TimerDate,
 	updateBadge,
-	imgbdg,
 } ) => {
 	const Span = styled.div`
 		${ badgeIcon }
@@ -217,7 +216,7 @@ const Admin = ( {
 											transform: `rotateX(${ badge.rotationXImg }deg) rotateY(${ badge.rotationYImg }deg) rotateZ(${ badge.rotationZImg }deg)`,
 										} }
 									>
-										<img src={ imgbdg } />
+										<img src={ badge.badgeImage } />
 									</span>
 								</div>
 							) }

@@ -2155,7 +2155,7 @@ function output_image_badge( $badge, $hide = false ) {
  	}
 
 	 $dynamic_styles = '';
-	 $img_uniq = $badge->badgeImage;
+	 $img_uniq = 'bdg1';
 
 	$dynamic_styles = '.asnp-esb-imgBadge-'. $img_uniq .' {';
 	if ( isset( $badge->widthBadgeImg ) ) {
@@ -2201,10 +2201,10 @@ function output_image_badge( $badge, $hide = false ) {
 
 	$image = '';
 	if ( ! empty( $badge->badgeImage ) ) {
-		$image = '<img src="' . esc_url( ASNP_EWHATSAPP_PLUGIN_URL ) . 'assets/images/' . esc_attr( $badge->badgeImage ) . '.png" />';
+		$image = '<img src="' . esc_attr( $badge->badgeImage ) . '" />';
 	}
 
-	$class_names = 'asnp-esb-badge-element asnp-esb-imgBadge asnp-esb-imgBadge-'. $img_uniq .'';
+	$class_names = 'asnp-esb-badge-element asnp-esb-imgBadge asnp-esb-imgBadge-'. $img_uniq .' ';
 	if ( $hide ) {
 		$class_names .= ' asnp-esb-badge-hidden';
 	}
