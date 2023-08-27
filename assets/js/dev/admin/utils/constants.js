@@ -1020,7 +1020,7 @@ export default function BadgeCssandAdv( badge ) {
 			badgeTimerCont = `
 			display: inline-block;
 			padding: 6px 20px;
-			width: 66px;
+			width: 60px;
 			`;
 			TimerDate = `
 			display: block;

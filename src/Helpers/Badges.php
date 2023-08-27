@@ -1518,11 +1518,13 @@ function output_timer_badge( $badge, $hide = false ) {
  	}
 
 			$dynamic_styles = '';
+			$timer_uniq = '';
 
 			switch ( $badge->badgeTimer ) {
 			case 'timer1':
+			$timer_uniq = 't1';
 
-			$dynamic_styles .= '.asnp-esb-productBadgeTimer {';
+			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
@@ -1534,7 +1536,7 @@ function output_timer_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer1 {';
+			$dynamic_styles .= '.asnp-esb-timer1-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: inline-block;';
 			$dynamic_styles .= ' border-radius: 10px;';
 
@@ -1550,13 +1552,13 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer2 {';
+			$dynamic_styles .= '.asnp-esb-timer2-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: inline-block;';
 			$dynamic_styles .= ' padding: 6px 11px;';
-			$dynamic_styles .= ' width: 59px;';
+			$dynamic_styles .= ' width: 56px;';
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer3 {';
+			$dynamic_styles .= '.asnp-esb-timer3-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' font-weight: 700;';
 			$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
@@ -1569,7 +1571,7 @@ function output_timer_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer4 {';
+			$dynamic_styles .= '.asnp-esb-timer4-'. $timer_uniq .' {';
 			$dynamic_styles .= ' font-weight: 400;';
 			$dynamic_styles .= ' font-size: 10px;';
 			$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
@@ -1578,7 +1580,9 @@ function output_timer_badge( $badge, $hide = false ) {
 			break;
 
 			case 'timer2':
-			$dynamic_styles .= '.asnp-esb-productBadgeTimer {';
+			$timer_uniq = 't2';
+
+			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
@@ -1590,7 +1594,7 @@ function output_timer_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer1 {';
+			$dynamic_styles .= '.asnp-esb-timer1-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: grid;';
 			$dynamic_styles .= ' gap: 5px;';
 			$dynamic_styles .= ' grid-template-columns: 1fr 1fr 1fr 1fr;';
@@ -1605,10 +1609,10 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer2 {';
+			$dynamic_styles .= '.asnp-esb-timer2-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: inline-block;';
 			$dynamic_styles .= ' padding: 6px 11px;';
-			$dynamic_styles .= ' width: 59px;';
+			$dynamic_styles .= ' width: 57px;';
 			$dynamic_styles .= ' border-radius: 12px;';
 
 			if ( isset( $badge->bgColorTimer ) ) {
@@ -1617,7 +1621,7 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer3 {';
+			$dynamic_styles .= '.asnp-esb-timer3-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' font-weight: 700;';
 			$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
@@ -1630,7 +1634,7 @@ function output_timer_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer4 {';
+			$dynamic_styles .= '.asnp-esb-timer4-'. $timer_uniq .' {';
 			$dynamic_styles .= ' font-weight: 400;';
 			$dynamic_styles .= ' font-size: 10px;';
 			$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
@@ -1639,7 +1643,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			break;
 
 			case 'timer3':
-			$dynamic_styles .= '.asnp-esb-productBadgeTimer {';
+			$timer_uniq = 't3';
+			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
@@ -1651,7 +1656,7 @@ function output_timer_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer1 {';
+			$dynamic_styles .= '.asnp-esb-timer1-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: grid;';
 			$dynamic_styles .= ' gap: 5px;';
 			$dynamic_styles .= ' width: 100px;';
@@ -1667,10 +1672,10 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer2 {';
+			$dynamic_styles .= '.asnp-esb-timer2-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: inline-block;';
-			$dynamic_styles .= ' padding: 3px 15px;';
-			$dynamic_styles .= ' width: 59px;';
+			$dynamic_styles .= ' padding: 3px 14px;';
+			$dynamic_styles .= ' width: 56px;';
 			$dynamic_styles .= ' border-radius: 50%;';
 
 			if ( isset( $badge->bgColorTimer ) ) {
@@ -1679,7 +1684,7 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer3 {';
+			$dynamic_styles .= '.asnp-esb-timer3-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' font-weight: 700;';
 			$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
@@ -1692,7 +1697,7 @@ function output_timer_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer4 {';
+			$dynamic_styles .= '.asnp-esb-timer4-'. $timer_uniq .' {';
 			$dynamic_styles .= ' font-weight: 400;';
 			$dynamic_styles .= ' font-size: 10px;';
 			$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
@@ -1701,7 +1706,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			break;
 
 			case 'timer4':
-			$dynamic_styles .= '.asnp-esb-productBadgeTimer {';
+			$timer_uniq = 't4';
+			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
@@ -1713,7 +1719,7 @@ function output_timer_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer1 {';
+			$dynamic_styles .= '.asnp-esb-timer1-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: grid;';
 			$dynamic_styles .= ' gap: 5px;';
 			$dynamic_styles .= ' grid-template-columns: 1fr 1fr 1fr 1fr;';
@@ -1728,10 +1734,10 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer2 {';
+			$dynamic_styles .= '.asnp-esb-timer2-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: inline-block;';
 			$dynamic_styles .= ' padding: 3px 13px;';
-			$dynamic_styles .= ' width: 59px;';
+			$dynamic_styles .= ' width: 56px;';
 			$dynamic_styles .= ' border-radius: 50%;';
 
 			if ( isset( $badge->bgColorTimer ) ) {
@@ -1740,7 +1746,7 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer3 {';
+			$dynamic_styles .= '.asnp-esb-timer3-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' font-weight: 700;';
 			$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
@@ -1753,7 +1759,7 @@ function output_timer_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer4 {';
+			$dynamic_styles .= '.asnp-esb-timer4-'. $timer_uniq .' {';
 			$dynamic_styles .= ' font-weight: 400;';
 			$dynamic_styles .= ' font-size: 10px;';
 			$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
@@ -1761,7 +1767,8 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			break;
 			case 'timer5':
-			$dynamic_styles .= '.asnp-esb-productBadgeTimer {';
+			$timer_uniq = 't5';
+			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
@@ -1773,7 +1780,7 @@ function output_timer_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer1 {';
+			$dynamic_styles .= '.asnp-esb-timer1-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: grid;';
 			$dynamic_styles .= ' border-radius: 10px;';
 			$dynamic_styles .= ' width: 55px;';
@@ -1791,14 +1798,14 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer2 {';
+			$dynamic_styles .= '.asnp-esb-timer2-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: inline-block;';
 			$dynamic_styles .= ' padding: 6px 13px;';
 			$dynamic_styles .= ' width: 55px;';
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer3 {';
+			$dynamic_styles .= '.asnp-esb-timer3-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' font-weight: 700;';
 			$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
@@ -1811,7 +1818,7 @@ function output_timer_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer4 {';
+			$dynamic_styles .= '.asnp-esb-timer4-'. $timer_uniq .' {';
 			$dynamic_styles .= ' font-weight: 400;';
 			$dynamic_styles .= ' font-size: 10px;';
 			$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
@@ -1820,7 +1827,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			break;
 
 			case 'timer6':
-			$dynamic_styles .= '.asnp-esb-productBadgeTimer {';
+			$timer_uniq = 't6';
+			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
@@ -1832,7 +1840,7 @@ function output_timer_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer1 {';
+			$dynamic_styles .= '.asnp-esb-timer1-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: grid;';
 			$dynamic_styles .= ' gap: 5px;';
 			$dynamic_styles .= ' width: 55px;';
@@ -1847,7 +1855,7 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer2 {';
+			$dynamic_styles .= '.asnp-esb-timer2-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: inline-block;';
 			$dynamic_styles .= ' padding: 6px 13px;';
 			$dynamic_styles .= ' height: 55px;';
@@ -1859,7 +1867,7 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer3 {';
+			$dynamic_styles .= '.asnp-esb-timer3-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' font-weight: 700;';
 			$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
@@ -1872,7 +1880,7 @@ function output_timer_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer4 {';
+			$dynamic_styles .= '.asnp-esb-timer4-'. $timer_uniq .' {';
 			$dynamic_styles .= ' font-weight: 400;';
 			$dynamic_styles .= ' font-size: 10px;';
 			$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
@@ -1880,7 +1888,8 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			break;
 			case 'timer7':
-			$dynamic_styles .= '.asnp-esb-productBadgeTimer {';
+			$timer_uniq = 't7';
+			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
@@ -1892,7 +1901,7 @@ function output_timer_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer1 {';
+			$dynamic_styles .= '.asnp-esb-timer1-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: grid;';
 			$dynamic_styles .= ' gap: 7px;';
 			$dynamic_styles .= ' width: 55px;';
@@ -1907,11 +1916,11 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer2 {';
+			$dynamic_styles .= '.asnp-esb-timer2-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: inline-block;';
-			$dynamic_styles .= ' padding: 7px 19px;';
+			$dynamic_styles .= ' padding: 5px 13px;';
 			$dynamic_styles .= ' border-radius: 50%;';
-			$dynamic_styles .= ' height: 55px;';
+			$dynamic_styles .= ' height: 52px;';
 
 
 			if ( isset( $badge->bgColorTimer ) ) {
@@ -1920,7 +1929,7 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer3 {';
+			$dynamic_styles .= '.asnp-esb-timer3-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' font-weight: 700;';
 			$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
@@ -1933,7 +1942,7 @@ function output_timer_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer4 {';
+			$dynamic_styles .= '.asnp-esb-timer4-'. $timer_uniq .' {';
 			$dynamic_styles .= ' font-weight: 400;';
 			$dynamic_styles .= ' font-size: 10px;';
 			$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
@@ -1942,7 +1951,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			break;
 
 			case 'timer8':
-			$dynamic_styles .= '.asnp-esb-productBadgeTimer {';
+			$timer_uniq = 't8';
+			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
@@ -1954,7 +1964,7 @@ function output_timer_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer1 {';
+			$dynamic_styles .= '.asnp-esb-timer1-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: grid;';
 			$dynamic_styles .= ' gap: 7px;';
 			$dynamic_styles .= ' width: 55px;';
@@ -1969,11 +1979,11 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer2 {';
+			$dynamic_styles .= '.asnp-esb-timer2-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: inline-block;';
-			$dynamic_styles .= ' padding: 7px 19px;';
+			$dynamic_styles .= ' padding: 2px 13px;';
 			$dynamic_styles .= ' border-radius: 50%;';
-			$dynamic_styles .= ' height: 55px;';
+			$dynamic_styles .= ' height: 52px;';
 
 			if ( isset( $badge->bgColorTimer ) ) {
 				$dynamic_styles .= ' border: 2px solid ' . $badge->bgColorTimer . ';';
@@ -1981,7 +1991,7 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer3 {';
+			$dynamic_styles .= '.asnp-esb-timer3-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' font-weight: 700;';
 			$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
@@ -1994,7 +2004,7 @@ function output_timer_badge( $badge, $hide = false ) {
 			}
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-timer4 {';
+			$dynamic_styles .= '.asnp-esb-timer4-'. $timer_uniq .' {';
 			$dynamic_styles .= ' font-weight: 400;';
 			$dynamic_styles .= ' font-size: 10px;';
 			$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
@@ -2003,58 +2013,59 @@ function output_timer_badge( $badge, $hide = false ) {
 			break;
 
 			default:
-			$dynamic_styles .= '.asnp-esb-productBadgeTimer {';
-				if ( isset( $badge->zIndex ) ) {
-						$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
-				}
-				if ( isset( $badge->opacity ) ) {
-					$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
-				}
-				if ( isset( $badge->badgePositionTop ) ) {
-				$dynamic_styles .= ' inset: ' . $insetProperty . ';';
-				}
-				$dynamic_styles .= '}';
+			$timer_uniq = 't1';
+			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
+			if ( isset( $badge->zIndex ) ) {
+					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
+			}
+			if ( isset( $badge->opacity ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			}
+			if ( isset( $badge->badgePositionTop ) ) {
+			$dynamic_styles .= ' inset: ' . $insetProperty . ';';
+			}
+			$dynamic_styles .= '}';
 
-				$dynamic_styles .= '.asnp-esb-timer1 {';
-				$dynamic_styles .= ' display: inline-block;';
-				$dynamic_styles .= ' border-radius: 10px;';
+			$dynamic_styles .= '.asnp-esb-timer1-'. $timer_uniq .' {';
+			$dynamic_styles .= ' display: inline-block;';
+			$dynamic_styles .= ' border-radius: 10px;';
 
-				if ( isset( $badge->bgColorTimer ) ) {
-					$dynamic_styles .= ' background-color: ' . $badge->bgColorTimer . ';';
-				}
-				if ( isset( $badge->textColor ) ) {
-					$dynamic_styles .= ' color: ' . $badge->textColor . ';';
-				}
-				if ( isset( $badge->opacity ) ) {
-					$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
-				}
+			if ( isset( $badge->bgColorTimer ) ) {
+				$dynamic_styles .= ' background-color: ' . $badge->bgColorTimer . ';';
+			}
+			if ( isset( $badge->textColor ) ) {
+				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
+			}
+			if ( isset( $badge->opacity ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			}
 
-				$dynamic_styles .= '}';
+			$dynamic_styles .= '}';
 
-				$dynamic_styles .= '.asnp-esb-timer2 {';
-				$dynamic_styles .= ' display: inline-block;';
-				$dynamic_styles .= ' padding: 6px 11px;';
-				$dynamic_styles .= ' width: 59px;';
-				$dynamic_styles .= '}';
+			$dynamic_styles .= '.asnp-esb-timer2-'. $timer_uniq .' {';
+			$dynamic_styles .= ' display: inline-block;';
+			$dynamic_styles .= ' padding: 6px 11px;';
+			$dynamic_styles .= ' width: 56px;';
+			$dynamic_styles .= '}';
 
-				$dynamic_styles .= '.asnp-esb-timer3 {';
-				$dynamic_styles .= ' display: block;';
-				$dynamic_styles .= ' font-weight: 700;';
-				$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
+			$dynamic_styles .= '.asnp-esb-timer3-'. $timer_uniq .' {';
+			$dynamic_styles .= ' display: block;';
+			$dynamic_styles .= ' font-weight: 700;';
+			$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
 
-				if ( isset( $badge->fontSizeLabelTimer ) ) {
-					$dynamic_styles .= ' font-size: ' . $badge->fontSizeLabelTimer . 'px;';
-				}
-				if ( isset( $badge->lineHeightLabelTimer ) ) {
-					$dynamic_styles .= ' line-height: ' . $badge->lineHeightLabelTimer . 'px;';
-				}
-				$dynamic_styles .= '}';
+			if ( isset( $badge->fontSizeLabelTimer ) ) {
+				$dynamic_styles .= ' font-size: ' . $badge->fontSizeLabelTimer . 'px;';
+			}
+			if ( isset( $badge->lineHeightLabelTimer ) ) {
+				$dynamic_styles .= ' line-height: ' . $badge->lineHeightLabelTimer . 'px;';
+			}
+			$dynamic_styles .= '}';
 
-				$dynamic_styles .= '.asnp-esb-timer4 {';
-				$dynamic_styles .= ' font-weight: 400;';
-				$dynamic_styles .= ' font-size: 10px;';
-				$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
-				$dynamic_styles .= '}';
+			$dynamic_styles .= '.asnp-esb-timer4-'. $timer_uniq .' {';
+			$dynamic_styles .= ' font-weight: 400;';
+			$dynamic_styles .= ' font-size: 10px;';
+			$dynamic_styles .= ' text-shadow: 0px 2px 1px rgba(0,0,0,0.15);';
+			$dynamic_styles .= '}';
 
 				break;
 			}
@@ -2064,7 +2075,7 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			add_custom_style( $dynamic_styles );
 
-			$class_names = 'asnp-esb-badge-element asnp-esb-productBadgeTimer';
+			$class_names = 'asnp-esb-badge-element asnp-esb-productBadgeTimer asnp-esb-productBadgeTimer-'. $timer_uniq .'';
 
 			if ( $hide ) {
 				$timer_position = get_plugin()->settings->get_setting( 'timerPosition', 'outOfImage' );
@@ -2080,22 +2091,22 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			// Timer Badge
 			$output = '<div class="' . esc_attr( $class_names ) . '"' . ( $hide ? ' style="display: none;"' : '' ) . '>';
-			$output .= '<div class="asnp-esb-timer1">';
-			$output .= '<div class="asnp-esb-timer2">';
-			$output .= '<div class="asnp-esb-timer3">3</div>';
-			$output .= '<div class="asnp-esb-timer4">' . esc_html__( $badge->labelDayTimer, 'asnp-easy-whatsapp' ) . '</div>';
+			$output .= '<div class="asnp-esb-timer1-'. $timer_uniq .'">';
+			$output .= '<div class="asnp-esb-timer2-'. $timer_uniq .'">';
+			$output .= '<div class="asnp-esb-timer3-'. $timer_uniq .'">3</div>';
+			$output .= '<div class="asnp-esb-timer4-'. $timer_uniq .'">' . esc_html__( $badge->labelDayTimer, 'asnp-easy-whatsapp' ) . '</div>';
 			$output .= '</div>';
-			$output .= '<div class="asnp-esb-timer2">';
-			$output .= '<div class="asnp-esb-timer3">15</div>';
-			$output .= '<div class="asnp-esb-timer4">' . esc_html__( $badge->labelHoursTimer, 'asnp-easy-whatsapp' ) . '</div>';
+			$output .= '<div class="asnp-esb-timer2-'. $timer_uniq .'">';
+			$output .= '<div class="asnp-esb-timer3-'. $timer_uniq .'">15</div>';
+			$output .= '<div class="asnp-esb-timer4-'. $timer_uniq .'">' . esc_html__( $badge->labelHoursTimer, 'asnp-easy-whatsapp' ) . '</div>';
 			$output .= '</div>';
-			$output .= '<div class="asnp-esb-timer2">';
-			$output .= '<div class="asnp-esb-timer3">20</div>';
-			$output .= '<div class="asnp-esb-timer4">' . esc_html__( $badge->labelMinTimer, 'asnp-easy-whatsapp' ) . '</div>';
+			$output .= '<div class="asnp-esb-timer2-'. $timer_uniq .'">';
+			$output .= '<div class="asnp-esb-timer3-'. $timer_uniq .'">20</div>';
+			$output .= '<div class="asnp-esb-timer4-'. $timer_uniq .'">' . esc_html__( $badge->labelMinTimer, 'asnp-easy-whatsapp' ) . '</div>';
 			$output .= '</div>';
-			$output .= '<div class="asnp-esb-timer2">';
-			$output .= '<div class="asnp-esb-timer3">15</div>';
-			$output .= '<div class="asnp-esb-timer4">' . esc_html__( $badge->labelSecTimer, 'asnp-easy-whatsapp' ) . '</div>';
+			$output .= '<div class="asnp-esb-timer2-'. $timer_uniq .'">';
+			$output .= '<div class="asnp-esb-timer3-'. $timer_uniq .'">15</div>';
+			$output .= '<div class="asnp-esb-timer4-'. $timer_uniq .'">' . esc_html__( $badge->labelSecTimer, 'asnp-easy-whatsapp' ) . '</div>';
 			$output .= '</div>';
 			$output .= '</div>';
 			$output .= '</div>';
