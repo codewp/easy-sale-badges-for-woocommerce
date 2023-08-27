@@ -2383,7 +2383,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			$dynamic_styles .= ' width: 0;';
 			$dynamic_styles .= ' height: 0;';
 			$dynamic_styles .= ' top: 5px;';
-			$dynamic_styles .= ' right: -7px;';
+			$dynamic_styles .= ' right: -3px;';
 			$dynamic_styles .= ' border-width: 10px 6px;';
 			$dynamic_styles .= ' border-style: solid;';
 
@@ -2401,7 +2401,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			$dynamic_styles .= ' z-index: -1;';
 			$dynamic_styles .= ' border-width: 10px 6px;';
 			$dynamic_styles .= ' border-style: solid;';
-			$dynamic_styles .= ' left: -7px;';
+			$dynamic_styles .= ' left: -3px;';
 
 			if ( isset( $badge->secondBg ) ) {
 				$dynamic_styles .= ' border-color: ' . $badge->secondBg . '  ' . $badge->secondBg . ' ' . $badge->secondBg . ' transparent !important;';
