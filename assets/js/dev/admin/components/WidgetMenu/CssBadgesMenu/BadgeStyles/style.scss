@@ -1,5 +1,23 @@
-.asnp-containerBadgeStyle{
-    width: 9rem;
+.asnp-scrollBarImageB {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.asnp-scrollBarImageB::-webkit-scrollbar {
+	width: 8px;
+	height: 5px;
+	display: block;
+}
+.asnp-scrollBarImageB::-webkit-scrollbar-thumb {
+	background: #9ca3af;
+	border-radius: 8px;
+}
+.asnp-scrollBarImageB::-webkit-scrollbar-thumb:hover {
+	background: rgb( 196, 201, 211 );
+}
+
+.asnp-containerImage {
+	width: 8rem;
 	height: 7rem;
 	display: flex;
 	border-radius: 1rem;

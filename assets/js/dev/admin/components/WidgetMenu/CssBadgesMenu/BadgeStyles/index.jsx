@@ -12,13 +12,13 @@ const BadgeStyles = ( props ) => {
 					{ __( 'Label Styles', 'asnp-easy-whatsapp' ) }
 				</div>
 				<div className="asnp-relative asnp-mb-3 asnp-mt-3 asnp-h-[25rem] asnp-pb-2 asnp-flex asnp-flex-col asnp-border-[1px] asnp-border-gray-300 asnp-rounded-2xl">
-					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-1">
+					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-8 asnp-ml-4">
 						<div
 							className={
 								( props.badgeStyles === 'badge1'
 									? 'asnp-border-indigo-700'
-									: 'asnp-border-white' ) +
-								'  asnp-containerBadgeStyle hover:asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge1' );
@@ -37,8 +37,8 @@ const BadgeStyles = ( props ) => {
 							className={
 								( props.badgeStyles === 'badge2'
 									? 'asnp-border-indigo-700'
-									: 'asnp-border-white' ) +
-								' asnp-py-6 asnp-px-2 asnp-containerBadgeStyle hover:asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge2' );
@@ -57,8 +57,8 @@ const BadgeStyles = ( props ) => {
 							className={
 								( props.badgeStyles === 'badge3'
 									? 'asnp-border-indigo-700'
-									: 'asnp-border-white' ) +
-								' asnp-py-6 asnp-px-2 asnp-containerBadgeStyle hover:asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge3' );
@@ -77,8 +77,8 @@ const BadgeStyles = ( props ) => {
 							className={
 								( props.badgeStyles === 'badge4'
 									? 'asnp-border-indigo-700'
-									: 'asnp-border-white' ) +
-								' asnp-py-6 asnp-px-2 asnp-containerBadgeStyle hover:asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge4' );
@@ -97,8 +97,8 @@ const BadgeStyles = ( props ) => {
 							className={
 								( props.badgeStyles === 'badge5'
 									? 'asnp-border-indigo-700'
-									: 'asnp-border-white' ) +
-								' asnp-py-4 asnp-px-6 asnp-containerBadgeStyle hover:asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge5' );
@@ -114,13 +114,13 @@ const BadgeStyles = ( props ) => {
 							/>
 						</div>
 					</div>
-					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-1">
+					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-8 asnp-ml-4">
 						<div
 							className={
 								( props.badgeStyles === 'badge6'
 									? 'asnp-border-indigo-700'
-									: 'asnp-border-white' ) +
-								' asnp-p-2 asnp-containerBadgeStyle hover:asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge6' );
@@ -139,8 +139,8 @@ const BadgeStyles = ( props ) => {
 							className={
 								( props.badgeStyles === 'badge7'
 									? 'asnp-border-indigo-700'
-									: 'asnp-border-white' ) +
-								' asnp-p-5 asnp-containerBadgeStyle hover:asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge7' );
@@ -159,8 +159,8 @@ const BadgeStyles = ( props ) => {
 							className={
 								( props.badgeStyles === 'badge8'
 									? 'asnp-border-indigo-700'
-									: 'asnp-border-white' ) +
-								' asnp-p-5 asnp-containerBadgeStyle hover:asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge8' );
@@ -179,8 +179,8 @@ const BadgeStyles = ( props ) => {
 							className={
 								( props.badgeStyles === 'badge9'
 									? 'asnp-border-indigo-700'
-									: 'asnp-border-white' ) +
-								' asnp-p-5 asnp-containerBadgeStyle hover:asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge9' );
@@ -199,8 +199,8 @@ const BadgeStyles = ( props ) => {
 							className={
 								( props.badgeStyles === 'badge10'
 									? 'asnp-border-indigo-700'
-									: 'asnp-border-white' ) +
-								' asnp-p-5 asnp-containerBadgeStyle hover:asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge10' );
@@ -216,13 +216,13 @@ const BadgeStyles = ( props ) => {
 							/>
 						</div>
 					</div>
-					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-1">
+					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-8 asnp-ml-4">
 						<div
 							className={
 								( props.badgeStyles === 'badge11'
 									? 'asnp-border-indigo-700'
-									: 'asnp-border-white' ) +
-								' asnp-py-2 asnp-px-1 asnp-containerBadgeStyle hover:asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge11' );
@@ -241,8 +241,8 @@ const BadgeStyles = ( props ) => {
 							className={
 								( props.badgeStyles === 'badge12'
 									? 'asnp-border-indigo-700'
-									: 'asnp-border-white' ) +
-								' asnp-py-4 asnp-px-1 asnp-containerBadgeStyle hover:asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-py-4 asnp-px-1 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge12' );
@@ -261,8 +261,8 @@ const BadgeStyles = ( props ) => {
 							className={
 								( props.badgeStyles === 'badge13'
 									? 'asnp-border-indigo-700'
-									: 'asnp-border-white' ) +
-								' asnp-py-1 asnp-px-8 asnp-containerBadgeStyle hover:asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-py-1 asnp-px-6 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge13' );
