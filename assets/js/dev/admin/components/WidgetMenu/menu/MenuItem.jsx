@@ -5,7 +5,7 @@ import BadgeStyles from '../CssBadgesMenu/BadgeStyles';
 import StyleOptions from '../CssBadgesMenu/StyleOptions';
 import Opacity from '../CssBadgesMenu/Opacity/index';
 import Position from '../CssBadgesMenu/Position';
-import ProductsSelection from '../ProductsSelection';
+import Products from '../ProductsSelection';
 import UploadImage from '../ImageBadges/UploadImage';
 import Options from '../ImageBadges/OptionsImageBadges';
 import AdvancedTextOption from '../AdvancedBadges/AdvancedTextOption';
@@ -149,7 +149,7 @@ const MenuItem = ( props ) => {
 				/>
 			) }
 			{ props.activeStatus == 5 && (
-				<ProductsSelection
+				<Products
 					onChange={ props.onChange }
 				/>
 			) }

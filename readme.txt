@@ -1,4 +1,4 @@
-=== Live Chat Button for WordPress and WooCommerce - Social Chat Widget ===
+=== Sale Badges and Product Labels for WooCommerce ===
 Contributors: asanaplugins
 Donate link: https://www.asanaplugins.com/
 Tags: whatsapp, whatsapp chat, woocommerce whatsapp, click to chat, whatsapp business, whats app, wame, wp social chat, join chat, wp whatsapp

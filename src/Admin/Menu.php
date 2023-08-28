@@ -25,8 +25,8 @@ class Menu {
 
 	public function menus() {
 		$this->menus['whatsapp'] = add_menu_page(
-			__( 'WhatsApp Chat', 'asnp-easy-sale-badge' ),
-			__( 'WhatsApp', 'asnp-easy-sale-badge' ),
+			__( 'Product Label', 'asnp-easy-sale-badge' ),
+			__( 'Product Label', 'asnp-easy-sale-badge' ),
 			apply_filters( 'asnp_ewhatsapp_whatsapp_menu_capability', 'manage_options' ),
 			'asnp-whatsapp',
 			array( $this, 'create_menu' ),

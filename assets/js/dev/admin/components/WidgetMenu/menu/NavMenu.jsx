@@ -89,15 +89,15 @@ const NavMenu = ( props ) => {
 					href="#"
 					onClick={ ( e ) => {
 						e.preventDefault();
-						setPage( '5', 'productsSelection' );
+						setPage( '5', 'products' );
 					} }
 					className={
-						( 'productsSelection' === activeMenu
+						( 'products' === activeMenu
 							? ' asnp-nav-tab-active'
 							: '' ) + ' asnp-nav-tab-item'
 					}
 				>
-					{ __( 'Products Selection', 'asnp-easy-sale-badge' ) }
+					{ __( 'Products', 'asnp-easy-sale-badge' ) }
 				</a>
 			</nav>
 			<div className="asnp-w-[45rem] md:asnp-w-[48rem] lg:asnp-w-[52rem]">

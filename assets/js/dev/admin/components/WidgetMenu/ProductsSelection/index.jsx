@@ -2,7 +2,7 @@ import React from 'react';
 import { __ } from '@wordpress/i18n';
 import WooCommerce from './WooCommerce';
 
-const ProductsSelection = ( props ) => {
+const Products = ( props ) => {
 	return (
 		<div>
 			<div className="asnp-w-[25rem] asnp-mt-2 asnp-text-lg asnp-font-semibold">
@@ -20,4 +20,4 @@ const ProductsSelection = ( props ) => {
 	);
 };
 
-export default ProductsSelection;
+export default Products;
