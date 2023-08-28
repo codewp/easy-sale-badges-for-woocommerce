@@ -28,7 +28,7 @@ const AdvancedBadgeStyle = ( props ) => {
 						>
 							<img
 								className="asnp-h-full asnp-w-full asnp-border-none"
-								src={ IMAGES_URL + 'bdgAdv1.png' }
+								src={ IMAGES_URL + 'badgeAdvance1.png' }
 							/>
 						</div>
 						<div
@@ -49,7 +49,7 @@ const AdvancedBadgeStyle = ( props ) => {
 						>
 							<img
 								className="asnp-h-full asnp-w-full asnp-border-none"
-								src={ IMAGES_URL + 'bdgAdv2.png' }
+								src={ IMAGES_URL + 'badgeAdvance2.png' }
 							/>
 						</div>
 						<div
@@ -70,7 +70,7 @@ const AdvancedBadgeStyle = ( props ) => {
 						>
 							<img
 								className="asnp-h-full asnp-w-full asnp-border-none"
-								src={ IMAGES_URL + 'bdgAdv3.png' }
+								src={ IMAGES_URL + 'badgeAdvance3.png' }
 							/>
 						</div>
 						<div
@@ -91,7 +91,7 @@ const AdvancedBadgeStyle = ( props ) => {
 						>
 							<img
 								className="asnp-h-full asnp-w-full asnp-border-none"
-								src={ IMAGES_URL + 'bdgAdv4.png' }
+								src={ IMAGES_URL + 'badgeAdvance1.png' }
 							/>
 						</div>
 					</div>

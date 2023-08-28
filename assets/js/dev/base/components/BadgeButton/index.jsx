@@ -6,11 +6,7 @@ import { toBool } from '../../utils';
 
 import './style.scss';
 
-const BadgeButton = ( {
-	badge,
-	IMAGES_URL = '',
-	updateBadge,
-} ) => {
+const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 	const [ horiz, setHoriz ] = useState( toBool( badge.horizontal ) );
 	const [ vert, setVert ] = useState( toBool( badge.vertical ) );
 	const [ rotationz, setRotationz ] = useState( badge.rotationZ );
@@ -21,37 +17,10 @@ const BadgeButton = ( {
 			updateBadge( 'secondBg', '#AD2525' );
 		} else if ( badge.badgeAdv == 'bdgAdvanced2' ) {
 			updateBadge( 'mainBg', '#F78DA7' );
-			updateBadge( 'secondBg', '#DABECA' );
-		} else if ( badge.badgeAdv == 'bdgAdvanced3' ) {
-			updateBadge( 'mainBg', '#37116F' );
-			updateBadge( 'secondBg', '#43AA8B' );
-		} else if ( badge.badgeAdv == 'bdgAdvanced4' ) {
-			updateBadge( 'mainBg', '#FF9F24' );
-			updateBadge( 'secondBg', '#EADB45' );
-		} else if ( badge.badgeAdv == 'bdgAdvanced5' ) {
-			updateBadge( 'mainBg', '#141E27' );
-			updateBadge( 'secondBg', '#EB144C' );
-		} else if ( badge.badgeAdv == 'bdgAdvanced6' ) {
-			updateBadge( 'mainBg', '#006D77' );
-			updateBadge( 'secondBg', '#E5E7EB' );
-		} else if ( badge.badgeAdv == 'bdgAdvanced7' ) {
-			updateBadge( 'mainBg', '#F77F00' );
-			updateBadge( 'secondBg', '#EB144C' );
-		} else if ( badge.badgeAdv == 'bdgAdvanced8' ) {
-			updateBadge( 'mainBg', '#F78DA7' );
 			updateBadge( 'secondBg', '#006D77' );
-		} else if ( badge.badgeAdv == 'bdgAdvanced9' ) {
-			updateBadge( 'mainBg', '#141E27' );
-			updateBadge( 'secondBg', '#EB144C' );
-		} else if ( badge.badgeAdv == 'bdgAdvanced10' ) {
+		} else if ( badge.badgeAdv == 'bdgAdvanced3' ) {
 			updateBadge( 'mainBg', '#006D77' );
 			updateBadge( 'secondBg', '#FFD488' );
-		} else if ( badge.badgeAdv == 'bdgAdvanced11' ) {
-			updateBadge( 'mainBg', '#6A20C8' );
-			updateBadge( 'secondBg', '#A43BC9' );
-		} else if ( badge.badgeAdv == 'bdgAdvanced12' ) {
-			updateBadge( 'mainBg', '#D05262' );
-			updateBadge( 'secondBg', '#6C1907' );
 		}
 	}, [ badge.badgeAdv ] );
 
