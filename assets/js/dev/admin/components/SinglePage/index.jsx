@@ -7,7 +7,7 @@ const SinglePage = ( props ) => {
 		<div>
 			<div className="asnp-flex asnp-flex-row md:asnp-w-[19rem] asnp-w-[11rem] asnp-justify-between">
 				<h2 className="asnp-field-title md:asnp-min-w-1/3">
-					{ __( 'Show Badge on Product Page', 'asnp-easy-whatsapp' ) }
+					{ __( 'Show Badge on Product Page', 'asnp-easy-sale-badge' ) }
 				</h2>
 				<div>
 					<Toggle
@@ -26,7 +26,7 @@ const SinglePage = ( props ) => {
 					<h2 className="asnp-field-title asnp-ml-1">
 						{ __(
 							'Single Container',
-							'asnp-easy-whatsapp'
+							'asnp-easy-sale-badge'
 						) }
 					</h2>
 					<input
@@ -40,7 +40,7 @@ const SinglePage = ( props ) => {
 				</label>
 				<label className="asnp-block asnp-space-y-1 asnp-italic asnp-text-gray-500">
 					<p>
-						{ __( 'comma separated hooks.', 'asnp-easy-whatsapp' ) }
+						{ __( 'comma separated hooks.', 'asnp-easy-sale-badge' ) }
 					</p>
 				</label>
 			</div>

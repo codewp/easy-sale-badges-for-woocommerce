@@ -16,7 +16,7 @@ export const getSettings = async () => {
 		throw new Error(
 			__(
 				'There was an error on getting settings.',
-				'asnp-easy-whatsapp'
+				'asnp-easy-sale-badge'
 			)
 		);
 	} catch ( error ) {
@@ -26,7 +26,7 @@ export const getSettings = async () => {
 
 export const saveSettings = async ( data ) => {
 	if ( ! data ) {
-		throw new Error( __( 'Data is required.', 'asnp-easy-whatsapp' ) );
+		throw new Error( __( 'Data is required.', 'asnp-easy-sale-badge' ) );
 	}
 
 	try {
@@ -41,7 +41,7 @@ export const saveSettings = async ( data ) => {
 		}
 
 		throw new Error(
-			__( 'There was an error on saving settings.', 'asnp-easy-whatsapp' )
+			__( 'There was an error on saving settings.', 'asnp-easy-sale-badge' )
 		);
 	} catch ( error ) {
 		throw error;

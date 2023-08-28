@@ -119,12 +119,12 @@ const Timer = ( props ) => {
 	return (
 		<div>
 			<div className="asnp-w-[25rem] asnp-mt-2 asnp-text-lg asnp-font-semibold">
-				{ __( 'Timer', 'asnp-easy-whatsapp' ) }
+				{ __( 'Timer', 'asnp-easy-sale-badge' ) }
 			</div>
 			<div className="asnp-space-y-1 asnp-mt-4 ">
 				<label className="asnp-inline-flex asnp-space-x-2 asnp-items-center">
 					<span className="asnp-field-title">
-						{ __( 'Status', 'asnp-easy-whatsapp' ) }
+						{ __( 'Status', 'asnp-easy-sale-badge' ) }
 					</span>
 					<Toggle
 						value={ 1 == props.useTimerBadge }
@@ -134,17 +134,17 @@ const Timer = ( props ) => {
 					/>
 				</label>
 				<div className="asnp-block">
-					{ __( 'Enable or disable it.', 'asnp-easy-whatsapp' ) }
+					{ __( 'Enable or disable it.', 'asnp-easy-sale-badge' ) }
 				</div>
 			</div>
 			<div className="asnp-w-[25rem] asnp-mt-4 asnp-text-lg asnp-font-semibold">
-				{ __( 'Pick A Start / End Date', 'asnp-easy-whatsapp' ) }
+				{ __( 'Pick A Start / End Date', 'asnp-easy-sale-badge' ) }
 			</div>
 			<div className="asnp-flex">
 				<div className="asnp-mt-3">
 					<label className="asnp-block asnp-space-y-1">
 						<span className="asnp-field-title">
-							{ __( 'From Date / Time', 'asnp-easy-whatsapp' ) }
+							{ __( 'From Date / Time', 'asnp-easy-sale-badge' ) }
 						</span>
 						<Datetime
 							onChange={ ( momentObj ) =>
@@ -159,7 +159,7 @@ const Timer = ( props ) => {
 				<div className="asnp-mt-3 asnp-ml-8">
 					<label className="asnp-block asnp-space-y-1">
 						<span className="asnp-field-title">
-							{ __( 'To Date / Time', 'asnp-easy-whatsapp' ) }
+							{ __( 'To Date / Time', 'asnp-easy-sale-badge' ) }
 						</span>
 						<Datetime
 							onChange={ ( momentObj ) =>
@@ -175,12 +175,12 @@ const Timer = ( props ) => {
 			<div className="asnp-ew-line">
 				<div className="asnp-mt-2">
 					<div className="asnp-w-[25rem] asnp-text-lg asnp-font-semibold">
-						{ __( 'Timer Styles', 'asnp-easy-whatsapp' ) }
+						{ __( 'Timer Styles', 'asnp-easy-sale-badge' ) }
 					</div>
 					<div className="asnp-relative asnp-mb-3 asnp-mt-3 asnp-h-[30rem] asnp-flex asnp-flex-col asnp-border-2 asnp-rounded-md asnp-pr-1 asnp-scrollBarImageB">
 						<div className="asnp-w-full asnp-ml-8 asnp-mt-4 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
 							<label>
-								{ __( 'Horizontal', 'asnp-easy-whatsapp' ) }
+								{ __( 'Horizontal', 'asnp-easy-sale-badge' ) }
 							</label>
 						</div>
 						<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-1">
@@ -277,7 +277,7 @@ const Timer = ( props ) => {
 						</div>
 						<div className="asnp-w-full asnp-ml-8 asnp-mt-1 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
 							<label>
-								{ __( 'Vertical', 'asnp-easy-whatsapp' ) }
+								{ __( 'Vertical', 'asnp-easy-sale-badge' ) }
 							</label>
 						</div>
 						<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-1">
@@ -435,7 +435,7 @@ const Timer = ( props ) => {
 										<span className="asnp-flex asnp-w-[25rem] asnp-my-2">
 											{ __(
 												'Background Color',
-												'asnp-easy-whatsapp'
+												'asnp-easy-sale-badge'
 											) }
 										</span>
 										<div
@@ -509,7 +509,7 @@ const Timer = ( props ) => {
 										<span className="asnp-flex asnp-w-[25rem] asnp-my-2">
 											{ __(
 												'Text Color',
-												'asnp-easy-whatsapp'
+												'asnp-easy-sale-badge'
 											) }
 										</span>
 										<div
@@ -531,7 +531,7 @@ const Timer = ( props ) => {
 							<span className="asnp-field-title">
 								{ __(
 									'Font Size (Pixel)',
-									'asnp-easy-whatsapp'
+									'asnp-easy-sale-badge'
 								) }
 							</span>
 							<div className="asnp-w-[25rem]">
@@ -557,7 +557,7 @@ const Timer = ( props ) => {
 							<span className="asnp-field-title">
 								{ __(
 									'Line Height (Pixel)',
-									'asnp-easy-whatsapp'
+									'asnp-easy-sale-badge'
 								) }
 							</span>
 							<div className="asnp-w-[25rem]">
@@ -580,13 +580,13 @@ const Timer = ( props ) => {
 					</div>
 				</div>
 				<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold">
-					{ __( 'Additional Styles', 'asnp-easy-whatsapp' ) }
+					{ __( 'Additional Styles', 'asnp-easy-sale-badge' ) }
 				</div>
 
 				<div className="asnp-flex asnp-mt-2">
 					<label>
 						<span className="asnp-field-title">
-							{ __( 'z-index', 'asnp-easy-whatsapp' ) }
+							{ __( 'z-index', 'asnp-easy-sale-badge' ) }
 						</span>
 						<div className="asnp-w-[25rem]">
 							<input
@@ -607,7 +607,7 @@ const Timer = ( props ) => {
 			<div className="asnp-ew-line asnp-mt-6">
 				<label className="asnp-space-y-1">
 					<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-						{ __( 'Opacity', 'asnp-easy-whatsapp' ) }
+						{ __( 'Opacity', 'asnp-easy-sale-badge' ) }
 					</span>
 				</label>
 				<div className="asnp-relative asnp-pt-1">
@@ -634,7 +634,7 @@ const Timer = ( props ) => {
 			<div className="asnp-ew-line asnp-mt-6">
 				<div className="asnp-mt-4">
 					<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-						{ __( 'Label Position', 'asnp-easy-whatsapp' ) }
+						{ __( 'Label Position', 'asnp-easy-sale-badge' ) }
 					</span>
 					{ selectHorizVert === 'horiz' && (
 						<div className="asnp-w-full asnp-flex asnp-rounded-md asnp-mt-3">
@@ -656,7 +656,7 @@ const Timer = ( props ) => {
 										);
 									} }
 								>
-									{ __( 'Top', 'asnp-easy-whatsapp' ) }
+									{ __( 'Top', 'asnp-easy-sale-badge' ) }
 								</button>
 
 								<button
@@ -673,7 +673,7 @@ const Timer = ( props ) => {
 										);
 									} }
 								>
-									{ __( 'Bottom', 'asnp-easy-whatsapp' ) }
+									{ __( 'Bottom', 'asnp-easy-sale-badge' ) }
 								</button>
 							</div>
 							<div
@@ -698,7 +698,7 @@ const Timer = ( props ) => {
 										);
 									} }
 								>
-									{ __( 'Left', 'asnp-easy-whatsapp' ) }
+									{ __( 'Left', 'asnp-easy-sale-badge' ) }
 								</button>
 								<button
 									type="button"
@@ -714,7 +714,7 @@ const Timer = ( props ) => {
 										);
 									} }
 								>
-									{ __( 'Center', 'asnp-easy-whatsapp' ) }
+									{ __( 'Center', 'asnp-easy-sale-badge' ) }
 								</button>
 								<button
 									disabled={ disEleven }
@@ -734,7 +734,7 @@ const Timer = ( props ) => {
 										);
 									} }
 								>
-									{ __( 'Right', 'asnp-easy-whatsapp' ) }
+									{ __( 'Right', 'asnp-easy-sale-badge' ) }
 								</button>
 							</div>
 						</div>
@@ -763,7 +763,7 @@ const Timer = ( props ) => {
 										);
 									} }
 								>
-									{ __( 'Top', 'asnp-easy-whatsapp' ) }
+									{ __( 'Top', 'asnp-easy-sale-badge' ) }
 								</button>
 								<button
 									type="button"
@@ -779,7 +779,7 @@ const Timer = ( props ) => {
 										);
 									} }
 								>
-									{ __( 'Center', 'asnp-easy-whatsapp' ) }
+									{ __( 'Center', 'asnp-easy-sale-badge' ) }
 								</button>
 								<button
 									disabled={ disEleven }
@@ -799,7 +799,7 @@ const Timer = ( props ) => {
 										);
 									} }
 								>
-									{ __( 'Bottom', 'asnp-easy-whatsapp' ) }
+									{ __( 'Bottom', 'asnp-easy-sale-badge' ) }
 								</button>
 							</div>
 							<div
@@ -820,7 +820,7 @@ const Timer = ( props ) => {
 										);
 									} }
 								>
-									{ __( 'Left', 'asnp-easy-whatsapp' ) }
+									{ __( 'Left', 'asnp-easy-sale-badge' ) }
 								</button>
 
 								<button
@@ -837,7 +837,7 @@ const Timer = ( props ) => {
 										);
 									} }
 								>
-									{ __( 'Right', 'asnp-easy-whatsapp' ) }
+									{ __( 'Right', 'asnp-easy-sale-badge' ) }
 								</button>
 							</div>
 						</div>
@@ -845,13 +845,13 @@ const Timer = ( props ) => {
 				</div>
 				<div className="asnp-mt-8">
 					<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-						{ __( 'Label Position (Pixel)', 'asnp-easy-whatsapp' ) }
+						{ __( 'Label Position (Pixel)', 'asnp-easy-sale-badge' ) }
 					</span>
 				</div>
 				<div className="asnp-flex asnp-mt-3">
 					<label>
 						<span className="asnp-field-title">
-							{ __( 'Top', 'asnp-easy-whatsapp' ) }
+							{ __( 'Top', 'asnp-easy-sale-badge' ) }
 						</span>
 						<div className="asnp-w-[11rem]">
 							<input
@@ -877,7 +877,7 @@ const Timer = ( props ) => {
 					</label>
 					<label>
 						<span className="asnp-field-title asnp-ml-4">
-							{ __( 'Bottom', 'asnp-easy-whatsapp' ) }
+							{ __( 'Bottom', 'asnp-easy-sale-badge' ) }
 						</span>
 						<div className="asnp-w-[11rem] asnp-ml-4">
 							<input
@@ -905,7 +905,7 @@ const Timer = ( props ) => {
 				<div className="asnp-flex asnp-mt-[2rem]">
 					<label>
 						<span className="asnp-field-title">
-							{ __( 'Left', 'asnp-easy-whatsapp' ) }
+							{ __( 'Left', 'asnp-easy-sale-badge' ) }
 						</span>
 						<div className="asnp-w-[11rem]">
 							<input
@@ -931,7 +931,7 @@ const Timer = ( props ) => {
 					</label>
 					<label>
 						<span className="asnp-field-title asnp-ml-4">
-							{ __( 'Right', 'asnp-easy-whatsapp' ) }
+							{ __( 'Right', 'asnp-easy-sale-badge' ) }
 						</span>
 						<div className="asnp-w-[11rem] asnp-ml-4">
 							<input
@@ -958,13 +958,13 @@ const Timer = ( props ) => {
 				</div>
 				<div className="asnp-mt-8">
 					<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-						{ __( 'Labels', 'asnp-easy-whatsapp' ) }
+						{ __( 'Labels', 'asnp-easy-sale-badge' ) }
 					</span>
 				</div>
 				<div className="asnp-flex asnp-mt-3">
 					<label>
 						<span className="asnp-field-title">
-							{ __( 'Days', 'asnp-easy-whatsapp' ) }
+							{ __( 'Days', 'asnp-easy-sale-badge' ) }
 						</span>
 						<div className="asnp-w-[11rem]">
 							<input
@@ -982,7 +982,7 @@ const Timer = ( props ) => {
 					</label>
 					<label>
 						<span className="asnp-field-title asnp-ml-7">
-							{ __( 'Hours', 'asnp-easy-whatsapp' ) }
+							{ __( 'Hours', 'asnp-easy-sale-badge' ) }
 						</span>
 						<div className="asnp-w-[11rem] asnp-ml-7">
 							<input
@@ -1000,7 +1000,7 @@ const Timer = ( props ) => {
 					</label>
 					<label>
 						<span className="asnp-field-title asnp-ml-7">
-							{ __( 'Minutes', 'asnp-easy-whatsapp' ) }
+							{ __( 'Minutes', 'asnp-easy-sale-badge' ) }
 						</span>
 						<div className="asnp-w-[11rem] asnp-ml-7">
 							<input
@@ -1018,7 +1018,7 @@ const Timer = ( props ) => {
 					</label>
 					<label>
 						<span className="asnp-field-title asnp-ml-7">
-							{ __( 'Seconds', 'asnp-easy-whatsapp' ) }
+							{ __( 'Seconds', 'asnp-easy-sale-badge' ) }
 						</span>
 						<div className="asnp-w-[11rem] asnp-ml-7">
 							<input

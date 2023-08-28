@@ -49,7 +49,7 @@ class Settings extends BaseController {
 	 */
 	public function save( $request ) {
 		if ( ! $request ) {
-			return new \WP_Error( 'asnp_ewhatsapp_settings_required', __( 'Settings data is required.', 'asnp-easy-whatsapp' ), array( 'status' => rest_authorization_required_code() ) );
+			return new \WP_Error( 'asnp_ewhatsapp_settings_required', __( 'Settings data is required.', 'asnp-easy-sale-badge' ), array( 'status' => rest_authorization_required_code() ) );
 		}
 
 		$data = [];
@@ -78,7 +78,7 @@ class Settings extends BaseController {
 		}
 
 		if ( empty( $data ) ) {
-			return new \WP_Error( 'asnp_ewhatsapp_settings_required', __( 'Settings data is required.', 'asnp-easy-whatsapp' ), array( 'status' => rest_authorization_required_code() ) );
+			return new \WP_Error( 'asnp_ewhatsapp_settings_required', __( 'Settings data is required.', 'asnp-easy-sale-badge' ), array( 'status' => rest_authorization_required_code() ) );
 		}
 
 		$data = apply_filters( 'asnp_ewhatsapp_settings_save', $data, $request );

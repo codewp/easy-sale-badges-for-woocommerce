@@ -59,7 +59,7 @@ class Admin {
 
 		$links = array_merge(
 			$links,
-			[ '<a href="https://www.asanaplugins.com/product/whatsapp-chat-wordpress?utm_source=whatsapp-chat-wordpress&utm_campaign=go-pro&utm_medium=link" target="_blank" onMouseOver="this.style.color=\'#55ce5a\'" onMouseOut="this.style.color=\'#39b54a\'" style="color: #39b54a; font-weight: bold;">' . esc_html__( 'Go Pro', 'asnp-easy-whatsapp' ) . '</a>' ]
+			[ '<a href="https://www.asanaplugins.com/product/whatsapp-chat-wordpress?utm_source=whatsapp-chat-wordpress&utm_campaign=go-pro&utm_medium=link" target="_blank" onMouseOver="this.style.color=\'#55ce5a\'" onMouseOut="this.style.color=\'#39b54a\'" style="color: #39b54a; font-weight: bold;">' . esc_html__( 'Go Pro', 'asnp-easy-sale-badge' ) . '</a>' ]
 		);
 
 		return $links;

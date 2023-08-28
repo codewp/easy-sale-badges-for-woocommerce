@@ -9,7 +9,7 @@
  * Author: Asana Plugins
  * Author URI: http://www.asanaplugins.com/
  * License: http://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: asnp-easy-whatsapp
+ * Text Domain: asnp-easy-sale-badge
  * Domain Path: /languages
  * WC requires at least: 3.0
  * WC tested up to: 7.0.0
@@ -40,7 +40,7 @@ if ( is_readable( $autoloader ) ) {
 		error_log(  // phpcs:ignore
 			sprintf(
 				/* translators: 1: composer command. 2: plugin directory */
-				esc_html__( 'Your installation of the Live Chat Button plugin is incomplete. Please run %1$s within the %2$s directory.', 'asnp-easy-whatsapp' ),
+				esc_html__( 'Your installation of the Live Chat Button plugin is incomplete. Please run %1$s within the %2$s directory.', 'asnp-easy-sale-badge' ),
 				'`composer install`',
 				'`' . esc_html( str_replace( ABSPATH, '', __DIR__ ) ) . '`'
 			)
@@ -58,7 +58,7 @@ if ( is_readable( $autoloader ) ) {
 					<?php
 					printf(
 						/* translators: 1: composer command. 2: plugin directory */
-						esc_html__( 'Your installation of the Live Chat Button plugin is incomplete. Please run %1$s within the %2$s directory.', 'asnp-easy-whatsapp' ),
+						esc_html__( 'Your installation of the Live Chat Button plugin is incomplete. Please run %1$s within the %2$s directory.', 'asnp-easy-sale-badge' ),
 						'<code>composer install</code>',
 						'<code>' . esc_html( str_replace( ABSPATH, '', __DIR__ ) ) . '</code>'
 					);

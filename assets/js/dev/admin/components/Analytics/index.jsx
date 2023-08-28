@@ -8,14 +8,14 @@ const Analytics = ( props ) => {
 	return (
 		<div>
 			<h2>
-				{ __( 'Enable Analytics on WhatsApp', 'asnp-easy-whatsapp' ) }
+				{ __( 'Enable Analytics on WhatsApp', 'asnp-easy-sale-badge' ) }
 			</h2>
 			<div className="asnp-flex asnp-mt-10 md:asnp-w-[15rem] asnp-w-[12rem]">
 				<h2 className="asnp-field-title asnp-font-bold md:asnp-min-w-[8rem]">
-					{ __( 'Google Analytics', 'asnp-easy-whatsapp' ) }
+					{ __( 'Google Analytics', 'asnp-easy-sale-badge' ) }
 				</h2>
 				<div className="asnp-text-red-600 asnp-text-base asnp-uppercase asnp-ml-[0.3rem]">
-					{ __( '(Pro)', 'asnp-easy-whatsapp' ) }
+					{ __( '(Pro)', 'asnp-easy-sale-badge' ) }
 				</div>
 				<div className="asnp-ml-1 asnp-cursor-pointer asnp-mt-[0.2rem]">
 					<Tippy
@@ -25,7 +25,7 @@ const Analytics = ( props ) => {
 							<div className="asnp-h-auto asnp-w-[15rem] asnp-bg-green-500 asnp-rounded-lg asnp-p-[0.4rem] asnp-text-white asnp-rounded-bl-none asnp-ml-3">
 								{ __(
 									'View WhatsApp tracking on Google Analytics > Behavior > Events',
-									'asnp-easy-whatsapp'
+									'asnp-easy-sale-badge'
 								) }
 							</div>
 						}
@@ -44,10 +44,10 @@ const Analytics = ( props ) => {
 			</div>
 			<div className="asnp-flex asnp-mt-10 md:asnp-w-[15rem] asnp-w-[12rem]">
 				<h2 className="asnp-field-title asnp-font-bold md:asnp-min-w-[8rem]">
-					{ __( 'Facebook Pixel', 'asnp-easy-whatsapp' ) }
+					{ __( 'Facebook Pixel', 'asnp-easy-sale-badge' ) }
 				</h2>
 				<div className="asnp-text-red-600 asnp-text-base asnp-uppercase asnp-ml-[0.3rem]">
-					{ __( '(Pro)', 'asnp-easy-whatsapp' ) }
+					{ __( '(Pro)', 'asnp-easy-sale-badge' ) }
 				</div>
 				<div className="asnp-ml-1 asnp-cursor-pointer asnp-mt-[0.2rem]">
 					<Tippy
@@ -57,7 +57,7 @@ const Analytics = ( props ) => {
 							<div className="asnp-h-auto asnp-w-[15rem] asnp-bg-green-500 asnp-rounded-lg asnp-p-[0.4rem] asnp-text-white asnp-rounded-bl-none asnp-ml-3">
 								{ __(
 									'View WhatsApp recorded events in Event Manager of Facebook for Business',
-									'asnp-easy-whatsapp'
+									'asnp-easy-sale-badge'
 								) }
 							</div>
 						}
@@ -79,7 +79,7 @@ const Analytics = ( props ) => {
 				type="button"
 				onClick={ () => props.onSave() }
 			>
-				{ __( 'Save Changes', 'asnp-easy-whatsapp' ) }
+				{ __( 'Save Changes', 'asnp-easy-sale-badge' ) }
 			</button>
 		</div>
 	);

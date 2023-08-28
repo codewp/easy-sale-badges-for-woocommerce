@@ -11,7 +11,7 @@ const WooCommerce = ( props ) => {
 						<h2 className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
 							{ __(
 								'Sale Badge Position On Archive Page',
-								'asnp-easy-whatsapp'
+								'asnp-easy-sale-badge'
 							) }
 						</h2>
 					</div>
@@ -25,63 +25,63 @@ const WooCommerce = ( props ) => {
 						<option value="before_shop_loop_item_thumbnail">
 							{ __(
 								'Before product thumbnail',
-								'asnp-easy-whatsapp'
+								'asnp-easy-sale-badge'
 							) }
 						</option>
 						<option value="after_shop_loop_item_thumbnail">
 							{ __(
 								'After product thumbnail',
-								'asnp-easy-whatsapp'
+								'asnp-easy-sale-badge'
 							) }
 						</option>
 						<option value="before_shop_loop_item_title">
 							{ __(
 								'Before product title',
-								'asnp-easy-whatsapp'
+								'asnp-easy-sale-badge'
 							) }
 						</option>
 						<option value="after_shop_loop_item_title">
 							{ __(
 								'After product title',
-								'asnp-easy-whatsapp'
+								'asnp-easy-sale-badge'
 							) }
 						</option>
 
 						<option value="before_shop_loop_item_rating">
 							{ __(
 								'Before product rating',
-								'asnp-easy-whatsapp'
+								'asnp-easy-sale-badge'
 							) }
 						</option>
 						<option value="after_shop_loop_item_rating">
 							{ __(
 								'After product rating',
-								'asnp-easy-whatsapp'
+								'asnp-easy-sale-badge'
 							) }
 						</option>
 						<option value="before_shop_loop_item_price">
 							{ __(
 								'Before product price',
-								'asnp-easy-whatsapp'
+								'asnp-easy-sale-badge'
 							) }
 						</option>
 						<option value="after_shop_loop_item_price">
 							{ __(
 								'After product price',
-								'asnp-easy-whatsapp'
+								'asnp-easy-sale-badge'
 							) }
 						</option>
 						<option value="after_shop_loop_item">
 							{ __(
 								'After shop loop item',
-								'asnp-easy-whatsapp'
+								'asnp-easy-sale-badge'
 							) }
 						</option>
 						<option value="shop_loop">
-							{ __( 'Shop loop', 'asnp-easy-whatsapp' ) }
+							{ __( 'Shop loop', 'asnp-easy-sale-badge' ) }
 						</option>
 						<option value="none">
-							{ __( 'None', 'asnp-easy-whatsapp' ) }
+							{ __( 'None', 'asnp-easy-sale-badge' ) }
 						</option>
 					</select>
 				</label>
@@ -89,7 +89,7 @@ const WooCommerce = ( props ) => {
 					<p>
 						{ __(
 							'Sale badge position for bulk, tiered, purchase, products group rules in the archive page.',
-							'asnp-easy-whatsapp'
+							'asnp-easy-sale-badge'
 						) }
 					</p>
 				</label>
@@ -99,7 +99,7 @@ const WooCommerce = ( props ) => {
 					<h2 className="asnp-field-title asnp-ml-1">
 						{ __(
 							'Archive Loop Custom Hooks',
-							'asnp-easy-whatsapp'
+							'asnp-easy-sale-badge'
 						) }
 					</h2>
 					<input
@@ -113,7 +113,7 @@ const WooCommerce = ( props ) => {
 				</label>
 				<label className="asnp-block asnp-space-y-1 asnp-italic asnp-text-gray-500">
 					<p>
-						{ __( 'comma separated hooks.', 'asnp-easy-whatsapp' ) }
+						{ __( 'comma separated hooks.', 'asnp-easy-sale-badge' ) }
 					</p>
 				</label>
 			</div>
@@ -123,7 +123,7 @@ const WooCommerce = ( props ) => {
 						<h2 className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
 							{ __(
 								'Sale Badge Position On Product Page',
-								'asnp-easy-whatsapp'
+								'asnp-easy-sale-badge'
 							) }
 						</h2>
 					</div>
@@ -137,41 +137,41 @@ const WooCommerce = ( props ) => {
 						<option value="before_single_item_images">
 							{ __(
 								'Before product images',
-								'asnp-easy-whatsapp'
+								'asnp-easy-sale-badge'
 							) }
 						</option>
 						<option value="after_single_item_images">
 							{ __(
 								'After product images',
-								'asnp-easy-whatsapp'
+								'asnp-easy-sale-badge'
 							) }
 						</option>
 						<option value="before_single_item_title">
 							{ __(
 								'Before product title',
-								'asnp-easy-whatsapp'
+								'asnp-easy-sale-badge'
 							) }
 						</option>
 						<option value="after_single_item_title">
 							{ __(
 								'After product title',
-								'asnp-easy-whatsapp'
+								'asnp-easy-sale-badge'
 							) }
 						</option>
 						<option value="before_single_item_price">
 							{ __(
 								'Before product price',
-								'asnp-easy-whatsapp'
+								'asnp-easy-sale-badge'
 							) }
 						</option>
 						<option value="after_single_item_price">
 							{ __(
 								'After product price',
-								'asnp-easy-whatsapp'
+								'asnp-easy-sale-badge'
 							) }
 						</option>
 						<option value="none">
-							{ __( 'None', 'asnp-easy-whatsapp' ) }
+							{ __( 'None', 'asnp-easy-sale-badge' ) }
 						</option>
 					</select>
 				</label>
@@ -179,7 +179,7 @@ const WooCommerce = ( props ) => {
 					<p>
 						{ __(
 							'Sale badge position for bulk, tiered, purchase, products group rules in the product page.',
-							'asnp-easy-whatsapp'
+							'asnp-easy-sale-badge'
 						) }
 					</p>
 				</label>
@@ -189,7 +189,7 @@ const WooCommerce = ( props ) => {
 					<h2 className="asnp-field-title asnp-ml-1">
 						{ __(
 							'Single Product Custom Hooks',
-							'asnp-easy-whatsapp'
+							'asnp-easy-sale-badge'
 						) }
 					</h2>
 					<input
@@ -206,7 +206,7 @@ const WooCommerce = ( props ) => {
 				</label>
 				<label className="asnp-block asnp-space-y-1 asnp-italic asnp-text-gray-500">
 					<p>
-						{ __( 'comma separated hooks.', 'asnp-easy-whatsapp' ) }
+						{ __( 'comma separated hooks.', 'asnp-easy-sale-badge' ) }
 					</p>
 				</label>
 			</div>
@@ -217,7 +217,7 @@ const WooCommerce = ( props ) => {
 						<h2 className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
 							{ __(
 								'Timer badge position',
-								'asnp-easy-whatsapp'
+								'asnp-easy-sale-badge'
 							) }
 						</h2>
 					</div>
@@ -231,13 +231,13 @@ const WooCommerce = ( props ) => {
 						<option value="onImage">
 							{ __(
 								'On image',
-								'asnp-easy-whatsapp'
+								'asnp-easy-sale-badge'
 							) }
 						</option>
 						<option value="outOfImage">
 							{ __(
 								'Out of image',
-								'asnp-easy-whatsapp'
+								'asnp-easy-sale-badge'
 							) }
 						</option>	
 					</select>
@@ -249,7 +249,7 @@ const WooCommerce = ( props ) => {
 				type="button"
 				onClick={ () => props.onSave() }
 			>
-				{ __( 'Save Changes', 'asnp-easy-whatsapp' ) }
+				{ __( 'Save Changes', 'asnp-easy-sale-badge' ) }
 			</button>
 		</div>
 	);

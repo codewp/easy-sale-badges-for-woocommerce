@@ -23,7 +23,7 @@ abstract class BaseWooCommerceHooks {
 			return;
 		}
 
-		echo '<div id="asnp-easy-whatsapp-' . esc_attr( $whatsapp->id ) . '"></div>';
+		echo '<div id="asnp-easy-sale-badge-' . esc_attr( $whatsapp->id ) . '"></div>';
 	}
 
 	public static function position_hooks() {

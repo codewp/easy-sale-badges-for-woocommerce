@@ -6,7 +6,7 @@ const Opacity = ( props ) => {
 		<div className='asnp-ew-line asnp-mt-6'>
 			<label className="asnp-space-y-1">
 				<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-					{ __( 'Opacity', 'asnp-easy-whatsapp' ) }
+					{ __( 'Opacity', 'asnp-easy-sale-badge' ) }
 				</span>
 			</label>
 			<div className="asnp-relative asnp-pt-1">
@@ -33,7 +33,7 @@ const Opacity = ( props ) => {
 				<div className="asnp-w-full">
 					<label>
 						<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-							{ __( 'Rotation', 'asnp-easy-whatsapp' ) }
+							{ __( 'Rotation', 'asnp-easy-sale-badge' ) }
 						</span>
 					</label>
 					<div className="asnp-flex">
@@ -115,7 +115,7 @@ const Opacity = ( props ) => {
 
 			<div className="asnp-mt-6">
 				<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-					{ __( 'Flip Text', 'asnp-easy-whatsapp' ) }
+					{ __( 'Flip Text', 'asnp-easy-sale-badge' ) }
 				</span>
 				<div className="asnp-flex asnp-mt-2">
 					<div className="asnp-w-40">
@@ -137,7 +137,7 @@ const Opacity = ( props ) => {
 								className="asnp-form-check-label asnp-inline-block asnp-text-gray-800 asnp-cursor-pointer asnp-text-base asnp-font-normal"
 								htmlFor="inlineCheckbox1"
 							>
-								{ __( 'Horizontal', 'asnp-easy-whatsapp' ) }
+								{ __( 'Horizontal', 'asnp-easy-sale-badge' ) }
 							</label>
 						</div>
 					</div>
@@ -160,7 +160,7 @@ const Opacity = ( props ) => {
 								className="asnp-form-check-label asnp-inline-block asnp-text-gray-800 asnp-cursor-pointer asnp-text-base asnp-font-normal"
 								htmlFor="inlineCheckbox2"
 							>
-								{ __( 'Vertical', 'asnp-easy-whatsapp' ) }
+								{ __( 'Vertical', 'asnp-easy-sale-badge' ) }
 							</label>
 						</div>
 					</div>

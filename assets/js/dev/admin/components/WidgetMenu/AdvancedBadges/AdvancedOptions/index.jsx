@@ -104,7 +104,7 @@ const AdvancedOptions = ( props ) => {
 									<span className="asnp-flex asnp-w-[25rem] asnp-my-2">
 										{ __(
 											'Main Badge Color',
-											'asnp-easy-whatsapp'
+											'asnp-easy-sale-badge'
 										) }
 									</span>
 									<div
@@ -175,7 +175,7 @@ const AdvancedOptions = ( props ) => {
 									<span className="asnp-flex asnp-w-[25rem] asnp-my-2">
 										{ __(
 											'Secondary Badge Color',
-											'asnp-easy-whatsapp'
+											'asnp-easy-sale-badge'
 										) }
 									</span>
 									<div
@@ -192,13 +192,13 @@ const AdvancedOptions = ( props ) => {
 					</Tippy>
 				</div>
 				<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold">
-					{ __( 'Additional Styles', 'asnp-easy-whatsapp' ) }
+					{ __( 'Additional Styles', 'asnp-easy-sale-badge' ) }
 				</div>
 
 				<div className="asnp-flex asnp-mt-2">
 					<label>
 						<span className="asnp-field-title">
-							{ __( 'z-index', 'asnp-easy-whatsapp' ) }
+							{ __( 'z-index', 'asnp-easy-sale-badge' ) }
 						</span>
 						<div className="asnp-w-[25rem]">
 							<input

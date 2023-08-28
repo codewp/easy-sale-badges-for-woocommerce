@@ -5,7 +5,7 @@ const TimePicker = ( { onChange, badge, groupIndex, index } ) => {
 	return (
 		<div className="asnp-flex">
 			<div className="asnp-mt-2">
-				{ __( 'Start:', 'asnp-easy-whatsapp' ) }
+				{ __( 'Start:', 'asnp-easy-sale-badge' ) }
 			</div>
 			<select
 				className="asnp-ml-2 asnp-select-field"
@@ -66,7 +66,7 @@ const TimePicker = ( { onChange, badge, groupIndex, index } ) => {
 			</select>
 
 			<div className="asnp-ml-6 asnp-mt-2">
-				{ __( 'End:', 'asnp-easy-whatsapp' ) }
+				{ __( 'End:', 'asnp-easy-sale-badge' ) }
 			</div>
 			<select
 				className="asnp-ml-2 asnp-select-field"

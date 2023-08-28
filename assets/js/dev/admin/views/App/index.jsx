@@ -48,7 +48,7 @@ export default function App() {
 								: '' )
 						}
 					>
-						{ __( 'Badges', 'asnp-easy-whatsapp' ) }
+						{ __( 'Badges', 'asnp-easy-sale-badge' ) }
 					</NavLink>
 					<NavLink
 						to="/settings"
@@ -57,14 +57,14 @@ export default function App() {
 							( isActive ? ' asnp-nav-tab-active' : '' )
 						}
 					>
-						{ __( 'Settings', 'asnp-easy-whatsapp' ) }
+						{ __( 'Settings', 'asnp-easy-sale-badge' ) }
 					</NavLink>
 					<a
 						target="_blank"
 						href="https://www.asanaplugins.com/product/whatsapp-chat-wordpress?utm_source=whatsapp-chat-wordpress&utm_campaign=go-pro&utm_medium=link"
 						className="asnp-nav-tab-item asnp-ew-goPro"
 					>
-						{ __( 'Go Pro', 'asnp-easy-whatsapp' ) }
+						{ __( 'Go Pro', 'asnp-easy-sale-badge' ) }
 					</a>
 				</nav>
 			</div>

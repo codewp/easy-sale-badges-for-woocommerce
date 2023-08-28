@@ -6,7 +6,7 @@ const AdvancedOpacityAndPos = ( props ) => {
 		<div className="asnp-ew-line">
 			<label className="asnp-space-y-1">
 				<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-					{ __( 'Opacity', 'asnp-easy-whatsapp' ) }
+					{ __( 'Opacity', 'asnp-easy-sale-badge' ) }
 				</span>
 			</label>
 			<div className="asnp-relative asnp-pt-1">

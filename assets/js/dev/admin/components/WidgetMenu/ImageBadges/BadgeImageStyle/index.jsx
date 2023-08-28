@@ -10,12 +10,12 @@ const BadgeImageStyle = ( props ) => {
 	return (
 		<div className="asnp-ew-line">
 			<div className="asnp-w-[12rem] asnp-ml-4 asnp-mt-6 asnp-text-black asnp-block asnp-font-medium asnp-text-base">
-				<label>{ __( 'Labels', 'asnp-easy-whatsapp' ) }</label>
+				<label>{ __( 'Labels', 'asnp-easy-sale-badge' ) }</label>
 			</div>
 			<div className="asnp-mt-4">
 				<div className="asnp-relative asnp-w-[49rem] asnp-mb-3 asnp-mt-3 asnp-h-[37rem] asnp-flex asnp-flex-col asnp-border-2 asnp-rounded-md asnp-pr-1 asnp-pb-4 asnp-scrollBarImageB">
 					<div className="asnp-w-full asnp-ml-8 asnp-mt-6 asnp-mb-2 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
-						<label>{ __( 'Sale', 'asnp-easy-whatsapp' ) }</label>
+						<label>{ __( 'Sale', 'asnp-easy-sale-badge' ) }</label>
 					</div>
 					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-4">
 						<div
@@ -1308,7 +1308,7 @@ const BadgeImageStyle = ( props ) => {
 					</div>
 					<div className="asnp-w-full asnp-ml-8 asnp-mt-6 asnp-mb-2 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
 						<label>
-							{ __( 'Percentage Off', 'asnp-easy-whatsapp' ) }
+							{ __( 'Percentage Off', 'asnp-easy-sale-badge' ) }
 						</label>
 					</div>
 					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-4">
@@ -2366,7 +2366,7 @@ const BadgeImageStyle = ( props ) => {
 					</div>
 					<div className="asnp-w-full asnp-ml-8 asnp-mt-6 asnp-mb-2 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
 						<label>
-							{ __( 'Coming Soon', 'asnp-easy-whatsapp' ) }
+							{ __( 'Coming Soon', 'asnp-easy-sale-badge' ) }
 						</label>
 					</div>
 					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-4">
@@ -2747,7 +2747,7 @@ const BadgeImageStyle = ( props ) => {
 					</div>
 					<div className="asnp-w-full asnp-ml-8 asnp-mt-6 asnp-mb-2 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
 						<label>
-							{ __( 'Pre Order', 'asnp-easy-whatsapp' ) }
+							{ __( 'Pre Order', 'asnp-easy-sale-badge' ) }
 						</label>
 					</div>
 					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-4">
@@ -3102,7 +3102,7 @@ const BadgeImageStyle = ( props ) => {
 						</div>
 					</div>
 					<div className="asnp-w-full asnp-ml-8 asnp-mt-6 asnp-mb-2 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
-						<label>{ __( 'Free', 'asnp-easy-whatsapp' ) }</label>
+						<label>{ __( 'Free', 'asnp-easy-sale-badge' ) }</label>
 					</div>
 					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-4">
 						<div
@@ -3691,7 +3691,7 @@ const BadgeImageStyle = ( props ) => {
 					</div>
 					<div className="asnp-w-full asnp-ml-8 asnp-mt-6 asnp-mb-2 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
 						<label>
-							{ __( 'Black Friday', 'asnp-easy-whatsapp' ) }
+							{ __( 'Black Friday', 'asnp-easy-sale-badge' ) }
 						</label>
 					</div>
 					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-4">
@@ -4118,7 +4118,7 @@ const BadgeImageStyle = ( props ) => {
 					</div>
 					<div className="asnp-w-full asnp-ml-8 asnp-mt-6 asnp-mb-2 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
 						<label>
-							{ __( "Valentine's Day", 'asnp-easy-whatsapp' ) }
+							{ __( "Valentine's Day", 'asnp-easy-sale-badge' ) }
 						</label>
 					</div>
 					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-4">

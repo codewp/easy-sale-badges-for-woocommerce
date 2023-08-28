@@ -6,7 +6,7 @@ const TimeZone = ( { onChange, timezone } ) => {
 		<div>
 			<label className="asnp-block asnp-space-y-2">
 				<h2 className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
-					{ __( 'Timezone', 'asnp-easy-whatsapp' ) }
+					{ __( 'Timezone', 'asnp-easy-sale-badge' ) }
 				</h2>
 				<select
 					className=" asnp-select-field asnp-ml-4"

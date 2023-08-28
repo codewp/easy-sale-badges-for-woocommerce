@@ -10,7 +10,7 @@ const General = ( props ) => {
 		<div>
 			<div className="asnp-flex asnp-flex-row md:asnp-w-[23rem] asnp-w-[16rem] asnp-justify-between">
 				<h2 className="asnp-field-title md:asnp-min-w-1/3">
-					{ __( 'Show default "Sale" label', 'asnp-easy-whatsapp' ) }
+					{ __( 'Show default "Sale" label', 'asnp-easy-sale-badge' ) }
 				</h2>
 				<div>
 					<Toggle
@@ -28,7 +28,7 @@ const General = ( props ) => {
 				<h2 className="asnp-field-title md:asnp-min-w-1/3">
 					{ __(
 						'Product Display for a Single Item',
-						'asnp-easy-whatsapp'
+						'asnp-easy-sale-badge'
 					) }
 				</h2>
 				<div className="asnp-ml-[0.5rem] asnp-cursor-pointer asnp-mt-[0.2rem]">
@@ -39,7 +39,7 @@ const General = ( props ) => {
 							<div className="asnp-h-auto asnp-w-[15rem] asnp-bg-green-500 asnp-rounded-lg asnp-p-[0.4rem] asnp-text-white asnp-rounded-bl-none asnp-ml-3">
 								{ __(
 									'Disable powered by message in the pro version',
-									'asnp-easy-whatsapp'
+									'asnp-easy-sale-badge'
 								) }
 							</div>
 						}
@@ -63,7 +63,7 @@ const General = ( props ) => {
 			</div>
 			<div className="asnp-flex  asnp-mt-10 lg:asnp-w-[20rem] asnp-justify-between md:asnp-w-[20rem]">
 				<h2 className="asnp-field-title asnp-py-1 asnp-font-bold md:asnp-min-w-1/3">
-					{ __( 'Desktop Url', 'asnp-easy-whatsapp' ) }
+					{ __( 'Desktop Url', 'asnp-easy-sale-badge' ) }
 				</h2>
 				<div
 					className="asnp-inline-flex asnp-rounded-md asnp-shadow-sm"
@@ -77,7 +77,7 @@ const General = ( props ) => {
 								<p className="asnp-text-white">
 									{ __(
 										'https://api.whatsapp.com/',
-										'asnp-easy-whatsapp'
+										'asnp-easy-sale-badge'
 									) }
 								</p>
 							</div>
@@ -105,7 +105,7 @@ const General = ( props ) => {
 								<p className="asnp-text-white">
 									{ __(
 										'https://web.whatsapp.com/',
-										'asnp-easy-whatsapp'
+										'asnp-easy-sale-badge'
 									) }
 								</p>
 							</div>
@@ -122,7 +122,7 @@ const General = ( props ) => {
 								props.onChange( 'urlDesktop', 'Web' );
 							} }
 						>
-							{ __( 'Web', 'asnp-easy-whatsapp' ) }
+							{ __( 'Web', 'asnp-easy-sale-badge' ) }
 						</button>
 					</Tippy>
 				</div>
@@ -130,7 +130,7 @@ const General = ( props ) => {
 
 			<div className="asnp-flex asnp-mt-10 lg:asnp-w-[21.5rem] asnp-justify-between md:asnp-w-[20rem] ">
 				<h2 className="asnp-field-title asnp-py-1 asnp-font-bold md:asnp-min-w-1/3">
-					{ __( 'Mobile Url', 'asnp-easy-whatsapp' ) }
+					{ __( 'Mobile Url', 'asnp-easy-sale-badge' ) }
 				</h2>
 				<div
 					className="asnp-inline-flex asnp-rounded-md asnp-shadow-sm"
@@ -144,7 +144,7 @@ const General = ( props ) => {
 								<p className="asnp-text-white">
 									{ __(
 										'https://api.whatsapp.com/',
-										'asnp-easy-whatsapp'
+										'asnp-easy-sale-badge'
 									) }
 								</p>
 							</div>
@@ -161,7 +161,7 @@ const General = ( props ) => {
 								props.onChange( 'urlMobile', 'API' );
 							} }
 						>
-							{ __( 'API', 'asnp-easy-whatsapp' ) }
+							{ __( 'API', 'asnp-easy-sale-badge' ) }
 						</button>
 					</Tippy>
 					<Tippy
@@ -172,7 +172,7 @@ const General = ( props ) => {
 								<p className="asnp-text-white">
 									{ __(
 										'whatsapp://send?phone=',
-										'asnp-easy-whatsapp'
+										'asnp-easy-sale-badge'
 									) }
 								</p>
 							</div>
@@ -189,7 +189,7 @@ const General = ( props ) => {
 								props.onChange( 'urlMobile', 'Protocol' );
 							} }
 						>
-							{ __( 'Protocol', 'asnp-easy-whatsapp' ) }
+							{ __( 'Protocol', 'asnp-easy-sale-badge' ) }
 						</button>
 					</Tippy>
 				</div>
@@ -205,7 +205,7 @@ const General = ( props ) => {
 				type="button"
 				onClick={ () => props.onSave() }
 			>
-				{ __( 'Save Changes', 'asnp-easy-whatsapp' ) }
+				{ __( 'Save Changes', 'asnp-easy-sale-badge' ) }
 			</button>
 		</div>
 	);

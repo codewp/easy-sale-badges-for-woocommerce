@@ -48,7 +48,7 @@ const Position = ( props ) => {
 		<div className="asnp-ew-line">
 			<div className="asnp-mt-4">
 				<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-					{ __( 'Label Position', 'asnp-easy-whatsapp' ) }
+					{ __( 'Label Position', 'asnp-easy-sale-badge' ) }
 				</span>
 				<div className="asnp-w-full asnp-flex asnp-rounded-md asnp-mt-3">
 					<div className="asnp-w-[10rem] asnp-flex" role="group">
@@ -63,7 +63,7 @@ const Position = ( props ) => {
 								props.onChange( 'badgePositionY', 'top' );
 							} }
 						>
-							{ __( 'Top', 'asnp-easy-whatsapp' ) }
+							{ __( 'Top', 'asnp-easy-sale-badge' ) }
 						</button>
 
 						<button
@@ -77,7 +77,7 @@ const Position = ( props ) => {
 								props.onChange( 'badgePositionY', 'bottom' );
 							} }
 						>
-							{ __( 'Bottom', 'asnp-easy-whatsapp' ) }
+							{ __( 'Bottom', 'asnp-easy-sale-badge' ) }
 						</button>
 					</div>
 					<div className="asnp-w-[10rem] asnp-flex" role="group">
@@ -95,7 +95,7 @@ const Position = ( props ) => {
 								props.onChange( 'badgePositionX', 'left' );
 							} }
 						>
-							{ __( 'Left', 'asnp-easy-whatsapp' ) }
+							{ __( 'Left', 'asnp-easy-sale-badge' ) }
 						</button>
 
 						<button
@@ -112,20 +112,20 @@ const Position = ( props ) => {
 								props.onChange( 'badgePositionX', 'right' );
 							} }
 						>
-							{ __( 'Right', 'asnp-easy-whatsapp' ) }
+							{ __( 'Right', 'asnp-easy-sale-badge' ) }
 						</button>
 					</div>
 				</div>
 			</div>
 			<div className="asnp-mt-8">
 				<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-					{ __( 'Label Position (Pixel)', 'asnp-easy-whatsapp' ) }
+					{ __( 'Label Position (Pixel)', 'asnp-easy-sale-badge' ) }
 				</span>
 			</div>
 			<div className="asnp-flex asnp-mt-3">
 				<label>
 					<span className="asnp-field-title">
-						{ __( 'Top', 'asnp-easy-whatsapp' ) }
+						{ __( 'Top', 'asnp-easy-sale-badge' ) }
 					</span>
 					<div className="asnp-w-[11rem]">
 						<input
@@ -151,7 +151,7 @@ const Position = ( props ) => {
 				</label>
 				<label>
 					<span className="asnp-field-title asnp-ml-4">
-						{ __( 'Bottom', 'asnp-easy-whatsapp' ) }
+						{ __( 'Bottom', 'asnp-easy-sale-badge' ) }
 					</span>
 					<div className="asnp-w-[11rem] asnp-ml-4">
 						<input
@@ -179,7 +179,7 @@ const Position = ( props ) => {
 			<div className="asnp-flex asnp-mt-[2rem]">
 				<label>
 					<span className="asnp-field-title">
-						{ __( 'Left', 'asnp-easy-whatsapp' ) }
+						{ __( 'Left', 'asnp-easy-sale-badge' ) }
 					</span>
 					<div className="asnp-w-[11rem]">
 						<input
@@ -205,7 +205,7 @@ const Position = ( props ) => {
 				</label>
 				<label>
 					<span className="asnp-field-title asnp-ml-4">
-						{ __( 'Right', 'asnp-easy-whatsapp' ) }
+						{ __( 'Right', 'asnp-easy-sale-badge' ) }
 					</span>
 					<div className="asnp-w-[11rem] asnp-ml-4">
 						<input

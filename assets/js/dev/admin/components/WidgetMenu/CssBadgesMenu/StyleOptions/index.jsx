@@ -172,7 +172,7 @@ const StyleOptions = ( props ) => {
 									<span className="asnp-flex asnp-w-[25rem] asnp-my-2">
 										{ __(
 											'Label Color',
-											'asnp-easy-whatsapp'
+											'asnp-easy-sale-badge'
 										) }
 									</span>
 									<div
@@ -191,7 +191,7 @@ const StyleOptions = ( props ) => {
 				<div className="asnp-flex asnp-mt-[1rem]">
 					<label>
 						<span className="asnp-field-title">
-							{ __( 'Width (Pixel)', 'asnp-easy-whatsapp' ) }
+							{ __( 'Width (Pixel)', 'asnp-easy-sale-badge' ) }
 						</span>
 						<div className="asnp-w-[11rem]">
 							<input
@@ -217,7 +217,7 @@ const StyleOptions = ( props ) => {
 					</label>
 					<label>
 						<span className="asnp-field-title asnp-ml-4">
-							{ __( 'Height (Pixel)', 'asnp-easy-whatsapp' ) }
+							{ __( 'Height (Pixel)', 'asnp-easy-sale-badge' ) }
 						</span>
 						<div className="asnp-w-[11rem] asnp-ml-4">
 							<input
@@ -243,12 +243,12 @@ const StyleOptions = ( props ) => {
 					</label>
 				</div>
 				<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold">
-					{ __( 'Border Radius (Pixel)', 'asnp-easy-whatsapp' ) }
+					{ __( 'Border Radius (Pixel)', 'asnp-easy-sale-badge' ) }
 				</div>
 				<div className="asnp-flex asnp-mt-2">
 					<label>
 						<span className="asnp-field-title">
-							{ __( 'Top Left', 'asnp-easy-whatsapp' ) }
+							{ __( 'Top Left', 'asnp-easy-sale-badge' ) }
 						</span>
 						<div className="asnp-w-[11rem]">
 							<input
@@ -272,7 +272,7 @@ const StyleOptions = ( props ) => {
 					</label>
 					<label>
 						<span className="asnp-field-title asnp-ml-4">
-							{ __( 'Top Right', 'asnp-easy-whatsapp' ) }
+							{ __( 'Top Right', 'asnp-easy-sale-badge' ) }
 						</span>
 						<div className="asnp-w-[11rem] asnp-ml-4">
 							<input
@@ -298,7 +298,7 @@ const StyleOptions = ( props ) => {
 				<div className="asnp-flex asnp-mt-[1rem]">
 					<label>
 						<span className="asnp-field-title">
-							{ __( 'Bottom Left', 'asnp-easy-whatsapp' ) }
+							{ __( 'Bottom Left', 'asnp-easy-sale-badge' ) }
 						</span>
 						<div className="asnp-w-[11rem]">
 							<input
@@ -322,7 +322,7 @@ const StyleOptions = ( props ) => {
 					</label>
 					<label>
 						<span className="asnp-field-title asnp-ml-4">
-							{ __( 'Bottom Right', 'asnp-easy-whatsapp' ) }
+							{ __( 'Bottom Right', 'asnp-easy-sale-badge' ) }
 						</span>
 						<div className="asnp-w-[11rem] asnp-ml-4">
 							<input
@@ -346,13 +346,13 @@ const StyleOptions = ( props ) => {
 					</label>
 				</div>
 				<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold">
-					{ __( 'Additional Styles', 'asnp-easy-whatsapp' ) }
+					{ __( 'Additional Styles', 'asnp-easy-sale-badge' ) }
 				</div>
 
 				<div className="asnp-flex asnp-mt-2">
 					<label>
 						<span className="asnp-field-title">
-							{ __( 'z-index', 'asnp-easy-whatsapp' ) }
+							{ __( 'z-index', 'asnp-easy-sale-badge' ) }
 						</span>
 						<div className="asnp-w-[25rem]">
 							<input

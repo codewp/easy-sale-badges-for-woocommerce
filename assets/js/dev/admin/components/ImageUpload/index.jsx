@@ -64,7 +64,7 @@ export const ImageUpload = ( { file, setFile } ) => {
 	return (
 		<div>
 			<label className="asnp-block asnp-text-sm asnp-font-medium asnp-text-gray-700">
-				{ __( 'Custom', 'asnp-easy-whatsapp' ) }
+				{ __( 'Custom', 'asnp-easy-sale-badge' ) }
 			</label>
 			{ ! file && (
 				<div>
@@ -105,7 +105,7 @@ export const ImageUpload = ( { file, setFile } ) => {
 										<span>
 											{ __(
 												'Upload a file or drag and drop here',
-												'asnp-easy-whatsapp'
+												'asnp-easy-sale-badge'
 											) }
 										</span>
 										<button
@@ -119,7 +119,7 @@ export const ImageUpload = ( { file, setFile } ) => {
 								<p className="asnp-text-xs asnp-text-gray-500">
 									{ __(
 										'PNG, JPG, GIF',
-										'asnp-easy-whatsapp'
+										'asnp-easy-sale-badge'
 									) }
 								</p>
 							</div>

@@ -27,7 +27,7 @@ const NavMenu = ( props ) => {
 							: '' ) + ' asnp-nav-tab-item'
 					}
 				>
-					{ __( 'CSS Labels', 'asnp-easy-whatsapp' ) }
+					{ __( 'CSS Labels', 'asnp-easy-sale-badge' ) }
 				</a>
 				<a
 					href="#"
@@ -41,7 +41,7 @@ const NavMenu = ( props ) => {
 							: '' ) + ' asnp-nav-tab-item'
 					}
 				>
-					{ __( 'Image Labels', 'asnp-easy-whatsapp' ) }
+					{ __( 'Image Labels', 'asnp-easy-sale-badge' ) }
 				</a>
 				<a
 					href="#"
@@ -55,7 +55,7 @@ const NavMenu = ( props ) => {
 							: '' ) + ' asnp-nav-tab-item'
 					}
 				>
-					{ __( 'Advanced Labels', 'asnp-easy-whatsapp' ) }
+					{ __( 'Advanced Labels', 'asnp-easy-sale-badge' ) }
 				</a>
 				<a
 					href="#"
@@ -69,7 +69,7 @@ const NavMenu = ( props ) => {
 							: '' ) + ' asnp-nav-tab-item'
 					}
 				>
-					{ __( 'Timer', 'asnp-easy-whatsapp' ) }
+					{ __( 'Timer', 'asnp-easy-sale-badge' ) }
 				</a>
 				<a
 					href="#"
@@ -83,7 +83,7 @@ const NavMenu = ( props ) => {
 							: '' ) + ' asnp-nav-tab-item'
 					}
 				>
-					{ __( 'Schedule', 'asnp-easy-whatsapp' ) }
+					{ __( 'Schedule', 'asnp-easy-sale-badge' ) }
 				</a>
 				<a
 					href="#"
@@ -97,7 +97,7 @@ const NavMenu = ( props ) => {
 							: '' ) + ' asnp-nav-tab-item'
 					}
 				>
-					{ __( 'Products Selection', 'asnp-easy-whatsapp' ) }
+					{ __( 'Products Selection', 'asnp-easy-sale-badge' ) }
 				</a>
 			</nav>
 			<div className="asnp-w-[45rem] md:asnp-w-[48rem] lg:asnp-w-[52rem]">

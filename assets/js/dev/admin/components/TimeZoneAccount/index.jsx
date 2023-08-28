@@ -7,10 +7,10 @@ const TimeZoneAccount = () => {
 			<label className="asnp-block asnp-space-y-2">
 				<div className="asnp-flex">
 					<h2 className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
-						{ __( 'Timezone', 'asnp-easy-whatsapp' ) }
+						{ __( 'Timezone', 'asnp-easy-sale-badge' ) }
 					</h2>
 					<div className="asnp-text-red-600 asnp-text-base asnp-uppercase asnp-ml-1">
-						{ __( '(Pro)', 'asnp-easy-whatsapp' ) }
+						{ __( '(Pro)', 'asnp-easy-sale-badge' ) }
 					</div>
 				</div>
 				<select

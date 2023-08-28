@@ -39,16 +39,16 @@ class Items extends BaseController {
 	public function search_items( $request ) {
 		try {
 			if ( empty( $request['search'] ) ) {
-				throw new \Exception( __( 'Search term is required.', 'asnp-easy-whatsapp' ) );
+				throw new \Exception( __( 'Search term is required.', 'asnp-easy-sale-badge' ) );
 			}
 
 			if ( empty( $request['type'] ) ) {
-				throw new \Exception( __( 'Type is required.', 'asnp-easy-whatsapp' ) );
+				throw new \Exception( __( 'Type is required.', 'asnp-easy-sale-badge' ) );
 			}
 
 			$search = sanitize_text_field( wp_unslash( $request['search'] ) );
 			if ( empty( $search ) ) {
-				throw new \Exception( __( 'Search term is required.', 'asnp-easy-whatsapp' ) );
+				throw new \Exception( __( 'Search term is required.', 'asnp-easy-sale-badge' ) );
 			}
 
 			$items = [];
@@ -87,11 +87,11 @@ class Items extends BaseController {
 	public function get_items( $request ) {
 		try {
 			if ( empty( $request['items'] ) ) {
-				throw new \Exception( __( 'Items are required.', 'asnp-easy-whatsapp' ) );
+				throw new \Exception( __( 'Items are required.', 'asnp-easy-sale-badge' ) );
 			}
 
 			if ( empty( $request['type'] ) ) {
-				throw new \Exception( __( 'Type is required.', 'asnp-easy-whatsapp' ) );
+				throw new \Exception( __( 'Type is required.', 'asnp-easy-sale-badge' ) );
 			}
 
 			$items = $request['items'];

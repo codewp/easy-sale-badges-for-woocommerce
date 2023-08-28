@@ -11,7 +11,7 @@ const AvailabilityDay = ( { updateAvailability, day, name } ) => {
 			setMessage( {
 				message: __(
 					'You can only add 2 times per day.',
-					'asnp-easy-whatsapp'
+					'asnp-easy-sale-badge'
 				),
 				type: 'info',
 			} );
@@ -65,7 +65,7 @@ const AvailabilityDay = ( { updateAvailability, day, name } ) => {
 						className="asnp-mt-[0.5rem] asnp-form-check-label asnp-inline-block asnp-text-gray-800 asnp-cursor-pointer"
 						htmlFor={ name }
 					>
-						{ __( name, 'asnp-easy-whatsapp' ) }
+						{ __( name, 'asnp-easy-sale-badge' ) }
 					</label>
 				</div>
 				{ day.times.map( ( time, index ) => (
@@ -82,14 +82,14 @@ const AvailabilityDay = ( { updateAvailability, day, name } ) => {
 								onClick={ addTime }
 								className="asnp-ml-3  asnp-mb-4 asnp-btn-primary asnp-py-1 asnp-h-[2rem] asnp-w-[4rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
 							>
-								{ __( 'Add', 'asnp-easy-whatsapp' ) }
+								{ __( 'Add', 'asnp-easy-sale-badge' ) }
 							</button>
 						) : (
 							<button
 								onClick={ () => removeTime( index ) }
 								className="asnp-ml-4  asnp-mb-4 asnp-btn-delete asnp-py-1 asnp-h-[2rem] asnp-w-[4rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
 							>
-								{ __( 'Remove', 'asnp-easy-whatsapp' ) }
+								{ __( 'Remove', 'asnp-easy-sale-badge' ) }
 							</button>
 						) }
 					</div>

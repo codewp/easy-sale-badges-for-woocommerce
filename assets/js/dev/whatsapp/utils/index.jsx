@@ -10,7 +10,7 @@ export const getContainerElement = (
 	}
 
 	let el = document.getElementById(
-		'asnp-easy-whatsapp' + ( whatsapp.id ? '-' + whatsapp.id : '' )
+		'asnp-easy-sale-badge' + ( whatsapp.id ? '-' + whatsapp.id : '' )
 	);
 
 	return el
@@ -31,7 +31,7 @@ export const createContainerElement = (
 	let type = whatsapp.type || 'sticky';
 	if ( 'sticky' === type ) {
 		el = document.createElement( 'div' );
-		el.id = 'asnp-easy-whatsapp' + ( whatsapp.id ? '-' + whatsapp.id : '' );
+		el.id = 'asnp-easy-sale-badge' + ( whatsapp.id ? '-' + whatsapp.id : '' );
 		document.body.appendChild( el );
 	} else if ( cssSelector.trim().length ) {
 		let selected = document.querySelector( cssSelector.trim() );
@@ -40,7 +40,7 @@ export const createContainerElement = (
 		}
 
 		el = document.createElement( 'div' );
-		el.id = 'asnp-easy-whatsapp' + ( whatsapp.id ? '-' + whatsapp.id : '' );
+		el.id = 'asnp-easy-sale-badge' + ( whatsapp.id ? '-' + whatsapp.id : '' );
 		after ? selected.after( el ) : selected.before( el );
 	}
 

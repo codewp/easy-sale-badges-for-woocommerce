@@ -106,7 +106,7 @@ final class Plugin {
 	 * Load Localisation files.
 	 */
 	protected function load_plugin_textdomain() {
-		load_plugin_textdomain( 'asnp-easy-whatsapp', false, basename( dirname( __DIR__ ) ) . '/languages' );
+		load_plugin_textdomain( 'asnp-easy-sale-badge', false, basename( dirname( __DIR__ ) ) . '/languages' );
 	}
 
 	public function includes() {
@@ -188,7 +188,7 @@ final class Plugin {
 		if ( ! $wordpress_minimum_met ) {
 			$errors[] = sprintf(
 				/* translators: 1: URL of WordPress.org, 2: The minimum WordPress version number */
-				__( 'The Live Chat Button plugin requires <a href="%1$s">WordPress</a> %2$s or greater to be installed and active.', 'asnp-easy-whatsapp' ),
+				__( 'The Live Chat Button plugin requires <a href="%1$s">WordPress</a> %2$s or greater to be installed and active.', 'asnp-easy-sale-badge' ),
 				'https://wordpress.org/',
 				$minimum_wordpress_version
 			);

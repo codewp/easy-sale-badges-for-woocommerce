@@ -33,7 +33,7 @@ export default function Badges() {
 				setMessage( {
 					message: __(
 						'Duplicated Successfully.',
-						'asnp-easy-whatsapp'
+						'asnp-easy-sale-badge'
 					),
 					type: 'success',
 				} );
@@ -41,7 +41,7 @@ export default function Badges() {
 				setMessage( {
 					message: __(
 						'Error occurred on duplicating the item.',
-						'asnp-easy-whatsapp'
+						'asnp-easy-sale-badge'
 					),
 					type: 'error',
 				} );
@@ -85,7 +85,7 @@ export default function Badges() {
 				setMessage( {
 					message: __(
 						'Deleted Successfully.',
-						'asnp-easy-whatsapp'
+						'asnp-easy-sale-badge'
 					),
 					type: 'success',
 				} );
@@ -93,7 +93,7 @@ export default function Badges() {
 				setMessage( {
 					message: __(
 						'Error occurred on deleting the item.',
-						'asnp-easy-whatsapp'
+						'asnp-easy-sale-badge'
 					),
 					type: 'error',
 				} );
@@ -129,7 +129,7 @@ export default function Badges() {
 				setMessage( {
 					message: __(
 						'Updated Successfully.',
-						'asnp-easy-whatsapp'
+						'asnp-easy-sale-badge'
 					),
 					type: 'success',
 				} );
@@ -137,7 +137,7 @@ export default function Badges() {
 				setMessage( {
 					message: __(
 						'Error occurred on updating the item.',
-						'asnp-easy-whatsapp'
+						'asnp-easy-sale-badge'
 					),
 					type: 'error',
 				} );
@@ -156,19 +156,19 @@ export default function Badges() {
 		<div>
 			<div className="asnp-flex asnp-space-x-2">
 				<h1 className="asnp-heading-inline">
-					{ __( 'Badges', 'asnp-easy-whatsapp' ) }
+					{ __( 'Badges', 'asnp-easy-sale-badge' ) }
 				</h1>
 				<Link to={ `/badge/new` } className="asnp-btn asnp-btn-primary">
-					{ __( 'Add New', 'asnp-easy-whatsapp' ) }
+					{ __( 'Add New', 'asnp-easy-sale-badge' ) }
 				</Link>
 			</div>
 			{ ! state.isLoading && ! loading && ! state.items.length && (
 				<Alert
 					message={ __(
 						'There is not any Item.',
-						'asnp-easy-whatsapp'
+						'asnp-easy-sale-badge'
 					) }
-					title={ __( 'Info!', 'asnp-easy-whatsapp' ) }
+					title={ __( 'Info!', 'asnp-easy-sale-badge' ) }
 				/>
 			) }
 			{ 0 < state.items.length && (
@@ -188,7 +188,7 @@ export default function Badges() {
 											>
 												{ __(
 													'ID',
-													'asnp-easy-whatsapp'
+													'asnp-easy-sale-badge'
 												) }
 											</th>
 											<th
@@ -197,7 +197,7 @@ export default function Badges() {
 											>
 												{ __(
 													'Name',
-													'asnp-easy-whatsapp'
+													'asnp-easy-sale-badge'
 												) }
 											</th>
 											<th
@@ -206,7 +206,7 @@ export default function Badges() {
 											>
 												{ __(
 													'Shortcode',
-													'asnp-easy-whatsapp'
+													'asnp-easy-sale-badge'
 												) }
 											</th>
 											<th
@@ -215,7 +215,7 @@ export default function Badges() {
 											>
 												{ __(
 													'Preview',
-													'asnp-easy-whatsapp'
+													'asnp-easy-sale-badge'
 												) }
 											</th>
 											<th
@@ -224,7 +224,7 @@ export default function Badges() {
 											>
 												{ __(
 													'Status',
-													'asnp-easy-whatsapp'
+													'asnp-easy-sale-badge'
 												) }
 											</th>
 											<th
@@ -233,7 +233,7 @@ export default function Badges() {
 											>
 												{ __(
 													'Actions',
-													'asnp-easy-whatsapp'
+													'asnp-easy-sale-badge'
 												) }
 											</th>
 										</tr>
@@ -250,7 +250,7 @@ export default function Badges() {
 													>
 														{ __(
 															item.title,
-															'asnp-easy-whatsapp'
+															'asnp-easy-sale-badge'
 														) }
 													</Link>
 												</td>
@@ -302,7 +302,7 @@ export default function Badges() {
 														}
 														title={ __(
 															'Duplicate',
-															'asnp-easy-whatsapp'
+															'asnp-easy-sale-badge'
 														) }
 													>
 														<DuplicateIcon className="asnp-h-5 asnp-w-4 " />
@@ -316,7 +316,7 @@ export default function Badges() {
 														}
 														title={ __(
 															'Delete',
-															'asnp-easy-whatsapp'
+															'asnp-easy-sale-badge'
 														) }
 													>
 														<TrashIcon className="asnp-h-5 asnp-w-4 " />

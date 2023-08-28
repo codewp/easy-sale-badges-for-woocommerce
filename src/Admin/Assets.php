@@ -48,7 +48,7 @@ class Assets {
 			if ( function_exists( 'wp_set_script_translations' ) ) {
 				wp_set_script_translations(
 					'asnp-whatsapp-admin',
-					'asnp-easy-whatsapp',
+					'asnp-easy-sale-badge',
 					apply_filters( 'asnp_ewhatsapp_whatsapp_admin_script_translations', ASNP_EWHATSAPP_ABSPATH . 'languages' )
 				);
 			}

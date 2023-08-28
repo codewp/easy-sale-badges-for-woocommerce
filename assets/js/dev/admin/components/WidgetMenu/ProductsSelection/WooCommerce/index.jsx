@@ -18,7 +18,7 @@ const WooCommerce = () => {
 						{ groupIndex >= 1 && (
 							<label className="asnp-block asnp-space-y-1">
 								<span className="asnp-field-title">
-									{ __( 'Or', 'asnp-easy-whatsapp' ) }
+									{ __( 'Or', 'asnp-easy-sale-badge' ) }
 								</span>
 							</label>
 						) }
@@ -43,33 +43,33 @@ const WooCommerce = () => {
 										<option value={ 'products' }>
 											{ __(
 												'Products',
-												'asnp-easy-whatsapp'
+												'asnp-easy-sale-badge'
 											) }
 										</option>
 										<option value={ 'stockstatus' }>
 											{ __(
 												'Stock status',
-												'asnp-easy-whatsapp'
+												'asnp-easy-sale-badge'
 											) }
 										</option>
 										<option value={ 'isonsale' }>
 											{ __(
 												'Is On Sale',
-												'asnp-easy-whatsapp'
+												'asnp-easy-sale-badge'
 											) }
 										</option>
 
 										<option value={ 'categories' }>
 											{ __(
 												'Categories',
-												'asnp-easy-whatsapp'
+												'asnp-easy-sale-badge'
 											) }
 										</option>
 
 										<option value={ 'tags' }>
 											{ __(
 												'Tags',
-												'asnp-easy-whatsapp'
+												'asnp-easy-sale-badge'
 											) }
 										</option>
 									</select>
@@ -96,13 +96,13 @@ const WooCommerce = () => {
 											<option value="included">
 												{ __(
 													'Included',
-													'asnp-easy-whatsapp'
+													'asnp-easy-sale-badge'
 												) }
 											</option>
 											<option value="excluded">
 												{ __(
 													'Excluded',
-													'asnp-easy-whatsapp'
+													'asnp-easy-sale-badge'
 												) }
 											</option>
 										</select>
@@ -160,13 +160,13 @@ const WooCommerce = () => {
 												<option value="instock">
 													{ __(
 														'In Stock',
-														'asnp-easy-whatsapp'
+														'asnp-easy-sale-badge'
 													) }
 												</option>
 												<option value="outofstock ">
 													{ __(
 														'Out of Stock',
-														'asnp-easy-whatsapp'
+														'asnp-easy-sale-badge'
 													) }
 												</option>
 											</select>
@@ -192,13 +192,13 @@ const WooCommerce = () => {
 												<option value="yes">
 													{ __(
 														'Yes',
-														'asnp-easy-whatsapp'
+														'asnp-easy-sale-badge'
 													) }
 												</option>
 												<option value="outofstock ">
 													{ __(
 														'No',
-														'asnp-easy-whatsapp'
+														'asnp-easy-sale-badge'
 													) }
 												</option>
 											</select>
@@ -213,7 +213,7 @@ const WooCommerce = () => {
 										>
 											{ __(
 												'And',
-												'asnp-easy-whatsapp'
+												'asnp-easy-sale-badge'
 											) }
 										</button>
 										<button
@@ -224,7 +224,7 @@ const WooCommerce = () => {
 										>
 											{ __(
 												'Delete',
-												'asnp-easy-whatsapp'
+												'asnp-easy-sale-badge'
 											) }
 										</button>
 									</div>
@@ -237,7 +237,7 @@ const WooCommerce = () => {
 					{ badge.items.length > 1 && (
 						<label className="asnp-block asnp-space-y-1">
 							<span className="asnp-field-title">
-								{ __( 'Or', 'asnp-easy-whatsapp' ) }
+								{ __( 'Or', 'asnp-easy-sale-badge' ) }
 							</span>
 						</label>
 					) }
@@ -248,7 +248,7 @@ const WooCommerce = () => {
 						} }
 					>
 						{ sprintf(
-							__( '%s Or Group', 'asnp-easy-whatsapp' ),
+							__( '%s Or Group', 'asnp-easy-sale-badge' ),
 							'+'
 						) }
 					</button>

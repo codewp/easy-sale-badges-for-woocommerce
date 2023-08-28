@@ -25,14 +25,14 @@ export default function Settings() {
 			let response = await SettingsApi.saveSettings( settings );
 			if ( response ) {
 				setMessage( {
-					message: __( 'Saved Successfully.', 'asnp-easy-whatsapp' ),
+					message: __( 'Saved Successfully.', 'asnp-easy-sale-badge' ),
 					type: 'success',
 				} );
 			} else {
 				throw new Error(
 					__(
 						'There was an error on saving the settings.',
-						'asnp-easy-whatsapp'
+						'asnp-easy-sale-badge'
 					)
 				);
 			}
@@ -60,7 +60,7 @@ export default function Settings() {
 								: '' )
 						}
 					>
-						{ __( 'General ', 'asnp-easy-whatsapp' ) }
+						{ __( 'General ', 'asnp-easy-sale-badge' ) }
 					</a>
 					<a
 						href="#"
@@ -75,7 +75,7 @@ export default function Settings() {
 								: '' )
 						}
 					>
-						{ __( 'WooCommerce ', 'asnp-easy-whatsapp' ) }
+						{ __( 'WooCommerce ', 'asnp-easy-sale-badge' ) }
 					</a>
 					<a
 						href="#"
@@ -90,7 +90,7 @@ export default function Settings() {
 								: '' )
 						}
 					>
-						{ __( 'Single Page ', 'asnp-easy-whatsapp' ) }
+						{ __( 'Single Page ', 'asnp-easy-sale-badge' ) }
 					</a>
 					<a
 						href="#"
@@ -105,7 +105,7 @@ export default function Settings() {
 								: '' )
 						}
 					>
-						{ __( 'Analytics', 'asnp-easy-whatsapp' ) }
+						{ __( 'Analytics', 'asnp-easy-sale-badge' ) }
 					</a>
 				</nav>
 			</div>

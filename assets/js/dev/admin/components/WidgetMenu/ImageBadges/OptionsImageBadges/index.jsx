@@ -8,7 +8,7 @@ const Options = ( props ) => {
 			<div className="asnp-flex asnp-mt-[1rem]">
 				<label>
 					<span className="asnp-field-title">
-						{ __( 'Size (Pixel)', 'asnp-easy-whatsapp' ) }
+						{ __( 'Size (Pixel)', 'asnp-easy-sale-badge' ) }
 					</span>
 					<div className="asnp-w-[11rem]">
 						<input
@@ -29,7 +29,7 @@ const Options = ( props ) => {
 				</label>
 				<label>
 					<span className="asnp-field-title asnp-ml-4">
-						{ __( 'z-index', 'asnp-easy-whatsapp' ) }
+						{ __( 'z-index', 'asnp-easy-sale-badge' ) }
 					</span>
 					<div className="asnp-w-[11rem] asnp-ml-4">
 						<input
@@ -48,7 +48,7 @@ const Options = ( props ) => {
 			<div className="asnp-mt-4">
 				<label className="asnp-space-y-1">
 					<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-						{ __( 'Opacity', 'asnp-easy-whatsapp' ) }
+						{ __( 'Opacity', 'asnp-easy-sale-badge' ) }
 					</span>
 				</label>
 			</div>
@@ -77,7 +77,7 @@ const Options = ( props ) => {
 				<div className="asnp-w-full">
 					<label>
 						<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-							{ __( 'Rotation', 'asnp-easy-whatsapp' ) }
+							{ __( 'Rotation', 'asnp-easy-sale-badge' ) }
 						</span>
 					</label>
 					<div className="asnp-flex">

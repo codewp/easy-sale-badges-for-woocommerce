@@ -9,7 +9,7 @@ const BadgeStyles = ( props ) => {
 		<div className="asnp-ew-line">
 			<div className="asnp-mt-2">
 				<div className="asnp-w-[25rem] asnp-text-lg asnp-font-semibold">
-					{ __( 'Label Styles', 'asnp-easy-whatsapp' ) }
+					{ __( 'Label Styles', 'asnp-easy-sale-badge' ) }
 				</div>
 				<div className="asnp-relative asnp-mb-3 asnp-mt-3 asnp-h-[25rem] asnp-pb-2 asnp-flex asnp-flex-col asnp-border-[1px] asnp-border-gray-300 asnp-rounded-2xl">
 					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-8 asnp-ml-4">

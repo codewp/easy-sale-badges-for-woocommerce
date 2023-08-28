@@ -28,7 +28,7 @@ const Schedule = () => {
 	return (
 		<div className="asnp-w-full">
 			<div className="asnp-w-[25rem] asnp-mt-2 asnp-text-lg asnp-font-semibold">
-				{ __( 'Schedule', 'asnp-easy-whatsapp' ) }
+				{ __( 'Schedule', 'asnp-easy-sale-badge' ) }
 			</div>
 
 			{ badge.schedule.map( ( group, groupIndex ) => (
@@ -36,7 +36,7 @@ const Schedule = () => {
 					{ groupIndex >= 1 && (
 						<label className="asnp-block asnp-space-y-1">
 							<span className="asnp-field-title">
-								{ __( 'Or', 'asnp-easy-whatsapp' ) }
+								{ __( 'Or', 'asnp-easy-sale-badge' ) }
 							</span>
 						</label>
 					) }
@@ -60,18 +60,18 @@ const Schedule = () => {
 								}
 							>
 								<option value={ 'date' }>
-									{ __( 'Date', 'asnp-easy-whatsapp' ) }
+									{ __( 'Date', 'asnp-easy-sale-badge' ) }
 								</option>
 
 								<option value={ 'dateTime' }>
-									{ __( 'Date Time', 'asnp-easy-whatsapp' ) }
+									{ __( 'Date Time', 'asnp-easy-sale-badge' ) }
 								</option>
 
 								<option value={ 'time' }>
-									{ __( 'Time', 'asnp-easy-whatsapp' ) }
+									{ __( 'Time', 'asnp-easy-sale-badge' ) }
 								</option>
 								<option value={ 'days' }>
-									{ __( 'Days', 'asnp-easy-whatsapp' ) }
+									{ __( 'Days', 'asnp-easy-sale-badge' ) }
 								</option>
 							</select>
 							{ badge.schedule[ groupIndex ][ index ].type ===
@@ -82,7 +82,7 @@ const Schedule = () => {
 											<span className="asnp-field-title">
 												{ __(
 													'From Date',
-													'asnp-easy-whatsapp'
+													'asnp-easy-sale-badge'
 												) }
 											</span>
 											<Datetime
@@ -111,7 +111,7 @@ const Schedule = () => {
 											<span className="asnp-field-title">
 												{ __(
 													'To Date',
-													'asnp-easy-whatsapp'
+													'asnp-easy-sale-badge'
 												) }
 											</span>
 											<Datetime
@@ -140,7 +140,7 @@ const Schedule = () => {
 											<span className="asnp-field-title">
 												{ __(
 													'From Date / Time',
-													'asnp-easy-whatsapp'
+													'asnp-easy-sale-badge'
 												) }
 											</span>
 											<Datetime
@@ -162,7 +162,7 @@ const Schedule = () => {
 											<span className="asnp-field-title">
 												{ __(
 													'To Date / Time',
-													'asnp-easy-whatsapp'
+													'asnp-easy-sale-badge'
 												) }
 											</span>
 											<Datetime
@@ -219,7 +219,7 @@ const Schedule = () => {
 										addSchedule( groupIndex, index + 1 )
 									}
 								>
-									{ __( 'And', 'asnp-easy-whatsapp' ) }
+									{ __( 'And', 'asnp-easy-sale-badge' ) }
 								</button>
 								<button
 									className="asnp-mb-4 asnp-mt-2 asnp-ml-3 asnp-btn-delete asnp-py-1 asnp-h-[2rem] asnp-w-[4rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
@@ -227,7 +227,7 @@ const Schedule = () => {
 										deleteSchedule( groupIndex, index )
 									}
 								>
-									{ __( 'Delete', 'asnp-easy-whatsapp' ) }
+									{ __( 'Delete', 'asnp-easy-sale-badge' ) }
 								</button>
 							</div>
 						</div>
@@ -239,7 +239,7 @@ const Schedule = () => {
 				{ badge.schedule.length > 1 && (
 					<label className="asnp-block asnp-space-y-1">
 						<span className="asnp-field-title">
-							{ __( 'Or', 'asnp-easy-whatsapp' ) }
+							{ __( 'Or', 'asnp-easy-sale-badge' ) }
 						</span>
 					</label>
 				) }
@@ -251,10 +251,10 @@ const Schedule = () => {
 				>
 					{ badge.schedule.length
 						? sprintf(
-								__( '%s Or Group', 'asnp-easy-whatsapp' ),
+								__( '%s Or Group', 'asnp-easy-sale-badge' ),
 								'+'
 						  )
-						: __( 'Add Schedule', 'asnp-easy-whatsapp' ) }
+						: __( 'Add Schedule', 'asnp-easy-sale-badge' ) }
 				</button>
 			</div>
 		</div>
