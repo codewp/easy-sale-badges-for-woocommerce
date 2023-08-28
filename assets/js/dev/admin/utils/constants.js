@@ -858,7 +858,7 @@ export default function BadgeCssandAdv( badge ) {
             text-decoration: none;
             text-align: center;
             font-size: 14px;
-			opacity: ${ badge.opacity };
+			opacity: ${ badge.opacityImg };
 	        top:${ badge.badgePositionY == 'bottom' ? '30px' : '23px' } ;
 			right: ${ badge.badgePositionX == 'right' ? '30px' : '' };
 			`;

@@ -2301,9 +2301,6 @@ function output_image_adv_badge( $badge, $hide = false ) {
 		 case 'bdgAdvanced1':
 			$adv_uniq='a1';
 			$dynamic_styles .= '.asnp-esb-advBadge-'. $adv_uniq .' {';
-			if ( isset( $badge->widthBadgeImg ) ) {
-				$dynamic_styles .= ' width: ' . $badge->widthBadgeImg . 'px;';
-			}
 			if ( isset( $badge->badgePositionTop ) ) {
 					$dynamic_styles .= ' inset: ' . $insetProperty . ';';
 			}
@@ -2314,6 +2311,8 @@ function output_image_adv_badge( $badge, $hide = false ) {
 				$dynamic_styles .= ' z-index: ' . $badge->zIndexImg . ';';
 			}
 			$dynamic_styles .= ' height: 90px;';
+			$dynamic_styles .= ' width: 90px;';
+
 
 			$dynamic_styles .= '}';
 
@@ -2410,7 +2409,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '.asnp-esb-advbadge3-'. $adv_uniq .' {';
 			$dynamic_styles .= ' font-weight: 700;';
-			$dynamic_styles .= ' transform: ' . $horizAndvert . 'px;';
+			$dynamic_styles .= ' transform: ' . $horizAndvert . ';';
 
 			if ( isset( $badge->fontSizeText ) ) {
 				$dynamic_styles .= ' font-size: ' . $badge->fontSizeText . 'px;';
@@ -2440,9 +2439,6 @@ function output_image_adv_badge( $badge, $hide = false ) {
 		case 'bdgAdvanced2':
 			$adv_uniq='a2';
 			$dynamic_styles .= '.asnp-esb-advBadge-'. $adv_uniq .' {';
-			if ( isset( $badge->widthBadgeImg ) ) {
-				$dynamic_styles .= ' width: ' . $badge->widthBadgeImg . 'px;';
-			}
 			if ( isset( $badge->badgePositionTop ) ) {
 					$dynamic_styles .= ' inset: ' . $insetProperty . ';';
 			}
@@ -2453,6 +2449,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 				$dynamic_styles .= ' z-index: ' . $badge->zIndexImg . ';';
 			}
 			$dynamic_styles .= ' height: 90px;';
+			$dynamic_styles .= ' width: 90px;';
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-advbadgeCont-'. $adv_uniq .' {';
@@ -2549,7 +2546,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '.asnp-esb-advbadge3-'. $adv_uniq .' {';
 			$dynamic_styles .= ' font-weight: 700;';
-			$dynamic_styles .= ' transform: ' . $horizAndvert . 'px;';
+			$dynamic_styles .= ' transform: ' . $horizAndvert . ';';
 
 			if ( isset( $badge->fontSizeText ) ) {
 				$dynamic_styles .= ' font-size: ' . $badge->fontSizeText . 'px;';
@@ -2682,6 +2679,150 @@ function output_image_adv_badge( $badge, $hide = false ) {
 				fill="white"
 			/>
 			</svg>';
+			break;
+		case 'bdgAdvanced3':
+			$adv_uniq='a2';
+			$dynamic_styles .= '.asnp-esb-advBadge-'. $adv_uniq .' {';
+			if ( isset( $badge->badgePositionTop ) ) {
+					$dynamic_styles .= ' inset: ' . $insetProperty . ';';
+			}
+			if ( isset( $badge->opacityImg ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityImg . ';';
+			}
+			if ( isset( $badge->zIndexImg ) ) {
+				$dynamic_styles .= ' z-index: ' . $badge->zIndexImg . ';';
+			}
+			$dynamic_styles .= ' height: 90px;';
+			$dynamic_styles .= ' width: 90px;';
+
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.asnp-esb-advbadgeCont-'. $adv_uniq .' {';
+			$dynamic_styles .= ' height: 90px;';
+
+
+			if ( isset( $badge->textColor ) ) {
+				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
+			}
+			
+
+			$transform = '';
+			if ( isset( $badge->rotationX ) ) {
+				$transform .= ' rotateX(' . esc_html( $badge->rotationX ) . 'deg)';
+			}
+			if ( isset( $badge->rotationY ) ) {
+				$transform .= ' rotateY(' . esc_html( $badge->rotationY ) . 'deg) ';
+			}
+			if ( isset( $badge->rotationZ ) ) {
+				$transform .= ' rotateZ(' . esc_html( $badge->rotationZ ) . 'deg);';
+			}
+			if ( ! empty( $transform ) ) {
+				$dynamic_styles .= ' transform:' . $transform;
+			}
+
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.asnp-esb-advbadge1-'. $adv_uniq .' {';
+			$dynamic_styles .= ' position: relative;';
+			$dynamic_styles .= ' letter-spacing: 0.52px;';
+			$dynamic_styles .= ' display: flex;';
+			$dynamic_styles .= ' justify-content: center;';
+			$dynamic_styles .= ' align-items: center;';
+			$dynamic_styles .= ' text-decoration: none;';
+			$dynamic_styles .= ' text-align: center;';
+			$dynamic_styles .= ' font-size: 14px;';
+
+			if ( isset( $badge->opacityImg ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityImg . ';';
+			}
+			if ( isset( $badge->badgePositionY ) ) {
+				$dynamic_styles .= ' top: ' . ( $badge->badgePositionY == 'bottom' ? '36px' : '28px' ) . ';';
+			}
+			if ( isset( $badge->badgePositionX ) ) {
+				$dynamic_styles .= ' right: ' . ( $badge->badgePositionX == 'right' ? '20px' : '' ) . ';';
+			}
+
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.asnp-esb-advbadge2-'. $adv_uniq .' {';
+			$dynamic_styles .= ' display: block;';
+			$dynamic_styles .= ' padding-left: 13px;';
+			$dynamic_styles .= ' z-index: 1;';
+			$dynamic_styles .= ' width: 140px;';
+			$dynamic_styles .= ' height: 30px;';
+			$dynamic_styles .= ' margin-top:5px;';
+			$dynamic_styles .= ' line-height: 20px;';
+			$dynamic_styles .= ' text-transform: uppercase;';
+
+			$dynamic_styles .= '}';
+			
+			$dynamic_styles .= '.asnp-esb-advbadge3-'. $adv_uniq .' {';
+			$dynamic_styles .= ' font-weight: 700;';
+			$dynamic_styles .= ' transform: ' . $horizAndvert . ';';
+
+			if ( isset( $badge->fontSizeText ) ) {
+				$dynamic_styles .= ' font-size: ' . $badge->fontSizeText . 'px;';
+			}
+			$dynamic_styles .= '}';
+
+			$svgAdv.='
+			<svg
+			class="asnp-esb-svg2"
+			width="201"
+			height="201"
+			viewBox="0 0 180 201"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M12.2796 86.187C11.5283 86.187 10.8168 85.75 10.3798 85.0143L1.80153 70.596C1.29225 69.7392 1.22724 68.6271 1.62816 67.6967C2.02908 66.762 2.8237 66.1822 3.70138 66.1822H196.544C197.421 66.1822 198.216 66.762 198.617 67.6967C199.018 68.6314 198.953 69.7435 198.444 70.596L189.865 85.0143C189.428 85.75 188.717 86.187 187.965 86.187H12.2796Z"
+				fill="' . $badge->secondBg . '" />
+			/>
+			<path
+				d="M199.722 67.013C199.105 65.5807 197.887 64.6893 196.544 64.6893H130.15H58.6418H3.70137C2.35775 64.6893 1.13693 65.5807 0.522914 67.013C-0.0947194 68.4453 0.0100218 70.1502 0.79019 71.4614L9.36842 85.8797C10.0366 87.0048 11.1274 87.6755 12.2796 87.6755H58.6454H130.154H187.969C189.121 87.6755 190.212 87.0048 190.88 85.8797L199.455 71.4614C200.239 70.1502 200.34 68.4453 199.722 67.013ZM197.429 69.7305L188.85 84.1488C188.648 84.4907 188.316 84.6941 187.965 84.6941H130.15H58.6418H12.2796C11.9293 84.6941 11.597 84.4907 11.3947 84.1488L2.81645 69.7305C2.30357 68.8694 2.81646 67.6707 3.70137 67.6707H58.6418H130.15H196.544C197.429 67.6707 197.942 68.8694 197.429 69.7305Z"
+				fill="#414042"
+			/>
+			<path
+				d="M187.969 85.7585H12.2796C11.6403 85.7585 11.0407 85.3864 10.6687 84.7633L2.09048 70.3449C1.66067 69.618 1.60287 68.679 1.94239 67.8871C2.28191 67.0952 2.95733 66.6062 3.69776 66.6062H196.54C197.284 66.6062 197.956 67.0995 198.295 67.8871C198.635 68.679 198.581 69.6223 198.147 70.3449L189.569 84.7633C189.208 85.3864 188.605 85.7585 187.969 85.7585ZM3.70138 68.7352C3.62192 68.7352 3.56052 68.7785 3.5244 68.865C3.48828 68.9516 3.49189 69.0338 3.53884 69.1117L12.1171 83.53C12.1532 83.5906 12.2146 83.6296 12.2796 83.6296H187.969C188.034 83.6296 188.092 83.5906 188.132 83.53L196.71 69.1117C196.757 69.0338 196.76 68.9516 196.724 68.865C196.688 68.7785 196.627 68.7352 196.547 68.7352H3.70138Z"
+				fill="white"
+			/>
+			<path
+				d="M26.5321 110.584C25.7808 110.584 25.0692 110.147 24.6322 109.411L16.054 94.9928C15.5447 94.136 15.4797 93.0239 15.8806 92.0936C16.2815 91.1589 17.0761 90.579 17.9538 90.579H182.291C183.169 90.579 183.963 91.1589 184.364 92.0936C184.765 93.0283 184.7 94.1404 184.191 94.9928L175.613 109.411C175.176 110.147 174.468 110.584 173.713 110.584H26.5321Z"
+				fill="' . $badge->secondBg . '" />
+			/>
+			<path
+				d="M185.47 91.4098C184.852 89.9775 183.635 89.0861 182.291 89.0861H130.15H58.6419H17.9539C16.6103 89.0861 15.3895 89.9775 14.7755 91.4098C14.1578 92.8422 14.2626 94.5471 15.0428 95.8583L23.621 110.277C24.2892 111.402 25.38 112.072 26.5322 112.072H58.6455H130.154H173.72C174.872 112.072 175.963 111.402 176.631 110.277L185.21 95.8583C185.986 94.5471 186.087 92.8422 185.47 91.4098ZM183.176 94.1317L174.598 108.55C174.396 108.892 174.063 109.095 173.713 109.095H130.15H58.6419H26.5286C26.1782 109.095 25.8459 108.892 25.6436 108.55L17.0654 94.1317C16.5525 93.2706 17.0654 92.0719 17.9503 92.0719H58.6383H130.146H182.288C183.176 92.0719 183.689 93.2662 183.176 94.1317Z"
+				fill="#414042"
+			/>
+			<path
+				d="M173.717 110.16H26.5321C25.8928 110.16 25.2932 109.788 24.9212 109.165L16.343 94.7462C15.9132 94.0192 15.8554 93.0802 16.1949 92.2883C16.5344 91.4964 17.2098 91.0074 17.9503 91.0074H182.288C183.032 91.0074 183.703 91.5008 184.043 92.2883C184.382 93.0802 184.328 94.0235 183.895 94.7462L175.317 109.165C174.955 109.788 174.352 110.16 173.717 110.16ZM17.9539 93.1364C17.8744 93.1364 17.813 93.1797 17.7769 93.2663C17.7408 93.3528 17.7444 93.435 17.7914 93.5129L26.3696 107.931C26.4057 107.996 26.4671 108.031 26.5321 108.031H173.717C173.782 108.031 173.839 107.992 173.879 107.931L182.457 93.5129C182.504 93.435 182.508 93.3528 182.472 93.2663C182.436 93.1797 182.374 93.1364 182.295 93.1364H17.9539Z"
+				fill="white"
+			/>
+			<path
+				d="M41.5395 134.985C40.7882 134.985 40.0767 134.548 39.6397 133.812L31.0614 119.394C30.5521 118.537 30.4871 117.43 30.888 116.495C31.289 115.56 32.0836 114.98 32.9613 114.98H167.284C168.161 114.98 168.956 115.56 169.357 116.495C169.758 117.43 169.693 118.542 169.184 119.394L160.605 133.812C160.168 134.548 159.46 134.985 158.706 134.985H41.5395Z"
+				fill="' . $badge->secondBg . '" />
+			/>
+			<path
+				d="M170.462 115.811C169.845 114.379 168.627 113.487 167.284 113.487H130.15H58.6418H32.9613C31.6176 113.487 30.3968 114.379 29.7828 115.811C29.1652 117.243 29.2699 118.948 30.0501 120.26L38.6283 134.678C39.2965 135.803 40.3873 136.474 41.5395 136.474H58.6454H130.154H158.713C159.865 136.474 160.956 135.803 161.624 134.678L170.199 120.26C170.979 118.948 171.08 117.243 170.462 115.811ZM168.169 118.529L159.59 132.947C159.388 133.289 159.056 133.492 158.706 133.492H130.146H58.6418H41.5359C41.1855 133.492 40.8532 133.289 40.651 132.947L32.0727 118.529C31.5598 117.668 32.0727 116.469 32.9576 116.469H58.6382H130.146H167.28C168.169 116.469 168.682 117.668 168.169 118.529Z"
+				fill="#414042"
+			/>
+			<path
+				d="M158.709 134.557H41.5395C40.9002 134.557 40.3006 134.185 39.9286 133.562L31.3504 119.143C30.9205 118.416 30.8628 117.477 31.2023 116.685C31.5418 115.893 32.2172 115.4 32.9577 115.4H167.28C168.024 115.4 168.696 115.893 169.036 116.681C169.375 117.473 169.321 118.416 168.887 119.139L160.309 133.557C159.948 134.185 159.345 134.557 158.709 134.557ZM32.9613 117.533C32.8818 117.533 32.8204 117.577 32.7843 117.663C32.7482 117.75 32.7518 117.832 32.7987 117.91L41.377 132.328C41.4131 132.389 41.4745 132.428 41.5395 132.428H158.709C158.774 132.428 158.832 132.389 158.872 132.328L167.45 117.91C167.497 117.832 167.5 117.75 167.464 117.663C167.428 117.577 167.367 117.533 167.287 117.533H32.9613Z"
+				fill="white"
+			/>
+			<path
+				d="M141.856 150.582C164.905 122.968 164.905 78.1964 141.856 50.5821C118.807 22.9679 81.4364 22.9679 58.3872 50.5822C35.3379 78.1964 35.3379 122.968 58.3872 150.582C81.4364 178.196 118.807 178.196 141.856 150.582Z"
+				fill="' . $badge->mainBg . '" />
+			/>
+			<path
+				d="M155.65 72.4783C152.616 63.88 148.271 56.1603 142.737 49.5309C137.204 42.9016 130.76 37.696 123.584 34.0611C116.154 30.2964 108.258 28.3881 100.124 28.3881C91.9904 28.3881 84.0984 30.2964 76.6651 34.0611C69.4883 37.696 63.0447 42.9016 57.5113 49.5309C51.9779 56.1603 47.6328 63.88 44.5988 72.4783C41.4564 81.3794 39.8636 90.8387 39.8636 100.584C39.8636 110.329 41.4564 119.784 44.5988 128.689C47.6328 137.287 51.9779 145.007 57.5113 151.636C63.0447 158.266 69.4883 163.471 76.6651 167.106C84.0948 170.871 91.9904 172.779 100.124 172.779C108.258 172.779 116.15 170.871 123.584 167.106C130.76 163.471 137.204 158.266 142.737 151.636C148.271 145.007 152.616 137.287 155.65 128.689C158.792 119.788 160.385 110.329 160.385 100.584C160.389 90.8387 158.796 81.3794 155.65 72.4783ZM100.124 169.802C68.2169 169.802 42.3486 138.81 42.3486 100.584C42.3486 62.3569 68.2169 31.3652 100.124 31.3652C132.032 31.3652 157.9 62.3569 157.9 100.584C157.9 138.81 132.032 169.802 100.124 169.802Z"
+				fill="#414042"
+			/>
+			<path
+				d="M100.124 170.867C67.7763 170.867 41.4601 139.338 41.4601 100.584C41.4601 61.8289 67.7763 30.3007 100.124 30.3007C132.472 30.3007 158.789 61.8289 158.789 100.584C158.789 139.338 132.472 170.867 100.124 170.867ZM100.124 32.4297C68.7551 32.4297 43.2371 63.0016 43.2371 100.584C43.2371 138.166 68.7551 168.738 100.124 168.738C131.494 168.738 157.012 138.166 157.012 100.584C157.012 63.0016 131.49 32.4297 100.124 32.4297Z"
+				fill="white"
+			/>
+		</svg>';
 			break;
 
 		}

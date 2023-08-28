@@ -224,7 +224,7 @@ const Admin = ( {
 								<div
 									className="asnp-esb-productBadge"
 									style={ {
-										width: `${ badge.widthBadgeImg }px`,
+										width: `90px`,
 										height: '90px',
 										inset: `${ insetProperty }`,
 									} }
