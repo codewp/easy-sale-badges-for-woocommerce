@@ -69,9 +69,44 @@ jQuery( window ).on(
 	}
 );
 
-const timerBadge = (timer) => {
-    const {from, to, now} = timer;
+const timerBadge = ( timer ) => {
+	const { from, to, now } = timer;
 
+	const toDate = new Date( to );
+	const nowDate = new Date( now );
+	const timeDifference = toDate - nowDate;
+
+	if ( timeDifference > 0 ) {
+		const days = Math.floor( timeDifference / ( 1000 * 60 * 60 * 24 ) );
+		const hours = Math.floor(
+			( timeDifference % ( 1000 * 60 * 60 * 24 ) ) / ( 1000 * 60 * 60 )
+		);
+		const minutes = Math.floor(
+			( timeDifference % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 )
+		);
+		const seconds = Math.floor( ( timeDifference % ( 1000 * 60 ) ) / 1000 );
+
+		const timerData = {
+			days,
+			hours,
+			minutes,
+			seconds,
+		};
+
+		return timerData;
+	}
+
+	return null;
+};
+
+const result = timerBadge( {
+	from: '2023-08-25',
+	to: '2023-08-27',
+	now: '2023-08-25',
+} );
+
+if ( result ) {
+	console.log( 'Timer Data:', result );
+} else {
+	console.log( 'Timer has expired or is not yet active.' );
 }
-
-timerBadge( {from: '2023-08-25', to: '2023-08027', now: '2023-08-25'})
