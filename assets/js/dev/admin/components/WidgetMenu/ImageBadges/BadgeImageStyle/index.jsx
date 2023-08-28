@@ -637,7 +637,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'hotSale2.png.png'
+									IMAGES_URL + 'hotSale2.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2327,7 +2327,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'perc11'
+									IMAGES_URL + 'perc11.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2350,7 +2350,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'perc12'
+									IMAGES_URL + 'perc12.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2380,7 +2380,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'coming1'
+									IMAGES_URL + 'coming1.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2403,7 +2403,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'coming2'
+									IMAGES_URL + 'coming2.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2426,7 +2426,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'coming3'
+									IMAGES_URL + 'coming3.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2449,7 +2449,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'coming4'
+									IMAGES_URL + 'coming4.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2472,7 +2472,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'coming5'
+									IMAGES_URL + 'coming5.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2497,7 +2497,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'coming6'
+									IMAGES_URL + 'coming6.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2520,7 +2520,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'coming7'
+									IMAGES_URL + 'coming7.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2543,7 +2543,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'coming8'
+									IMAGES_URL + 'coming8.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2566,7 +2566,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'coming9'
+									IMAGES_URL + 'coming9.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2589,7 +2589,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'coming10'
+									IMAGES_URL + 'coming10.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2614,7 +2614,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'coming11'
+									IMAGES_URL + 'coming11.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2637,7 +2637,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'coming12'
+									IMAGES_URL + 'coming12.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2660,7 +2660,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'coming13'
+									IMAGES_URL + 'coming13.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2683,7 +2683,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'coming14'
+									IMAGES_URL + 'coming14.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2706,7 +2706,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'coming15'
+									IMAGES_URL + 'coming15.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2731,7 +2731,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'coming16'
+									IMAGES_URL + 'coming16.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2761,7 +2761,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'preoOrder1'
+									IMAGES_URL + 'preoOrder1.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2784,7 +2784,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'preoOrder2'
+									IMAGES_URL + 'preoOrder2.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2807,7 +2807,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'preoOrder3'
+									IMAGES_URL + 'preoOrder3.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2830,7 +2830,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'preoOrder4'
+									IMAGES_URL + 'preoOrder4.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2853,7 +2853,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'preoOrder5'
+									IMAGES_URL + 'preoOrder5.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2878,7 +2878,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'preoOrder6'
+									IMAGES_URL + 'preoOrder6.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2901,7 +2901,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'preoOrder7'
+									IMAGES_URL + 'preoOrder7.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2924,7 +2924,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'preoOrder8'
+									IMAGES_URL + 'preoOrder8.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2947,7 +2947,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'preoOrder9'
+									IMAGES_URL + 'preoOrder9.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2970,7 +2970,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'preoOrder10'
+									IMAGES_URL + 'preoOrder10.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -2995,7 +2995,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'preoOrder11'
+									IMAGES_URL + 'preoOrder11.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3018,7 +3018,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'preoOrder12'
+									IMAGES_URL + 'preoOrder12.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3041,7 +3041,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'preoOrder13'
+									IMAGES_URL + 'preoOrder13.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3064,7 +3064,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'preoOrder14'
+									IMAGES_URL + 'preoOrder14.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3087,7 +3087,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'preoOrder15'
+									IMAGES_URL + 'preoOrder15.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3115,7 +3115,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free1'
+									IMAGES_URL + 'free1.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3138,7 +3138,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free2'
+									IMAGES_URL + 'free2.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3161,7 +3161,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free3'
+									IMAGES_URL + 'free3.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3184,7 +3184,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free4'
+									IMAGES_URL + 'free4.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3207,7 +3207,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free5'
+									IMAGES_URL + 'free5.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3232,7 +3232,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free6'
+									IMAGES_URL + 'free6.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3255,7 +3255,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free7'
+									IMAGES_URL + 'free7.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3278,7 +3278,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free8'
+									IMAGES_URL + 'free8.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3301,7 +3301,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free9'
+									IMAGES_URL + 'free9.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3324,7 +3324,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free10'
+									IMAGES_URL + 'free10.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3349,7 +3349,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free11'
+									IMAGES_URL + 'free11.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3372,7 +3372,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free12'
+									IMAGES_URL + 'free12.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3395,7 +3395,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free13'
+									IMAGES_URL + 'free13.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3418,7 +3418,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free14'
+									IMAGES_URL + 'free14.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3441,7 +3441,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free15'
+									IMAGES_URL + 'free15.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3466,7 +3466,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free16'
+									IMAGES_URL + 'free16.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3489,7 +3489,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free17'
+									IMAGES_URL + 'free17.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3512,7 +3512,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free18'
+									IMAGES_URL + 'free18.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3535,7 +3535,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free19'
+									IMAGES_URL + 'free19.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3558,7 +3558,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free20'
+									IMAGES_URL + 'free20.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3583,7 +3583,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free21'
+									IMAGES_URL + 'free21.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3606,7 +3606,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free22'
+									IMAGES_URL + 'free22.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3629,7 +3629,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free23'
+									IMAGES_URL + 'free23.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3652,7 +3652,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free24'
+									IMAGES_URL + 'free24.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3675,7 +3675,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'free25'
+									IMAGES_URL + 'free25.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3705,7 +3705,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'bfriday1'
+									IMAGES_URL + 'bfriday1.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3728,7 +3728,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'bfriday2'
+									IMAGES_URL + 'bfriday2.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3751,7 +3751,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'bfriday3'
+									IMAGES_URL + 'bfriday3.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3774,7 +3774,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'bfriday4'
+									IMAGES_URL + 'bfriday4.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3797,7 +3797,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'bfriday5'
+									IMAGES_URL + 'bfriday5.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3822,7 +3822,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'bfriday6'
+									IMAGES_URL + 'bfriday6.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3845,7 +3845,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'bfriday7'
+									IMAGES_URL + 'bfriday7.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3868,7 +3868,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'bfriday8'
+									IMAGES_URL + 'bfriday8.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3891,7 +3891,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'bfriday9'
+									IMAGES_URL + 'bfriday9.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3914,7 +3914,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'bfriday10'
+									IMAGES_URL + 'bfriday10.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3939,7 +3939,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'bfriday11'
+									IMAGES_URL + 'bfriday11.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3962,7 +3962,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'bfriday12'
+									IMAGES_URL + 'bfriday12.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -3985,7 +3985,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'bfriday13'
+									IMAGES_URL + 'bfriday13.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4008,7 +4008,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'bfriday14'
+									IMAGES_URL + 'bfriday14.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4031,7 +4031,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'bfriday15'
+									IMAGES_URL + 'bfriday15.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4056,7 +4056,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'bfriday16'
+									IMAGES_URL + 'bfriday16.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4079,7 +4079,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'bfriday17'
+									IMAGES_URL + 'bfriday17.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4102,7 +4102,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'bfriday18'
+									IMAGES_URL + 'bfriday18.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4132,7 +4132,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'badgeValen1'
+									IMAGES_URL + 'badgeValen1.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4155,7 +4155,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'badgeValen2'
+									IMAGES_URL + 'badgeValen2.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4178,7 +4178,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'badgeValen3'
+									IMAGES_URL + 'badgeValen3.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4201,7 +4201,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'badgeValen4'
+									IMAGES_URL + 'badgeValen4.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4224,7 +4224,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'badgeValen5'
+									IMAGES_URL + 'badgeValen5.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4249,7 +4249,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'badgeValen6'
+									IMAGES_URL + 'badgeValen6.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4272,7 +4272,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'badgeValen7'
+									IMAGES_URL + 'badgeValen7.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4295,7 +4295,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'badgeValen8'
+									IMAGES_URL + 'badgeValen8.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4318,7 +4318,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'badgeValen9'
+									IMAGES_URL + 'badgeValen9.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4341,7 +4341,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'badgeValen10'
+									IMAGES_URL + 'badgeValen10.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4366,7 +4366,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'badgeValen11'
+									IMAGES_URL + 'badgeValen11.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4389,7 +4389,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'badgeValen12'
+									IMAGES_URL + 'badgeValen12.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4412,7 +4412,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'badgeValen13'
+									IMAGES_URL + 'badgeValen13.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4435,7 +4435,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'badgeValen14'
+									IMAGES_URL + 'badgeValen14.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4458,7 +4458,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'badgeValen15'
+									IMAGES_URL + 'badgeValen15.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4483,7 +4483,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'badgeValen16'
+									IMAGES_URL + 'badgeValen16.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4506,7 +4506,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'badgeValen17'
+									IMAGES_URL + 'badgeValen17.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
@@ -4529,7 +4529,7 @@ const BadgeImageStyle = ( props ) => {
 							onClick={ () => {
 								props.onChange(
 									'badgeImage',
-									IMAGES_URL + 'badgeValen18'
+									IMAGES_URL + 'badgeValen18.png'
 								);
 								props.onChange( 'imgbadgeAdv', 0 );
 								props.onChange( 'useTimerBadge', 0 );
