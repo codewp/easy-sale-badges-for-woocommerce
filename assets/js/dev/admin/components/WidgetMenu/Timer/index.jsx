@@ -188,7 +188,7 @@ const Timer = ( props ) => {
 								className={
 									( selected === 1
 										? 'asnp-border-indigo-700'
-										: 'asnp-border-white' ) +
+										: 'asnp-border-gray-400' ) +
 									' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
 								}
 								onClick={ () => {
@@ -210,7 +210,7 @@ const Timer = ( props ) => {
 								className={
 									( selected === 2
 										? 'asnp-border-indigo-700'
-										: 'asnp-border-white' ) +
+										: 'asnp-border-gray-400' ) +
 									' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
 								}
 								onClick={ () => {
@@ -234,7 +234,7 @@ const Timer = ( props ) => {
 								className={
 									( selected === 3
 										? 'asnp-border-indigo-700'
-										: 'asnp-border-white' ) +
+										: 'asnp-border-gray-400' ) +
 									' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
 								}
 								onClick={ () => {
@@ -256,7 +256,7 @@ const Timer = ( props ) => {
 								className={
 									( selected === 4
 										? 'asnp-border-indigo-700'
-										: 'asnp-border-white' ) +
+										: 'asnp-border-gray-400' ) +
 									' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
 								}
 								onClick={ () => {
@@ -285,7 +285,7 @@ const Timer = ( props ) => {
 								className={
 									( selected === 5
 										? 'asnp-border-indigo-700'
-										: 'asnp-border-white' ) +
+										: 'asnp-border-gray-400' ) +
 									' asnp-p-4 asnp-containerBadgeTimerV hover:asnp-border-indigo-700'
 								}
 								onClick={ () => {
@@ -307,7 +307,7 @@ const Timer = ( props ) => {
 								className={
 									( selected === 6
 										? 'asnp-border-indigo-700'
-										: 'asnp-border-white' ) +
+										: 'asnp-border-gray-400' ) +
 									' asnp-p-4 asnp-containerBadgeTimerV hover:asnp-border-indigo-700'
 								}
 								onClick={ () => {
@@ -329,7 +329,7 @@ const Timer = ( props ) => {
 								className={
 									( selected === 7
 										? 'asnp-border-indigo-700'
-										: 'asnp-border-white' ) +
+										: 'asnp-border-gray-400' ) +
 									' asnp-p-4 asnp-containerBadgeTimerV hover:asnp-border-indigo-700'
 								}
 								onClick={ () => {
@@ -351,7 +351,7 @@ const Timer = ( props ) => {
 								className={
 									( selected === 8
 										? 'asnp-border-indigo-700'
-										: 'asnp-border-white' ) +
+										: 'asnp-border-gray-400' ) +
 									' asnp-p-4 asnp-containerBadgeTimerV hover:asnp-border-indigo-700'
 								}
 								onClick={ () => {

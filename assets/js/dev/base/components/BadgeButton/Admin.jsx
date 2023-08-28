@@ -191,7 +191,7 @@ const Admin = ( {
 		<div className="asnp-esb-wrapper">
 			<div className="asnp-esb-containerAd">
 				<div className="asnp-esb-product">
-					<label className="asnp-esb-productLable">Preview</label>
+					<label className="asnp-esb-productLable">{ __( 'Preview', 'asnp-easy-whatsapp' ) }</label>
 					<div className="asnp-esb-product2">
 						<div
 							className="asnp-esb-productImg"

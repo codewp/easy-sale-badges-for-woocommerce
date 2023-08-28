@@ -1537,7 +1537,9 @@ function output_timer_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-timer1-'. $timer_uniq .' {';
-			$dynamic_styles .= ' display: inline-block;';
+				$dynamic_styles .= ' display: grid;';
+				$dynamic_styles .= ' gap: 5px;';
+				$dynamic_styles .= ' grid-template-columns: 1fr 1fr 1fr 1fr;';
 			$dynamic_styles .= ' border-radius: 10px;';
 
 			if ( isset( $badge->bgColorTimer ) ) {
@@ -1659,7 +1661,6 @@ function output_timer_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '.asnp-esb-timer1-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: grid;';
 			$dynamic_styles .= ' gap: 5px;';
-			$dynamic_styles .= ' width: 100px;';
 			$dynamic_styles .= ' grid-template-columns: 1fr 1fr 1fr 1fr;';
 
 
