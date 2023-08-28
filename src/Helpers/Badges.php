@@ -2155,7 +2155,11 @@ function output_image_badge( $badge, $hide = false ) {
  	}
 
 	 $dynamic_styles = '';
-	 $img_uniq = 'bdg1';
+	 $txt_uniq=$badge->badgeImage;
+	 $parts = explode('/', $txt_uniq);
+	 $fileImageName = end($parts);
+	 $fileImageName2 = pathinfo($fileImageName, PATHINFO_FILENAME);
+	 $img_uniq = $fileImageName2;
 
 	$dynamic_styles = '.asnp-esb-imgBadge-'. $img_uniq .' {';
 	if ( isset( $badge->widthBadgeImg ) ) {
