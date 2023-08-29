@@ -69,43 +69,30 @@ jQuery( window ).on(
 	}
 );
 
-const getTime = ( timer ) => {
-	const { from, to, now } = timer;
-
-	const toDate = new Date( to );
-	const nowDate = new Date( now );
-	const remainingTime = toDate - nowDate;
-
-	if ( remainingTime > 0 ) {
-		const days = Math.floor( remainingTime / ( 1000 * 60 * 60 * 24 ) );
-		const hours = Math.floor(
-			( remainingTime % ( 1000 * 60 * 60 * 24 ) ) / ( 1000 * 60 * 60 )
-		);
-		const minutes = Math.floor(
-			( remainingTime % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 )
-		);
-		const seconds = Math.floor( ( remainingTime % ( 1000 * 60 ) ) / 1000 );
-
-		let timerData = {
-			days,
-			hours,
-			minutes,
-			seconds,
-		};
-
-		return timerData;
+const getTime = () => {
+	if ( 0 >= timer.remainingTime ) {
+		return;
 	}
+	const days = Math.floor( remainingTime / ( 1000 * 60 * 60 * 24 ) );
+	const hours = Math.floor(
+		( remainingTime % ( 1000 * 60 * 60 * 24 ) ) / ( 1000 * 60 * 60 )
+	);
+	const minutes = Math.floor(
+		( remainingTime % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 )
+	);
+	const seconds = Math.floor( ( remainingTime % ( 1000 * 60 ) ) / 1000 );
 
-	return null;
+	return {
+		days,
+		hours,
+		minutes,
+		seconds,
+	};
 };
 
 export const timerBadge = ( data ) => {
 	const interval = setInterval( () => {
-		const updatedResult = getTime( {
-			from: data.fromTimer,
-			to: data.toTimer,
-			now: new Date().toISOString(),
-		} );
+		const updatedResult = getTime();
 
 		if ( updatedResult ) {
 			const showTimer = document.getElementById(
@@ -127,9 +114,3 @@ export const timerBadge = ( data ) => {
 		}
 	}, 1000 );
 };
-
-timerBadge( {
-	fromTimer: '2023-08-29',
-	toTimer: '2023-08-31 20:00',
-	id: 25,
-} );
