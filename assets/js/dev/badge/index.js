@@ -73,7 +73,7 @@ const timerBadge = ( timer ) => {
 	const { from, to, now } = timer;
 
 	const toDate = new Date( to );
-	const nowDate = new Date( now );
+	const nowDate = new Date( now ); 
 	const timeDifference = toDate - nowDate;
 
 	if ( timeDifference > 0 ) {
@@ -86,7 +86,7 @@ const timerBadge = ( timer ) => {
 		);
 		const seconds = Math.floor( ( timeDifference % ( 1000 * 60 ) ) / 1000 );
 
-		const timerData = {
+		let timerData = {
 			days,
 			hours,
 			minutes,
@@ -100,9 +100,9 @@ const timerBadge = ( timer ) => {
 };
 
 const result = timerBadge( {
-	from: '2023-08-25',
-	to: '2023-08-27',
-	now: '2023-08-25',
+	from: '2023-08-29',
+	to: '2023-08-31 20:00',
+	now: '2023-08-29',
 } );
 
 if ( result ) {
