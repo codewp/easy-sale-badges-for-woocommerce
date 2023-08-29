@@ -99,17 +99,6 @@ const timerBadge = (timer) => {
 	return null;
 };
 
-const result = timerBadge({
-	from: '2023-08-29',
-	to: '2023-08-31 20:00',
-	now: '2023-08-29',
-});
-
-if (result) {
-	console.log('Timer Data:', result);
-} else {
-	console.log('Timer has expired or is not yet active.');
-}
 
 const updateTimer = () => {
 	const interval = setInterval(() => {
