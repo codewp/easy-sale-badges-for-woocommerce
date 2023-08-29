@@ -69,22 +69,22 @@ jQuery( window ).on(
 	}
 );
 
-const timerBadge = ( timer ) => {
+const getTime = ( timer ) => {
 	const { from, to, now } = timer;
 
 	const toDate = new Date( to );
 	const nowDate = new Date( now );
-	const timeDifference = toDate - nowDate;
+	const remainingTime = toDate - nowDate;
 
-	if ( timeDifference > 0 ) {
-		const days = Math.floor( timeDifference / ( 1000 * 60 * 60 * 24 ) );
+	if ( remainingTime > 0 ) {
+		const days = Math.floor( remainingTime / ( 1000 * 60 * 60 * 24 ) );
 		const hours = Math.floor(
-			( timeDifference % ( 1000 * 60 * 60 * 24 ) ) / ( 1000 * 60 * 60 )
+			( remainingTime % ( 1000 * 60 * 60 * 24 ) ) / ( 1000 * 60 * 60 )
 		);
 		const minutes = Math.floor(
-			( timeDifference % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 )
+			( remainingTime % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 )
 		);
-		const seconds = Math.floor( ( timeDifference % ( 1000 * 60 ) ) / 1000 );
+		const seconds = Math.floor( ( remainingTime % ( 1000 * 60 ) ) / 1000 );
 
 		let timerData = {
 			days,
@@ -99,15 +99,19 @@ const timerBadge = ( timer ) => {
 	return null;
 };
 
-export const updateTimer = ( data ) => {
+export const timerBadge = ( data ) => {
 	const interval = setInterval( () => {
-		const updatedResult = timerBadge( {
+		const updatedResult = getTime( {
 			from: data.fromTimer,
 			to: data.toTimer,
 			now: new Date().toISOString(),
 		} );
 
 		if ( updatedResult ) {
+			const showTimer = document.getElementById(
+				'asnp-esb-timer-badge-' + data.id
+			);
+			showTimer.style.display = '';
 			const selectTimerDays = document.querySelector( '.asnp-esb-daysT' );
 			selectTimerDays.innerText = updatedResult.days;
 			const selectTimerHours = document.querySelector(
@@ -123,7 +127,9 @@ export const updateTimer = ( data ) => {
 		}
 	}, 1000 );
 };
-updateTimer( {
+
+timerBadge( {
 	fromTimer: '2023-08-29',
 	toTimer: '2023-08-31 20:00',
+	id: 25,
 } );
