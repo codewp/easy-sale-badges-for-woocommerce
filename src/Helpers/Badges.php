@@ -150,7 +150,7 @@ function output_css_badge( $badge, $hide = false ) {
 			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' text-shadow: none;';
 			$dynamic_styles .= ' font-weight: 600;';
-			
+
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background-color: ' . $badge->badgeColor . ';';
 			}
@@ -2091,7 +2091,7 @@ function output_timer_badge( $badge, $hide = false ) {
 			$class_names = apply_filters( 'asnp_wesb_timer_badge_class_names', $class_names, $badge, $hide );
 
 			// Timer Badge
-			$output = '<div class="' . esc_attr( $class_names ) . '"' . ( $hide ? ' style="display: none;"' : '' ) . '>';
+			$output = '<div id="asnp-esb-timer-badge-' . esc_attr( $badge->id ) . '" class="' . esc_attr( $class_names ) . '" style="display: none;">';
 			$output .= '<div class="asnp-esb-timer1-'. $timer_uniq .'">';
 			$output .= '<div class="asnp-esb-timer2-'. $timer_uniq .'">';
 			$output .= '<div class="asnp-esb-daysT asnp-esb-timer3-'. $timer_uniq .'">0</div>';
@@ -2183,7 +2183,7 @@ function output_image_badge( $badge, $hide = false ) {
 
 	$dynamic_styles .= '.asnp-esb-badgeImg-'. $img_uniq .' {';
 
-	
+
 	$transform = '';
 	if ( isset( $badge->rotationXImg ) ) {
 		$transform .= ' rotateX(' . esc_html( $badge->rotationXImg ) . 'deg)';
@@ -2328,7 +2328,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
 			}
-			
+
 
 			$transform = '';
 			if ( isset( $badge->rotationX ) ) {
@@ -2464,7 +2464,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
 			}
-			
+
 
 			$transform = '';
 			if ( isset( $badge->rotationX ) ) {
@@ -2709,7 +2709,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
 			}
-			
+
 
 			$transform = '';
 			if ( isset( $badge->rotationX ) ) {
@@ -2760,7 +2760,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			$dynamic_styles .= ' text-transform: uppercase;';
 
 			$dynamic_styles .= '}';
-			
+
 			$dynamic_styles .= '.asnp-esb-advbadge3-'. $adv_uniq .' {';
 			$dynamic_styles .= ' font-weight: 700;';
 			$dynamic_styles .= ' transform: ' . $horizAndvert . ';';
