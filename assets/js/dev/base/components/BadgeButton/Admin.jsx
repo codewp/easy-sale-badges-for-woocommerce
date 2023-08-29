@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { __ } from '@wordpress/i18n';
 import styled from 'styled-components';
+import { updateTimer } from '../../../badge';
 
 const Admin = ( {
 	badge,
@@ -37,12 +38,7 @@ const Admin = ( {
 	const SpanTwo = styled.div`
 		${ badgeIconTwo }
 	`;
-	const [ timer, setTimer ] = useState( {
-		days: 0,
-		hours: 0,
-		minutes: 0,
-		seconds: 0,
-	} );
+	const [ timer, setTimer ] = useState( '' );
 
 	let insetProperty = '';
 
@@ -155,43 +151,23 @@ const Admin = ( {
 
 	useEffect( () => {
 		if ( badge.useTimerBadge == 1 ) {
-			const interval = setInterval( updateTimer, 1000 );
-			return () => clearInterval( interval );
+			let response = updateTimer( {
+				fromTimer: badge.selectedDateFrom,
+				toTimer: badge.selectedDateTo,
+			} );
+			if ( response ) {
+				setTimer( response );
+			}
 		}
 	}, [ badge.selectedDateTo ] );
-
-	const updateTimer = () => {
-		const toDate = new Date( badge.selectedDateTo );
-		const now = new Date();
-		const timeDifference = toDate - now;
-
-		if ( timeDifference > 0 ) {
-			const days = Math.floor( timeDifference / ( 1000 * 60 * 60 * 24 ) );
-			const hours = Math.floor(
-				( timeDifference % ( 1000 * 60 * 60 * 24 ) ) /
-					( 1000 * 60 * 60 )
-			);
-			const minutes = Math.floor(
-				( timeDifference % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 )
-			);
-			const seconds = Math.floor(
-				( timeDifference % ( 1000 * 60 ) ) / 1000
-			);
-
-			setTimer( {
-				days,
-				hours,
-				minutes,
-				seconds,
-			} );
-		}
-	};
 
 	return (
 		<div className="asnp-esb-wrapper">
 			<div className="asnp-esb-containerAd">
 				<div className="asnp-esb-product">
-					<label className="asnp-esb-productLable">{ __( 'Preview', 'asnp-easy-sale-badge' ) }</label>
+					<label className="asnp-esb-productLable">
+						{ __( 'Preview', 'asnp-easy-sale-badge' ) }
+					</label>
 					<div className="asnp-esb-product2">
 						<div
 							className="asnp-esb-productImg"

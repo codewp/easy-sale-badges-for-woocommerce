@@ -69,22 +69,22 @@ jQuery( window ).on(
 	}
 );
 
-const timerBadge = (timer) => {
+const timerBadge = ( timer ) => {
 	const { from, to, now } = timer;
 
-	const toDate = new Date(to);
-	const nowDate = new Date(now);
+	const toDate = new Date( to );
+	const nowDate = new Date( now );
 	const timeDifference = toDate - nowDate;
 
-	if (timeDifference > 0) {
-		const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+	if ( timeDifference > 0 ) {
+		const days = Math.floor( timeDifference / ( 1000 * 60 * 60 * 24 ) );
 		const hours = Math.floor(
-			(timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+			( timeDifference % ( 1000 * 60 * 60 * 24 ) ) / ( 1000 * 60 * 60 )
 		);
 		const minutes = Math.floor(
-			(timeDifference % (1000 * 60 * 60)) / (1000 * 60)
+			( timeDifference % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 )
 		);
-		const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+		const seconds = Math.floor( ( timeDifference % ( 1000 * 60 ) ) / 1000 );
 
 		let timerData = {
 			days,
@@ -99,23 +99,31 @@ const timerBadge = (timer) => {
 	return null;
 };
 
-
-const updateTimer = () => {
-	const interval = setInterval(() => {
-		const updatedResult = timerBadge({
-			from: '2023-08-29',
-			to: '2023-08-31 20:00',
+export const updateTimer = ( data ) => {
+	const interval = setInterval( () => {
+		const updatedResult = timerBadge( {
+			from: data.fromTimer,
+			to: data.toTimer,
 			now: new Date().toISOString(),
-		});
-		
-		if (updatedResult) {
-			console.log('Updated Timer Data:', updatedResult);
+		} );
+
+		if ( updatedResult ) {
+			const selectTimerDays = document.querySelector( '.asnp-esb-daysT' );
+			selectTimerDays.innerText = updatedResult.days;
+			const selectTimerHours = document.querySelector(
+				'.asnp-esb-hoursT'
+			);
+			selectTimerHours.innerText = updatedResult.hours;
+			const selectTimerMin = document.querySelector( '.asnp-esb-minT' );
+			selectTimerMin.innerText = updatedResult.minutes;
+			const selectTimerSec = document.querySelector( '.asnp-esb-secT' );
+			selectTimerSec.innerText = updatedResult.seconds;
 		} else {
-			console.log('Timer has expired or is not yet active.');
-			clearInterval(interval);
+			clearInterval( interval );
 		}
-	}, 1000);
+	}, 1000 );
 };
-
-updateTimer();
-
+updateTimer( {
+	fromTimer: '2023-08-29',
+	toTimer: '2023-08-31 20:00',
+} );
