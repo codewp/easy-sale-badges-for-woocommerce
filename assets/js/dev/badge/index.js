@@ -69,22 +69,22 @@ jQuery( window ).on(
 	}
 );
 
-const timerBadge = ( timer ) => {
+const timerBadge = (timer) => {
 	const { from, to, now } = timer;
 
-	const toDate = new Date( to );
-	const nowDate = new Date( now ); 
+	const toDate = new Date(to);
+	const nowDate = new Date(now);
 	const timeDifference = toDate - nowDate;
 
-	if ( timeDifference > 0 ) {
-		const days = Math.floor( timeDifference / ( 1000 * 60 * 60 * 24 ) );
+	if (timeDifference > 0) {
+		const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 		const hours = Math.floor(
-			( timeDifference % ( 1000 * 60 * 60 * 24 ) ) / ( 1000 * 60 * 60 )
+			(timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
 		);
 		const minutes = Math.floor(
-			( timeDifference % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 )
+			(timeDifference % (1000 * 60 * 60)) / (1000 * 60)
 		);
-		const seconds = Math.floor( ( timeDifference % ( 1000 * 60 ) ) / 1000 );
+		const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
 		let timerData = {
 			days,
@@ -99,14 +99,34 @@ const timerBadge = ( timer ) => {
 	return null;
 };
 
-const result = timerBadge( {
+const result = timerBadge({
 	from: '2023-08-29',
 	to: '2023-08-31 20:00',
 	now: '2023-08-29',
-} );
+});
 
-if ( result ) {
-	console.log( 'Timer Data:', result );
+if (result) {
+	console.log('Timer Data:', result);
 } else {
-	console.log( 'Timer has expired or is not yet active.' );
+	console.log('Timer has expired or is not yet active.');
 }
+
+const updateTimer = () => {
+	const interval = setInterval(() => {
+		const updatedResult = timerBadge({
+			from: '2023-08-29',
+			to: '2023-08-31 20:00',
+			now: new Date().toISOString(),
+		});
+		
+		if (updatedResult) {
+			console.log('Updated Timer Data:', updatedResult);
+		} else {
+			console.log('Timer has expired or is not yet active.');
+			clearInterval(interval);
+		}
+	}, 1000);
+};
+
+updateTimer();
+
