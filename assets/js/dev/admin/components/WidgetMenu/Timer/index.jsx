@@ -6,6 +6,7 @@ import { IMAGES_URL } from './../../../utils/constants';
 import Tippy from '@tippyjs/react';
 import { TwitterPicker, ChromePicker } from 'react-color';
 import { PlusIcon } from '@heroicons/react/solid';
+import ColorPicker from 'react-best-gradient-color-picker';
 
 import './style.scss';
 
@@ -15,9 +16,7 @@ const Timer = ( props ) => {
 	const [ selectedTextColor, setSelectedTextColor ] = useState(
 		props.textColor
 	);
-	const [ selectedBgColorTimer, setSelectedBgColorTimer ] = useState(
-		props.textColor
-	);
+
 	const [ disablePositionButtom, setDisablePositionButtom ] = useState(
 		false
 	);
@@ -382,50 +381,17 @@ const Timer = ( props ) => {
 							placement={ 'bottom' }
 							content={
 								<div>
-									<TwitterPicker
-										color={ selectedBgColorTimer }
-										onChangeComplete={ ( color ) =>
-											setSelectedBgColorTimer( color.hex )
-										}
-										onChange={ ( color ) => {
-											props.onChange(
-												'bgColorTimer',
-												color.hex
-											);
-										} }
-										colors={ colors }
-									/>
-									<Tippy
-										trigger="click"
-										interactive={ true }
-										placement={ 'bottom' }
-										content={
-											<div>
-												<ChromePicker
-													color={
-														selectedBgColorTimer
-													}
-													onChangeComplete={ (
-														color
-													) =>
-														setSelectedBgColorTimer(
-															color.hex
-														)
-													}
-													onChange={ ( color ) => {
-														props.onChange(
-															'bgColorTimer',
-															color.hex
-														);
-													} }
-												/>
-											</div>
-										}
-									>
-										<div className="asnp-h-7 asnp-w-7 asnp-bg-slate-300  asnp-flex asnp-justify-center asnp-items-center asnp-cursor-pointer">
-											<PlusIcon className="asnp-h-4 asnp-w-4" />
-										</div>
-									</Tippy>
+									<div className="asnp-bg-gray-300 asnp-w-[22rem] asnp-h-[39rem] asnp-rounded-lg asnp-px-6 asnp-py-6">
+										<ColorPicker
+											value={ props.bgColorTimer }
+											onChange={ ( color ) => {
+												props.onChange(
+													'bgColorTimer',
+													color
+												);
+											} }
+										/>
+									</div>
 								</div>
 							}
 						>
@@ -440,7 +406,7 @@ const Timer = ( props ) => {
 										</span>
 										<div
 											style={ {
-												backgroundColor: `${ selectedBgColorTimer }`,
+												backgroundColor: `${ props.bgColorTimer }`,
 											} }
 											className={
 												'asnp-flex asnp-w-7 asnp-h-6 asnp-rounded-full asnp-my-2 '
@@ -752,8 +718,7 @@ const Timer = ( props ) => {
 										disEleven
 											? 'asnp-opacity-20 asnp-cursor-not-allowed asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-l-lg asnp-border   asnp-border-gray-200'
 											: 'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-l-lg asnp-border   asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-											  ( props.badgePositionY ==
-													'top' &&
+											  ( props.badgePositionY == 'top' &&
 													'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
 									}
 									onClick={ () => {
@@ -845,7 +810,10 @@ const Timer = ( props ) => {
 				</div>
 				<div className="asnp-mt-8">
 					<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-						{ __( 'Label Position (Pixel)', 'asnp-easy-sale-badge' ) }
+						{ __(
+							'Label Position (Pixel)',
+							'asnp-easy-sale-badge'
+						) }
 					</span>
 				</div>
 				<div className="asnp-flex asnp-mt-3">

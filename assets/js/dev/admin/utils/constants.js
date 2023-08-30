@@ -267,7 +267,7 @@ export default function BadgeCssandAdv( badge ) {
 
 	switch ( badge.badgeStyles ) {
 		case 'badge1':
-			badgeIcon = `background-color: ${ badge.badgeColor };
+			badgeIcon = `background: ${ badge.badgeColor };
 			top: 0px;
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
 			right: ${ badge.badgePositionX == 'right' ? '0px' : '' };
@@ -314,7 +314,7 @@ export default function BadgeCssandAdv( badge ) {
 		case 'badge3':
 			badgeIcon = `
 			position: absolute;
-			background-color: ${ badge.badgeColor };
+			background: ${ badge.badgeColor };
 			text-align: center;
 			border-radius: 3px;
 			opacity: ${ badge.opacity };
@@ -337,7 +337,7 @@ export default function BadgeCssandAdv( badge ) {
 				left: ${ badge.badgePositionX == 'right' ? '-10px' : '' };
 				width: 20px;
 				height: 100%;
-				background-color: ${ badge.badgeColor };
+				background: ${ badge.badgeColor };
 				border-radius: ${
 					badge.badgePositionX == 'right'
 						? '3px 0px 0px 3px'
@@ -353,7 +353,7 @@ export default function BadgeCssandAdv( badge ) {
 			position: absolute;
 			opacity: ${ badge.opacity };
 			display: inline-block;
-			background-color: ${ badge.badgeColor };
+			background: ${ badge.badgeColor };
 			top: 0px;
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
 			right: ${ badge.badgePositionX == 'right' ? '0px' : '' };
@@ -506,7 +506,7 @@ export default function BadgeCssandAdv( badge ) {
 			break;
 		case 'badge7':
 			badgeIcon = `
-			background-color: ${ badge.badgeColor };
+			background: ${ badge.badgeColor };
 			position: absolute;
 			z-index: 99;
 			top: 0px;
@@ -527,7 +527,7 @@ export default function BadgeCssandAdv( badge ) {
 			break;
 		case 'badge8':
 			badgeIcon = `
-			background-color: ${ badge.badgeColor };
+			background: ${ badge.badgeColor };
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
 			right:${ badge.badgePositionX == 'right' ? '0px' : '' };
 			height: ${ badge.widthBadge }px;
@@ -552,7 +552,7 @@ export default function BadgeCssandAdv( badge ) {
 			display: block;
 			height: ${ badge.widthBadge / 1.66 }px !important;
 			width: ${ badge.widthBadge }px;
-			background-color: ${ badge.badgeColor };
+			background: ${ badge.badgeColor };
 			position: absolute;
 			z-index: 1;
 			opacity: ${ badge.opacity };
@@ -588,7 +588,7 @@ export default function BadgeCssandAdv( badge ) {
 			display: block;
 			height: ${ badge.widthBadge / 1.083 }px !important;
 			width: ${ badge.widthBadge }px;
-			background-color: ${ badge.badgeColor };
+			background: ${ badge.badgeColor };
 			position: absolute;
 			z-index: 1;			
 			opacity: ${ badge.opacity };
@@ -613,7 +613,7 @@ export default function BadgeCssandAdv( badge ) {
 			display: block;
 			height: ${ badge.heightBadge }px;
 			width: 100%;
-			background-color: ${ badge.badgeColor };
+			background: ${ badge.badgeColor };
 			position: absolute;
 			z-index: 1;
 			top: 0px;
@@ -642,7 +642,7 @@ export default function BadgeCssandAdv( badge ) {
 			font-size: 14px;
 			font-weight: 400;
 			opacity: ${ badge.opacity };
-			background-color: ${ badge.badgeColor };
+			background: ${ badge.badgeColor };
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '12px' };
 			right: ${ badge.badgePositionX == 'right' ? '12px' : 'auto' };
 			height:  30px !important;
@@ -726,7 +726,7 @@ export default function BadgeCssandAdv( badge ) {
 			height: ${ badge.heightBadge }px;
 			width: ${ badge.widthBadge }px;	
 			opacity: ${ badge.opacity };
-			background-color: ${ badge.badgeColor };`;
+			background: ${ badge.badgeColor };`;
 	}
 
 	switch ( badge.badgeAdv ) {
@@ -766,7 +766,7 @@ export default function BadgeCssandAdv( badge ) {
 			left: ${ badge.badgePositionX == 'right' ? '5px' : '13px' };
 			`;
 			badgeIconTwo = `
-			background-color: ${ badge.secondBg };
+			background: ${ badge.secondBg };
 			display: block;
 			padding: 0px 5px;
 			z-index: 1;
@@ -814,7 +814,7 @@ export default function BadgeCssandAdv( badge ) {
 			left: ${ badge.badgePositionX == 'right' ? '' : '13px' };
 			`;
 			badgeIconTwo = `
-			background-color: ${ badge.secondBg };
+			background: ${ badge.secondBg };
 			display: block;
 			padding: 0px 5px;
 			z-index: 1;
@@ -907,7 +907,7 @@ export default function BadgeCssandAdv( badge ) {
 			display: inline-block;
 			color: ${ badge.textColor };
 			opacity: ${ badge.opacity };
-			background-color: ${ badge.bgColorTimer };
+			background: ${ badge.bgColorTimer };
 			border-radius: 10px;
 			`;
 			badgeTimerCont = `
@@ -967,7 +967,7 @@ export default function BadgeCssandAdv( badge ) {
 			padding: 13px 26px;
 			width: 70px;
 			border-radius: 50%;
-			background-color: ${ badge.bgColorTimer };
+			background: ${ badge.bgColorTimer };
 
 			`;
 			TimerDate = `
@@ -1014,7 +1014,7 @@ export default function BadgeCssandAdv( badge ) {
 			display: grid;
 			color: ${ badge.textColor };
 			opacity: ${ badge.opacity };
-			background-color: ${ badge.bgColorTimer };
+			background: ${ badge.bgColorTimer };
 			border-radius: 10px;
 			`;
 			badgeTimerCont = `
@@ -1071,7 +1071,7 @@ export default function BadgeCssandAdv( badge ) {
 			display: inline-block;
 			padding: 13px 27px;
 			width: 70px;
-			background-color: ${ badge.bgColorTimer };
+			background: ${ badge.bgColorTimer };
 			border-radius: 50%;
 			`;
 			TimerDate = `

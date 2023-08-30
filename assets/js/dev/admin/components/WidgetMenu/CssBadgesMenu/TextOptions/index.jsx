@@ -156,7 +156,10 @@ const TextOptions = ( props ) => {
 				<div className="asnp-flex asnp-mt-[1rem] asnp-w-full">
 					<label>
 						<span className="asnp-field-title">
-							{ __( 'Font Size (Pixel)', 'asnp-easy-sale-badge' ) }
+							{ __(
+								'Font Size (Pixel)',
+								'asnp-easy-sale-badge'
+							) }
 						</span>
 						<div className="asnp-w-[25rem]">
 							<input
