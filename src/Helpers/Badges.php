@@ -6,6 +6,7 @@ defined('ABSPATH') || exit;
 
 use function AsanaPlugins\WhatsApp\get_plugin;
 use function AsanaPlugins\WhatsApp\add_custom_style;
+use function AsanaPlugins\WhatsApp\localize_timer_badge;
 
 function output_badges( $badges, $hide = false ) {
 	if ( empty( $badges ) ) {
@@ -32,6 +33,14 @@ function output_badge( $badge, $hide = false ) {
 function output_css_badge( $badge, $hide = false ) {
 	if ( ! $badge ) {
 		return;
+	}
+
+	// If threshold is set, check the threshold time is reached.
+	if ( isset( $badge->selectedDateFrom ) && '' != $badge->selectedDateFrom ) {
+		$now = current_time( 'timestamp' );
+		if ( 0 > $now - strtotime( $badge->selectedDateFrom, $now ) ) {
+			return;
+		}
 	}
 
 	$insetProperty = '';
@@ -2075,6 +2084,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			$dynamic_styles = apply_filters( 'asnp_wesb_timer_badge_styles', $dynamic_styles, $badge, $hide );
 
 			add_custom_style( $dynamic_styles );
+
+			localize_timer_badge( $badge );
 
 			$class_names = 'asnp-esb-badge-element asnp-esb-productBadgeTimer asnp-esb-productBadgeTimer-'. $timer_uniq .'';
 

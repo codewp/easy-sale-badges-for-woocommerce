@@ -6,8 +6,11 @@ defined( 'ABSPATH' ) || exit;
 
 class Assets {
 
+	protected $timers = [];
+
 	public function init() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts' ), 15 );
+		add_action( 'wp_footer', array( $this, 'localize_scripts' ), 15 );
 	}
 
 	public function load_scripts() {
@@ -24,6 +27,22 @@ class Assets {
 				true
 			);
 		}
+	}
+
+	public function localize_scripts() {
+		if ( ! empty( $this->timers ) ) {
+			wp_localize_script(
+				'asnp-wesb-badge',
+				'asnpWesbBadgeData',
+				[
+					'timers' => $this->timers,
+				]
+			);
+		}
+	}
+
+	public function add_timer( $timer ) {
+		$this->timers[] = $timer;
 	}
 
 	public function get_url( $file, $ext ) {

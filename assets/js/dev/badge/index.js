@@ -1,6 +1,77 @@
 jQuery( window ).on(
 	'load berocket_ajax_products_infinite_loaded',
 	function () {
+		const getTime = ( timer ) => {
+			if ( 0 >= timer.remainingTime * 1 ) {
+				return null;
+			}
+
+			timer.remainingTime *= 1;
+
+			const days = Math.floor(
+				timer.remainingTime / ( 1000 * 60 * 60 * 24 )
+			);
+			const hours = Math.floor(
+				( timer.remainingTime % ( 1000 * 60 * 60 * 24 ) ) /
+					( 1000 * 60 * 60 )
+			);
+			const minutes = Math.floor(
+				( timer.remainingTime % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 )
+			);
+			const seconds = Math.floor(
+				( timer.remainingTime % ( 1000 * 60 ) ) / 1000
+			);
+
+			return {
+				days,
+				hours,
+				minutes,
+				seconds,
+			};
+		};
+
+		const timerBadge = ( timer ) => {
+			if ( ! timer || ! timer.id ) {
+				return;
+			}
+
+			const element = document.getElementById(
+				'asnp-esb-timer-badge-' + timer.id
+			);
+			if ( ! element ) {
+				return;
+			}
+
+			const interval = setInterval( () => {
+				const time = getTime( timer );
+
+				if ( time ) {
+					const selectTimerDays = element.querySelector(
+						'.asnp-esb-daysT'
+					);
+					selectTimerDays.innerText = time.days;
+					const selectTimerHours = element.querySelector(
+						'.asnp-esb-hoursT'
+					);
+					selectTimerHours.innerText = time.hours;
+					const selectTimerMin = element.querySelector(
+						'.asnp-esb-minT'
+					);
+					selectTimerMin.innerText = time.minutes;
+					const selectTimerSec = element.querySelector(
+						'.asnp-esb-secT'
+					);
+					selectTimerSec.innerText = time.seconds;
+
+					if ( 'none' === element.style.display ) {
+						element.style.display = 'block';
+					}
+				} else {
+					clearInterval( interval );
+				}
+			}, 1000 );
+		};
+
 		const moveBadge = ( container, badge ) => {
 			if ( ! container || ! container.length ) {
 				return false;
@@ -33,6 +104,16 @@ jQuery( window ).on(
 		};
 
 		const init = () => {
+			if (
+				'undefined' !== typeof asnpWesbBadgeData &&
+				'undefined' !== typeof asnpWesbBadgeData.timers &&
+				asnpWesbBadgeData.timers.length
+			) {
+				asnpWesbBadgeData.timers.map( ( timer ) =>
+					timerBadge( timer )
+				);
+			}
+
 			let badge = jQuery( '.asnp-esb-badge-hidden' );
 			if ( ! badge ) {
 				return;
@@ -68,49 +149,3 @@ jQuery( window ).on(
 		init();
 	}
 );
-
-const getTime = () => {
-	if ( 0 >= timer.remainingTime ) {
-		return;
-	}
-	const days = Math.floor( remainingTime / ( 1000 * 60 * 60 * 24 ) );
-	const hours = Math.floor(
-		( remainingTime % ( 1000 * 60 * 60 * 24 ) ) / ( 1000 * 60 * 60 )
-	);
-	const minutes = Math.floor(
-		( remainingTime % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 )
-	);
-	const seconds = Math.floor( ( remainingTime % ( 1000 * 60 ) ) / 1000 );
-
-	return {
-		days,
-		hours,
-		minutes,
-		seconds,
-	};
-};
-
-export const timerBadge = ( data ) => {
-	const interval = setInterval( () => {
-		const updatedResult = getTime();
-
-		if ( updatedResult ) {
-			const showTimer = document.getElementById(
-				'asnp-esb-timer-badge-' + data.id
-			);
-			showTimer.style.display = '';
-			const selectTimerDays = document.querySelector( '.asnp-esb-daysT' );
-			selectTimerDays.innerText = updatedResult.days;
-			const selectTimerHours = document.querySelector(
-				'.asnp-esb-hoursT'
-			);
-			selectTimerHours.innerText = updatedResult.hours;
-			const selectTimerMin = document.querySelector( '.asnp-esb-minT' );
-			selectTimerMin.innerText = updatedResult.minutes;
-			const selectTimerSec = document.querySelector( '.asnp-esb-secT' );
-			selectTimerSec.innerText = updatedResult.seconds;
-		} else {
-			clearInterval( interval );
-		}
-	}, 1000 );
-};
