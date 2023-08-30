@@ -1,25 +1,22 @@
 jQuery( window ).on(
 	'load berocket_ajax_products_infinite_loaded',
 	function () {
-		const getTime = ( timer ) => {
-			if ( 0 >= timer.remainingTime * 1 ) {
+		const getTime = ( remainingTime ) => {
+			if ( 0 >= remainingTime * 1 ) {
 				return null;
 			}
 
-			timer.remainingTime *= 1;
+			remainingTime *= 1;
 
-			const days = Math.floor(
-				timer.remainingTime / ( 1000 * 60 * 60 * 24 )
-			);
+			const days = Math.floor( remainingTime / ( 1000 * 60 * 60 * 24 ) );
 			const hours = Math.floor(
-				( timer.remainingTime % ( 1000 * 60 * 60 * 24 ) ) /
-					( 1000 * 60 * 60 )
+				( remainingTime % ( 1000 * 60 * 60 * 24 ) ) / ( 1000 * 60 * 60 )
 			);
 			const minutes = Math.floor(
-				( timer.remainingTime % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 )
+				( remainingTime % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 )
 			);
 			const seconds = Math.floor(
-				( timer.remainingTime % ( 1000 * 60 ) ) / 1000
+				( remainingTime % ( 1000 * 60 ) ) / 1000
 			);
 
 			return {
@@ -42,8 +39,11 @@ jQuery( window ).on(
 				return;
 			}
 
+			let remainingTime = timer.remainingTime * 1;
+
 			const interval = setInterval( () => {
-				const time = getTime( timer );
+				const time = getTime( remainingTime );
+				remainingTime -= 1000;
 
 				if ( time ) {
 					const selectTimerDays = element.querySelector(
