@@ -137,11 +137,10 @@ function output_css_badge( $badge, $hide = false ) {
 	}
 
 	$dynamic_styles = '';
-	$badge_css='';
+	$badge_css= $badge->id;
 
 	switch ( $badge->badgeStyles ) {
 		case 'badge1':
-			$badge_css ='b1';
 			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 			if ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $widthContBadge . ';';
@@ -221,7 +220,6 @@ function output_css_badge( $badge, $hide = false ) {
 			break;
 
 		case 'badge2':
-			$badge_css ='b2';
 			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
@@ -320,7 +318,6 @@ function output_css_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '}';
 		break;
 		case 'badge3':
-			$badge_css ='b3';
 			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
@@ -417,7 +414,6 @@ function output_css_badge( $badge, $hide = false ) {
 		break;
 
 		case 'badge4':
-			$badge_css ='b4';
 			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
@@ -533,7 +529,6 @@ function output_css_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '}';
 		break;
 		case 'badge5':
-			$badge_css ='b5';
 			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
@@ -618,7 +613,6 @@ function output_css_badge( $badge, $hide = false ) {
 		break;
 
 		case 'badge6':
-			$badge_css ='b6';
 			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
@@ -724,7 +718,6 @@ function output_css_badge( $badge, $hide = false ) {
 		break;
 
 		case 'badge7':
-			$badge_css ='b7';
 			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
@@ -818,7 +811,6 @@ function output_css_badge( $badge, $hide = false ) {
 		break;
 
 		case 'badge8':
-			$badge_css ='b8';
 			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
@@ -900,7 +892,6 @@ function output_css_badge( $badge, $hide = false ) {
 		break;
 
 		case 'badge9':
-			$badge_css ='b9';
 			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
@@ -1000,7 +991,6 @@ function output_css_badge( $badge, $hide = false ) {
 		break;
 
 		case 'badge10':
-			$badge_css ='b10';
 			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
@@ -1082,7 +1072,6 @@ function output_css_badge( $badge, $hide = false ) {
 			$dynamic_styles .= '}';
 		break;
 		case 'badge11':
-			$badge_css ='b11';
 			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
@@ -1162,7 +1151,6 @@ function output_css_badge( $badge, $hide = false ) {
 		break;
 
 		case 'badge12':
-			$badge_css ='b12';
 			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 			if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
@@ -1277,7 +1265,6 @@ function output_css_badge( $badge, $hide = false ) {
 
 		break;
 		case 'badge13':
-			$badge_css ='b13';
 			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 				if ( isset( $badge->widthBadge ) ) {
 					$dynamic_styles .= ' width: ' . $widthContBadge . ';';
@@ -1376,7 +1363,6 @@ function output_css_badge( $badge, $hide = false ) {
 		break;
 
 		default:
-			$badge_css ='b1';
 			$dynamic_styles .= '.asnp-esb-productBadge-'. $badge_css .' {';
 			if ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $widthContBadge . ';';
