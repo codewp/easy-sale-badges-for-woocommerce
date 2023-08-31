@@ -68,6 +68,7 @@ jQuery( window ).on(
 					}
 				} else {
 					clearInterval( interval );
+					element.style.display = 'none';
 				}
 			}, 1000 );
 		};

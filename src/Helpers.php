@@ -154,7 +154,7 @@ function localize_timer_badge( $badge ) {
 	$now = current_time( 'timestamp' );
 	$timer = [
 		'id'            => absint( $badge->id ),
-		'remainingTime' => strtotime( $badge->selectedDateTo, $now ) - $now,
+		'remainingTime' => ( strtotime( $badge->selectedDateTo, $now ) - $now ) * 1000,
 	];
 
 	if ( 0 < $timer['remainingTime'] ) {
