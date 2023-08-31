@@ -1527,12 +1527,10 @@ function output_timer_badge( $badge, $hide = false ) {
  	}
 
 			$dynamic_styles = '';
-			$timer_uniq = '';
+			$timer_uniq = $badge->id;
 
 			switch ( $badge->badgeTimer ) {
 			case 'timer1':
-			$timer_uniq = 't1';
-
 			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
@@ -1591,8 +1589,6 @@ function output_timer_badge( $badge, $hide = false ) {
 			break;
 
 			case 'timer2':
-			$timer_uniq = 't2';
-
 			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
@@ -1654,7 +1650,6 @@ function output_timer_badge( $badge, $hide = false ) {
 			break;
 
 			case 'timer3':
-			$timer_uniq = 't3';
 			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
@@ -1716,7 +1711,6 @@ function output_timer_badge( $badge, $hide = false ) {
 			break;
 
 			case 'timer4':
-			$timer_uniq = 't4';
 			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
@@ -1777,7 +1771,6 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			break;
 			case 'timer5':
-			$timer_uniq = 't5';
 			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
@@ -1837,7 +1830,6 @@ function output_timer_badge( $badge, $hide = false ) {
 			break;
 
 			case 'timer6':
-			$timer_uniq = 't6';
 			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
@@ -1898,7 +1890,6 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			break;
 			case 'timer7':
-			$timer_uniq = 't7';
 			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
@@ -1961,7 +1952,6 @@ function output_timer_badge( $badge, $hide = false ) {
 			break;
 
 			case 'timer8':
-			$timer_uniq = 't8';
 			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';

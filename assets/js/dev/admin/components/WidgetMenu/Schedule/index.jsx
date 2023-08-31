@@ -18,12 +18,7 @@ const Schedule = () => {
 		deleteSchedule,
 	} = useContext( BadgeContext );
 
-	const updateTime = ( field, value ) => {
-		setSelectTime( ( prev ) => ( {
-			...prev,
-			[ field ]: value,
-		} ) );
-	};
+
 
 	return (
 		<div className="asnp-w-full">
