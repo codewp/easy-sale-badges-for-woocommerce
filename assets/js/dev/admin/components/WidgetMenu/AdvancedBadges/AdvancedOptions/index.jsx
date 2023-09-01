@@ -20,7 +20,7 @@ const AdvancedOptions = ( props ) => {
 										onChange={ ( color ) => {
 											props.onChange( 'mainBg', color );
 										} }
-										hideGradientType={ true }
+										hideColorTypeBtns={ true }
 									/>
 								</div>
 							</div>
@@ -60,6 +60,7 @@ const AdvancedOptions = ( props ) => {
 									onChange={ ( color ) => {
 										props.onChange( 'secondBg', color );
 									} }
+									hideColorTypeBtns={ true }
 								/>
 							</div>
 						}

@@ -2,7 +2,6 @@ import React from 'react';
 import { __ } from '@wordpress/i18n';
 import Tippy from '@tippyjs/react';
 import Toggle from '../../Toggle';
-import TimeZone from '../../TimeZone';
 import { IMAGES_URL } from '../../../utils/constants';
 
 const General = ( props ) => {
@@ -193,12 +192,6 @@ const General = ( props ) => {
 						</button>
 					</Tippy>
 				</div>
-			</div>
-			<div className="asnp-mt-[2rem] asnp-max-w-lg">
-				<TimeZone
-					timezone={ props.settings.timezone }
-					onChange={ props.onChange }
-				/>
 			</div>
 			<button
 				className="asnp-btn asnp-btn-primary asnp-mt-10 asnp-mb-4"
