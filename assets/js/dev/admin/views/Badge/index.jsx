@@ -66,7 +66,7 @@ const defaultBadge = {
 	imgbadgeAdv: 0,
 	mainBg: '#5F536D',
 	secondBg: '#25ad25',
-	zIndexAdv: '',
+	zIndexAdv: '9999',
 	selectedDateFrom: '',
 	selectedDateTo: '',
 	woocommerceItemsConditions: 'any',
