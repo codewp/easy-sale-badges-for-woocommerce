@@ -67,8 +67,6 @@ const defaultBadge = {
 	mainBg: '#5F536D',
 	secondBg: '#25ad25',
 	zIndexAdv: '',
-	useTimezone: 0,
-	timezone: '',
 	selectedDateFrom: '',
 	selectedDateTo: '',
 	woocommerceItemsConditions: 'any',
@@ -83,6 +81,7 @@ const defaultBadge = {
 	lineHeightLabelTimer: '30',
 	bgColorTimer: '#EB144C',
 	schedule: [],
+	zIndexTimer: '9999',
 };
 
 export default function Badge() {
@@ -308,7 +307,10 @@ export default function Badge() {
 					payload: response.item,
 				} );
 				setMessage( {
-					message: __( 'Saved Successfully.', 'asnp-easy-sale-badge' ),
+					message: __(
+						'Saved Successfully.',
+						'asnp-easy-sale-badge'
+					),
 					type: 'success',
 				} );
 			} else {

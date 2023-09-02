@@ -18,8 +18,6 @@ const Schedule = () => {
 		deleteSchedule,
 	} = useContext( BadgeContext );
 
-
-
 	return (
 		<div className="asnp-w-full">
 			<div className="asnp-w-[25rem] asnp-mt-2 asnp-text-lg asnp-font-semibold">
@@ -59,7 +57,10 @@ const Schedule = () => {
 								</option>
 
 								<option value={ 'dateTime' }>
-									{ __( 'Date Time', 'asnp-easy-sale-badge' ) }
+									{ __(
+										'Date Time',
+										'asnp-easy-sale-badge'
+									) }
 								</option>
 
 								<option value={ 'time' }>
@@ -139,6 +140,11 @@ const Schedule = () => {
 												) }
 											</span>
 											<Datetime
+												initialValue={
+													badge.schedule[
+														groupIndex
+													][ index ].start
+												}
 												onChange={ ( momentObj ) =>
 													updateSchedule(
 														groupIndex,
@@ -161,6 +167,11 @@ const Schedule = () => {
 												) }
 											</span>
 											<Datetime
+												initialValue={
+													badge.schedule[
+														groupIndex
+													][ index ].end
+												}
 												onChange={ ( momentObj ) =>
 													updateSchedule(
 														groupIndex,

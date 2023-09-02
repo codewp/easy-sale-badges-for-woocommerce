@@ -167,7 +167,7 @@ const MenuItem = ( props ) => {
 					badgePositionBottom={ props.badge.badgePositionBottom }
 					badgePositionLeft={ props.badge.badgePositionLeft }
 					badgePositionRight={ props.badge.badgePositionRight }
-					zIndexAdv={ props.badge.zIndexAdv }
+					zIndexTimer={ props.badge.zIndexTimer }
 					opacity={ props.badge.opacity }
 					labelDayTimer={ props.badge.labelDayTimer }
 					labelHoursTimer={ props.badge.labelHoursTimer }
