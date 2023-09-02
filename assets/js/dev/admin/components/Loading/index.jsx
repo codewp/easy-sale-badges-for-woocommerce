@@ -5,10 +5,10 @@ import './style.scss';
 const Loading = ( { loading } ) => {
 	return (
 		<div
-			id="asnp-whatsapp-loading"
+			id="asnp-badge-loading"
 			style={ { display: loading ? 'block' : 'none' } }
 		>
-			<div className="asnp-whatsapp-spinner">
+			<div className="asnp-badge-spinner">
 				<svg
 					role="status"
 					className="asnp-inline asnp-w-8 asnp-h-8 asnp-mr-2 asnp-text-white asnp-animate-spin asnp-fill-indigo-600"

@@ -366,7 +366,7 @@ export default function Badge() {
 			<div className="asnp-relative">
 				<div>
 					<div className="asnp-max-w-lg asnp-grid asnp-grid-cols-1 asnp-gap-6">
-						<div className="asnp-whatsapp-actions asnp-space-x-2 ">
+						<div className="asnp-badge-actions asnp-space-x-2 ">
 							<h1 className="asnp-heading-inline">
 								{ __( 'Badges', 'asnp-easy-sale-badge' ) }
 							</h1>
