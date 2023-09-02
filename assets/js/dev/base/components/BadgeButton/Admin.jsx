@@ -250,7 +250,7 @@ const Admin = ( {
 														fontWeight: '700',
 													} }
 												>
-													{ badge.badgeLabel }
+													{ badge.badgeLabelAdv }
 												</div>
 											</SpanTwo>
 										</SpanOne>

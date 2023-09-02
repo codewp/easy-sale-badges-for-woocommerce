@@ -16,9 +16,9 @@ const AdvancedTextOption = ( props ) => {
 							type="text"
 							className="asnp-text-field"
 							placeholder="Badge Label"
-							value={ props.badgeLabel }
+							value={ props.badgeLabelAdv }
 							onChange={ ( e ) =>
-								props.onChange( 'badgeLabel', e.target.value )
+								props.onChange( 'badgeLabelAdv', e.target.value )
 							}
 						/>
 					</label>

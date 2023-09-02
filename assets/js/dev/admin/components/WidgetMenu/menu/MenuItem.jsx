@@ -105,7 +105,7 @@ const MenuItem = ( props ) => {
 				<div className="asnp-mt-3">
 					<AdvancedTextOption
 						onChange={ props.onChange }
-						badgeLabel={ props.badge.badgeLabel }
+						badgeLabelAdv={ props.badge.badgeLabelAdv }
 						textColor={ props.badge.textColor }
 						fontSizeText={ props.badge.fontSizeText }
 						lineHeightText={ props.badge.lineHeightText }

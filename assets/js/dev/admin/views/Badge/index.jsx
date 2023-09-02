@@ -82,6 +82,7 @@ const defaultBadge = {
 	bgColorTimer: '#EB144C',
 	schedule: [],
 	zIndexTimer: '9999',
+	badgeLabelAdv: 'Sale',
 };
 
 export default function Badge() {

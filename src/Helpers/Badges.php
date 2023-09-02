@@ -2784,7 +2784,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 	$output .= '<div class="asnp-esb-advbadge1-'. $adv_uniq .'">';
 	$output .= $svgAdv;
 	$output .= '<div class="asnp-esb-advbadge2-'. $adv_uniq .'">';
-	$output .= '<div class="asnp-esb-advbadge3-'. $adv_uniq .'">' . esc_html__( $badge->badgeLabel, 'asnp-easy-sale-badge' ) . '</div>';
+	$output .= '<div class="asnp-esb-advbadge3-'. $adv_uniq .'">' . esc_html__( $badge->badgeLabelAdv, 'asnp-easy-sale-badge' ) . '</div>';
 	$output .= '</div>';
 	$output .= '</div>';
 	$output .= '</span>';
