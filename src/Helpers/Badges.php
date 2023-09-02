@@ -2309,22 +2309,6 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
 			}
-
-
-			$transform = '';
-			if ( isset( $badge->rotationX ) ) {
-				$transform .= ' rotateX(' . esc_html( $badge->rotationX ) . 'deg)';
-			}
-			if ( isset( $badge->rotationY ) ) {
-				$transform .= ' rotateY(' . esc_html( $badge->rotationY ) . 'deg) ';
-			}
-			if ( isset( $badge->rotationZ ) ) {
-				$transform .= ' rotateZ(' . esc_html( $badge->rotationZ ) . 'deg);';
-			}
-			if ( ! empty( $transform ) ) {
-				$dynamic_styles .= ' transform:' . $transform;
-			}
-
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-advbadge1-'. $adv_uniq .' {';
@@ -2445,22 +2429,6 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
 			}
-
-
-			$transform = '';
-			if ( isset( $badge->rotationX ) ) {
-				$transform .= ' rotateX(' . esc_html( $badge->rotationX ) . 'deg)';
-			}
-			if ( isset( $badge->rotationY ) ) {
-				$transform .= ' rotateY(' . esc_html( $badge->rotationY ) . 'deg) ';
-			}
-			if ( isset( $badge->rotationZ ) ) {
-				$transform .= ' rotateZ(' . esc_html( $badge->rotationZ ) . 'deg);';
-			}
-			if ( ! empty( $transform ) ) {
-				$dynamic_styles .= ' transform:' . $transform;
-			}
-
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-advbadge1-'. $adv_uniq .' {';
@@ -2690,22 +2658,6 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
 			}
-
-
-			$transform = '';
-			if ( isset( $badge->rotationX ) ) {
-				$transform .= ' rotateX(' . esc_html( $badge->rotationX ) . 'deg)';
-			}
-			if ( isset( $badge->rotationY ) ) {
-				$transform .= ' rotateY(' . esc_html( $badge->rotationY ) . 'deg) ';
-			}
-			if ( isset( $badge->rotationZ ) ) {
-				$transform .= ' rotateZ(' . esc_html( $badge->rotationZ ) . 'deg);';
-			}
-			if ( ! empty( $transform ) ) {
-				$dynamic_styles .= ' transform:' . $transform;
-			}
-
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-advbadge1-'. $adv_uniq .' {';

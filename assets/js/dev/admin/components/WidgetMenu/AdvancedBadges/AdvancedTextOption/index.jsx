@@ -1,52 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { __ } from '@wordpress/i18n';
 import Tippy from '@tippyjs/react';
-import { TwitterPicker, ChromePicker } from 'react-color';
-import { PlusIcon } from '@heroicons/react/solid';
+import ColorPicker from 'react-best-gradient-color-picker';
 
 const AdvancedTextOption = ( props ) => {
-	const [ selectedTextColor, setSelectedTextColor ] = useState(
-		props.textColor
-	);
-	const colors = [
-		'#095e54',
-		'#9333ea',
-		'#22c55e',
-		'#00D084',
-		'#8ED1FC',
-		'#0693E3',
-		'#ABB8C3',
-		'#EB144C',
-		'#F78DA7',
-		'#9900EF',
-		'#cb997e',
-		'#ddbea9',
-		'#b7b7a4',
-		'#bb3e03',
-		'#d8e2dc',
-		'#0096c7',
-		'#e5989b',
-		'#006d77',
-		'#f77f00',
-		'#6930c3',
-		'#87bba2',
-		'#8e94f2',
-		'#43aa8b',
-		'#ffa6c1',
-		'#723c70',
-		'#e574bc',
-		'#7bdff2',
-		'#e4ff1a',
-		'#dabeca',
-		'#344e41',
-		'#a3b18a',
-		'#141E27',
-		'#ffffff',
-		'#e5e7eb',
-		'#FFF3E4',
-	];
 	return (
-		<div className='asnp-ew-line'>
+		<div className="asnp-ew-line">
 			<div className="asnp-w-[25rem]">
 				<div className="asnp-mt-[1rem]">
 					<label>
@@ -70,47 +29,14 @@ const AdvancedTextOption = ( props ) => {
 						interactive={ true }
 						placement={ 'bottom' }
 						content={
-							<div>
-								<TwitterPicker
-									color={ selectedTextColor }
-									onChangeComplete={ ( color ) =>
-										setSelectedTextColor( color.hex )
-									}
+							<div className="asnp-bg-gray-300 asnp-w-[22rem] asnp-h-[39rem] asnp-rounded-lg asnp-px-6 asnp-py-6">
+								<ColorPicker
+									value={ props.textColor }
 									onChange={ ( color ) => {
-										props.onChange(
-											'textColor',
-											color.hex
-										);
+										props.onChange( 'textColor', color );
 									} }
-									colors={ colors }
+									hideColorTypeBtns={ true }
 								/>
-								<Tippy
-									trigger="click"
-									interactive={ true }
-									placement={ 'bottom' }
-									content={
-										<div>
-											<ChromePicker
-												color={ selectedTextColor }
-												onChangeComplete={ ( color ) =>
-													setSelectedTextColor(
-														color.hex
-													)
-												}
-												onChange={ ( color ) => {
-													props.onChange(
-														'textColor',
-														color.hex
-													);
-												} }
-											/>
-										</div>
-									}
-								>
-									<div className="asnp-h-7 asnp-w-7 asnp-bg-slate-300  asnp-flex asnp-justify-center asnp-items-center asnp-cursor-pointer">
-										<PlusIcon className="asnp-h-4 asnp-w-4" />
-									</div>
-								</Tippy>
 							</div>
 						}
 					>
@@ -125,7 +51,7 @@ const AdvancedTextOption = ( props ) => {
 									</span>
 									<div
 										style={ {
-											backgroundColor: `${ selectedTextColor }`,
+											backgroundColor: `${ props.textColor }`,
 										} }
 										className={
 											'asnp-flex asnp-w-7 asnp-h-6 asnp-rounded-full asnp-my-2 '
@@ -139,7 +65,10 @@ const AdvancedTextOption = ( props ) => {
 				<div className="asnp-flex asnp-mt-[1rem] asnp-w-full">
 					<label>
 						<span className="asnp-field-title">
-							{ __( 'Font Size (Pixel)', 'asnp-easy-sale-badge' ) }
+							{ __(
+								'Font Size (Pixel)',
+								'asnp-easy-sale-badge'
+							) }
 						</span>
 						<div className="asnp-w-[25rem]">
 							<input
