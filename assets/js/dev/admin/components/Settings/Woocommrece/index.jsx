@@ -1,19 +1,42 @@
 import React from 'react';
 import { __ } from '@wordpress/i18n';
+import Toggle from './../../Toggle';
 
 const WooCommerce = ( props ) => {
-	
 	return (
 		<div className="asnp-max-w-lg asnp-grid asnp-grid-cols-1 asnp-gap-8">
 			<div>
+				<div className="asnp-flex asnp-flex-row md:asnp-w-[27rem] asnp-w-[20rem] asnp-justify-between">
+					<div className="asnp-field-title md:asnp-min-w-1/3">
+						{ __(
+							'Display the Default "WooCommerce / Theme Sale Badges"',
+							'asnp-easy-sale-badge'
+						) }
+					</div>
+					<div>
+						<Toggle
+							value={ 1 == props.showLabel }
+							onChange={ ( value ) =>
+								props.onChange( 'showLabel', value ? 1 : 0 )
+							}
+						/>
+					</div>
+				</div>
+				<label className="asnp-block asnp-space-y-1 asnp-text-gray-500">
+					<p className="asnp-text-xs asnp-text-gray-400">
+						{ __( 'Enable/Disable', 'asnp-easy-sale-badge' ) }
+					</p>
+				</label>
+			</div>
+			<div>
 				<label className="asnp-block asnp-space-y-2 asnp-max-w-lg">
 					<div className="asnp-flex">
-						<h2 className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
+						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
 							{ __(
 								'Sale Badge Position On Archive Page',
 								'asnp-easy-sale-badge'
 							) }
-						</h2>
+						</div>
 					</div>
 					<select
 						className="asnp-block asnp-select-field md:asnp-w-2/3"
@@ -85,8 +108,8 @@ const WooCommerce = ( props ) => {
 						</option>
 					</select>
 				</label>
-				<label className="asnp-block asnp-space-y-1 asnp-italic asnp-text-gray-500">
-					<p>
+				<label className="asnp-block asnp-space-y-1 asnp-text-gray-500">
+					<p className="asnp-text-xs asnp-text-gray-400">
 						{ __(
 							'Sale badge position for bulk, tiered, purchase, products group rules in the archive page.',
 							'asnp-easy-sale-badge'
@@ -96,12 +119,12 @@ const WooCommerce = ( props ) => {
 			</div>
 			<div>
 				<label className="asnp-block asnp-space-y-1">
-					<h2 className="asnp-field-title asnp-ml-1">
+					<div className="asnp-field-title asnp-ml-1">
 						{ __(
 							'Archive Loop Custom Hooks',
 							'asnp-easy-sale-badge'
 						) }
-					</h2>
+					</div>
 					<input
 						type="text"
 						className="asnp-block asnp-text-field"
@@ -111,21 +134,24 @@ const WooCommerce = ( props ) => {
 						}
 					/>
 				</label>
-				<label className="asnp-block asnp-space-y-1 asnp-italic asnp-text-gray-500">
-					<p>
-						{ __( 'comma separated hooks.', 'asnp-easy-sale-badge' ) }
+				<label className="asnp-block asnp-space-y-1 asnp-text-gray-500">
+					<p className="asnp-text-xs asnp-text-gray-400">
+						{ __(
+							'comma separated hooks.',
+							'asnp-easy-sale-badge'
+						) }
 					</p>
 				</label>
 			</div>
 			<div>
 				<label className="asnp-block asnp-space-y-2 asnp-max-w-lg">
 					<div className="asnp-flex">
-						<h2 className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
+						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
 							{ __(
 								'Sale Badge Position On Product Page',
 								'asnp-easy-sale-badge'
 							) }
-						</h2>
+						</div>
 					</div>
 					<select
 						className="asnp-block asnp-select-field md:asnp-w-2/3"
@@ -175,8 +201,8 @@ const WooCommerce = ( props ) => {
 						</option>
 					</select>
 				</label>
-				<label className="asnp-block asnp-space-y-1 asnp-italic asnp-text-gray-500">
-					<p>
+				<label className="asnp-block asnp-space-y-1 asnp-text-gray-500">
+					<p className="asnp-text-xs asnp-text-gray-400">
 						{ __(
 							'Sale badge position for bulk, tiered, purchase, products group rules in the product page.',
 							'asnp-easy-sale-badge'
@@ -186,12 +212,12 @@ const WooCommerce = ( props ) => {
 			</div>
 			<div>
 				<label className="asnp-block asnp-space-y-1">
-					<h2 className="asnp-field-title asnp-ml-1">
+					<div className="asnp-field-title asnp-ml-1">
 						{ __(
 							'Single Product Custom Hooks',
 							'asnp-easy-sale-badge'
 						) }
-					</h2>
+					</div>
 					<input
 						type="text"
 						className="asnp-block asnp-text-field"
@@ -204,9 +230,12 @@ const WooCommerce = ( props ) => {
 						}
 					/>
 				</label>
-				<label className="asnp-block asnp-space-y-1 asnp-italic asnp-text-gray-500">
-					<p>
-						{ __( 'comma separated hooks.', 'asnp-easy-sale-badge' ) }
+				<label className="asnp-block asnp-space-y-1 asnp-text-gray-500">
+					<p className="asnp-text-xs asnp-text-gray-400">
+						{ __(
+							'comma separated hooks.',
+							'asnp-easy-sale-badge'
+						) }
 					</p>
 				</label>
 			</div>
@@ -214,12 +243,12 @@ const WooCommerce = ( props ) => {
 			<div>
 				<label className="asnp-block asnp-space-y-2 asnp-max-w-lg">
 					<div className="asnp-flex">
-						<h2 className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
+						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
 							{ __(
 								'Timer badge position',
 								'asnp-easy-sale-badge'
 							) }
-						</h2>
+						</div>
 					</div>
 					<select
 						className="asnp-block asnp-select-field md:asnp-w-2/3 !asnp-h-12"
@@ -229,19 +258,13 @@ const WooCommerce = ( props ) => {
 						}
 					>
 						<option value="onImage">
-							{ __(
-								'On image',
-								'asnp-easy-sale-badge'
-							) }
+							{ __( 'On image', 'asnp-easy-sale-badge' ) }
 						</option>
 						<option value="outOfImage">
-							{ __(
-								'Out of image',
-								'asnp-easy-sale-badge'
-							) }
-						</option>	
+							{ __( 'Out of image', 'asnp-easy-sale-badge' ) }
+						</option>
 					</select>
-				</label>		
+				</label>
 			</div>
 
 			<button

@@ -7,7 +7,7 @@ import { AppContext } from '../../contexts/App';
 import SinglePage from './../../components/SinglePage';
 
 export default function Settings() {
-	const [ activeMenu, setActiveMenu ] = useState( 'general' );
+	const [ activeMenu, setActiveMenu ] = useState( 'woocommerce' );
 	const { setMessage, settings, setSettings, setLoading } = useContext(
 		AppContext
 	);
@@ -24,7 +24,10 @@ export default function Settings() {
 			let response = await SettingsApi.saveSettings( settings );
 			if ( response ) {
 				setMessage( {
-					message: __( 'Saved Successfully.', 'asnp-easy-sale-badge' ),
+					message: __(
+						'Saved Successfully.',
+						'asnp-easy-sale-badge'
+					),
 					type: 'success',
 				} );
 			} else {
@@ -91,21 +94,6 @@ export default function Settings() {
 					>
 						{ __( 'Single Page ', 'asnp-easy-sale-badge' ) }
 					</a>
-					<a
-						href="#"
-						onClick={ ( e ) => {
-							e.preventDefault();
-							setActiveMenu( 'analytics' );
-						} }
-						className={
-							'asnp-nav-tab-item' +
-							( 'analytics' === activeMenu
-								? ' asnp-nav-tab-active'
-								: '' )
-						}
-					>
-						{ __( 'Analytics', 'asnp-easy-sale-badge' ) }
-					</a>
 				</nav>
 			</div>
 			<div className="asnp-w-full asnp-h-auto asnp-bg-white asnp-p-5">
@@ -114,9 +102,6 @@ export default function Settings() {
 						settings={ settings }
 						onChange={ updateSettings }
 						onSave={ save }
-						openNewTab={ settings.openNewTab }
-						urlDesktop={ settings.urlDesktop }
-						urlMobile={ settings.urlMobile }
 					/>
 				) }
 				{ 'woocommerce' === activeMenu && (
@@ -131,6 +116,7 @@ export default function Settings() {
 						singleCustomHooks={ settings.singleCustomHooks }
 						loopCustomHooks={ settings.loopCustomHooks }
 						timerPosition={ settings.timerPosition }
+						showLabel={ settings.showLabel }
 					/>
 				) }
 				{ 'singlepage' === activeMenu && (

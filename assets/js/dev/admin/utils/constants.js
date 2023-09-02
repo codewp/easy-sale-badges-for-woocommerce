@@ -1,13 +1,7 @@
 import { __ } from '@wordpress/i18n';
 
 export const defaultSettings = {
-	woocommerceEnabled: 'true',
-	woocommerceBtnPosition: 'after_add_to_cart_button',
-	woocommerceCssSelector: '',
-	showLabel: 'false',
-	showSingleProduct: 'false',
-	urlDesktop: 'API',
-	urlMobile: 'API',
+	showLabel: 1,
 	singlePosition: 'before_single_item_images',
 	loopPosition: 'before_shop_loop_item_thumbnail',
 	singleCustomHooks: '',
@@ -15,9 +9,6 @@ export const defaultSettings = {
 	showBadgeProductPage: '',
 	singleContainer: '',
 	timerPosition: 'outOfImage',
-	googleAnalytics: 0,
-	facebookPixel: 0,
-	timezone: whatsappData.timezone,
 };
 export const PLUGIN_URL = whatsappData.pluginUrl;
 export const IMAGES_URL = `${ PLUGIN_URL }assets/images/`;
