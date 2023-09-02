@@ -4,7 +4,6 @@ import General from '../../components/Settings/General';
 import WooCommerce from '../../components/Settings/Woocommrece';
 import * as SettingsApi from '@easy-whatsapp/api/settings';
 import { AppContext } from '../../contexts/App';
-import Analytics from '../../components/Analytics';
 import SinglePage from './../../components/SinglePage';
 
 export default function Settings() {
@@ -142,7 +141,6 @@ export default function Settings() {
 						singleContainer={ settings.singleContainer }
 					/>
 				) }
-				{ 'analytics' === activeMenu && <Analytics onSave={ save } /> }
 			</div>
 		</div>
 	);
