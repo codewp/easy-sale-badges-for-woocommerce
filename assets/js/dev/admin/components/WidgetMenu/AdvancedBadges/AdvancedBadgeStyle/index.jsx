@@ -93,7 +93,7 @@ const AdvancedBadgeStyle = ( props ) => {
 						>
 							<img
 								className="asnp-h-full asnp-w-full asnp-border-none"
-								src={ IMAGES_URL + 'badgeAdvance1.png' }
+								src={ IMAGES_URL + 'badgeAdvance4.png' }
 							/>
 						</div>
 					</div>

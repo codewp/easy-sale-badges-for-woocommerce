@@ -21,6 +21,9 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 		} else if ( badge.badgeAdv == 'bdgAdvanced3' ) {
 			updateBadge( 'mainBg', '#006D77' );
 			updateBadge( 'secondBg', '#FFD488' );
+		} else if ( badge.badgeAdv == 'bdgAdvanced4' ) {
+			updateBadge( 'mainBg', '#f0672e' );
+			updateBadge( 'secondBg', '#242015' );
 		}
 	}, [ badge.badgeAdv ] );
 
