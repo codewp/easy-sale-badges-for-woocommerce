@@ -2161,12 +2161,6 @@ function output_image_badge( $badge, $hide = false ) {
 	if ( isset( $badge->opacityImg ) ) {
 		$dynamic_styles .= ' opacity: ' . $badge->opacityImg . ';';
 	}
-
-	$dynamic_styles .= '}';
-
-	$dynamic_styles .= '.asnp-esb-badgeImg-'. $img_uniq .' {';
-
-
 	$transform = '';
 	if ( isset( $badge->rotationXImg ) ) {
 		$transform .= ' rotateX(' . esc_html( $badge->rotationXImg ) . 'deg)';
@@ -2180,6 +2174,10 @@ function output_image_badge( $badge, $hide = false ) {
 	if ( ! empty( $transform ) ) {
 		$dynamic_styles .= ' transform:' . $transform;
 	}
+
+	$dynamic_styles .= '}';
+
+	$dynamic_styles .= '.asnp-esb-badgeImg-'. $img_uniq .' {';
 
 	$dynamic_styles .= '}';
 

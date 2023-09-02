@@ -203,6 +203,7 @@ const StyleOptions = ( props ) => {
 										: 'asnp-text-field'
 								}
 								placeholder="0"
+								min="0"
 								value={ props.topLeftRadius }
 								onChange={ ( e ) =>
 									props.onChange(
@@ -227,6 +228,7 @@ const StyleOptions = ( props ) => {
 										: 'asnp-text-field'
 								}
 								placeholder="0"
+								min="0"
 								value={ props.topRightRadius }
 								onChange={ ( e ) =>
 									props.onChange(
@@ -253,6 +255,7 @@ const StyleOptions = ( props ) => {
 										: 'asnp-text-field'
 								}
 								placeholder="0"
+								min="0"
 								value={ props.bottomLeftRadius }
 								onChange={ ( e ) =>
 									props.onChange(
@@ -277,6 +280,7 @@ const StyleOptions = ( props ) => {
 										: 'asnp-text-field'
 								}
 								placeholder="0"
+								min="0"
 								value={ props.bottomRightRadius }
 								onChange={ ( e ) =>
 									props.onChange(
