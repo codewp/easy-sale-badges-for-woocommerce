@@ -1,4 +1,4 @@
-import * as BadgeApi from '@easy-whatsapp/api/badge';
+import * as BadgeApi from '@easy-sale-badges/api/badge';
 
 export const Action = {
 	SET_ITEMS: 'badge/setItems',

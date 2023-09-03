@@ -1,6 +1,6 @@
 <?php
 
-namespace AsanaPlugins\WhatsApp;
+namespace AsanaPlugins\WooCommerce\SaleBadges;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -23,7 +23,7 @@ class Assets {
 				'asnp-wesb-badge',
 				apply_filters( 'asnp_wesb_badge_script', $this->get_url( 'badge/index', 'js' ) ),
 				array( 'jquery' ),
-				ASNP_EWHATSAPP_VERSION,
+				ASNP_WESB_VERSION,
 				true
 			);
 		}
@@ -46,7 +46,7 @@ class Assets {
 	}
 
 	public function get_url( $file, $ext ) {
-		return plugins_url( $this->get_path( $ext ) . $file . '.' . $ext, ASNP_EWHATSAPP_PLUGIN_FILE );
+		return plugins_url( $this->get_path( $ext ) . $file . '.' . $ext, ASNP_WESB_PLUGIN_FILE );
 	}
 
 	protected function get_path( $ext ) {

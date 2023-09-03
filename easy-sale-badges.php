@@ -19,11 +19,11 @@
 
 defined( 'ABSPATH' ) || exit;
 
-use AsanaPlugins\WhatsApp\Plugin;
+use AsanaPlugins\WooCommerce\SaleBadges\Plugin;
 
 // Plugin version.
-if ( ! defined( 'ASNP_EWHATSAPP_VERSION' ) ) {
-	define( 'ASNP_EWHATSAPP_VERSION', '1.2.0' );
+if ( ! defined( 'ASNP_WESB_VERSION' ) ) {
+	define( 'ASNP_WESB_VERSION', '1.2.0' );
 }
 
 /**
@@ -80,12 +80,12 @@ if ( is_readable( $autoloader ) ) {
  * Use this function like you would a global variable, except without needing
  * to declare the global.
  *
- * Example: <?php $plugin = ASNP_EWHATSAPP(); ?>
+ * Example: <?php $plugin = ASNP_WESB(); ?>
  *
  * @since  1.0.0
  * @return object|Plugin The one true Plugin Instance.
  */
-function ASNP_EWHATSAPP() {
+function ASNP_WESB() {
 	return Plugin::instance();
 }
-ASNP_EWHATSAPP()->init();
+ASNP_WESB()->init();

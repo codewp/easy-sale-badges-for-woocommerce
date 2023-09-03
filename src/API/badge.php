@@ -1,10 +1,10 @@
 <?php
 
-namespace AsanaPlugins\WhatsApp\API;
+namespace AsanaPlugins\WooCommerce\SaleBadges\API;
 
-use AsanaPlugins\WhatsApp;
-use AsanaPlugins\WhatsApp\Models\BadgeModel;
-use function AsanaPlugins\WhatsApp\get_plugin;
+use AsanaPlugins\WooCommerce\SaleBadges;
+use AsanaPlugins\WooCommerce\SaleBadges\Models\BadgeModel;
+use function AsanaPlugins\WooCommerce\SaleBadges\get_plugin;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -393,7 +393,7 @@ class Badge extends BaseController {
 				case 'useTimezone':
 				case 'useTimerBadge':
 					if ( isset( $value ) ) {
-						$options[ $key ] = WhatsApp\string_to_bool( $value ) ? 1 : 0;
+						$options[ $key ] = SaleBadges\string_to_bool( $value ) ? 1 : 0;
 					} elseif ( ! $id && isset( $defaults[ $key ] ) ) {
 						$options[ $key ] = $defaults[ $key ];
 					}

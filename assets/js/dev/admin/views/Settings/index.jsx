@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { __ } from '@wordpress/i18n';
 import General from '../../components/Settings/General';
 import WooCommerce from '../../components/Settings/Woocommrece';
-import * as SettingsApi from '@easy-whatsapp/api/settings';
+import * as SettingsApi from '@easy-sale-badges/api/settings';
 import { AppContext } from '../../contexts/App';
 import SinglePage from './../../components/SinglePage';
 

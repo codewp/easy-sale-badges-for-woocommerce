@@ -11,7 +11,7 @@ import Snackbar from './../../components/Snackbar';
 import { BadgesContextProvider } from '../../contexts/Badges';
 import { AppContext } from '../../contexts/App';
 import { defaultSettings } from '../../utils/constants';
-import * as SettingsApi from '@easy-whatsapp/api/settings';
+import * as SettingsApi from '@easy-sale-badges/api/settings';
 
 export default function App() {
 	const location = useLocation();
@@ -43,7 +43,7 @@ export default function App() {
 						href="https://wordpress.org/support/plugin/live-chat-button/reviews/"
 					>
 						<button className="asnp-btn asnp-btn-primary asnp-ml-2 asnp-w-[8rem]">
-							{ __( '5 Star Review', 'asnp-easy-whatsapp' ) }
+							{ __( '5 Star Review', 'asnp-easy-sale-badge' ) }
 						</button>
 					</a>
 					<a
@@ -51,7 +51,7 @@ export default function App() {
 						href="https://wordpress.org/support/plugin/live-chat-button/"
 					>
 						<button className="asnp-btn asnp-btn-primary asnp-ml-2 asnp-w-[8rem]">
-							{ __( 'Need help?', 'asnp-easy-whatsapp' ) }
+							{ __( 'Need help?', 'asnp-easy-sale-badge' ) }
 						</button>
 					</a>
 				</div>
@@ -79,7 +79,6 @@ export default function App() {
 					</NavLink>
 					<a
 						target="_blank"
-						href="https://www.asanaplugins.com/product/whatsapp-chat-wordpress?utm_source=whatsapp-chat-wordpress&utm_campaign=go-pro&utm_medium=link"
 						className="asnp-nav-tab-item asnp-ew-goPro"
 					>
 						{ __( 'Go Pro', 'asnp-easy-sale-badge' ) }

@@ -1,6 +1,6 @@
 <?php
 
-namespace AsanaPlugins\WhatsApp;
+namespace AsanaPlugins\WooCommerce\SaleBadges;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -20,7 +20,7 @@ class Settings {
 	 * @since 1.0.0
 	 */
 	public function __construct() {
-		$this->plugin_settings = get_option( 'asnp_easy_whatsapp_settings', array() );
+		$this->plugin_settings = get_option( 'asnp_easy_sale_badge_settings', array() );
 	}
 
 	/**
@@ -30,7 +30,7 @@ class Settings {
 	 * @return array $plugin_settings
 	 */
 	public function get_settings() {
-		return apply_filters( 'asnp_ewhatsapp_get_settings', $this->plugin_settings );
+		return apply_filters( 'asnp_wesb_get_settings', $this->plugin_settings );
 	}
 
 	/**
@@ -43,8 +43,8 @@ class Settings {
 	 */
 	public function get_setting( $key = '', $default = false ) {
 		$value = isset( $this->plugin_settings[ $key ] ) ? $this->plugin_settings[ $key ] : $default;
-		$value = apply_filters( 'asnp_ewhatsapp_get_setting', $value, $key, $default );
-		return apply_filters( 'asnp_ewhatsapp_get_setting_' . $key, $value, $key, $default );
+		$value = apply_filters( 'asnp_wesb_get_setting', $value, $key, $default );
+		return apply_filters( 'asnp_wesb_get_setting_' . $key, $value, $key, $default );
 	}
 
 	/**
@@ -89,7 +89,7 @@ class Settings {
 	 * @return boolean
 	 */
 	public function update() {
-		return update_option( 'asnp_easy_whatsapp_settings', $this->plugin_settings );
+		return update_option( 'asnp_easy_sale_badge_settings', $this->plugin_settings );
 	}
 
 }

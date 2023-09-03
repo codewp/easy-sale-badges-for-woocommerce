@@ -1,6 +1,6 @@
 <?php
 
-namespace AsanaPlugins\WhatsApp;
+namespace AsanaPlugins\WooCommerce\SaleBadges;
 
 function get_plugin() {
 	return Plugin::instance();
@@ -97,7 +97,7 @@ function register_polyfills() {
 		if ( ! wp_script_is( $handle, 'registered' ) ) {
 			wp_register_script(
 				$handle,
-				plugins_url( 'assets/js/vendor/' . $handle . '.js', ASNP_EWHATSAPP_PLUGIN_FILE ),
+				plugins_url( 'assets/js/vendor/' . $handle . '.js', ASNP_WESB_PLUGIN_FILE ),
 				$value[1],
 				$value[0],
 				true

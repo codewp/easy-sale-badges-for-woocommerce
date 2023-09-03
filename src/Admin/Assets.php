@@ -1,10 +1,10 @@
 <?php
 
-namespace AsanaPlugins\WhatsApp\Admin;
+namespace AsanaPlugins\WooCommerce\SaleBadges\Admin;
 
 defined( 'ABSPATH' ) || exit;
 
-use AsanaPlugins\WhatsApp;
+use AsanaPlugins\WooCommerce\SaleBadges;
 
 class Assets {
 
@@ -16,47 +16,47 @@ class Assets {
 		$screen    = get_current_screen();
 		$screen_id = $screen ? $screen->id : '';
 
-		if ( 'toplevel_page_asnp-whatsapp' === $screen_id ) {
-			WhatsApp\register_polyfills();
+		if ( 'toplevel_page_asnp-easy-sale-badge' === $screen_id ) {
+			SaleBadges\register_polyfills();
 
 			wp_enqueue_style(
-				'asnp-whatsapp-admin',
-				apply_filters( 'asnp_ewhatsapp_whatsapp_admin_style', $this->get_url( 'admin/style', 'css' ) )
+				'asnp-easy-sale-badge-admin',
+				apply_filters( 'asnp_wesb_sale_badge_admin_style', $this->get_url( 'admin/style', 'css' ) )
 			);
 			wp_enqueue_script(
-				'asnp-whatsapp-admin',
-				apply_filters( 'asnp_ewhatsapp_whatsapp_admin_script', $this->get_url( 'admin/admin/index', 'js' ) ),
+				'asnp-easy-sale-badge-admin',
+				apply_filters( 'asnp_wesb_sale_badge_admin_script', $this->get_url( 'admin/admin/index', 'js' ) ),
 				array(
 					'react-dom',
 					'wp-hooks',
 					'wp-i18n',
 					'wp-api-fetch',
 				),
-				ASNP_EWHATSAPP_VERSION,
+				ASNP_WESB_VERSION,
 				true
 			);
 
 			wp_localize_script(
-				'asnp-whatsapp-admin',
+				'asnp-easy-sale-badge-admin',
 				'whatsappData',
 				array(
-					'pluginUrl' => ASNP_EWHATSAPP_PLUGIN_URL,
-					'timezone'  => WhatsApp\get_timezone_string(),
+					'pluginUrl' => ASNP_WESB_PLUGIN_URL,
+					'timezone'  => SaleBadges\get_timezone_string(),
 				)
 			);
 
 			if ( function_exists( 'wp_set_script_translations' ) ) {
 				wp_set_script_translations(
-					'asnp-whatsapp-admin',
+					'asnp-easy-sale-badge-admin',
 					'asnp-easy-sale-badge',
-					apply_filters( 'asnp_ewhatsapp_whatsapp_admin_script_translations', ASNP_EWHATSAPP_ABSPATH . 'languages' )
+					apply_filters( 'asnp_wesb_sale_badge_admin_script_translations', ASNP_WESB_ABSPATH . 'languages' )
 				);
 			}
 		}
 	}
 
 	public function get_url( $file, $ext ) {
-		return plugins_url( $this->get_path( $ext ) . $file . '.' . $ext, ASNP_EWHATSAPP_PLUGIN_FILE );
+		return plugins_url( $this->get_path( $ext ) . $file . '.' . $ext, ASNP_WESB_PLUGIN_FILE );
 	}
 
 	protected function get_path( $ext ) {

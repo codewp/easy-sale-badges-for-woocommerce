@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
-import * as BadgeApi from '@easy-whatsapp/api/badge';
+import * as BadgeApi from '@easy-sale-badges/api/badge';
 import {
 	BadgesContext,
 	fetchItemsIfNeeded,

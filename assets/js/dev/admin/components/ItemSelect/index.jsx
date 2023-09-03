@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AsyncSelect from 'react-select/async';
-import * as ItemsApi from '@easy-whatsapp/api/items';
+import * as ItemsApi from '@easy-sale-badges/api/items';
 
 export default function ItemsSelect( {
 	items,

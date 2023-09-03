@@ -1,10 +1,10 @@
 <?php
 
-namespace AsanaPlugins\WhatsApp\API;
+namespace AsanaPlugins\WooCommerce\SaleBadges\API;
 
 defined( 'ABSPATH' ) || exit;
 
-use AsanaPlugins\WhatsApp\Models\ItemsModel;
+use AsanaPlugins\WooCommerce\SaleBadges\Models\ItemsModel;
 
 class Items extends BaseController {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace AsanaPlugins\WhatsApp\ShortCode;
+namespace AsanaPlugins\WooCommerce\SaleBadges\ShortCode;
 
 defined( 'ABSPATH' ) || exit;
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace AsanaPlugins\WhatsApp\Helpers\Badges;
+namespace AsanaPlugins\WooCommerce\SaleBadges\Helpers\Badges;
 
 defined('ABSPATH') || exit;
 
-use function AsanaPlugins\WhatsApp\get_plugin;
-use function AsanaPlugins\WhatsApp\add_custom_style;
-use function AsanaPlugins\WhatsApp\localize_timer_badge;
+use function AsanaPlugins\WooCommerce\SaleBadges\get_plugin;
+use function AsanaPlugins\WooCommerce\SaleBadges\add_custom_style;
+use function AsanaPlugins\WooCommerce\SaleBadges\localize_timer_badge;
 
 function output_badges( $badges, $hide = false ) {
 	if ( empty( $badges ) ) {

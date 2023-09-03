@@ -1,35 +1,27 @@
 {
-	"name": "asanaplugins/easy-whatsapp",
-	"description": "Whatsapp chat for Wordpress Plugin.",
+	"name": "asanaplugins/easy-sale-badges",
+	"description": "badge chat for Wordpress Plugin.",
 	"homepage": "https://asanaplugins.com/",
 	"type": "wordpress-plugin",
 	"keywords": [
 		"wordpress",
 		"woocommerce",
-		"whatsapp"
+		"badge"
 	],
 	"license": "GPL-3.0-or-later",
 	"prefer-stable": true,
 	"minimum-stability": "dev",
 	"require-dev": {
-		"woocommerce/woocommerce-sniffs": "0.1.0",
-		"phpunit/phpunit": "^7",
-		"wp-phpunit/wp-phpunit": "^6.0",
-		"yoast/phpunit-polyfills": "^1.0"
+		"woocommerce/woocommerce-sniffs": "0.1.0"
 	},
 	"autoload": {
 		"psr-4": {
-			"AsanaPlugins\\WhatsApp\\": "src/"
+			"AsanaPlugins\\WooCommerce\\SaleBadges\\": "src/"
 		},
 		"files": [
 			"src/Helpers.php",
 			"src/Helpers/Badges.php"
 		]
-	},
-	"autoload-dev": {
-		"psr-4": {
-			"AsanaPlugins\\WhatsApp\\Tests\\": "tests/php"
-		}
 	},
 	"scripts": {
 		"phpcs": [

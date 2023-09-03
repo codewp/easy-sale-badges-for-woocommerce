@@ -1,6 +1,6 @@
 <?php
 
-namespace AsanaPlugins\WhatsApp\Models;
+namespace AsanaPlugins\WooCommerce\SaleBadges\Models;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -80,7 +80,7 @@ class BadgeModel extends BaseModel {
 	}
 
 	/**
-	 * Get a collectoin of WhatsApps.
+	 * Get a collectoin of Badges.
 	 *
 	 * @param  array $args
 	 * @return array

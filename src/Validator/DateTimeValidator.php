@@ -1,6 +1,6 @@
 <?php
 
-namespace AsanaPlugins\WhatsApp\Validator;
+namespace AsanaPlugins\WooCommerce\SaleBadges\Validator;
 
 defined( 'ABSPATH' ) || exit;
 

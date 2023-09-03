@@ -1,6 +1,6 @@
 <?php
 
-namespace AsanaPlugins\WhatsApp;
+namespace AsanaPlugins\WooCommerce\SaleBadges;
 
 defined( 'ABSPATH' ) || exit;
 
