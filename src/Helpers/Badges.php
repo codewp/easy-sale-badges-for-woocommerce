@@ -2281,11 +2281,10 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 	 $dynamic_styles = '';
 	 $svgAdv='';
-	 $adv_uniq='';
+	 $adv_uniq=$badge->id;
 
 	 switch ( $badge->badgeAdv ) {
 		 case 'bdgAdvanced1':
-			$adv_uniq='a1';
 			$dynamic_styles .= '.asnp-esb-advBadge-'. $adv_uniq .' {';
 			if ( isset( $badge->badgePositionTop ) ) {
 					$dynamic_styles .= ' inset: ' . $insetProperty . ';';
@@ -2407,7 +2406,6 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			</svg>';
 			break;
 		case 'bdgAdvanced2':
-			$adv_uniq='a2';
 			$dynamic_styles .= '.asnp-esb-advBadge-'. $adv_uniq .' {';
 			if ( isset( $badge->badgePositionTop ) ) {
 					$dynamic_styles .= ' inset: ' . $insetProperty . ';';
@@ -2635,7 +2633,6 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			</svg>';
 			break;
 		case 'bdgAdvanced3':
-			$adv_uniq='a2';
 			$dynamic_styles .= '.asnp-esb-advBadge-'. $adv_uniq .' {';
 			if ( isset( $badge->badgePositionTop ) ) {
 					$dynamic_styles .= ' inset: ' . $insetProperty . ';';
@@ -2759,6 +2756,110 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			<path
 				d="M100.124 170.867C67.7763 170.867 41.4601 139.338 41.4601 100.584C41.4601 61.8289 67.7763 30.3007 100.124 30.3007C132.472 30.3007 158.789 61.8289 158.789 100.584C158.789 139.338 132.472 170.867 100.124 170.867ZM100.124 32.4297C68.7551 32.4297 43.2371 63.0016 43.2371 100.584C43.2371 138.166 68.7551 168.738 100.124 168.738C131.494 168.738 157.012 138.166 157.012 100.584C157.012 63.0016 131.49 32.4297 100.124 32.4297Z"
 				fill="white"
+			/>
+		</svg>';
+			break;
+		case 'bdgAdvanced4':
+			$dynamic_styles .= '.asnp-esb-advBadge-'. $adv_uniq .' {';
+			if ( isset( $badge->badgePositionTop ) ) {
+					$dynamic_styles .= ' inset: ' . $insetProperty . ';';
+			}
+			if ( isset( $badge->opacityImg ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityImg . ';';
+			}
+			if ( isset( $badge->zIndexImg ) ) {
+				$dynamic_styles .= ' z-index: ' . $badge->zIndexImg . ';';
+			}
+			$dynamic_styles .= ' height: 90px;';
+			$dynamic_styles .= ' width: 90px;';
+
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.asnp-esb-advbadgeCont-'. $adv_uniq .' {';
+			$dynamic_styles .= ' height: 90px;';
+
+
+			if ( isset( $badge->textColor ) ) {
+				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
+			}
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.asnp-esb-advbadge1-'. $adv_uniq .' {';
+			$dynamic_styles .= ' position: relative;';
+			$dynamic_styles .= ' letter-spacing: 0.52px;';
+			$dynamic_styles .= ' display: flex;';
+			$dynamic_styles .= ' justify-content: center;';
+			$dynamic_styles .= ' align-items: center;';
+			$dynamic_styles .= ' text-decoration: none;';
+			$dynamic_styles .= ' text-align: center;';
+			$dynamic_styles .= ' font-size: 14px;';
+
+			if ( isset( $badge->opacityImg ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityImg . ';';
+			}
+			if ( isset( $badge->badgePositionY ) ) {
+				$dynamic_styles .= ' top: ' . ( $badge->badgePositionY == 'bottom' ? '37px' : '30px' ) . ';';
+			}
+		
+
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.asnp-esb-advbadge2-'. $adv_uniq .' {';
+			$dynamic_styles .= ' display: block;';
+			$dynamic_styles .= ' padding-left: 28px;';
+			$dynamic_styles .= ' z-index: 1;';
+			$dynamic_styles .= ' height: 30px;';
+			$dynamic_styles .= ' margin-top:5px;';
+			$dynamic_styles .= ' line-height: 13px;';
+			$dynamic_styles .= ' text-transform: uppercase;';
+
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.asnp-esb-advbadge3-'. $adv_uniq .' {';
+			$dynamic_styles .= ' font-weight: 700;';
+			$dynamic_styles .= ' transform: ' . $horizAndvert . ';';
+
+			if ( isset( $badge->fontSizeText ) ) {
+				$dynamic_styles .= ' font-size: ' . $badge->fontSizeText . 'px;';
+			}
+			$dynamic_styles .= '}';
+
+			$svgAdv.='
+			<svg
+			class="asnp-esb-svg3"
+			width="140"
+			height="200"
+			viewBox="0 0 260 220"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M242.24 136.34C203.03 130.76 163.52 127.97 124.02 127.97C84.52 127.97 45.01 130.76 5.79999 136.34C9.19999 128.92 12.72 121.52 16.34 114.14C11 107.89 5.55 101.7 0 95.55C41.13 89.7 82.58 86.77 124.02 86.77C165.47 86.77 206.91 89.7 248.05 95.55C242.5 101.7 237.05 107.89 231.7 114.14C235.32 121.52 238.84 128.92 242.24 136.34Z"
+				fill="' . $badge->secondBg . '" />
+			/>
+			<path
+				d="M221.02 118.97C156.57 111.6 91.48 111.6 27.02 118.97C34.24 123.02 41.35 127.16 48.36 131.39C98.7 126.83 149.35 126.83 199.69 131.39C206.69 127.16 213.8 123.02 221.02 118.97Z"
+				fill="' . $badge->secondBg . '" />
+			/>
+			<path
+				d="M124.02 185.67C116.14 185.67 109.71 175.37 102.43 173.42C94.91 171.4 84.2 177.03 77.61 173.22C70.93 169.35 70.49 157.22 65.07 151.79C59.64 146.36 47.52 145.92 43.65 139.24C39.83 132.65 45.46 121.94 43.44 114.42C41.49 107.14 31.19 100.72 31.19 92.83C31.19 84.95 41.49 78.52 43.44 71.24C45.46 63.72 39.83 53.01 43.65 46.42C47.52 39.74 59.65 39.3 65.07 33.88C70.49 28.45 70.93 16.33 77.61 12.45C84.2 8.63 94.91 14.26 102.43 12.25C109.71 10.3 116.13 0 124.02 0C131.91 0 138.33 10.3 145.61 12.25C153.13 14.27 163.84 8.64 170.43 12.46C177.11 16.33 177.55 28.46 182.98 33.89C188.41 39.32 200.53 39.75 204.4 46.44C208.22 53.03 202.59 63.74 204.61 71.26C206.56 78.54 216.86 84.96 216.86 92.85C216.86 100.74 206.56 107.16 204.61 114.44C202.59 121.96 208.22 132.67 204.4 139.26C200.53 145.94 188.4 146.38 182.97 151.81C177.55 157.24 177.11 169.36 170.42 173.23C163.83 177.05 153.12 171.42 145.6 173.43C138.33 175.37 131.9 185.67 124.02 185.67Z"
+				fill="' . $badge->mainBg . '" />
+			/>
+			<path
+				d="M35.24 92.84C35.24 85.3 45.23 79.18 47.09 72.22C49.01 65.03 43.47 54.74 47.12 48.44C50.82 42.05 62.53 41.73 67.72 36.54C72.9 31.35 73.23 19.64 79.62 15.94C85.92 12.3 96.21 17.83 103.4 15.91C110.35 14.05 116.48 4.06 124.01 4.06C131.55 4.06 137.67 14.06 144.63 15.91C151.83 17.83 162.12 12.29 168.42 15.94C174.81 19.64 175.13 31.35 180.32 36.54C185.5 41.72 197.22 42.05 200.92 48.44C204.56 54.74 199.03 65.03 200.95 72.22C202.81 79.17 212.8 85.3 212.8 92.84C212.8 100.38 202.8 106.5 200.95 113.46C199.03 120.66 204.57 130.94 200.92 137.24C197.22 143.63 185.51 143.95 180.32 149.14C175.14 154.33 174.81 166.04 168.42 169.74C162.12 173.38 151.83 167.84 144.64 169.77C137.69 171.63 131.56 181.62 124.02 181.62C116.48 181.62 110.36 171.62 103.41 169.77C96.21 167.85 85.92 173.38 79.62 169.74C73.23 166.04 72.91 154.33 67.72 149.14C62.53 143.95 50.82 143.63 47.12 137.24C43.48 130.94 49.02 120.65 47.09 113.46C45.23 106.5 35.24 100.38 35.24 92.84Z"
+				fill="' . $badge->mainBg . '" />
+			/>
+			<path
+				d="M49.6 92.84C49.6 51.74 82.92 18.43 124.01 18.43C165.11 18.43 198.43 51.75 198.43 92.84C198.43 133.94 165.11 167.26 124.01 167.26C82.92 167.25 49.6 133.94 49.6 92.84Z"
+				fill="white"
+			/>
+			<path
+				d="M55.85 92.84C55.85 55.19 86.37 24.67 124.02 24.67C161.68 24.67 192.19 55.19 192.19 92.84C192.19 130.49 161.68 161.01 124.02 161.01C86.37 161.01 55.85 130.49 55.85 92.84Z"
+				fill="' . $badge->mainBg . '" />
+			/>
+			<path
+				d="M221.02 118.97C156.57 111.6 91.48 111.6 27.02 118.97C25.46 105.33 23.9 91.68 22.34 78.04C89.91 70.31 158.13 70.31 225.71 78.04C224.14 91.68 222.58 105.32 221.02 118.97Z"
+				fill="' . $badge->secondBg . '" />
 			/>
 		</svg>';
 			break;
