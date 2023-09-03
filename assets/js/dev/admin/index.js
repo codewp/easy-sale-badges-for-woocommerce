@@ -6,6 +6,7 @@ import App from './views/App';
 // Styles.
 import './assets/css/tailwind.scss';
 import './assets/css/badge.scss';
+import 'tippy.js/dist/tippy.css';
 
 domReady( function () {
 	render(

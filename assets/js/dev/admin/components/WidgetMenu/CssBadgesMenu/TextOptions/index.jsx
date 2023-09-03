@@ -45,7 +45,7 @@ const TextOptions = ( props ) => {
 					interactive={ true }
 					placement={ 'bottom' }
 					content={
-						<div className="asnp-bg-gray-300 asnp-w-[22rem] asnp-h-[39rem] asnp-rounded-lg asnp-px-6 asnp-py-6">
+						<div className="asnp-p-4">
 							<ColorPicker
 								value={ props.textColor }
 								onChange={ ( color ) => {
