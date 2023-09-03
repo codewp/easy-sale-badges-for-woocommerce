@@ -2378,7 +2378,6 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '.asnp-esb-advbadge3-'. $adv_uniq .' {';
 			$dynamic_styles .= ' font-weight: 700;';
-			$dynamic_styles .= ' transform: ' . $horizAndvert . ';';
 
 			if ( isset( $badge->fontSizeText ) ) {
 				$dynamic_styles .= ' font-size: ' . $badge->fontSizeText . 'px;';
@@ -2498,7 +2497,6 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '.asnp-esb-advbadge3-'. $adv_uniq .' {';
 			$dynamic_styles .= ' font-weight: 700;';
-			$dynamic_styles .= ' transform: ' . $horizAndvert . ';';
 
 			if ( isset( $badge->fontSizeText ) ) {
 				$dynamic_styles .= ' font-size: ' . $badge->fontSizeText . 'px;';
@@ -2693,7 +2691,6 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '.asnp-esb-advbadge3-'. $adv_uniq .' {';
 			$dynamic_styles .= ' font-weight: 700;';
-			$dynamic_styles .= ' transform: ' . $horizAndvert . ';';
 
 			if ( isset( $badge->fontSizeText ) ) {
 				$dynamic_styles .= ' font-size: ' . $badge->fontSizeText . 'px;';
@@ -2817,7 +2814,6 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 			$dynamic_styles .= '.asnp-esb-advbadge3-'. $adv_uniq .' {';
 			$dynamic_styles .= ' font-weight: 700;';
-			$dynamic_styles .= ' transform: ' . $horizAndvert . ';';
 
 			if ( isset( $badge->fontSizeText ) ) {
 				$dynamic_styles .= ' font-size: ' . $badge->fontSizeText . 'px;';

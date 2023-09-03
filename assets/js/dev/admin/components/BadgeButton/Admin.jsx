@@ -245,7 +245,6 @@ const Admin = ( {
 											<SpanTwo>
 												<div
 													style={ {
-														transform: `${ horizAndvert }`,
 														fontSize: `${ badge.fontSizeText }px`,
 														fontWeight: '700',
 													} }
