@@ -42,6 +42,7 @@ class Assets {
 				array(
 					'pluginUrl' => ASNP_WESB_PLUGIN_URL,
 					'timezone'  => SaleBadges\get_timezone_string(),
+					'now'       => current_time( 'timestamp' ),
 				)
 			);
 
