@@ -426,7 +426,7 @@ export default function Badge() {
 								updateAvailability={ updateAvailability }
 							/>
 						</div>
-						<div className="asnp-w-full asnp-bg-gray-200 asnp-flex">
+						<div className="asnp-w-full asnp-bg-white asnp-flex">
 							<BadgeButton
 								IMAGES_URL={ IMAGES_URL }
 								badge={ badge }
