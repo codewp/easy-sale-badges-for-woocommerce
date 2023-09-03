@@ -1,5 +1,5 @@
 <?php
-namespace AsanaPlugins\WhatsApp\Validator;
+namespace AsanaPlugins\WooCommerce\SaleBadges\Validator;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -45,7 +45,7 @@ abstract class BaseProductValidator {
 		}
 
 		return apply_filters(
-			'asnp_ewhatsapp_product_validator_is_valid_' . $item['type'],
+			'asnp_wesb_product_validator_is_valid_' . $item['type'],
 			$is_valid,
 			$item,
 			$product

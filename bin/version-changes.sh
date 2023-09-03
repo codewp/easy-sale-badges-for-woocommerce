@@ -4,13 +4,13 @@ IS_PRE_RELEASE=${IS_PRE_RELEASE:=false}
 
 # replace all instances of $VID:$ with the release version but only when not pre-release.
 if [ $IS_PRE_RELEASE = false ]; then
-	find ./src easy-whatsapp.php -name "*.php" -print0 | xargs -0 perl -i -pe 's/\$VID:\$/'${VERSION}'/g'
+	find ./src easy-sale-badges.php -name "*.php" -print0 | xargs -0 perl -i -pe 's/\$VID:\$/'${VERSION}'/g'
 	# Update version number in readme.txt but only if not pre-release
 	perl -i -pe 's/Stable tag:*.+/Stable tag: '${VERSION}'/' readme.txt
 fi
 
 # Update version in main plugin file
-perl -i -pe 's/Version:*.+/Version: '${VERSION}'/' easy-whatsapp.php
+perl -i -pe 's/Version:*.+/Version: '${VERSION}'/' easy-sale-badges.php
 
 # Update version in package.json
 perl -i -pe 's/"version":*.+/"version": "'${VERSION}'",/' package.json

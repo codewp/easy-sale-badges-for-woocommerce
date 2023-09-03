@@ -1,12 +1,12 @@
 <?php
 
-namespace AsanaPlugins\WhatsApp;
+namespace AsanaPlugins\WooCommerce\SaleBadges;
 
 defined( 'ABSPATH' ) || exit;
 
-use AsanaPlugins\WhatsApp\Validator\ProductValidator;
-use AsanaPlugins\WhatsApp\Validator\DateTimeValidator;
-use function AsanaPlugins\WhatsApp\Helpers\Badges\output_badges;
+use AsanaPlugins\WooCommerce\SaleBadges\Validator\ProductValidator;
+use AsanaPlugins\WooCommerce\SaleBadges\Validator\DateTimeValidator;
+use function AsanaPlugins\WooCommerce\SaleBadges\Helpers\Badges\output_badges;
 
 class Badges {
 

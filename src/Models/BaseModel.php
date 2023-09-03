@@ -1,5 +1,5 @@
 <?php
-namespace AsanaPlugins\WhatsApp\Models;
+namespace AsanaPlugins\WooCommerce\SaleBadges\Models;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -130,7 +130,7 @@ abstract class BaseModel {
 		// Set default values
 		$data = wp_parse_args( $data, $this->get_column_defaults() );
 
-		do_action( 'asnp_ewhatsapp_pre_insert_' . $type, $data );
+		do_action( 'asnp_wesb_pre_insert_' . $type, $data );
 
 		// Initialise column format array
 		$column_formats = $this->get_columns();
@@ -144,7 +144,7 @@ abstract class BaseModel {
 
 		$wpdb->insert( $this->table_name, $data, $column_formats );
 
-		do_action( 'asnp_ewhatsapp_post_insert_' . $type, $wpdb->insert_id, $data );
+		do_action( 'asnp_wesb_post_insert_' . $type, $wpdb->insert_id, $data );
 
 		return (int) $wpdb->insert_id;
 	}

@@ -5,13 +5,13 @@ import App from './views/App';
 
 // Styles.
 import './assets/css/tailwind.scss';
-import './assets/css/whatsapp.scss';
+import './assets/css/badge.scss';
 
 domReady( function () {
 	render(
 		<Router>
 			<App />
 		</Router>,
-		document.getElementById( 'asnp-whatsapp' )
+		document.getElementById( 'asnp-easy-sale-badges' )
 	);
 } );

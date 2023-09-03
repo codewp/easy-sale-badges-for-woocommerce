@@ -5,7 +5,7 @@
  * @package WooCommerce/Blocks
  */
 
-namespace AsanaPlugins\WhatsApp\Registry;
+namespace AsanaPlugins\WooCommerce\SaleBadges\Registry;
 
 /**
  * Definition for the FactoryType dependency type.

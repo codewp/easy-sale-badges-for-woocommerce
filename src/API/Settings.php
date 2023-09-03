@@ -1,6 +1,6 @@
 <?php
 
-namespace AsanaPlugins\WhatsApp\API;
+namespace AsanaPlugins\WooCommerce\SaleBadges\API;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -36,7 +36,7 @@ class Settings extends BaseController {
 	public function get_settings() {
 		return new \WP_REST_Response(
 			array(
-				'settings' => get_option( 'asnp_easy_whatsapp_settings', array() ),
+				'settings' => get_option( 'asnp_sale_badge_settings', array() ),
 			)
 		);
 	}
@@ -49,7 +49,7 @@ class Settings extends BaseController {
 	 */
 	public function save( $request ) {
 		if ( ! $request ) {
-			return new \WP_Error( 'asnp_ewhatsapp_settings_required', __( 'Settings data is required.', 'asnp-easy-sale-badge' ), array( 'status' => rest_authorization_required_code() ) );
+			return new \WP_Error( 'asnp_wesb_settings_required', __( 'Settings data is required.', 'asnp-easy-sale-badge' ), array( 'status' => rest_authorization_required_code() ) );
 		}
 
 		$data = [];
@@ -78,14 +78,14 @@ class Settings extends BaseController {
 		}
 
 		if ( empty( $data ) ) {
-			return new \WP_Error( 'asnp_ewhatsapp_settings_required', __( 'Settings data is required.', 'asnp-easy-sale-badge' ), array( 'status' => rest_authorization_required_code() ) );
+			return new \WP_Error( 'asnp_wesb_settings_required', __( 'Settings data is required.', 'asnp-easy-sale-badge' ), array( 'status' => rest_authorization_required_code() ) );
 		}
 
-		$data = apply_filters( 'asnp_ewhatsapp_settings_save', $data, $request );
+		$data = apply_filters( 'asnp_wesb_settings_save', $data, $request );
 
-		update_option( 'asnp_easy_whatsapp_settings', $data );
+		update_option( 'asnp_easy_sale_badge_settings', $data );
 
-		do_action( 'asnp_ewhatsapp_settings_saved', $data, $request );
+		do_action( 'asnp_wesb_settings_saved', $data, $request );
 
 		return new \WP_REST_Response(
 			array(

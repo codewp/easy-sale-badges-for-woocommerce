@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
-import * as BadgeApi from '@easy-whatsapp/api/badge';
+import * as BadgeApi from '@easy-sale-badges/api/badge';
 import Menu from '../../components/WidgetMenu/menu/Menu';
 import { BadgesContext, Action } from '../../contexts/Badges';
 import Toggle from '../../components/Toggle';
@@ -317,7 +317,7 @@ export default function Badge() {
 			} else {
 				setMessage( {
 					message: __(
-						'Error occurred on saving the whatsapp.',
+						'Error occurred on saving the Badge.',
 						'asnp-easy-sale-badge'
 					),
 					type: 'error',

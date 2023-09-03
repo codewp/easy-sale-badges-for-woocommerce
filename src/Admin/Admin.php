@@ -1,11 +1,11 @@
 <?php
 
-namespace AsanaPlugins\WhatsApp\Admin;
+namespace AsanaPlugins\WooCommerce\SaleBadges\Admin;
 
 defined( 'ABSPATH' ) || exit;
 
-use AsanaPlugins\WhatsApp\Registry\Container;
-use AsanaPlugins\WhatsApp;
+use AsanaPlugins\WooCommerce\SaleBadges\Registry\Container;
+use AsanaPlugins\WooCommerce\SaleBadges;
 
 class Admin {
 
@@ -49,11 +49,11 @@ class Admin {
 	 * @return array  $links    Plugin default links and specific links.
 	 */
 	public function plugin_row_meta_links( $links, $file ) {
-		if ( false === strpos( $file, 'easy-whatsapp.php' ) ) {
+		if ( false === strpos( $file, 'easy-sale-badges.php' ) ) {
 			return $links;
 		}
 
-		if ( WhatsApp\is_pro_active() ) {
+		if ( SaleBadges\is_pro_active() ) {
 			return $links;
 		}
 

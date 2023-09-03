@@ -22,9 +22,9 @@ const externals = {
 };
 
 const aliases = {
-	'@easy-whatsapp/api': path.resolve( __dirname, 'assets/js/dev/api' ),
-	'@easy-whatsapp/base': path.resolve( __dirname, 'assets/js/dev/base' ),
-	'@easy-whatsapp/base-components': path.resolve(
+	'@easy-sale-badges/api': path.resolve( __dirname, 'assets/js/dev/api' ),
+	'@easy-sale-badges/base': path.resolve( __dirname, 'assets/js/dev/base' ),
+	'@easy-sale-badges/base-components': path.resolve(
 		__dirname,
 		'assets/js/dev/base/components'
 	),

@@ -1,10 +1,10 @@
 <?php
 
-namespace AsanaPlugins\WhatsApp\WooCommerce;
+namespace AsanaPlugins\WooCommerce\SaleBadges\WooCommerce;
 
 defined( 'ABSPATH' ) || exit;
 
-use AsanaPlugins\WhatsApp;
+use AsanaPlugins\WooCommerce\SaleBadges;
 
 abstract class BaseWooCommerceHooks {
 
@@ -18,7 +18,7 @@ abstract class BaseWooCommerceHooks {
 			return;
 		}
 
-		$whatsapp = WhatsApp\get_woocommerce_product_active_whatsapp( $product );
+		$whatsapp = SaleBadges\get_woocommerce_product_active_whatsapp( $product );
 		if ( ! $whatsapp || empty( $whatsapp->id ) ) {
 			return;
 		}
@@ -27,7 +27,7 @@ abstract class BaseWooCommerceHooks {
 	}
 
 	public static function position_hooks() {
-		$position = WhatsApp\get_plugin()->settings->get_setting( 'woocommerceBtnPosition', 'after_add_to_cart_button' );
+		$position = SaleBadges\get_plugin()->settings->get_setting( 'woocommerceBtnPosition', 'after_add_to_cart_button' );
 		if ( 'css_selector' === $position ) {
 			return;
 		}

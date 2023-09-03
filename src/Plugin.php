@@ -1,12 +1,12 @@
 <?php
 
-namespace AsanaPlugins\WhatsApp;
+namespace AsanaPlugins\WooCommerce\SaleBadges;
 
-use AsanaPlugins\WhatsApp\Registry\Container;
-use AsanaPlugins\WhatsApp\Admin\Admin;
-use AsanaPlugins\WhatsApp\API\RestApi;
-use AsanaPlugins\WhatsApp\Models\BadgeModel;
-use AsanaPlugins\WhatsApp\ShortCode\BadgeShortCode;
+use AsanaPlugins\WooCommerce\SaleBadges\Registry\Container;
+use AsanaPlugins\WooCommerce\SaleBadges\Admin\Admin;
+use AsanaPlugins\WooCommerce\SaleBadges\API\RestApi;
+use AsanaPlugins\WooCommerce\SaleBadges\Models\BadgeModel;
+use AsanaPlugins\WooCommerce\SaleBadges\ShortCode\BadgeShortCode;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -49,11 +49,11 @@ final class Plugin {
 	public function init() {
 		$this->define_constants();
 
-		$this->plugin_name = 'easy-whatsapp';
-		$this->version     = ASNP_EWHATSAPP_VERSION;
+		$this->plugin_name = 'easy-sale-badges';
+		$this->version     = ASNP_WESB_VERSION;
 
-		register_activation_hook( ASNP_EWHATSAPP_PLUGIN_FILE, array( $this, 'on_activation' ) );
-		register_deactivation_hook( ASNP_EWHATSAPP_PLUGIN_FILE, array( $this, 'on_deactivation' ) );
+		register_activation_hook( ASNP_WESB_PLUGIN_FILE, array( $this, 'on_activation' ) );
+		register_deactivation_hook( ASNP_WESB_PLUGIN_FILE, array( $this, 'on_deactivation' ) );
 		if ( did_action( 'plugins_loaded' ) ) {
 			$this->on_plugins_loaded();
 		} else {
@@ -97,9 +97,9 @@ final class Plugin {
 	}
 
 	private function define_constants() {
-		$this->define( 'ASNP_EWHATSAPP_ABSPATH', dirname( __DIR__ ) . '/' );
-		$this->define( 'ASNP_EWHATSAPP_PLUGIN_URL', plugin_dir_url( dirname( __FILE__ ) ) );
-		$this->define( 'ASNP_EWHATSAPP_PLUGIN_FILE', ASNP_EWHATSAPP_ABSPATH . 'easy-whatsapp.php' );
+		$this->define( 'ASNP_WESB_ABSPATH', dirname( __DIR__ ) . '/' );
+		$this->define( 'ASNP_WESB_PLUGIN_URL', plugin_dir_url( dirname( __FILE__ ) ) );
+		$this->define( 'ASNP_WESB_PLUGIN_FILE', ASNP_WESB_ABSPATH . 'easy-sale-badges.php' );
 	}
 
 	/**
@@ -211,7 +211,7 @@ final class Plugin {
 	 * Deactivates this plugin.
 	 */
 	public function deactivate_self() {
-		deactivate_plugins( plugin_basename( ASNP_EWHATSAPP_PLUGIN_FILE ) );
+		deactivate_plugins( plugin_basename( ASNP_WESB_PLUGIN_FILE ) );
 		unset( $_GET['activate'] ); // phpcs:ignore CSRF ok.
 	}
 
@@ -266,7 +266,7 @@ final class Plugin {
 	}
 
 	public function is_pro_active() {
-		return defined( 'ASNP_EWHATSAPP_PRO_VERSION' );
+		return defined( 'ASNP_WESB_PRO_VERSION' );
 	}
 
 	/**

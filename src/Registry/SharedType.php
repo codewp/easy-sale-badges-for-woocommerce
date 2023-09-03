@@ -5,7 +5,7 @@
  * @package WooCommerce\Blocks
  */
 
-namespace AsanaPlugins\WhatsApp\Registry;
+namespace AsanaPlugins\WooCommerce\SaleBadges\Registry;
 
 /**
  * A definition for the SharedType dependency type.

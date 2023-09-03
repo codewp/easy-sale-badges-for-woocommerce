@@ -1,10 +1,10 @@
 <?php
 
-namespace AsanaPlugins\WhatsApp\Models;
+namespace AsanaPlugins\WooCommerce\SaleBadges\Models;
 
 defined( 'ABSPATH' ) || exit;
 
-use AsanaPlugins\WhatsApp;
+use AsanaPlugins\WooCommerce\SaleBadges;
 
 class ItemsModel {
 
@@ -54,7 +54,7 @@ class ItemsModel {
 				$product = wc_get_product( $product );
 			}
 
-			if ( ! WhatsApp\wc_products_array_filter_readable( $product ) ) {
+			if ( ! SaleBadges\wc_products_array_filter_readable( $product ) ) {
 				continue;
 			}
 
@@ -113,7 +113,7 @@ class ItemsModel {
 		foreach ( $terms as $category ) {
 			$categories[] = (object) array(
 				'value' => $category->term_id,
-				'label' => rtrim( WhatsApp\get_term_hierarchy_name( $category->term_id, 'product_cat', $args['separator'], $args['nicename'] ), $args['separator'] ),
+				'label' => rtrim( SaleBadges\get_term_hierarchy_name( $category->term_id, 'product_cat', $args['separator'], $args['nicename'] ), $args['separator'] ),
 				'slug'  => $category->slug,
 				'name'  => $category->name,
 			);
