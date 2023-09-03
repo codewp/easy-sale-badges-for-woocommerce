@@ -4,8 +4,8 @@ namespace AsanaPlugins\WooCommerce\SaleBadges\Validator;
 
 defined( 'ABSPATH' ) || exit;
 
-if ( class_exists( '\AsanaPlugins\WhatsAppPro\Validator\ProductValidatorPro' ) ) {
-	class ProductValidator extends \AsanaPlugins\WhatsAppPro\Validator\ProductValidatorPro {}
+if ( class_exists( '\AsanaPlugins\WooCommerce\SaleBadgesPro\Validator\ProductValidatorPro' ) ) {
+	class ProductValidator extends \AsanaPlugins\WooCommerce\SaleBadgesPro\Validator\ProductValidatorPro {}
 } else {
 	class ProductValidator extends BaseProductValidator {}
 }

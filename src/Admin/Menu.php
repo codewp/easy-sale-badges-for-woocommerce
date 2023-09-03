@@ -24,7 +24,7 @@ class Menu {
 	}
 
 	public function menus() {
-		$this->menus['whatsapp'] = add_menu_page(
+		$this->menus['badges'] = add_menu_page(
 			__( 'Product Label', 'asnp-easy-sale-badge' ),
 			__( 'Product Label', 'asnp-easy-sale-badge' ),
 			apply_filters( 'asnp_wesb_sale_badge_menu_capability', 'manage_options' ),
