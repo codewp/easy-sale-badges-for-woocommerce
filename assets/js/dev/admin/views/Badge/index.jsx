@@ -89,7 +89,7 @@ export default function Badge() {
 	const params = useParams();
 	const [ badge, setBadge ] = useState( { ...defaultBadge } );
 	const { getItem, dispatch } = useContext( BadgesContext );
-	const { setLoading, setMessage, settings } = useContext( AppContext );
+	const { setLoading, setMessage } = useContext( AppContext );
 	const [ badgeImageFile, setBadgeImageFile ] = useState( null );
 
 	console.log( badge );

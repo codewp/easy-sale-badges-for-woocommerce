@@ -37,6 +37,24 @@ export default function App() {
 	return (
 		<div className="asnp-app">
 			<div className="asnp-bg-white">
+				<div className="asnp-float-right asnp-pt-3 asnp-pr-6">
+					<a
+						target="_blank"
+						href="https://wordpress.org/support/plugin/live-chat-button/reviews/"
+					>
+						<button className="asnp-btn asnp-btn-primary asnp-ml-2 asnp-w-[8rem]">
+							{ __( '5 Star Review', 'asnp-easy-whatsapp' ) }
+						</button>
+					</a>
+					<a
+						target="_blank"
+						href="https://wordpress.org/support/plugin/live-chat-button/"
+					>
+						<button className="asnp-btn asnp-btn-primary asnp-ml-2 asnp-w-[8rem]">
+							{ __( 'Need help?', 'asnp-easy-whatsapp' ) }
+						</button>
+					</a>
+				</div>
 				<nav className="asnp-flex asnp-flex-col sm:asnp-flex-row">
 					<NavLink
 						to="/"
@@ -78,41 +96,35 @@ export default function App() {
 					setSettings,
 				} }
 			>
-					<BadgesContextProvider>
-						<Loading loading={ loading } />
-						<Snackbar
-							message={ message }
-							setMessage={ setMessage }
-						/>
-						<TransitionGroup component={ null }>
-							<CSSTransition
-								key={ location.pathname }
-								classNames="asnp-ew-fade"
-								timeout={ 500 }
-							>
-								<Routes location={ location }>
-									<Route path="/" element={ <Content /> }>
-										<Route
-											index
-											element={ <Badges /> }
-										/>
-										<Route
-											path="badge"
-											element={ <Badges /> }
-										/>
-										<Route
-											path="badge/:id"
-											element={ <Badge /> }
-										/>
-										<Route
-											path="settings"
-											element={ <Settings /> }
-										/>
-									</Route>
-								</Routes>
-							</CSSTransition>
-						</TransitionGroup>
-					</BadgesContextProvider>
+				<BadgesContextProvider>
+					<Loading loading={ loading } />
+					<Snackbar message={ message } setMessage={ setMessage } />
+					<TransitionGroup component={ null }>
+						<CSSTransition
+							key={ location.pathname }
+							classNames="asnp-ew-fade"
+							timeout={ 500 }
+						>
+							<Routes location={ location }>
+								<Route path="/" element={ <Content /> }>
+									<Route index element={ <Badges /> } />
+									<Route
+										path="badge"
+										element={ <Badges /> }
+									/>
+									<Route
+										path="badge/:id"
+										element={ <Badge /> }
+									/>
+									<Route
+										path="settings"
+										element={ <Settings /> }
+									/>
+								</Route>
+							</Routes>
+						</CSSTransition>
+					</TransitionGroup>
+				</BadgesContextProvider>
 			</AppContext.Provider>
 		</div>
 	);
