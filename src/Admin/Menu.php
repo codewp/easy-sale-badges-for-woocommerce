@@ -28,7 +28,7 @@ class Menu {
 			__( 'Product Label', 'asnp-easy-sale-badge' ),
 			__( 'Product Label', 'asnp-easy-sale-badge' ),
 			apply_filters( 'asnp_wesb_sale_badge_menu_capability', 'manage_options' ),
-			'asnp-easy-sale-badge',
+			'asnp-easy-sale-badges',
 			array( $this, 'create_menu' ),
 			ASNP_WESB_PLUGIN_URL . 'assets/images/menu-icon.svg'
 		);
