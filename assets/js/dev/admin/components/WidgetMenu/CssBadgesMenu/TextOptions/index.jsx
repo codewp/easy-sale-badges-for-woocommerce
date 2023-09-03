@@ -124,9 +124,6 @@ const TextOptions = ( props ) => {
 					</div>
 				</label>
 			</div>
-			<div className="asnp-flex asnp-mt-[1rem] asnp-w-full">
-				
-			</div>
 		</div>
 	);
 };
