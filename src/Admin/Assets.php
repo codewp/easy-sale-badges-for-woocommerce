@@ -16,7 +16,11 @@ class Assets {
 		$screen    = get_current_screen();
 		$screen_id = $screen ? $screen->id : '';
 
+<<<<<<< HEAD
 		if ( 'toplevel_page_asnp-easy-sale-badge' === $screen_id ) {
+=======
+		if ( 'toplevel_page_asnp-easy-sale-badges' === $screen_id ) {
+>>>>>>> a9e1e7eb70215b64ef2abed951b8f4d81981b050
 			SaleBadges\register_polyfills();
 
 			wp_enqueue_style(
