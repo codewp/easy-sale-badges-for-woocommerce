@@ -16,15 +16,15 @@ class Assets {
 		$screen    = get_current_screen();
 		$screen_id = $screen ? $screen->id : '';
 
-		if ( 'toplevel_page_asnp-sale-badge' === $screen_id ) {
+		if ( 'toplevel_page_asnp-easy-sale-badge' === $screen_id ) {
 			SaleBadges\register_polyfills();
 
 			wp_enqueue_style(
-				'asnp-sale-badge-admin',
+				'asnp-easy-sale-badge-admin',
 				apply_filters( 'asnp_wesb_sale_badge_admin_style', $this->get_url( 'admin/style', 'css' ) )
 			);
 			wp_enqueue_script(
-				'asnp-sale-badge-admin',
+				'asnp-easy-sale-badge-admin',
 				apply_filters( 'asnp_wesb_sale_badge_admin_script', $this->get_url( 'admin/admin/index', 'js' ) ),
 				array(
 					'react-dom',
@@ -37,7 +37,7 @@ class Assets {
 			);
 
 			wp_localize_script(
-				'asnp-sale-badge-admin',
+				'asnp-easy-sale-badge-admin',
 				'whatsappData',
 				array(
 					'pluginUrl' => ASNP_WESB_PLUGIN_URL,
@@ -47,7 +47,7 @@ class Assets {
 
 			if ( function_exists( 'wp_set_script_translations' ) ) {
 				wp_set_script_translations(
-					'asnp-sale-badge-admin',
+					'asnp-easy-sale-badge-admin',
 					'asnp-easy-sale-badge',
 					apply_filters( 'asnp_wesb_sale_badge_admin_script_translations', ASNP_WESB_ABSPATH . 'languages' )
 				);
