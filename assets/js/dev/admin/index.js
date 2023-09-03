@@ -12,6 +12,6 @@ domReady( function () {
 		<Router>
 			<App />
 		</Router>,
-		document.getElementById( 'asnp-easy-sale-badges' )
+		document.getElementById( 'asnp-easy-sale-badge' )
 	);
 } );
