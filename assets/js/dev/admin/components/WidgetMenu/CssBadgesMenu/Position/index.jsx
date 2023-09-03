@@ -124,10 +124,10 @@ const Position = ( props ) => {
 			</div>
 			<div className="asnp-flex asnp-mt-3 asnp-mb-8">
 				<label>
-					<span className="asnp-field-title asnp-ml-4">
+					<span className="asnp-field-title asnp-ml-6">
 						{ __( 'Top', 'asnp-easy-sale-badge' ) }
 					</span>
-					<div className="asnp-w-[10rem] asnp-ml-4">
+					<div className="asnp-w-[10rem] asnp-ml-6">
 						<input
 							disabled={ disablePositionTop }
 							type="number"
@@ -150,10 +150,10 @@ const Position = ( props ) => {
 					</div>
 				</label>
 				<label>
-					<span className="asnp-field-title asnp-ml-4">
+					<span className="asnp-field-title asnp-ml-6">
 						{ __( 'Bottom', 'asnp-easy-sale-badge' ) }
 					</span>
-					<div className="asnp-w-[10rem] asnp-ml-4">
+					<div className="asnp-w-[10rem] asnp-ml-6">
 						<input
 							disabled={ disablePositionButtom }
 							type="number"
@@ -176,10 +176,10 @@ const Position = ( props ) => {
 					</div>
 				</label>
 				<label>
-					<span className="asnp-field-title asnp-ml-4">
+					<span className="asnp-field-title asnp-ml-6">
 						{ __( 'Left', 'asnp-easy-sale-badge' ) }
 					</span>
-					<div className="asnp-w-[10rem] asnp-ml-4">
+					<div className="asnp-w-[10rem] asnp-ml-6">
 						<input
 							disabled={ disablePositionLeft }
 							type="number"
@@ -202,10 +202,10 @@ const Position = ( props ) => {
 					</div>
 				</label>
 				<label>
-					<span className="asnp-field-title asnp-ml-4">
+					<span className="asnp-field-title asnp-ml-6">
 						{ __( 'Right', 'asnp-easy-sale-badge' ) }
 					</span>
-					<div className="asnp-w-[10rem] asnp-ml-4">
+					<div className="asnp-w-[10rem] asnp-ml-6">
 						<input
 							disabled={ disablePositionRight }
 							type="number"
