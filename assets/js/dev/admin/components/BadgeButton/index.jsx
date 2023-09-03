@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { __ } from '@wordpress/i18n';
 import Admin from './Admin';
-import BadgeCssandAdv from '../../../admin/utils/constants';
-import { toBool } from '../../utils';
+import BadgeCssandAdv from './../../utils/constants';
+import { toBool } from './../../utils';
 
 import './style.scss';
 

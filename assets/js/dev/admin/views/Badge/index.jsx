@@ -3,12 +3,12 @@ import { Link, useParams } from 'react-router-dom';
 import { __ } from '@wordpress/i18n';
 import * as BadgeApi from '@easy-whatsapp/api/badge';
 import Menu from '../../components/WidgetMenu/menu/Menu';
-import BadgeButton from '@easy-whatsapp/base-components/BadgeButton';
 import { BadgesContext, Action } from '../../contexts/Badges';
 import Toggle from '../../components/Toggle';
 import { AppContext } from './../../contexts/App';
 import { IMAGES_URL } from './../../utils/constants';
 import { BadgeContext } from '../../contexts/Badge';
+import BadgeButton from '../../components/BadgeButton';
 
 const initialItem = {
 	type: 'products',
