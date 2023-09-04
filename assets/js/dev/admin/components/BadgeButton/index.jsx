@@ -4,8 +4,35 @@ import styled from 'styled-components';
 import { toBool } from './../../utils';
 import BadgeCssandAdv from '../../utils/constants';
 
-
 import './style.scss';
+
+const Span = styled.div`
+	${ ( props ) => props.badgeIcon }
+`;
+
+const Div = styled.div`
+	${ ( props ) => props.badgeTimerDiv }
+`;
+
+const DivOne = styled.div`
+	${ ( props ) => props.badgeTimerCont }
+`;
+
+const Time = styled.div`
+	${ ( props ) => props.TimerDate }
+`;
+
+const LabelTimer = styled.div`
+	${ ( props ) => props.Label }
+`;
+
+const SpanOne = styled.div`
+	${ ( props ) => props.badgeIconOne }
+`;
+
+const SpanTwo = styled.div`
+	${ ( props ) => props.badgeIconTwo }
+`;
 
 const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 	const {
@@ -18,28 +45,6 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 		TimerDate,
 		Label,
 	} = BadgeCssandAdv( badge );
-
-	const Span = styled.div`
-		${ badgeIcon }
-	`;
-	const Div = styled.div`
-		${ badgeTimerDiv }
-	`;
-	const DivOne = styled.div`
-		${ badgeTimerCont }
-	`;
-	const Time = styled.div`
-		${ TimerDate }
-	`;
-	const LabelTimer = styled.div`
-		${ Label }
-	`;
-	const SpanOne = styled.div`
-		${ badgeIconOne }
-	`;
-	const SpanTwo = styled.div`
-		${ badgeIconTwo }
-	`;
 
 	const [ horiz, setHoriz ] = useState( toBool( badge.horizontal ) );
 	const [ vert, setVert ] = useState( toBool( badge.vertical ) );
@@ -312,9 +317,11 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 											position: 'absolute',
 										} }
 									>
-										<SpanOne>
+										<SpanOne badgeIconOne={ badgeIconOne }>
 											{ bdgeAdvanced }
-											<SpanTwo>
+											<SpanTwo
+												badgeIconTwo={ badgeIconTwo }
+											>
 												<div
 													style={ {
 														fontSize: `${ badge.fontSizeText }px`,
@@ -340,6 +347,7 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 										} }
 									>
 										<Span
+											badgeIcon={ badgeIcon }
 											className="asnp-esb-productBadge2"
 											style={ {
 												color: `${ badge.textColor }`,
@@ -354,8 +362,12 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 												transform: `rotateX(${ badge.rotationX }deg) rotateY(${ badge.rotationY }deg) rotateZ(${ badge.rotationZ }deg)`,
 											} }
 										>
-											<SpanTwo></SpanTwo>
-											<SpanOne>
+											<SpanTwo
+												badgeIconTwo={ badgeIconTwo }
+											></SpanTwo>
+											<SpanOne
+												badgeIconOne={ badgeIconOne }
+											>
 												<div
 													style={ {
 														transform: `${ horizAndvert }`,
@@ -376,9 +388,12 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 										zIndex: `${ badge.zIndex }`,
 									} }
 								>
-									<Div>
-										<DivOne>
+									<Div badgeTimerDiv={ badgeTimerDiv }>
+										<DivOne
+											badgeTimerCont={ badgeTimerCont }
+										>
 											<Time
+												TimerDate={ TimerDate }
 												style={ {
 													fontSize: `${ badge.fontSizeLabelTimer }px`,
 													lineHeight: `${ badge.lineHeightLabelTimer }px`,
@@ -386,12 +401,15 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 											>
 												{ timer.days }
 											</Time>
-											<LabelTimer>
+											<LabelTimer Label={ Label }>
 												{ badge.labelDayTimer }
 											</LabelTimer>
 										</DivOne>
-										<DivOne>
+										<DivOne
+											badgeTimerCont={ badgeTimerCont }
+										>
 											<Time
+												TimerDate={ TimerDate }
 												style={ {
 													fontSize: `${ badge.fontSizeLabelTimer }px`,
 													lineHeight: `${ badge.lineHeightLabelTimer }px`,
@@ -399,12 +417,15 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 											>
 												{ timer.hours }
 											</Time>
-											<LabelTimer>
+											<LabelTimer Label={ Label }>
 												{ badge.labelHoursTimer }
 											</LabelTimer>
 										</DivOne>
-										<DivOne>
+										<DivOne
+											badgeTimerCont={ badgeTimerCont }
+										>
 											<Time
+												TimerDate={ TimerDate }
 												style={ {
 													fontSize: `${ badge.fontSizeLabelTimer }px`,
 													lineHeight: `${ badge.lineHeightLabelTimer }px`,
@@ -412,12 +433,15 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 											>
 												{ timer.minutes }
 											</Time>
-											<LabelTimer>
+											<LabelTimer Label={ Label }>
 												{ badge.labelMinTimer }
 											</LabelTimer>
 										</DivOne>
-										<DivOne>
+										<DivOne
+											badgeTimerCont={ badgeTimerCont }
+										>
 											<Time
+												TimerDate={ TimerDate }
 												style={ {
 													fontSize: `${ badge.fontSizeLabelTimer }px`,
 													lineHeight: `${ badge.lineHeightLabelTimer }px`,
@@ -425,7 +449,7 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 											>
 												{ timer.seconds }
 											</Time>
-											<LabelTimer>
+											<LabelTimer Label={ Label }>
 												{ badge.labelSecTimer }
 											</LabelTimer>
 										</DivOne>
