@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { __ } from '@wordpress/i18n';
-import styled from 'styled-components';
+import styled, { StyleSheetManager } from 'styled-components';
 import { toBool } from './../../utils';
 import BadgeCssandAdv from '../../utils/constants';
 
@@ -33,6 +33,55 @@ const SpanOne = styled.div`
 const SpanTwo = styled.div`
 	${ ( props ) => props.badgeIconTwo }
 `;
+
+const StyledSpan = ( props ) => (
+	<StyleSheetManager shouldForwardProp={ ( prop ) => prop !== 'badgeIcon' }>
+		<Span { ...props } />
+	</StyleSheetManager>
+);
+
+const StyledSpanOne = ( props ) => (
+	<StyleSheetManager
+		shouldForwardProp={ ( prop ) => prop !== 'badgeIconOne' }
+	>
+		<SpanOne { ...props } />
+	</StyleSheetManager>
+);
+
+const StyledSpanTwo = ( props ) => (
+	<StyleSheetManager
+		shouldForwardProp={ ( prop ) => prop !== 'badgeIconTwo' }
+	>
+		<SpanTwo { ...props } />
+	</StyleSheetManager>
+);
+
+const StyledSpanDiv = ( props ) => (
+	<StyleSheetManager
+		shouldForwardProp={ ( prop ) => prop !== 'badgeTimerDiv' }
+	>
+		<Div { ...props } />
+	</StyleSheetManager>
+);
+
+const StyledSpanDivOne = ( props ) => (
+	<StyleSheetManager
+		shouldForwardProp={ ( prop ) => prop !== 'badgeTimerCont' }
+	>
+		<DivOne { ...props } />
+	</StyleSheetManager>
+);
+
+const StyledSpanTime = ( props ) => (
+	<StyleSheetManager shouldForwardProp={ ( prop ) => prop !== 'TimerDate' }>
+		<Time { ...props } />
+	</StyleSheetManager>
+);
+const StyledSpanLabelTimer = ( props ) => (
+	<StyleSheetManager shouldForwardProp={ ( prop ) => prop !== 'Label' }>
+		<LabelTimer { ...props } />
+	</StyleSheetManager>
+);
 
 const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 	const {
@@ -317,9 +366,11 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 											position: 'absolute',
 										} }
 									>
-										<SpanOne badgeIconOne={ badgeIconOne }>
+										<StyledSpanOne
+											badgeIconOne={ badgeIconOne }
+										>
 											{ bdgeAdvanced }
-											<SpanTwo
+											<StyledSpanTwo
 												badgeIconTwo={ badgeIconTwo }
 											>
 												<div
@@ -330,8 +381,8 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 												>
 													{ badge.badgeLabelAdv }
 												</div>
-											</SpanTwo>
-										</SpanOne>
+											</StyledSpanTwo>
+										</StyledSpanOne>
 									</span>
 								</div>
 							) }
@@ -346,7 +397,7 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 											inset: `${ insetProperty }`,
 										} }
 									>
-										<Span
+										<StyledSpan
 											badgeIcon={ badgeIcon }
 											className="asnp-esb-productBadge2"
 											style={ {
@@ -362,10 +413,10 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 												transform: `rotateX(${ badge.rotationX }deg) rotateY(${ badge.rotationY }deg) rotateZ(${ badge.rotationZ }deg)`,
 											} }
 										>
-											<SpanTwo
+											<StyledSpanTwo
 												badgeIconTwo={ badgeIconTwo }
-											></SpanTwo>
-											<SpanOne
+											></StyledSpanTwo>
+											<StyledSpanOne
 												badgeIconOne={ badgeIconOne }
 											>
 												<div
@@ -375,8 +426,8 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 												>
 													{ badge.badgeLabel }
 												</div>
-											</SpanOne>
-										</Span>
+											</StyledSpanOne>
+										</StyledSpan>
 									</div>
 								) }
 							{ badge.useTimerBadge == 1 && (
@@ -388,11 +439,13 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 										zIndex: `${ badge.zIndex }`,
 									} }
 								>
-									<Div badgeTimerDiv={ badgeTimerDiv }>
-										<DivOne
+									<StyledSpanDiv
+										badgeTimerDiv={ badgeTimerDiv }
+									>
+										<StyledSpanDivOne
 											badgeTimerCont={ badgeTimerCont }
 										>
-											<Time
+											<StyledSpanTime
 												TimerDate={ TimerDate }
 												style={ {
 													fontSize: `${ badge.fontSizeLabelTimer }px`,
@@ -400,15 +453,17 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 												} }
 											>
 												{ timer.days }
-											</Time>
-											<LabelTimer Label={ Label }>
+											</StyledSpanTime>
+											<StyledSpanLabelTimer
+												Label={ Label }
+											>
 												{ badge.labelDayTimer }
-											</LabelTimer>
-										</DivOne>
-										<DivOne
+											</StyledSpanLabelTimer>
+										</StyledSpanDivOne>
+										<StyledSpanDivOne
 											badgeTimerCont={ badgeTimerCont }
 										>
-											<Time
+											<StyledSpanTime
 												TimerDate={ TimerDate }
 												style={ {
 													fontSize: `${ badge.fontSizeLabelTimer }px`,
@@ -416,15 +471,17 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 												} }
 											>
 												{ timer.hours }
-											</Time>
-											<LabelTimer Label={ Label }>
+											</StyledSpanTime>
+											<StyledSpanLabelTimer
+												Label={ Label }
+											>
 												{ badge.labelHoursTimer }
-											</LabelTimer>
-										</DivOne>
-										<DivOne
+											</StyledSpanLabelTimer>
+										</StyledSpanDivOne>
+										<StyledSpanDivOne
 											badgeTimerCont={ badgeTimerCont }
 										>
-											<Time
+											<StyledSpanTime
 												TimerDate={ TimerDate }
 												style={ {
 													fontSize: `${ badge.fontSizeLabelTimer }px`,
@@ -432,15 +489,17 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 												} }
 											>
 												{ timer.minutes }
-											</Time>
-											<LabelTimer Label={ Label }>
+											</StyledSpanTime>
+											<StyledSpanLabelTimer
+												Label={ Label }
+											>
 												{ badge.labelMinTimer }
-											</LabelTimer>
-										</DivOne>
-										<DivOne
+											</StyledSpanLabelTimer>
+										</StyledSpanDivOne>
+										<StyledSpanDivOne
 											badgeTimerCont={ badgeTimerCont }
 										>
-											<Time
+											<StyledSpanTime
 												TimerDate={ TimerDate }
 												style={ {
 													fontSize: `${ badge.fontSizeLabelTimer }px`,
@@ -448,12 +507,14 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 												} }
 											>
 												{ timer.seconds }
-											</Time>
-											<LabelTimer Label={ Label }>
+											</StyledSpanTime>
+											<StyledSpanLabelTimer
+												Label={ Label }
+											>
 												{ badge.labelSecTimer }
-											</LabelTimer>
-										</DivOne>
-									</Div>
+											</StyledSpanLabelTimer>
+										</StyledSpanDivOne>
+									</StyledSpanDiv>
 								</div>
 							) }
 						</div>
