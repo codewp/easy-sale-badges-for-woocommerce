@@ -123,7 +123,7 @@ const MenuItem = ( props ) => {
 					/>
 					<AdvancedOpacityAndPos
 						onChange={ props.onChange }
-						opacity={ props.badge.opacity }
+						opacityAdvImg={ props.badge.opacityAdvImg }
 					/>
 					<Position
 						onChange={ props.onChange }
@@ -168,7 +168,7 @@ const MenuItem = ( props ) => {
 					badgePositionLeft={ props.badge.badgePositionLeft }
 					badgePositionRight={ props.badge.badgePositionRight }
 					zIndexTimer={ props.badge.zIndexTimer }
-					opacity={ props.badge.opacity }
+					opacityTimer={ props.badge.opacityTimer }
 					labelDayTimer={ props.badge.labelDayTimer }
 					labelHoursTimer={ props.badge.labelHoursTimer }
 					labelMinTimer={ props.badge.labelMinTimer }

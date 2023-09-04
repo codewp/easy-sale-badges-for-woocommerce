@@ -16,9 +16,9 @@ const AdvancedOpacityAndPos = ( props ) => {
 					min="0"
 					max="1"
 					step="0.01"
-					value={ props.opacity }
+					value={ props.opacityAdvImg }
 					onChange={ ( e ) =>
-						props.onChange( 'opacity', e.target.value )
+						props.onChange( 'opacityAdvImg', e.target.value )
 					}
 				/>
 				<div className="asnp-w-[21rem] asnp-flex asnp-justify-between asnp-text-xs asnp-px-2">

@@ -1521,8 +1521,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
-			if ( isset( $badge->opacity ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			if ( isset( $badge->opacityTimer ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityTimer . ';';
 			}
 			if ( isset( $badge->badgePositionTop ) ) {
 			$dynamic_styles .= ' inset: ' . $insetProperty . ';';
@@ -1541,8 +1541,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
 			}
-			if ( isset( $badge->opacity ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			if ( isset( $badge->opacityTimer ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityTimer . ';';
 			}
 
 			$dynamic_styles .= '}';
@@ -1579,8 +1579,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
-			if ( isset( $badge->opacity ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			if ( isset( $badge->opacityTimer ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityTimer . ';';
 			}
 			if ( isset( $badge->badgePositionTop ) ) {
 			$dynamic_styles .= ' inset: ' . $insetProperty . ';';
@@ -1596,8 +1596,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
 			}
-			if ( isset( $badge->opacity ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			if ( isset( $badge->opacityTimer ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityTimer . ';';
 			}
 
 			$dynamic_styles .= '}';
@@ -1640,8 +1640,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
-			if ( isset( $badge->opacity ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			if ( isset( $badge->opacityTimer ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityTimer . ';';
 			}
 			if ( isset( $badge->badgePositionTop ) ) {
 			$dynamic_styles .= ' inset: ' . $insetProperty . ';';
@@ -1657,8 +1657,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
 			}
-			if ( isset( $badge->opacity ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			if ( isset( $badge->opacityTimer ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityTimer . ';';
 			}
 
 			$dynamic_styles .= '}';
@@ -1701,8 +1701,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
-			if ( isset( $badge->opacity ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			if ( isset( $badge->opacityTimer ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityTimer . ';';
 			}
 			if ( isset( $badge->badgePositionTop ) ) {
 			$dynamic_styles .= ' inset: ' . $insetProperty . ';';
@@ -1718,8 +1718,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
 			}
-			if ( isset( $badge->opacity ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			if ( isset( $badge->opacityTimer ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityTimer . ';';
 			}
 
 			$dynamic_styles .= '}';
@@ -1761,8 +1761,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
-			if ( isset( $badge->opacity ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			if ( isset( $badge->opacityTimer ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityTimer . ';';
 			}
 			if ( isset( $badge->badgePositionTop ) ) {
 			$dynamic_styles .= ' inset: ' . $insetProperty . ';';
@@ -1781,8 +1781,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
 			}
-			if ( isset( $badge->opacity ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			if ( isset( $badge->opacityTimer ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityTimer . ';';
 			}
 
 			$dynamic_styles .= '}';
@@ -1820,8 +1820,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
-			if ( isset( $badge->opacity ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			if ( isset( $badge->opacityTimer ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityTimer . ';';
 			}
 			if ( isset( $badge->badgePositionTop ) ) {
 			$dynamic_styles .= ' inset: ' . $insetProperty . ';';
@@ -1837,8 +1837,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
 			}
-			if ( isset( $badge->opacity ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			if ( isset( $badge->opacityTimer ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityTimer . ';';
 			}
 
 			$dynamic_styles .= '}';
@@ -1880,8 +1880,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
-			if ( isset( $badge->opacity ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			if ( isset( $badge->opacityTimer ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityTimer . ';';
 			}
 			if ( isset( $badge->badgePositionTop ) ) {
 			$dynamic_styles .= ' inset: ' . $insetProperty . ';';
@@ -1897,8 +1897,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
 			}
-			if ( isset( $badge->opacity ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			if ( isset( $badge->opacityTimer ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityTimer . ';';
 			}
 
 			$dynamic_styles .= '}';
@@ -1942,8 +1942,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
-			if ( isset( $badge->opacity ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			if ( isset( $badge->opacityTimer ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityTimer . ';';
 			}
 			if ( isset( $badge->badgePositionTop ) ) {
 			$dynamic_styles .= ' inset: ' . $insetProperty . ';';
@@ -1959,8 +1959,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
 			}
-			if ( isset( $badge->opacity ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			if ( isset( $badge->opacityTimer ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityTimer . ';';
 			}
 
 			$dynamic_styles .= '}';
@@ -1999,13 +1999,12 @@ function output_timer_badge( $badge, $hide = false ) {
 			break;
 
 			default:
-			$timer_uniq = 't1';
 			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
-			if ( isset( $badge->opacity ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			if ( isset( $badge->opacityTimer ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityTimer . ';';
 			}
 			if ( isset( $badge->badgePositionTop ) ) {
 			$dynamic_styles .= ' inset: ' . $insetProperty . ';';
@@ -2022,8 +2021,8 @@ function output_timer_badge( $badge, $hide = false ) {
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
 			}
-			if ( isset( $badge->opacity ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			if ( isset( $badge->opacityTimer ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityTimer . ';';
 			}
 
 			$dynamic_styles .= '}';
@@ -2289,8 +2288,8 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			if ( isset( $badge->badgePositionTop ) ) {
 					$dynamic_styles .= ' inset: ' . $insetProperty . ';';
 			}
-			if ( isset( $badge->opacityImg ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacityImg . ';';
+			if ( isset( $badge->opacityAdvImg ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityAdvImg . ';';
 			}
 			if ( isset( $badge->zIndexImg ) ) {
 				$dynamic_styles .= ' z-index: ' . $badge->zIndexImg . ';';
@@ -2320,8 +2319,8 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' font-size: 14px;';
 
-			if ( isset( $badge->opacityImg ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacityImg . ';';
+			if ( isset( $badge->opacityAdvImg ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityAdvImg . ';';
 			}
 			if ( isset( $badge->badgePositionY ) ) {
 				$dynamic_styles .= ' top: ' . ( $badge->badgePositionY == 'bottom' ? '36px' : '23px' ) . ';';
@@ -2409,8 +2408,8 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			if ( isset( $badge->badgePositionTop ) ) {
 					$dynamic_styles .= ' inset: ' . $insetProperty . ';';
 			}
-			if ( isset( $badge->opacityImg ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacityImg . ';';
+			if ( isset( $badge->opacityAdvImg ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityAdvImg . ';';
 			}
 			if ( isset( $badge->zIndexImg ) ) {
 				$dynamic_styles .= ' z-index: ' . $badge->zIndexImg . ';';
@@ -2438,8 +2437,8 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' font-size: 14px;';
 
-			if ( isset( $badge->opacityImg ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacityImg . ';';
+			if ( isset( $badge->opacityAdvImg ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityAdvImg . ';';
 			}
 			if ( isset( $badge->badgePositionY ) ) {
 				$dynamic_styles .= ' top: ' . ( $badge->badgePositionY == 'bottom' ? '36px' : '28px' ) . ';';
@@ -2635,8 +2634,8 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			if ( isset( $badge->badgePositionTop ) ) {
 					$dynamic_styles .= ' inset: ' . $insetProperty . ';';
 			}
-			if ( isset( $badge->opacityImg ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacityImg . ';';
+			if ( isset( $badge->opacityAdvImg ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityAdvImg . ';';
 			}
 			if ( isset( $badge->zIndexImg ) ) {
 				$dynamic_styles .= ' z-index: ' . $badge->zIndexImg . ';';
@@ -2665,8 +2664,8 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' font-size: 14px;';
 
-			if ( isset( $badge->opacityImg ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacityImg . ';';
+			if ( isset( $badge->opacityAdvImg ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityAdvImg . ';';
 			}
 			if ( isset( $badge->badgePositionY ) ) {
 				$dynamic_styles .= ' top: ' . ( $badge->badgePositionY == 'bottom' ? '36px' : '28px' ) . ';';
@@ -2761,8 +2760,8 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			if ( isset( $badge->badgePositionTop ) ) {
 					$dynamic_styles .= ' inset: ' . $insetProperty . ';';
 			}
-			if ( isset( $badge->opacityImg ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacityImg . ';';
+			if ( isset( $badge->opacityAdvImg ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityAdvImg . ';';
 			}
 			if ( isset( $badge->zIndexImg ) ) {
 				$dynamic_styles .= ' z-index: ' . $badge->zIndexImg . ';';
@@ -2791,8 +2790,8 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' font-size: 14px;';
 
-			if ( isset( $badge->opacityImg ) ) {
-				$dynamic_styles .= ' opacity: ' . $badge->opacityImg . ';';
+			if ( isset( $badge->opacityAdvImg ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacityAdvImg . ';';
 			}
 			if ( isset( $badge->badgePositionY ) ) {
 				$dynamic_styles .= ' top: ' . ( $badge->badgePositionY == 'bottom' ? '37px' : '30px' ) . ';';

@@ -83,6 +83,8 @@ const defaultBadge = {
 	schedule: [],
 	zIndexTimer: '9999',
 	badgeLabelAdv: 'Sale',
+	opacityAdvImg: '1',
+	opacityTimer: '1',
 };
 
 export default function Badge() {
