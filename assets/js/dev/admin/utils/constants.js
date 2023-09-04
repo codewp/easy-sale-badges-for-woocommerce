@@ -13,6 +13,27 @@ export const defaultSettings = {
 export const PLUGIN_URL = whatsappData.pluginUrl;
 export const IMAGES_URL = `${ PLUGIN_URL }assets/images/`;
 
+export const customColor = [
+	'rgb(255, 148, 148)',
+	'rgb(177, 178, 255)',
+	'rgb(170, 196, 255)',
+	'rgb(96, 150, 180)',
+	'rgb(129, 91, 91)',
+	'rgb(89, 69, 69)',
+	'rgb(96, 153, 102)',
+	'rgb(64, 81, 59)',
+	'rgb(133, 88, 111)',
+	'rgb(142, 195, 176)',
+	'rgb(32, 82, 149)',
+	'rgb(20, 66, 114)',
+	'rgb(177, 178, 255)',
+	'rgb(255, 135, 135)',
+	'rgb(188, 226, 158)',
+	'rgb(100, 92, 187)',
+	'rgb(183, 196, 207)',
+	'rgb(229, 186, 115)',
+];
+
 export const SVGADVANCED2 = ( b ) => {
 	return (
 		<svg

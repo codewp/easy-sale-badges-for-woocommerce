@@ -2,6 +2,7 @@ import React from 'react';
 import { __ } from '@wordpress/i18n';
 import Tippy from '@tippyjs/react';
 import ColorPicker from 'react-best-gradient-color-picker';
+import { customColor } from '../../../../utils/constants';
 
 const AdvancedOptions = ( props ) => {
 	return (
@@ -21,6 +22,7 @@ const AdvancedOptions = ( props ) => {
 											props.onChange( 'mainBg', color );
 										} }
 										hideColorTypeBtns={ true }
+										presets={ customColor }
 									/>
 								</div>
 							</div>
@@ -61,6 +63,7 @@ const AdvancedOptions = ( props ) => {
 										props.onChange( 'secondBg', color );
 									} }
 									hideColorTypeBtns={ true }
+									presets={ customColor }
 								/>
 							</div>
 						}

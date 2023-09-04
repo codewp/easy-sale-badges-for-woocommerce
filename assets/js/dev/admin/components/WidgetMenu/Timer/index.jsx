@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { __ } from '@wordpress/i18n';
 import Toggle from '../../Toggle';
 import Datetime from 'react-datetime';
-import { IMAGES_URL } from './../../../utils/constants';
+import { IMAGES_URL, customColor } from './../../../utils/constants';
 import Tippy from '@tippyjs/react';
 import ColorPicker from 'react-best-gradient-color-picker';
 
@@ -334,6 +334,7 @@ const Timer = ( props ) => {
 													color
 												);
 											} }
+											presets={ customColor }
 										/>
 									</div>
 								</div>
@@ -377,6 +378,7 @@ const Timer = ( props ) => {
 											);
 										} }
 										hideColorTypeBtns={ true }
+										presets={ customColor }
 									/>
 								</div>
 							}

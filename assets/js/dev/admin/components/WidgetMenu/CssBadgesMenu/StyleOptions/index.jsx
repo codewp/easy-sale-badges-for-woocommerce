@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { __ } from '@wordpress/i18n';
 import Tippy from '@tippyjs/react';
 import ColorPicker from 'react-best-gradient-color-picker';
+import { customColor } from '../../../../utils/constants';
 
 const StyleOptions = ( props ) => {
 	const [ disableHeight, setDisableHeight ] = useState( false );
@@ -105,6 +106,7 @@ const StyleOptions = ( props ) => {
 										props.onChange( 'badgeColor', color );
 									} }
 									hideColorTypeBtns={ disablGradient }
+									presets={ customColor }
 								/>
 							</div>
 						}
