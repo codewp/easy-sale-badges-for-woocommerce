@@ -223,7 +223,7 @@ const Timer = ( props ) => {
 								{ __( 'Vertical', 'asnp-easy-sale-badge' ) }
 							</label>
 						</div>
-						<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-1">
+						<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-1 asnp-mb-4">
 							<div
 								className={
 									( selected === 5
@@ -414,7 +414,7 @@ const Timer = ( props ) => {
 									'asnp-easy-sale-badge'
 								) }
 							</span>
-							<div className="asnp-w-[25rem]">
+							<div className="asnp-w-[10rem]">
 								<input
 									type="number"
 									min="0"
@@ -431,16 +431,14 @@ const Timer = ( props ) => {
 								/>
 							</div>
 						</label>
-					</div>
-					<div className="asnp-flex asnp-mt-[1rem] asnp-w-full">
-						<label>
+						<label className="asnp-ml-6">
 							<span className="asnp-field-title">
 								{ __(
 									'Line Height (Pixel)',
 									'asnp-easy-sale-badge'
 								) }
 							</span>
-							<div className="asnp-w-[25rem]">
+							<div className="asnp-w-[10rem]">
 								<input
 									type="number"
 									className="asnp-text-field"
@@ -717,10 +715,10 @@ const Timer = ( props ) => {
 				</div>
 				<div className="asnp-flex asnp-mt-3">
 					<label>
-						<span className="asnp-field-title">
-							{ __( 'Top', 'asnp-easy-sale-badge' ) }
+						<span className="asnp-field-title asnp-ml-6">
+							{ __( 'Top', 'asnp-easy-sale-badge asnp-ml-6' ) }
 						</span>
-						<div className="asnp-w-[11rem]">
+						<div className="asnp-w-[10rem]">
 							<input
 								disabled={ disablePositionTop }
 								type="number"
@@ -743,10 +741,10 @@ const Timer = ( props ) => {
 						</div>
 					</label>
 					<label>
-						<span className="asnp-field-title asnp-ml-4">
+						<span className="asnp-field-title asnp-ml-6">
 							{ __( 'Bottom', 'asnp-easy-sale-badge' ) }
 						</span>
-						<div className="asnp-w-[11rem] asnp-ml-4">
+						<div className="asnp-w-[10rem] asnp-ml-6">
 							<input
 								disabled={ disablePositionButtom }
 								type="number"
@@ -768,13 +766,11 @@ const Timer = ( props ) => {
 							/>
 						</div>
 					</label>
-				</div>
-				<div className="asnp-flex asnp-mt-[2rem]">
 					<label>
-						<span className="asnp-field-title">
+						<span className="asnp-field-title asnp-ml-6">
 							{ __( 'Left', 'asnp-easy-sale-badge' ) }
 						</span>
-						<div className="asnp-w-[11rem]">
+						<div className="asnp-w-[10rem] asnp-ml-6">
 							<input
 								disabled={ disablePositionLeft }
 								type="number"
@@ -797,10 +793,10 @@ const Timer = ( props ) => {
 						</div>
 					</label>
 					<label>
-						<span className="asnp-field-title asnp-ml-4">
+						<span className="asnp-field-title asnp-ml-6">
 							{ __( 'Right', 'asnp-easy-sale-badge' ) }
 						</span>
-						<div className="asnp-w-[11rem] asnp-ml-4">
+						<div className="asnp-w-[10rem] asnp-ml-6">
 							<input
 								disabled={ disablePositionRight }
 								type="number"
@@ -828,7 +824,7 @@ const Timer = ( props ) => {
 						{ __( 'Labels', 'asnp-easy-sale-badge' ) }
 					</span>
 				</div>
-				<div className="asnp-flex asnp-mt-3">
+				<div className="asnp-flex asnp-mt-3 asnp-mb-6">
 					<label>
 						<span className="asnp-field-title">
 							{ __( 'Days', 'asnp-easy-sale-badge' ) }
