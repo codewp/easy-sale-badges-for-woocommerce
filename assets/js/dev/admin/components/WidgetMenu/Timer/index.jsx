@@ -17,6 +17,11 @@ const Timer = ( props ) => {
 	const [ disablePositionTop, setDisablePositionTop ] = useState( false );
 	const [ disablePositionLeft, setDisablePositionLeft ] = useState( false );
 	const [ disablePositionRight, setDisablePositionRight ] = useState( false );
+	const [ grad, setGrad ] = useState( false );
+
+	useEffect( () => {
+		props.onChange( 'bgColorTimer', '#EB144C' );
+	}, [ grad ] );
 
 	useEffect( () => {
 		if ( props.badgePositionY === 'top' ) {
@@ -327,6 +332,7 @@ const Timer = ( props ) => {
 								<div>
 									<div className="asnp-p-4">
 										<ColorPicker
+											onClick={ () => setGrad( ! grad ) }
 											value={ props.bgColorTimer }
 											onChange={ ( color ) => {
 												props.onChange(
