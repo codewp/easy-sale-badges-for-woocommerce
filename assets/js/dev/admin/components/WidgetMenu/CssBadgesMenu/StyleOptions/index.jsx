@@ -10,11 +10,6 @@ const StyleOptions = ( props ) => {
 	const [ disableR, setDisableR ] = useState( false );
 	const [ disableL, setDisableL ] = useState( false );
 	const [ disablGradient, setDisablGradient ] = useState( false );
-	const [ grad, setGrad ] = useState( false );
-
-	useEffect( () => {
-		props.onChange( 'bgColorTimer', '' );
-	}, [ grad ] );
 
 	useEffect( () => {
 		if (
@@ -106,7 +101,6 @@ const StyleOptions = ( props ) => {
 						content={
 							<div className="asnp-p-4">
 								<ColorPicker
-									onClick={ () => setGrad( ! grad ) }
 									value={ props.badgeColor }
 									onChange={ ( color ) => {
 										props.onChange( 'badgeColor', color );
