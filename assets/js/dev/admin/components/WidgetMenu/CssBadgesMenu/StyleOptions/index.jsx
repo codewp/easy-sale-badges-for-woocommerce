@@ -13,7 +13,7 @@ const StyleOptions = ( props ) => {
 	const [ grad, setGrad ] = useState( false );
 
 	useEffect( () => {
-		props.onChange( 'bgColorTimer', '#EB144C' );
+		props.onChange( 'badgeColor', '#a12ca1' );
 	}, [ grad ] );
 
 	useEffect( () => {
