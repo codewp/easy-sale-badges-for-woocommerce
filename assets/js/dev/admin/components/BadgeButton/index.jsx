@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { __ } from '@wordpress/i18n';
 import styled, { StyleSheetManager } from 'styled-components';
 import { toBool } from './../../utils';
-import BadgeCssandAdv from '../../utils/constants';
+import BadgeCssandAdv, {
+	getRemainingTime,
+	initTimes,
+} from '../../utils/constants';
 
 import './style.scss';
 
@@ -94,6 +97,10 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 		TimerDate,
 		Label,
 	} = BadgeCssandAdv( badge );
+
+	useEffect( () => {
+		initTimes();
+	}, [] );
 
 	const [ horiz, setHoriz ] = useState( toBool( badge.horizontal ) );
 	const [ vert, setVert ] = useState( toBool( badge.vertical ) );
@@ -220,11 +227,9 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 			return () => clearInterval( interval );
 		}
 	}, [ badge.selectedDateTo ] );
-
+	
 	const updateTimer = () => {
-		const toDate = new Date( badge.selectedDateTo );
-		const now = new Date( whatsappData.now );
-		const timeDifference = toDate - now;
+		let timeDifference = getRemainingTime( badge.selectedDateTo );
 
 		if ( timeDifference > 0 ) {
 			const days = Math.floor( timeDifference / ( 1000 * 60 * 60 * 24 ) );

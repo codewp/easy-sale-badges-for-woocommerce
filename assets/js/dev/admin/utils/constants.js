@@ -13,6 +13,23 @@ export const defaultSettings = {
 export const PLUGIN_URL = whatsappData.pluginUrl;
 export const IMAGES_URL = `${ PLUGIN_URL }assets/images/`;
 
+let serverTime, initialLocalTime;
+
+export const initTimes = () => {
+	serverTime = new Date( whatsappData.now );
+	initialLocalTime = Date.now();
+};
+
+export const getNow = () => {
+	return new Date( serverTime.getTime() + ( Date.now() - initialLocalTime ) );
+};
+
+export const getRemainingTime = ( toDate ) => {
+	const currentServerTime = getNow();
+
+	return toDate.getTime() - currentServerTime.getTime();
+};
+
 export const customColor = [
 	'rgb(255, 148, 148)',
 	'rgb(177, 178, 255)',
