@@ -40,7 +40,7 @@ if ( is_readable( $autoloader ) ) {
 		error_log(  // phpcs:ignore
 			sprintf(
 				/* translators: 1: composer command. 2: plugin directory */
-				esc_html__( 'Your installation of the Live Chat Button plugin is incomplete. Please run %1$s within the %2$s directory.', 'asnp-easy-sale-badge' ),
+				esc_html__( 'Your installation of the Easy Sale Badges For Woocommerce plugin is incomplete. Please run %1$s within the %2$s directory.', 'asnp-easy-sale-badge' ),
 				'`composer install`',
 				'`' . esc_html( str_replace( ABSPATH, '', __DIR__ ) ) . '`'
 			)
@@ -58,7 +58,7 @@ if ( is_readable( $autoloader ) ) {
 					<?php
 					printf(
 						/* translators: 1: composer command. 2: plugin directory */
-						esc_html__( 'Your installation of the Live Chat Button plugin is incomplete. Please run %1$s within the %2$s directory.', 'asnp-easy-sale-badge' ),
+						esc_html__( 'Your installation of Easy Sale Badges For Woocommerce plugin is incomplete. Please run %1$s within the %2$s directory.', 'asnp-easy-sale-badge' ),
 						'<code>composer install</code>',
 						'<code>' . esc_html( str_replace( ABSPATH, '', __DIR__ ) ) . '</code>'
 					);

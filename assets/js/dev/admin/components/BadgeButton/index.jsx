@@ -223,7 +223,7 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 
 	const updateTimer = () => {
 		const toDate = new Date( badge.selectedDateTo );
-		const now = new Date();
+		const now = new Date( whatsappData.now );
 		const timeDifference = toDate - now;
 
 		if ( timeDifference > 0 ) {
