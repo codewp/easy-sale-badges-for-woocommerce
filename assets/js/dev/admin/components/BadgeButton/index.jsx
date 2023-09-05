@@ -227,9 +227,10 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 			return () => clearInterval( interval );
 		}
 	}, [ badge.selectedDateTo ] );
-	
+
 	const updateTimer = () => {
-		let timeDifference = getRemainingTime( badge.selectedDateTo );
+		const toDate = new Date( badge.selectedDateTo );
+		let timeDifference = getRemainingTime( toDate );
 
 		if ( timeDifference > 0 ) {
 			const days = Math.floor( timeDifference / ( 1000 * 60 * 60 * 24 ) );
