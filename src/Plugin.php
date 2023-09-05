@@ -246,16 +246,16 @@ final class Plugin {
 	}
 
 	public function upload_dir( $pathdata ) {
-		if ( empty( $_FILES['easyWhatsappAccountAvatarFile'] ) ) {
+		if ( empty( $_FILES['easySaleBadgeAccountAvatarFile'] ) ) {
 			return $pathdata;
 		}
 
 		if ( empty( $pathdata['subdir'] ) ) {
-			$pathdata['subdir'] = '/easy_whatsapp_uploads/accounts' . ( ! empty( $_POST['id'] && 0 < (int) $_POST['id'] ) ? '/' . (int) $_POST['id'] : '' );
+			$pathdata['subdir'] = '/easy_sale_badge_uploads/accounts' . ( ! empty( $_POST['id'] && 0 < (int) $_POST['id'] ) ? '/' . (int) $_POST['id'] : '' );
 			$pathdata['path']   = $pathdata['path'] . $pathdata['subdir'];
 			$pathdata['url']    = $pathdata['url'] . $pathdata['subdir'];
 		} else {
-			$new_subdir = '/easy_whatsapp_uploads/accounts' . ( ! empty( $_POST['id'] && 0 < (int) $_POST['id'] ) ? '/' . (int) $_POST['id'] : '' );
+			$new_subdir = '/easy_sale_badge_uploads/accounts' . ( ! empty( $_POST['id'] && 0 < (int) $_POST['id'] ) ? '/' . (int) $_POST['id'] : '' );
 
 			$pathdata['path']   = str_replace( $pathdata['subdir'], $new_subdir, $pathdata['path'] );
 			$pathdata['url']    = str_replace( $pathdata['subdir'], $new_subdir, $pathdata['url'] );
