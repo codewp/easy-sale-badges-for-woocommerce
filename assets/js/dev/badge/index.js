@@ -87,17 +87,21 @@ jQuery( window ).on(
 				if ( ! jQuery( this ).is( ':hidden' ) ) {
 					let element = jQuery( this );
 					element.css( { position: 'relative' } );
-					if ( element.parent().hasClass( 'product' ) ) {
-						badge
-							.removeClass( '.asnp-esb-badge-hidden' )
-							.prependTo( element )
-							.show();
-					} else {
-						badge
-							.removeClass( '.asnp-esb-badge-hidden' )
-							.prependTo( element.parent() )
-							.show();
-					}
+					// if ( element.parent().hasClass( 'product' ) ) {
+					// 	badge
+					// 		.removeClass( '.asnp-esb-badge-hidden' )
+					// 		.prependTo( element )
+					// 		.show();
+					// } else {
+					// 	badge
+					// 		.removeClass( '.asnp-esb-badge-hidden' )
+					// 		.prependTo( element.parent() )
+					// 		.show();
+					// }
+					badge
+						.removeClass( '.asnp-esb-badge-hidden' )
+						.prependTo( element )
+						.show();
 					moved = true;
 				}
 			} );
