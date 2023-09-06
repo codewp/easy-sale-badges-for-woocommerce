@@ -7,6 +7,7 @@ import Tippy from '@tippyjs/react';
 import ColorPicker from 'react-best-gradient-color-picker';
 
 import './style.scss';
+import { LockClosedIcon } from '@heroicons/react/solid';
 
 const Timer = ( props ) => {
 	const [ selected, setSelected ] = useState( null );
@@ -18,6 +19,16 @@ const Timer = ( props ) => {
 	const [ disablePositionLeft, setDisablePositionLeft ] = useState( false );
 	const [ disablePositionRight, setDisablePositionRight ] = useState( false );
 	const [ grad, setGrad ] = useState( false );
+
+	const [ showText, setShowText ] = useState( false );
+
+	const handleMouseEnter = () => {
+		setShowText( true );
+	};
+
+	const handleMouseLeave = () => {
+		setShowText( false );
+	};
 
 	useEffect( () => {
 		props.onChange( 'bgColorTimer', '#EB144C' );
@@ -63,13 +74,26 @@ const Timer = ( props ) => {
 	}, [ props.badgeTimer ] );
 
 	return (
-		<div className="asnp-relative">
-			<a className=" asnp-absolute asnp-right-10 asnp-top-[2%] asnp-z-50">
-				<button className="asnp-btn asnp-btn-delete  !asnp-w-[14rem]">
-					{ __( 'Go Pro', 'asnp-easy-sale-badge' ) }
-				</button>
-			</a>
-			<div className='asnp-opacity-50'>
+		<div
+			className="asnp-relative"
+			onMouseEnter={ handleMouseEnter }
+			onMouseLeave={ handleMouseLeave }
+		>
+			{ showText == true && (
+				<a className=" asnp-absolute asnp-right-10 asnp-top-[2%] asnp-z-50">
+					<button className="asnp-btn asnp-btn-delete !asnp-w-[14rem] asnp-flex asnp-text-center asnp-justify-center">
+						{ __( 'Go Pro', 'asnp-easy-sale-badge' ) }
+						<LockClosedIcon width="17" height="17" className='asnp-ml-1'/>
+					</button>
+				</a>
+			) }
+			<div
+				className={
+					showText == true
+						? 'asnp-opacity-50 asnp-cursor-pointer'
+						: ''
+				}
+			>
 				<div className="asnp-w-[25rem] asnp-mt-2 asnp-text-lg asnp-font-semibold">
 					{ __( 'Timer', 'asnp-easy-sale-badge' ) }
 				</div>
