@@ -80,10 +80,14 @@ const Timer = ( props ) => {
 			onMouseLeave={ handleMouseLeave }
 		>
 			{ showText == true && (
-				<a className=" asnp-absolute asnp-right-10 asnp-top-[2%] asnp-z-50">
+				<a className="asnp-float-right asnp-top-16 asnp-z-50 asnp-sticky asnp-mt-10 asnp-mr-[40%]">
 					<button className="asnp-btn asnp-btn-delete !asnp-w-[14rem] asnp-flex asnp-text-center asnp-justify-center">
 						{ __( 'Go Pro', 'asnp-easy-sale-badge' ) }
-						<LockClosedIcon width="17" height="17" className='asnp-ml-1'/>
+						<LockClosedIcon
+							width="17"
+							height="17"
+							className="asnp-ml-1"
+						/>
 					</button>
 				</a>
 			) }
