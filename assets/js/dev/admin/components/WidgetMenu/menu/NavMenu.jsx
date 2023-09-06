@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { DropContext } from '../context/DropContext';
 import MenuItem from './MenuItem';
 import { __ } from '@wordpress/i18n';
+import { LockClosedIcon } from '@heroicons/react/solid';
 
 const NavMenu = ( props ) => {
 	const [ activeStatus, setActiveStatus ] = useState( '1' );
@@ -75,6 +76,7 @@ const NavMenu = ( props ) => {
 					<div className="asnp-ml-[0.3rem]">
 						{ __( '(Pro)', 'asnp-easy-whatsapp' ) }
 					</div>
+					<LockClosedIcon width="20" height="20" />
 				</a>
 				<a
 					href="#"
@@ -93,6 +95,7 @@ const NavMenu = ( props ) => {
 					<div className="asnp-ml-[0.3rem]">
 						{ __( '(Pro)', 'asnp-easy-whatsapp' ) }
 					</div>
+					<LockClosedIcon width="20" height="20" />
 				</a>
 				<a
 					href="#"
@@ -111,6 +114,7 @@ const NavMenu = ( props ) => {
 					<div className="asnp-ml-[0.3rem]">
 						{ __( '(Pro)', 'asnp-easy-whatsapp' ) }
 					</div>
+						<LockClosedIcon width="20" height="20" />
 				</a>
 			</nav>
 			<div className="asnp-w-[45rem] md:asnp-w-[48rem] lg:asnp-w-[52rem]">
