@@ -74,6 +74,20 @@ const MenuItem = ( props ) => {
 			) }
 
 			{ props.activeStatus == 2 && (
+				<Schedule
+					selectedDateFrom={ props.badge.selectedDateFrom }
+					selectedDateTo={ props.badge.selectedDateTo }
+					updateAvailability={ props.updateAvailability }
+					availability={ props.badge.availability }
+					alwaysOnline={ props.badge.alwaysOnline }
+					useTimezone={ props.badge.useTimezone }
+					onChange={ props.onChange }
+				/>
+			) }
+			{ props.activeStatus == 3 && (
+				<Products onChange={ props.onChange } />
+			) }
+			{ props.activeStatus == 4 && (
 				<div className="asnp-mt-3">
 					<BadgeImageStyle
 						onChange={ props.onChange }
@@ -101,7 +115,7 @@ const MenuItem = ( props ) => {
 					/>
 				</div>
 			) }
-			{ props.activeStatus == 3 && (
+			{ props.activeStatus == 5 && (
 				<div className="asnp-mt-3">
 					<AdvancedTextOption
 						onChange={ props.onChange }
@@ -135,23 +149,6 @@ const MenuItem = ( props ) => {
 						badgePositionRight={ props.badge.badgePositionRight }
 					/>
 				</div>
-			) }
-
-			{ props.activeStatus == 4 && (
-				<Schedule
-					selectedDateFrom={ props.badge.selectedDateFrom }
-					selectedDateTo={ props.badge.selectedDateTo }
-					updateAvailability={ props.updateAvailability }
-					availability={ props.badge.availability }
-					alwaysOnline={ props.badge.alwaysOnline }
-					useTimezone={ props.badge.useTimezone }
-					onChange={ props.onChange }
-				/>
-			) }
-			{ props.activeStatus == 5 && (
-				<Products
-					onChange={ props.onChange }
-				/>
 			) }
 			{ props.activeStatus == 6 && (
 				<Timer

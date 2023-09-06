@@ -13,6 +13,101 @@ export const defaultSettings = {
 export const PLUGIN_URL = whatsappData.pluginUrl;
 export const IMAGES_URL = `${ PLUGIN_URL }assets/images/`;
 
+export const PreveiwImage = ( badge ) => {
+	let imagePreview;
+	if (
+		badge.imgbadge == 0 &&
+		badge.imgbadgeAdv == 0 &&
+		badge.useTimerBadge == 0
+	) {
+		switch ( badge.badgeStyles ) {
+			case 'badge1':
+				imagePreview = IMAGES_URL + 'badge1.svg';
+				break;
+			case 'badge2':
+				imagePreview = IMAGES_URL + 'badge2.svg';
+				break;
+			case 'badge3':
+				imagePreview = IMAGES_URL + 'badge3.svg';
+				break;
+			case 'badge4':
+				imagePreview = IMAGES_URL + 'badge4.svg';
+				break;
+			case 'badge5':
+				imagePreview = IMAGES_URL + 'badge5.svg';
+				break;
+			case 'badge6':
+				imagePreview = IMAGES_URL + 'badge6.svg';
+				break;
+			case 'badge7':
+				imagePreview = IMAGES_URL + 'badge7.png';
+				break;
+			case 'badge8':
+				imagePreview = IMAGES_URL + 'badge8.png';
+				break;
+			case 'badge9':
+				imagePreview = IMAGES_URL + 'badge9.png';
+				break;
+			case 'badge10':
+				imagePreview = IMAGES_URL + 'badge10.png';
+				break;
+			case 'badge11':
+				imagePreview = IMAGES_URL + 'badge11.png';
+				break;
+			case 'badge12':
+				imagePreview = IMAGES_URL + 'badge12.png';
+				break;
+			case 'badge13':
+				imagePreview = IMAGES_URL + 'badge13.png';
+				break;
+		}
+	} else if ( badge.imgbadge == 1 ) {
+		imagePreview = badge.badgeImage;
+	} else if ( badge.imgbadgeAdv == 1 ) {
+		switch ( badge.badgeStyles ) {
+			case 'bdgAdvanced1':
+				imagePreview = IMAGES_URL + 'badgeAdvance1.png';
+				break;
+			case 'bdgAdvanced2':
+				imagePreview = IMAGES_URL + 'badgeAdvance2.png';
+				break;
+			case 'bdgAdvanced3':
+				imagePreview = IMAGES_URL + 'badgeAdvance3.png';
+				break;
+			case 'bdgAdvanced4':
+				imagePreview = IMAGES_URL + 'badgeAdvance4.png';
+				break;
+		}
+	} else if ( badge.imgbadgeAdv == 1 ) {
+		switch ( badge.badgeTimer ) {
+			case 'timer1':
+				imagePreview = IMAGES_URL + 'badgeTimer1.png';
+				break;
+			case 'timer2':
+				imagePreview = IMAGES_URL + 'badgeTimer2.png';
+				break;
+			case 'timer3':
+				imagePreview = IMAGES_URL + 'badgeTimer3.png';
+				break;
+			case 'timer4':
+				imagePreview = IMAGES_URL + 'badgeTimer4.png';
+				break;
+			case 'timer5':
+				imagePreview = IMAGES_URL + 'badgeTimerV1.png';
+				break;
+			case 'timer6':
+				imagePreview = IMAGES_URL + 'badgeTimerV2.png';
+				break;
+			case 'timer7':
+				imagePreview = IMAGES_URL + 'badgeTimerV3.png';
+				break;
+			case 'timer8':
+				imagePreview = IMAGES_URL + 'badgeTimerV4.png';
+				break;
+		}
+	}
+};
+
 let serverTime, initialLocalTime;
 
 export const initTimes = () => {

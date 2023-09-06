@@ -29,53 +29,12 @@ const NavMenu = ( props ) => {
 				>
 					{ __( 'CSS Labels', 'asnp-easy-sale-badge' ) }
 				</a>
+
 				<a
 					href="#"
 					onClick={ ( e ) => {
 						e.preventDefault();
-						setPage( '2', 'imageLabels' );
-					} }
-					className={
-						( 'imageLabels' === activeMenu
-							? ' asnp-nav-tab-active'
-							: '' ) + ' asnp-nav-tab-item'
-					}
-				>
-					{ __( 'Image Labels', 'asnp-easy-sale-badge' ) }
-				</a>
-				<a
-					href="#"
-					onClick={ ( e ) => {
-						e.preventDefault();
-						setPage( '3', 'advancedLabels' );
-					} }
-					className={
-						( 'advancedLabels' === activeMenu
-							? ' asnp-nav-tab-active'
-							: '' ) + ' asnp-nav-tab-item'
-					}
-				>
-					{ __( 'Advanced Labels', 'asnp-easy-sale-badge' ) }
-				</a>
-				<a
-					href="#"
-					onClick={ ( e ) => {
-						e.preventDefault();
-						setPage( '6', 'timer' );
-					} }
-					className={
-						( 'timer' === activeMenu
-							? ' asnp-nav-tab-active'
-							: '' ) + ' asnp-nav-tab-item'
-					}
-				>
-					{ __( 'Timer', 'asnp-easy-sale-badge' ) }
-				</a>
-				<a
-					href="#"
-					onClick={ ( e ) => {
-						e.preventDefault();
-						setPage( '4', 'schedule' );
+						setPage( '2', 'schedule' );
 					} }
 					className={
 						( 'schedule' === activeMenu
@@ -89,7 +48,7 @@ const NavMenu = ( props ) => {
 					href="#"
 					onClick={ ( e ) => {
 						e.preventDefault();
-						setPage( '5', 'products' );
+						setPage( '3', 'products' );
 					} }
 					className={
 						( 'products' === activeMenu
@@ -98,6 +57,60 @@ const NavMenu = ( props ) => {
 					}
 				>
 					{ __( 'Products', 'asnp-easy-sale-badge' ) }
+				</a>
+				<a
+					href="#"
+					onClick={ ( e ) => {
+						e.preventDefault();
+						setPage( '4', 'imageLabels' );
+					} }
+					className={
+						( 'imageLabels' === activeMenu
+							? ' asnp-nav-tab-active'
+							: '' ) +
+						' asnp-nav-tab-item asnp-flex asnp-text-red-600'
+					}
+				>
+					{ __( 'Image Labels', 'asnp-easy-sale-badge' ) }
+					<div className="asnp-ml-[0.3rem]">
+						{ __( '(Pro)', 'asnp-easy-whatsapp' ) }
+					</div>
+				</a>
+				<a
+					href="#"
+					onClick={ ( e ) => {
+						e.preventDefault();
+						setPage( '5', 'advancedLabels' );
+					} }
+					className={
+						( 'advancedLabels' === activeMenu
+							? ' asnp-nav-tab-active'
+							: '' ) +
+						' asnp-nav-tab-item asnp-flex asnp-text-red-600'
+					}
+				>
+					{ __( 'Advanced Labels', 'asnp-easy-sale-badge' ) }
+					<div className="asnp-ml-[0.3rem]">
+						{ __( '(Pro)', 'asnp-easy-whatsapp' ) }
+					</div>
+				</a>
+				<a
+					href="#"
+					onClick={ ( e ) => {
+						e.preventDefault();
+						setPage( '6', 'timer' );
+					} }
+					className={
+						( 'timer' === activeMenu
+							? ' asnp-nav-tab-active'
+							: '' ) +
+						' asnp-nav-tab-item asnp-flex asnp-text-red-600'
+					}
+				>
+					{ __( 'Timer', 'asnp-easy-sale-badge' ) }
+					<div className="asnp-ml-[0.3rem]">
+						{ __( '(Pro)', 'asnp-easy-whatsapp' ) }
+					</div>
 				</a>
 			</nav>
 			<div className="asnp-w-[45rem] md:asnp-w-[48rem] lg:asnp-w-[52rem]">
