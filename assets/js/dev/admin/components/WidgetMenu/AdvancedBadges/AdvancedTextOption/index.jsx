@@ -6,8 +6,8 @@ import { customColor } from '../../../../utils/constants';
 
 const AdvancedTextOption = ( props ) => {
 	return (
-		<div className="asnp-ew-line">
-			<div className="asnp-mt-[1rem] asnp-w-[25rem]">
+		<div>
+			<div className="asnp-mt-[1rem] asnp-w-[15rem]">
 				<label>
 					<span className="asnp-field-title">
 						{ __( 'Badge Label', 'asnp-easy-sale-badge' ) }

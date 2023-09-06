@@ -1,5 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { __ } from '@wordpress/i18n';
+import { LockClosedIcon } from '@heroicons/react/solid';
 import TextOptions from './../CssBadgesMenu/TextOptions';
 import BadgeStyles from '../CssBadgesMenu/BadgeStyles';
 import StyleOptions from '../CssBadgesMenu/StyleOptions';
@@ -21,6 +22,15 @@ import './style.scss';
 
 const MenuItem = ( props ) => {
 	const { badgeImageFile, setBadgeImageFile } = useContext( BadgeContext );
+	const [ showTextImg, setShowTextImg ] = useState( false );
+
+	const handleMouseEnter = () => {
+		setShowTextImg( true );
+	};
+
+	const handleMouseLeave = () => {
+		setShowTextImg( false );
+	};
 
 	return (
 		<div className="asnp-w-full">
@@ -88,66 +98,122 @@ const MenuItem = ( props ) => {
 				<Products onChange={ props.onChange } />
 			) }
 			{ props.activeStatus == 4 && (
-				<div className="asnp-mt-3">
-					<BadgeImageStyle
-						onChange={ props.onChange }
-						badgeImage={ props.badge.badgeImage }
-						imgbadge={ props.badge.imgbadge }
-					/>
-					<UploadImage
-						badgeImageFile={ badgeImageFile }
-						setBadgeImageFile={ setBadgeImageFile }
-					/>
-					<Options
-						onChange={ props.onChange }
-						badgePositionY={ props.badge.badgePositionY }
-						badgePositionX={ props.badge.badgePositionX }
-						badgePositionTop={ props.badge.badgePositionTop }
-						badgePositionBottom={ props.badge.badgePositionBottom }
-						badgePositionLeft={ props.badge.badgePositionLeft }
-						badgePositionRight={ props.badge.badgePositionRight }
-						widthBadgeImg={ props.badge.widthBadgeImg }
-						zIndexImg={ props.badge.zIndexImg }
-						opacityImg={ props.badge.opacityImg }
-						rotationXImg={ props.badge.rotationXImg }
-						rotationYImg={ props.badge.rotationYImg }
-						rotationZImg={ props.badge.rotationZImg }
-					/>
+				<div
+					className="asnp-relative asnp-mt-3"
+					onMouseEnter={ handleMouseEnter }
+					onMouseLeave={ handleMouseLeave }
+				>
+					{ showTextImg == true && (
+						<a className="asnp-float-right asnp-top-16 asnp-z-50 asnp-sticky asnp-mr-[40%]">
+							<button className="asnp-btn asnp-btn-delete !asnp-w-[14rem] asnp-flex asnp-text-center asnp-justify-center">
+								{ __( 'Go Pro', 'asnp-easy-sale-badge' ) }
+								<LockClosedIcon
+									width="17"
+									height="17"
+									className="asnp-ml-1"
+								/>
+							</button>
+						</a>
+					) }
+					<div
+						className={
+							showTextImg == true
+								? 'asnp-opacity-50 asnp-cursor-pointer'
+								: ''
+						}
+					>
+						<BadgeImageStyle
+							onChange={ props.onChange }
+							badgeImage={ props.badge.badgeImage }
+							imgbadge={ props.badge.imgbadge }
+						/>
+						<UploadImage
+							badgeImageFile={ badgeImageFile }
+							setBadgeImageFile={ setBadgeImageFile }
+						/>
+						<Options
+							onChange={ props.onChange }
+							badgePositionY={ props.badge.badgePositionY }
+							badgePositionX={ props.badge.badgePositionX }
+							badgePositionTop={ props.badge.badgePositionTop }
+							badgePositionBottom={
+								props.badge.badgePositionBottom
+							}
+							badgePositionLeft={ props.badge.badgePositionLeft }
+							badgePositionRight={
+								props.badge.badgePositionRight
+							}
+							widthBadgeImg={ props.badge.widthBadgeImg }
+							zIndexImg={ props.badge.zIndexImg }
+							opacityImg={ props.badge.opacityImg }
+							rotationXImg={ props.badge.rotationXImg }
+							rotationYImg={ props.badge.rotationYImg }
+							rotationZImg={ props.badge.rotationZImg }
+						/>
+					</div>
 				</div>
 			) }
 			{ props.activeStatus == 5 && (
-				<div className="asnp-mt-3">
-					<AdvancedTextOption
-						onChange={ props.onChange }
-						badgeLabelAdv={ props.badge.badgeLabelAdv }
-						textColor={ props.badge.textColor }
-						fontSizeText={ props.badge.fontSizeText }
-						lineHeightText={ props.badge.lineHeightText }
-					/>
-					<AdvancedBadgeStyle
-						onChange={ props.onChange }
-						badgeAdv={ props.badge.badgeAdv }
-						imgbadgeAdv={ props.badge.imgbadgeAdv }
-					/>
-					<AdvancedOptions
-						onChange={ props.onChange }
-						mainBg={ props.badge.mainBg }
-						secondBg={ props.badge.secondBg }
-						zIndexAdv={ props.badge.zIndexAdv }
-					/>
-					<AdvancedOpacityAndPos
-						onChange={ props.onChange }
-						opacityAdvImg={ props.badge.opacityAdvImg }
-					/>
-					<Position
-						onChange={ props.onChange }
-						badgePositionY={ props.badge.badgePositionY }
-						badgePositionX={ props.badge.badgePositionX }
-						badgePositionTop={ props.badge.badgePositionTop }
-						badgePositionBottom={ props.badge.badgePositionBottom }
-						badgePositionLeft={ props.badge.badgePositionLeft }
-						badgePositionRight={ props.badge.badgePositionRight }
-					/>
+				<div
+					className="asnp-relative asnp-mt-3"
+					onMouseEnter={ handleMouseEnter }
+					onMouseLeave={ handleMouseLeave }
+				>
+					{ showTextImg == true && (
+						<a className="asnp-float-right asnp-top-16 asnp-z-50 asnp-sticky asnp-mr-[40%]">
+							<button className="asnp-btn asnp-btn-delete !asnp-w-[14rem] asnp-flex asnp-text-center asnp-justify-center">
+								{ __( 'Go Pro', 'asnp-easy-sale-badge' ) }
+								<LockClosedIcon
+									width="17"
+									height="17"
+									className="asnp-ml-1"
+								/>
+							</button>
+						</a>
+					) }
+					<div
+						className={
+							showTextImg == true
+								? 'asnp-opacity-50 asnp-cursor-pointer'
+								: ''
+						}
+					>
+						<AdvancedTextOption
+							onChange={ props.onChange }
+							badgeLabelAdv={ props.badge.badgeLabelAdv }
+							textColor={ props.badge.textColor }
+							fontSizeText={ props.badge.fontSizeText }
+							lineHeightText={ props.badge.lineHeightText }
+						/>
+						<AdvancedBadgeStyle
+							onChange={ props.onChange }
+							badgeAdv={ props.badge.badgeAdv }
+							imgbadgeAdv={ props.badge.imgbadgeAdv }
+						/>
+						<AdvancedOptions
+							onChange={ props.onChange }
+							mainBg={ props.badge.mainBg }
+							secondBg={ props.badge.secondBg }
+							zIndexAdv={ props.badge.zIndexAdv }
+						/>
+						<AdvancedOpacityAndPos
+							onChange={ props.onChange }
+							opacityAdvImg={ props.badge.opacityAdvImg }
+						/>
+						<Position
+							onChange={ props.onChange }
+							badgePositionY={ props.badge.badgePositionY }
+							badgePositionX={ props.badge.badgePositionX }
+							badgePositionTop={ props.badge.badgePositionTop }
+							badgePositionBottom={
+								props.badge.badgePositionBottom
+							}
+							badgePositionLeft={ props.badge.badgePositionLeft }
+							badgePositionRight={
+								props.badge.badgePositionRight
+							}
+						/>
+					</div>
 				</div>
 			) }
 			{ props.activeStatus == 6 && (

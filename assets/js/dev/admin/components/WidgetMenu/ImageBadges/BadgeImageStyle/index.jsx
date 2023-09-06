@@ -8,9 +8,9 @@ const BadgeImageStyle = ( props ) => {
 	const [ selected, setSelected ] = useState( null );
 
 	return (
-		<div className="asnp-ew-line">
+		<div>
 			<div className="asnp-w-[12rem] asnp-ml-4 asnp-mt-6 asnp-text-black asnp-block asnp-font-medium asnp-text-base">
-				<label>{ __( 'Labels', 'asnp-easy-sale-badge' ) }</label>
+				<label>{ __( 'Image Labels', 'asnp-easy-sale-badge' ) }</label>
 			</div>
 			<div className="asnp-mt-4">
 				<div className="asnp-relative asnp-w-[49rem] asnp-mb-3 asnp-mt-3 asnp-h-[37rem] asnp-flex asnp-flex-col asnp-border-2 asnp-rounded-md asnp-pr-1 asnp-pb-4 asnp-scrollBarImageB">
