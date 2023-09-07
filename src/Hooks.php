@@ -10,7 +10,7 @@ class Hooks {
 		if ( get_plugin()->is_request( 'frontend' ) ) {
 			self::single_hooks();
 			self::loop_hooks();
-			add_filter( 'woocommerce_product_get_image', array( __CLASS__, 'woocommerce_product_get_image' ), 999 );
+			add_filter( 'woocommerce_product_get_image', array( __CLASS__, 'woocommerce_product_get_image' ), 999, 2 );
 		}
 	}
 
