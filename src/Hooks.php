@@ -89,7 +89,7 @@ class Hooks {
 	public static function loop_hooks() {
 		self::loop_custom_hooks();
 
-		$loop_position = get_plugin()->settings->get_setting( 'loop_sale_badge_position', 'before_shop_loop_item_thumbnail' );
+		$loop_position = get_plugin()->settings->get_setting( 'loopPosition', 'none' );
 		if ( empty( $loop_position ) || 'none' === $loop_position ) {
 			return;
 		}
@@ -217,13 +217,19 @@ class Hooks {
 		display_sale_badges( $product );
 	}
 
-	public static function woocommerce_product_get_image( $image ) {
+	public static function woocommerce_product_get_image( $image, $product ) {
 		if ( ! in_the_loop() ) {
 			return $image;
 		}
 
+		$badge = '';
+		$loop_position = get_plugin()->settings->get_setting( 'loopPosition', 'none' );
+		if ( empty( $loop_position ) || 'none' === $loop_position ) {
+			$badge = display_sale_badges( $product, false, true );
+		}
+
 		if ( false === strpos( $image, '<div' ) ) {
-			$image = '<div class="asnp-sale-badge-image-wrapper" style="position:relative;">' . $image . '</div>';
+			$image = '<div class="asnp-sale-badge-image-wrapper" style="position:relative;">' . $image . $badge . '</div>';
 		}
 
 		return $image;

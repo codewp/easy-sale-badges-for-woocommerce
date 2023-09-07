@@ -8,38 +8,43 @@ use function AsanaPlugins\WooCommerce\SaleBadges\get_plugin;
 use function AsanaPlugins\WooCommerce\SaleBadges\add_custom_style;
 use function AsanaPlugins\WooCommerce\SaleBadges\localize_timer_badge;
 
-function output_badges( $badges, $hide = false ) {
+function output_badges( $badges, $hide = false, $return = false ) {
 	if ( empty( $badges ) ) {
-		return;
+		return '';
 	}
 
+	$output = '';
 	foreach ( $badges as $badge ) {
-		output_badge( $badge, $hide );
+		$out = output_badge( $badge, $hide, $return );
+		if ( ! empty( $out ) ) {
+			$output .= $out;
+		}
 	}
+	return $output;
 }
 
-function output_badge( $badge, $hide = false ) {
+function output_badge( $badge, $hide = false, $return = false ) {
 	if ( isset( $badge->imgbadge ) && $badge->imgbadge == 1 ) {
-		return output_image_badge( $badge, $hide );
+		return output_image_badge( $badge, $hide, $return );
 	} elseif ( isset( $badge->imgbadgeAdv ) && $badge->imgbadgeAdv == 1 ) {
-		return output_image_adv_badge( $badge, $hide );
+		return output_image_adv_badge( $badge, $hide, $return );
 	} elseif ( isset( $badge->useTimerBadge ) && $badge->useTimerBadge == 1 ) {
-		return output_timer_badge( $badge, $hide );
+		return output_timer_badge( $badge, $hide, $return );
 	} elseif ( ! empty( $badge->badgeStyles ) ) {
-		return output_css_badge( $badge, $hide );
+		return output_css_badge( $badge, $hide, $return );
 	}
 }
 
-function output_css_badge( $badge, $hide = false ) {
+function output_css_badge( $badge, $hide = false, $return = false ) {
 	if ( ! $badge ) {
-		return;
+		return '';
 	}
 
 	// If threshold is set, check the threshold time is reached.
 	if ( isset( $badge->selectedDateFrom ) && '' != $badge->selectedDateFrom ) {
 		$now = current_time( 'timestamp' );
 		if ( 0 > $now - strtotime( $badge->selectedDateFrom, $now ) ) {
-			return;
+			return '';
 		}
 	}
 
@@ -1461,12 +1466,16 @@ function output_css_badge( $badge, $hide = false ) {
 
 	$output = apply_filters( 'asnp_wesb_css_badge', $output, $badge, $hide );
 
+	if ( $return ) {
+		return $output;
+	}
+
 	echo $output;
 }
 
-function output_timer_badge( $badge, $hide = false ) {
+function output_timer_badge( $badge, $hide = false, $return = false ) {
 	if ( ! $badge ) {
-		return;
+		return '';
 	}
 
 	$insetProperty = '';
@@ -2100,12 +2109,16 @@ function output_timer_badge( $badge, $hide = false ) {
 
 			$output = apply_filters( 'asnp_wesb_timer_badge', $output, $badge, $hide );
 
+			if ( $return ) {
+				return $output;
+			}
+
 			echo $output;
 }
 
-function output_image_badge( $badge, $hide = false ) {
+function output_image_badge( $badge, $hide = false, $return = false ) {
 	if ( ! $badge ) {
-		return;
+		return '';
 	}
 
 	$insetProperty = '';
@@ -2205,12 +2218,16 @@ function output_image_badge( $badge, $hide = false ) {
 
 	$output = apply_filters( 'asnp_wesb_image_badge', $output, $badge, $hide );
 
+	if ( $return ) {
+		return $output;
+	}
+
 	echo $output;
 }
 
-function output_image_adv_badge( $badge, $hide = false ) {
+function output_image_adv_badge( $badge, $hide = false, $return = false ) {
 	if ( ! $badge ) {
-		return;
+		return '';
 	}
 
 
@@ -2796,7 +2813,7 @@ function output_image_adv_badge( $badge, $hide = false ) {
 			if ( isset( $badge->badgePositionY ) ) {
 				$dynamic_styles .= ' top: ' . ( $badge->badgePositionY == 'bottom' ? '37px' : '30px' ) . ';';
 			}
-		
+
 
 			$dynamic_styles .= '}';
 
@@ -2865,8 +2882,6 @@ function output_image_adv_badge( $badge, $hide = false ) {
 
 	add_custom_style( $dynamic_styles );
 
-
-
 	$class_names = 'asnp-esb-badge-element asnp-esb-advBadge asnp-esb-advBadge-'. $adv_uniq .'';
 	if ( $hide ) {
 		$class_names .= ' asnp-esb-badge-hidden';
@@ -2887,6 +2902,10 @@ function output_image_adv_badge( $badge, $hide = false ) {
 	$output .= '</div>';
 
 	$output = apply_filters( 'asnp_wesb_advanced_badge', $output, $badge, $hide );
+
+	if ( $return ) {
+		return $output;
+	}
 
 	echo $output;
 }
