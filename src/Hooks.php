@@ -89,7 +89,7 @@ class Hooks {
 	public static function loop_hooks() {
 		self::loop_custom_hooks();
 
-		$loop_position = get_plugin()->settings->get_setting( 'loop_sale_badge_position', 'before_shop_loop_item_thumbnail' );
+		$loop_position = get_plugin()->settings->get_setting( 'loopPosition', 'before_shop_loop_item_thumbnail' );
 		if ( empty( $loop_position ) || 'none' === $loop_position ) {
 			return;
 		}
