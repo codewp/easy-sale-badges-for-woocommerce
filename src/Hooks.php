@@ -10,6 +10,7 @@ class Hooks {
 		if ( get_plugin()->is_request( 'frontend' ) ) {
 			self::single_hooks();
 			self::loop_hooks();
+			add_filter( 'woocommerce_product_get_image', array( __CLASS__, 'woocommerce_product_get_image' ), 999 );
 		}
 	}
 
@@ -214,6 +215,18 @@ class Hooks {
 		}
 
 		display_sale_badges( $product );
+	}
+
+	public static function woocommerce_product_get_image( $image ) {
+		if ( ! in_the_loop() ) {
+			return $image;
+		}
+
+		if ( false === strpos( $image, '<div' ) ) {
+			$image = '<div class="asnp-sale-badge-image-wrapper" style="position:relative;">' . $image . '</div>';
+		}
+
+		return $image;
 	}
 
 }
