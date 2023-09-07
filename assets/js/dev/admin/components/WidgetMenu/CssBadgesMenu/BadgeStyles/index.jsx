@@ -30,7 +30,7 @@ const BadgeStyles = ( props ) => {
 						>
 							<img
 								className="asnp-h-full asnp-w-full asnp-border-none"
-								src={ IMAGES_URL + 'badge1.svg' }
+								src={ IMAGES_URL + 'badge1.png' }
 							/>
 						</div>
 						<div
@@ -38,7 +38,7 @@ const BadgeStyles = ( props ) => {
 								( props.badgeStyles === 'badge2'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
-								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
+								' asnp-py-6 asnp-px-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge2' );
@@ -50,7 +50,7 @@ const BadgeStyles = ( props ) => {
 						>
 							<img
 								className="asnp-h-full asnp-w-full asnp-border-none"
-								src={ IMAGES_URL + 'badge2.svg' }
+								src={ IMAGES_URL + 'badge2.png' }
 							/>
 						</div>
 						<div
@@ -58,7 +58,7 @@ const BadgeStyles = ( props ) => {
 								( props.badgeStyles === 'badge3'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
-								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
+								' asnp-py-6 asnp-px-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge3' );
@@ -70,7 +70,7 @@ const BadgeStyles = ( props ) => {
 						>
 							<img
 								className="asnp-h-full asnp-w-full asnp-border-none"
-								src={ IMAGES_URL + 'badge3.svg' }
+								src={ IMAGES_URL + 'badge3.png' }
 							/>
 						</div>
 						<div
@@ -78,7 +78,7 @@ const BadgeStyles = ( props ) => {
 								( props.badgeStyles === 'badge4'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
-								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
+								' asnp-py-6 asnp-px-3 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge4' );
@@ -90,7 +90,7 @@ const BadgeStyles = ( props ) => {
 						>
 							<img
 								className="asnp-h-full asnp-w-full asnp-border-none"
-								src={ IMAGES_URL + 'badge4.svg' }
+								src={ IMAGES_URL + 'badge4.png' }
 							/>
 						</div>
 						<div
@@ -98,7 +98,7 @@ const BadgeStyles = ( props ) => {
 								( props.badgeStyles === 'badge5'
 									? 'asnp-border-indigo-700'
 									: 'asnp-border-gray-400' ) +
-								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
+								' asnp-p-5 asnp-containerImage hover:asnp-border-indigo-700'
 							}
 							onClick={ () => {
 								props.onChange( 'badgeStyles', 'badge5' );
@@ -110,7 +110,7 @@ const BadgeStyles = ( props ) => {
 						>
 							<img
 								className="asnp-h-full asnp-w-full asnp-border-none"
-								src={ IMAGES_URL + 'badge5.svg' }
+								src={ IMAGES_URL + 'badge5.png' }
 							/>
 						</div>
 					</div>
@@ -132,7 +132,7 @@ const BadgeStyles = ( props ) => {
 						>
 							<img
 								className="asnp-h-full asnp-w-full asnp-border-none"
-								src={ IMAGES_URL + 'badge6.svg' }
+								src={ IMAGES_URL + 'badge6.png' }
 							/>
 						</div>
 						<div
