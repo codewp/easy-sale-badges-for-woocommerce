@@ -10,7 +10,6 @@ class Hooks {
 		if ( get_plugin()->is_request( 'frontend' ) ) {
 			self::single_hooks();
 			self::loop_hooks();
-			add_filter( 'woocommerce_product_get_image', array( __CLASS__, 'woocommerce_product_get_image' ), 999, 2 );
 		}
 	}
 
@@ -89,7 +88,7 @@ class Hooks {
 	public static function loop_hooks() {
 		self::loop_custom_hooks();
 
-		$loop_position = get_plugin()->settings->get_setting( 'loopPosition', 'none' );
+		$loop_position = get_plugin()->settings->get_setting( 'loopPosition', 'woocommerce_product_get_image' );
 		if ( empty( $loop_position ) || 'none' === $loop_position ) {
 			return;
 		}
@@ -174,6 +173,10 @@ class Hooks {
 			case 'shop_loop':
 				add_action( "shop_loop", array( __CLASS__, 'display_sale_badge' ), 99 );
 				break;
+
+			case 'woocommerce_product_get_image':
+				add_filter( 'woocommerce_product_get_image', array( __CLASS__, 'woocommerce_product_get_image' ), 999, 2 );
+				break;
 		}
 	}
 
@@ -222,10 +225,9 @@ class Hooks {
 			return $image;
 		}
 
-		$badge = '';
-		$loop_position = get_plugin()->settings->get_setting( 'loopPosition', 'none' );
-		if ( empty( $loop_position ) || 'none' === $loop_position ) {
-			$badge = display_sale_badges( $product, false, true );
+		$badge = display_sale_badges( $product, false, true );
+		if ( empty( $badge ) ) {
+			return $image;
 		}
 
 		if ( false === strpos( $image, '<div' ) ) {

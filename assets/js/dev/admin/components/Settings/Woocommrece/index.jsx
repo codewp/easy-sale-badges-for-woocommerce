@@ -45,6 +45,12 @@ const WooCommerce = ( props ) => {
 							props.onChange( 'loopPosition', e.target.value )
 						}
 					>
+						<option value="woocommerce_product_get_image">
+							{ __(
+								'Product get image',
+								'asnp-easy-sale-badge'
+							) }
+						</option>
 						<option value="before_shop_loop_item_thumbnail">
 							{ __(
 								'Before product thumbnail',

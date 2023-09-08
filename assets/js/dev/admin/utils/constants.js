@@ -3,7 +3,7 @@ import { __ } from '@wordpress/i18n';
 export const defaultSettings = {
 	showLabel: 1,
 	singlePosition: 'before_single_item_images',
-	loopPosition: 'before_shop_loop_item_thumbnail',
+	loopPosition: 'woocommerce_product_get_image',
 	singleCustomHooks: '',
 	loopCustomHooks: '',
 	showBadgeProductPage: '',
@@ -595,7 +595,7 @@ export default function BadgeCssandAdv( badge ) {
 					`rotateZ(90deg) !important` )
 			};
 
-		
+
 		`;
 			badgeIconOne = `
 			position: absolute;
@@ -655,7 +655,7 @@ export default function BadgeCssandAdv( badge ) {
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
 			right:${ badge.badgePositionX == 'right' ? '0px' : '' };
 			height: ${ badge.widthBadge }px;
-			width: ${ badge.widthBadge }px;		
+			width: ${ badge.widthBadge }px;
             position: absolute;
             z-index: 99;
             top: 0px;
@@ -686,7 +686,7 @@ export default function BadgeCssandAdv( badge ) {
 			border-top-right-radius: 3px;
 			border-top-left-radius: 3px;
 			text-align: center;
-			&::after {				
+			&::after {
 			border-top: ${ badge.widthBadge / 4 }px solid ${ badge.badgeColor } !important;
 			border-right: ${ badge.widthBadge / 2 }px solid transparent !important;
 			border-left: ${ badge.widthBadge / 2 }px solid transparent !important;
@@ -714,14 +714,14 @@ export default function BadgeCssandAdv( badge ) {
 			width: ${ badge.widthBadge }px;
 			background: ${ badge.badgeColor };
 			position: absolute;
-			z-index: 1;			
+			z-index: 1;
 			opacity: ${ badge.opacity };
 			top: 0px;
 			left: 0px;
 			text-align: center;
 			border-radius: 3px 3px ${ badge.widthBadge / 2.38 }px ${
 				badge.widthBadge / 2.38
-			}px !important;	
+			}px !important;
 			`;
 			badgeIconOne = `
 			transform: translateY(-50%);
@@ -848,7 +848,7 @@ export default function BadgeCssandAdv( badge ) {
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
 			right: ${ badge.badgePositionX == 'right' ? '0px' : '' };
 			height: ${ badge.heightBadge }px;
-			width: ${ badge.widthBadge }px;	
+			width: ${ badge.widthBadge }px;
 			opacity: ${ badge.opacity };
 			background: ${ badge.badgeColor };`;
 	}
@@ -1044,7 +1044,7 @@ export default function BadgeCssandAdv( badge ) {
 			font-weight: 700;
 			text-shadow: 0px 2px 1px rgba(0,0,0,0.15);
 			`;
-			Label = `  
+			Label = `
 			display: block;
 			font-weight: 400;
 			font-size: 10px;
@@ -1057,7 +1057,7 @@ export default function BadgeCssandAdv( badge ) {
 			gap: 5px;
 			grid-template-columns: 1fr 1fr 1fr 1fr;
 			color: ${ badge.textColor };
-			opacity: ${ badge.opacity };			
+			opacity: ${ badge.opacity };
 			`;
 			badgeTimerCont = `
 			display: inline-block;
@@ -1071,7 +1071,7 @@ export default function BadgeCssandAdv( badge ) {
 			font-weight: 700;
 			text-shadow: 0px 2px 1px rgba(0,0,0,0.15);
 			`;
-			Label = `  
+			Label = `
 			display: block;
 			font-weight: 400;
 			font-size: 10px;
@@ -1099,7 +1099,7 @@ export default function BadgeCssandAdv( badge ) {
 			font-weight: 700;
 			text-shadow: 0px 2px 1px rgba(0,0,0,0.15);
 			`;
-			Label = `  
+			Label = `
 			display: block;
 			font-weight: 400;
 			font-size: 10px;
@@ -1112,7 +1112,7 @@ export default function BadgeCssandAdv( badge ) {
 			gap: 5px;
 			grid-template-columns: 1fr 1fr 1fr 1fr;
 			color: ${ badge.textColor };
-			opacity: ${ badge.opacity };			
+			opacity: ${ badge.opacity };
 			`;
 			badgeTimerCont = `
 			display: inline-block;
@@ -1126,7 +1126,7 @@ export default function BadgeCssandAdv( badge ) {
 			font-weight: 700;
 			text-shadow: 0px 2px 1px rgba(0,0,0,0.15);
 			`;
-			Label = `  
+			Label = `
 			display: block;
 			font-weight: 400;
 			font-size: 10px;
@@ -1151,7 +1151,7 @@ export default function BadgeCssandAdv( badge ) {
 			font-weight: 700;
 			text-shadow: 0px 2px 1px rgba(0,0,0,0.15);
 			`;
-			Label = `  
+			Label = `
 			display: block;
 			font-weight: 400;
 			font-size: 10px;
@@ -1177,7 +1177,7 @@ export default function BadgeCssandAdv( badge ) {
 			font-weight: 700;
 			text-shadow: 0px 2px 1px rgba(0,0,0,0.15);
 			`;
-			Label = `  
+			Label = `
 			display: block;
 			font-weight: 400;
 			font-size: 10px;
@@ -1203,7 +1203,7 @@ export default function BadgeCssandAdv( badge ) {
 			font-weight: 700;
 			text-shadow: 0px 2px 1px rgba(0,0,0,0.15);
 			`;
-			Label = `  
+			Label = `
 			display: block;
 			font-weight: 400;
 			font-size: 10px;
@@ -1229,7 +1229,7 @@ export default function BadgeCssandAdv( badge ) {
 			font-weight: 700;
 			text-shadow: 0px 2px 1px rgba(0,0,0,0.15);
 			`;
-			Label = `  
+			Label = `
 			display: block;
 			font-weight: 400;
 			font-size: 10px;
