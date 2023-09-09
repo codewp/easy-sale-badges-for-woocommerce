@@ -107,13 +107,9 @@ class Items extends BaseController {
 				  )
 				);
 			  } elseif ( 'categories' === $request['type'] ) {
-
 				$items = ItemsModel::get_categories( array( 'include' => array_filter( array_map( 'absint', $req_items ) ) ) );
-
 			  }  elseif ( 'tags' === $request['type'] ) {
-
 				$items = ItemsModel::get_tags( array( 'include' => array_filter( array_map( 'absint', $req_items ) ) ) );
-
 			  } else {
 				$items = apply_filters( 'asnp_wesb_items_api_' . __FUNCTION__, [], $items, $request );
 			  }
