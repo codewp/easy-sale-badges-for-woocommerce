@@ -11,6 +11,15 @@ use AsanaPlugins\WooCommerce\SaleBadges\ShortCode\BadgeShortCode;
 defined( 'ABSPATH' ) || exit;
 
 final class Plugin {
+
+	public $admin;
+
+	public $settings;
+
+	public $plugin_name;
+
+	public $version;
+
 	/**
 	 * The single instance of the class.
 	 *
@@ -180,15 +189,26 @@ final class Plugin {
 	 * @return array
 	 */
 	protected function get_dependency_errors() {
-		$errors                    = array();
-		$wordpress_version         = get_bloginfo( 'version' );
-		$minimum_wordpress_version = '5.0';
-		$wordpress_minimum_met     = version_compare( $wordpress_version, $minimum_wordpress_version, '>=' );
+		$errors                      = array();
+		$wordpress_version           = get_bloginfo( 'version' );
+		$minimum_wordpress_version   = '4.7';
+		$minimum_woocommerce_version = '3.0';
+		$woocommerce_minimum_met     = class_exists( 'WooCommerce' ) && version_compare( WC_VERSION, $minimum_woocommerce_version, '>=' );
+		$wordpress_minimum_met       = version_compare( $wordpress_version, $minimum_wordpress_version, '>=' );
+
+		if ( ! $woocommerce_minimum_met ) {
+			$errors[] = sprintf(
+				/* translators: 1: URL of WooCommerce plugin, 2: The minimum WooCommerce version number */
+				__( 'The Sale Badges and Product Labels plugin requires <a href="%1$s">WooCommerce</a> %2$s or greater to be installed and active.', 'asnp-easy-sale-badge' ),
+				'https://wordpress.org/plugins/woocommerce/',
+				$minimum_woocommerce_version
+			);
+		}
 
 		if ( ! $wordpress_minimum_met ) {
 			$errors[] = sprintf(
 				/* translators: 1: URL of WordPress.org, 2: The minimum WordPress version number */
-				__( 'The Easy Sale Badges For Woocommerce plugin requires <a href="%1$s">WordPress</a> %2$s or greater to be installed and active.', 'asnp-easy-sale-badge' ),
+				__( 'The Sale Badges and Product Labels plugin requires <a href="%1$s">WordPress</a> %2$s or greater to be installed and active.', 'asnp-easy-sale-badge' ),
 				'https://wordpress.org/',
 				$minimum_wordpress_version
 			);
