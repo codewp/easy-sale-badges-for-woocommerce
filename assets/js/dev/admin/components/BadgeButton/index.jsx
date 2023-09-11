@@ -217,7 +217,7 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 			updateBadge( 'bottomLeftRadius', '0' );
 		}
 		if ( badge.badgeStyles == 'badge13' ) {
-			updateBadge( 'widthBadge', '50' );
+			updateBadge( 'widthBadge', '49' );
 		}
 	}, [ badge.badgeStyles, badge.badgePositionX ] );
 
