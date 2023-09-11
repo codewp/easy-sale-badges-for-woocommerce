@@ -2,6 +2,8 @@
 
 namespace AsanaPlugins\WooCommerce\SaleBadges;
 
+use function Syntax_Highlighting_Code_Block\get_styles;
+
 function get_plugin() {
 	return Plugin::instance();
 }
@@ -184,4 +186,48 @@ function get_current_product() {
 	}
 
 	return false;
+}
+
+function get_theme_loop_position( $stylesheet = null, $template = null ) {
+	$stylesheet = empty( $stylesheet ) ? get_stylesheet() : $stylesheet;
+	$template   = empty( $template ) ? get_template() : $template;
+
+	$stylesheet = ! empty( $stylesheet ) ? strtolower( $stylesheet ) : $stylesheet;
+	$template   = ! empty( $template ) ? strtolower( $template ) : $template;
+
+	$themes = [
+		'avada' => '',
+	];
+
+	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
+		return $themes[ $stylesheet ];
+	}
+
+	if ( ! empty( $template ) && isset( $themes[ $template ] ) ) {
+		return $themes[ $template ];
+	}
+
+	return '';
+}
+
+function get_theme_single_position( $stylesheet = null, $template = null ) {
+	$stylesheet = empty( $stylesheet ) ? get_stylesheet() : $stylesheet;
+	$template   = empty( $template ) ? get_template() : $template;
+
+	$stylesheet = ! empty( $stylesheet ) ? strtolower( $stylesheet ) : $stylesheet;
+	$template   = ! empty( $template ) ? strtolower( $template ) : $template;
+
+	$themes = [
+		'avada' => '',
+	];
+
+	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
+		return $themes[ $stylesheet ];
+	}
+
+	if ( ! empty( $template ) && isset( $themes[ $template ] ) ) {
+		return $themes[ $template ];
+	}
+
+	return '';
 }

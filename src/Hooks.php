@@ -16,7 +16,11 @@ class Hooks {
 	public static function single_hooks() {
 		self::single_custom_hooks();
 
-		$single_position = get_plugin()->settings->get_setting( 'singlePosition', 'before_single_item_images' );
+		$single_position = get_theme_single_position();
+		if ( empty( $single_position ) ) {
+			$single_position = get_plugin()->settings->get_setting( 'singlePosition', 'before_single_item_images' );
+		}
+
 		if ( empty( $single_position ) || 'none' === $single_position ) {
 			return;
 		}
@@ -88,7 +92,11 @@ class Hooks {
 	public static function loop_hooks() {
 		self::loop_custom_hooks();
 
-		$loop_position = get_plugin()->settings->get_setting( 'loopPosition', 'woocommerce_product_get_image' );
+		$loop_position = get_theme_loop_position();
+		if ( empty( $loop_position ) ) {
+			$loop_position = get_plugin()->settings->get_setting( 'loopPosition', 'woocommerce_product_get_image' );
+		}
+
 		if ( empty( $loop_position ) || 'none' === $loop_position ) {
 			return;
 		}
