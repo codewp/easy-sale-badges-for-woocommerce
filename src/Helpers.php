@@ -196,7 +196,7 @@ function get_theme_loop_position( $stylesheet = null, $template = null ) {
 	$template   = ! empty( $template ) ? strtolower( $template ) : $template;
 
 	$themes = [
-		'avada' => '',
+		'woodmart' => 'after_shop_loop_item_thumbnail',
 	];
 
 	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {

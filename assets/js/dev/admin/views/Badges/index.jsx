@@ -24,6 +24,47 @@ export default function Badges() {
 		setLoading( state.isLoading );
 	}, [ state.isLoading ] );
 
+	const PreviewImage = ( badge ) => {
+		let imagePreview = '';
+
+		const styleToImageMap = {
+			bdgAdvanced1: 'badgeAdvance1.png',
+			bdgAdvanced2: 'badgeAdvance2.png',
+			bdgAdvanced3: 'badgeAdvance3.png',
+			bdgAdvanced4: 'badgeAdvance4.png',
+			timer1: 'badgeTimer1.png',
+			timer2: 'badgeTimer2.png',
+			timer3: 'badgeTimer3.png',
+			timer4: 'badgeTimer4.png',
+			timer5: 'badgeTimerV1.png',
+			timer6: 'badgeTimerV2.png',
+			timer7: 'badgeTimerV3.png',
+			timer8: 'badgeTimerV4.png',
+		};
+
+		if (
+			badge.imgbadge === 0 &&
+			badge.imgbadgeAdv === 0 &&
+			badge.useTimerBadge === 0
+		) {
+			imagePreview = IMAGES_URL + badge.badgeStyles + '.png';
+		} else if ( badge.imgbadge === 1 ) {
+			imagePreview = badge.badgeImage;
+		} else if ( badge.imgbadgeAdv === 1 ) {
+			const styleKey = badge.badgeAdv;
+			if ( styleToImageMap.hasOwnProperty( styleKey ) ) {
+				imagePreview = IMAGES_URL + styleToImageMap[ styleKey ];
+			}
+		} else if ( badge.useTimerBadge === 1 ) {
+			const timerKey = badge.badgeTimer;
+			if ( styleToImageMap.hasOwnProperty( timerKey ) ) {
+				imagePreview = IMAGES_URL + styleToImageMap[ timerKey ];
+			}
+		}
+
+		return imagePreview;
+	};
+
 	const duplicate = async ( id ) => {
 		setLoading( true );
 		try {
@@ -266,11 +307,10 @@ export default function Badges() {
 														to={ `/badge/${ item.id }` }
 													>
 														<img
-															className="asnp-h-[5rem]"
-															src={
-																IMAGES_URL +
-																'badge1.svg'
-															}
+															className="asnp-h-[3rem]"
+															src={ PreviewImage(
+																item
+															) }
 														/>
 													</Link>
 												</td>
