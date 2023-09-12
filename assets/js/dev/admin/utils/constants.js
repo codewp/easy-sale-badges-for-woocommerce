@@ -10,13 +10,13 @@ export const defaultSettings = {
 	singleContainer: '',
 	timerPosition: 'outOfImage',
 };
-export const PLUGIN_URL = whatsappData.pluginUrl;
+export const PLUGIN_URL = saleBadgeData.pluginUrl;
 export const IMAGES_URL = `${ PLUGIN_URL }assets/images/`;
 
 let serverTime, initialLocalTime;
 
 export const initTimes = () => {
-	serverTime = new Date( whatsappData.now );
+	serverTime = new Date( saleBadgeData.now );
 	initialLocalTime = Date.now();
 };
 

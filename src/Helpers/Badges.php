@@ -1541,6 +1541,7 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= '.asnp-esb-timer1-'. $timer_uniq .' {';
 				$dynamic_styles .= ' display: grid;';
 				$dynamic_styles .= ' gap: 5px;';
+				$dynamic_styles .= ' height: 55px;';
 				$dynamic_styles .= ' grid-template-columns: 1fr 1fr 1fr 1fr;';
 			$dynamic_styles .= ' border-radius: 10px;';
 

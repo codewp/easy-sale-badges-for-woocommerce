@@ -38,7 +38,7 @@ class Assets {
 
 			wp_localize_script(
 				'asnp-easy-sale-badge-admin',
-				'whatsappData',
+				'saleBadgeData',
 				array(
 					'pluginUrl'  => ASNP_WESB_PLUGIN_URL,
 					'timezone'   => SaleBadges\get_timezone_string(),
