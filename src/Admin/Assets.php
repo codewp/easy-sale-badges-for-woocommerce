@@ -40,9 +40,11 @@ class Assets {
 				'asnp-easy-sale-badge-admin',
 				'whatsappData',
 				array(
-					'pluginUrl' => ASNP_WESB_PLUGIN_URL,
-					'timezone'  => SaleBadges\get_timezone_string(),
-					'now'       => date( 'Y-m-d H:i:s', current_time( 'timestamp' ) ),
+					'pluginUrl'  => ASNP_WESB_PLUGIN_URL,
+					'timezone'   => SaleBadges\get_timezone_string(),
+					'now'        => date( 'Y-m-d H:i:s', current_time( 'timestamp' ) ),
+					'stylesheet' => get_stylesheet(),
+					'template'   => get_template(),
 				)
 			);
 
