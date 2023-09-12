@@ -1523,9 +1523,11 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 
 			$dynamic_styles = '';
 			$timer_uniq = $badge->id;
+			$timer_type='';
 
 			switch ( $badge->badgeTimer ) {
 			case 'timer1':
+			$timer_type='H';
 			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
@@ -1539,10 +1541,10 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-timer1-'. $timer_uniq .' {';
-				$dynamic_styles .= ' display: grid;';
-				$dynamic_styles .= ' gap: 5px;';
-				$dynamic_styles .= ' height: 55px;';
-				$dynamic_styles .= ' grid-template-columns: 1fr 1fr 1fr 1fr;';
+			$dynamic_styles .= ' display: grid;';
+			$dynamic_styles .= ' gap: 5px;';
+			$dynamic_styles .= ' height: 59px;';
+			$dynamic_styles .= ' grid-template-columns: 1fr 1fr 1fr 1fr;';
 			$dynamic_styles .= ' border-radius: 10px;';
 
 			if ( isset( $badge->bgColorTimer ) ) {
@@ -1585,6 +1587,7 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 			break;
 
 			case 'timer2':
+			$timer_type='H';
 			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
@@ -1646,6 +1649,7 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 			break;
 
 			case 'timer3':
+			$timer_type='H';
 			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
@@ -1707,6 +1711,7 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 			break;
 
 			case 'timer4':
+			$timer_type='H';
 			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
@@ -1767,6 +1772,7 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 
 			break;
 			case 'timer5':
+			$timer_type='V';	
 			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
@@ -1799,11 +1805,10 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 
 			$dynamic_styles .= '.asnp-esb-timer2-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: inline-block;';
-			$dynamic_styles .= ' padding: 6px 13px;';
 			$dynamic_styles .= ' width: 55px;';
 
 			$dynamic_styles .= '}';
-
+			
 			$dynamic_styles .= '.asnp-esb-timer3-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' font-weight: 700;';
@@ -1826,6 +1831,7 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 			break;
 
 			case 'timer6':
+			$timer_type='V';
 			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
@@ -1886,6 +1892,7 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 
 			break;
 			case 'timer7':
+			$timer_type='V';
 			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
@@ -1948,6 +1955,7 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 			break;
 
 			case 'timer8':
+			$timer_type='V';
 			$dynamic_styles .= '.asnp-esb-productBadgeTimer-'. $timer_uniq .' {';
 			if ( isset( $badge->zIndex ) ) {
 					$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
@@ -2089,19 +2097,19 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 			// Timer Badge
 			$output = '<div id="asnp-esb-timer-badge-' . esc_attr( $badge->id ) . '" class="' . esc_attr( $class_names ) . '" style="display: none;">';
 			$output .= '<div class="asnp-esb-timer1-'. $timer_uniq .'">';
-			$output .= '<div class="asnp-esb-timer2-'. $timer_uniq .'">';
+			$output .= '<div class="asnp-esb-timer'. $timer_type .' asnp-esb-timer2-'. $timer_uniq .'">';
 			$output .= '<div class="asnp-esb-daysT asnp-esb-timer3-'. $timer_uniq .'">0</div>';
 			$output .= '<div class="asnp-esb-timer4-'. $timer_uniq .'">' . esc_html__( $badge->labelDayTimer, 'asnp-easy-sale-badge' ) . '</div>';
 			$output .= '</div>';
-			$output .= '<div class="asnp-esb-timer2-'. $timer_uniq .'">';
+			$output .= '<div class="asnp-esb-timer'. $timer_type .' asnp-esb-timer2-'. $timer_uniq .'">';
 			$output .= '<div class="asnp-esb-hoursT asnp-esb-timer3-'. $timer_uniq .'">0</div>';
 			$output .= '<div class="asnp-esb-timer4-'. $timer_uniq .'">' . esc_html__( $badge->labelHoursTimer, 'asnp-easy-sale-badge' ) . '</div>';
 			$output .= '</div>';
-			$output .= '<div class="asnp-esb-timer2-'. $timer_uniq .'">';
+			$output .= '<div class="asnp-esb-timer'. $timer_type .' asnp-esb-timer2-'. $timer_uniq .'">';
 			$output .= '<div class="asnp-esb-minT asnp-esb-timer3-'. $timer_uniq .'">0</div>';
 			$output .= '<div class="asnp-esb-timer4-'. $timer_uniq .'">' . esc_html__( $badge->labelMinTimer, 'asnp-easy-sale-badge' ) . '</div>';
 			$output .= '</div>';
-			$output .= '<div class="asnp-esb-timer2-'. $timer_uniq .'">';
+			$output .= '<div class="asnp-esb-timer'. $timer_type .' asnp-esb-timer2-'. $timer_uniq .'">';
 			$output .= '<div class="asnp-esb-secT asnp-esb-timer3-'. $timer_uniq .'">0</div>';
 			$output .= '<div class="asnp-esb-timer4-'. $timer_uniq .'">' . esc_html__( $badge->labelSecTimer, 'asnp-easy-sale-badge' ) . '</div>';
 			$output .= '</div>';
