@@ -196,14 +196,15 @@ function get_theme_loop_position( $stylesheet = null, $template = null ) {
 	$template   = ! empty( $template ) ? strtolower( $template ) : $template;
 
 	$themes = [
-		'avada'    => 'after_shop_loop_item_thumbnail',
-		'woodmart' => 'after_shop_loop_item_thumbnail',
-		'porto'    => 'after_shop_loop_item_thumbnail',
-		'oceanwp'  => 'after_shop_loop_item_thumbnail',
-		'basel'    => 'after_shop_loop_item_thumbnail',
-		'thegem'    => 'after_shop_loop_item_thumbnail',
-		'uncode'   => 'uncode_entry_visual_after_image',
+		'avada'    		=> 'after_shop_loop_item_thumbnail',
+		'woodmart' 		=> 'after_shop_loop_item_thumbnail',
+		'porto'    		=> 'after_shop_loop_item_thumbnail',
+		'oceanwp'  		=> 'after_shop_loop_item_thumbnail',
+		'basel'   		=> 'after_shop_loop_item_thumbnail',
+		'thegem'        => 'after_shop_loop_item_thumbnail',
+		'uncode'        => 'uncode_entry_visual_after_image',
 		'rehub-theme'   => 'rh_woo_thumbnail_loop',
+		'total'         => 'wpex_woocommerce_loop_thumbnail_before',
 	];
 
 	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
