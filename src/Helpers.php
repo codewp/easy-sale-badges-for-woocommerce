@@ -201,6 +201,7 @@ function get_theme_loop_position( $stylesheet = null, $template = null ) {
 		'porto'    => 'after_shop_loop_item_thumbnail',
 		'oceanwp'  => 'after_shop_loop_item_thumbnail',
 		'basel'    => 'after_shop_loop_item_thumbnail',
+		'thegem'    => 'after_shop_loop_item_thumbnail',
 		'uncode'   => 'uncode_entry_visual_after_image',
 	];
 
@@ -222,7 +223,7 @@ function get_theme_single_position( $stylesheet = null, $template = null ) {
 	$stylesheet = ! empty( $stylesheet ) ? strtolower( $stylesheet ) : $stylesheet;
 	$template   = ! empty( $template ) ? strtolower( $template ) : $template;
 
-	$themes = [];
+	$themes = ['thegem'    => 'thegem_woocommerce_single_product_left',];
 
 	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
 		return $themes[ $stylesheet ];
