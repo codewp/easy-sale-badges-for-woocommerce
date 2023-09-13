@@ -484,7 +484,55 @@ const Timer = ( props ) => {
 							</Tippy>
 						</div>
 
-						<div className="asnp-flex asnp-mt-[1rem] asnp-w-full">
+						<div className="asnp-flex asnp-mt-[2rem] asnp-w-full">
+							<label>
+								<span className="asnp-field-title">
+									{ __(
+										'Padding Top/Bottom',
+										'asnp-easy-sale-badge'
+									) }
+								</span>
+								<div className="asnp-w-[10rem]">
+									<input
+										type="number"
+										min="0"
+										max="40"
+										className="asnp-text-field"
+										value={ props.paddingTopBottom }
+										onChange={ ( e ) =>
+											props.onChange(
+												'paddingTopBottom',
+												e.target.value
+											)
+										}
+									/>
+								</div>
+							</label>
+							<label className="asnp-ml-6">
+								<span className="asnp-field-title">
+									{ __(
+										'Padding Right/Left',
+										'asnp-easy-sale-badge'
+									) }
+								</span>
+								<div className="asnp-w-[10rem]">
+									<input
+										type="number"
+										className="asnp-text-field"
+										min="0"
+										max="100"
+										value={ props.paddingRightLeft }
+										onChange={ ( e ) =>
+											props.onChange(
+												'paddingRightLeft',
+												e.target.value
+											)
+										}
+									/>
+								</div>
+							</label>
+						</div>
+						<div className="asnp-flex asnp-mt-[2rem] asnp-w-full">
 							<label>
 								<span className="asnp-field-title">
 									{ __(

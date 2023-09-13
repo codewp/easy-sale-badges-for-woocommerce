@@ -941,7 +941,6 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			badgeTimerCont = `
 			display: inline-block;
-			padding: 6px 20px;
 			width: 66px;
 			`;
 			TimerDate = `
@@ -966,7 +965,6 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			badgeTimerCont = `
 			display: inline-block;
-			padding: 6px 20px;
 			width: 66px;
 			border: 2px solid ${ badge.bgColorTimer };
 			border-radius: 12px;
@@ -993,7 +991,6 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			badgeTimerCont = `
 			display: inline-block;
-			padding: 13px 26px;
 			width: 70px;
 			border-radius: 50%;
 			background: ${ badge.bgColorTimer };
@@ -1021,7 +1018,6 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			badgeTimerCont = `
 			display: inline-block;
-			padding: 13px 26px;
 			width: 70px;
 			border: 2px solid ${ badge.bgColorTimer };
 			border-radius: 50%;
@@ -1048,7 +1044,6 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			badgeTimerCont = `
 			display: inline-block;
-			padding: 6px 20px;
 			width: 60px;
 			`;
 			TimerDate = `
@@ -1072,7 +1067,6 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			badgeTimerCont = `
 			display: inline-block;
-			padding: 6px 22px;
 			width: 64px;
 			border: 2px solid ${ badge.bgColorTimer };
 			border-radius: 10px;
@@ -1098,7 +1092,6 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			badgeTimerCont = `
 			display: inline-block;
-			padding: 13px 27px;
 			width: 70px;
 			background: ${ badge.bgColorTimer };
 			border-radius: 50%;
@@ -1124,7 +1117,6 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			badgeTimerCont = `
 			display: inline-block;
-			padding: 13px 26px;
 			width: 70px;
 			border: 2px solid ${ badge.bgColorTimer };
 			border-radius: 50%;

@@ -85,6 +85,8 @@ const defaultBadge = {
 	badgeLabelAdv: 'Sale',
 	opacityAdvImg: '1',
 	opacityTimer: '1',
+	paddingTopBottom: '',
+	paddingRightLeft: '',
 };
 
 export default function Badge() {

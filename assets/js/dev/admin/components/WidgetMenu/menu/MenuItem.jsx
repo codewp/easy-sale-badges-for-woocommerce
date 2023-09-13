@@ -239,6 +239,8 @@ const MenuItem = ( props ) => {
 					selectedDateFrom={ props.badge.selectedDateFrom }
 					selectedDateTo={ props.badge.selectedDateTo }
 					badgeTimer={ props.badge.badgeTimer }
+					paddingTopBottom={ props.badge.paddingTopBottom }
+					paddingRightLeft={ props.badge.paddingRightLeft }
 				/>
 			) }
 		</div>

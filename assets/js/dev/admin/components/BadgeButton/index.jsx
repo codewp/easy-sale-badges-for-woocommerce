@@ -270,6 +270,34 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 		}
 	}, [ badge.badgeAdv ] );
 
+	useEffect( () => {
+		if ( badge.badgeTimer == 'timer1' ) {
+			updateBadge( 'paddingTopBottom', '6' );
+			updateBadge( 'paddingRightLeft', '20' );
+		} else if ( badge.badgeTimer == 'timer2' ) {
+			updateBadge( 'paddingTopBottom', '6' );
+			updateBadge( 'paddingRightLeft', '20' );
+		} else if ( badge.badgeTimer == 'timer3' ) {
+			updateBadge( 'paddingTopBottom', '13' );
+			updateBadge( 'paddingRightLeft', '26' );
+		} else if ( badge.badgeTimer == 'timer4' ) {
+			updateBadge( 'paddingTopBottom', '13' );
+			updateBadge( 'paddingRightLeft', '26' );
+		} else if ( badge.badgeTimer == 'timer5' ) {
+			updateBadge( 'paddingTopBottom', '6' );
+			updateBadge( 'paddingRightLeft', '20' );
+		} else if ( badge.badgeTimer == 'timer6' ) {
+			updateBadge( 'paddingTopBottom', '6' );
+			updateBadge( 'paddingRightLeft', '22' );
+		} else if ( badge.badgeTimer == 'timer7' ) {
+			updateBadge( 'paddingTopBottom', '13' );
+			updateBadge( 'paddingRightLeft', '27' );
+		} else if ( badge.badgeTimer == 'timer8' ) {
+			updateBadge( 'paddingTopBottom', '13' );
+			updateBadge( 'paddingRightLeft', '26' );
+		}
+	}, [ badge.badgeTimer ] );
+
 	let horizAndvert;
 	if ( badge.horizontal === 1 && badge.vertical === 1 ) {
 		horizAndvert = 'scaleX( -1 ) ScaleY(-1)';
@@ -449,6 +477,9 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 										badgeTimerDiv={ badgeTimerDiv }
 									>
 										<StyledSpanDivOne
+											style={ {
+												padding: `${ badge.paddingTopBottom }px ${ badge.paddingRightLeft }px`,
+											} }
 											badgeTimerCont={ badgeTimerCont }
 										>
 											<StyledSpanTime
@@ -467,6 +498,9 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 											</StyledSpanLabelTimer>
 										</StyledSpanDivOne>
 										<StyledSpanDivOne
+											style={ {
+												padding: `${ badge.paddingTopBottom }px ${ badge.paddingRightLeft }px`,
+											} }
 											badgeTimerCont={ badgeTimerCont }
 										>
 											<StyledSpanTime
@@ -485,6 +519,9 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 											</StyledSpanLabelTimer>
 										</StyledSpanDivOne>
 										<StyledSpanDivOne
+											style={ {
+												padding: `${ badge.paddingTopBottom }px ${ badge.paddingRightLeft }px`,
+											} }
 											badgeTimerCont={ badgeTimerCont }
 										>
 											<StyledSpanTime
@@ -503,6 +540,9 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 											</StyledSpanLabelTimer>
 										</StyledSpanDivOne>
 										<StyledSpanDivOne
+											style={ {
+												padding: `${ badge.paddingTopBottom }px ${ badge.paddingRightLeft }px`,
+											} }
 											badgeTimerCont={ badgeTimerCont }
 										>
 											<StyledSpanTime
