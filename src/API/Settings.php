@@ -36,7 +36,7 @@ class Settings extends BaseController {
 	public function get_settings() {
 		return new \WP_REST_Response(
 			array(
-				'settings' => get_option( 'asnp_sale_badge_settings', array() ),
+				'settings' => get_option( 'asnp_easy_sale_badge_settings', array() ),
 			)
 		);
 	}
@@ -65,6 +65,7 @@ class Settings extends BaseController {
 				case 'singleCustomHooks':
 				case 'loopCustomHooks':
 				case 'timerPosition':
+				case 'singleContainer':
 				case 'licenseKey':
 					$data[ $key ] = sanitize_text_field( $value );
 					break;
