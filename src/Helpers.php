@@ -203,6 +203,7 @@ function get_theme_loop_position( $stylesheet = null, $template = null ) {
 		'basel'    => 'after_shop_loop_item_thumbnail',
 		'thegem'    => 'after_shop_loop_item_thumbnail',
 		'uncode'   => 'uncode_entry_visual_after_image',
+		'rehub-theme'   => 'rh_woo_thumbnail_loop',
 	];
 
 	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
@@ -223,7 +224,10 @@ function get_theme_single_position( $stylesheet = null, $template = null ) {
 	$stylesheet = ! empty( $stylesheet ) ? strtolower( $stylesheet ) : $stylesheet;
 	$template   = ! empty( $template ) ? strtolower( $template ) : $template;
 
-	$themes = ['thegem'    => 'thegem_woocommerce_single_product_left',];
+	$themes = [
+		'thegem'         => 'thegem_woocommerce_single_product_left',
+		'rehub-theme'    => 'rh_woo_after_single_image',
+];
 
 	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
 		return $themes[ $stylesheet ];
