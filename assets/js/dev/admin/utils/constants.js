@@ -933,7 +933,10 @@ export default function BadgeCssandAdv( badge ) {
 	switch ( badge.badgeTimer ) {
 		case 'timer1':
 			badgeTimerDiv = `
-			display: inline-block;
+			display: grid;
+			height: 59px;
+			gap: 5px;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
 			color: ${ badge.textColor };
 			opacity: ${ badge.opacity };
 			background: ${ badge.bgColorTimer };
@@ -941,7 +944,6 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			badgeTimerCont = `
 			display: inline-block;
-			width: 66px;
 			`;
 			TimerDate = `
 			display: block;

@@ -1561,7 +1561,6 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 
 			$dynamic_styles .= '.asnp-esb-timer2-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: inline-block;';
-			$dynamic_styles .= ' width: 54px;';
 
 			if ( isset( $badge->paddingTopBottom )&& isset( $badge->paddingTopBottom ) ) {
 				$dynamic_styles .= ' padding: ' . $badge->paddingTopBottom . 'px ' . $badge->paddingRightLeft . 'px ';
@@ -1620,7 +1619,6 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 
 			$dynamic_styles .= '.asnp-esb-timer2-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: inline-block;';
-			$dynamic_styles .= ' width: 57px;';
 			$dynamic_styles .= ' border-radius: 12px;';
 
 			if ( isset( $badge->paddingTopBottom )&& isset( $badge->paddingTopBottom ) ) {
@@ -1750,7 +1748,6 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 
 			$dynamic_styles .= '.asnp-esb-timer2-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: inline-block;';
-			$dynamic_styles .= ' width: 54px;';
 			$dynamic_styles .= ' border-radius: 50%;';
 
 			if ( isset( $badge->paddingTopBottom )&& isset( $badge->paddingTopBottom ) ) {
