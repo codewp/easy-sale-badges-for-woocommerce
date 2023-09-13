@@ -278,8 +278,8 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 			updateBadge( 'paddingTopBottom', '6' );
 			updateBadge( 'paddingRightLeft', '20' );
 		} else if ( badge.badgeTimer == 'timer3' ) {
-			updateBadge( 'paddingTopBottom', '13' );
-			updateBadge( 'paddingRightLeft', '26' );
+			updateBadge( 'paddingTopBottom', '6' );
+			updateBadge( 'paddingRightLeft', '13' );
 		} else if ( badge.badgeTimer == 'timer4' ) {
 			updateBadge( 'paddingTopBottom', '13' );
 			updateBadge( 'paddingRightLeft', '26' );
@@ -290,8 +290,8 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 			updateBadge( 'paddingTopBottom', '6' );
 			updateBadge( 'paddingRightLeft', '22' );
 		} else if ( badge.badgeTimer == 'timer7' ) {
-			updateBadge( 'paddingTopBottom', '13' );
-			updateBadge( 'paddingRightLeft', '27' );
+			updateBadge( 'paddingTopBottom', '6' );
+			updateBadge( 'paddingRightLeft', '13' );
 		} else if ( badge.badgeTimer == 'timer8' ) {
 			updateBadge( 'paddingTopBottom', '13' );
 			updateBadge( 'paddingRightLeft', '26' );

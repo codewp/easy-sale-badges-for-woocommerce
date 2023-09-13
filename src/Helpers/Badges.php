@@ -1563,7 +1563,7 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= ' display: inline-block;';
 
 			if ( isset( $badge->paddingTopBottom )&& isset( $badge->paddingTopBottom ) ) {
-				$dynamic_styles .= ' padding: ' . $badge->paddingTopBottom . 'px ' . $badge->paddingRightLeft . 'px ';
+				$dynamic_styles .= ' padding: ' . $badge->paddingTopBottom . 'px ' . $badge->paddingRightLeft . 'px ;';
 			}
 			$dynamic_styles .= '}';
 
@@ -1622,7 +1622,7 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= ' border-radius: 12px;';
 
 			if ( isset( $badge->paddingTopBottom )&& isset( $badge->paddingTopBottom ) ) {
-				$dynamic_styles .= ' padding: ' . $badge->paddingTopBottom . 'px ' . $badge->paddingRightLeft . 'px ';
+				$dynamic_styles .= ' padding: ' . $badge->paddingTopBottom . 'px ' . $badge->paddingRightLeft . 'px ;';
 			}
 
 			if ( isset( $badge->bgColorTimer ) ) {
@@ -1683,11 +1683,10 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 
 			$dynamic_styles .= '.asnp-esb-timer2-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: inline-block;';
-			$dynamic_styles .= ' width: 54px;';
 			$dynamic_styles .= ' border-radius: 50%;';
 
 			if ( isset( $badge->paddingTopBottom )&& isset( $badge->paddingTopBottom ) ) {
-				$dynamic_styles .= ' padding: ' . $badge->paddingTopBottom . 'px ' . $badge->paddingRightLeft . 'px ';
+				$dynamic_styles .= ' padding: ' . $badge->paddingTopBottom . 'px ' . $badge->paddingRightLeft . 'px ;';
 			}
 
 			if ( isset( $badge->bgColorTimer ) ) {
@@ -1751,7 +1750,7 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= ' border-radius: 50%;';
 
 			if ( isset( $badge->paddingTopBottom )&& isset( $badge->paddingTopBottom ) ) {
-				$dynamic_styles .= ' padding: ' . $badge->paddingTopBottom . 'px ' . $badge->paddingRightLeft . 'px ';
+				$dynamic_styles .= ' padding: ' . $badge->paddingTopBottom . 'px ' . $badge->paddingRightLeft . 'px ;';
 			}
 
 			if ( isset( $badge->bgColorTimer ) ) {
@@ -1817,7 +1816,7 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= ' height: 55px;';
 
 			if ( isset( $badge->paddingTopBottom )&& isset( $badge->paddingTopBottom ) ) {
-				$dynamic_styles .= ' padding: ' . $badge->paddingTopBottom . 'px ' . $badge->paddingRightLeft . 'px ';
+				$dynamic_styles .= ' padding: ' . $badge->paddingTopBottom . 'px ' . $badge->paddingRightLeft . 'px ;';
 			}
 
 			$dynamic_styles .= '}';
@@ -1878,7 +1877,7 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= ' border-radius: 10px;';
 
 			if ( isset( $badge->paddingTopBottom )&& isset( $badge->paddingTopBottom ) ) {
-				$dynamic_styles .= ' padding: ' . $badge->paddingTopBottom . 'px ' . $badge->paddingRightLeft . 'px ';
+				$dynamic_styles .= ' padding: ' . $badge->paddingTopBottom . 'px ' . $badge->paddingRightLeft . 'px ;';
 			}
 
 			if ( isset( $badge->bgColorTimer ) ) {
@@ -1939,10 +1938,9 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= '.asnp-esb-timer2-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: inline-block;';
 			$dynamic_styles .= ' border-radius: 50%;';
-			$dynamic_styles .= ' height: 52px;';
 
 			if ( isset( $badge->paddingTopBottom )&& isset( $badge->paddingTopBottom ) ) {
-				$dynamic_styles .= ' padding: ' . $badge->paddingTopBottom . 'px ' . $badge->paddingRightLeft . 'px ';
+				$dynamic_styles .= ' padding: ' . $badge->paddingTopBottom . 'px ' . $badge->paddingRightLeft . 'px ;';
 			}
 
 			if ( isset( $badge->bgColorTimer ) ) {
@@ -2007,7 +2005,7 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= ' height: 52px;';
 
 			if ( isset( $badge->paddingTopBottom )&& isset( $badge->paddingTopBottom ) ) {
-				$dynamic_styles .= ' padding: ' . $badge->paddingTopBottom . 'px ' . $badge->paddingRightLeft . 'px ';
+				$dynamic_styles .= ' padding: ' . $badge->paddingTopBottom . 'px ' . $badge->paddingRightLeft . 'px ;';
 			}
 
 			if ( isset( $badge->bgColorTimer ) ) {
@@ -2070,7 +2068,7 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= ' display: inline-block;';
 			$dynamic_styles .= ' width: 54px;';
 			if ( isset( $badge->paddingTopBottom )&& isset( $badge->paddingTopBottom ) ) {
-				$dynamic_styles .= ' padding: ' . $badge->paddingTopBottom . 'px ' . $badge->paddingRightLeft . 'px ';
+				$dynamic_styles .= ' padding: ' . $badge->paddingTopBottom . 'px ' . $badge->paddingRightLeft . 'px ;';
 			}
 			$dynamic_styles .= '}';
 

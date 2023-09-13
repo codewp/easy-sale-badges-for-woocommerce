@@ -228,6 +228,7 @@ function get_theme_single_position( $stylesheet = null, $template = null ) {
 	$themes = [
 		'thegem'         => 'thegem_woocommerce_single_product_left',
 		'rehub-theme'    => 'rh_woo_after_single_image',
+		'woodmart'       => 'woocommerce_single_product_summary',
 ];
 
 	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
