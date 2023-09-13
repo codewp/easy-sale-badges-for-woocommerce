@@ -79,6 +79,10 @@ class Hooks {
 					add_action( 'woocommerce_single_product_summary', array( __CLASS__, 'single_dispaly_sale_badge' ), 11 );
 				}
 				break;
+
+			default:
+				add_action( $single_position, array( __CLASS__, 'single_dispaly_sale_badge' ), 99 );
+				break;
 		}
 	}
 
@@ -184,6 +188,10 @@ class Hooks {
 
 			case 'woocommerce_product_get_image':
 				add_filter( 'woocommerce_product_get_image', array( __CLASS__, 'woocommerce_product_get_image' ), 999, 2 );
+				break;
+
+			default:
+				add_action( $loop_position, array( __CLASS__, 'display_sale_badge' ), 99 );
 				break;
 		}
 	}
