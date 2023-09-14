@@ -1604,6 +1604,7 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 
 			$dynamic_styles .= '.asnp-esb-timer1-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: grid;';
+			$dynamic_styles .= ' height: 59px;';
 			$dynamic_styles .= ' gap: 5px;';
 			$dynamic_styles .= ' grid-template-columns: 1fr 1fr 1fr 1fr;';
 
@@ -1813,7 +1814,6 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 
 			$dynamic_styles .= '.asnp-esb-timer2-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: inline-block;';
-			$dynamic_styles .= ' height: 55px;';
 
 			if ( isset( $badge->paddingTopBottom )&& isset( $badge->paddingTopBottom ) ) {
 				$dynamic_styles .= ' padding: ' . $badge->paddingTopBottom . 'px ' . $badge->paddingRightLeft . 'px ;';
@@ -1873,7 +1873,6 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 
 			$dynamic_styles .= '.asnp-esb-timer2-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: inline-block;';
-			$dynamic_styles .= ' height: 55px;';
 			$dynamic_styles .= ' border-radius: 10px;';
 
 			if ( isset( $badge->paddingTopBottom )&& isset( $badge->paddingTopBottom ) ) {
@@ -2002,7 +2001,6 @@ function output_timer_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= '.asnp-esb-timer2-'. $timer_uniq .' {';
 			$dynamic_styles .= ' display: inline-block;';
 			$dynamic_styles .= ' border-radius: 50%;';
-			$dynamic_styles .= ' height: 52px;';
 
 			if ( isset( $badge->paddingTopBottom )&& isset( $badge->paddingTopBottom ) ) {
 				$dynamic_styles .= ' padding: ' . $badge->paddingTopBottom . 'px ' . $badge->paddingRightLeft . 'px ;';

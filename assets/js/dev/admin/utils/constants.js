@@ -1019,7 +1019,6 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			badgeTimerCont = `
 			display: inline-block;
-			width: 70px;
 			border: 2px solid ${ badge.bgColorTimer };
 			border-radius: 50%;
 			`;
@@ -1117,7 +1116,6 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			badgeTimerCont = `
 			display: inline-block;
-			width: 70px;
 			border: 2px solid ${ badge.bgColorTimer };
 			border-radius: 50%;
 			`;
