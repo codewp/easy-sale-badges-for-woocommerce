@@ -143,27 +143,6 @@ function has_active_sale_badges() {
 	return ! empty( $all_badges );
 }
 
-function localize_timer_badge( $badge ) {
-	if ( ! $badge || empty( $badge->selectedDateTo ) ) {
-		return;
-	}
-
-	$assets = get_plugin()->container()->get( Assets::class );
-	if ( ! $assets ) {
-		return;
-	}
-
-	$now = current_time( 'timestamp' );
-	$timer = [
-		'id'            => absint( $badge->id ),
-		'remainingTime' => ( strtotime( $badge->selectedDateTo, $now ) - $now ) * 1000,
-	];
-
-	if ( 0 < $timer['remainingTime'] ) {
-		$assets->add_timer( (object) $timer );
-	}
-}
-
 function get_current_product() {
 	global $product;
 
