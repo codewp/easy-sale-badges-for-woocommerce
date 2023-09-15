@@ -187,11 +187,11 @@ class Hooks {
 				break;
 
 			case 'woocommerce_product_get_image':
-				add_filter( 'woocommerce_product_get_image', array( __CLASS__, 'woocommerce_product_get_image' ), 999, 2 );
+				add_filter( 'woocommerce_product_get_image', array( __CLASS__, 'woocommerce_product_get_image' ), 10, 2 );
 				break;
 
 			case 'post_thumbnail_html':
-				add_filter( 'post_thumbnail_html', array( __CLASS__, 'post_thumbnail_html' ), 999, 4 );
+				add_filter( 'post_thumbnail_html', array( __CLASS__, 'post_thumbnail_html' ), 10, 4 );
 				break;
 
 			default:
