@@ -109,6 +109,9 @@ const WooCommerce = ( props ) => {
 						<option value="shop_loop">
 							{ __( 'Shop loop', 'asnp-easy-sale-badge' ) }
 						</option>
+						<option value="post_thumbnail_html">
+							{ __( 'Post thumbnail html', 'asnp-easy-sale-badge' ) }
+						</option>
 						<option value="none">
 							{ __( 'None', 'asnp-easy-sale-badge' ) }
 						</option>
