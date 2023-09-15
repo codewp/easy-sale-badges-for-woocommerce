@@ -196,16 +196,17 @@ function get_theme_loop_position( $stylesheet = null, $template = null ) {
 	$template   = ! empty( $template ) ? strtolower( $template ) : $template;
 
 	$themes = [
-		'avada'    		=> 'after_shop_loop_item_thumbnail',
-		'woodmart' 		=> 'after_shop_loop_item_thumbnail',
-		'porto'    		=> 'after_shop_loop_item_thumbnail',
-		'oceanwp'  		=> 'ocean_before_archive_product_image',
-		'basel'   		=> 'after_shop_loop_item_thumbnail',
-		'thegem'        => 'after_shop_loop_item_thumbnail',
-		'uncode'        => 'uncode_entry_visual_after_image',
-		'rehub-theme'   => 'rh_woo_thumbnail_loop',
-		'total'         => 'wpex_woocommerce_loop_thumbnail_before',
-		'estore'         => 'after_shop_loop_item_thumbnail',
+		'avada'    	  => 'after_shop_loop_item_thumbnail',
+		'woodmart' 	  => 'after_shop_loop_item_thumbnail',
+		'porto'    	  => 'after_shop_loop_item_thumbnail',
+		'oceanwp'     => 'ocean_before_archive_product_image',
+		'basel'   	  => 'after_shop_loop_item_thumbnail',
+		'thegem'      => 'after_shop_loop_item_thumbnail',
+		'uncode'      => 'uncode_entry_visual_after_image',
+		'rehub-theme' => 'rh_woo_thumbnail_loop',
+		'total'       => 'wpex_woocommerce_loop_thumbnail_before',
+		'enfold'      => 'post_thumbnail_html',
+		'estore'      => 'after_shop_loop_item_thumbnail',
 	];
 
 	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
@@ -227,11 +228,11 @@ function get_theme_single_position( $stylesheet = null, $template = null ) {
 	$template   = ! empty( $template ) ? strtolower( $template ) : $template;
 
 	$themes = [
-		'thegem'         => 'thegem_woocommerce_single_product_left',
-		'rehub-theme'    => 'rh_woo_after_single_image',
-		'woodmart'       => 'woocommerce_single_product_summary',
+		'thegem'      => 'thegem_woocommerce_single_product_left',
+		'rehub-theme' => 'rh_woo_after_single_image',
+		'woodmart'    => 'woocommerce_single_product_summary',
 		'basel'       => 'woocommerce_before_single_product_summary',
-];
+	];
 
 	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
 		return $themes[ $stylesheet ];

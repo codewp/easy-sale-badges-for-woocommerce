@@ -190,6 +190,10 @@ class Hooks {
 				add_filter( 'woocommerce_product_get_image', array( __CLASS__, 'woocommerce_product_get_image' ), 999, 2 );
 				break;
 
+			case 'post_thumbnail_html':
+				add_filter( 'post_thumbnail_html', array( __CLASS__, 'post_thumbnail_html' ), 999, 4 );
+				break;
+
 			default:
 				add_action( $loop_position, array( __CLASS__, 'display_sale_badge' ), 99 );
 				break;
@@ -251,6 +255,19 @@ class Hooks {
 		}
 
 		return $image;
+	}
+
+	public static function post_thumbnail_html( $image, $post_id, $post_thumbnail_id, $size ) {
+		if ( 'shop_catalog' !== $size ) {
+			return $image;
+		}
+
+		$badge = display_sale_badges( $post_id, false, true );
+		if ( empty( $badge ) ) {
+			return $image;
+		}
+
+		return $image . $badge;
 	}
 
 }
