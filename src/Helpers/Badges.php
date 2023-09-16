@@ -25,15 +25,15 @@ function output_badges( $badges, $hide = false, $return = false ) {
 function output_badge( $badge, $hide = false, $return = false ) {
 	if ( isset( $badge->imgbadge ) && $badge->imgbadge == 1 ) {
 		if ( is_pro_active() ) {
-			return AsanaPlugins\WooCommerce\SaleBadgesPro\Helpers\Badges\output_image_badge( $badge, $hide, $return );
+			return \AsanaPlugins\WooCommerce\SaleBadgesPro\Helpers\Badges\output_image_badge( $badge, $hide, $return );
 		}
 	} elseif ( isset( $badge->imgbadgeAdv ) && $badge->imgbadgeAdv == 1 ) {
 		if ( is_pro_active() ) {
-			return AsanaPlugins\WooCommerce\SaleBadgesPro\Helpers\Badges\output_image_adv_badge( $badge, $hide, $return );
+			return \AsanaPlugins\WooCommerce\SaleBadgesPro\Helpers\Badges\output_image_adv_badge( $badge, $hide, $return );
 		}
 	} elseif ( isset( $badge->useTimerBadge ) && $badge->useTimerBadge == 1 ) {
 		if ( is_pro_active() ) {
-			return AsanaPlugins\WooCommerce\SaleBadgesPro\Helpers\Badges\output_timer_badge( $badge, $hide, $return );
+			return \AsanaPlugins\WooCommerce\SaleBadgesPro\Helpers\Badges\output_timer_badge( $badge, $hide, $return );
 		}
 	} elseif ( ! empty( $badge->badgeStyles ) ) {
 		return output_css_badge( $badge, $hide, $return );
