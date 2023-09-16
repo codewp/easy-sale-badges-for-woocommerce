@@ -2,8 +2,6 @@
 
 namespace AsanaPlugins\WooCommerce\SaleBadges;
 
-use function Syntax_Highlighting_Code_Block\get_styles;
-
 function get_plugin() {
 	return Plugin::instance();
 }
