@@ -26,7 +26,7 @@ const Timer = () => {
 					</button>
 				</a>
 			) }
-			<div className="asnp-opacity-50 asnp-cursor-pointer">
+			<div className="asnp-opacity-50">
 				<div className="asnp-w-[25rem] asnp-mt-2 asnp-text-lg asnp-font-semibold">
 					{ __( 'Timer', 'asnp-easy-sale-badge' ) }
 				</div>
