@@ -1,8 +1,8 @@
 import React from 'react';
 import { __ } from '@wordpress/i18n';
-import Position from '../../CssBadgesMenu/Position';
+import PositionDisable from '../../CssBadgesMenu/PositionDisable';
 
-const Options = ( props ) => {
+const Options = () => {
 	return (
 		<div>
 			<div className="asnp-flex asnp-mt-[1rem]">
@@ -17,13 +17,7 @@ const Options = ( props ) => {
 							max="200"
 							className="asnp-text-field"
 							placeholder="0"
-							value={ props.widthBadgeImg }
-							onChange={ ( e ) =>
-								props.onChange(
-									'widthBadgeImg',
-									e.target.value
-								)
-							}
+							disabled
 						/>
 					</div>
 				</label>
@@ -37,10 +31,7 @@ const Options = ( props ) => {
 							min="0"
 							max="200"
 							className="asnp-text-field"
-							value={ props.zIndexImg }
-							onChange={ ( e ) =>
-								props.onChange( 'zIndexImg', e.target.value )
-							}
+							disabled
 						/>
 					</div>
 				</label>
@@ -59,10 +50,7 @@ const Options = ( props ) => {
 					min="0"
 					max="1"
 					step="0.01"
-					value={ props.opacityImg }
-					onChange={ ( e ) =>
-						props.onChange( 'opacityImg', e.target.value )
-					}
+					disabled
 				/>
 				<div className="asnp-w-[21rem] asnp-flex asnp-justify-between asnp-text-xs asnp-px-2">
 					<span>0%</span>
@@ -88,13 +76,7 @@ const Options = ( props ) => {
 								min="0"
 								max="360"
 								step="3.6"
-								value={ props.rotationXImg }
-								onChange={ ( e ) =>
-									props.onChange(
-										'rotationXImg',
-										e.target.value
-									)
-								}
+								disabled
 							/>
 							<div className="asnp-w-[21rem] asnp-flex asnp-text-xs">
 								<span className="asnp-w-[10.5rem] asnp-flex asnp-justify-start">
@@ -113,13 +95,7 @@ const Options = ( props ) => {
 								min="0"
 								max="360"
 								step="3.6"
-								value={ props.rotationYImg }
-								onChange={ ( e ) =>
-									props.onChange(
-										'rotationYImg',
-										e.target.value
-									)
-								}
+								disabled
 							/>
 							<div className="asnp-w-[21rem] asnp-flex asnp-text-xs">
 								<span className="asnp-w-[10.5rem] asnp-flex asnp-justify-start">
@@ -139,10 +115,7 @@ const Options = ( props ) => {
 							min="0"
 							max="360"
 							step="3.6"
-							value={ props.rotationZImg }
-							onChange={ ( e ) =>
-								props.onChange( 'rotationZImg', e.target.value )
-							}
+							disabled
 						/>
 						<div className="asnp-w-[21rem] asnp-flex asnp-text-xs">
 							<span className="asnp-w-[10.5rem] asnp-flex asnp-justify-start">
@@ -157,15 +130,7 @@ const Options = ( props ) => {
 				</div>
 			</div>
 
-			<Position
-				onChange={ props.onChange }
-				badgePositionY={ props.badgePositionY }
-				badgePositionX={ props.badgePositionX }
-				badgePositionTop={ props.badgePositionTop }
-				badgePositionBottom={ props.badgePositionBottom }
-				badgePositionLeft={ props.badgePositionLeft }
-				badgePositionRight={ props.badgePositionRight }
-			/>
+			<PositionDisable />
 		</div>
 	);
 };

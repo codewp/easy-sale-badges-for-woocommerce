@@ -5,7 +5,8 @@ import TextOptions from './../CssBadgesMenu/TextOptions';
 import BadgeStyles from '../CssBadgesMenu/BadgeStyles';
 import StyleOptions from '../CssBadgesMenu/StyleOptions';
 import Opacity from '../CssBadgesMenu/Opacity';
-import Position from '../CssBadgesMenu/Position';
+import PositionDisable from '../CssBadgesMenu/PositionDisable';
+import Position from './../CssBadgesMenu/Position';
 import Products from '../Products';
 import UploadImage from '../ImageBadges/UploadImage';
 import Options from '../ImageBadges/OptionsImageBadges';
@@ -103,41 +104,10 @@ const MenuItem = ( props ) => {
 							</button>
 						</a>
 					) }
-					<div
-						className={
-							showTextImg == true
-								? 'asnp-opacity-50 asnp-cursor-pointer'
-								: ''
-						}
-					>
-						<BadgeImageStyle
-							onChange={ props.onChange }
-							badgeImage={ props.badge.badgeImage }
-							imgbadge={ props.badge.imgbadge }
-						/>
-						<UploadImage
-							badgeImageFile={ badgeImageFile }
-							setBadgeImageFile={ setBadgeImageFile }
-						/>
-						<Options
-							onChange={ props.onChange }
-							badgePositionY={ props.badge.badgePositionY }
-							badgePositionX={ props.badge.badgePositionX }
-							badgePositionTop={ props.badge.badgePositionTop }
-							badgePositionBottom={
-								props.badge.badgePositionBottom
-							}
-							badgePositionLeft={ props.badge.badgePositionLeft }
-							badgePositionRight={
-								props.badge.badgePositionRight
-							}
-							widthBadgeImg={ props.badge.widthBadgeImg }
-							zIndexImg={ props.badge.zIndexImg }
-							opacityImg={ props.badge.opacityImg }
-							rotationXImg={ props.badge.rotationXImg }
-							rotationYImg={ props.badge.rotationYImg }
-							rotationZImg={ props.badge.rotationZImg }
-						/>
+					<div className="asnp-opacity-50 asnp-cursor-pointer">
+						<BadgeImageStyle />
+						<UploadImage />
+						<Options />
 					</div>
 				</div>
 			) }
@@ -166,7 +136,7 @@ const MenuItem = ( props ) => {
 						<AdvancedBadgeStyle />
 						<AdvancedOptions />
 						<AdvancedOpacityAndPos />
-						<Position />
+						<PositionDisable />
 					</div>
 				</div>
 			) }
