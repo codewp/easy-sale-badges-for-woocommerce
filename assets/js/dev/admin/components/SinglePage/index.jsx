@@ -38,7 +38,14 @@ const SinglePage = ( props ) => {
 						}
 					/>
 				</label>
-				
+				<label className="asnp-block asnp-space-y-1 asnp-text-gray-500">
+					<p className="asnp-text-xs asnp-text-gray-400">
+						{ __(
+							'Images container CSS selector on single product page.',
+							'asnp-easy-sale-badge'
+						) }
+					</p>
+				</label>
 			</div>
 			<button
 				className="asnp-btn asnp-btn-primary asnp-mb-2 asnp-mt-8 asnp-w-[8rem]"

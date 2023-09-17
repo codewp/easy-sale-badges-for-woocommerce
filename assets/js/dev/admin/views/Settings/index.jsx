@@ -1,13 +1,12 @@
 import React, { useState, useContext } from 'react';
 import { __ } from '@wordpress/i18n';
 import General from '../../components/Settings/General';
-import WooCommerce from '../../components/Settings/Woocommrece';
 import * as SettingsApi from '@easy-sale-badges/api/settings';
 import { AppContext } from '../../contexts/App';
 import SinglePage from './../../components/SinglePage';
 
 export default function Settings() {
-	const [ activeMenu, setActiveMenu ] = useState( 'woocommerce' );
+	const [ activeMenu, setActiveMenu ] = useState( 'general' );
 	const { setMessage, settings, setSettings, setLoading } = useContext(
 		AppContext
 	);
@@ -68,21 +67,6 @@ export default function Settings() {
 						href="#"
 						onClick={ ( e ) => {
 							e.preventDefault();
-							setActiveMenu( 'woocommerce' );
-						} }
-						className={
-							'asnp-nav-tab-item' +
-							( 'woocommerce' === activeMenu
-								? ' asnp-nav-tab-active'
-								: '' )
-						}
-					>
-						{ __( 'WooCommerce ', 'asnp-easy-sale-badge' ) }
-					</a>
-					<a
-						href="#"
-						onClick={ ( e ) => {
-							e.preventDefault();
 							setActiveMenu( 'singlepage' );
 						} }
 						className={
@@ -99,13 +83,6 @@ export default function Settings() {
 			<div className="asnp-w-full asnp-h-auto asnp-bg-white asnp-p-5">
 				{ 'general' === activeMenu && (
 					<General
-						settings={ settings }
-						onChange={ updateSettings }
-						onSave={ save }
-					/>
-				) }
-				{ 'woocommerce' === activeMenu && (
-					<WooCommerce
 						onChange={ updateSettings }
 						onSave={ save }
 						enabled={ settings.woocommerceEnabled }
