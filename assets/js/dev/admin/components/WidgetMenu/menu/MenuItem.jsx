@@ -104,7 +104,7 @@ const MenuItem = ( props ) => {
 							</button>
 						</a>
 					) }
-					<div className="asnp-opacity-50 asnp-cursor-pointer">
+					<div className="asnp-opacity-50">
 						<BadgeImageStyle />
 						<UploadImage />
 						<Options />
@@ -125,13 +125,7 @@ const MenuItem = ( props ) => {
 							</button>
 						</a>
 					) }
-					<div
-						className={
-							showTextImg == true
-								? 'asnp-opacity-50 asnp-cursor-pointer'
-								: ''
-						}
-					>
+					<div className="asnp-opacity-50">
 						<AdvancedTextOption />
 						<AdvancedBadgeStyle />
 						<AdvancedOptions />

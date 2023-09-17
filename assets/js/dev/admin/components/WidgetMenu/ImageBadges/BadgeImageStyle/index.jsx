@@ -4,8 +4,7 @@ import { IMAGES_URL } from '../../../../utils/constants';
 
 import './style.scss';
 
-const BadgeImageStyle = (  ) => {
-
+const BadgeImageStyle = () => {
 	return (
 		<div>
 			<div className="asnp-w-[12rem] asnp-ml-4 asnp-mt-6 asnp-text-black asnp-block asnp-font-medium asnp-text-base">
@@ -50,7 +49,6 @@ const BadgeImageStyle = (  ) => {
 					</div>
 					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-4">
 						<div className="asnp-border-gray-400 asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700">
-							} >
 							<img
 								className="asnp-h-full asnp-w-full asnp-border-none"
 								src={ IMAGES_URL + 'sale1.png' }
@@ -80,6 +78,11 @@ const BadgeImageStyle = (  ) => {
 								src={ IMAGES_URL + 'sale5.png' }
 							/>
 						</div>
+					</div>
+					<div className="asnp-w-[42rem]  asnp-ml-8 asnp-mt-8 asnp-mb-2 asnp-text-red-700 asnp-flex asnp-justify-center asnp-font-medium asnp-text-base">
+						<button className="asnp-btn asnp-btn-primary">
+							{ __( 'More...', 'asnp-easy-sale-badge' ) }
+						</button>
 					</div>
 				</div>
 			</div>
