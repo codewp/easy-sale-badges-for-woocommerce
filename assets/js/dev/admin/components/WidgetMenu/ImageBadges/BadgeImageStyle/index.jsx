@@ -12,7 +12,7 @@ const BadgeImageStyle = (  ) => {
 				<label>{ __( 'Image Labels', 'asnp-easy-sale-badge' ) }</label>
 			</div>
 			<div className="asnp-mt-4">
-				<div className="asnp-relative asnp-w-[49rem] asnp-mb-3 asnp-mt-3 asnp-h-[37rem] asnp-flex asnp-flex-col asnp-border-2 asnp-rounded-md asnp-pr-1 asnp-pb-4 asnp-scrollBarImageB">
+				<div className="asnp-relative asnp-w-[49rem] asnp-mb-3 asnp-mt-3 asnp-h-[30rem] asnp-flex asnp-flex-col asnp-border-2 asnp-rounded-md asnp-pr-1 asnp-pb-4 asnp-scrollBarImageB">
 					<div className="asnp-w-full asnp-ml-8 asnp-mt-6 asnp-mb-2 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
 						<label>{ __( 'Sale', 'asnp-easy-sale-badge' ) }</label>
 					</div>
