@@ -216,33 +216,7 @@ const MenuItem = ( props ) => {
 					</div>
 				</div>
 			) }
-			{ props.activeStatus == 6 && (
-				<Timer
-					onChange={ props.onChange }
-					useTimerBadge={ props.badge.useTimerBadge }
-					textColor={ props.badge.textColor }
-					bgColorTimer={ props.badge.bgColorTimer }
-					fontSizeLabelTimer={ props.badge.fontSizeLabelTimer }
-					lineHeightLabelTimer={ props.badge.lineHeightLabelTimer }
-					badgePositionY={ props.badge.badgePositionY }
-					badgePositionX={ props.badge.badgePositionX }
-					badgePositionTop={ props.badge.badgePositionTop }
-					badgePositionBottom={ props.badge.badgePositionBottom }
-					badgePositionLeft={ props.badge.badgePositionLeft }
-					badgePositionRight={ props.badge.badgePositionRight }
-					zIndexTimer={ props.badge.zIndexTimer }
-					opacityTimer={ props.badge.opacityTimer }
-					labelDayTimer={ props.badge.labelDayTimer }
-					labelHoursTimer={ props.badge.labelHoursTimer }
-					labelMinTimer={ props.badge.labelMinTimer }
-					labelSecTimer={ props.badge.labelSecTimer }
-					selectedDateFrom={ props.badge.selectedDateFrom }
-					selectedDateTo={ props.badge.selectedDateTo }
-					badgeTimer={ props.badge.badgeTimer }
-					paddingTopBottom={ props.badge.paddingTopBottom }
-					paddingRightLeft={ props.badge.paddingRightLeft }
-				/>
-			) }
+			{ props.activeStatus == 6 && <Timer /> }
 		</div>
 	);
 };
