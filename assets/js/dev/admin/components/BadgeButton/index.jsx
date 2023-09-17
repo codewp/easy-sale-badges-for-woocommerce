@@ -2,31 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { __ } from '@wordpress/i18n';
 import styled, { StyleSheetManager } from 'styled-components';
 import { toBool } from './../../utils';
-import BadgeCssandAdv, {
-	getRemainingTime,
-	initTimes,
-} from '../../utils/constants';
+import BadgeCssandAdv from '../../utils/constants';
 
 import './style.scss';
 
 const Span = styled.div`
 	${ ( props ) => props.badgeIcon }
-`;
-
-const Div = styled.div`
-	${ ( props ) => props.badgeTimerDiv }
-`;
-
-const DivOne = styled.div`
-	${ ( props ) => props.badgeTimerCont }
-`;
-
-const Time = styled.div`
-	${ ( props ) => props.TimerDate }
-`;
-
-const LabelTimer = styled.div`
-	${ ( props ) => props.Label }
 `;
 
 const SpanOne = styled.div`
@@ -59,58 +40,12 @@ const StyledSpanTwo = ( props ) => (
 	</StyleSheetManager>
 );
 
-const StyledSpanDiv = ( props ) => (
-	<StyleSheetManager
-		shouldForwardProp={ ( prop ) => prop !== 'badgeTimerDiv' }
-	>
-		<Div { ...props } />
-	</StyleSheetManager>
-);
-
-const StyledSpanDivOne = ( props ) => (
-	<StyleSheetManager
-		shouldForwardProp={ ( prop ) => prop !== 'badgeTimerCont' }
-	>
-		<DivOne { ...props } />
-	</StyleSheetManager>
-);
-
-const StyledSpanTime = ( props ) => (
-	<StyleSheetManager shouldForwardProp={ ( prop ) => prop !== 'TimerDate' }>
-		<Time { ...props } />
-	</StyleSheetManager>
-);
-const StyledSpanLabelTimer = ( props ) => (
-	<StyleSheetManager shouldForwardProp={ ( prop ) => prop !== 'Label' }>
-		<LabelTimer { ...props } />
-	</StyleSheetManager>
-);
-
 const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
-	const {
-		badgeIcon,
-		badgeIconOne,
-		badgeIconTwo,
-		bdgeAdvanced,
-		badgeTimerDiv,
-		badgeTimerCont,
-		TimerDate,
-		Label,
-	} = BadgeCssandAdv( badge );
-
-	useEffect( () => {
-		initTimes();
-	}, [] );
+	const { badgeIcon, badgeIconOne, badgeIconTwo } = BadgeCssandAdv( badge );
 
 	const [ horiz, setHoriz ] = useState( toBool( badge.horizontal ) );
 	const [ vert, setVert ] = useState( toBool( badge.vertical ) );
 	const [ rotationz, setRotationz ] = useState( badge.rotationZ );
-	const [ timer, setTimer ] = useState( {
-		days: 0,
-		hours: 0,
-		minutes: 0,
-		seconds: 0,
-	} );
 
 	let insetProperty = '';
 
@@ -221,83 +156,6 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 		}
 	}, [ badge.badgeStyles, badge.badgePositionX ] );
 
-	useEffect( () => {
-		if ( badge.useTimerBadge == 1 ) {
-			const interval = setInterval( updateTimer, 1000 );
-			return () => clearInterval( interval );
-		}
-	}, [ badge.selectedDateTo ] );
-
-	const updateTimer = () => {
-		const toDate = new Date( badge.selectedDateTo );
-		let timeDifference = getRemainingTime( toDate );
-
-		if ( timeDifference > 0 ) {
-			const days = Math.floor( timeDifference / ( 1000 * 60 * 60 * 24 ) );
-			const hours = Math.floor(
-				( timeDifference % ( 1000 * 60 * 60 * 24 ) ) /
-					( 1000 * 60 * 60 )
-			);
-			const minutes = Math.floor(
-				( timeDifference % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 )
-			);
-			const seconds = Math.floor(
-				( timeDifference % ( 1000 * 60 ) ) / 1000
-			);
-
-			setTimer( {
-				days,
-				hours,
-				minutes,
-				seconds,
-			} );
-		}
-	};
-
-	useEffect( () => {
-		if ( badge.badgeAdv == 'bdgAdvanced1' ) {
-			updateBadge( 'mainBg', '#141E27' );
-			updateBadge( 'secondBg', '#AD2525' );
-		} else if ( badge.badgeAdv == 'bdgAdvanced2' ) {
-			updateBadge( 'mainBg', '#F78DA7' );
-			updateBadge( 'secondBg', '#006D77' );
-		} else if ( badge.badgeAdv == 'bdgAdvanced3' ) {
-			updateBadge( 'mainBg', '#006D77' );
-			updateBadge( 'secondBg', '#FFD488' );
-		} else if ( badge.badgeAdv == 'bdgAdvanced4' ) {
-			updateBadge( 'mainBg', '#f0672e' );
-			updateBadge( 'secondBg', '#242015' );
-		}
-	}, [ badge.badgeAdv ] );
-
-	useEffect( () => {
-		if ( badge.badgeTimer == 'timer1' ) {
-			updateBadge( 'paddingTopBottom', '6' );
-			updateBadge( 'paddingRightLeft', '20' );
-		} else if ( badge.badgeTimer == 'timer2' ) {
-			updateBadge( 'paddingTopBottom', '6' );
-			updateBadge( 'paddingRightLeft', '20' );
-		} else if ( badge.badgeTimer == 'timer3' ) {
-			updateBadge( 'paddingTopBottom', '6' );
-			updateBadge( 'paddingRightLeft', '13' );
-		} else if ( badge.badgeTimer == 'timer4' ) {
-			updateBadge( 'paddingTopBottom', '6' );
-			updateBadge( 'paddingRightLeft', '13' );
-		} else if ( badge.badgeTimer == 'timer5' ) {
-			updateBadge( 'paddingTopBottom', '6' );
-			updateBadge( 'paddingRightLeft', '20' );
-		} else if ( badge.badgeTimer == 'timer6' ) {
-			updateBadge( 'paddingTopBottom', '6' );
-			updateBadge( 'paddingRightLeft', '20' );
-		} else if ( badge.badgeTimer == 'timer7' ) {
-			updateBadge( 'paddingTopBottom', '6' );
-			updateBadge( 'paddingRightLeft', '13' );
-		} else if ( badge.badgeTimer == 'timer8' ) {
-			updateBadge( 'paddingTopBottom', '6' );
-			updateBadge( 'paddingRightLeft', '13' );
-		}
-	}, [ badge.badgeTimer ] );
-
 	let horizAndvert;
 	if ( badge.horizontal === 1 && badge.vertical === 1 ) {
 		horizAndvert = 'scaleX( -1 ) ScaleY(-1)';
@@ -361,65 +219,6 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 								backgroundImage: `url(${ IMAGES_URL }headphone-k.png)`,
 							} }
 						>
-							{ badge.imgbadge == 1 && (
-								<div
-									className="asnp-esb-productBadge"
-									style={ {
-										width: `${ badge.widthBadgeImg }px`,
-										height: `${ badge.widthBadgeImg }px`,
-										inset: `${ insetProperty }`,
-									} }
-								>
-									<span
-										style={ {
-											opacity: `${ badge.opacityImg }`,
-											zIndex: `${ badge.zIndexImg }`,
-											position: 'absolute',
-											transform: `rotateX(${ badge.rotationXImg }deg) rotateY(${ badge.rotationYImg }deg) rotateZ(${ badge.rotationZImg }deg)`,
-										} }
-									>
-										<img src={ badge.badgeImage } />
-									</span>
-								</div>
-							) }
-							{ badge.imgbadgeAdv == 1 && (
-								<div
-									className="asnp-esb-productBadge"
-									style={ {
-										width: `90px`,
-										height: '90px',
-										inset: `${ insetProperty }`,
-									} }
-								>
-									<span
-										style={ {
-											color: `${ badge.textColor }`,
-											height: '90px',
-											opacity: `${ badge.opacityImg }`,
-											zIndex: `${ badge.zIndexImg }`,
-											position: 'absolute',
-										} }
-									>
-										<StyledSpanOne
-											badgeIconOne={ badgeIconOne }
-										>
-											{ bdgeAdvanced }
-											<StyledSpanTwo
-												badgeIconTwo={ badgeIconTwo }
-											>
-												<div
-													style={ {
-														fontSize: `${ badge.fontSizeText }px`,
-														fontWeight: '700',
-													} }
-												>
-													{ badge.badgeLabelAdv }
-												</div>
-											</StyledSpanTwo>
-										</StyledSpanOne>
-									</span>
-								</div>
-							) }
 							{ badge.imgbadge == 0 &&
 								badge.imgbadgeAdv == 0 &&
 								badge.useTimerBadge == 0 && (
@@ -464,105 +263,6 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 										</StyledSpan>
 									</div>
 								) }
-							{ badge.useTimerBadge == 1 && (
-								<div
-									className="asnp-esb-productBadge"
-									style={ {
-										inset: `${ insetProperty }`,
-										opacity: `${ badge.opacity }`,
-										zIndex: `${ badge.zIndex }`,
-									} }
-								>
-									<StyledSpanDiv
-										badgeTimerDiv={ badgeTimerDiv }
-									>
-										<StyledSpanDivOne
-											style={ {
-												padding: `${ badge.paddingTopBottom }px ${ badge.paddingRightLeft }px`,
-											} }
-											badgeTimerCont={ badgeTimerCont }
-										>
-											<StyledSpanTime
-												TimerDate={ TimerDate }
-												style={ {
-													fontSize: `${ badge.fontSizeLabelTimer }px`,
-													lineHeight: `${ badge.lineHeightLabelTimer }px`,
-												} }
-											>
-												{ timer.days }
-											</StyledSpanTime>
-											<StyledSpanLabelTimer
-												Label={ Label }
-											>
-												{ badge.labelDayTimer }
-											</StyledSpanLabelTimer>
-										</StyledSpanDivOne>
-										<StyledSpanDivOne
-											style={ {
-												padding: `${ badge.paddingTopBottom }px ${ badge.paddingRightLeft }px`,
-											} }
-											badgeTimerCont={ badgeTimerCont }
-										>
-											<StyledSpanTime
-												TimerDate={ TimerDate }
-												style={ {
-													fontSize: `${ badge.fontSizeLabelTimer }px`,
-													lineHeight: `${ badge.lineHeightLabelTimer }px`,
-												} }
-											>
-												{ timer.hours }
-											</StyledSpanTime>
-											<StyledSpanLabelTimer
-												Label={ Label }
-											>
-												{ badge.labelHoursTimer }
-											</StyledSpanLabelTimer>
-										</StyledSpanDivOne>
-										<StyledSpanDivOne
-											style={ {
-												padding: `${ badge.paddingTopBottom }px ${ badge.paddingRightLeft }px`,
-											} }
-											badgeTimerCont={ badgeTimerCont }
-										>
-											<StyledSpanTime
-												TimerDate={ TimerDate }
-												style={ {
-													fontSize: `${ badge.fontSizeLabelTimer }px`,
-													lineHeight: `${ badge.lineHeightLabelTimer }px`,
-												} }
-											>
-												{ timer.minutes }
-											</StyledSpanTime>
-											<StyledSpanLabelTimer
-												Label={ Label }
-											>
-												{ badge.labelMinTimer }
-											</StyledSpanLabelTimer>
-										</StyledSpanDivOne>
-										<StyledSpanDivOne
-											style={ {
-												padding: `${ badge.paddingTopBottom }px ${ badge.paddingRightLeft }px`,
-											} }
-											badgeTimerCont={ badgeTimerCont }
-										>
-											<StyledSpanTime
-												TimerDate={ TimerDate }
-												style={ {
-													fontSize: `${ badge.fontSizeLabelTimer }px`,
-													lineHeight: `${ badge.lineHeightLabelTimer }px`,
-												} }
-											>
-												{ timer.seconds }
-											</StyledSpanTime>
-											<StyledSpanLabelTimer
-												Label={ Label }
-											>
-												{ badge.labelSecTimer }
-											</StyledSpanLabelTimer>
-										</StyledSpanDivOne>
-									</StyledSpanDiv>
-								</div>
-							) }
 						</div>
 					</div>
 				</div>
