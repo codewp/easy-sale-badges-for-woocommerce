@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { __ } from '@wordpress/i18n';
 import Toggle from '../../Toggle';
 import Datetime from 'react-datetime';
-import { IMAGES_URL, customColor } from './../../../utils/constants';
+import { IMAGES_URL } from './../../../utils/constants';
 import Tippy from '@tippyjs/react';
 import ColorPicker from 'react-best-gradient-color-picker';
 
 import './style.scss';
 import { LockClosedIcon } from '@heroicons/react/solid';
 
-const Timer = ( props ) => {
+const Timer = () => {
 	const [ showText, setShowText ] = useState( true );
 
 	return (

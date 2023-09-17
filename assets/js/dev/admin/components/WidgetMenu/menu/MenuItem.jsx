@@ -22,15 +22,7 @@ import './style.scss';
 
 const MenuItem = ( props ) => {
 	const { badgeImageFile, setBadgeImageFile } = useContext( BadgeContext );
-	const [ showTextImg, setShowTextImg ] = useState( false );
-
-	const handleMouseEnter = () => {
-		setShowTextImg( true );
-	};
-
-	const handleMouseLeave = () => {
-		setShowTextImg( false );
-	};
+	const [ showTextImg, setShowTextImg ] = useState( true );
 
 	return (
 		<div className="asnp-w-full">
@@ -98,11 +90,7 @@ const MenuItem = ( props ) => {
 				<Products onChange={ props.onChange } />
 			) }
 			{ props.activeStatus == 4 && (
-				<div
-					className="asnp-relative asnp-mt-3"
-					onMouseEnter={ handleMouseEnter }
-					onMouseLeave={ handleMouseLeave }
-				>
+				<div className="asnp-relative asnp-mt-3">
 					{ showTextImg == true && (
 						<a className="asnp-float-right asnp-top-16 asnp-z-50 asnp-sticky asnp-mr-[40%]">
 							<button className="asnp-btn asnp-btn-delete !asnp-w-[14rem] asnp-flex asnp-text-center asnp-justify-center">
@@ -154,11 +142,7 @@ const MenuItem = ( props ) => {
 				</div>
 			) }
 			{ props.activeStatus == 5 && (
-				<div
-					className="asnp-relative asnp-mt-3"
-					onMouseEnter={ handleMouseEnter }
-					onMouseLeave={ handleMouseLeave }
-				>
+				<div className="asnp-relative asnp-mt-3">
 					{ showTextImg == true && (
 						<a className="asnp-float-right asnp-top-16 asnp-z-50 asnp-sticky asnp-mr-[40%]">
 							<button className="asnp-btn asnp-btn-delete !asnp-w-[14rem] asnp-flex asnp-text-center asnp-justify-center">
@@ -178,41 +162,11 @@ const MenuItem = ( props ) => {
 								: ''
 						}
 					>
-						<AdvancedTextOption
-							onChange={ props.onChange }
-							badgeLabelAdv={ props.badge.badgeLabelAdv }
-							textColor={ props.badge.textColor }
-							fontSizeText={ props.badge.fontSizeText }
-							lineHeightText={ props.badge.lineHeightText }
-						/>
-						<AdvancedBadgeStyle
-							onChange={ props.onChange }
-							badgeAdv={ props.badge.badgeAdv }
-							imgbadgeAdv={ props.badge.imgbadgeAdv }
-						/>
-						<AdvancedOptions
-							onChange={ props.onChange }
-							mainBg={ props.badge.mainBg }
-							secondBg={ props.badge.secondBg }
-							zIndexAdv={ props.badge.zIndexAdv }
-						/>
-						<AdvancedOpacityAndPos
-							onChange={ props.onChange }
-							opacityAdvImg={ props.badge.opacityAdvImg }
-						/>
-						<Position
-							onChange={ props.onChange }
-							badgePositionY={ props.badge.badgePositionY }
-							badgePositionX={ props.badge.badgePositionX }
-							badgePositionTop={ props.badge.badgePositionTop }
-							badgePositionBottom={
-								props.badge.badgePositionBottom
-							}
-							badgePositionLeft={ props.badge.badgePositionLeft }
-							badgePositionRight={
-								props.badge.badgePositionRight
-							}
-						/>
+						<AdvancedTextOption />
+						<AdvancedBadgeStyle />
+						<AdvancedOptions />
+						<AdvancedOpacityAndPos />
+						<Position />
 					</div>
 				</div>
 			) }

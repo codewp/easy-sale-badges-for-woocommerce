@@ -4,7 +4,7 @@ import Tippy from '@tippyjs/react';
 import ColorPicker from 'react-best-gradient-color-picker';
 import { customColor } from '../../../../utils/constants';
 
-const AdvancedTextOption = ( props ) => {
+const AdvancedTextOption = () => {
 	return (
 		<div>
 			<div className="asnp-mt-[1rem] asnp-w-[15rem]">
@@ -16,10 +16,7 @@ const AdvancedTextOption = ( props ) => {
 						type="text"
 						className="asnp-text-field"
 						placeholder="Badge Label"
-						value={ props.badgeLabelAdv }
-						onChange={ ( e ) =>
-							props.onChange( 'badgeLabelAdv', e.target.value )
-						}
+						disabled
 					/>
 				</label>
 			</div>
@@ -30,14 +27,7 @@ const AdvancedTextOption = ( props ) => {
 					placement={ 'bottom' }
 					content={
 						<div className="asnp-p-4">
-							<ColorPicker
-								value={ props.textColor }
-								onChange={ ( color ) => {
-									props.onChange( 'textColor', color );
-								} }
-								hideColorTypeBtns={ true }
-								presets={ customColor }
-							/>
+							<ColorPicker />
 						</div>
 					}
 				>
@@ -51,9 +41,6 @@ const AdvancedTextOption = ( props ) => {
 									) }
 								</span>
 								<div
-									style={ {
-										backgroundColor: `${ props.textColor }`,
-									} }
 									className={
 										'asnp-flex asnp-w-7 asnp-h-6 asnp-rounded-full asnp-my-2 '
 									}
@@ -75,10 +62,7 @@ const AdvancedTextOption = ( props ) => {
 							max="40"
 							className="asnp-text-field"
 							placeholder="0"
-							value={ props.fontSizeText }
-							onChange={ ( e ) =>
-								props.onChange( 'fontSizeText', e.target.value )
-							}
+							disabled
 						/>
 					</div>
 				</label>
@@ -93,13 +77,7 @@ const AdvancedTextOption = ( props ) => {
 							min="0"
 							max="100"
 							placeholder="0"
-							value={ props.lineHeightText }
-							onChange={ ( e ) =>
-								props.onChange(
-									'lineHeightText',
-									e.target.value
-								)
-							}
+							disabled
 						/>
 					</div>
 				</label>

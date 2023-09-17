@@ -2,9 +2,8 @@ import React from 'react';
 import { __ } from '@wordpress/i18n';
 import Tippy from '@tippyjs/react';
 import ColorPicker from 'react-best-gradient-color-picker';
-import { customColor } from '../../../../utils/constants';
 
-const AdvancedOptions = ( props ) => {
+const AdvancedOptions = () => {
 	return (
 		<div className="asnp-ew-line">
 			<div className="asnp-w-[25rem]">
@@ -16,14 +15,7 @@ const AdvancedOptions = ( props ) => {
 						content={
 							<div>
 								<div className="asnp-p-4">
-									<ColorPicker
-										value={ props.mainBg }
-										onChange={ ( color ) => {
-											props.onChange( 'mainBg', color );
-										} }
-										hideColorTypeBtns={ true }
-										presets={ customColor }
-									/>
+									<ColorPicker />
 								</div>
 							</div>
 						}
@@ -38,9 +30,6 @@ const AdvancedOptions = ( props ) => {
 										) }
 									</span>
 									<div
-										style={ {
-											backgroundColor: `${ props.mainBg }`,
-										} }
 										className={
 											'asnp-flex asnp-w-7 asnp-h-6 asnp-rounded-full asnp-my-2 '
 										}
@@ -57,14 +46,7 @@ const AdvancedOptions = ( props ) => {
 						placement={ 'bottom' }
 						content={
 							<div className="asnp-p-4">
-								<ColorPicker
-									value={ props.secondBg }
-									onChange={ ( color ) => {
-										props.onChange( 'secondBg', color );
-									} }
-									hideColorTypeBtns={ true }
-									presets={ customColor }
-								/>
+								<ColorPicker />
 							</div>
 						}
 					>
@@ -77,14 +59,7 @@ const AdvancedOptions = ( props ) => {
 											'asnp-easy-sale-badge'
 										) }
 									</span>
-									<div
-										style={ {
-											backgroundColor: `${ props.secondBg }`,
-										} }
-										className={
-											'asnp-flex asnp-w-7 asnp-h-6 asnp-rounded-full asnp-my-2 '
-										}
-									></div>
+									<div className="asnp-flex asnp-w-7 asnp-h-6 asnp-rounded-full asnp-my-2"></div>
 								</div>
 							</div>
 						</label>
@@ -100,17 +75,7 @@ const AdvancedOptions = ( props ) => {
 							{ __( 'z-index', 'asnp-easy-sale-badge' ) }
 						</span>
 						<div className="asnp-w-[25rem]">
-							<input
-								type="number"
-								className="asnp-text-field"
-								value={ props.zIndexAdv }
-								onChange={ ( e ) =>
-									props.onChange(
-										'zIndexAdv',
-										e.target.value
-									)
-								}
-							/>
+							<input type="number" className="asnp-text-field" />
 						</div>
 					</label>
 				</div>
