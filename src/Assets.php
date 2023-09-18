@@ -30,15 +30,19 @@ class Assets {
 	}
 
 	public function localize_scripts() {
-		if ( ! empty( $this->timers ) ) {
-			wp_localize_script(
-				'asnp-wesb-badge',
-				'asnpWesbBadgeData',
-				[
-					'timers' => $this->timers,
-				]
-			);
+		$container = get_theme_single_container();
+		if ( empty( $container ) ) {
+			$container = get_plugin()->settings->get_setting( 'singleContainer', '' );
 		}
+
+		wp_localize_script(
+			'asnp-wesb-badge',
+			'asnpWesbBadgeData',
+			[
+				'timers'          => $this->timers,
+				'singleContainer' => $container,
+			]
+		);
 	}
 
 	public function add_timer( $timer ) {
