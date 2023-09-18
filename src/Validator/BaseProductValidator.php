@@ -40,8 +40,8 @@ abstract class BaseProductValidator {
 		}
 
 		$is_valid = false;
-		if ( is_callable( [ static::class, 'is_valid_' . $item['type'] ] ) ) {
-			$is_valid = static::{'is_valid_' . $item['type']}( $item, $product );
+		if ( is_callable( [ static::class, $item['type'] ] ) ) {
+			$is_valid = static::{$item['type']}( $item, $product );
 		}
 
 		return apply_filters(
@@ -52,7 +52,7 @@ abstract class BaseProductValidator {
 		);
 	}
 
-	public static function is_valid_products( $item, $product ) {
+	public static function products( $item, $product ) {
 		if ( empty( $item ) || ! $product ) {
 			return false;
 		}
@@ -78,7 +78,7 @@ abstract class BaseProductValidator {
 		return in_array( $product, $items );
 	}
 
-	public static function is_valid_categories( $item, $product ) {
+	public static function categories( $item, $product ) {
 		if ( empty( $item ) || ! $product ) {
 			return false;
 		}
@@ -109,7 +109,7 @@ abstract class BaseProductValidator {
 		return ! empty( array_intersect( $product_categories, $categories ) );
 	}
 
-	public static function is_valid_tags( $item, $product ) {
+	public static function tags( $item, $product ) {
 		if ( empty( $item ) || ! $product ) {
 			return false;
 		}
@@ -138,6 +138,44 @@ abstract class BaseProductValidator {
 		}
 
 		return ! empty( array_intersect( $product_tags, $tags ) );
+	}
+
+	public static function stock_status( $item, $product ) {
+		if ( empty( $item ) || ! $product ) {
+			return false;
+		}
+
+		if ( empty( $item['items'] ) ) {
+			return false;
+		}
+
+		$product = is_numeric( $product ) ? wc_get_product( $product ) : $product;
+		if ( ! $product ) {
+			return false;
+		}
+
+		return $item['items'] === $product->get_stock_status();
+	}
+
+	public static function is_on_sale( $item, $product ) {
+		if ( empty( $item ) || ! $product ) {
+			return false;
+		}
+
+		if ( empty( $item['items'] ) ) {
+			return false;
+		}
+
+		$product = is_numeric( $product ) ? wc_get_product( $product ) : $product;
+		if ( ! $product ) {
+			return false;
+		}
+
+		if ( 'no' === $item['items'] ) {
+			return ! $product->is_on_sale();
+		}
+
+		return $product->is_on_sale();
 	}
 
 	protected static function get_items( $items ) {

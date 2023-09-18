@@ -162,13 +162,19 @@ const WooCommerce = () => {
 											>
 												<option value="instock">
 													{ __(
-														'In Stock',
+														'In stock',
 														'asnp-easy-sale-badge'
 													) }
 												</option>
 												<option value="outofstock">
 													{ __(
-														'Out of Stock',
+														'Out of stock',
+														'asnp-easy-sale-badge'
+													) }
+												</option>
+												<option value="onbackorder">
+													{ __(
+														'On backorder',
 														'asnp-easy-sale-badge'
 													) }
 												</option>
