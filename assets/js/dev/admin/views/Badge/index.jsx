@@ -231,7 +231,13 @@ export default function Badge() {
 	const updateItem = ( groupIndex, index, field, value ) => {
 		let update = { [ field ]: value };
 		if ( 'type' === field ) {
-			update.items = [];
+			if ( 'stock_status' === value ) {
+				update.items = 'instock';
+			} else if ( 'is_on_sale' === value ) {
+				update.items = 'yes';
+			} else {
+				update.items = [];
+			}
 		}
 
 		setBadge( ( prev ) => {
