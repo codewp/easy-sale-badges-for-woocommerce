@@ -5,6 +5,14 @@ import { BadgeContext } from '../../../../contexts/Badge';
 
 import './style.scss';
 
+const showItemSelect = ( type ) => {
+	if ( ! type || ! type.length ) {
+		return false;
+	}
+
+	return -1 != [ 'products', 'categories', 'tags' ].indexOf( type );
+};
+
 const WooCommerce = () => {
 	const { addGroup, badge, addItem, updateItem, deleteItem } = useContext(
 		BadgeContext
@@ -46,26 +54,24 @@ const WooCommerce = () => {
 												'asnp-easy-sale-badge'
 											) }
 										</option>
-										<option value={ 'stockstatus' }>
+										<option value={ 'stock_status' }>
 											{ __(
 												'Stock status',
 												'asnp-easy-sale-badge'
 											) }
 										</option>
-										<option value={ 'isonsale' }>
+										<option value={ 'is_on_sale' }>
 											{ __(
-												'Is On Sale',
+												'Is on sale',
 												'asnp-easy-sale-badge'
 											) }
 										</option>
-
 										<option value={ 'categories' }>
 											{ __(
 												'Categories',
 												'asnp-easy-sale-badge'
 											) }
 										</option>
-
 										<option value={ 'tags' }>
 											{ __(
 												'Tags',
@@ -73,10 +79,9 @@ const WooCommerce = () => {
 											) }
 										</option>
 									</select>
-									{ badge.items[ groupIndex ][ index ].type ==
-									'isonsale' ? (
-										''
-									) : (
+									{ showItemSelect(
+										badge.items[ groupIndex ][ index ].type
+									) && (
 										<select
 											className="asnp-select-field !asnp-w-48 asnp-mt-2 asnp-ml-4"
 											value={
@@ -109,12 +114,10 @@ const WooCommerce = () => {
 									) }
 
 									<div className="asnp-ml-5 asnp-flex">
-										{ ( badge.items[ groupIndex ][ index ]
-											.type === 'products' ||
+										{ showItemSelect(
 											badge.items[ groupIndex ][ index ]
-												.type === 'categories' ||
-											badge.items[ groupIndex ][ index ]
-												.type === 'tags' ) && (
+												.type
+										) && (
 											<div className="asnp-itemselect">
 												<ItemSelect
 													items={
@@ -140,7 +143,7 @@ const WooCommerce = () => {
 											</div>
 										) }
 										{ badge.items[ groupIndex ][ index ]
-											.type == 'stockstatus' && (
+											.type == 'stock_status' && (
 											<select
 												className="asnp-select-field !asnp-w-[16rem] asnp-mt-2 asnp-ml-4"
 												value={
@@ -163,7 +166,7 @@ const WooCommerce = () => {
 														'asnp-easy-sale-badge'
 													) }
 												</option>
-												<option value="outofstock ">
+												<option value="outofstock">
 													{ __(
 														'Out of Stock',
 														'asnp-easy-sale-badge'
@@ -172,7 +175,7 @@ const WooCommerce = () => {
 											</select>
 										) }
 										{ badge.items[ groupIndex ][ index ]
-											.type == 'isonsale' && (
+											.type == 'is_on_sale' && (
 											<select
 												className="asnp-select-field !asnp-w-48 asnp-mt-2 asnp-ml-4"
 												value={
@@ -195,7 +198,7 @@ const WooCommerce = () => {
 														'asnp-easy-sale-badge'
 													) }
 												</option>
-												<option value="outofstock ">
+												<option value="no">
 													{ __(
 														'No',
 														'asnp-easy-sale-badge'
