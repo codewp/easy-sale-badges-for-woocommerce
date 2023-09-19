@@ -1105,12 +1105,14 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 
 	$class_names = apply_filters( 'asnp_wesb_css_badge_class_names', $class_names, $badge, $hide );
 
+	$label = apply_filters( 'asnp_wesb_css_badge_label', __( $badge->badgeLabel, 'asnp-easy-sale-badge' ), $badge );
+
 	// Css Badge
 	$output = '<div class="' . esc_attr( $class_names ) . '"' . ( $hide ? ' style="display: none;"' : '' ) . '>';
 	$output .= '<div class="asnp-esb-badge-'. absint( $badge->id ) .'">';
 	$output .= '<span class="asnp-esb-inner-span2-'. absint( $badge->id ) .'"></span>';
 	$output .= '<div class="asnp-esb-inner-span1-'. absint( $badge->id ) .'">';
-	$output .= '<div style="transform: ' . esc_attr( $horiz_and_vert ) . '">' . esc_html__( $badge->badgeLabel, 'asnp-easy-sale-badge' ) . '</div>';
+	$output .= '<div style="transform: ' . esc_attr( $horiz_and_vert ) . '">' . esc_html( $label ) . '</div>';
 	$output .= '</div>';
 	$output .= '</div>';
 	$output .= '</div>';
