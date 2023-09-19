@@ -13,12 +13,37 @@ import { AppContext } from '../../contexts/App';
 import { TrashIcon, PencilIcon, DuplicateIcon } from '@heroicons/react/solid';
 import Alert from '../../components/Alert';
 import { IMAGES_URL } from './../../utils/constants';
+import Pagination from '../../components/Pagination';
 
 export default function Badges() {
 	const { state, dispatch } = useContext( BadgesContext );
 	const { loading, setLoading, setMessage } = useContext( AppContext );
 	const [ showDeleteModal, setShowDeleteModal ] = useState( false );
 	const [ deleteId, setDeleteId ] = useState( 0 );
+	const [ pages, setPages ] = useState( 1 );
+	const [ page, setPage ] = useState( 1 );
+
+	useEffect( async () => {
+		try {
+			setLoading( true );
+			let response = await BadgeApi.getItems( { page } );
+			console.log( response );
+			setPages( null != response.pages ? response.pages * 1 : 1 );
+		} catch ( error ) {
+			console.error( error );
+		}
+		setLoading( false );
+	}, [ page ] );
+
+	const next = ( e ) => {
+		e.preventDefault();
+		setPage( page + 1 );
+	};
+
+	const previous = ( e ) => {
+		e.preventDefault();
+		setPage( page - 1 );
+	};
 
 	useEffect( () => {
 		setLoading( state.isLoading );
@@ -343,6 +368,15 @@ export default function Badges() {
 						</div>
 					</div>
 				</div>
+			) }
+			{ 1 < pages && (
+				<Pagination
+					current={ page }
+					total={ pages }
+					prevText={ __( 'Prev', 'asnp-easy-sale-badge' ) }
+					nextText={ __( 'Next', 'asnp-easy-sale-badge' ) }
+					onClickPage={ ( value ) => setPage( value ) }
+				/>
 			) }
 			{ showDeleteModal && (
 				<WarningModal
