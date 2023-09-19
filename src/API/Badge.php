@@ -106,9 +106,7 @@ class Badge extends BaseController {
 				'title'  => ! empty( $request['search'] ) ? sanitize_text_field( $request['search'] ) : '',
 			] );
 
-			return rest_ensure_response( [
-				'items' => $items,
-			] );
+			return rest_ensure_response( $items );
 		} catch ( \Exception $e ) {
 			return new \WP_Error( 'asnp_wesb_rest_badge_error', $e->getMessage(), array( 'status' => 400 ) );
 		}

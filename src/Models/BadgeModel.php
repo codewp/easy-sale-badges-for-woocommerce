@@ -91,16 +91,18 @@ class BadgeModel extends BaseModel {
 		$args = wp_parse_args(
 			$args,
 			array(
-				'number'  => 20,
-				'offset'  => 0,
-				'orderby' => 'id',
-				'order'   => 'ASC',
-				'output'  => OBJECT,
+				'number'   => 20,
+				'offset'   => 0,
+				'orderby'  => 'id',
+				'order'    => 'ASC',
+				'output'   => OBJECT,
+				'paginate' => true,
 			)
 		);
 
 		if ( $args['number'] < 1 ) {
-			$args['number'] = 999999999999;
+			$args['number']   = 999999999999;
+			$args['paginate'] = false;
 		}
 
 		$args['orderby'] = ! array_key_exists( $args['orderby'], $this->get_columns() ) ? 'id' : $args['orderby'];
@@ -131,6 +133,19 @@ class BadgeModel extends BaseModel {
 			$where .= ' AND `status` = ' . intval( $args['status'] );
 		}
 
+		$total = $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(`$this->primary_key`) FROM {$this->table_name} {$where}", $select_args ) );
+		if ( empty( $total ) || 0 >= (int) $total ) {
+			if ( empty( $args['paginate'] ) ) {
+				return [];
+			}
+
+			return [
+				'items' => [],
+				'total' => 0,
+				'pages' => 0,
+			];
+		}
+
 		$select_args[] = absint( $args['offset'] );
 		$select_args[] = absint( $args['number'] );
 
@@ -142,7 +157,15 @@ class BadgeModel extends BaseModel {
 			}
 		}
 
-		return $items;
+		if ( empty( $args['paginate'] ) ) {
+			return $items;
+		}
+
+		return [
+			'items' => $items,
+			'total' => absint( $total ),
+			'pages' => ceil( absint( $total ) / absint( $args['number'] ) ),
+		];
 	}
 
 	public function delete( $id ) {
