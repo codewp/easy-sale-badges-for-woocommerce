@@ -11,7 +11,7 @@ const BadgeStyles = ( props ) => {
 				<div className="asnp-w-[25rem] asnp-text-lg asnp-font-semibold">
 					{ __( 'Label Styles', 'asnp-easy-sale-badge' ) }
 				</div>
-				<div className="asnp-relative asnp-mb-3 asnp-mt-3 asnp-h-[25rem] asnp-pb-2 asnp-flex asnp-flex-col asnp-border-[1px] asnp-border-gray-300 asnp-rounded-2xl">
+				<div className="asnp-relative asnp-mb-3 asnp-mt-3 asnp-h-[18rem] asnp-pb-2 asnp-pt-2 asnp-flex asnp-flex-col asnp-border-[1px] asnp-border-gray-300 asnp-rounded-2xl">
 					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-8 asnp-ml-4">
 						<div
 							className={
@@ -213,68 +213,6 @@ const BadgeStyles = ( props ) => {
 							<img
 								className="asnp-h-full asnp-w-full asnp-border-none"
 								src={ IMAGES_URL + 'badge10.png' }
-							/>
-						</div>
-					</div>
-					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-8 asnp-ml-4">
-						<div
-							className={
-								( props.badgeStyles === 'badge11'
-									? 'asnp-border-indigo-700'
-									: 'asnp-border-gray-400' ) +
-								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
-							}
-							onClick={ () => {
-								props.onChange( 'badgeStyles', 'badge11' );
-								props.onChange( 'badgeAdv', '' );
-								props.onChange( 'imgbadge', 0 );
-								props.onChange( 'imgbadgeAdv', 0 );
-								props.onChange( 'useTimerBadge', 0 );
-							} }
-						>
-							<img
-								className="asnp-h-full asnp-w-full asnp-border-none"
-								src={ IMAGES_URL + 'badge11.png' }
-							/>
-						</div>
-						<div
-							className={
-								( props.badgeStyles === 'badge12'
-									? 'asnp-border-indigo-700'
-									: 'asnp-border-gray-400' ) +
-								' asnp-py-4 asnp-px-1 asnp-containerImage hover:asnp-border-indigo-700'
-							}
-							onClick={ () => {
-								props.onChange( 'badgeStyles', 'badge12' );
-								props.onChange( 'badgeAdv', '' );
-								props.onChange( 'imgbadge', 0 );
-								props.onChange( 'imgbadgeAdv', 0 );
-								props.onChange( 'useTimerBadge', 0 );
-							} }
-						>
-							<img
-								className="asnp-h-full asnp-w-full asnp-border-none"
-								src={ IMAGES_URL + 'badge12.png' }
-							/>
-						</div>
-						<div
-							className={
-								( props.badgeStyles === 'badge13'
-									? 'asnp-border-indigo-700'
-									: 'asnp-border-gray-400' ) +
-								' asnp-py-1 asnp-px-6 asnp-containerImage hover:asnp-border-indigo-700'
-							}
-							onClick={ () => {
-								props.onChange( 'badgeStyles', 'badge13' );
-								props.onChange( 'badgeAdv', '' );
-								props.onChange( 'imgbadge', 0 );
-								props.onChange( 'imgbadgeAdv', 0 );
-								props.onChange( 'useTimerBadge', 0 );
-							} }
-						>
-							<img
-								className="asnp-h-full asnp-w-full asnp-border-none"
-								src={ IMAGES_URL + 'badge13.png' }
 							/>
 						</div>
 					</div>
