@@ -20,51 +20,33 @@ export default function Badges() {
 	const { loading, setLoading, setMessage } = useContext( AppContext );
 	const [ showDeleteModal, setShowDeleteModal ] = useState( false );
 	const [ deleteId, setDeleteId ] = useState( 0 );
-	const [ badgeAccount, setBadgeAccount ] = useState( [] );
-	const [ pages, setPages ] = useState( 1 );
-	const [ page, setPage ] = useState( 1 );
-
-	useEffect( async () => {
-		try {
-			setLoading( true );
-			let response = await BadgeApi.getItems( { page } );
-			console.log( response );
-			setBadgeAccount(
-				response.items && response.items.length ? response.items : []
-			);
-			setPages( null != response.pages ? response.pages * 1 : 1 );
-		} catch ( error ) {
-			console.error( error );
-		}
-		setLoading( false );
-	}, [ page ] );
-
-	const next = ( e ) => {
-		e.preventDefault();
-		setPage( page + 1 );
-	};
-
-	const previous = ( e ) => {
-		e.preventDefault();
-		setPage( page - 1 );
-	};
 
 	useEffect( () => {
 		setLoading( state.isLoading );
 	}, [ state.isLoading ] );
 
-	const PreviewImage = ( badge ) => {
-		let imagePreview = '';
+	const getPageItems = async ( page ) => {
+		try {
+			await fetchItemsIfNeeded( state, dispatch, { page } );
+		} catch ( error ) {
+			setLoading( false );
+			setMessage( {
+				message: error.message,
+				type: 'error',
+			} );
+		}
+	};
 
+	const previewImage = ( badge ) => {
 		if (
 			badge.imgbadge === 0 &&
 			badge.imgbadgeAdv === 0 &&
 			badge.useTimerBadge === 0
 		) {
-			imagePreview = IMAGES_URL + badge.badgeStyles + '.png';
+			return IMAGES_URL + badge.badgeStyles + '.png';
 		}
 
-		return imagePreview;
+		return '';
 	};
 
 	const duplicate = async ( id ) => {
@@ -310,7 +292,7 @@ export default function Badges() {
 													>
 														<img
 															className="asnp-h-[3rem]"
-															src={ PreviewImage(
+															src={ previewImage(
 																item
 															) }
 														/>
@@ -373,13 +355,13 @@ export default function Badges() {
 					</div>
 				</div>
 			) }
-			{ 0 < badgeAccount.length && 1 < pages && (
+			{ 0 < state.items.length && 1 < state.pages && (
 				<Pagination
-					current={ page }
-					total={ pages }
-					prevText={ __( 'Prev', 'asnp-easy-product-bundles' ) }
-					nextText={ __( 'Next', 'asnp-easy-product-bundles' ) }
-					onClickPage={ ( value ) => setPage( value ) }
+					current={ state.page }
+					total={ state.pages }
+					prevText={ __( 'Prev', 'asnp-easy-sale-badge' ) }
+					nextText={ __( 'Next', 'asnp-easy-sale-badge' ) }
+					onClickPage={ ( value ) => getPageItems( value ) }
 				/>
 			) }
 			{ showDeleteModal && (

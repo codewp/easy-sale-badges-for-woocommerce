@@ -9,17 +9,25 @@ export const Action = {
 	SET_LOADED: 'badge/setLoaded',
 };
 
-export const fetchItems = async ( dispatch ) => {
+export const fetchItems = async ( state, dispatch, args = { page: 1 } ) => {
 	try {
+		if ( ! args.page ) {
+			args.page = state.page * 1;
+		}
+
 		dispatch( {
 			type: Action.SET_IS_LOADING,
 			payload: true,
 		} );
-		let response = await BadgeApi.getItems();
-		if ( response && response.items ) {
+		let response = await BadgeApi.getItems( args );
+		if ( response ) {
 			dispatch( {
 				type: Action.SET_ITEMS,
-				payload: response.items,
+				payload: {
+					items: response.items,
+					page: args.page ? args.page * 1 : 1,
+					pages: response.pages * 1,
+				},
 			} );
 			dispatch( {
 				type: Action.SET_LOADED,
@@ -41,7 +49,7 @@ export const fetchItems = async ( dispatch ) => {
 
 export const fetchItemsIfNeeded = async ( state, dispatch, args = {} ) => {
 	if ( shouldFetchItems( state, args ) ) {
-		return await fetchItems( dispatch );
+		return await fetchItems( state, dispatch, args );
 	}
 };
 
@@ -54,6 +62,15 @@ export const shouldFetchItems = ( state, args ) => {
 		return true;
 	}
 
+	if (
+		null != args.page &&
+		! isNaN( args.page * 1 ) &&
+		0 < args.page * 1 &&
+		args.page != state.page
+	) {
+		return true;
+	}
+
 	return false;
 };
 
@@ -61,12 +78,14 @@ export const initialState = {
 	isLoading: false,
 	items: [],
 	loaded: false,
+	page: 1,
+	pages: 0,
 };
 
 export const Reducer = ( state, action ) => {
 	switch ( action.type ) {
 		case Action.SET_ITEMS:
-			return { ...state, items: action.payload };
+			return { ...state, ...action.payload };
 
 		case Action.ADD_ITEM:
 			if ( state.items.length ) {
@@ -125,6 +144,9 @@ export const Reducer = ( state, action ) => {
 
 		case Action.SET_LOADED:
 			return { ...state, loaded: action.payload };
+
+		case Action.SET_PAGE:
+			return { ...state, page: action.payload };
 
 		default:
 			return state;
