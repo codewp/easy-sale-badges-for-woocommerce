@@ -394,7 +394,7 @@ export default function Badge() {
 								{ __( 'Save', 'asnp-easy-sale-badge' ) }
 							</button>
 							<Link
-								to={ `/badge/` }
+								to={ `/` }
 								className="asnp-py-2 asnp-px-6 asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none asnp-btn-secondary asnp-w-[86.68px] asnp-h-[35.5px]"
 							>
 								{ __( 'Cancel', 'asnp-easy-sale-badge' ) }

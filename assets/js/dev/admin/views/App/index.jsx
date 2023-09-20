@@ -108,7 +108,7 @@ export default function App() {
 								<Route path="/" element={ <Content /> }>
 									<Route index element={ <Badges /> } />
 									<Route
-										path="badge"
+										path="badges"
 										element={ <Badges /> }
 									/>
 									<Route
