@@ -104,6 +104,7 @@ class Badge extends BaseController {
 				'offset' => $page * 20 - 20,
 				'number' => 20,
 				'title'  => ! empty( $request['search'] ) ? sanitize_text_field( $request['search'] ) : '',
+				'order'  => 'DESC',
 			] );
 
 			return rest_ensure_response( $items );

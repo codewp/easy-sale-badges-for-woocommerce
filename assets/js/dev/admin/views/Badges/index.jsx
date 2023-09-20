@@ -55,7 +55,10 @@ export default function Badges() {
 		try {
 			let response = await BadgeApi.duplicate( id );
 			if ( response && response.id ) {
-				await fetchItemsIfNeeded( state, dispatch, { force: true } );
+				await fetchItemsIfNeeded( state, dispatch, {
+					force: true,
+					page: 1,
+				} );
 				setMessage( {
 					message: __(
 						'Duplicated Successfully.',
