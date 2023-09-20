@@ -9,7 +9,7 @@
 		min-width: 22px;
 		text-align: center;
 		background: white;
-		margin: 0 1.5px;
+		margin-right: 4px !important;
 		border: 1px solid #bbc0d4;
 		border-radius: 6px;
 		padding: 0 2px;
@@ -27,12 +27,13 @@
 			color: #fff;
 			background: #7f54b3;
 			border-color: #7f54b3;
+			margin-right: 4px !important;
 		}
 		&.asnp-pagination-prev span {
-			margin-right: 4px;
+			margin-right: 4px !important;
 		}
 		&.asnp-pagination-next span {
-			margin-left: 4px;
+			margin-left: 4px !important;
 		}
 	}
 }

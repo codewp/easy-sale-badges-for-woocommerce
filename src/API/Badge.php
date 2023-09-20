@@ -383,13 +383,11 @@ class Badge extends BaseController {
 				// Boolean options.
 				case 'horizontal':
 				case 'vertical':
-				case 'useProductFilter':
 				case 'imgbadge':
 				case 'percentageDiscount':
 				case 'imgbadgeAdv':
 				case 'alwaysOnline':
 				case 'percentageDiscountAdv':
-				case 'useTimezone':
 				case 'useTimerBadge':
 					if ( isset( $value ) ) {
 						$options[ $key ] = SaleBadges\string_to_bool( $value ) ? 1 : 0;
@@ -409,7 +407,6 @@ class Badge extends BaseController {
 					}
 					break;
 
-				case 'availability':
 				case 'items':
 					if ( isset( $value ) ) {
 						$options[ $key ] = wp_kses_post_deep( $value );
