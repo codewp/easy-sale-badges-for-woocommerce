@@ -385,9 +385,10 @@ class Badge extends BaseController {
 				case 'vertical':
 				case 'useProductFilter':
 				case 'imgbadge':
-				case 'badgeAdv':
+				case 'percentageDiscount':
 				case 'imgbadgeAdv':
 				case 'alwaysOnline':
+				case 'percentageDiscountAdv':
 				case 'useTimezone':
 				case 'useTimerBadge':
 					if ( isset( $value ) ) {

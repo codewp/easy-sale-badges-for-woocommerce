@@ -20,6 +20,7 @@ export default function Badges() {
 	const { loading, setLoading, setMessage } = useContext( AppContext );
 	const [ showDeleteModal, setShowDeleteModal ] = useState( false );
 	const [ deleteId, setDeleteId ] = useState( 0 );
+	const [ badgeAccount, setBadgeAccount ] = useState( [] );
 	const [ pages, setPages ] = useState( 1 );
 	const [ page, setPage ] = useState( 1 );
 
@@ -28,6 +29,9 @@ export default function Badges() {
 			setLoading( true );
 			let response = await BadgeApi.getItems( { page } );
 			console.log( response );
+			setBadgeAccount(
+				response.items && response.items.length ? response.items : []
+			);
 			setPages( null != response.pages ? response.pages * 1 : 1 );
 		} catch ( error ) {
 			console.error( error );
@@ -369,12 +373,12 @@ export default function Badges() {
 					</div>
 				</div>
 			) }
-			{ 1 < pages && (
+			{ 0 < badgeAccount.length && 1 < pages && (
 				<Pagination
 					current={ page }
 					total={ pages }
-					prevText={ __( 'Prev', 'asnp-easy-sale-badge' ) }
-					nextText={ __( 'Next', 'asnp-easy-sale-badge' ) }
+					prevText={ __( 'Prev', 'asnp-easy-product-bundles' ) }
+					nextText={ __( 'Next', 'asnp-easy-product-bundles' ) }
 					onClickPage={ ( value ) => setPage( value ) }
 				/>
 			) }
