@@ -26,9 +26,19 @@ export default function Badges() {
 		setLoading( state.isLoading );
 	}, [ state.isLoading ] );
 
-	const getPageItems = async ( page ) => {
+	useEffect( () => {
+		if ( state.itemAdded ) {
+			getPageItems( 1, true );
+			dispatch( {
+				type: Action.ITEM_ADDED,
+				payload: false,
+			} );
+		}
+	}, [ state.itemAdded ] );
+
+	const getPageItems = async ( page, force = false ) => {
 		try {
-			await fetchItemsIfNeeded( state, dispatch, { page } );
+			await fetchItemsIfNeeded( state, dispatch, { page, force } );
 		} catch ( error ) {
 			setLoading( false );
 			setMessage( {

@@ -96,8 +96,6 @@ export default function Badge() {
 	const { setLoading, setMessage } = useContext( AppContext );
 	const [ badgeImageFile, setBadgeImageFile ] = useState( null );
 
-	console.log( badge );
-
 	useEffect( () => {
 		setBadgeImageFile( null );
 		if ( ! params.id || 'new' === params.id ) {
@@ -306,17 +304,25 @@ export default function Badge() {
 	};
 
 	const save = async () => {
-		setLoading( true );
-
 		try {
+			setLoading( true );
 			let response = await BadgeApi.save( badge );
 			setLoading( false );
 			if ( response && response.item ) {
-				setBadge( { ...defaultBadge, ...response.item } );
-				dispatch( {
-					type: Action.ADD_ITEM,
-					payload: response.item,
-				} );
+				let update = { ...defaultBadge, ...response.item };
+				setBadge( update );
+				if ( ! params.id || 'new' === params.id ) {
+					dispatch( {
+						type: Action.ITEM_ADDED,
+						payload: true,
+					} );
+				} else {
+					dispatch( {
+						type: Action.UPDATE_ITEM,
+						payload: update,
+					} );
+				}
+
 				setMessage( {
 					message: __(
 						'Saved Successfully.',

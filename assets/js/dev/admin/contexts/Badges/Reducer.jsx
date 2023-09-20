@@ -7,6 +7,7 @@ export const Action = {
 	DELETE_ITEM: 'badge/deleteItem',
 	SET_IS_LOADING: 'badge/setIsLoading',
 	SET_LOADED: 'badge/setLoaded',
+	ITEM_ADDED: 'badge/itemAdded',
 };
 
 export const fetchItems = async ( state, dispatch, args = { page: 1 } ) => {
@@ -94,6 +95,7 @@ export const initialState = {
 	loaded: false,
 	page: 1,
 	pages: 0,
+	itemAdded: false,
 };
 
 export const Reducer = ( state, action ) => {
@@ -161,6 +163,9 @@ export const Reducer = ( state, action ) => {
 
 		case Action.SET_PAGE:
 			return { ...state, page: action.payload };
+
+		case Action.ITEM_ADDED:
+			return { ...state, itemAdded: action.payload };
 
 		default:
 			return state;
