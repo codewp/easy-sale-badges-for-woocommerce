@@ -74,6 +74,20 @@ export const shouldFetchItems = ( state, args ) => {
 	return false;
 };
 
+export const itemRemoved = async ( state, dispatch ) => {
+	let page = 1;
+	if ( 1 < state.items.length ) {
+		page = state.page * 1;
+	} else if ( 1 < state.page - 1 ) {
+		page = state.page - 1;
+	}
+
+	return await fetchItems( state, dispatch, {
+		page,
+		force: true,
+	} );
+};
+
 export const initialState = {
 	isLoading: false,
 	items: [],

@@ -5,6 +5,7 @@ import * as BadgeApi from '@easy-sale-badges/api/badge';
 import {
 	BadgesContext,
 	fetchItemsIfNeeded,
+	itemRemoved,
 	Action,
 } from '../../contexts/Badges';
 import Toggle from '../../components/Toggle';
@@ -101,12 +102,8 @@ export default function Badges() {
 
 		try {
 			let response = await BadgeApi.deleteItem( deleteId );
-			setLoading( false );
 			if ( response && response.id ) {
-				dispatch( {
-					type: Action.DELETE_ITEM,
-					payload: deleteId,
-				} );
+				await itemRemoved( state, dispatch );
 				setMessage( {
 					message: __(
 						'Deleted Successfully.',
