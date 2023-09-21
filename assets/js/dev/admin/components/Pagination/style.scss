@@ -4,18 +4,19 @@
 	font-size: 12px;
 	color: #363636;
 	padding: 10px 5px !important;
-	> span,
-	button {
+	> button {
 		line-height: 25px;
+		min-height: fit-content;
+		max-height: fit-content;
 		min-width: 22px;
 		text-align: center;
 		background: white;
 		margin-right: 4px !important;
 		border: 1px solid #bbc0d4;
 		border-radius: 6px;
+		padding: 10px 5px !important;
 		display: inline-block;
 		text-decoration: none;
-		padding: 10px 5px !important;
 		color: inherit;
 		&:hover {
 			color: #7f54b3;
@@ -32,26 +33,36 @@
 			margin-right: 4px !important;
 			padding: 10px 5px !important;
 		}
-		&.asnp-pagination-prev span {
-			margin-right: 4px !important;
-			padding: 10px 5px !important;
-		}
-		&.asnp-pagination-next span {
+		> span {
+			font-size: 11px;
+			width: 11px;
+			line-height: unset;
+			font-weight: 600;
 			margin-left: 4px !important;
-			padding: 10px 5px !important;
 		}
+	}
+}
+html[dir='rtl'] {
+	.dashicons-arrow-left-alt2::before {
+		content: '\f345' !important;
+	}
+	.dashicons-arrow-right-alt2::before {
+		content: '\f341' !important;
 	}
 }
 @media only screen and ( min-width: 481px ) {
 	.asnp-badge-pagination {
 		font-size: 16px;
 		a,
-		> span,
-		button {
+		> button {
 			line-height: 27px;
 			min-width: 27px;
 			margin: 0 3.5px;
 			padding: 0 6px;
+			> span {
+				font-size: 14px;
+				width: 13px;
+			}
 		}
 	}
 }
@@ -59,11 +70,14 @@
 	.asnp-badge-pagination {
 		font-size: 18px;
 		a,
-		> span,
-		button {
+		> button {
 			line-height: 34px;
 			min-width: 34px;
 			margin: 0 4.5px;
+			> span {
+				font-size: 16px;
+				width: 14px;
+			}
 		}
 	}
 }
@@ -72,11 +86,14 @@
 	.asnp-badge-pagination {
 		font-size: 12px;
 		a,
-		> span,
-		button {
+		> button {
 			line-height: 23px;
 			min-width: 23px;
 			margin: 0 2.5px;
+			> span {
+				font-size: 11px;
+				width: 12px;
+			}
 		}
 	}
 }
@@ -85,11 +102,14 @@
 	.asnp-badge-pagination {
 		font-size: 13px;
 		a,
-		> span,
-		button {
+		> button {
 			line-height: 28px;
 			min-width: 28px;
 			margin: 0 3.5px;
+			> span {
+				font-size: 12px;
+				width: 14px;
+			}
 		}
 	}
 }
@@ -98,11 +118,14 @@
 	.asnp-badge-pagination {
 		font-size: 15px;
 		a,
-		> span,
-		button {
+		> button {
 			line-height: 30px;
 			min-width: 30px;
 			margin: 0 4.5px;
+			> span {
+				font-size: 13px;
+				width: 14px;
+			}
 		}
 	}
 }

@@ -62,7 +62,7 @@ export default function Pagination( {
 				pages.push( {
 					isDots: true,
 					key: n,
-					onClick:()=>console.log('dots'),
+					onClick: () => console.log( 'dots' ),
 					className: 'asnp-pages',
 					text: '...',
 				} );
@@ -82,20 +82,18 @@ export default function Pagination( {
 	}
 
 	return (
-			<div className="asnp-badge-pagination">
-				{ pages.map(
-					( { isCurrent, key, text, className, onClick } ) => (
-						<Page
-							key={ key }
-							isCurrent={ isCurrent }
-							pageKey={ key }
-							onClick={ () => onClick() }
-							className={ className }
-						>
-							{ text }
-						</Page>
-					)
-				) }
-			</div>
+		<div className="asnp-badge-pagination">
+			{ pages.map( ( { isCurrent, key, text, className, onClick } ) => (
+				<Page
+					key={ key }
+					isCurrent={ isCurrent }
+					pageKey={ key }
+					onClick={ () => onClick() }
+					className={ className }
+				>
+					{ text }
+				</Page>
+			) ) }
+		</div>
 	);
 }

@@ -5,7 +5,7 @@ export default function Page( {
 	pageKey,
 	onClick,
 	children,
-	className='',
+	className = '',
 } ) {
 	if ( isCurrent ) {
 		className += ' current';
@@ -13,9 +13,13 @@ export default function Page( {
 
 	return (
 		<button className={ className } onClick={ () => onClick() }>
-			{ pageKey === 'prev' && <span className="fas fa-angle-left" /> }
+			{ pageKey === 'prev' && (
+				<span className="dashicons dashicons-arrow-left-alt2" />
+			) }
 			{ children }
-			{ pageKey === 'next' && <span className="fas fa-angle-right" /> }
+			{ pageKey === 'next' && (
+				<span className="dashicons dashicons-arrow-right-alt2" />
+			) }
 		</button>
 	);
 }
