@@ -231,6 +231,7 @@ function get_theme_single_container( $stylesheet = null, $template = null ) {
 
 	$themes = [
 		'thegem' => '.product-gallery-slider',
+		'eduma' => '.main_product_thumbnai',
 	];
 
 	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
