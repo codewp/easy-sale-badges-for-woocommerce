@@ -3,7 +3,7 @@ import { __ } from '@wordpress/i18n';
 
 const Opacity = ( props ) => {
 	return (
-		<div className='asnp-ew-line asnp-mt-6'>
+		<div className="asnp-ew-line asnp-mt-6">
 			<label className="asnp-space-y-1">
 				<span className="asnp-field-title asnp-text-base asnp-font-semibold">
 					{ __( 'Opacity', 'asnp-easy-sale-badge' ) }
@@ -115,7 +115,7 @@ const Opacity = ( props ) => {
 
 			<div className="asnp-mt-6">
 				<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-					{ __( 'Flip Text', 'asnp-easy-sale-badge' ) }
+					{ __( 'Reverse Text', 'asnp-easy-sale-badge' ) }
 				</span>
 				<div className="asnp-flex asnp-mt-2">
 					<div className="asnp-w-40">
