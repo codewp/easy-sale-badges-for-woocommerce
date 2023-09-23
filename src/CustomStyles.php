@@ -25,11 +25,7 @@ class CustomStyles {
 			return;
 		}
 
-		if ( empty( $this->styles ) ) {
-			$this->styles .= $style;
-		} else {
-			$this->styles .= ' ' . $style;
-		}
+		$this->styles .= $style;
 	}
 
 	public function output_styles() {
