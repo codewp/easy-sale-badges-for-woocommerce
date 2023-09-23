@@ -6,7 +6,6 @@ defined( 'ABSPATH' ) || exit;
 
 class Menu {
 
-
 	protected $menus = array();
 
 	public function init() {
@@ -38,8 +37,7 @@ class Menu {
 	public function create_menu() {
 		?>
 		<div id="asnp-badge-wrapper" class="asnp-badge-wrapper">
-			<div id="asnp-easy-sale-badge">
-			</div>
+			<div id="asnp-easy-sale-badge"></div>
 		</div>
 		<?php
 	}
