@@ -4,6 +4,8 @@ namespace AsanaPlugins\WooCommerce\SaleBadges\API;
 
 defined( 'ABSPATH' ) || exit;
 
+use AsanaPlugins\WooCommerce\SaleBadges;
+
 class Settings extends BaseController {
 
 	protected $rest_base = 'settings';
@@ -60,6 +62,7 @@ class Settings extends BaseController {
 			}
 
 			switch ( $key ) {
+				// String values.
 				case 'singlePosition':
 				case 'loopPosition':
 				case 'singleCustomHooks':
@@ -68,6 +71,12 @@ class Settings extends BaseController {
 				case 'singleContainer':
 				case 'licenseKey':
 					$data[ $key ] = sanitize_text_field( $value );
+					break;
+
+				// Boolean values.
+				case 'showLabel':
+				case 'showBadgeProductPage':
+					$options[ $key ] = SaleBadges\string_to_bool( $value ) ? 1 : 0;
 					break;
 
 				default:
