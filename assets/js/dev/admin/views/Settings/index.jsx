@@ -93,7 +93,7 @@ export default function Settings() {
 						singleCustomHooks={ settings.singleCustomHooks }
 						loopCustomHooks={ settings.loopCustomHooks }
 						timerPosition={ settings.timerPosition }
-						showLabel={ settings.showLabel }
+						hideWooCommerceBadges={ settings.hideWooCommerceBadges }
 					/>
 				) }
 				{ 'singlepage' === activeMenu && (

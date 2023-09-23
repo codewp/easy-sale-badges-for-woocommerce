@@ -14,11 +14,11 @@ const SinglePage = ( props ) => {
 				</h2>
 				<div>
 					<Toggle
-						value={ 'true' == props.showBadgeProductPage }
+						value={ 1 == props.showBadgeProductPage }
 						onChange={ ( value ) =>
 							props.onChange(
 								'showBadgeProductPage',
-								value ? 'true' : 'false'
+								value ? 1 : 0
 							)
 						}
 					/>

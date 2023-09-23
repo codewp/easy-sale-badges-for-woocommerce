@@ -9,15 +9,15 @@ const General = ( props ) => {
 				<div className="asnp-flex asnp-flex-row md:asnp-w-[27rem] asnp-w-[20rem] asnp-justify-between">
 					<div className="asnp-field-title md:asnp-min-w-1/3">
 						{ __(
-							'Display the Default "WooCommerce / Theme Sale Badges"',
+							'Hide WooCommerce On Sale Badges"',
 							'asnp-easy-sale-badge'
 						) }
 					</div>
 					<div>
 						<Toggle
-							value={ 1 == props.showLabel }
+							value={ 1 == props.hideWooCommerceBadges }
 							onChange={ ( value ) =>
-								props.onChange( 'showLabel', value ? 1 : 0 )
+								props.onChange( 'hideWooCommerceBadges', value ? 1 : 0 )
 							}
 						/>
 					</div>
