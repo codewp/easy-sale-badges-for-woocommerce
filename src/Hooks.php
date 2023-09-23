@@ -10,6 +10,9 @@ class Hooks {
 		if ( get_plugin()->is_request( 'frontend' ) ) {
 			self::single_hooks();
 			self::loop_hooks();
+			if ( (int) get_plugin()->settings->get_settings( 'hideWooCommerceBadges', 0 ) ) {
+				add_custom_style( '.onsale{display:none !important;}' );
+			}
 		}
 	}
 
