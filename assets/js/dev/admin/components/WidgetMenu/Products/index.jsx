@@ -6,7 +6,7 @@ const Products = ( props ) => {
 	return (
 		<div>
 			<div className="asnp-w-[25rem] asnp-mt-2 asnp-text-lg asnp-font-semibold">
-				{ __( 'Products Selection', 'asnp-easy-sale-badge' ) }
+				{ __( 'Products', 'asnp-easy-sale-badge' ) }
 			</div>
 			<div className="asnp-mt-3">
 				<label className="asnp-block asnp-space-y-1">

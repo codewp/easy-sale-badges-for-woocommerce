@@ -112,6 +112,11 @@ const Schedule = () => {
 											</span>
 											<Datetime
 												dateFormat="YYYY-MM-DD"
+												value={
+													badge.schedule[
+														groupIndex
+													][ index ].end
+												}
 												timeFormat={ false }
 												onChange={ ( momentObj ) =>
 													updateSchedule(
