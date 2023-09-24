@@ -9,7 +9,7 @@ const General = ( props ) => {
 				<div className="asnp-flex asnp-flex-row md:asnp-w-[27rem] asnp-w-[20rem] asnp-justify-between">
 					<div className="asnp-field-title md:asnp-min-w-1/3">
 						{ __(
-							'Hide WooCommerce On Sale Badges"',
+							'Hide WooCommerce On Sale Badges',
 							'asnp-easy-sale-badge'
 						) }
 					</div>
