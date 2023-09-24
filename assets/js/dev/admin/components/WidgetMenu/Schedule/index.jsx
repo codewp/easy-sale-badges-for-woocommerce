@@ -192,8 +192,9 @@ const Schedule = () => {
 								<div className="asnp-flex asnp-ml-8 asnp-mt-4 asnp-inputWeek">
 									<DaysOfWeekSelect
 										value={
-											badge.items[ groupIndex ][ index ]
-												.days
+											badge.schedule[ groupIndex ][
+												index
+											].days
 										}
 										onChange={ ( value ) =>
 											updateDaysSchedule(
