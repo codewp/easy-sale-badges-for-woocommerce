@@ -191,11 +191,11 @@ const Schedule = () => {
 								'days' && (
 								<div className="asnp-flex asnp-ml-8 asnp-mt-4 asnp-inputWeek">
 									<DaysOfWeekSelect
-										value={
-											badge.schedule[ groupIndex ][
-												index
-											].days
-										}
+										value={ badge.schedule[ groupIndex ][
+											index
+										].days.flatMap(
+											( innerArray ) => innerArray
+										) }
 										onChange={ ( value ) =>
 											updateDaysSchedule(
 												groupIndex,
