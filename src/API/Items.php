@@ -56,10 +56,7 @@ class Items extends BaseController {
 				$items = ItemsModel::search_products(
 					array(
 						'search' => $search,
-						'type'   => array(
-							'simple',
-							'variation',
-						),
+						'type'   => array_keys( wc_get_product_types() ),
 					)
 				);
 			  } elseif ( 'categories' === $request['type'] ) {
@@ -74,7 +71,7 @@ class Items extends BaseController {
 				'items' => $items,
 			] );
 		} catch ( \Exception $e ) {
-			return new \WP_Error( 'asnp_wesb_rest_items_error', $e->getMessage(), array( 'status' => 400 ) );
+			return new \WP_Error( 'asnp_wesb_rest_search_items_error', $e->getMessage(), array( 'status' => 400 ) );
 		}
 	}
 
@@ -99,17 +96,22 @@ class Items extends BaseController {
 				$items = explode( ',', $items );
 			}
 
+			$items = array_filter( array_map( 'absint', $items ) );
+			if ( empty( $items ) ) {
+				throw new \Exception( __( 'Invalid items.', 'asnp-easy-sale-badge' ) );
+			}
+
 			if ( 'products' === $request['type'] ) {
 				$items = ItemsModel::get_products(
 				  array(
-					'type'    => array( 'simple', 'variation' ),
-					'include' => array_filter( array_map( 'absint', $items ) ),
+					'type'    => array_keys( wc_get_product_types() ),
+					'include' => $items,
 				  )
 				);
 			  } elseif ( 'categories' === $request['type'] ) {
-				$items = ItemsModel::get_categories( array( 'include' => array_filter( array_map( 'absint', $req_items ) ) ) );
+				$items = ItemsModel::get_categories( array( 'include' => $items ) );
 			  }  elseif ( 'tags' === $request['type'] ) {
-				$items = ItemsModel::get_tags( array( 'include' => array_filter( array_map( 'absint', $req_items ) ) ) );
+				$items = ItemsModel::get_tags( array( 'include' => $items ) );
 			  } else {
 				$items = apply_filters( 'asnp_wesb_items_api_' . __FUNCTION__, [], $items, $request );
 			  }
@@ -118,7 +120,7 @@ class Items extends BaseController {
 				'items' => $items,
 			] );
 		} catch ( \Exception $e ) {
-			return new \WP_Error( 'asnp_wesb_rest_items_error', $e->getMessage(), array( 'status' => 400 ) );
+			return new \WP_Error( 'asnp_wesb_rest_get_items_error', $e->getMessage(), array( 'status' => 400 ) );
 		}
 	}
 
