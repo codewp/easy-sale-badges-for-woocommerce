@@ -1,4 +1,4 @@
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 import domReady from '@wordpress/dom-ready';
 import { HashRouter as Router } from 'react-router-dom';
 import App from './views/App';
@@ -9,10 +9,20 @@ import './assets/css/badge.scss';
 import 'tippy.js/dist/tippy.css';
 
 domReady( function () {
-	render(
-		<Router>
-			<App />
-		</Router>,
-		document.getElementById( 'asnp-easy-sale-badge' )
-	);
+	if ( 'function' === typeof ReactDOM.createRoot ) {
+		ReactDOM.createRoot(
+			document.getElementById( 'asnp-easy-sale-badge' )
+		).render(
+			<Router>
+				<App />
+			</Router>
+		);
+	} else {
+		ReactDOM.render(
+			<Router>
+				<App />
+			</Router>,
+			document.getElementById( 'asnp-easy-sale-badge' )
+		);
+	}
 } );
