@@ -106,7 +106,11 @@ class DateTimeValidator {
 			if ( ! empty( $date_time['days'] ) ) {
 				$today = date( 'l', current_time( 'timestamp' ) );
 				foreach ( $date_time['days'] as $day ) {
-					if ( $today == $day ) {
+					if ( is_array( $day ) ) {
+						if ( isset( $day['value'] ) && $day['value'] === $day ) {
+							return true;
+						}
+					} elseif ( $today == $day ) {
 						return true;
 					}
 				}
