@@ -67,16 +67,16 @@ export default function Settings() {
 						href="#"
 						onClick={ ( e ) => {
 							e.preventDefault();
-							setActiveMenu( 'singlepage' );
+							setActiveMenu( 'productPage' );
 						} }
 						className={
 							'asnp-nav-tab-item' +
-							( 'singlepage' === activeMenu
+							( 'productPage' === activeMenu
 								? ' asnp-nav-tab-active'
 								: '' )
 						}
 					>
-						{ __( 'Single Page ', 'asnp-easy-sale-badge' ) }
+						{ __( 'Product Page', 'asnp-easy-sale-badge' ) }
 					</a>
 				</nav>
 			</div>
@@ -96,7 +96,7 @@ export default function Settings() {
 						hideWooCommerceBadges={ settings.hideWooCommerceBadges }
 					/>
 				) }
-				{ 'singlepage' === activeMenu && (
+				{ 'productPage' === activeMenu && (
 					<SinglePage
 						onChange={ updateSettings }
 						onSave={ save }

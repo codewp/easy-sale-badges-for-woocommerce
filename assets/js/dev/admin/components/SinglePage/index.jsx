@@ -27,7 +27,10 @@ const SinglePage = ( props ) => {
 			<div className="asnp-mt-8">
 				<label className="asnp-block asnp-space-y-1">
 					<h2 className="asnp-field-title asnp-ml-1">
-						{ __( 'Single Container', 'asnp-easy-sale-badge' ) }
+						{ __(
+							'Product Image Container Selector',
+							'asnp-easy-sale-badge'
+						) }
 					</h2>
 					<input
 						type="text"

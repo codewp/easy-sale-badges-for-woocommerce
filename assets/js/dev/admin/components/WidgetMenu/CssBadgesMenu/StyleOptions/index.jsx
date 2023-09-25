@@ -293,7 +293,7 @@ const StyleOptions = ( props ) => {
 					</label>
 				</div>
 				<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold">
-					{ __( 'Additional Styles', 'asnp-easy-sale-badge' ) }
+					{ __( 'Extra Styles', 'asnp-easy-sale-badge' ) }
 				</div>
 
 				<div className="asnp-flex asnp-mt-2">
