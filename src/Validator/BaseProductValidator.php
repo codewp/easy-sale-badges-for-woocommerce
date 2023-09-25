@@ -100,7 +100,7 @@ abstract class BaseProductValidator {
 			return false;
 		}
 
-		$categories = self::get_items( $item['items'] );
+		$categories = static::get_items( $item['items'] );
 		if ( empty( $categories ) ) {
 			return false;
 		}
@@ -131,7 +131,7 @@ abstract class BaseProductValidator {
 			return false;
 		}
 
-		$tags = self::get_items( $item['items'] );
+		$tags = static::get_items( $item['items'] );
 		if ( empty( $tags ) ) {
 			return true;
 		}
