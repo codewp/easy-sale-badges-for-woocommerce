@@ -52,6 +52,14 @@ abstract class BaseProductValidator {
 		);
 	}
 
+	public static function all_products( $item, $product ) {
+		if ( empty( $item ) || ! $product ) {
+			return false;
+		}
+
+		return true;
+	}
+
 	public static function products( $item, $product ) {
 		if ( empty( $item ) || ! $product ) {
 			return false;
