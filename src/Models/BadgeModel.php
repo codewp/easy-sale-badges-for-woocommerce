@@ -139,12 +139,8 @@ class BadgeModel extends BaseModel {
 				$query = $wpdb->prepare( "SELECT COUNT(`$this->primary_key`) FROM {$this->table_name} {$where}", $select_args );
 			}
 
-			$total = $wpdb->get_var( $query );
-			if ( empty( $total ) || 0 >= (int) $total ) {
-				if ( empty( $args['paginate'] ) ) {
-					return [];
-				}
-
+			$total = (int) $wpdb->get_var( $query );
+			if ( 0 >= $total ) {
 				return [
 					'items' => [],
 					'total' => 0,
