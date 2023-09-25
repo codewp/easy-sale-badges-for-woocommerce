@@ -31,6 +31,7 @@ class Assets {
 					'wp-hooks',
 					'wp-i18n',
 					'wp-api-fetch',
+					'moment',
 				),
 				ASNP_WESB_VERSION,
 				true

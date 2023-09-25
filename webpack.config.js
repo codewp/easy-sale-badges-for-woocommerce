@@ -19,6 +19,7 @@ const externals = {
 	'@wordpress/api-fetch': { this: [ 'wp', 'apiFetch' ] },
 	react: 'React',
 	'react-dom': 'ReactDOM',
+	moment: 'moment',
 };
 
 const aliases = {

@@ -88,6 +88,7 @@ function register_polyfills() {
 		'wp-i18n'      => array( '6.0', array() ),
 		'wp-hooks'     => array( '6.0', array() ),
 		'wp-api-fetch' => array( '6.0', array() ),
+		'moment'       => array( '2.29.4', array() ),
 	);
 	foreach ( $handles as $handle => $value ) {
 		if ( ! version_compare( $wp_version, '5.9', '>=' ) && in_array( $handle, array( 'react', 'react-dom' ) ) ) {
