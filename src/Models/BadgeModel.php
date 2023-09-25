@@ -133,17 +133,24 @@ class BadgeModel extends BaseModel {
 			$where .= ' AND `status` = ' . intval( $args['status'] );
 		}
 
-		$total = $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(`$this->primary_key`) FROM {$this->table_name} {$where}", $select_args ) );
-		if ( empty( $total ) || 0 >= (int) $total ) {
-			if ( empty( $args['paginate'] ) ) {
-				return [];
+		if ( ! empty( $args['paginate'] ) ) {
+			$query = "SELECT COUNT(`$this->primary_key`) FROM {$this->table_name} {$where}";
+			if ( ! empty( $select_args ) ) {
+				$query = $wpdb->prepare( "SELECT COUNT(`$this->primary_key`) FROM {$this->table_name} {$where}", $select_args );
 			}
 
-			return [
-				'items' => [],
-				'total' => 0,
-				'pages' => 0,
-			];
+			$total = $wpdb->get_var( $query );
+			if ( empty( $total ) || 0 >= (int) $total ) {
+				if ( empty( $args['paginate'] ) ) {
+					return [];
+				}
+
+				return [
+					'items' => [],
+					'total' => 0,
+					'pages' => 0,
+				];
+			}
 		}
 
 		$select_args[] = absint( $args['offset'] );
