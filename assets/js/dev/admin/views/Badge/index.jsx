@@ -11,7 +11,7 @@ import { BadgeContext } from '../../contexts/Badge';
 import BadgeButton from '../../components/BadgeButton';
 
 const initialItem = {
-	type: 'products',
+	type: 'all_products',
 	selectType: 'included',
 	items: [],
 };

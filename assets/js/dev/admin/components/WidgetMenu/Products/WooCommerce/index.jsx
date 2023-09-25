@@ -48,6 +48,12 @@ const WooCommerce = () => {
 											)
 										}
 									>
+										<option value={ 'all_products' }>
+											{ __(
+												'All Products',
+												'asnp-easy-sale-badge'
+											) }
+										</option>
 										<option value={ 'products' }>
 											{ __(
 												'Products',
