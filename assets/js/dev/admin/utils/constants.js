@@ -13,6 +13,12 @@ export const defaultSettings = {
 export const PLUGIN_URL = saleBadgeData.pluginUrl;
 export const IMAGES_URL = `${ PLUGIN_URL }assets/images/`;
 
+let serverTime = new Date();
+let initialLocalTime = Date.now();
+
+export const getNow = () => {
+	return new Date( serverTime.getTime() + ( Date.now() - initialLocalTime ) );
+};
 
 export const customColor = [
 	'rgb(255, 148, 148)',
@@ -34,7 +40,6 @@ export const customColor = [
 	'rgb(183, 196, 207)',
 	'rgb(229, 186, 115)',
 ];
-
 
 export default function BadgeCssandAdv( badge ) {
 	let badgeIcon = '';
