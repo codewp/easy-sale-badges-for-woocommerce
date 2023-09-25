@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { __, sprintf } from '@wordpress/i18n';
 import Datetime from 'react-datetime';
+import moment from 'moment';
 import TimePicker from './../../TimePicker';
 import { BadgeContext } from '../../../contexts/Badge';
 import DaysOfWeekSelect from '../../DaysOfWeek';
@@ -94,9 +95,9 @@ const Schedule = () => {
 														groupIndex,
 														index,
 														'start',
-														momentObj.format(
-															'YYYY-MM-DD'
-														)
+														moment(
+															momentObj
+														).format( 'YYYY-MM-DD' )
 													)
 												}
 											/>
@@ -112,20 +113,20 @@ const Schedule = () => {
 											</span>
 											<Datetime
 												dateFormat="YYYY-MM-DD"
+												timeFormat={ false }
 												value={
 													badge.schedule[
 														groupIndex
 													][ index ].end
 												}
-												timeFormat={ false }
 												onChange={ ( momentObj ) =>
 													updateSchedule(
 														groupIndex,
 														index,
 														'end',
-														momentObj.format(
-															'YYYY-MM-DD'
-														)
+														moment(
+															momentObj
+														).format( 'YYYY-MM-DD' )
 													)
 												}
 											/>
@@ -155,7 +156,9 @@ const Schedule = () => {
 														groupIndex,
 														index,
 														'start',
-														momentObj.format(
+														moment(
+															momentObj
+														).format(
 															'YYYY-MM-DD HH:mm'
 														)
 													)
@@ -182,7 +185,9 @@ const Schedule = () => {
 														groupIndex,
 														index,
 														'end',
-														momentObj.format(
+														moment(
+															momentObj
+														).format(
 															'YYYY-MM-DD HH:mm'
 														)
 													)
