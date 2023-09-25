@@ -78,6 +78,15 @@ const WooCommerce = () => {
 												'asnp-easy-sale-badge'
 											) }
 										</option>
+										<option
+											disabled
+											className="asnp-text-red-600"
+										>
+											{ __(
+												'Discount rules (Pro)',
+												'asnp-easy-whatsapp'
+											) }
+										</option>
 									</select>
 									{ showItemSelect(
 										badge.items[ groupIndex ][ index ].type
