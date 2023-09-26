@@ -27,7 +27,7 @@ const CurrentServerTime = () => {
 	};
 
 	return (
-		<span class="asnp-current-time asnp-ml-4 asnp-text-gray-500 asnp-text-base asnp-underline asnp-italic">
+		<span className="asnp-current-time asnp-ml-4 asnp-text-gray-500 asnp-text-base asnp-underline asnp-italic">
 			{ fromatedDate() }
 		</span>
 	);

@@ -27,11 +27,11 @@ class Assets {
 				'asnp-easy-sale-badge-admin',
 				apply_filters( 'asnp_wesb_sale_badge_admin_script', $this->get_url( 'admin/admin/index', 'js' ) ),
 				array(
+					'moment',
 					'react-dom',
 					'wp-hooks',
 					'wp-i18n',
 					'wp-api-fetch',
-					'moment',
 				),
 				ASNP_WESB_VERSION,
 				true
