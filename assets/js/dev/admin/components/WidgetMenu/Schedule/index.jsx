@@ -1,13 +1,12 @@
 import React, { useContext } from 'react';
 import { __, sprintf } from '@wordpress/i18n';
-import Datetime from 'react-datetime';
 import moment from 'moment';
+import Datetime from 'react-datetime';
 import TimePicker from './../../TimePicker';
 import { BadgeContext } from '../../../contexts/Badge';
 import DaysOfWeekSelect from '../../DaysOfWeek';
 import CurrentServerTime from '../../CurrentServerTime';
 
-import 'react-datetime/css/react-datetime.css';
 import './style.scss';
 
 const Schedule = () => {
@@ -152,7 +151,9 @@ const Schedule = () => {
 												) }
 											</span>
 											<Datetime
-												initialValue={
+												dateFormat="YYYY-MM-DD"
+												timeFormat="hh:mm A"
+												value={
 													badge.schedule[
 														groupIndex
 													][ index ].start
@@ -165,7 +166,7 @@ const Schedule = () => {
 														moment(
 															momentObj
 														).format(
-															'YYYY-MM-DD HH:mm'
+															'YYYY-MM-DD hh:mm A'
 														)
 													)
 												}
@@ -181,7 +182,9 @@ const Schedule = () => {
 												) }
 											</span>
 											<Datetime
-												initialValue={
+												dateFormat="YYYY-MM-DD"
+												timeFormat="hh:mm A"
+												value={
 													badge.schedule[
 														groupIndex
 													][ index ].end
@@ -194,7 +197,7 @@ const Schedule = () => {
 														moment(
 															momentObj
 														).format(
-															'YYYY-MM-DD HH:mm'
+															'YYYY-MM-DD hh:mm A'
 														)
 													)
 												}
