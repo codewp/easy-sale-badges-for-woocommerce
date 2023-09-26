@@ -13,7 +13,7 @@ export const defaultSettings = {
 export const PLUGIN_URL = saleBadgeData.pluginUrl;
 export const IMAGES_URL = `${ PLUGIN_URL }assets/images/`;
 
-let serverTime = new Date();
+let serverTime = new Date( saleBadgeData.now );
 let initialLocalTime = Date.now();
 
 export const getNow = () => {
