@@ -6,8 +6,6 @@ defined( 'ABSPATH' ) || exit;
 
 class Assets {
 
-	protected $timers = [];
-
 	public function init() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts' ), 15 );
 		add_action( 'wp_footer', array( $this, 'localize_scripts' ), 15 );
@@ -22,7 +20,7 @@ class Assets {
 			wp_enqueue_script(
 				'asnp-wesb-badge',
 				apply_filters( 'asnp_wesb_badge_script', $this->get_url( 'badge/index', 'js' ) ),
-				array( 'jquery' ),
+				[ 'jquery' ],
 				ASNP_WESB_VERSION,
 				true
 			);
@@ -39,14 +37,9 @@ class Assets {
 			'asnp-wesb-badge',
 			'asnpWesbBadgeData',
 			[
-				'timers'          => $this->timers,
 				'singleContainer' => $container,
 			]
 		);
-	}
-
-	public function add_timer( $timer ) {
-		$this->timers[] = $timer;
 	}
 
 	public function get_url( $file, $ext ) {
