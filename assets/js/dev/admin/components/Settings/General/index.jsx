@@ -6,7 +6,7 @@ const General = ( props ) => {
 	return (
 		<div className="asnp-max-w-lg asnp-grid asnp-grid-cols-1 asnp-gap-8">
 			<div>
-				<div className="asnp-flex asnp-flex-row md:asnp-w-[27rem] asnp-w-[20rem] asnp-justify-between">
+				<div className="asnp-flex asnp-flex-row md:asnp-w-[21rem] asnp-w-[20rem] asnp-justify-between">
 					<div className="asnp-field-title md:asnp-min-w-1/3">
 						{ __(
 							'Hide WooCommerce On Sale Badges',
