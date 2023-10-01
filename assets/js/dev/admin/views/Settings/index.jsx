@@ -85,9 +85,6 @@ export default function Settings() {
 					<General
 						onChange={ updateSettings }
 						onSave={ save }
-						enabled={ settings.woocommerceEnabled }
-						btnPosition={ settings.woocommerceBtnPosition }
-						cssSelector={ settings.woocommerceCssSelector }
 						loopPosition={ settings.loopPosition }
 						singlePosition={ settings.singlePosition }
 						singleCustomHooks={ settings.singleCustomHooks }
