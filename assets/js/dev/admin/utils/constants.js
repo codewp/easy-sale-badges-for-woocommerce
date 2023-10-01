@@ -6,7 +6,7 @@ export const defaultSettings = {
 	loopPosition: 'woocommerce_product_get_image',
 	singleCustomHooks: '',
 	loopCustomHooks: '',
-	showBadgeProductPage: '',
+	showBadgeProductPage: 1,
 	singleContainer: '',
 	timerPosition: 'outOfImage',
 };

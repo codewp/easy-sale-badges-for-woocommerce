@@ -9,7 +9,7 @@ const Products = ( props ) => {
 				{ __( 'Products', 'asnp-easy-sale-badge' ) }
 			</div>
 			<div className="asnp-mt-3">
-				<label className="asnp-flex">
+				<div className="asnp-flex">
 					<p className="asnp-field-title">
 						{ __( 'To select the', 'asnp-easy-sale-badge' ) }
 					</p>
@@ -29,7 +29,7 @@ const Products = ( props ) => {
 							'asnp-easy-sale-badge'
 						) }
 					</p>
-				</label>
+				</div>
 				<WooCommerce onChange={ props.onChange } />
 			</div>
 		</div>
