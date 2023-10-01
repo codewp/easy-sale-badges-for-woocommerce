@@ -17,7 +17,10 @@ const General = ( props ) => {
 						<Toggle
 							value={ 1 == props.hideWooCommerceBadges }
 							onChange={ ( value ) =>
-								props.onChange( 'hideWooCommerceBadges', value ? 1 : 0 )
+								props.onChange(
+									'hideWooCommerceBadges',
+									value ? 1 : 0
+								)
 							}
 						/>
 					</div>
@@ -255,25 +258,19 @@ const General = ( props ) => {
 			<div>
 				<label className="asnp-block asnp-space-y-2 asnp-max-w-lg">
 					<div className="asnp-flex">
-						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
+						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3  !asnp-text-red-400">
 							{ __(
-								'Timer badge position',
+								'Timer badge position (Pro)',
 								'asnp-easy-sale-badge'
 							) }
 						</div>
 					</div>
 					<select
 						className="asnp-block asnp-select-field md:asnp-w-2/3 !asnp-h-12"
-						value={ props.timerPosition }
-						onChange={ ( e ) =>
-							props.onChange( 'timerPosition', e.target.value )
-						}
+						disabled
 					>
 						<option value="onImage">
 							{ __( 'On image', 'asnp-easy-sale-badge' ) }
-						</option>
-						<option value="outOfImage">
-							{ __( 'Out of image', 'asnp-easy-sale-badge' ) }
 						</option>
 					</select>
 				</label>
