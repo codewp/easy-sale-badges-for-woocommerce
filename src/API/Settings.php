@@ -76,7 +76,7 @@ class Settings extends BaseController {
 				// Boolean values.
 				case 'hideWooCommerceBadges':
 				case 'showBadgeProductPage':
-					$options[ $key ] = SaleBadges\string_to_bool( $value ) ? 1 : 0;
+					$data[ $key ] = SaleBadges\string_to_bool( $value ) ? 1 : 0;
 					break;
 
 				default:
