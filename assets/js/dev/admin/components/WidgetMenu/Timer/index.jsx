@@ -333,7 +333,7 @@ const Timer = () => {
 				<div className="asnp-ew-line asnp-mt-6">
 					<div className="asnp-mt-4">
 						<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-							{ __( 'Label Position', 'asnp-easy-sale-badge' ) }
+							{ __( 'Timer Position', 'asnp-easy-sale-badge' ) }
 						</span>
 						<div className="asnp-w-full asnp-flex asnp-rounded-md asnp-mt-3">
 							<div
@@ -382,7 +382,7 @@ const Timer = () => {
 					<div className="asnp-mt-8">
 						<span className="asnp-field-title asnp-text-base asnp-font-semibold">
 							{ __(
-								'Label Position (Pixel)',
+								'Timer Position (Pixel)',
 								'asnp-easy-sale-badge'
 							) }
 						</span>
