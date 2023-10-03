@@ -10,12 +10,12 @@ const AdvancedTextOption = () => {
 			<div className="asnp-mt-8 asnp-flex asnp-w-full">
 				<label className="asnp-w-[20rem]">
 					<span className="asnp-field-title">
-						{ __( 'Badge Label', 'asnp-easy-sale-badge' ) }
+						{ __( 'Advanced Label', 'asnp-easy-sale-badge' ) }
 					</span>
 					<input
 						type="text"
 						className="asnp-text-field"
-						placeholder="Badge Label"
+						placeholder="Advanced Label"
 						disabled
 					/>
 				</label>
