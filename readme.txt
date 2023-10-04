@@ -33,7 +33,7 @@ Sale badges and product labels for WooCommerce are essential tools for e-commerc
 
 In today's competitive market, it is essential for businesses to find effective ways to boost sales and grab the attention of potential customers. One powerful tool that can make a significant impact is striking product labels. These visually appealing labels have the power to captivate consumers and create a lasting impression. By incorporating eye-catching designs, vibrant colors, and compelling imagery, businesses can differentiate their products from competitors and attract more customers. Striking product labels not only enhance the overall appearance of the product but also convey key information about its features and benefits. With their ability to instantly grab attention and leave a lasting impression, striking product labels can undoubtedly contribute to a significant increase in sales for businesses.
 
-== SALE BADGES AND PRODUCT LABELS FOR WOOCOMMERCE FREE FEATURES ==
+== ✅SALE BADGES AND PRODUCT LABELS FOR WOOCOMMERCE FREE FEATURES ==
 * Add Easy Custom labels on products
 * CSS Templates
 * Preview is available live for easy placement and customization
@@ -48,7 +48,7 @@ In today's competitive market, it is essential for businesses to find effective 
 
 **[PRO WITH 50% DISCOUNT FOR $30](https://www.asanaplugins.com/product/whatsapp-chat-wordpress/?utm_source=wp-org&utm_campaign=easy-whatsapp-free&utm_medium=link)**
 
-== SALE BADGES AND PRODUCT LABELS FOR WOOCOMMERCE PRO FEATURES ==
+== ✅SALE BADGES AND PRODUCT LABELS FOR WOOCOMMERCE PRO FEATURES ==
 * +200 Image Labels
 * 13 CSS Labels
 * 5 Advanced Labels
@@ -69,6 +69,23 @@ In today's competitive market, it is essential for businesses to find effective 
 * Valentine's Day Image Labels
 
 **[PRO WITH 50% DISCOUNT FOR $30](https://www.asanaplugins.com/product/whatsapp-chat-wordpress/?utm_source=wp-org&utm_campaign=easy-whatsapp-free&utm_medium=link)**
+
+== TESTED WITH MORE THAN 40+ THEMES ==
+* WoodMart 
+* Avada
+* Flatsome
+* The7
+* Divi
+* Betheme
+* Uncode 
+* Enfold 
+* JupiterX
+* XStore
+* Porto 
+* TheGem 
+* Bridge 
+* Basel
+* And More
 
 == HOW TO ADD THE SALE BADGES AND PRODUCT LABELS PLUGIN TO  WOOCOMMERCE PRODUCTS ==
 
