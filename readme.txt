@@ -9,7 +9,7 @@ Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add WhatsApp chat to your WordPress and WooCommmerce website easily in less than 2 minutes with Live Chat Button plugin. Create beautiful WhatsApp support.
+Enhance your WooCommerce store with Sale Badges and Product Labels! Boost product visibility and customizable labels. Get started now!
 
 == Description ==
 
@@ -121,16 +121,13 @@ Yes, the plugin is WPML ready and it is compatible with any translation plugins 
 
 == Screenshots ==
 
-1. WhatsApp templates.
-2. Single account floating WhatsApp button.
-3. Multi account floating WhatsApp button.
-4. Single and multi account WhatsApp buttons.
-5. Icons, Avatars and custom colors.
-6. Create single account floating WhatsApp button.
-7. Create multi account floating WhatsApp button.
-8. Create single WhatsApp button.
-9. Create multi account WhatsApp button.
-10. Change WhatsApp button colors.
+1. Product Labels.
+2. Sale Badges.
+3. CSS Labels.
+4. Image Labels.
+5. Advanced Labels.
+6. Timer.
+
 
 == Changelog ==
 
