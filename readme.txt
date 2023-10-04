@@ -35,7 +35,7 @@ In today's competitive market, it is essential for businesses to find effective 
 
 == ✅SALE BADGES AND PRODUCT LABELS FOR WOOCOMMERCE FREE FEATURES ==
 * Add Easy Custom labels on products
-* CSS Templates
+* Access CSS label templates
 * Preview is available live for easy placement and customization
 * Add Badges to specific WooCommerce products, categories, or tags
 * Add Badges to "Is On Sale"
@@ -49,16 +49,16 @@ In today's competitive market, it is essential for businesses to find effective 
 **[PRO WITH 50% DISCOUNT FOR $30](https://www.asanaplugins.com/product/whatsapp-chat-wordpress/?utm_source=wp-org&utm_campaign=easy-whatsapp-free&utm_medium=link)**
 
 == ✅SALE BADGES AND PRODUCT LABELS FOR WOOCOMMERCE PRO FEATURES ==
-* +200 Image Labels
-* 13 CSS Labels
+* Over 200 Image Labels
+* Over 10 CSS Labels
 * 5 Advanced Labels
 * 8 Timers Template
-* Add Gradient Color
-* Add Discount Rules
+* Incorporate Gradient Colors
+* Implement Discount Rules
 * Add a Percentage Discount amount
 * Rotate CSS Labels, Image Labels, and Advanced Labels
-* Change Position CSS Labels, Image Labels, and Advanced Labels
-* Add Vertical and Horizontal Timers
+* Adjust the Position of CSS Labels, Image Labels, and Advanced Labels
+* Include both Vertical and Horizontal Timers
 * Personalize Sale Timers with Styling Options
 * Sale Image Labels
 * Percentage Off Image Labels
