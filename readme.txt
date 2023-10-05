@@ -87,6 +87,12 @@ In today's competitive market, it is essential for businesses to find effective 
 * Basel
 * And More
 
+== COMPATIBILITY  WITH  WOOCOMMERCE  PLUGINS ==
+
+Sale Badges and Product Labels for WooCommerce for WooCommerce has been tested and is fully compatible with the following WooCommerce plugins that you can integrate into your website :
+
+* <strong>[Discount Rules and Dynamic Pricing for WooCommerce](https://wordpress.org/plugins/easy-woocommerce-discounts/)
+
 == HOW TO ADD THE SALE BADGES AND PRODUCT LABELS PLUGIN TO  WOOCOMMERCE PRODUCTS ==
 
 Simply install and activate the plugin, and then follow the steps below to create a Product Badge.
@@ -97,10 +103,15 @@ Simply install and activate the plugin, and then follow the steps below to creat
 
 == 📕 Tutorials ==
 
-* <strong>[How to add WhatsApp Chat Button to WordPress Website](https://www.asanaplugins.com/how-to-add-whatsapp-chat-to-wordpress/)</strong>
-* <strong>[How to add WhatsApp Chat Button to WooCommerce Website](https://www.asanaplugins.com/how-to-add-whatsapp-chat-to-woocommerce/)</strong>
+* <strong>[How to Add Product Labels in WooCommerce](https://www.asanaplugins.com/how-to-add-whatsapp-chat-to-wordpress/)</strong>
 
-== 🚀 ALE BADGES AND PRODUCT LABELS PERFORMANCE ==
+== 🚀 SOCIAL MEDIA LINKS ==
+
+* <strong>[YouTube](https://www.youtube.com/@asanaplugins4913)
+* <strong>[Twitter](https://twitter.com/AsanaPlugins/)
+
+
+== 🚀 SALE BADGES AND PRODUCT LABELS PERFORMANCE ==
 
 The plugin is rich in features while it is lightweight and fast.
 
@@ -144,6 +155,7 @@ Yes, the plugin is WPML ready and it is compatible with any translation plugins 
 4. Image Labels.
 5. Advanced Labels.
 6. Timer.
+7. Countdown Timer.
 
 
 == Changelog ==
