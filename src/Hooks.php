@@ -104,6 +104,7 @@ class Hooks {
 			$loop_position = get_plugin()->settings->get_setting( 'loopPosition', 'woocommerce_product_get_image' );
 		}
 
+
 		if ( empty( $loop_position ) || 'none' === $loop_position ) {
 			return;
 		}
