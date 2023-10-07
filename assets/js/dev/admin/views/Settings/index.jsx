@@ -1,13 +1,12 @@
 import React, { useState, useContext } from 'react';
 import { __ } from '@wordpress/i18n';
 import General from '../../components/Settings/General';
-import WooCommerce from '../../components/Settings/Woocommrece';
 import * as SettingsApi from '@easy-sale-badges/api/settings';
 import { AppContext } from '../../contexts/App';
 import SinglePage from './../../components/SinglePage';
 
 export default function Settings() {
-	const [ activeMenu, setActiveMenu ] = useState( 'woocommerce' );
+	const [ activeMenu, setActiveMenu ] = useState( 'general' );
 	const { setMessage, settings, setSettings, setLoading } = useContext(
 		AppContext
 	);
@@ -68,58 +67,33 @@ export default function Settings() {
 						href="#"
 						onClick={ ( e ) => {
 							e.preventDefault();
-							setActiveMenu( 'woocommerce' );
+							setActiveMenu( 'productPage' );
 						} }
 						className={
 							'asnp-nav-tab-item' +
-							( 'woocommerce' === activeMenu
+							( 'productPage' === activeMenu
 								? ' asnp-nav-tab-active'
 								: '' )
 						}
 					>
-						{ __( 'WooCommerce ', 'asnp-easy-sale-badge' ) }
-					</a>
-					<a
-						href="#"
-						onClick={ ( e ) => {
-							e.preventDefault();
-							setActiveMenu( 'singlepage' );
-						} }
-						className={
-							'asnp-nav-tab-item' +
-							( 'singlepage' === activeMenu
-								? ' asnp-nav-tab-active'
-								: '' )
-						}
-					>
-						{ __( 'Single Page ', 'asnp-easy-sale-badge' ) }
+						{ __( 'Product Page', 'asnp-easy-sale-badge' ) }
 					</a>
 				</nav>
 			</div>
 			<div className="asnp-w-full asnp-h-auto asnp-bg-white asnp-p-5">
 				{ 'general' === activeMenu && (
 					<General
-						settings={ settings }
 						onChange={ updateSettings }
 						onSave={ save }
-					/>
-				) }
-				{ 'woocommerce' === activeMenu && (
-					<WooCommerce
-						onChange={ updateSettings }
-						onSave={ save }
-						enabled={ settings.woocommerceEnabled }
-						btnPosition={ settings.woocommerceBtnPosition }
-						cssSelector={ settings.woocommerceCssSelector }
 						loopPosition={ settings.loopPosition }
 						singlePosition={ settings.singlePosition }
 						singleCustomHooks={ settings.singleCustomHooks }
 						loopCustomHooks={ settings.loopCustomHooks }
 						timerPosition={ settings.timerPosition }
-						showLabel={ settings.showLabel }
+						hideWooCommerceBadges={ settings.hideWooCommerceBadges }
 					/>
 				) }
-				{ 'singlepage' === activeMenu && (
+				{ 'productPage' === activeMenu && (
 					<SinglePage
 						onChange={ updateSettings }
 						onSave={ save }

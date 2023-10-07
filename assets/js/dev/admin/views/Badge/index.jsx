@@ -11,7 +11,7 @@ import { BadgeContext } from '../../contexts/Badge';
 import BadgeButton from '../../components/BadgeButton';
 
 const initialItem = {
-	type: 'products',
+	type: 'all_products',
 	selectType: 'included',
 	items: [],
 };
@@ -85,6 +85,8 @@ const defaultBadge = {
 	badgeLabelAdv: 'Sale',
 	opacityAdvImg: '1',
 	opacityTimer: '1',
+	paddingTopBottom: '',
+	paddingRightLeft: '',
 };
 
 export default function Badge() {
@@ -93,8 +95,6 @@ export default function Badge() {
 	const { getItem, dispatch } = useContext( BadgesContext );
 	const { setLoading, setMessage } = useContext( AppContext );
 	const [ badgeImageFile, setBadgeImageFile ] = useState( null );
-
-	console.log( badge );
 
 	useEffect( () => {
 		setBadgeImageFile( null );
@@ -217,7 +217,7 @@ export default function Badge() {
 				i === groupIndex
 					? [
 							...group.slice( 0, index ),
-							{ ...group[ index ], [ field ]: [ value ] },
+							{ ...group[ index ], [ field ]: value },
 							...group.slice( index + 1 ),
 					  ]
 					: group
@@ -229,7 +229,13 @@ export default function Badge() {
 	const updateItem = ( groupIndex, index, field, value ) => {
 		let update = { [ field ]: value };
 		if ( 'type' === field ) {
-			update.items = [];
+			if ( 'stock_status' === value ) {
+				update.items = 'instock';
+			} else if ( 'is_on_sale' === value ) {
+				update.items = 'yes';
+			} else {
+				update.items = [];
+			}
 		}
 
 		setBadge( ( prev ) => {
@@ -298,17 +304,25 @@ export default function Badge() {
 	};
 
 	const save = async () => {
-		setLoading( true );
-
 		try {
+			setLoading( true );
 			let response = await BadgeApi.save( badge );
 			setLoading( false );
 			if ( response && response.item ) {
-				setBadge( { ...defaultBadge, ...response.item } );
-				dispatch( {
-					type: Action.ADD_ITEM,
-					payload: response.item,
-				} );
+				let update = { ...defaultBadge, ...response.item };
+				setBadge( update );
+				if ( ! params.id || 'new' === params.id ) {
+					dispatch( {
+						type: Action.ITEM_ADDED,
+						payload: true,
+					} );
+				} else {
+					dispatch( {
+						type: Action.UPDATE_ITEM,
+						payload: update,
+					} );
+				}
+
 				setMessage( {
 					message: __(
 						'Saved Successfully.',
@@ -380,7 +394,7 @@ export default function Badge() {
 								{ __( 'Save', 'asnp-easy-sale-badge' ) }
 							</button>
 							<Link
-								to={ `/badge/` }
+								to={ `/` }
 								className="asnp-py-2 asnp-px-6 asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none asnp-btn-secondary asnp-w-[86.68px] asnp-h-[35.5px]"
 							>
 								{ __( 'Cancel', 'asnp-easy-sale-badge' ) }

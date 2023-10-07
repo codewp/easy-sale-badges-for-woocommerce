@@ -27,6 +27,7 @@ class Assets {
 				'asnp-easy-sale-badge-admin',
 				apply_filters( 'asnp_wesb_sale_badge_admin_script', $this->get_url( 'admin/admin/index', 'js' ) ),
 				array(
+					'moment',
 					'react-dom',
 					'wp-hooks',
 					'wp-i18n',
@@ -38,12 +39,14 @@ class Assets {
 
 			wp_localize_script(
 				'asnp-easy-sale-badge-admin',
-				'whatsappData',
-				array(
-					'pluginUrl' => ASNP_WESB_PLUGIN_URL,
-					'timezone'  => SaleBadges\get_timezone_string(),
-					'now'       => date( 'Y-m-d H:i:s', current_time( 'timestamp' ) ),
-				)
+				'saleBadgeData',
+				apply_filters( 'asnp_wesb_sale_badge_admin_localize_script', array(
+					'pluginUrl'  => ASNP_WESB_PLUGIN_URL,
+					'timezone'   => SaleBadges\get_timezone_string(),
+					'now'        => date( 'Y-m-d H:i:s', current_time( 'timestamp' ) ),
+					'stylesheet' => get_stylesheet(),
+					'template'   => get_template(),
+				) )
 			);
 
 			if ( function_exists( 'wp_set_script_translations' ) ) {

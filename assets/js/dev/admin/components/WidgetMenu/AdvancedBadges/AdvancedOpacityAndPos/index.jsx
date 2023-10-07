@@ -1,7 +1,7 @@
 import React from 'react';
 import { __ } from '@wordpress/i18n';
 
-const AdvancedOpacityAndPos = ( props ) => {
+const AdvancedOpacityAndPos = () => {
 	return (
 		<div className="asnp-ew-line">
 			<label className="asnp-space-y-1">
@@ -16,10 +16,7 @@ const AdvancedOpacityAndPos = ( props ) => {
 					min="0"
 					max="1"
 					step="0.01"
-					value={ props.opacityAdvImg }
-					onChange={ ( e ) =>
-						props.onChange( 'opacityAdvImg', e.target.value )
-					}
+					disabled
 				/>
 				<div className="asnp-w-[21rem] asnp-flex asnp-justify-between asnp-text-xs asnp-px-2">
 					<span>0%</span>

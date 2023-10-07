@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import { __, sprintf } from '@wordpress/i18n';
+import moment from 'moment';
 import Datetime from 'react-datetime';
 import TimePicker from './../../TimePicker';
 import { BadgeContext } from '../../../contexts/Badge';
 import DaysOfWeekSelect from '../../DaysOfWeek';
+import CurrentServerTime from '../../CurrentServerTime';
 
-import 'react-datetime/css/react-datetime.css';
 import './style.scss';
 
 const Schedule = () => {
@@ -20,8 +21,13 @@ const Schedule = () => {
 
 	return (
 		<div className="asnp-w-full">
-			<div className="asnp-w-[25rem] asnp-mt-2 asnp-text-lg asnp-font-semibold">
-				{ __( 'Schedule', 'asnp-easy-sale-badge' ) }
+			<div className="asnp-flex">
+				<div className="asnp-mt-2 asnp-text-lg asnp-font-semibold">
+					{ __( 'Schedule', 'asnp-easy-sale-badge' ) }
+				</div>
+				<div className="asnp-mt-3">
+					<CurrentServerTime />
+				</div>
 			</div>
 
 			{ badge.schedule.map( ( group, groupIndex ) => (
@@ -94,9 +100,9 @@ const Schedule = () => {
 														groupIndex,
 														index,
 														'start',
-														momentObj.format(
-															'YYYY-MM-DD'
-														)
+														moment(
+															momentObj
+														).format( 'YYYY-MM-DD' )
 													)
 												}
 											/>
@@ -113,14 +119,19 @@ const Schedule = () => {
 											<Datetime
 												dateFormat="YYYY-MM-DD"
 												timeFormat={ false }
+												value={
+													badge.schedule[
+														groupIndex
+													][ index ].end
+												}
 												onChange={ ( momentObj ) =>
 													updateSchedule(
 														groupIndex,
 														index,
 														'end',
-														momentObj.format(
-															'YYYY-MM-DD'
-														)
+														moment(
+															momentObj
+														).format( 'YYYY-MM-DD' )
 													)
 												}
 											/>
@@ -140,7 +151,9 @@ const Schedule = () => {
 												) }
 											</span>
 											<Datetime
-												initialValue={
+												dateFormat="YYYY-MM-DD"
+												timeFormat="hh:mm A"
+												value={
 													badge.schedule[
 														groupIndex
 													][ index ].start
@@ -150,8 +163,10 @@ const Schedule = () => {
 														groupIndex,
 														index,
 														'start',
-														momentObj.format(
-															'YYYY-MM-DD HH:mm'
+														moment(
+															momentObj
+														).format(
+															'YYYY-MM-DD hh:mm A'
 														)
 													)
 												}
@@ -167,7 +182,9 @@ const Schedule = () => {
 												) }
 											</span>
 											<Datetime
-												initialValue={
+												dateFormat="YYYY-MM-DD"
+												timeFormat="hh:mm A"
+												value={
 													badge.schedule[
 														groupIndex
 													][ index ].end
@@ -177,8 +194,10 @@ const Schedule = () => {
 														groupIndex,
 														index,
 														'end',
-														momentObj.format(
-															'YYYY-MM-DD HH:mm'
+														moment(
+															momentObj
+														).format(
+															'YYYY-MM-DD hh:mm A'
 														)
 													)
 												}
@@ -191,10 +210,11 @@ const Schedule = () => {
 								'days' && (
 								<div className="asnp-flex asnp-ml-8 asnp-mt-4 asnp-inputWeek">
 									<DaysOfWeekSelect
-										value={
-											badge.items[ groupIndex ][ index ]
-												.days
-										}
+										value={ badge.schedule[ groupIndex ][
+											index
+										].days.flatMap(
+											( innerArray ) => innerArray
+										) }
 										onChange={ ( value ) =>
 											updateDaysSchedule(
 												groupIndex,

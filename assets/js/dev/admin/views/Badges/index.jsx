@@ -5,6 +5,7 @@ import * as BadgeApi from '@easy-sale-badges/api/badge';
 import {
 	BadgesContext,
 	fetchItemsIfNeeded,
+	itemRemoved,
 	Action,
 } from '../../contexts/Badges';
 import Toggle from '../../components/Toggle';
@@ -13,6 +14,7 @@ import { AppContext } from '../../contexts/App';
 import { TrashIcon, PencilIcon, DuplicateIcon } from '@heroicons/react/solid';
 import Alert from '../../components/Alert';
 import { IMAGES_URL } from './../../utils/constants';
+import Pagination from '../../components/Pagination';
 
 export default function Badges() {
 	const { state, dispatch } = useContext( BadgesContext );
@@ -24,12 +26,49 @@ export default function Badges() {
 		setLoading( state.isLoading );
 	}, [ state.isLoading ] );
 
+	useEffect( () => {
+		if ( state.itemAdded ) {
+			getPageItems( 1, true );
+			dispatch( {
+				type: Action.ITEM_ADDED,
+				payload: false,
+			} );
+		}
+	}, [ state.itemAdded ] );
+
+	const getPageItems = async ( page, force = false ) => {
+		try {
+			await fetchItemsIfNeeded( state, dispatch, { page, force } );
+		} catch ( error ) {
+			setLoading( false );
+			setMessage( {
+				message: error.message,
+				type: 'error',
+			} );
+		}
+	};
+
+	const previewImage = ( badge ) => {
+		if (
+			badge.imgbadge === 0 &&
+			badge.imgbadgeAdv === 0 &&
+			badge.useTimerBadge === 0
+		) {
+			return IMAGES_URL + badge.badgeStyles + '.png';
+		}
+
+		return '';
+	};
+
 	const duplicate = async ( id ) => {
 		setLoading( true );
 		try {
 			let response = await BadgeApi.duplicate( id );
 			if ( response && response.id ) {
-				await fetchItemsIfNeeded( state, dispatch, { force: true } );
+				await fetchItemsIfNeeded( state, dispatch, {
+					force: true,
+					page: 1,
+				} );
 				setMessage( {
 					message: __(
 						'Duplicated Successfully.',
@@ -76,12 +115,8 @@ export default function Badges() {
 
 		try {
 			let response = await BadgeApi.deleteItem( deleteId );
-			setLoading( false );
 			if ( response && response.id ) {
-				dispatch( {
-					type: Action.DELETE_ITEM,
-					payload: deleteId,
-				} );
+				await itemRemoved( state, dispatch );
 				setMessage( {
 					message: __(
 						'Deleted Successfully.',
@@ -266,11 +301,10 @@ export default function Badges() {
 														to={ `/badge/${ item.id }` }
 													>
 														<img
-															className="asnp-h-[5rem]"
-															src={
-																IMAGES_URL +
-																'badge1.svg'
-															}
+															className="asnp-h-[3rem]"
+															src={ previewImage(
+																item
+															) }
 														/>
 													</Link>
 												</td>
@@ -330,6 +364,15 @@ export default function Badges() {
 						</div>
 					</div>
 				</div>
+			) }
+			{ 0 < state.items.length && 1 < state.pages && (
+				<Pagination
+					current={ state.page }
+					total={ state.pages }
+					prevText={ __( 'Prev', 'asnp-easy-sale-badge' ) }
+					nextText={ __( 'Next', 'asnp-easy-sale-badge' ) }
+					onClickPage={ ( value ) => getPageItems( value ) }
+				/>
 			) }
 			{ showDeleteModal && (
 				<WarningModal

@@ -52,22 +52,22 @@ class DateTimeValidator {
 		}
 
 		if ( in_array( $date_time['type'], array( 'date', 'dateTime' ) ) ) {
-			if ( empty( $date_time['start']['time'] ) && empty( $date_time['end']['time'] ) ) {
+			if ( empty( $date_time['start'] ) && empty( $date_time['end'] ) ) {
 				return false;
 			}
 
 			$format = 'dateTime' === $date_time['type'] ? 'Y-m-d H:i' : 'Y-m-d';
 			$now    = strtotime( date( $format, current_time( 'timestamp' ) ) );
 
-			if ( ! empty( $date_time['start']['time'] ) ) {
-				$start_date = strtotime( date( $format, strtotime( $date_time['start']['time'] ) ) );
+			if ( ! empty( $date_time['start'] ) ) {
+				$start_date = strtotime( date( $format, strtotime( $date_time['start'] ) ) );
 				if ( false === $start_date || $now < $start_date ) {
 					return false;
 				}
 			}
 
-			if ( ! empty( $date_time['end']['time'] ) ) {
-				$end_date = strtotime( date( $format, strtotime( $date_time['end']['time'] ) ) );
+			if ( ! empty( $date_time['end'] ) ) {
+				$end_date = strtotime( date( $format, strtotime( $date_time['end'] ) ) );
 				if ( false === $end_date || $now > $end_date ) {
 					return false;
 				}
@@ -106,7 +106,11 @@ class DateTimeValidator {
 			if ( ! empty( $date_time['days'] ) ) {
 				$today = date( 'l', current_time( 'timestamp' ) );
 				foreach ( $date_time['days'] as $day ) {
-					if ( $today == $day ) {
+					if ( is_array( $day ) ) {
+						if ( isset( $day['value'] ) && $day['value'] === $today ) {
+							return true;
+						}
+					} elseif ( $today == $day ) {
 						return true;
 					}
 				}

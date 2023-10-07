@@ -6,8 +6,6 @@ defined( 'ABSPATH' ) || exit;
 
 class Assets {
 
-	protected $timers = [];
-
 	public function init() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts' ), 15 );
 		add_action( 'wp_footer', array( $this, 'localize_scripts' ), 15 );
@@ -22,7 +20,7 @@ class Assets {
 			wp_enqueue_script(
 				'asnp-wesb-badge',
 				apply_filters( 'asnp_wesb_badge_script', $this->get_url( 'badge/index', 'js' ) ),
-				array( 'jquery' ),
+				[ 'jquery' ],
 				ASNP_WESB_VERSION,
 				true
 			);
@@ -30,19 +28,18 @@ class Assets {
 	}
 
 	public function localize_scripts() {
-		if ( ! empty( $this->timers ) ) {
-			wp_localize_script(
-				'asnp-wesb-badge',
-				'asnpWesbBadgeData',
-				[
-					'timers' => $this->timers,
-				]
-			);
+		$container = get_theme_single_container();
+		if ( empty( $container ) ) {
+			$container = get_plugin()->settings->get_setting( 'singleContainer', '' );
 		}
-	}
 
-	public function add_timer( $timer ) {
-		$this->timers[] = $timer;
+		wp_localize_script(
+			'asnp-wesb-badge',
+			'asnpWesbBadgeData',
+			[
+				'singleContainer' => $container,
+			]
+		);
 	}
 
 	public function get_url( $file, $ext ) {

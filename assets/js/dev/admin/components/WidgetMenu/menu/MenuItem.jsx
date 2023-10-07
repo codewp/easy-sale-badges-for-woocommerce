@@ -5,7 +5,8 @@ import TextOptions from './../CssBadgesMenu/TextOptions';
 import BadgeStyles from '../CssBadgesMenu/BadgeStyles';
 import StyleOptions from '../CssBadgesMenu/StyleOptions';
 import Opacity from '../CssBadgesMenu/Opacity';
-import Position from '../CssBadgesMenu/Position';
+import PositionDisable from '../CssBadgesMenu/PositionDisable';
+import Position from './../CssBadgesMenu/Position';
 import Products from '../Products';
 import UploadImage from '../ImageBadges/UploadImage';
 import Options from '../ImageBadges/OptionsImageBadges';
@@ -22,15 +23,7 @@ import './style.scss';
 
 const MenuItem = ( props ) => {
 	const { badgeImageFile, setBadgeImageFile } = useContext( BadgeContext );
-	const [ showTextImg, setShowTextImg ] = useState( false );
-
-	const handleMouseEnter = () => {
-		setShowTextImg( true );
-	};
-
-	const handleMouseLeave = () => {
-		setShowTextImg( false );
-	};
+	const [ showTextImg, setShowTextImg ] = useState( true );
 
 	return (
 		<div className="asnp-w-full">
@@ -98,11 +91,7 @@ const MenuItem = ( props ) => {
 				<Products onChange={ props.onChange } />
 			) }
 			{ props.activeStatus == 4 && (
-				<div
-					className="asnp-relative asnp-mt-3"
-					onMouseEnter={ handleMouseEnter }
-					onMouseLeave={ handleMouseLeave }
-				>
+				<div className="asnp-relative asnp-mt-3">
 					{ showTextImg == true && (
 						<a className="asnp-float-right asnp-top-16 asnp-z-50 asnp-sticky asnp-mr-[40%]">
 							<button className="asnp-btn asnp-btn-delete !asnp-w-[14rem] asnp-flex asnp-text-center asnp-justify-center">
@@ -115,50 +104,15 @@ const MenuItem = ( props ) => {
 							</button>
 						</a>
 					) }
-					<div
-						className={
-							showTextImg == true
-								? 'asnp-opacity-50 asnp-cursor-pointer'
-								: ''
-						}
-					>
-						<BadgeImageStyle
-							onChange={ props.onChange }
-							badgeImage={ props.badge.badgeImage }
-							imgbadge={ props.badge.imgbadge }
-						/>
-						<UploadImage
-							badgeImageFile={ badgeImageFile }
-							setBadgeImageFile={ setBadgeImageFile }
-						/>
-						<Options
-							onChange={ props.onChange }
-							badgePositionY={ props.badge.badgePositionY }
-							badgePositionX={ props.badge.badgePositionX }
-							badgePositionTop={ props.badge.badgePositionTop }
-							badgePositionBottom={
-								props.badge.badgePositionBottom
-							}
-							badgePositionLeft={ props.badge.badgePositionLeft }
-							badgePositionRight={
-								props.badge.badgePositionRight
-							}
-							widthBadgeImg={ props.badge.widthBadgeImg }
-							zIndexImg={ props.badge.zIndexImg }
-							opacityImg={ props.badge.opacityImg }
-							rotationXImg={ props.badge.rotationXImg }
-							rotationYImg={ props.badge.rotationYImg }
-							rotationZImg={ props.badge.rotationZImg }
-						/>
+					<div className="asnp-opacity-50">
+						<BadgeImageStyle />
+						<UploadImage />
+						<Options />
 					</div>
 				</div>
 			) }
 			{ props.activeStatus == 5 && (
-				<div
-					className="asnp-relative asnp-mt-3"
-					onMouseEnter={ handleMouseEnter }
-					onMouseLeave={ handleMouseLeave }
-				>
+				<div className="asnp-relative asnp-mt-3">
 					{ showTextImg == true && (
 						<a className="asnp-float-right asnp-top-16 asnp-z-50 asnp-sticky asnp-mr-[40%]">
 							<button className="asnp-btn asnp-btn-delete !asnp-w-[14rem] asnp-flex asnp-text-center asnp-justify-center">
@@ -171,76 +125,16 @@ const MenuItem = ( props ) => {
 							</button>
 						</a>
 					) }
-					<div
-						className={
-							showTextImg == true
-								? 'asnp-opacity-50 asnp-cursor-pointer'
-								: ''
-						}
-					>
-						<AdvancedTextOption
-							onChange={ props.onChange }
-							badgeLabelAdv={ props.badge.badgeLabelAdv }
-							textColor={ props.badge.textColor }
-							fontSizeText={ props.badge.fontSizeText }
-							lineHeightText={ props.badge.lineHeightText }
-						/>
-						<AdvancedBadgeStyle
-							onChange={ props.onChange }
-							badgeAdv={ props.badge.badgeAdv }
-							imgbadgeAdv={ props.badge.imgbadgeAdv }
-						/>
-						<AdvancedOptions
-							onChange={ props.onChange }
-							mainBg={ props.badge.mainBg }
-							secondBg={ props.badge.secondBg }
-							zIndexAdv={ props.badge.zIndexAdv }
-						/>
-						<AdvancedOpacityAndPos
-							onChange={ props.onChange }
-							opacityAdvImg={ props.badge.opacityAdvImg }
-						/>
-						<Position
-							onChange={ props.onChange }
-							badgePositionY={ props.badge.badgePositionY }
-							badgePositionX={ props.badge.badgePositionX }
-							badgePositionTop={ props.badge.badgePositionTop }
-							badgePositionBottom={
-								props.badge.badgePositionBottom
-							}
-							badgePositionLeft={ props.badge.badgePositionLeft }
-							badgePositionRight={
-								props.badge.badgePositionRight
-							}
-						/>
+					<div className="asnp-opacity-50">
+						<AdvancedTextOption />
+						<AdvancedBadgeStyle />
+						<AdvancedOptions />
+						<AdvancedOpacityAndPos />
+						<PositionDisable />
 					</div>
 				</div>
 			) }
-			{ props.activeStatus == 6 && (
-				<Timer
-					onChange={ props.onChange }
-					useTimerBadge={ props.badge.useTimerBadge }
-					textColor={ props.badge.textColor }
-					bgColorTimer={ props.badge.bgColorTimer }
-					fontSizeLabelTimer={ props.badge.fontSizeLabelTimer }
-					lineHeightLabelTimer={ props.badge.lineHeightLabelTimer }
-					badgePositionY={ props.badge.badgePositionY }
-					badgePositionX={ props.badge.badgePositionX }
-					badgePositionTop={ props.badge.badgePositionTop }
-					badgePositionBottom={ props.badge.badgePositionBottom }
-					badgePositionLeft={ props.badge.badgePositionLeft }
-					badgePositionRight={ props.badge.badgePositionRight }
-					zIndexTimer={ props.badge.zIndexTimer }
-					opacityTimer={ props.badge.opacityTimer }
-					labelDayTimer={ props.badge.labelDayTimer }
-					labelHoursTimer={ props.badge.labelHoursTimer }
-					labelMinTimer={ props.badge.labelMinTimer }
-					labelSecTimer={ props.badge.labelSecTimer }
-					selectedDateFrom={ props.badge.selectedDateFrom }
-					selectedDateTo={ props.badge.selectedDateTo }
-					badgeTimer={ props.badge.badgeTimer }
-				/>
-			) }
+			{ props.activeStatus == 6 && <Timer /> }
 		</div>
 	);
 };

@@ -3,7 +3,7 @@ import { __ } from '@wordpress/i18n';
 
 const Opacity = ( props ) => {
 	return (
-		<div className='asnp-ew-line asnp-mt-6'>
+		<div className="asnp-ew-line asnp-mt-6">
 			<label className="asnp-space-y-1">
 				<span className="asnp-field-title asnp-text-base asnp-font-semibold">
 					{ __( 'Opacity', 'asnp-easy-sale-badge' ) }
@@ -115,13 +115,13 @@ const Opacity = ( props ) => {
 
 			<div className="asnp-mt-6">
 				<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-					{ __( 'Flip Text', 'asnp-easy-sale-badge' ) }
+					{ __( 'Reverse Text', 'asnp-easy-sale-badge' ) }
 				</span>
 				<div className="asnp-flex asnp-mt-2">
 					<div className="asnp-w-40">
 						<div className="asnp-form-check asnp-form-check-inline">
 							<input
-								className="asnp-form-check-input asnp-appearance-none asnp-h-4 asnp-w-4  asnp-border asnp-border-gray-300 asnp-rounded-sm asnp-bg-white checked:asnp-bg-indigo-600 checked:asnp-border-indigo-600 focus:asnp-outline-none asnp-transition asnp-duration-200 asnp-mt-1 asnp-align-top asnp-bg-no-repeat asnp-bg-center asnp-bg-contain asnp-float-left asnp-mr-2 asnp-cursor-pointer"
+								className="asnp-form-check-input asnp-appearance-none asnp-h-4 asnp-w-4  asnp-border asnp-border-gray-300 asnp-rounded-sm !asnp-bg-white checked:asnp-bg-indigo-600 checked:asnp-border-indigo-600 focus:asnp-outline-none asnp-transition asnp-duration-200 asnp-mt-1 asnp-align-top asnp-bg-no-repeat asnp-bg-center asnp-bg-contain asnp-float-left asnp-mr-2 asnp-cursor-pointer"
 								type="checkbox"
 								id="inlineCheckbox1"
 								value="true"
@@ -144,7 +144,7 @@ const Opacity = ( props ) => {
 					<div className="asnp-w-40">
 						<div className="asnp-form-check asnp-form-check-inline">
 							<input
-								className="asnp-form-check-input asnp-appearance-none asnp-h-4 asnp-w-4  asnp-border asnp-border-gray-300 asnp-rounded-sm asnp-bg-white checked:asnp-bg-indigo-600 checked:asnp-border-indigo-600 focus:asnp-outline-none asnp-transition asnp-duration-200 asnp-mt-1 asnp-align-top asnp-bg-no-repeat asnp-bg-center asnp-bg-contain asnp-float-left asnp-mr-2 asnp-cursor-pointer"
+								className="asnp-form-check-input asnp-appearance-none asnp-h-4 asnp-w-4  asnp-border asnp-border-gray-300 asnp-rounded-sm !asnp-bg-white checked:asnp-bg-indigo-600 checked:asnp-border-indigo-600 focus:asnp-outline-none asnp-transition asnp-duration-200 asnp-mt-1 asnp-align-top asnp-bg-no-repeat asnp-bg-center asnp-bg-contain asnp-float-left asnp-mr-2 asnp-cursor-pointer"
 								type="checkbox"
 								id="inlineCheckbox2"
 								value="true"

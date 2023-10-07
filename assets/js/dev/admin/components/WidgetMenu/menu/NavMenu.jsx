@@ -74,7 +74,7 @@ const NavMenu = ( props ) => {
 				>
 					{ __( 'Image Labels', 'asnp-easy-sale-badge' ) }
 					<div className="asnp-ml-[0.3rem]">
-						{ __( '(Pro)', 'asnp-easy-whatsapp' ) }
+						{ __( '(Pro)', 'asnp-easy-sale-badge' ) }
 					</div>
 					<LockClosedIcon width="20" height="20" />
 				</a>
@@ -93,7 +93,7 @@ const NavMenu = ( props ) => {
 				>
 					{ __( 'Advanced Labels', 'asnp-easy-sale-badge' ) }
 					<div className="asnp-ml-[0.3rem]">
-						{ __( '(Pro)', 'asnp-easy-whatsapp' ) }
+						{ __( '(Pro)', 'asnp-easy-sale-badge' ) }
 					</div>
 					<LockClosedIcon width="20" height="20" />
 				</a>
@@ -112,7 +112,7 @@ const NavMenu = ( props ) => {
 				>
 					{ __( 'Timer', 'asnp-easy-sale-badge' ) }
 					<div className="asnp-ml-[0.3rem]">
-						{ __( '(Pro)', 'asnp-easy-whatsapp' ) }
+						{ __( '(Pro)', 'asnp-easy-sale-badge' ) }
 					</div>
 						<LockClosedIcon width="20" height="20" />
 				</a>

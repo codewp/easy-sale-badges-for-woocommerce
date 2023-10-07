@@ -4,6 +4,8 @@ namespace AsanaPlugins\WooCommerce\SaleBadges\API;
 
 defined( 'ABSPATH' ) || exit;
 
+use AsanaPlugins\WooCommerce\SaleBadges;
+
 class Settings extends BaseController {
 
 	protected $rest_base = 'settings';
@@ -36,7 +38,7 @@ class Settings extends BaseController {
 	public function get_settings() {
 		return new \WP_REST_Response(
 			array(
-				'settings' => get_option( 'asnp_sale_badge_settings', array() ),
+				'settings' => get_option( 'asnp_easy_sale_badge_settings', array() ),
 			)
 		);
 	}
@@ -60,13 +62,21 @@ class Settings extends BaseController {
 			}
 
 			switch ( $key ) {
+				// String values.
 				case 'singlePosition':
 				case 'loopPosition':
 				case 'singleCustomHooks':
 				case 'loopCustomHooks':
 				case 'timerPosition':
+				case 'singleContainer':
 				case 'licenseKey':
 					$data[ $key ] = sanitize_text_field( $value );
+					break;
+
+				// Boolean values.
+				case 'hideWooCommerceBadges':
+				case 'showBadgeProductPage':
+					$data[ $key ] = SaleBadges\string_to_bool( $value ) ? 1 : 0;
 					break;
 
 				default:

@@ -2,83 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { __ } from '@wordpress/i18n';
 import Toggle from '../../Toggle';
 import Datetime from 'react-datetime';
-import { IMAGES_URL, customColor } from './../../../utils/constants';
+import { IMAGES_URL } from './../../../utils/constants';
 import Tippy from '@tippyjs/react';
 import ColorPicker from 'react-best-gradient-color-picker';
 
 import './style.scss';
 import { LockClosedIcon } from '@heroicons/react/solid';
 
-const Timer = ( props ) => {
-	const [ selected, setSelected ] = useState( null );
-	const [ selectHorizVert, setSelectHorizVert ] = useState( 'horiz' );
-	const [ disablePositionButtom, setDisablePositionButtom ] = useState(
-		false
-	);
-	const [ disablePositionTop, setDisablePositionTop ] = useState( false );
-	const [ disablePositionLeft, setDisablePositionLeft ] = useState( false );
-	const [ disablePositionRight, setDisablePositionRight ] = useState( false );
-	const [ grad, setGrad ] = useState( false );
-
-	const [ showText, setShowText ] = useState( false );
-
-	const handleMouseEnter = () => {
-		setShowText( true );
-	};
-
-	const handleMouseLeave = () => {
-		setShowText( false );
-	};
-
-	useEffect( () => {
-		props.onChange( 'bgColorTimer', '#EB144C' );
-	}, [ grad ] );
-
-	useEffect( () => {
-		if ( props.badgePositionY === 'top' ) {
-			setDisablePositionButtom( true );
-			setDisablePositionTop( false );
-		} else if ( props.badgePositionY === 'center' ) {
-			setDisablePositionTop( true );
-			setDisablePositionButtom( true );
-		} else {
-			setDisablePositionTop( true );
-			setDisablePositionButtom( false );
-		}
-	}, [ props.badgePositionY ] );
-
-	useEffect( () => {
-		if ( props.badgePositionX === 'left' ) {
-			setDisablePositionRight( true );
-			setDisablePositionLeft( false );
-		} else if ( props.badgePositionX === 'center' ) {
-			setDisablePositionRight( true );
-			setDisablePositionLeft( true );
-		} else {
-			setDisablePositionLeft( true );
-			setDisablePositionRight( false );
-		}
-	}, [ props.badgePositionX ] );
-
-	useEffect( () => {
-		if (
-			props.badgeTimer == 'timer1' ||
-			props.badgeTimer == 'timer2' ||
-			props.badgeTimer == 'timer3' ||
-			props.badgeTimer == 'timer4'
-		) {
-			setSelectHorizVert( 'horiz' );
-		} else {
-			setSelectHorizVert( 'vert' );
-		}
-	}, [ props.badgeTimer ] );
+const Timer = () => {
+	const [ showText, setShowText ] = useState( true );
 
 	return (
-		<div
-			className="asnp-relative"
-			onMouseEnter={ handleMouseEnter }
-			onMouseLeave={ handleMouseLeave }
-		>
+		<div className="asnp-relative">
 			{ showText == true && (
 				<a className="asnp-float-right asnp-top-16 asnp-z-50 asnp-sticky asnp-mt-10 asnp-mr-[40%]">
 					<button className="asnp-btn asnp-btn-delete !asnp-w-[14rem] asnp-flex asnp-text-center asnp-justify-center">
@@ -91,13 +26,7 @@ const Timer = ( props ) => {
 					</button>
 				</a>
 			) }
-			<div
-				className={
-					showText == true
-						? 'asnp-opacity-50 asnp-cursor-pointer'
-						: ''
-				}
-			>
+			<div className="asnp-opacity-50">
 				<div className="asnp-w-[25rem] asnp-mt-2 asnp-text-lg asnp-font-semibold">
 					{ __( 'Timer', 'asnp-easy-sale-badge' ) }
 				</div>
@@ -106,12 +35,7 @@ const Timer = ( props ) => {
 						<span className="asnp-field-title">
 							{ __( 'Status', 'asnp-easy-sale-badge' ) }
 						</span>
-						<Toggle
-							value={ 1 == props.useTimerBadge }
-							onChange={ ( value ) =>
-								props.onChange( 'useTimerBadge', value ? 1 : 0 )
-							}
-						/>
+						<Toggle value="1" />
 					</label>
 					<div className="asnp-block">
 						{ __(
@@ -132,15 +56,7 @@ const Timer = ( props ) => {
 									'asnp-easy-sale-badge'
 								) }
 							</span>
-							<Datetime
-								initialValue={ props.selectedDateFrom }
-								onChange={ ( momentObj ) =>
-									props.onChange(
-										'selectedDateFrom',
-										momentObj.format( 'YYYY-MM-DD HH:mm' )
-									)
-								}
-							/>
+							<Datetime disabled />
 						</label>
 					</div>
 					<div className="asnp-mt-3 asnp-ml-8">
@@ -151,15 +67,7 @@ const Timer = ( props ) => {
 									'asnp-easy-sale-badge'
 								) }
 							</span>
-							<Datetime
-								initialValue={ props.selectedDateTo }
-								onChange={ ( momentObj ) =>
-									props.onChange(
-										'selectedDateTo',
-										momentObj.format( 'YYYY-MM-DD HH:mm' )
-									)
-								}
-							/>
+							<Datetime disabled />
 						</label>
 					</div>
 				</div>
@@ -178,51 +86,13 @@ const Timer = ( props ) => {
 								</label>
 							</div>
 							<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-1">
-								<div
-									className={
-										( selected === 1
-											? 'asnp-border-indigo-700'
-											: 'asnp-border-gray-400' ) +
-										' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
-									}
-									onClick={ () => {
-										props.onChange( 'badgeStyles', '' );
-										props.onChange( 'badgeAdv', '' );
-										props.onChange(
-											'badgeTimer',
-											'timer1'
-										);
-										props.onChange( 'useTimerBadge', 1 );
-										props.onChange( 'imgbadge', 0 );
-										props.onChange( 'imgbadgeAdv', 0 );
-										setSelected( 1 );
-									} }
-								>
+								<div className="asnp-border-gray-400 asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700">
 									<img
 										className="asnp-h-full asnp-w-full asnp-border-none"
 										src={ IMAGES_URL + 'badgeTimer1.png' }
 									/>
 								</div>
-								<div
-									className={
-										( selected === 2
-											? 'asnp-border-indigo-700'
-											: 'asnp-border-gray-400' ) +
-										' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
-									}
-									onClick={ () => {
-										props.onChange( 'badgeStyles', '' );
-										props.onChange( 'badgeAdv', '' );
-										props.onChange(
-											'badgeTimer',
-											'timer2'
-										);
-										props.onChange( 'useTimerBadge', 1 );
-										props.onChange( 'imgbadge', 0 );
-										props.onChange( 'imgbadgeAdv', 0 );
-										setSelected( 2 );
-									} }
-								>
+								<div className="asnp-border-gray-400 asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700">
 									<img
 										className="asnp-h-full asnp-w-full asnp-border-none"
 										src={ IMAGES_URL + 'badgeTimer2.png' }
@@ -230,51 +100,13 @@ const Timer = ( props ) => {
 								</div>
 							</div>
 							<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-1">
-								<div
-									className={
-										( selected === 3
-											? 'asnp-border-indigo-700'
-											: 'asnp-border-gray-400' ) +
-										' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
-									}
-									onClick={ () => {
-										props.onChange( 'badgeStyles', '' );
-										props.onChange( 'badgeAdv', '' );
-										props.onChange(
-											'badgeTimer',
-											'timer3'
-										);
-										props.onChange( 'useTimerBadge', 1 );
-										props.onChange( 'imgbadge', 0 );
-										props.onChange( 'imgbadgeAdv', 0 );
-										setSelected( 3 );
-									} }
-								>
+								<div className="asnp-border-gray-400 asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700">
 									<img
 										className="asnp-h-full asnp-w-full asnp-border-none"
 										src={ IMAGES_URL + 'badgeTimer3.png' }
 									/>
 								</div>
-								<div
-									className={
-										( selected === 4
-											? 'asnp-border-indigo-700'
-											: 'asnp-border-gray-400' ) +
-										' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
-									}
-									onClick={ () => {
-										props.onChange( 'badgeStyles', '' );
-										props.onChange( 'badgeAdv', '' );
-										props.onChange(
-											'badgeTimer',
-											'timer4'
-										);
-										props.onChange( 'useTimerBadge', 1 );
-										props.onChange( 'imgbadge', 0 );
-										props.onChange( 'imgbadgeAdv', 0 );
-										setSelected( 4 );
-									} }
-								>
+								<div className="asnp-border-gray-400 asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700">
 									<img
 										className="asnp-h-full asnp-w-full asnp-border-none"
 										src={ IMAGES_URL + 'badgeTimer4.png' }
@@ -287,101 +119,25 @@ const Timer = ( props ) => {
 								</label>
 							</div>
 							<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-1 asnp-mb-4">
-								<div
-									className={
-										( selected === 5
-											? 'asnp-border-indigo-700'
-											: 'asnp-border-gray-400' ) +
-										' asnp-p-4 asnp-containerBadgeTimerV hover:asnp-border-indigo-700'
-									}
-									onClick={ () => {
-										props.onChange( 'badgeStyles', '' );
-										props.onChange( 'badgeAdv', '' );
-										props.onChange(
-											'badgeTimer',
-											'timer5'
-										);
-										props.onChange( 'useTimerBadge', 1 );
-										props.onChange( 'imgbadge', 0 );
-										props.onChange( 'imgbadgeAdv', 0 );
-										setSelected( 5 );
-									} }
-								>
+								<div className="asnp-border-gray-400 asnp-p-4 asnp-containerBadgeTimerV hover:asnp-border-indigo-700">
 									<img
 										className="asnp-h-full asnp-w-full asnp-border-none"
 										src={ IMAGES_URL + 'badgeTimerV1.png' }
 									/>
 								</div>
-								<div
-									className={
-										( selected === 6
-											? 'asnp-border-indigo-700'
-											: 'asnp-border-gray-400' ) +
-										' asnp-p-4 asnp-containerBadgeTimerV hover:asnp-border-indigo-700'
-									}
-									onClick={ () => {
-										props.onChange( 'badgeStyles', '' );
-										props.onChange( 'badgeAdv', '' );
-										props.onChange(
-											'badgeTimer',
-											'timer6'
-										);
-										props.onChange( 'useTimerBadge', 1 );
-										props.onChange( 'imgbadge', 0 );
-										props.onChange( 'imgbadgeAdv', 0 );
-										setSelected( 6 );
-									} }
-								>
+								<div className="asnp-border-gray-400 asnp-p-4 asnp-containerBadgeTimerV hover:asnp-border-indigo-700">
 									<img
 										className="asnp-h-full asnp-w-full asnp-border-none"
 										src={ IMAGES_URL + 'badgeTimerV2.png' }
 									/>
 								</div>
-								<div
-									className={
-										( selected === 7
-											? 'asnp-border-indigo-700'
-											: 'asnp-border-gray-400' ) +
-										' asnp-p-4 asnp-containerBadgeTimerV hover:asnp-border-indigo-700'
-									}
-									onClick={ () => {
-										props.onChange( 'badgeStyles', '' );
-										props.onChange( 'badgeAdv', '' );
-										props.onChange(
-											'badgeTimer',
-											'timer7'
-										);
-										props.onChange( 'useTimerBadge', 1 );
-										props.onChange( 'imgbadge', 0 );
-										props.onChange( 'imgbadgeAdv', 0 );
-										setSelected( 7 );
-									} }
-								>
+								<div className="asnp-border-gray-400 asnp-p-4 asnp-containerBadgeTimerV hover:asnp-border-indigo-700">
 									<img
 										className="asnp-h-full asnp-w-full asnp-border-none"
 										src={ IMAGES_URL + 'badgeTimerV3.png' }
 									/>
 								</div>
-								<div
-									className={
-										( selected === 8
-											? 'asnp-border-indigo-700'
-											: 'asnp-border-gray-400' ) +
-										' asnp-p-4 asnp-containerBadgeTimerV hover:asnp-border-indigo-700'
-									}
-									onClick={ () => {
-										props.onChange( 'badgeStyles', '' );
-										props.onChange( 'badgeAdv', '' );
-										props.onChange(
-											'badgeTimer',
-											'timer8'
-										);
-										props.onChange( 'useTimerBadge', 1 );
-										props.onChange( 'imgbadge', 0 );
-										props.onChange( 'imgbadgeAdv', 0 );
-										setSelected( 8 );
-									} }
-								>
+								<div className="asnp-border-gray-400 asnp-p-4 asnp-containerBadgeTimerV hover:asnp-border-indigo-700">
 									<img
 										className="asnp-h-full asnp-w-full asnp-border-none"
 										src={ IMAGES_URL + 'badgeTimerV4.png' }
@@ -401,19 +157,7 @@ const Timer = ( props ) => {
 								content={
 									<div>
 										<div className="asnp-p-4">
-											<ColorPicker
-												onClick={ () =>
-													setGrad( ! grad )
-												}
-												value={ props.bgColorTimer }
-												onChange={ ( color ) => {
-													props.onChange(
-														'bgColorTimer',
-														color
-													);
-												} }
-												presets={ customColor }
-											/>
+											<ColorPicker />
 										</div>
 									</div>
 								}
@@ -428,9 +172,6 @@ const Timer = ( props ) => {
 												) }
 											</span>
 											<div
-												style={ {
-													backgroundColor: `${ props.bgColorTimer }`,
-												} }
 												className={
 													'asnp-flex asnp-w-7 asnp-h-6 asnp-rounded-full asnp-my-2 '
 												}
@@ -447,17 +188,7 @@ const Timer = ( props ) => {
 								placement={ 'bottom' }
 								content={
 									<div className="asnp-p-4">
-										<ColorPicker
-											value={ props.textColor }
-											onChange={ ( color ) => {
-												props.onChange(
-													'textColor',
-													color
-												);
-											} }
-											hideColorTypeBtns={ true }
-											presets={ customColor }
-										/>
+										<ColorPicker />
 									</div>
 								}
 							>
@@ -471,9 +202,6 @@ const Timer = ( props ) => {
 												) }
 											</span>
 											<div
-												style={ {
-													backgroundColor: `${ props.textColor }`,
-												} }
 												className={
 													'asnp-flex asnp-w-7 asnp-h-6 asnp-rounded-full asnp-my-2 '
 												}
@@ -484,7 +212,43 @@ const Timer = ( props ) => {
 							</Tippy>
 						</div>
 
-						<div className="asnp-flex asnp-mt-[1rem] asnp-w-full">
+						<div className="asnp-flex asnp-mt-[2rem] asnp-w-full">
+							<label>
+								<span className="asnp-field-title">
+									{ __(
+										'Padding Top/Bottom',
+										'asnp-easy-sale-badge'
+									) }
+								</span>
+								<div className="asnp-w-[10rem]">
+									<input
+										disabled
+										type="number"
+										min="0"
+										max="40"
+										className="asnp-text-field"
+									/>
+								</div>
+							</label>
+							<label className="asnp-ml-6">
+								<span className="asnp-field-title">
+									{ __(
+										'Padding Right/Left',
+										'asnp-easy-sale-badge'
+									) }
+								</span>
+								<div className="asnp-w-[10rem]">
+									<input
+										disabled
+										type="number"
+										className="asnp-text-field"
+										min="0"
+										max="100"
+									/>
+								</div>
+							</label>
+						</div>
+						<div className="asnp-flex asnp-mt-[2rem] asnp-w-full">
 							<label>
 								<span className="asnp-field-title">
 									{ __(
@@ -494,18 +258,12 @@ const Timer = ( props ) => {
 								</span>
 								<div className="asnp-w-[10rem]">
 									<input
+										disabled
 										type="number"
 										min="0"
 										max="40"
 										className="asnp-text-field"
 										placeholder="0"
-										value={ props.fontSizeLabelTimer }
-										onChange={ ( e ) =>
-											props.onChange(
-												'fontSizeLabelTimer',
-												e.target.value
-											)
-										}
 									/>
 								</div>
 							</label>
@@ -518,25 +276,19 @@ const Timer = ( props ) => {
 								</span>
 								<div className="asnp-w-[10rem]">
 									<input
+										disabled
 										type="number"
 										className="asnp-text-field"
 										min="0"
 										max="100"
 										placeholder="0"
-										value={ props.lineHeightLabelTimer }
-										onChange={ ( e ) =>
-											props.onChange(
-												'lineHeightLabelTimer',
-												e.target.value
-											)
-										}
 									/>
 								</div>
 							</label>
 						</div>
 					</div>
 					<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold">
-						{ __( 'Additional Styles', 'asnp-easy-sale-badge' ) }
+						{ __( 'Extra Styles', 'asnp-easy-sale-badge' ) }
 					</div>
 
 					<div className="asnp-flex asnp-mt-2">
@@ -548,13 +300,7 @@ const Timer = ( props ) => {
 								<input
 									type="number"
 									className="asnp-text-field"
-									value={ props.zIndexTimer }
-									onChange={ ( e ) =>
-										props.onChange(
-											'zIndexTimer',
-											e.target.value
-										)
-									}
+									disabled
 								/>
 							</div>
 						</label>
@@ -573,10 +319,7 @@ const Timer = ( props ) => {
 							min="0"
 							max="1"
 							step="0.01"
-							value={ props.opacityTimer }
-							onChange={ ( e ) =>
-								props.onChange( 'opacityTimer', e.target.value )
-							}
+							disabled
 						/>
 						<div className="asnp-w-[21rem] asnp-flex asnp-justify-between asnp-text-xs asnp-px-2">
 							<span>0%</span>
@@ -590,225 +333,56 @@ const Timer = ( props ) => {
 				<div className="asnp-ew-line asnp-mt-6">
 					<div className="asnp-mt-4">
 						<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-							{ __( 'Label Position', 'asnp-easy-sale-badge' ) }
+							{ __( 'Timer Position', 'asnp-easy-sale-badge' ) }
 						</span>
-						{ selectHorizVert === 'horiz' && (
-							<div className="asnp-w-full asnp-flex asnp-rounded-md asnp-mt-3">
-								<div
-									className="asnp-w-[10rem] asnp-flex"
-									role="group"
+						<div className="asnp-w-full asnp-flex asnp-rounded-md asnp-mt-3">
+							<div
+								className="asnp-w-[10rem] asnp-flex"
+								role="group"
+							>
+								<button
+									type="button"
+									className="asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-l-lg asnp-border   asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700"
 								>
-									<button
-										type="button"
-										className={
-											'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-l-lg asnp-border   asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-											( props.badgePositionY == 'top' &&
-												'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
-										}
-										onClick={ () => {
-											props.onChange(
-												'badgePositionY',
-												'top'
-											);
-										} }
-									>
-										{ __( 'Top', 'asnp-easy-sale-badge' ) }
-									</button>
+									{ __( 'Top', 'asnp-easy-sale-badge' ) }
+								</button>
 
-									<button
-										type="button"
-										className={
-											'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-											( props.badgePositionY ==
-												'bottom' &&
-												'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
-										}
-										onClick={ () => {
-											props.onChange(
-												'badgePositionY',
-												'bottom'
-											);
-										} }
-									>
-										{ __(
-											'Bottom',
-											'asnp-easy-sale-badge'
-										) }
-									</button>
-								</div>
-								<div
-									className="asnp-w-[10rem] asnp-flex asnp-ml-24"
-									role="group"
+								<button
+									type="button"
+									className="asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700"
 								>
-									<button
-										type="button"
-										className={
-											'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-l-lg asnp-border   asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-											( props.badgePositionX == 'left' &&
-												'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
-										}
-										onClick={ () => {
-											props.onChange(
-												'badgePositionX',
-												'left'
-											);
-										} }
-									>
-										{ __( 'Left', 'asnp-easy-sale-badge' ) }
-									</button>
-									<button
-										type="button"
-										className={
-											'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-											( props.badgePositionX ==
-												'center' &&
-												'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
-										}
-										onClick={ () => {
-											props.onChange(
-												'badgePositionX',
-												'center'
-											);
-										} }
-									>
-										{ __(
-											'Center',
-											'asnp-easy-sale-badge'
-										) }
-									</button>
-									<button
-										type="button"
-										className={
-											'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-											( props.badgePositionX == 'right' &&
-												'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
-										}
-										onClick={ () => {
-											props.onChange(
-												'badgePositionX',
-												'right'
-											);
-										} }
-									>
-										{ __(
-											'Right',
-											'asnp-easy-sale-badge'
-										) }
-									</button>
-								</div>
+									{ __( 'Bottom', 'asnp-easy-sale-badge' ) }
+								</button>
 							</div>
-						) }
-						{ selectHorizVert === 'vert' && (
-							<div className="asnp-w-full asnp-flex asnp-rounded-md asnp-mt-3">
-								<div
-									className="asnp-w-[10rem] asnp-flex"
-									role="group"
+							<div
+								className="asnp-w-[10rem] asnp-flex asnp-ml-24"
+								role="group"
+							>
+								<button
+									type="button"
+									className="asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-l-lg asnp-border   asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700"
 								>
-									<button
-										type="button"
-										className={
-											'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-l-lg asnp-border   asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-											( props.badgePositionY == 'top' &&
-												'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
-										}
-										onClick={ () => {
-											props.onChange(
-												'badgePositionY',
-												'top'
-											);
-										} }
-									>
-										{ __( 'Top', 'asnp-easy-sale-badge' ) }
-									</button>
-									<button
-										type="button"
-										className={
-											'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-											( props.badgePositionY ==
-												'center' &&
-												'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
-										}
-										onClick={ () => {
-											props.onChange(
-												'badgePositionY',
-												'center'
-											);
-										} }
-									>
-										{ __(
-											'Center',
-											'asnp-easy-sale-badge'
-										) }
-									</button>
-									<button
-										type="button"
-										className={
-											'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-											( props.badgePositionY ==
-												'bottom' &&
-												'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
-										}
-										onClick={ () => {
-											props.onChange(
-												'badgePositionY',
-												'bottom'
-											);
-										} }
-									>
-										{ __(
-											'Bottom',
-											'asnp-easy-sale-badge'
-										) }
-									</button>
-								</div>
-								<div
-									className="asnp-w-[10rem] asnp-flex asnp-ml-24"
-									role="group"
+									{ __( 'Left', 'asnp-easy-sale-badge' ) }
+								</button>
+								<button
+									type="button"
+									className="asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700"
 								>
-									<button
-										type="button"
-										className={
-											'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-l-lg asnp-border   asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-											( props.badgePositionX == 'left' &&
-												'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
-										}
-										onClick={ () => {
-											props.onChange(
-												'badgePositionX',
-												'left'
-											);
-										} }
-									>
-										{ __( 'Left', 'asnp-easy-sale-badge' ) }
-									</button>
-
-									<button
-										type="button"
-										className={
-											'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-											( props.badgePositionX == 'right' &&
-												'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
-										}
-										onClick={ () => {
-											props.onChange(
-												'badgePositionX',
-												'right'
-											);
-										} }
-									>
-										{ __(
-											'Right',
-											'asnp-easy-sale-badge'
-										) }
-									</button>
-								</div>
+									{ __( 'Center', 'asnp-easy-sale-badge' ) }
+								</button>
+								<button
+									type="button"
+									className="asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700"
+								>
+									{ __( 'Right', 'asnp-easy-sale-badge' ) }
+								</button>
 							</div>
-						) }
+						</div>
 					</div>
 					<div className="asnp-mt-8">
 						<span className="asnp-field-title asnp-text-base asnp-font-semibold">
 							{ __(
-								'Label Position (Pixel)',
+								'Timer Position (Pixel)',
 								'asnp-easy-sale-badge'
 							) }
 						</span>
@@ -823,23 +397,12 @@ const Timer = ( props ) => {
 							</span>
 							<div className="asnp-w-[10rem]">
 								<input
-									disabled={ disablePositionTop }
+									className="asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed"
+									disabled
 									type="number"
 									min="0"
 									max="200"
-									className={
-										disablePositionTop
-											? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
-											: 'asnp-text-field'
-									}
 									placeholder="0"
-									value={ props.badgePositionTop }
-									onChange={ ( e ) =>
-										props.onChange(
-											'badgePositionTop',
-											e.target.value
-										)
-									}
 								/>
 							</div>
 						</label>
@@ -849,23 +412,12 @@ const Timer = ( props ) => {
 							</span>
 							<div className="asnp-w-[10rem] asnp-ml-6">
 								<input
-									disabled={ disablePositionButtom }
+									disabled
 									type="number"
 									min="0"
 									max="200"
-									className={
-										disablePositionButtom
-											? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
-											: 'asnp-text-field'
-									}
+									className="asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed"
 									placeholder="0"
-									value={ props.badgePositionBottom }
-									onChange={ ( e ) =>
-										props.onChange(
-											'badgePositionBottom',
-											e.target.value
-										)
-									}
 								/>
 							</div>
 						</label>
@@ -875,23 +427,12 @@ const Timer = ( props ) => {
 							</span>
 							<div className="asnp-w-[10rem] asnp-ml-6">
 								<input
-									disabled={ disablePositionLeft }
+									disabled
 									type="number"
 									min="0"
 									max="200"
-									className={
-										disablePositionLeft
-											? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
-											: 'asnp-text-field'
-									}
+									className="asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed"
 									placeholder="0"
-									value={ props.badgePositionLeft }
-									onChange={ ( e ) =>
-										props.onChange(
-											'badgePositionLeft',
-											e.target.value
-										)
-									}
 								/>
 							</div>
 						</label>
@@ -901,23 +442,12 @@ const Timer = ( props ) => {
 							</span>
 							<div className="asnp-w-[10rem] asnp-ml-6">
 								<input
-									disabled={ disablePositionRight }
+									className="asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed"
 									type="number"
 									min="0"
 									max="200"
-									className={
-										disablePositionRight
-											? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
-											: 'asnp-text-field'
-									}
 									placeholder="0"
-									value={ props.badgePositionRight }
-									onChange={ ( e ) =>
-										props.onChange(
-											'badgePositionRight',
-											e.target.value
-										)
-									}
+									disabled
 								/>
 							</div>
 						</label>
@@ -936,13 +466,7 @@ const Timer = ( props ) => {
 								<input
 									type="text"
 									className="asnp-text-field"
-									value={ props.labelDayTimer }
-									onChange={ ( e ) =>
-										props.onChange(
-											'labelDayTimer',
-											e.target.value
-										)
-									}
+									disabled
 								/>
 							</div>
 						</label>
@@ -954,13 +478,7 @@ const Timer = ( props ) => {
 								<input
 									type="text"
 									className="asnp-text-field"
-									value={ props.labelHoursTimer }
-									onChange={ ( e ) =>
-										props.onChange(
-											'labelHoursTimer',
-											e.target.value
-										)
-									}
+									disabled
 								/>
 							</div>
 						</label>
@@ -972,13 +490,7 @@ const Timer = ( props ) => {
 								<input
 									type="text"
 									className="asnp-text-field"
-									value={ props.labelMinTimer }
-									onChange={ ( e ) =>
-										props.onChange(
-											'labelMinTimer',
-											e.target.value
-										)
-									}
+									disabled
 								/>
 							</div>
 						</label>
@@ -990,13 +502,7 @@ const Timer = ( props ) => {
 								<input
 									type="text"
 									className="asnp-text-field"
-									value={ props.labelSecTimer }
-									onChange={ ( e ) =>
-										props.onChange(
-											'labelSecTimer',
-											e.target.value
-										)
-									}
+									disabled
 								/>
 							</div>
 						</label>

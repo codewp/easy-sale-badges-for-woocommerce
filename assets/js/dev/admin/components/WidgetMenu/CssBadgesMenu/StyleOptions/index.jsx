@@ -10,11 +10,6 @@ const StyleOptions = ( props ) => {
 	const [ disableR, setDisableR ] = useState( false );
 	const [ disableL, setDisableL ] = useState( false );
 	const [ disablGradient, setDisablGradient ] = useState( false );
-	const [ grad, setGrad ] = useState( false );
-
-	useEffect( () => {
-		props.onChange( 'badgeColor', '#a12ca1' );
-	}, [ grad ] );
 
 	useEffect( () => {
 		if (
@@ -106,7 +101,6 @@ const StyleOptions = ( props ) => {
 						content={
 							<div className="asnp-p-4">
 								<ColorPicker
-									onClick={ () => setGrad( ! grad ) }
 									value={ props.badgeColor }
 									onChange={ ( color ) => {
 										props.onChange( 'badgeColor', color );
@@ -299,7 +293,7 @@ const StyleOptions = ( props ) => {
 					</label>
 				</div>
 				<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold">
-					{ __( 'Additional Styles', 'asnp-easy-sale-badge' ) }
+					{ __( 'Extra Styles', 'asnp-easy-sale-badge' ) }
 				</div>
 
 				<div className="asnp-flex asnp-mt-2">

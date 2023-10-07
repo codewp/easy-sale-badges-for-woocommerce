@@ -5,7 +5,7 @@
  * Plugin URI: https://www.asanaplugins.com/product/whatsapp-chat-wordpress/?utm_source=whatsapp-chat-wordpress&utm_campaign=live-chat-button&utm_medium=link
  * Description: WhatsApp Chat for WordPress and WooCommerce
  * Tags: whatsapp, whatsapp chat, whatsapp floating button, whatsapp support, whatsapp message, whatsapp business, whatsapp group, WhatsApp WooCommerce, whatsapp WordPress, whatsapp icon, click to chat
- * Version: 1.2.0
+ * Version: 1.0.0
  * Author: Asana Plugins
  * Author URI: http://www.asanaplugins.com/
  * License: http://www.gnu.org/licenses/gpl-2.0.html
@@ -14,7 +14,7 @@
  * WC requires at least: 3.0
  * WC tested up to: 7.0.0
  *
- * Copyright 2022 Asana Plugins (http://www.asanaplugins.com/)
+ * Copyright 2023 Asana Plugins (http://www.asanaplugins.com/)
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -23,7 +23,7 @@ use AsanaPlugins\WooCommerce\SaleBadges\Plugin;
 
 // Plugin version.
 if ( ! defined( 'ASNP_WESB_VERSION' ) ) {
-	define( 'ASNP_WESB_VERSION', '1.2.0' );
+	define( 'ASNP_WESB_VERSION', '1.0.0' );
 }
 
 /**

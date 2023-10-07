@@ -88,6 +88,7 @@ function register_polyfills() {
 		'wp-i18n'      => array( '6.0', array() ),
 		'wp-hooks'     => array( '6.0', array() ),
 		'wp-api-fetch' => array( '6.0', array() ),
+		'moment'       => array( '2.29.4', array() ),
 	);
 	foreach ( $handles as $handle => $value ) {
 		if ( ! version_compare( $wp_version, '5.9', '>=' ) && in_array( $handle, array( 'react', 'react-dom' ) ) ) {
@@ -118,17 +119,17 @@ function add_custom_style( $style ) {
 	get_plugin()->container()->get( CustomStyles::class )->add_style( $style );
 }
 
-function display_sale_badges( $product, $hide = false ) {
+function display_sale_badges( $product, $hide = false, $return = false ) {
 	if ( ! $product ) {
-		return;
+		return '';
 	}
 
 	$badges = get_plugin()->container()->get( Badges::class );
 	if ( ! $badges ) {
-		return;
+		return '';
 	}
 
-	return $badges->display_badges( $product, $hide );
+	return $badges->display_badges( $product, $hide, $return );
 }
 
 function has_active_sale_badges() {
@@ -139,27 +140,6 @@ function has_active_sale_badges() {
 
 	$all_badges = $badges->get_badges();
 	return ! empty( $all_badges );
-}
-
-function localize_timer_badge( $badge ) {
-	if ( ! $badge || empty( $badge->selectedDateTo ) ) {
-		return;
-	}
-
-	$assets = get_plugin()->container()->get( Assets::class );
-	if ( ! $assets ) {
-		return;
-	}
-
-	$now = current_time( 'timestamp' );
-	$timer = [
-		'id'            => absint( $badge->id ),
-		'remainingTime' => ( strtotime( $badge->selectedDateTo, $now ) - $now ) * 1000,
-	];
-
-	if ( 0 < $timer['remainingTime'] ) {
-		$assets->add_timer( (object) $timer );
-	}
 }
 
 function get_current_product() {
@@ -184,4 +164,84 @@ function get_current_product() {
 	}
 
 	return false;
+}
+
+function get_theme_loop_position( $stylesheet = null, $template = null ) {
+	$stylesheet = empty( $stylesheet ) ? get_stylesheet() : $stylesheet;
+	$template   = empty( $template ) ? get_template() : $template;
+
+	$stylesheet = ! empty( $stylesheet ) ? strtolower( $stylesheet ) : $stylesheet;
+	$template   = ! empty( $template ) ? strtolower( $template ) : $template;
+
+	$themes = [
+		'avada'    	  => 'after_shop_loop_item_thumbnail',
+		'woodmart' 	  => 'after_shop_loop_item_thumbnail',
+		'porto'    	  => 'after_shop_loop_item_thumbnail',
+		'oceanwp'     => 'ocean_before_archive_product_image',
+		'basel'   	  => 'after_shop_loop_item_thumbnail',
+		'thegem'      => 'after_shop_loop_item_thumbnail',
+		'uncode'      => 'uncode_entry_visual_after_image',
+		'rehub-theme' => 'rh_woo_thumbnail_loop',
+		'total'       => 'wpex_woocommerce_loop_thumbnail_before',
+		'enfold'      => 'post_thumbnail_html',
+		'estore'      => 'after_shop_loop_item_thumbnail',
+	];
+
+	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
+		return $themes[ $stylesheet ];
+	}
+
+	if ( ! empty( $template ) && isset( $themes[ $template ] ) ) {
+		return $themes[ $template ];
+	}
+
+	return '';
+}
+
+function get_theme_single_position( $stylesheet = null, $template = null ) {
+	$stylesheet = empty( $stylesheet ) ? get_stylesheet() : $stylesheet;
+	$template   = empty( $template ) ? get_template() : $template;
+
+	$stylesheet = ! empty( $stylesheet ) ? strtolower( $stylesheet ) : $stylesheet;
+	$template   = ! empty( $template ) ? strtolower( $template ) : $template;
+
+	$themes = [
+		'thegem'      => 'thegem_woocommerce_single_product_left',
+		'rehub-theme' => 'rh_woo_after_single_image',
+		'woodmart'    => 'woocommerce_single_product_summary',
+		'basel'       => 'woocommerce_before_single_product_summary',
+	];
+
+	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
+		return $themes[ $stylesheet ];
+	}
+
+	if ( ! empty( $template ) && isset( $themes[ $template ] ) ) {
+		return $themes[ $template ];
+	}
+
+	return '';
+}
+
+function get_theme_single_container( $stylesheet = null, $template = null ) {
+	$stylesheet = empty( $stylesheet ) ? get_stylesheet() : $stylesheet;
+	$template   = empty( $template ) ? get_template() : $template;
+
+	$stylesheet = ! empty( $stylesheet ) ? strtolower( $stylesheet ) : $stylesheet;
+	$template   = ! empty( $template ) ? strtolower( $template ) : $template;
+
+	$themes = [
+		'thegem' => '.product-gallery-slider',
+		'eduma' => '.main_product_thumbnai',
+	];
+
+	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
+		return $themes[ $stylesheet ];
+	}
+
+	if ( ! empty( $template ) && isset( $themes[ $template ] ) ) {
+		return $themes[ $template ];
+	}
+
+	return '';
 }

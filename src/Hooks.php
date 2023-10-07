@@ -10,14 +10,20 @@ class Hooks {
 		if ( get_plugin()->is_request( 'frontend' ) ) {
 			self::single_hooks();
 			self::loop_hooks();
-			add_filter( 'woocommerce_product_get_image', array( __CLASS__, 'woocommerce_product_get_image' ), 999 );
+			if ( (int) get_plugin()->settings->get_settings( 'hideWooCommerceBadges', 0 ) ) {
+				add_custom_style( '.onsale{display:none !important;}' );
+			}
 		}
 	}
 
 	public static function single_hooks() {
 		self::single_custom_hooks();
 
-		$single_position = get_plugin()->settings->get_setting( 'singlePosition', 'before_single_item_images' );
+		$single_position = get_theme_single_position();
+		if ( empty( $single_position ) ) {
+			$single_position = get_plugin()->settings->get_setting( 'singlePosition', 'before_single_item_images' );
+		}
+
 		if ( empty( $single_position ) || 'none' === $single_position ) {
 			return;
 		}
@@ -76,6 +82,10 @@ class Hooks {
 					add_action( 'woocommerce_single_product_summary', array( __CLASS__, 'single_dispaly_sale_badge' ), 11 );
 				}
 				break;
+
+			default:
+				add_action( $single_position, array( __CLASS__, 'single_dispaly_sale_badge' ), 99 );
+				break;
 		}
 	}
 
@@ -89,7 +99,12 @@ class Hooks {
 	public static function loop_hooks() {
 		self::loop_custom_hooks();
 
-		$loop_position = get_plugin()->settings->get_setting( 'loopPosition', 'before_shop_loop_item_thumbnail' );
+		$loop_position = get_theme_loop_position();
+		if ( empty( $loop_position ) ) {
+			$loop_position = get_plugin()->settings->get_setting( 'loopPosition', 'woocommerce_product_get_image' );
+		}
+
+
 		if ( empty( $loop_position ) || 'none' === $loop_position ) {
 			return;
 		}
@@ -174,6 +189,18 @@ class Hooks {
 			case 'shop_loop':
 				add_action( "shop_loop", array( __CLASS__, 'display_sale_badge' ), 99 );
 				break;
+
+			case 'woocommerce_product_get_image':
+				add_filter( 'woocommerce_product_get_image', array( __CLASS__, 'woocommerce_product_get_image' ), 10, 2 );
+				break;
+
+			case 'post_thumbnail_html':
+				add_filter( 'post_thumbnail_html', array( __CLASS__, 'post_thumbnail_html' ), 10, 4 );
+				break;
+
+			default:
+				add_action( $loop_position, array( __CLASS__, 'display_sale_badge' ), 99 );
+				break;
 		}
 	}
 
@@ -217,16 +244,34 @@ class Hooks {
 		display_sale_badges( $product );
 	}
 
-	public static function woocommerce_product_get_image( $image ) {
+	public static function woocommerce_product_get_image( $image, $product ) {
 		if ( ! in_the_loop() ) {
 			return $image;
 		}
 
+		$badge = display_sale_badges( $product, false, true );
+		if ( empty( $badge ) ) {
+			return $image;
+		}
+
 		if ( false === strpos( $image, '<div' ) ) {
-			$image = '<div class="asnp-sale-badge-image-wrapper" style="position:relative;">' . $image . '</div>';
+			$image = '<div class="asnp-sale-badge-image-wrapper" style="position:relative;">' . $image . $badge . '</div>';
 		}
 
 		return $image;
+	}
+
+	public static function post_thumbnail_html( $image, $post_id, $post_thumbnail_id, $size ) {
+		if ( 'shop_catalog' !== $size ) {
+			return $image;
+		}
+
+		$badge = display_sale_badges( $post_id, false, true );
+		if ( empty( $badge ) ) {
+			return $image;
+		}
+
+		return $image . $badge;
 	}
 
 }
