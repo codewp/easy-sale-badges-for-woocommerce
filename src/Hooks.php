@@ -13,6 +13,7 @@ class Hooks {
 			}
 			static::loop_hooks();
 			if ( (int) get_plugin()->settings->get_setting( 'hideWooCommerceBadges', 0 ) ) {
+				add_filter( 'woocommerce_sale_flash', '__return_empty_string', 9999999 );
 				add_custom_style( '.onsale{display:none !important;}' );
 			}
 		}
