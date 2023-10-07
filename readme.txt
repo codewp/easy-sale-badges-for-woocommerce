@@ -1,9 +1,9 @@
 === Sale Badges and Product Labels for WooCommerce ===
 Contributors: asanaplugins
 Donate link: https://www.asanaplugins.com/
-Tags: whatsapp, whatsapp chat, woocommerce whatsapp, click to chat, whatsapp business, whats app, wame, wp social chat, join chat, wp whatsapp
+Tags:sale badges, product labels, WooCommerce badges, WooCommerce sale badges, badges, woocommerce, labels, plugin, shop, store, ecommerce, marketing, products, tags, product tags, product marks, product sign, sale product label, onsale product, woocommerce tags, custom labels, custom product badges, advanced product labels for woocommerce
 Requires at least: 5.0
-Tested up to: 6.1
+Tested up to: 6.3
 Requires PHP: 5.6
 Stable tag: 1.0.0
 License: GPLv2 or later
@@ -126,28 +126,17 @@ The plugin is rich in features while it is lightweight and fast.
 
 == 🎉 Our Other Free Plugins ==
 * <strong>[Discount Rules and Dynamic Pricing for WooCommerce](https://wordpress.org/plugins/easy-woocommerce-discounts/)
+* <strong>[WooCommerce Product Bundles](https://wordpress.org/plugins/easy-product-bundles-for-woocommerce/)
+* <strong>[ChatGPT AI Content Writing and WhatsApp](https://wordpress.org/plugins/live-chat-button/)</strong>
 
 == 💡 Our Other Pro Plugins ==
 * <strong>[Discount Rules and Dynamic Pricing for WooCommerce Pro](https://www.asanaplugins.com/product/woocommerce-dynamic-pricing-and-discounts-plugin/?utm_source=wp-org&utm_campaign=live-chat-button-free&utm_medium=link)
-
-== Frequently Asked Questions ==
-
-= WhatsApp Number =
-
-WhatsApp number is the phone number of your WhatsApp account.
-Enter the WhatsApp number with country code
-Example:
-Contry Code +1
-Number: 7654321099
-** WhatsApp Number: 17654321099 **
-
-= Is it GDPR-compliant? =
-
-The plugin doesn't require any GDPR compliance because it is not collecting any personal data or cookies from your website visitors.
-
-= Does it work with multi-language site? =
-
-Yes, the plugin is WPML ready and it is compatible with any translation plugins like WPML, Polylang, etc.
+* <strong>[WooCommerce Product Bundles Pro](https://www.asanaplugins.com/product/woocommerce-product-bundles/?utm_source=wp-org&utm_campaign=easy-woocommerce-discounts-free&utm_medium=link)
+* <strong>[ChatGPT AI Content Writing and WhatsApp Chat Pro for WordPress](https://www.asanaplugins.com/product/whatsapp-chat-wordpress/?utm_source=wp-org&utm_campaign=easy-product-bundles-free&utm_medium=link)</strong>
+* <strong>[Advanced Coupons](https://www.asanaplugins.com/advanced-discounts-woocommerce/?utm_source=wp-org&utm_campaign=easy-product-bundles-free&utm_medium=link)</strong>
+* <strong>[Auto Add Products to Cart](https://www.asanaplugins.com/product/auto-add-products-to-cart-woocommerce/?utm_source=wp-org&utm_campaign=easy-product-bundles-free&utm_medium=link)</strong>
+* <strong>[Shipping Discount](https://www.asanaplugins.com/product/shipping-discount-woocommerce/?utm_source=wp-org&utm_campaign=easy-product-bundles-free&utm_medium=link)</strong>
+* <strong>[URL Coupons](https://www.asanaplugins.com/product/url-coupons-for-woocommerce/?utm_source=wp-org&utm_campaign=easy-product-bundles-free&utm_medium=link)</strong>
 
 == Screenshots ==
 
