@@ -33,12 +33,12 @@ export const customColor = [
 	'rgb(0, 132, 255)',
 	'rgb(32, 82, 149)',
 	'rgb(20, 66, 114)',
-	'rgb(177, 178, 255)',
+	'rgb(0, 0, 0)',
 	'rgb(255, 135, 135)',
 	'rgb(188, 226, 158)',
 	'rgb(100, 92, 187)',
 	'rgb(183, 196, 207)',
-	'rgb(229, 186, 115)',
+	'rgb(255, 176, 49)',
 ];
 
 export default function BadgeCssandAdv( badge ) {
