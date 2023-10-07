@@ -8,8 +8,10 @@ class Hooks {
 
 	public static function init() {
 		if ( get_plugin()->is_request( 'frontend' ) ) {
-			self::single_hooks();
-			self::loop_hooks();
+			if ( (int) get_plugin()->settings->get_settings( 'showBadgeProductPage', 1 ) ) {
+				static::single_hooks();
+			}
+			static::loop_hooks();
 			if ( (int) get_plugin()->settings->get_settings( 'hideWooCommerceBadges', 0 ) ) {
 				add_custom_style( '.onsale{display:none !important;}' );
 			}
@@ -17,7 +19,7 @@ class Hooks {
 	}
 
 	public static function single_hooks() {
-		self::single_custom_hooks();
+		static::single_custom_hooks();
 
 		$single_position = get_theme_single_position();
 		if ( empty( $single_position ) ) {
@@ -93,11 +95,11 @@ class Hooks {
 		$custom_hooks = get_plugin()->settings->get_setting( 'singleCustomHooks', '' );
 		$custom_hooks = apply_filters( 'asnp_wesb_single_custom_hooks', $custom_hooks );
 
-		self::add_custom_hooks( $custom_hooks, array( __CLASS__, 'single_dispaly_sale_badge' ) );
+		static::add_custom_hooks( $custom_hooks, array( __CLASS__, 'single_dispaly_sale_badge' ) );
 	}
 
 	public static function loop_hooks() {
-		self::loop_custom_hooks();
+		static::loop_custom_hooks();
 
 		$loop_position = get_theme_loop_position();
 		if ( empty( $loop_position ) ) {
@@ -208,7 +210,7 @@ class Hooks {
 		$custom_hooks = get_plugin()->settings->get_setting( 'loopCustomHooks', '' );
 		$custom_hooks = apply_filters( 'asnp_wesb_loop_custom_hooks', $custom_hooks );
 
-		self::add_custom_hooks( $custom_hooks, array( __CLASS__, 'display_sale_badge' ) );
+		static::add_custom_hooks( $custom_hooks, array( __CLASS__, 'display_sale_badge' ) );
 	}
 
 	public static function add_custom_hooks( $custom_hooks, $callback ) {
