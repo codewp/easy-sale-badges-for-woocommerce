@@ -78,14 +78,16 @@ In today's competitive market, it is essential for businesses to find effective 
 * Divi
 * Betheme
 * Uncode 
+* Bridge 
+* Salient
 * Enfold 
 * JupiterX
 * XStore
 * Porto 
-* TheGem 
-* Bridge 
-* Basel
-* And More
+* StoreFront 
+* Astra  
+* OceanWP 
+* And Much More
 
 == COMPATIBILITY  WITH  WOOCOMMERCE  PLUGINS ==
 
@@ -156,7 +158,7 @@ Yes, the plugin is WPML ready and it is compatible with any translation plugins 
 5. Advanced Labels.
 6. Timer.
 7. Countdown Timer.
-
+8. Percentage Discount amount.
 
 == Changelog ==
 
