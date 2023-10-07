@@ -217,7 +217,7 @@ export default function Badge() {
 				i === groupIndex
 					? [
 							...group.slice( 0, index ),
-							{ ...group[ index ], [ field ]: [ value ] },
+							{ ...group[ index ], [ field ]: value },
 							...group.slice( index + 1 ),
 					  ]
 					: group
