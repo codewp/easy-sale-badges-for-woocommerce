@@ -8,11 +8,11 @@ class Hooks {
 
 	public static function init() {
 		if ( get_plugin()->is_request( 'frontend' ) ) {
-			if ( (int) get_plugin()->settings->get_settings( 'showBadgeProductPage', 1 ) ) {
+			if ( (int) get_plugin()->settings->get_setting( 'showBadgeProductPage', 1 ) ) {
 				static::single_hooks();
 			}
 			static::loop_hooks();
-			if ( (int) get_plugin()->settings->get_settings( 'hideWooCommerceBadges', 0 ) ) {
+			if ( (int) get_plugin()->settings->get_setting( 'hideWooCommerceBadges', 0 ) ) {
 				add_custom_style( '.onsale{display:none !important;}' );
 			}
 		}
