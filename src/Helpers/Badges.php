@@ -150,6 +150,13 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 		$horiz_and_vert = 'scaleX(-1) scaleY(-1)';
 	}
 
+	$text_NoWrap='';
+	if ( isset( $badge->badgeStyles ) && $badge->badgeStyles == 'badge13' ) {
+		$text_NoWrap = 'normal';
+	} else {
+		$text_NoWrap = 'nowrap';
+	}
+
 	$dynamic_styles = '';
 	switch ( $badge->badgeStyles ) {
 		case 'badge1':
@@ -1112,7 +1119,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 	$output .= '<div class="asnp-esb-badge-'. absint( $badge->id ) .'">';
 	$output .= '<span class="asnp-esb-inner-span2-'. absint( $badge->id ) .'"></span>';
 	$output .= '<div class="asnp-esb-inner-span1-'. absint( $badge->id ) .'">';
-	$output .= '<div style="transform: ' . esc_attr( $horiz_and_vert ) . '">' . $label . '</div>';
+	$output .= '<div style="transform: ' . esc_attr( $horiz_and_vert ) . '; white-space: ' . esc_attr( $text_NoWrap ) . '">' . $label . '</div>';
 	$output .= '</div>';
 	$output .= '</div>';
 	$output .= '</div>';

@@ -181,6 +181,14 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 		horizAndvert = 'scaleX( -1 ) ScaleY(-1)';
 	}
 
+	let textNoWrap;
+
+	if ( badge.badgeStyles == 'badge13' ) {
+		textNoWrap = 'normal';
+	} else {
+		textNoWrap = 'nowrap';
+	}
+
 	useEffect( () => {
 		if (
 			badge.badgeStyles == 'badge5' &&
@@ -255,6 +263,7 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 												<div
 													style={ {
 														transform: `${ horizAndvert }`,
+														whiteSpace: `${ textNoWrap }`,
 													} }
 												>
 													{ badge.badgeLabel }
