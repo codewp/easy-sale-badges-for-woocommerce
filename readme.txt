@@ -91,7 +91,7 @@ In today's competitive market, it is essential for businesses to find effective 
 
 == COMPATIBILITY  WITH  WOOCOMMERCE  PLUGINS ==
 
-Sale Badges and Product Labels for WooCommerce for WooCommerce has been tested and is fully compatible with the following WooCommerce plugins that you can integrate into your website :
+Sale Badges and Product Labels for WooCommerce has been tested and is fully compatible with the following WooCommerce plugins that you can integrate into your website :
 
 * <strong>[Discount Rules and Dynamic Pricing for WooCommerce](https://wordpress.org/plugins/easy-woocommerce-discounts/)
 
