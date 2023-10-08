@@ -28,7 +28,7 @@ const SinglePage = ( props ) => {
 				<label className="asnp-block asnp-space-y-1">
 					<h2 className="asnp-field-title asnp-ml-1">
 						{ __(
-							'Product Image Container Selector',
+							'Product Image Container CSS Selector',
 							'asnp-easy-sale-badge'
 						) }
 					</h2>
