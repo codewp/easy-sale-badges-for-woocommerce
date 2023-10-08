@@ -1,10 +1,10 @@
 <?php
 /**
  * @wordpress-plugin
- * Plugin Name: Easy Sale Badges For Woocommerce
+ * Plugin Name: Sale Badges and Product Labels for WooCommerce
  * Plugin URI: https://www.asanaplugins.com/product/whatsapp-chat-wordpress/?utm_source=whatsapp-chat-wordpress&utm_campaign=live-chat-button&utm_medium=link
- * Description: WhatsApp Chat for WordPress and WooCommerce
- * Tags: whatsapp, whatsapp chat, whatsapp floating button, whatsapp support, whatsapp message, whatsapp business, whatsapp group, WhatsApp WooCommerce, whatsapp WordPress, whatsapp icon, click to chat
+ * Description: Sale Badges and Product Labels for WooCommerce
+ * Tags: sale badges, product labels, WooCommerce badges, WooCommerce sale badges, badges, woocommerce, labels, plugin, shop, store, ecommerce, marketing, products, tags, product tags, product marks, product sign, sale product label, onsale product, woocommerce tags, custom labels, custom product badges, advanced product labels for woocommerce
  * Version: 1.0.0
  * Author: Asana Plugins
  * Author URI: http://www.asanaplugins.com/
