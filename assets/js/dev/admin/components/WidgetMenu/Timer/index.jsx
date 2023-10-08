@@ -157,7 +157,9 @@ const Timer = () => {
 								content={
 									<div>
 										<div className="asnp-p-4">
-											<ColorPicker />
+											<ColorPicker
+												hideColorTypeBtns={ true }
+											/>
 										</div>
 									</div>
 								}
@@ -188,7 +190,9 @@ const Timer = () => {
 								placement={ 'bottom' }
 								content={
 									<div className="asnp-p-4">
-										<ColorPicker />
+										<ColorPicker
+											hideColorTypeBtns={ true }
+										/>
 									</div>
 								}
 							>

@@ -9,7 +9,6 @@ const StyleOptions = ( props ) => {
 	const [ disableWidth, setDisabeWidth ] = useState( false );
 	const [ disableR, setDisableR ] = useState( false );
 	const [ disableL, setDisableL ] = useState( false );
-	const [ disablGradient, setDisablGradient ] = useState( false );
 
 	useEffect( () => {
 		if (
@@ -74,22 +73,6 @@ const StyleOptions = ( props ) => {
 		}
 	}, [ props.badgeStyles, props.badgePositionX ] );
 
-	useEffect( () => {
-		if (
-			props.badgeStyles == 'badge2' ||
-			props.badgeStyles == 'badge3' ||
-			props.badgeStyles == 'badge4' ||
-			props.badgeStyles == 'badge6' ||
-			props.badgeStyles == 'badge9' ||
-			props.badgeStyles == 'badge12' ||
-			props.badgeStyles == 'badge13'
-		) {
-			setDisablGradient( true );
-		} else {
-			setDisablGradient( false );
-		}
-	}, [ props.badgeStyles ] );
-
 	return (
 		<div className="asnp-ew-line">
 			<div className="asnp-w-[25rem]">
@@ -105,7 +88,7 @@ const StyleOptions = ( props ) => {
 									onChange={ ( color ) => {
 										props.onChange( 'badgeColor', color );
 									} }
-									hideColorTypeBtns={ disablGradient }
+									hideColorTypeBtns={ true }
 									presets={ customColor }
 								/>
 							</div>
