@@ -989,7 +989,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= ' width: 0;';
 			$dynamic_styles .= ' left: 0;';
 			if ( isset( $badge->widthBadge ) ) {
-				$dynamic_styles .= ' border-top: ' .   $badge->widthBadge / 4  . 'px solid' .   $badge->badgeColor  . '!important;';
+				$dynamic_styles .= ' border-top: ' .   $badge->widthBadge / 4  . 'px solid ' .   $badge->badgeColor  . '!important;';
 				$dynamic_styles .= ' border-right: ' .   $badge->widthBadge / 2  . 'px solid transparent !important;';
 				$dynamic_styles .= ' border-left: ' .   $badge->widthBadge / 2  . 'px solid transparent !important;';
 				$dynamic_styles .= ' top: ' .   $badge->widthBadge / 1.66  . 'px !important;';
