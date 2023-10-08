@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PLUGIN_SLUG="live-chat-button"
+PLUGIN_SLUG="easy-sale-badges-for-woocommerce"
 PROJECT_PATH=$(pwd)
 BUILD_PATH="${PROJECT_PATH}/build"
 DEST_PATH="$BUILD_PATH/$PLUGIN_SLUG"

@@ -86,12 +86,6 @@ CREATE TABLE {$wpdb->prefix}asnp_wesb_badge (
 	status TINYINT NOT NULL DEFAULT '1',
 	options longtext NULL,
 	PRIMARY KEY (id)
-) $collate;
-CREATE TABLE {$wpdb->prefix}asnp_wesb_product_badge (
-	id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-	product_id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-	badge longtext NULL,
-	PRIMARY KEY (id)
 ) $collate;";
 
 		return $tables;
@@ -133,7 +127,6 @@ CREATE TABLE {$wpdb->prefix}asnp_wesb_product_badge (
 
 		$tables = array(
 			"{$wpdb->prefix}asnp_wesb_badge",
-			"{$wpdb->prefix}asnp_wesb_product_badge",
 		);
 
 		/**
