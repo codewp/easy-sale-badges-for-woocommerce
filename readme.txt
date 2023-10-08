@@ -9,7 +9,7 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WooCommerce Sale Badges and Product Labels boost sales with eye catching customizable labels and countdown timers(PRO) for products, categories, Onsale and out of stock products.
+WooCommerce Sale Badges & Product Labels. Sale labels & countdown timers(PRO) for products,categories,Onsale,out-of-stock items.
 
 == Description ==
 
