@@ -705,8 +705,8 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= ' z-index: 12;';
 
 			if ( isset( $badge->badgePositionX ) ) {
-				$dynamic_styles .= ' border-right: ' . ( $badge->badgePositionX == 'right' ? '' . $badge->widthBadge .'px solid'. $badge->badgeColor . '' : 'none' ) . ';';
-				$dynamic_styles .= ' border-left: ' . ( $badge->badgePositionX == 'right' ? '' : '' . $badge->widthBadge .'px solid'. $badge->badgeColor . '' ) . ';';
+				$dynamic_styles .= ' border-right: ' . ( $badge->badgePositionX == 'right' ? '' . $badge->widthBadge .'px solid '. $badge->badgeColor . '' : 'none' ) . ';';
+				$dynamic_styles .= ' border-left: ' . ( $badge->badgePositionX == 'right' ? '' : '' . $badge->widthBadge .'px solid '. $badge->badgeColor . '' ) . ';';
 			}
 
 			if ( isset( $badge->widthBadge ) ) {
