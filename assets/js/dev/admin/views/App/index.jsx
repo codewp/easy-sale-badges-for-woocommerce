@@ -80,6 +80,7 @@ export default function App() {
 					<a
 						target="_blank"
 						className="asnp-nav-tab-item asnp-ew-goPro"
+						href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
 					>
 						{ __( 'Go Pro', 'asnp-easy-sale-badge' ) }
 					</a>

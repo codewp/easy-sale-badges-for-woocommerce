@@ -16,13 +16,11 @@ import AdvancedBadgeStyle from '../AdvancedBadges/AdvancedBadgeStyle';
 import BadgeImageStyle from './../ImageBadges/BadgeImageStyle';
 import Schedule from '../Schedule';
 import AdvancedOpacityAndPos from '../AdvancedBadges/AdvancedOpacityAndPos';
-import { BadgeContext } from '../../../contexts/Badge';
 import Timer from '../Timer';
 
 import './style.scss';
 
 const MenuItem = ( props ) => {
-	const { badgeImageFile, setBadgeImageFile } = useContext( BadgeContext );
 	const [ showTextImg, setShowTextImg ] = useState( true );
 
 	return (
@@ -93,7 +91,10 @@ const MenuItem = ( props ) => {
 			{ props.activeStatus == 4 && (
 				<div className="asnp-relative asnp-mt-3">
 					{ showTextImg == true && (
-						<a className="asnp-float-right asnp-top-16 asnp-z-50 asnp-sticky asnp-mr-[40%]">
+						<a
+							className="asnp-float-right asnp-top-16 asnp-z-50 asnp-sticky asnp-mr-[40%]"
+							href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
+						>
 							<button className="asnp-btn asnp-btn-delete !asnp-w-[14rem] asnp-flex asnp-text-center asnp-justify-center">
 								{ __( 'Go Pro', 'asnp-easy-sale-badge' ) }
 								<LockClosedIcon
@@ -114,7 +115,10 @@ const MenuItem = ( props ) => {
 			{ props.activeStatus == 5 && (
 				<div className="asnp-relative asnp-mt-3">
 					{ showTextImg == true && (
-						<a className="asnp-float-right asnp-top-16 asnp-z-50 asnp-sticky asnp-mr-[40%]">
+						<a
+							className="asnp-float-right asnp-top-16 asnp-z-50 asnp-sticky asnp-mr-[40%]"
+							href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
+						>
 							<button className="asnp-btn asnp-btn-delete !asnp-w-[14rem] asnp-flex asnp-text-center asnp-justify-center">
 								{ __( 'Go Pro', 'asnp-easy-sale-badge' ) }
 								<LockClosedIcon

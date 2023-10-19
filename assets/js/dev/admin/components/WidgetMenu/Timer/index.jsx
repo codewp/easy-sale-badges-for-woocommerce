@@ -15,7 +15,10 @@ const Timer = () => {
 	return (
 		<div className="asnp-relative">
 			{ showText == true && (
-				<a className="asnp-float-right asnp-top-16 asnp-z-50 asnp-sticky asnp-mt-10 asnp-mr-[40%]">
+				<a
+					className="asnp-float-right asnp-top-16 asnp-z-50 asnp-sticky asnp-mt-10 asnp-mr-[40%]"
+					href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
+				>
 					<button className="asnp-btn asnp-btn-delete !asnp-w-[14rem] asnp-flex asnp-text-center asnp-justify-center">
 						{ __( 'Go Pro', 'asnp-easy-sale-badge' ) }
 						<LockClosedIcon

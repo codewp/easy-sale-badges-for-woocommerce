@@ -15,7 +15,7 @@ WooCommerce Sale Badges & Product Labels. Sale labels & countdown timers(PRO) fo
 
 WooCommerce Sale Badges and Product Labels elevates your store’s appeal with customized badges and countdown timers (PRO Version). Unlock the full potential of your WooCommerce store with captivating sale badges, product labels, and countdown timers. This all-in-one plugin empowers you to create eye-catching labels and scheduled badges for products, categories, and tags. Highlighting discount values, product quantities, ratings, shipping classes, stock status, and sale status, these labels provide valuable information to your customers. Plus, leverage the power of countdown timers to create urgency and drive conversions. With an intuitive interface, easily customize labels and replace default on-sale badges. Take your WooCommerce store to new heights with visually appealing badges, labels, and countdown timers tailored to your unique offerings.
 
-[FRONT-END DEMO](https://pricing-and-discounts.asanaplugins.com/demo/product/whatsapp-plugin-demo/) | [BACK-END DEMO](https://pricing-and-discounts.asanaplugins.com/?asnp_demo_plugin=easy-whatsapp) | [Ask Questions](https://www.asanaplugins.com/support/) | **[PRO WITH 75% OFF FOR 10$ BIG SALE OFFER FOR THE FIRST 100 SALES](https://www.asanaplugins.com/product/whatsapp-chat-wordpress/?utm_source=wp-org&utm_campaign=easy-whatsapp-free&utm_medium=link)**
+[FRONT-END DEMO](https://pricing-and-discounts.asanaplugins.com/demo/product/whatsapp-plugin-demo/) | [BACK-END DEMO](https://pricing-and-discounts.asanaplugins.com/?asnp_demo_plugin=easy-whatsapp) | [Ask Questions](https://www.asanaplugins.com/support/) | **[PRO WITH 50% DISCOUNT FOR $30](https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/)**
 
 == Features ==
 
@@ -44,7 +44,7 @@ In today's competitive market, it is essential for businesses to find effective 
 * Include an option to set an expiration date and time for badges
 * A unique feature for adjusting hooks that control the presentation of product labels, especially helpful if your theme encounters issues displaying them or if you wish to reposition the labels
 
-**[PRO WITH 50% DISCOUNT FOR $30](https://www.asanaplugins.com/product/whatsapp-chat-wordpress/?utm_source=wp-org&utm_campaign=easy-whatsapp-free&utm_medium=link)**
+**[PRO WITH 50% DISCOUNT FOR $30](https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/)**
 
 == ✅SALE BADGES AND PRODUCT LABELS FOR WOOCOMMERCE PRO FEATURES ==
 * Over 200 Image Labels
@@ -66,7 +66,7 @@ In today's competitive market, it is essential for businesses to find effective 
 * Black Friday Image Labels
 * Valentine's Day Image Labels
 
-**[PRO WITH 50% DISCOUNT FOR $30](https://www.asanaplugins.com/product/whatsapp-chat-wordpress/?utm_source=wp-org&utm_campaign=easy-whatsapp-free&utm_medium=link)**
+**[PRO WITH 50% DISCOUNT FOR $30](https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/)**
 
 == TESTED WITH MORE THAN 40+ THEMES ==
 * WoodMart 
