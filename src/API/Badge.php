@@ -306,6 +306,7 @@ class Badge extends BaseController {
 			'zIndex'    => '',
 			'zIndexImg' => '',
 			'zIndexAdv' => '',
+			'zIndexTimer' => '',
 		);
 
 		foreach ( $request->get_params() as $key => $value ) {
@@ -330,6 +331,7 @@ class Badge extends BaseController {
 				case 'selectedDateFrom':
 				case 'selectedDateTo':
 				case 'badgeTimer':
+				case 'badgeLabelAdv':
 				case 'labelDayTimer':
 				case 'labelHoursTimer':
 				case 'labelMinTimer':
@@ -351,6 +353,8 @@ class Badge extends BaseController {
 				case 'heightBadge':
 				case 'topLeftRadius':
 				case 'topRightRadius':
+				case 'paddingRightLeft':
+				case 'paddingTopBottom':
 				case 'bottomLeftRadius':
 				case 'bottomRightRadius':
 					if ( isset( $value ) ) {
@@ -371,6 +375,8 @@ class Badge extends BaseController {
 				case 'badgePositionRight':
 				case 'widthBadgeImg':
 				case 'opacityImg':
+				case 'opacityAdvImg':
+				case 'opacityTimer':
 				case 'rotationXImg':
 				case 'rotationYImg':
 				case 'rotationZImg':
@@ -400,6 +406,7 @@ class Badge extends BaseController {
 				// Zindex options.
 				case 'zIndex':
 				case 'zIndexImg':
+				case 'zIndexTimer':
 				case 'zIndexAdv':
 					if ( ! empty( trim( $value ) ) ) {
 						$options[ $key ] = floatval( $value );
