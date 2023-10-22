@@ -112,7 +112,10 @@ export const ImageUpload = ( { file, setFile } ) => {
 											className="upload-button"
 											onClick={ onButtonClick }
 										>
-											Upload a file
+											{ __(
+												'Upload a file',
+												'asnp-easy-sale-badge'
+											) }
 										</button>
 									</div>
 								</div>
