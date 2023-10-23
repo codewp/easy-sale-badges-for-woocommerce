@@ -101,6 +101,18 @@ Simply install and activate the plugin, and then follow the steps below to creat
 3. Navigate to the 'Products' section, select a Condition, and save it.
 4. That's it! You can now view the Label or Badge on your product.
 
+== SHORTCODES ==
+
+Sale Badges And Product Labels Plugin To Woocommerce has the below shortcodes.
+
+*[asnp_badge hide="1"] to use on the product page.
+*[asnp_badge] to use on the archive product or product listing page.
+
+If you would like to show a specific product sale badges, then use the below shortcodes.
+
+*[asnp_badge product_id="7" hide="1"] to use on the product page, replace "7" with your product ID.
+*[asnp_badge product_id="7"] to use on the archive product or product listing page, replace "7" with your product ID.
+
 == 📕 Tutorials ==
 
 * <strong>[How to Add Product Labels in WooCommerce](https://www.asanaplugins.com/how-to-add-whatsapp-chat-to-wordpress/)</strong>
