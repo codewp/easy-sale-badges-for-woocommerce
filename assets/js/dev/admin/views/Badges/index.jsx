@@ -291,7 +291,7 @@ export default function Badges() {
 												</td>
 												<td className="asnp-px-6 asnp-py-4 asnp-whitespace-nowrap">
 													<code>
-														[asnp_chat id="
+														[asnp_badge id="
 														{ item.id }"]
 													</code>
 												</td>
