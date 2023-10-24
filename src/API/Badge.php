@@ -350,6 +350,7 @@ class Badge extends BaseController {
 				case 'lineHeightLabelTimer':
 				case 'lineHeightText':
 				case 'widthBadge':
+				case 'widthVertCssLabel':
 				case 'heightBadge':
 				case 'topLeftRadius':
 				case 'topRightRadius':
