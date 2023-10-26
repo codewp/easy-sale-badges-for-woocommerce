@@ -80,9 +80,11 @@ const BadgeImageStyle = () => {
 						</div>
 					</div>
 					<div className="asnp-w-[42rem]  asnp-ml-8 asnp-mt-8 asnp-mb-2 asnp-text-red-700 asnp-flex asnp-justify-center asnp-font-medium asnp-text-base">
-						<button className="asnp-btn asnp-btn-primary">
-							{ __( 'More...', 'asnp-easy-sale-badge' ) }
-						</button>
+						<a target='_blank' href='https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/'>
+							<button className="asnp-btn asnp-btn-primary">
+								{ __( 'More...', 'asnp-easy-sale-badge' ) }
+							</button>
+						</a>
 					</div>
 				</div>
 			</div>

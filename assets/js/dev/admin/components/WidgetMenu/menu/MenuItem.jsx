@@ -8,7 +8,6 @@ import Opacity from '../CssBadgesMenu/Opacity';
 import PositionDisable from '../CssBadgesMenu/PositionDisable';
 import Position from './../CssBadgesMenu/Position';
 import Products from '../Products';
-import UploadImage from '../ImageBadges/UploadImage';
 import Options from '../ImageBadges/OptionsImageBadges';
 import AdvancedTextOption from '../AdvancedBadges/AdvancedTextOption';
 import AdvancedOptions from '../AdvancedBadges/AdvancedOptions';
@@ -94,6 +93,7 @@ const MenuItem = ( props ) => {
 						<a
 							className="asnp-float-right asnp-top-16 asnp-z-50 asnp-sticky asnp-mr-[40%]"
 							href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
+							target="_blank"
 						>
 							<button className="asnp-btn asnp-btn-delete !asnp-w-[14rem] asnp-flex asnp-text-center asnp-justify-center">
 								{ __( 'Go Pro', 'asnp-easy-sale-badge' ) }
@@ -107,7 +107,14 @@ const MenuItem = ( props ) => {
 					) }
 					<div className="asnp-opacity-50">
 						<BadgeImageStyle />
-						<UploadImage />
+						<div>
+							<label className="asnp-block asnp-text-sm asnp-font-medium asnp-text-gray-700">
+								{ __( 'Custom Image', 'asnp-easy-sale-badge' ) }
+							</label>
+							<button className="asnp-btn asnp-btn-primary asnp-mt-4 asnp-mb-4">
+								{ __( 'Upload Image', 'asnp-easy-sale-badge' ) }
+							</button>
+						</div>
 						<Options />
 					</div>
 				</div>
@@ -117,6 +124,7 @@ const MenuItem = ( props ) => {
 					{ showTextImg == true && (
 						<a
 							className="asnp-float-right asnp-top-16 asnp-z-50 asnp-sticky asnp-mr-[40%]"
+							target="_blank"
 							href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
 						>
 							<button className="asnp-btn asnp-btn-delete !asnp-w-[14rem] asnp-flex asnp-text-center asnp-justify-center">
