@@ -54,8 +54,11 @@ const defaultBadge = {
 	badgePositionBottom: '0',
 	badgePositionLeft: '0',
 	badgePositionRight: '0',
+	imgbadge: 0,
+	imgbadgeAdv: 0,
+	useTimerBadge: 0,
 	woocommerceItemsConditions: 'any',
-	items: [ [ { ...initialItem } ] ],	
+	items: [ [ { ...initialItem } ] ],
 	schedule: [],
 };
 
@@ -105,23 +108,6 @@ export default function Badge() {
 			[ field ]: value,
 		} ) );
 	};
-
-	useEffect( () => {
-		if ( '' === badgeImageFile ) {
-			updateBadge( 'badgeImage', '' );
-			return;
-		} else if ( ! badgeImageFile ) {
-			return;
-		}
-
-		const reader = new FileReader();
-		reader.readAsDataURL( badgeImageFile );
-		reader.onload = function () {
-			updateBadge( 'badgeImage', reader.result );
-		};
-
-		return () => reader.abort();
-	}, [ badgeImageFile ] );
 
 	const addGroup = () => {
 		setBadge( ( prev ) => ( {
