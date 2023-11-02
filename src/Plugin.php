@@ -311,10 +311,10 @@ final class Plugin {
 	/**
 	 * Prevent cloning.
 	 */
-	private function __clone() {}
+	public function __clone() {}
 
 	/**
 	 * Prevent unserializing.
 	 */
-	private function __wakeup() {}
+	public function __wakeup() {}
 }
