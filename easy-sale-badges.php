@@ -2,7 +2,7 @@
 /**
  * @wordpress-plugin
  * Plugin Name: Sale Badges and Product Labels for WooCommerce
- * Plugin URI: https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/
+ * Plugin URI: https://www.asanaplugins.com/product/woocommerce-product-labels/
  * Description: Sale Badges and Product Labels for WooCommerce
  * Tags: sale badges, product labels, WooCommerce badges, WooCommerce sale badges, badges, woocommerce, labels, plugin, shop, store, ecommerce, marketing, products, tags, product tags, product marks, product sign, sale product label, onsale product, woocommerce tags, custom labels, custom product badges, advanced product labels for woocommerce
  * Version: 1.0.0
