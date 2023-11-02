@@ -40,15 +40,15 @@ export default function App() {
 				<div className="asnp-float-right asnp-pt-3 asnp-pr-6">
 					<a
 						target="_blank"
-						href="https://wordpress.org/support/plugin/live-chat-button/reviews/"
+						href="https://wordpress.org/support/plugin/easy-sale-badges-for-woocommerce/reviews/"
 					>
 						<button className="asnp-btn asnp-btn-primary asnp-ml-2 asnp-w-[8rem]">
-							{ __( '5 Star Review', 'asnp-easy-sale-badge' ) }
+							{ __( '5-Star Review', 'asnp-easy-sale-badge' ) }
 						</button>
 					</a>
 					<a
 						target="_blank"
-						href="https://wordpress.org/support/plugin/live-chat-button/"
+						href="https://www.asanaplugins.com/support/"
 					>
 						<button className="asnp-btn asnp-btn-primary asnp-ml-2 asnp-w-[8rem]">
 							{ __( 'Need help?', 'asnp-easy-sale-badge' ) }
