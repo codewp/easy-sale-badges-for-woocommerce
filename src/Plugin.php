@@ -102,6 +102,13 @@ final class Plugin {
 			return;
 		}
 
+		// WooCommerce HPOS supported.
+		add_action( 'before_woocommerce_init', function() {
+			if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
+				\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', ASNP_WESB_PLUGIN_FILE, true );
+			}
+		} );
+
 		$this->includes();
 	}
 
