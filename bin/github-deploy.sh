@@ -61,7 +61,7 @@ fi
 
 # Release script
 echo
-output 5 "Live Chat Button->GitHub RELEASE SCRIPT"
+output 5 "Sale Badges and Product Labels for WooCommerce->GitHub RELEASE SCRIPT"
 output 5 "============================="
 echo
 printf "This script will build files and create a tag on GitHub based on your local branch."

@@ -11,6 +11,9 @@
 	"license": "GPL-3.0-or-later",
 	"prefer-stable": true,
 	"minimum-stability": "dev",
+	"require": {
+		"yahnis-elsts/plugin-update-checker": "4.11"
+	},
 	"require-dev": {
 		"woocommerce/woocommerce-sniffs": "0.1.0"
 	},

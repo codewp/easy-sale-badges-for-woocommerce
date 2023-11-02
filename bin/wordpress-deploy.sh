@@ -1,11 +1,11 @@
 #!/bin/sh
 
 RELEASER_PATH=$(pwd)
-PLUGIN_SLUG="live-chat-button"
+PLUGIN_SLUG="easy-sale-badges-for-woocommerce"
 GITHUB_ORG="codewp"
-GITHUB_SLUG="live-chat-button"
+GITHUB_SLUG="easy-sale-badges-for-woocommerce"
 IS_PRE_RELEASE=false
-BUILD_PATH="${RELEASER_PATH}/build/live-chat-button-deployment"
+BUILD_PATH="${RELEASER_PATH}/build/easy-sale-badges-for-woocommerce-deployment"
 WP_USER="asanaplugins"
 
 # When it is set to true, the commands are just printed but not executed.
@@ -67,7 +67,7 @@ run_command() {
 
 # Release script
 echo
-output 4 "Live Chat Button->WordPress.org RELEASE SCRIPT"
+output 4 "Sale Badges and Product Labels for WooCommerce->WordPress.org RELEASE SCRIPT"
 output 4 "===================================="
 echo
 printf "This script prepares a GitHub tag/release for WordPress.org SVN."
