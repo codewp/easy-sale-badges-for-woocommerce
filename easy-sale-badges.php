@@ -12,7 +12,7 @@
  * Text Domain: asnp-easy-sale-badge
  * Domain Path: /languages
  * WC requires at least: 3.0
- * WC tested up to: 8.2.1
+ * WC tested up to: 8.2.2
  *
  * Copyright 2023 Asana Plugins (http://www.asanaplugins.com/)
  */
