@@ -163,3 +163,4 @@ The plugin is rich in features while it is lightweight and fast.
 
 = 1.0.0 =
 * First release.
+
