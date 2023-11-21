@@ -252,6 +252,11 @@ class Hooks {
 			return $image;
 		}
 
+		global $wp_current_filter;
+		if ( ! in_array( 'woocommerce_before_shop_loop_item_title', $wp_current_filter ) ) {
+			return $image;
+		}
+
 		$badge = display_sale_badges( $product, false, true );
 		if ( empty( $badge ) ) {
 			return $image;
