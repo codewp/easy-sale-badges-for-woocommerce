@@ -185,6 +185,8 @@ function get_theme_loop_position( $stylesheet = null, $template = null ) {
 		'total'       => 'wpex_woocommerce_loop_thumbnail_before',
 		'enfold'      => 'post_thumbnail_html',
 		'estore'      => 'after_shop_loop_item_thumbnail',
+		'flatsome'      => 'flatsome_woocommerce_shop_loop_images',
+		'jupiterx'      => 'woocommerce_after_shop_loop_item',
 	];
 
 	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
