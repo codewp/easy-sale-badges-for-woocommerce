@@ -259,14 +259,20 @@ class Hooks {
 	}
 
 	public static function woocommerce_product_get_image( $image, $product ) {
-		// global $wp_current_filter;
-    	// if ( ! in_array( 'woocommerce_before_shop_loop_item_title', $wp_current_filter ) ) {
-    	//   return $image;
-    	// }
+		if ( is_admin() && ! is_ajax() ) {
+			return $image;
+		}
 
-    	if ( ! in_the_loop() ) {
-		return $image;
-	  	}
+		if ( is_cart() || is_checkout() ) {
+			return $image;
+		}
+
+		if ( is_single() ) {
+			global $wp_current_filter;
+			if ( ! in_array( 'woocommerce_before_shop_loop_item_title', $wp_current_filter ) ) {
+				return $image;
+			}
+		}
 
 		$badge = display_sale_badges( $product, false, true );
 		if ( empty( $badge ) ) {

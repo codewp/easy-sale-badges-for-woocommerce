@@ -166,6 +166,26 @@ function get_current_product() {
 	return false;
 }
 
+function is_product_page() {
+	if ( is_product() ) {
+		return true;
+	}
+
+	global $post;
+	if ( empty( $post ) || empty( $post->post_content ) ) {
+		return false;
+	}
+
+	if (
+		false !== strpos( $post->post_content, '[product_page' ) ||
+		false !== strpos( $post->post_content, '[asnp_wepb_product' )
+	) {
+		return true;
+	}
+
+	return false;
+}
+
 function get_theme_loop_position( $stylesheet = null, $template = null ) {
 	$stylesheet = empty( $stylesheet ) ? get_stylesheet() : $stylesheet;
 	$template   = empty( $template ) ? get_template() : $template;
