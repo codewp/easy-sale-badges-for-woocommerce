@@ -20,7 +20,10 @@ class Hooks {
 	}
 
 	public static function single_hooks() {
-		static::single_custom_hooks();
+		$custom_hooks = static::single_custom_hooks();
+		if ( ! empty( $custom_hooks ) ) {
+			return;
+		}
 
 		$single_position = get_theme_single_position();
 		if ( empty( $single_position ) ) {
@@ -95,18 +98,23 @@ class Hooks {
 	public static function single_custom_hooks() {
 		$custom_hooks = get_plugin()->settings->get_setting( 'singleCustomHooks', '' );
 		$custom_hooks = apply_filters( 'asnp_wesb_single_custom_hooks', $custom_hooks );
+		$custom_hooks = trim( $custom_hooks );
 
 		static::add_custom_hooks( $custom_hooks, array( __CLASS__, 'single_dispaly_sale_badge' ) );
+
+		return $custom_hooks;
 	}
 
 	public static function loop_hooks() {
-		static::loop_custom_hooks();
+		$custom_hooks = static::loop_custom_hooks();
+		if ( ! empty( $custom_hooks ) ) {
+			return;
+		}
 
 		$loop_position = get_theme_loop_position();
 		if ( empty( $loop_position ) ) {
 			$loop_position = get_plugin()->settings->get_setting( 'loopPosition', 'woocommerce_product_get_image' );
 		}
-
 
 		if ( empty( $loop_position ) || 'none' === $loop_position ) {
 			return;
@@ -210,8 +218,11 @@ class Hooks {
 	public static function loop_custom_hooks() {
 		$custom_hooks = get_plugin()->settings->get_setting( 'loopCustomHooks', '' );
 		$custom_hooks = apply_filters( 'asnp_wesb_loop_custom_hooks', $custom_hooks );
+		$custom_hooks = trim( $custom_hooks );
 
 		static::add_custom_hooks( $custom_hooks, array( __CLASS__, 'display_sale_badge' ) );
+
+		return $custom_hooks;
 	}
 
 	public static function add_custom_hooks( $custom_hooks, $callback ) {
