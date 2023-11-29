@@ -269,7 +269,7 @@ class Hooks {
 
 		// Prevent show badge in mini-cart.
 		global $wp_current_filter;
-		if ( in_array( 'wc_ajax_get_refreshed_fragments', $wp_current_filter ) ) {
+		if ( in_array( 'wc_ajax_get_refreshed_fragments', $wp_current_filter ) || in_array( 'wc_ajax_add_to_cart', $wp_current_filter ) ) {
 			return $image;
 		}
 
