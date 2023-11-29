@@ -267,8 +267,13 @@ class Hooks {
 			return $image;
 		}
 
+		// Prevent show badge in mini-cart.
+		global $wp_current_filter;
+		if ( in_array( 'wc_ajax_get_refreshed_fragments', $wp_current_filter ) ) {
+			return $image;
+		}
+
 		if ( is_single() ) {
-			global $wp_current_filter;
 			if ( ! in_array( 'woocommerce_before_shop_loop_item_title', $wp_current_filter ) ) {
 				return $image;
 			}
