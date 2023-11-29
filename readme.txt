@@ -5,7 +5,7 @@ Tags: sale badges, product labels, WooCommerce badges, WooCommerce sale badges, 
 Requires at least: 5.0
 Tested up to: 6.4
 Requires PHP: 5.6
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -160,6 +160,12 @@ The plugin is rich in features while it is lightweight and fast.
 8. Percentage Discount amount.
 
 == Changelog ==
+
+= 1.1.0 =
+* Add - prefix to percentage discounts value.
+* Fix the Display issues of CSS Labels on Some of Themes.
+* Fix the Display issues of CSS Labels on the Cart and other sections.
+* Compatibility with WooCommerce 8.3.0
 
 = 1.0.0 =
 * First release.
