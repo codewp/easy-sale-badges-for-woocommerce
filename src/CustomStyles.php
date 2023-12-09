@@ -30,7 +30,7 @@ class CustomStyles {
 
 	public function output_styles() {
 		if ( ! empty( $this->styles ) ) {
-			echo "\n<style id='asnp-wesb-inline-style'>\n" . $this->styles . "\n</style>\n";
+			echo "\n<style id='asnp-wesb-inline-style'>\n" . esc_html( $this->styles ) . "\n</style>\n";
 		}
 	}
 

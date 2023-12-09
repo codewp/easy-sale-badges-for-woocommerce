@@ -247,7 +247,7 @@ final class Plugin {
 	 */
 	public function render_dependencies_notice() {
 		$message = $this->get_dependency_errors();
-		printf( '<div class="error"><p>%s</p></div>', implode( ' ', $message ) ); /* phpcs:ignore xss ok. */
+		printf( '<div class="error"><p>%s</p></div>', wp_kses_post( implode( ' ', $message ) ) ); /* phpcs:ignore xss ok. */
 	}
 
 	/**
