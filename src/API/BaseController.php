@@ -11,7 +11,7 @@ abstract class BaseController extends \WP_REST_Controller {
 	 *
 	 * @var string
 	 */
-	protected $namespace = 'easy-sale-badges-for-woocommerce/v1';
+	protected $namespace = 'asnp-easy-sale-badge/v1';
 
 	/**
 	 * Route base.

@@ -27,7 +27,7 @@ class Menu {
 			__( 'Product Badges', 'easy-sale-badges-for-woocommerce' ),
 			__( 'Product Badges', 'easy-sale-badges-for-woocommerce' ),
 			apply_filters( 'asnp_wesb_sale_badge_menu_capability', 'manage_options' ),
-			'easy-sale-badges-for-woocommerce',
+			'asnp-easy-sale-badge',
 			array( $this, 'create_menu' ),
 			ASNP_WESB_PLUGIN_URL . 'assets/images/menu-icon.png',
 			55.3
@@ -37,7 +37,7 @@ class Menu {
 	public function create_menu() {
 		?>
 		<div id="asnp-badge-wrapper" class="asnp-badge-wrapper">
-			<div id="easy-sale-badges-for-woocommerce"></div>
+			<div id="asnp-easy-sale-badge"></div>
 		</div>
 		<?php
 	}

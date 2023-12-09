@@ -8,9 +8,9 @@ if [ ${WPCLI_VERSION:0:1} -lt "2" -o ${WPCLI_VERSION:0:1} -eq "2" -a ${WPCLI_VER
 fi
 
 # Make the JSON files
-wp i18n make-pot ./ languages/easy-sale-badges-for-woocommerce.pot --exclude=assets/js/dev/*,build/*
+wp i18n make-pot ./ languages/asnp-easy-sale-badge.pot --exclude=assets/js/dev/*,build/*
 # Make admin script json file.
 echo "Generating translation json files..."
-cp ./languages/easy-sale-badges-for-woocommerce.pot ./languages/easy-sale-badges-for-woocommerce.po
+cp ./languages/asnp-easy-sale-badge.pot ./languages/asnp-easy-sale-badge.po
 wp i18n make-json languages --no-purge
-rm ./languages/easy-sale-badges-for-woocommerce.po
+rm ./languages/asnp-easy-sale-badge.po
