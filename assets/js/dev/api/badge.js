@@ -25,7 +25,7 @@ export const getItems = async ( data = {} ) => {
 		}
 
 		throw new Error(
-			__( 'There was an error on gettings items.', 'asnp-easy-sale-badge' )
+			__( 'There was an error on gettings items.', 'easy-sale-badges-for-woocommerce' )
 		);
 	} catch ( error ) {
 		throw error;
@@ -36,7 +36,7 @@ export const getItem = async ( id ) => {
 	id = null != id ? id * 1 : 0;
 	if ( isNaN( id ) || 0 >= id ) {
 		throw new Error(
-			__( 'ID is required to get an item.', 'asnp-easy-sale-badge' )
+			__( 'ID is required to get an item.', 'easy-sale-badges-for-woocommerce' )
 		);
 	}
 
@@ -53,7 +53,7 @@ export const getItem = async ( id ) => {
 		throw new Error(
 			__(
 				'There was an error on getting the item.',
-				'asnp-easy-sale-badge'
+				'easy-sale-badges-for-woocommerce'
 			)
 		);
 	} catch ( error ) {
@@ -63,7 +63,7 @@ export const getItem = async ( id ) => {
 
 export const save = async ( data ) => {
 	if ( ! data ) {
-		throw new Error( __( 'Data is required.', 'asnp-easy-sale-badge' ) );
+		throw new Error( __( 'Data is required.', 'easy-sale-badges-for-woocommerce' ) );
 	}
 
 	if ( data.id && ! isNaN( data.id * 1 ) && 0 < data.id * 1 ) {
@@ -76,7 +76,7 @@ export const save = async ( data ) => {
 export const create = async ( data ) => {
 	if ( ! data ) {
 		throw new Error(
-			__( 'Data is required to create an item.', 'asnp-easy-sale-badge' )
+			__( 'Data is required to create an item.', 'easy-sale-badges-for-woocommerce' )
 		);
 	}
 
@@ -94,7 +94,7 @@ export const create = async ( data ) => {
 		throw new Error(
 			__(
 				'There was an error on creating the item.',
-				'asnp-easy-sale-badge'
+				'easy-sale-badges-for-woocommerce'
 			)
 		);
 	} catch ( error ) {
@@ -105,11 +105,11 @@ export const create = async ( data ) => {
 export const update = async ( data ) => {
 	if ( ! data ) {
 		throw new Error(
-			__( 'Data is required to update an item.', 'asnp-easy-sale-badge' )
+			__( 'Data is required to update an item.', 'easy-sale-badges-for-woocommerce' )
 		);
 	} else if ( ! data.id || isNaN( data.id * 1 ) || 0 >= data.id * 1 ) {
 		throw new Error(
-			__( 'Item ID is required to update it.', 'asnp-easy-sale-badge' )
+			__( 'Item ID is required to update it.', 'easy-sale-badges-for-woocommerce' )
 		);
 	}
 
@@ -127,7 +127,7 @@ export const update = async ( data ) => {
 		throw new Error(
 			__(
 				'There was an error on updating the item.',
-				'asnp-easy-sale-badge'
+				'easy-sale-badges-for-woocommerce'
 			)
 		);
 	} catch ( error ) {
@@ -139,7 +139,7 @@ export const deleteItem = async ( id ) => {
 	id *= 1;
 	if ( isNaN( id ) || 0 >= id ) {
 		throw new Error(
-			__( 'ID is required to delete an item.', 'asnp-easy-sale-badge' )
+			__( 'ID is required to delete an item.', 'easy-sale-badges-for-woocommerce' )
 		);
 	}
 
@@ -156,7 +156,7 @@ export const deleteItem = async ( id ) => {
 		throw new Error(
 			__(
 				'There was an error on deleting the item.',
-				'asnp-easy-sale-badge'
+				'easy-sale-badges-for-woocommerce'
 			)
 		);
 	} catch ( error ) {
@@ -168,7 +168,7 @@ export const duplicate = async ( id ) => {
 	id *= 1;
 	if ( isNaN( id ) || 0 >= id ) {
 		throw new Error(
-			__( 'ID is required to duplicate an item.', 'asnp-easy-sale-badge' )
+			__( 'ID is required to duplicate an item.', 'easy-sale-badges-for-woocommerce' )
 		);
 	}
 
@@ -185,7 +185,7 @@ export const duplicate = async ( id ) => {
 		throw new Error(
 			__(
 				'There was an error on duplicating the item.',
-				'asnp-easy-sale-badge'
+				'easy-sale-badges-for-woocommerce'
 			)
 		);
 	} catch ( error ) {
@@ -196,7 +196,7 @@ export const duplicate = async ( id ) => {
 export const reorder = async ( data ) => {
 	if ( ! data || ! data.items || ! data.items.length ) {
 		throw new Error(
-			__( 'Items is required for reordering.', 'asnp-easy-sale-badge' )
+			__( 'Items is required for reordering.', 'easy-sale-badges-for-woocommerce' )
 		);
 	}
 
@@ -214,7 +214,7 @@ export const reorder = async ( data ) => {
 		throw new Error(
 			__(
 				'There was an error on duplicating the item.',
-				'asnp-easy-sale-badge'
+				'easy-sale-badges-for-woocommerce'
 			)
 		);
 	} catch ( error ) {

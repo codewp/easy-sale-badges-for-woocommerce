@@ -72,7 +72,7 @@ export default function Badges() {
 				setMessage( {
 					message: __(
 						'Duplicated Successfully.',
-						'asnp-easy-sale-badge'
+						'easy-sale-badges-for-woocommerce'
 					),
 					type: 'success',
 				} );
@@ -80,7 +80,7 @@ export default function Badges() {
 				setMessage( {
 					message: __(
 						'Error occurred on duplicating the item.',
-						'asnp-easy-sale-badge'
+						'easy-sale-badges-for-woocommerce'
 					),
 					type: 'error',
 				} );
@@ -120,7 +120,7 @@ export default function Badges() {
 				setMessage( {
 					message: __(
 						'Deleted Successfully.',
-						'asnp-easy-sale-badge'
+						'easy-sale-badges-for-woocommerce'
 					),
 					type: 'success',
 				} );
@@ -128,7 +128,7 @@ export default function Badges() {
 				setMessage( {
 					message: __(
 						'Error occurred on deleting the item.',
-						'asnp-easy-sale-badge'
+						'easy-sale-badges-for-woocommerce'
 					),
 					type: 'error',
 				} );
@@ -164,7 +164,7 @@ export default function Badges() {
 				setMessage( {
 					message: __(
 						'Updated Successfully.',
-						'asnp-easy-sale-badge'
+						'easy-sale-badges-for-woocommerce'
 					),
 					type: 'success',
 				} );
@@ -172,7 +172,7 @@ export default function Badges() {
 				setMessage( {
 					message: __(
 						'Error occurred on updating the item.',
-						'asnp-easy-sale-badge'
+						'easy-sale-badges-for-woocommerce'
 					),
 					type: 'error',
 				} );
@@ -191,19 +191,19 @@ export default function Badges() {
 		<div>
 			<div className="asnp-flex asnp-space-x-2">
 				<h1 className="asnp-heading-inline">
-					{ __( 'Badges', 'asnp-easy-sale-badge' ) }
+					{ __( 'Badges', 'easy-sale-badges-for-woocommerce' ) }
 				</h1>
 				<Link to={ `/badge/new` } className="asnp-btn asnp-btn-primary">
-					{ __( 'Add New', 'asnp-easy-sale-badge' ) }
+					{ __( 'Add New', 'easy-sale-badges-for-woocommerce' ) }
 				</Link>
 			</div>
 			{ ! state.isLoading && ! loading && ! state.items.length && (
 				<Alert
 					message={ __(
 						'There is not any Item.',
-						'asnp-easy-sale-badge'
+						'easy-sale-badges-for-woocommerce'
 					) }
-					title={ __( 'Info!', 'asnp-easy-sale-badge' ) }
+					title={ __( 'Info!', 'easy-sale-badges-for-woocommerce' ) }
 				/>
 			) }
 			{ 0 < state.items.length && (
@@ -223,7 +223,7 @@ export default function Badges() {
 											>
 												{ __(
 													'ID',
-													'asnp-easy-sale-badge'
+													'easy-sale-badges-for-woocommerce'
 												) }
 											</th>
 											<th
@@ -232,7 +232,7 @@ export default function Badges() {
 											>
 												{ __(
 													'Name',
-													'asnp-easy-sale-badge'
+													'easy-sale-badges-for-woocommerce'
 												) }
 											</th>
 											<th
@@ -241,7 +241,7 @@ export default function Badges() {
 											>
 												{ __(
 													'Shortcode',
-													'asnp-easy-sale-badge'
+													'easy-sale-badges-for-woocommerce'
 												) }
 											</th>
 											<th
@@ -250,7 +250,7 @@ export default function Badges() {
 											>
 												{ __(
 													'Preview',
-													'asnp-easy-sale-badge'
+													'easy-sale-badges-for-woocommerce'
 												) }
 											</th>
 											<th
@@ -259,7 +259,7 @@ export default function Badges() {
 											>
 												{ __(
 													'Status',
-													'asnp-easy-sale-badge'
+													'easy-sale-badges-for-woocommerce'
 												) }
 											</th>
 											<th
@@ -268,7 +268,7 @@ export default function Badges() {
 											>
 												{ __(
 													'Actions',
-													'asnp-easy-sale-badge'
+													'easy-sale-badges-for-woocommerce'
 												) }
 											</th>
 										</tr>
@@ -285,7 +285,7 @@ export default function Badges() {
 													>
 														{ __(
 															item.title,
-															'asnp-easy-sale-badge'
+															'easy-sale-badges-for-woocommerce'
 														) }
 													</Link>
 												</td>
@@ -336,7 +336,7 @@ export default function Badges() {
 														}
 														title={ __(
 															'Duplicate',
-															'asnp-easy-sale-badge'
+															'easy-sale-badges-for-woocommerce'
 														) }
 													>
 														<DuplicateIcon className="asnp-h-5 asnp-w-4 " />
@@ -350,7 +350,7 @@ export default function Badges() {
 														}
 														title={ __(
 															'Delete',
-															'asnp-easy-sale-badge'
+															'easy-sale-badges-for-woocommerce'
 														) }
 													>
 														<TrashIcon className="asnp-h-5 asnp-w-4 " />
@@ -369,8 +369,8 @@ export default function Badges() {
 				<Pagination
 					current={ state.page }
 					total={ state.pages }
-					prevText={ __( 'Prev', 'asnp-easy-sale-badge' ) }
-					nextText={ __( 'Next', 'asnp-easy-sale-badge' ) }
+					prevText={ __( 'Prev', 'easy-sale-badges-for-woocommerce' ) }
+					nextText={ __( 'Next', 'easy-sale-badges-for-woocommerce' ) }
 					onClickPage={ ( value ) => getPageItems( value ) }
 				/>
 			) }

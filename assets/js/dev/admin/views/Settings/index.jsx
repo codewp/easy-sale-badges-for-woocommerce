@@ -25,7 +25,7 @@ export default function Settings() {
 				setMessage( {
 					message: __(
 						'Saved Successfully.',
-						'asnp-easy-sale-badge'
+						'easy-sale-badges-for-woocommerce'
 					),
 					type: 'success',
 				} );
@@ -33,7 +33,7 @@ export default function Settings() {
 				throw new Error(
 					__(
 						'There was an error on saving the settings.',
-						'asnp-easy-sale-badge'
+						'easy-sale-badges-for-woocommerce'
 					)
 				);
 			}
@@ -61,7 +61,7 @@ export default function Settings() {
 								: '' )
 						}
 					>
-						{ __( 'General ', 'asnp-easy-sale-badge' ) }
+						{ __( 'General ', 'easy-sale-badges-for-woocommerce' ) }
 					</a>
 					<a
 						href="#"
@@ -76,7 +76,7 @@ export default function Settings() {
 								: '' )
 						}
 					>
-						{ __( 'Product Page', 'asnp-easy-sale-badge' ) }
+						{ __( 'Product Page', 'easy-sale-badges-for-woocommerce' ) }
 					</a>
 				</nav>
 			</div>

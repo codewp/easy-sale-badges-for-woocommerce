@@ -27,7 +27,7 @@ const TextOptions = ( props ) => {
 			<div className="asnp-mt-8 asnp-flex">
 				<label className="asnp-w-[20rem]">
 					<span className="asnp-field-title">
-						{ __( 'Label', 'asnp-easy-sale-badge' ) }
+						{ __( 'Label', 'easy-sale-badges-for-woocommerce' ) }
 					</span>
 					<input
 						type="text"
@@ -96,7 +96,7 @@ const TextOptions = ( props ) => {
 								<span className="asnp-flex asnp-w-[25rem] asnp-my-2">
 									{ __(
 										'Text Color',
-										'asnp-easy-sale-badge'
+										'easy-sale-badges-for-woocommerce'
 									) }
 								</span>
 								<div
@@ -115,7 +115,7 @@ const TextOptions = ( props ) => {
 			<div className="asnp-flex asnp-mt-[2rem] asnp-w-full">
 				<label>
 					<span className="asnp-field-title">
-						{ __( 'Font Size (Pixel)', 'asnp-easy-sale-badge' ) }
+						{ __( 'Font Size (Pixel)', 'easy-sale-badges-for-woocommerce' ) }
 					</span>
 					<div className="asnp-w-[15rem]">
 						<input
@@ -133,7 +133,7 @@ const TextOptions = ( props ) => {
 				</label>
 				<label className="asnp-ml-10">
 					<span className="asnp-field-title">
-						{ __( 'Line Height (Pixel)', 'asnp-easy-sale-badge' ) }
+						{ __( 'Line Height (Pixel)', 'easy-sale-badges-for-woocommerce' ) }
 					</span>
 					<div className="asnp-w-[15rem]">
 						<input

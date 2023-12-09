@@ -26,7 +26,7 @@ const AdvancedOptions = () => {
 									<span className="asnp-flex asnp-w-[25rem] asnp-my-2">
 										{ __(
 											'Main Badge Color',
-											'asnp-easy-sale-badge'
+											'easy-sale-badges-for-woocommerce'
 										) }
 									</span>
 									<div
@@ -56,7 +56,7 @@ const AdvancedOptions = () => {
 									<span className="asnp-flex asnp-w-[25rem] asnp-my-2">
 										{ __(
 											'Secondary Badge Color',
-											'asnp-easy-sale-badge'
+											'easy-sale-badges-for-woocommerce'
 										) }
 									</span>
 									<div className="asnp-flex asnp-w-7 asnp-h-6 asnp-rounded-full asnp-my-2"></div>
@@ -66,13 +66,13 @@ const AdvancedOptions = () => {
 					</Tippy>
 				</div>
 				<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold">
-					{ __( 'Extra Styles', 'asnp-easy-sale-badge' ) }
+					{ __( 'Extra Styles', 'easy-sale-badges-for-woocommerce' ) }
 				</div>
 
 				<div className="asnp-flex asnp-mt-2">
 					<label>
 						<span className="asnp-field-title">
-							{ __( 'z-index', 'asnp-easy-sale-badge' ) }
+							{ __( 'z-index', 'easy-sale-badges-for-woocommerce' ) }
 						</span>
 						<div className="asnp-w-[25rem]">
 							<input type="number" className="asnp-text-field" />

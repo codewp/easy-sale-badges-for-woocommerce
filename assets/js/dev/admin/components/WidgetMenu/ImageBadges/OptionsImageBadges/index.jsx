@@ -8,7 +8,7 @@ const Options = () => {
 			<div className="asnp-flex asnp-mt-[1rem]">
 				<label>
 					<span className="asnp-field-title">
-						{ __( 'Size (Pixel)', 'asnp-easy-sale-badge' ) }
+						{ __( 'Size (Pixel)', 'easy-sale-badges-for-woocommerce' ) }
 					</span>
 					<div className="asnp-w-[11rem]">
 						<input
@@ -23,7 +23,7 @@ const Options = () => {
 				</label>
 				<label>
 					<span className="asnp-field-title asnp-ml-4">
-						{ __( 'z-index', 'asnp-easy-sale-badge' ) }
+						{ __( 'z-index', 'easy-sale-badges-for-woocommerce' ) }
 					</span>
 					<div className="asnp-w-[11rem] asnp-ml-4">
 						<input
@@ -39,7 +39,7 @@ const Options = () => {
 			<div className="asnp-mt-4">
 				<label className="asnp-space-y-1">
 					<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-						{ __( 'Opacity', 'asnp-easy-sale-badge' ) }
+						{ __( 'Opacity', 'easy-sale-badges-for-woocommerce' ) }
 					</span>
 				</label>
 			</div>
@@ -65,7 +65,7 @@ const Options = () => {
 				<div className="asnp-w-full">
 					<label>
 						<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-							{ __( 'Rotation', 'asnp-easy-sale-badge' ) }
+							{ __( 'Rotation', 'easy-sale-badges-for-woocommerce' ) }
 						</span>
 					</label>
 					<div className="asnp-flex">

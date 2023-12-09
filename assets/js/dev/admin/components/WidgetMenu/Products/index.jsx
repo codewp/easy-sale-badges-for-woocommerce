@@ -6,12 +6,12 @@ const Products = ( props ) => {
 	return (
 		<div>
 			<div className="asnp-w-[25rem] asnp-mt-2 asnp-text-lg asnp-font-semibold">
-				{ __( 'Products', 'asnp-easy-sale-badge' ) }
+				{ __( 'Products', 'easy-sale-badges-for-woocommerce' ) }
 			</div>
 			<div className="asnp-mt-3">
 				<div className="asnp-flex">
 					<p className="asnp-field-title">
-						{ __( 'To select the', 'asnp-easy-sale-badge' ) }
+						{ __( 'To select the', 'easy-sale-badges-for-woocommerce' ) }
 					</p>
 					<a
 						className="asnp-ml-1"
@@ -20,13 +20,13 @@ const Products = ( props ) => {
 					>
 						{ __(
 							'“Discount Rules and Dynamic Pricing for WooCommerce“',
-							'asnp-easy-sale-badge'
+							'easy-sale-badges-for-woocommerce'
 						) }
 					</a>
 					<p className="asnp-field-title asnp-ml-1">
 						{ __(
 							'rule, you can utilize the “Discount rule” condition.',
-							'asnp-easy-sale-badge'
+							'easy-sale-badges-for-woocommerce'
 						) }
 					</p>
 				</div>

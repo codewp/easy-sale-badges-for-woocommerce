@@ -9,7 +9,7 @@ const SinglePage = ( props ) => {
 				<h2 className="asnp-field-title md:asnp-min-w-1/3">
 					{ __(
 						'Show Badge on Product Page',
-						'asnp-easy-sale-badge'
+						'easy-sale-badges-for-woocommerce'
 					) }
 				</h2>
 				<div>
@@ -29,7 +29,7 @@ const SinglePage = ( props ) => {
 					<h2 className="asnp-field-title asnp-ml-1">
 						{ __(
 							'Product Image Container CSS Selector',
-							'asnp-easy-sale-badge'
+							'easy-sale-badges-for-woocommerce'
 						) }
 					</h2>
 					<input
@@ -45,7 +45,7 @@ const SinglePage = ( props ) => {
 					<p className="asnp-text-xs asnp-text-gray-400">
 						{ __(
 							'Images container CSS selector on single product page.',
-							'asnp-easy-sale-badge'
+							'easy-sale-badges-for-woocommerce'
 						) }
 					</p>
 				</label>
@@ -55,7 +55,7 @@ const SinglePage = ( props ) => {
 				type="button"
 				onClick={ () => props.onSave() }
 			>
-				{ __( 'Save Changes', 'asnp-easy-sale-badge' ) }
+				{ __( 'Save Changes', 'easy-sale-badges-for-woocommerce' ) }
 			</button>
 		</div>
 	);

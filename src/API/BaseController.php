@@ -11,7 +11,7 @@ abstract class BaseController extends \WP_REST_Controller {
 	 *
 	 * @var string
 	 */
-	protected $namespace = 'asnp-easy-sale-badge/v1';
+	protected $namespace = 'easy-sale-badges-for-woocommerce/v1';
 
 	/**
 	 * Route base.
@@ -28,7 +28,7 @@ abstract class BaseController extends \WP_REST_Controller {
 	 */
 	public function get_items_permissions_check( $request ) {
 		if ( ! current_user_can( 'manage_options' ) ) {
-			return new \WP_Error( 'asnp_easy_sale_badge_rest_cannot_view', __( 'Sorry, you cannot list resources.', 'asnp-easy-sale-badge' ), array( 'status' => rest_authorization_required_code() ) );
+			return new \WP_Error( 'asnp_easy_sale_badge_rest_cannot_view', __( 'Sorry, you cannot list resources.', 'easy-sale-badges-for-woocommerce' ), array( 'status' => rest_authorization_required_code() ) );
 		}
 
 		return true;
@@ -44,7 +44,7 @@ abstract class BaseController extends \WP_REST_Controller {
 		$id = isset( $request['id'] ) ? (int) $request['id'] : 0;
 
 		if ( 0 >= $id || ! current_user_can( 'manage_options' ) ) {
-			return new \WP_Error( 'asnp_easy_sale_badge_rest_cannot_view', __( 'Sorry, you cannot view this resource.', 'asnp-easy-sale-badge' ), array( 'status' => rest_authorization_required_code() ) );
+			return new \WP_Error( 'asnp_easy_sale_badge_rest_cannot_view', __( 'Sorry, you cannot view this resource.', 'easy-sale-badges-for-woocommerce' ), array( 'status' => rest_authorization_required_code() ) );
 		}
 
 		return true;
@@ -58,7 +58,7 @@ abstract class BaseController extends \WP_REST_Controller {
 	 */
 	public function create_item_permissions_check( $request ) {
 		if ( ! current_user_can( 'manage_options' ) ) {
-			return new \WP_Error( 'asnp_easy_sale_badge_rest_cannot_create', __( 'Sorry, you cannot create an item.', 'asnp-easy-sale-badge' ), array( 'status' => rest_authorization_required_code() ) );
+			return new \WP_Error( 'asnp_easy_sale_badge_rest_cannot_create', __( 'Sorry, you cannot create an item.', 'easy-sale-badges-for-woocommerce' ), array( 'status' => rest_authorization_required_code() ) );
 		}
 
 		return true;
@@ -72,7 +72,7 @@ abstract class BaseController extends \WP_REST_Controller {
 	 */
 	public function update_item_permissions_check( $request ) {
 		if ( ! current_user_can( 'manage_options' ) ) {
-			return new \WP_Error( 'asnp_easy_sale_badge_rest_cannot_update', __( 'Sorry, you cannot update the item.', 'asnp-easy-sale-badge' ), array( 'status' => rest_authorization_required_code() ) );
+			return new \WP_Error( 'asnp_easy_sale_badge_rest_cannot_update', __( 'Sorry, you cannot update the item.', 'easy-sale-badges-for-woocommerce' ), array( 'status' => rest_authorization_required_code() ) );
 		}
 
 		return true;
@@ -86,7 +86,7 @@ abstract class BaseController extends \WP_REST_Controller {
 	 */
 	public function delete_item_permissions_check( $request ) {
 		if ( ! current_user_can( 'manage_options' ) ) {
-			return new \WP_Error( 'asnp_easy_sale_badge_rest_cannot_delete', __( 'Sorry, you are not allowed to delete this resource.', 'asnp-easy-sale-badge' ), array( 'status' => rest_authorization_required_code() ) );
+			return new \WP_Error( 'asnp_easy_sale_badge_rest_cannot_delete', __( 'Sorry, you are not allowed to delete this resource.', 'easy-sale-badges-for-woocommerce' ), array( 'status' => rest_authorization_required_code() ) );
 		}
 
 		return true;
@@ -100,7 +100,7 @@ abstract class BaseController extends \WP_REST_Controller {
 	 */
 	public function duplicate_item_permissions_check( $request ) {
 		if ( ! current_user_can( 'manage_options' ) ) {
-			return new \WP_Error( 'asnp_easy_sale_badge_rest_cannot_duplicate', __( 'Sorry, you are not allowed to duplicate this resource.', 'asnp-easy-sale-badge' ), array( 'status' => rest_authorization_required_code() ) );
+			return new \WP_Error( 'asnp_easy_sale_badge_rest_cannot_duplicate', __( 'Sorry, you are not allowed to duplicate this resource.', 'easy-sale-badges-for-woocommerce' ), array( 'status' => rest_authorization_required_code() ) );
 		}
 
 		return true;
@@ -114,7 +114,7 @@ abstract class BaseController extends \WP_REST_Controller {
 	 */
 	public function reorder_items_permissions_check( $request ) {
 		if ( ! current_user_can( 'manage_options' ) ) {
-			return new \WP_Error( 'asnp_easy_sale_badge_rest_cannot_reorder', __( 'Sorry, you are not allowed to reorder items.', 'asnp-easy-sale-badge' ), array( 'status' => rest_authorization_required_code() ) );
+			return new \WP_Error( 'asnp_easy_sale_badge_rest_cannot_reorder', __( 'Sorry, you are not allowed to reorder items.', 'easy-sale-badges-for-woocommerce' ), array( 'status' => rest_authorization_required_code() ) );
 		}
 
 		return true;

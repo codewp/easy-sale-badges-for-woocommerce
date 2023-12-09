@@ -1,1 +1,1 @@
-export const API_ROOT = '/asnp-easy-sale-badge/v1';
+export const API_ROOT = '/easy-sale-badges-for-woocommerce/v1';

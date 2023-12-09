@@ -218,7 +218,7 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 			<div className="asnp-esb-containerAd">
 				<div className="asnp-esb-product">
 					<label className="asnp-esb-productLable">
-						{ __( 'Preview', 'asnp-easy-sale-badge' ) }
+						{ __( 'Preview', 'easy-sale-badges-for-woocommerce' ) }
 					</label>
 					<div className="asnp-esb-product2">
 						<div

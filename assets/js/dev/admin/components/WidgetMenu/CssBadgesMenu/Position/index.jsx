@@ -48,7 +48,7 @@ const Position = ( props ) => {
 		<div className="asnp-ew-line">
 			<div className="asnp-mt-8">
 				<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-					{ __( 'Label Position', 'asnp-easy-sale-badge' ) }
+					{ __( 'Label Position', 'easy-sale-badges-for-woocommerce' ) }
 				</span>
 				<div className="asnp-w-full asnp-flex asnp-rounded-md asnp-mt-3">
 					<div className="asnp-w-[10rem] asnp-flex" role="group">
@@ -63,7 +63,7 @@ const Position = ( props ) => {
 								props.onChange( 'badgePositionY', 'top' );
 							} }
 						>
-							{ __( 'Top', 'asnp-easy-sale-badge' ) }
+							{ __( 'Top', 'easy-sale-badges-for-woocommerce' ) }
 						</button>
 
 						<button
@@ -77,7 +77,7 @@ const Position = ( props ) => {
 								props.onChange( 'badgePositionY', 'bottom' );
 							} }
 						>
-							{ __( 'Bottom', 'asnp-easy-sale-badge' ) }
+							{ __( 'Bottom', 'easy-sale-badges-for-woocommerce' ) }
 						</button>
 					</div>
 					<div className="asnp-w-[10rem] asnp-flex" role="group">
@@ -95,7 +95,7 @@ const Position = ( props ) => {
 								props.onChange( 'badgePositionX', 'left' );
 							} }
 						>
-							{ __( 'Left', 'asnp-easy-sale-badge' ) }
+							{ __( 'Left', 'easy-sale-badges-for-woocommerce' ) }
 						</button>
 
 						<button
@@ -112,20 +112,20 @@ const Position = ( props ) => {
 								props.onChange( 'badgePositionX', 'right' );
 							} }
 						>
-							{ __( 'Right', 'asnp-easy-sale-badge' ) }
+							{ __( 'Right', 'easy-sale-badges-for-woocommerce' ) }
 						</button>
 					</div>
 				</div>
 			</div>
 			<div className="asnp-mt-8">
 				<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-					{ __( 'Label Position (Pixel)', 'asnp-easy-sale-badge' ) }
+					{ __( 'Label Position (Pixel)', 'easy-sale-badges-for-woocommerce' ) }
 				</span>
 			</div>
 			<div className="asnp-flex asnp-mt-3 asnp-mb-8">
 				<label>
 					<span className="asnp-field-title asnp-ml-6">
-						{ __( 'Top', 'asnp-easy-sale-badge' ) }
+						{ __( 'Top', 'easy-sale-badges-for-woocommerce' ) }
 					</span>
 					<div className="asnp-w-[10rem] asnp-ml-6">
 						<input
@@ -151,7 +151,7 @@ const Position = ( props ) => {
 				</label>
 				<label>
 					<span className="asnp-field-title asnp-ml-6">
-						{ __( 'Bottom', 'asnp-easy-sale-badge' ) }
+						{ __( 'Bottom', 'easy-sale-badges-for-woocommerce' ) }
 					</span>
 					<div className="asnp-w-[10rem] asnp-ml-6">
 						<input
@@ -177,7 +177,7 @@ const Position = ( props ) => {
 				</label>
 				<label>
 					<span className="asnp-field-title asnp-ml-6">
-						{ __( 'Left', 'asnp-easy-sale-badge' ) }
+						{ __( 'Left', 'easy-sale-badges-for-woocommerce' ) }
 					</span>
 					<div className="asnp-w-[10rem] asnp-ml-6">
 						<input
@@ -203,7 +203,7 @@ const Position = ( props ) => {
 				</label>
 				<label>
 					<span className="asnp-field-title asnp-ml-6">
-						{ __( 'Right', 'asnp-easy-sale-badge' ) }
+						{ __( 'Right', 'easy-sale-badges-for-woocommerce' ) }
 					</span>
 					<div className="asnp-w-[10rem] asnp-ml-6">
 						<input

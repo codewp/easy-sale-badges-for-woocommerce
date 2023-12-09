@@ -10,7 +10,7 @@ const AdvancedTextOption = () => {
 			<div className="asnp-mt-8 asnp-flex asnp-w-full">
 				<label className="asnp-w-[20rem]">
 					<span className="asnp-field-title">
-						{ __( 'Advanced Label', 'asnp-easy-sale-badge' ) }
+						{ __( 'Advanced Label', 'easy-sale-badges-for-woocommerce' ) }
 					</span>
 					<input
 						type="text"
@@ -69,7 +69,7 @@ const AdvancedTextOption = () => {
 								<span className="asnp-flex asnp-w-[25rem] asnp-my-2">
 									{ __(
 										'Text Color',
-										'asnp-easy-sale-badge'
+										'easy-sale-badges-for-woocommerce'
 									) }
 								</span>
 								<div
@@ -85,7 +85,7 @@ const AdvancedTextOption = () => {
 			<div className="asnp-flex asnp-mt-[1rem] asnp-w-full">
 				<label>
 					<span className="asnp-field-title">
-						{ __( 'Font Size (Pixel)', 'asnp-easy-sale-badge' ) }
+						{ __( 'Font Size (Pixel)', 'easy-sale-badges-for-woocommerce' ) }
 					</span>
 					<div className="asnp-w-[10rem]">
 						<input
@@ -100,7 +100,7 @@ const AdvancedTextOption = () => {
 				</label>
 				<label className="asnp-ml-10">
 					<span className="asnp-field-title">
-						{ __( 'Line Height (Pixel)', 'asnp-easy-sale-badge' ) }
+						{ __( 'Line Height (Pixel)', 'easy-sale-badges-for-woocommerce' ) }
 					</span>
 					<div className="asnp-w-[10rem]">
 						<input

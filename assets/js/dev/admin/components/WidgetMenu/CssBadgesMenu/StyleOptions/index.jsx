@@ -100,7 +100,7 @@ const StyleOptions = ( props ) => {
 									<span className="asnp-flex asnp-w-[25rem] asnp-my-2">
 										{ __(
 											'Label Color',
-											'asnp-easy-sale-badge'
+											'easy-sale-badges-for-woocommerce'
 										) }
 									</span>
 									<div
@@ -119,7 +119,7 @@ const StyleOptions = ( props ) => {
 				<div className="asnp-flex asnp-mt-[1rem]">
 					<label>
 						<span className="asnp-field-title">
-							{ __( 'Width (Pixel)', 'asnp-easy-sale-badge' ) }
+							{ __( 'Width (Pixel)', 'easy-sale-badges-for-woocommerce' ) }
 						</span>
 						<div className="asnp-w-[11rem]">
 							<input
@@ -145,7 +145,7 @@ const StyleOptions = ( props ) => {
 					</label>
 					<label>
 						<span className="asnp-field-title asnp-ml-4">
-							{ __( 'Height (Pixel)', 'asnp-easy-sale-badge' ) }
+							{ __( 'Height (Pixel)', 'easy-sale-badges-for-woocommerce' ) }
 						</span>
 						<div className="asnp-w-[11rem] asnp-ml-4">
 							<input
@@ -171,12 +171,12 @@ const StyleOptions = ( props ) => {
 					</label>
 				</div>
 				<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold">
-					{ __( 'Border Radius (Pixel)', 'asnp-easy-sale-badge' ) }
+					{ __( 'Border Radius (Pixel)', 'easy-sale-badges-for-woocommerce' ) }
 				</div>
 				<div className="asnp-flex asnp-mt-2">
 					<label>
 						<span className="asnp-field-title asnp-ml-4">
-							{ __( 'Top Left', 'asnp-easy-sale-badge' ) }
+							{ __( 'Top Left', 'easy-sale-badges-for-woocommerce' ) }
 						</span>
 						<div className="asnp-w-[10rem] asnp-ml-4">
 							<input
@@ -201,7 +201,7 @@ const StyleOptions = ( props ) => {
 					</label>
 					<label>
 						<span className="asnp-field-title asnp-ml-4">
-							{ __( 'Top Right', 'asnp-easy-sale-badge' ) }
+							{ __( 'Top Right', 'easy-sale-badges-for-woocommerce' ) }
 						</span>
 						<div className="asnp-w-[10rem] asnp-ml-4">
 							<input
@@ -226,7 +226,7 @@ const StyleOptions = ( props ) => {
 					</label>
 					<label>
 						<span className="asnp-field-title asnp-ml-4">
-							{ __( 'Bottom Left', 'asnp-easy-sale-badge' ) }
+							{ __( 'Bottom Left', 'easy-sale-badges-for-woocommerce' ) }
 						</span>
 						<div className="asnp-w-[10rem] asnp-ml-4">
 							<input
@@ -251,7 +251,7 @@ const StyleOptions = ( props ) => {
 					</label>
 					<label>
 						<span className="asnp-field-title asnp-ml-4">
-							{ __( 'Bottom Right', 'asnp-easy-sale-badge' ) }
+							{ __( 'Bottom Right', 'easy-sale-badges-for-woocommerce' ) }
 						</span>
 						<div className="asnp-w-[10rem] asnp-ml-4">
 							<input
@@ -276,13 +276,13 @@ const StyleOptions = ( props ) => {
 					</label>
 				</div>
 				<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold">
-					{ __( 'Extra Styles', 'asnp-easy-sale-badge' ) }
+					{ __( 'Extra Styles', 'easy-sale-badges-for-woocommerce' ) }
 				</div>
 
 				<div className="asnp-flex asnp-mt-2">
 					<label>
 						<span className="asnp-field-title">
-							{ __( 'z-index', 'asnp-easy-sale-badge' ) }
+							{ __( 'z-index', 'easy-sale-badges-for-woocommerce' ) }
 						</span>
 						<div className="asnp-w-[25rem]">
 							<input

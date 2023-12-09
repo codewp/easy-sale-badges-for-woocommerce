@@ -96,7 +96,7 @@ const MenuItem = ( props ) => {
 							target="_blank"
 						>
 							<button className="asnp-btn asnp-btn-delete !asnp-w-[14rem] asnp-flex asnp-text-center asnp-justify-center">
-								{ __( 'Go Pro', 'asnp-easy-sale-badge' ) }
+								{ __( 'Go Pro', 'easy-sale-badges-for-woocommerce' ) }
 								<LockClosedIcon
 									width="17"
 									height="17"
@@ -109,10 +109,10 @@ const MenuItem = ( props ) => {
 						<BadgeImageStyle />
 						<div>
 							<label className="asnp-block asnp-text-sm asnp-font-medium asnp-text-gray-700">
-								{ __( 'Custom Image', 'asnp-easy-sale-badge' ) }
+								{ __( 'Custom Image', 'easy-sale-badges-for-woocommerce' ) }
 							</label>
 							<button className="asnp-btn asnp-btn-primary asnp-mt-4 asnp-mb-4">
-								{ __( 'Upload Image', 'asnp-easy-sale-badge' ) }
+								{ __( 'Upload Image', 'easy-sale-badges-for-woocommerce' ) }
 							</button>
 						</div>
 						<Options />
@@ -128,7 +128,7 @@ const MenuItem = ( props ) => {
 							href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
 						>
 							<button className="asnp-btn asnp-btn-delete !asnp-w-[14rem] asnp-flex asnp-text-center asnp-justify-center">
-								{ __( 'Go Pro', 'asnp-easy-sale-badge' ) }
+								{ __( 'Go Pro', 'easy-sale-badges-for-woocommerce' ) }
 								<LockClosedIcon
 									width="17"
 									height="17"

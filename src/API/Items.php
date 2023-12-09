@@ -39,16 +39,16 @@ class Items extends BaseController {
 	public function search_items( $request ) {
 		try {
 			if ( empty( $request['search'] ) ) {
-				throw new \Exception( __( 'Search term is required.', 'asnp-easy-sale-badge' ) );
+				throw new \Exception( __( 'Search term is required.', 'easy-sale-badges-for-woocommerce' ) );
 			}
 
 			if ( empty( $request['type'] ) ) {
-				throw new \Exception( __( 'Type is required.', 'asnp-easy-sale-badge' ) );
+				throw new \Exception( __( 'Type is required.', 'easy-sale-badges-for-woocommerce' ) );
 			}
 
 			$search = sanitize_text_field( wp_unslash( $request['search'] ) );
 			if ( empty( $search ) ) {
-				throw new \Exception( __( 'Search term is required.', 'asnp-easy-sale-badge' ) );
+				throw new \Exception( __( 'Search term is required.', 'easy-sale-badges-for-woocommerce' ) );
 			}
 
 			$items = [];
@@ -84,11 +84,11 @@ class Items extends BaseController {
 	public function get_items( $request ) {
 		try {
 			if ( empty( $request['items'] ) ) {
-				throw new \Exception( __( 'Items are required.', 'asnp-easy-sale-badge' ) );
+				throw new \Exception( __( 'Items are required.', 'easy-sale-badges-for-woocommerce' ) );
 			}
 
 			if ( empty( $request['type'] ) ) {
-				throw new \Exception( __( 'Type is required.', 'asnp-easy-sale-badge' ) );
+				throw new \Exception( __( 'Type is required.', 'easy-sale-badges-for-woocommerce' ) );
 			}
 
 			$items = $request['items'];
@@ -98,7 +98,7 @@ class Items extends BaseController {
 
 			$items = array_filter( array_map( 'absint', $items ) );
 			if ( empty( $items ) ) {
-				throw new \Exception( __( 'Invalid items.', 'asnp-easy-sale-badge' ) );
+				throw new \Exception( __( 'Invalid items.', 'easy-sale-badges-for-woocommerce' ) );
 			}
 
 			if ( 'products' === $request['type'] ) {

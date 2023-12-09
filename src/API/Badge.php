@@ -37,7 +37,7 @@ class Badge extends BaseController {
 			array(
 				'args' => array(
 					'id' => array(
-						'description' => __( 'Unique identifier for the resource.', 'asnp-easy-sale-badge' ),
+						'description' => __( 'Unique identifier for the resource.', 'easy-sale-badges-for-woocommerce' ),
 						'type'        => 'integer',
 					),
 				),
@@ -65,7 +65,7 @@ class Badge extends BaseController {
 			array(
 				'args' => array(
 					'id' => array(
-						'description' => __( 'Unique identifier for the resource.', 'asnp-easy-sale-badge' ),
+						'description' => __( 'Unique identifier for the resource.', 'easy-sale-badges-for-woocommerce' ),
 						'type'        => 'integer',
 					),
 				),
@@ -117,13 +117,13 @@ class Badge extends BaseController {
 		try {
 			$id = isset( $request['id'] ) ? (int) $request['id'] : 0;
 			if ( 0 >= $id ) {
-				throw new \Exception( __( 'Invalid item ID.', 'asnp-easy-sale-badge' ) );
+				throw new \Exception( __( 'Invalid item ID.', 'easy-sale-badges-for-woocommerce' ) );
 			}
 
 			$model = get_plugin()->container()->get( BadgeModel::class );
 			$item  = $model->get_item( $id );
 			if ( ! $item ) {
-				throw new \Exception( __( 'Badge not found.', 'asnp-easy-sale-badge' ) );
+				throw new \Exception( __( 'Badge not found.', 'easy-sale-badges-for-woocommerce' ) );
 			}
 
 			return rest_ensure_response( [
@@ -156,13 +156,13 @@ class Badge extends BaseController {
 		try {
 			$id = isset( $request['id'] ) ? (int) $request['id'] : 0;
 			if ( ! $id || 0 >= $id ) {
-				throw new \Exception( __( 'Invalid ID.', 'asnp-easy-sale-badge' ) );
+				throw new \Exception( __( 'Invalid ID.', 'easy-sale-badges-for-woocommerce' ) );
 			}
 
 			$model = get_plugin()->container()->get( BadgeModel::class );
 			$item  = $model->get_item( $id );
 			if ( ! $item ) {
-				throw new \Exception( __( 'Badge not found.', 'asnp-easy-sale-badge' ) );
+				throw new \Exception( __( 'Badge not found.', 'easy-sale-badges-for-woocommerce' ) );
 			}
 
 			$item = $this->save_item( $request );
@@ -181,18 +181,18 @@ class Badge extends BaseController {
 		try {
 			$id = isset( $request['id'] ) ? (int) $request['id'] : 0;
 			if ( ! $id || 0 >= $id ) {
-				throw new \Exception( __( 'Invalid ID.', 'asnp-easy-sale-badge' ) );
+				throw new \Exception( __( 'Invalid ID.', 'easy-sale-badges-for-woocommerce' ) );
 			}
 
 			$model = get_plugin()->container()->get( BadgeModel::class );
 			$item  = $model->get_item( $id );
 			if ( ! $item ) {
-				throw new \Exception( __( 'Badge not found.', 'asnp-easy-sale-badge' ) );
+				throw new \Exception( __( 'Badge not found.', 'easy-sale-badges-for-woocommerce' ) );
 			}
 
 			$delete = $model->delete( $id );
 			if ( ! $delete ) {
-				throw new \Exception( __( 'Cannot delete the item.', 'asnp-easy-sale-badge' ) );
+				throw new \Exception( __( 'Cannot delete the item.', 'easy-sale-badges-for-woocommerce' ) );
 			}
 
 			do_action( 'asnp_wesb_badge_deleted', $id, $request );
@@ -210,13 +210,13 @@ class Badge extends BaseController {
 		try {
 			$id = isset( $request['id'] ) ? (int) $request['id'] : 0;
 			if ( ! $id || 0 >= $id ) {
-				throw new \Exception( __( 'Invalid ID.', 'asnp-easy-sale-badge' ) );
+				throw new \Exception( __( 'Invalid ID.', 'easy-sale-badges-for-woocommerce' ) );
 			}
 
 			$model   = get_plugin()->container()->get( BadgeModel::class );
 			$item_id = $model->duplicate( $id );
 			if ( ! $item_id ) {
-				throw new \Exception( __( 'Cannot duplicate the item.', 'asnp-easy-sale-badge' ) );
+				throw new \Exception( __( 'Cannot duplicate the item.', 'easy-sale-badges-for-woocommerce' ) );
 			}
 
 			do_action( 'asnp_wesb_badge_duplicated', $item_id, $id, $request );
@@ -233,13 +233,13 @@ class Badge extends BaseController {
 		try {
 			$items = ! empty( $request['items'] ) ? map_deep( $request['items'], 'intval' ) : array();
 			if ( empty( $items ) ) {
-				throw new \Exception( __( 'Invalid items.', 'asnp-easy-sale-badge' ) );
+				throw new \Exception( __( 'Invalid items.', 'easy-sale-badges-for-woocommerce' ) );
 			}
 
 			$model   = get_plugin()->container()->get( BadgeModel::class );
 			$reorder = $model->update_ordering( $items );
 			if ( ! $reorder ) {
-				throw new \Exception( __( 'Cannot reorder the items.', 'asnp-easy-sale-badge' ) );
+				throw new \Exception( __( 'Cannot reorder the items.', 'easy-sale-badges-for-woocommerce' ) );
 			}
 
 			return rest_ensure_response( [
@@ -271,7 +271,7 @@ class Badge extends BaseController {
 			if ( ! empty( $request['id'] ) && 0 < (int) $request['id'] ) {
 				$data['id'] = (int) $request['id'];
 			} else {
-				$data['title']  = ! empty( $data['title'] ) ? $data['title'] : __( 'Badge', 'asnp-easy-sale-badge' );
+				$data['title']  = ! empty( $data['title'] ) ? $data['title'] : __( 'Badge', 'easy-sale-badges-for-woocommerce' );
 				$data['status'] = isset( $data['status'] ) ? $data['status'] : 1;
 			}
 
@@ -284,7 +284,7 @@ class Badge extends BaseController {
 
 			$id = $model->add( $data );
 			if ( ! $id || 0 >= $id ) {
-				throw new \Exception( __( 'Error occurred in saving item.', 'asnp-easy-sale-badge' ) );
+				throw new \Exception( __( 'Error occurred in saving item.', 'easy-sale-badges-for-woocommerce' ) );
 			}
 
 			$item = $model->get_item( $id );

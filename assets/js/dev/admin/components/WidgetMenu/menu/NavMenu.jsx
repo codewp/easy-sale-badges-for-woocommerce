@@ -28,7 +28,7 @@ const NavMenu = ( props ) => {
 							: '' ) + ' asnp-nav-tab-item'
 					}
 				>
-					{ __( 'CSS Labels', 'asnp-easy-sale-badge' ) }
+					{ __( 'CSS Labels', 'easy-sale-badges-for-woocommerce' ) }
 				</a>
 
 				<a
@@ -43,7 +43,7 @@ const NavMenu = ( props ) => {
 							: '' ) + ' asnp-nav-tab-item'
 					}
 				>
-					{ __( 'Schedule', 'asnp-easy-sale-badge' ) }
+					{ __( 'Schedule', 'easy-sale-badges-for-woocommerce' ) }
 				</a>
 				<a
 					href="#"
@@ -57,7 +57,7 @@ const NavMenu = ( props ) => {
 							: '' ) + ' asnp-nav-tab-item'
 					}
 				>
-					{ __( 'Products', 'asnp-easy-sale-badge' ) }
+					{ __( 'Products', 'easy-sale-badges-for-woocommerce' ) }
 				</a>
 				<a
 					href="#"
@@ -72,9 +72,9 @@ const NavMenu = ( props ) => {
 						' asnp-nav-tab-item asnp-flex asnp-text-red-600'
 					}
 				>
-					{ __( 'Image Labels', 'asnp-easy-sale-badge' ) }
+					{ __( 'Image Labels', 'easy-sale-badges-for-woocommerce' ) }
 					<div className="asnp-ml-[0.3rem]">
-						{ __( '(Pro)', 'asnp-easy-sale-badge' ) }
+						{ __( '(Pro)', 'easy-sale-badges-for-woocommerce' ) }
 					</div>
 					<LockClosedIcon width="20" height="20" />
 				</a>
@@ -91,9 +91,9 @@ const NavMenu = ( props ) => {
 						' asnp-nav-tab-item asnp-flex asnp-text-red-600'
 					}
 				>
-					{ __( 'Advanced Labels', 'asnp-easy-sale-badge' ) }
+					{ __( 'Advanced Labels', 'easy-sale-badges-for-woocommerce' ) }
 					<div className="asnp-ml-[0.3rem]">
-						{ __( '(Pro)', 'asnp-easy-sale-badge' ) }
+						{ __( '(Pro)', 'easy-sale-badges-for-woocommerce' ) }
 					</div>
 					<LockClosedIcon width="20" height="20" />
 				</a>
@@ -110,9 +110,9 @@ const NavMenu = ( props ) => {
 						' asnp-nav-tab-item asnp-flex asnp-text-red-600'
 					}
 				>
-					{ __( 'Timer', 'asnp-easy-sale-badge' ) }
+					{ __( 'Timer', 'easy-sale-badges-for-woocommerce' ) }
 					<div className="asnp-ml-[0.3rem]">
-						{ __( '(Pro)', 'asnp-easy-sale-badge' ) }
+						{ __( '(Pro)', 'easy-sale-badges-for-woocommerce' ) }
 					</div>
 						<LockClosedIcon width="20" height="20" />
 				</a>

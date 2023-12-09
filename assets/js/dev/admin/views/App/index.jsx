@@ -43,7 +43,7 @@ export default function App() {
 						href="https://wordpress.org/support/plugin/easy-sale-badges-for-woocommerce/reviews/"
 					>
 						<button className="asnp-btn asnp-btn-primary asnp-ml-2 asnp-w-[8rem]">
-							{ __( '5-Star Review', 'asnp-easy-sale-badge' ) }
+							{ __( '5-Star Review', 'easy-sale-badges-for-woocommerce' ) }
 						</button>
 					</a>
 					<a
@@ -51,7 +51,7 @@ export default function App() {
 						href="https://www.asanaplugins.com/support/"
 					>
 						<button className="asnp-btn asnp-btn-primary asnp-ml-2 asnp-w-[8rem]">
-							{ __( 'Need help?', 'asnp-easy-sale-badge' ) }
+							{ __( 'Need help?', 'easy-sale-badges-for-woocommerce' ) }
 						</button>
 					</a>
 				</div>
@@ -66,7 +66,7 @@ export default function App() {
 								: '' )
 						}
 					>
-						{ __( 'Badges', 'asnp-easy-sale-badge' ) }
+						{ __( 'Badges', 'easy-sale-badges-for-woocommerce' ) }
 					</NavLink>
 					<NavLink
 						to="/settings"
@@ -75,14 +75,14 @@ export default function App() {
 							( isActive ? ' asnp-nav-tab-active' : '' )
 						}
 					>
-						{ __( 'Settings', 'asnp-easy-sale-badge' ) }
+						{ __( 'Settings', 'easy-sale-badges-for-woocommerce' ) }
 					</NavLink>
 					<a
 						target="_blank"
 						className="asnp-nav-tab-item asnp-ew-goPro"
 						href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
 					>
-						{ __( 'Go Pro', 'asnp-easy-sale-badge' ) }
+						{ __( 'Go Pro', 'easy-sale-badges-for-woocommerce' ) }
 					</a>
 				</nav>
 			</div>

@@ -1107,7 +1107,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 
 	$class_names = apply_filters( 'asnp_wesb_css_badge_class_names', $class_names, $badge, $hide );
 
-	$label = apply_filters( 'asnp_wesb_css_badge_label', esc_html__( $badge->badgeLabel, 'asnp-easy-sale-badge' ), $badge );
+	$label = apply_filters( 'asnp_wesb_css_badge_label', esc_html__( $badge->badgeLabel, 'easy-sale-badges-for-woocommerce' ), $badge );
 
 	// Css Badge
 	$output = '<div class="' . esc_attr( $class_names ) . '"' . ( $hide ? ' style="display: none;"' : '' ) . '>';

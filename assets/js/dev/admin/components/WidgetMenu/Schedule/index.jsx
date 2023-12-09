@@ -23,7 +23,7 @@ const Schedule = () => {
 		<div className="asnp-w-full">
 			<div className="asnp-flex">
 				<div className="asnp-mt-2 asnp-text-lg asnp-font-semibold">
-					{ __( 'Schedule', 'asnp-easy-sale-badge' ) }
+					{ __( 'Schedule', 'easy-sale-badges-for-woocommerce' ) }
 				</div>
 				<div className="asnp-mt-3">
 					<CurrentServerTime />
@@ -35,7 +35,7 @@ const Schedule = () => {
 					{ groupIndex >= 1 && (
 						<label className="asnp-block asnp-space-y-1">
 							<span className="asnp-field-title">
-								{ __( 'Or', 'asnp-easy-sale-badge' ) }
+								{ __( 'Or', 'easy-sale-badges-for-woocommerce' ) }
 							</span>
 						</label>
 					) }
@@ -59,21 +59,21 @@ const Schedule = () => {
 								}
 							>
 								<option value={ 'date' }>
-									{ __( 'Date', 'asnp-easy-sale-badge' ) }
+									{ __( 'Date', 'easy-sale-badges-for-woocommerce' ) }
 								</option>
 
 								<option value={ 'dateTime' }>
 									{ __(
 										'Date Time',
-										'asnp-easy-sale-badge'
+										'easy-sale-badges-for-woocommerce'
 									) }
 								</option>
 
 								<option value={ 'time' }>
-									{ __( 'Time', 'asnp-easy-sale-badge' ) }
+									{ __( 'Time', 'easy-sale-badges-for-woocommerce' ) }
 								</option>
 								<option value={ 'days' }>
-									{ __( 'Days', 'asnp-easy-sale-badge' ) }
+									{ __( 'Days', 'easy-sale-badges-for-woocommerce' ) }
 								</option>
 							</select>
 							{ badge.schedule[ groupIndex ][ index ].type ===
@@ -84,7 +84,7 @@ const Schedule = () => {
 											<span className="asnp-field-title">
 												{ __(
 													'From Date',
-													'asnp-easy-sale-badge'
+													'easy-sale-badges-for-woocommerce'
 												) }
 											</span>
 											<Datetime
@@ -113,7 +113,7 @@ const Schedule = () => {
 											<span className="asnp-field-title">
 												{ __(
 													'To Date',
-													'asnp-easy-sale-badge'
+													'easy-sale-badges-for-woocommerce'
 												) }
 											</span>
 											<Datetime
@@ -147,7 +147,7 @@ const Schedule = () => {
 											<span className="asnp-field-title">
 												{ __(
 													'From Date / Time',
-													'asnp-easy-sale-badge'
+													'easy-sale-badges-for-woocommerce'
 												) }
 											</span>
 											<Datetime
@@ -178,7 +178,7 @@ const Schedule = () => {
 											<span className="asnp-field-title">
 												{ __(
 													'To Date / Time',
-													'asnp-easy-sale-badge'
+													'easy-sale-badges-for-woocommerce'
 												) }
 											</span>
 											<Datetime
@@ -245,7 +245,7 @@ const Schedule = () => {
 										addSchedule( groupIndex, index + 1 )
 									}
 								>
-									{ __( 'And', 'asnp-easy-sale-badge' ) }
+									{ __( 'And', 'easy-sale-badges-for-woocommerce' ) }
 								</button>
 								<button
 									className="asnp-mb-4 asnp-mt-2 asnp-ml-3 asnp-btn-delete asnp-py-1 asnp-h-[2rem] asnp-w-[4rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
@@ -253,7 +253,7 @@ const Schedule = () => {
 										deleteSchedule( groupIndex, index )
 									}
 								>
-									{ __( 'Delete', 'asnp-easy-sale-badge' ) }
+									{ __( 'Delete', 'easy-sale-badges-for-woocommerce' ) }
 								</button>
 							</div>
 						</div>
@@ -265,7 +265,7 @@ const Schedule = () => {
 				{ badge.schedule.length > 1 && (
 					<label className="asnp-block asnp-space-y-1">
 						<span className="asnp-field-title">
-							{ __( 'Or', 'asnp-easy-sale-badge' ) }
+							{ __( 'Or', 'easy-sale-badges-for-woocommerce' ) }
 						</span>
 					</label>
 				) }
@@ -277,10 +277,10 @@ const Schedule = () => {
 				>
 					{ badge.schedule.length
 						? sprintf(
-								__( '%s Or Group', 'asnp-easy-sale-badge' ),
+								__( '%s Or Group', 'easy-sale-badges-for-woocommerce' ),
 								'+'
 						  )
-						: __( 'Add Schedule', 'asnp-easy-sale-badge' ) }
+						: __( 'Add Schedule', 'easy-sale-badges-for-woocommerce' ) }
 				</button>
 			</div>
 		</div>

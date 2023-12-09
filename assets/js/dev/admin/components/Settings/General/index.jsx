@@ -10,7 +10,7 @@ const General = ( props ) => {
 					<div className="asnp-field-title md:asnp-min-w-1/3">
 						{ __(
 							'Hide WooCommerce On Sale Badges',
-							'asnp-easy-sale-badge'
+							'easy-sale-badges-for-woocommerce'
 						) }
 					</div>
 					<div>
@@ -27,7 +27,7 @@ const General = ( props ) => {
 				</div>
 				<label className="asnp-block asnp-space-y-1 asnp-text-gray-500">
 					<p className="asnp-text-xs asnp-text-gray-400">
-						{ __( 'Enable/Disable', 'asnp-easy-sale-badge' ) }
+						{ __( 'Enable/Disable', 'easy-sale-badges-for-woocommerce' ) }
 					</p>
 				</label>
 			</div>
@@ -37,7 +37,7 @@ const General = ( props ) => {
 						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
 							{ __(
 								'Sale Badge Position On Archive Page',
-								'asnp-easy-sale-badge'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</div>
 					</div>
@@ -51,75 +51,75 @@ const General = ( props ) => {
 						<option value="woocommerce_product_get_image">
 							{ __(
 								'Product get image',
-								'asnp-easy-sale-badge'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
 						<option value="before_shop_loop_item_thumbnail">
 							{ __(
 								'Before product thumbnail',
-								'asnp-easy-sale-badge'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
 						<option value="after_shop_loop_item_thumbnail">
 							{ __(
 								'After product thumbnail',
-								'asnp-easy-sale-badge'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
 						<option value="before_shop_loop_item_title">
 							{ __(
 								'Before product title',
-								'asnp-easy-sale-badge'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
 						<option value="after_shop_loop_item_title">
 							{ __(
 								'After product title',
-								'asnp-easy-sale-badge'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
 
 						<option value="before_shop_loop_item_rating">
 							{ __(
 								'Before product rating',
-								'asnp-easy-sale-badge'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
 						<option value="after_shop_loop_item_rating">
 							{ __(
 								'After product rating',
-								'asnp-easy-sale-badge'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
 						<option value="before_shop_loop_item_price">
 							{ __(
 								'Before product price',
-								'asnp-easy-sale-badge'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
 						<option value="after_shop_loop_item_price">
 							{ __(
 								'After product price',
-								'asnp-easy-sale-badge'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
 						<option value="after_shop_loop_item">
 							{ __(
 								'After shop loop item',
-								'asnp-easy-sale-badge'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
 						<option value="shop_loop">
-							{ __( 'Shop loop', 'asnp-easy-sale-badge' ) }
+							{ __( 'Shop loop', 'easy-sale-badges-for-woocommerce' ) }
 						</option>
 						<option value="post_thumbnail_html">
 							{ __(
 								'Post thumbnail html',
-								'asnp-easy-sale-badge'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
 						<option value="none">
-							{ __( 'None', 'asnp-easy-sale-badge' ) }
+							{ __( 'None', 'easy-sale-badges-for-woocommerce' ) }
 						</option>
 					</select>
 				</label>
@@ -127,7 +127,7 @@ const General = ( props ) => {
 					<p className="asnp-text-xs asnp-text-gray-400">
 						{ __(
 							'Sale badge position for bulk, tiered, purchase, products group rules in the archive page.',
-							'asnp-easy-sale-badge'
+							'easy-sale-badges-for-woocommerce'
 						) }
 					</p>
 				</label>
@@ -137,7 +137,7 @@ const General = ( props ) => {
 					<div className="asnp-field-title asnp-ml-1">
 						{ __(
 							'Archive Loop Custom Hooks',
-							'asnp-easy-sale-badge'
+							'easy-sale-badges-for-woocommerce'
 						) }
 					</div>
 					<input
@@ -153,7 +153,7 @@ const General = ( props ) => {
 					<p className="asnp-text-xs asnp-text-gray-400">
 						{ __(
 							'comma separated hooks.',
-							'asnp-easy-sale-badge'
+							'easy-sale-badges-for-woocommerce'
 						) }
 					</p>
 				</label>
@@ -164,7 +164,7 @@ const General = ( props ) => {
 						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
 							{ __(
 								'Sale Badge Position On Product Page',
-								'asnp-easy-sale-badge'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</div>
 					</div>
@@ -178,41 +178,41 @@ const General = ( props ) => {
 						<option value="before_single_item_images">
 							{ __(
 								'Before product images',
-								'asnp-easy-sale-badge'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
 						<option value="after_single_item_images">
 							{ __(
 								'After product images',
-								'asnp-easy-sale-badge'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
 						<option value="before_single_item_title">
 							{ __(
 								'Before product title',
-								'asnp-easy-sale-badge'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
 						<option value="after_single_item_title">
 							{ __(
 								'After product title',
-								'asnp-easy-sale-badge'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
 						<option value="before_single_item_price">
 							{ __(
 								'Before product price',
-								'asnp-easy-sale-badge'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
 						<option value="after_single_item_price">
 							{ __(
 								'After product price',
-								'asnp-easy-sale-badge'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
 						<option value="none">
-							{ __( 'None', 'asnp-easy-sale-badge' ) }
+							{ __( 'None', 'easy-sale-badges-for-woocommerce' ) }
 						</option>
 					</select>
 				</label>
@@ -220,7 +220,7 @@ const General = ( props ) => {
 					<p className="asnp-text-xs asnp-text-gray-400">
 						{ __(
 							'Sale badge position for bulk, tiered, purchase, products group rules in the product page.',
-							'asnp-easy-sale-badge'
+							'easy-sale-badges-for-woocommerce'
 						) }
 					</p>
 				</label>
@@ -230,7 +230,7 @@ const General = ( props ) => {
 					<div className="asnp-field-title asnp-ml-1">
 						{ __(
 							'Single Product Custom Hooks',
-							'asnp-easy-sale-badge'
+							'easy-sale-badges-for-woocommerce'
 						) }
 					</div>
 					<input
@@ -249,7 +249,7 @@ const General = ( props ) => {
 					<p className="asnp-text-xs asnp-text-gray-400">
 						{ __(
 							'comma separated hooks.',
-							'asnp-easy-sale-badge'
+							'easy-sale-badges-for-woocommerce'
 						) }
 					</p>
 				</label>
@@ -261,7 +261,7 @@ const General = ( props ) => {
 						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3  !asnp-text-red-400">
 							{ __(
 								'Timer badge position (Pro)',
-								'asnp-easy-sale-badge'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</div>
 					</div>
@@ -270,7 +270,7 @@ const General = ( props ) => {
 						disabled
 					>
 						<option value="onImage">
-							{ __( 'On image', 'asnp-easy-sale-badge' ) }
+							{ __( 'On image', 'easy-sale-badges-for-woocommerce' ) }
 						</option>
 					</select>
 				</label>
@@ -281,7 +281,7 @@ const General = ( props ) => {
 				type="button"
 				onClick={ () => props.onSave() }
 			>
-				{ __( 'Save Changes', 'asnp-easy-sale-badge' ) }
+				{ __( 'Save Changes', 'easy-sale-badges-for-woocommerce' ) }
 			</button>
 		</div>
 	);

@@ -282,7 +282,7 @@ export default function Badge() {
 				setMessage( {
 					message: __(
 						'Saved Successfully.',
-						'asnp-easy-sale-badge'
+						'easy-sale-badges-for-woocommerce'
 					),
 					type: 'success',
 				} );
@@ -290,7 +290,7 @@ export default function Badge() {
 				setMessage( {
 					message: __(
 						'Error occurred on saving the Badge.',
-						'asnp-easy-sale-badge'
+						'easy-sale-badges-for-woocommerce'
 					),
 					type: 'error',
 				} );
@@ -340,25 +340,25 @@ export default function Badge() {
 					<div className="asnp-max-w-lg asnp-grid asnp-grid-cols-1 asnp-gap-6">
 						<div className="asnp-badge-actions asnp-space-x-2 ">
 							<h1 className="asnp-heading-inline">
-								{ __( 'Badges', 'asnp-easy-sale-badge' ) }
+								{ __( 'Badges', 'easy-sale-badges-for-woocommerce' ) }
 							</h1>
 							<button
 								className="asnp-btn asnp-btn-primary asnp-w-[86.68px] asnp-h-[35.5px]"
 								type="button"
 								onClick={ save }
 							>
-								{ __( 'Save', 'asnp-easy-sale-badge' ) }
+								{ __( 'Save', 'easy-sale-badges-for-woocommerce' ) }
 							</button>
 							<Link
 								to={ `/` }
 								className="asnp-py-2 asnp-px-6 asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none asnp-btn-secondary asnp-w-[86.68px] asnp-h-[35.5px]"
 							>
-								{ __( 'Cancel', 'asnp-easy-sale-badge' ) }
+								{ __( 'Cancel', 'easy-sale-badges-for-woocommerce' ) }
 							</Link>
 						</div>
 						<label className="asnp-block asnp-space-y-1">
 							<span className="asnp-field-title">
-								{ __( 'Name', 'asnp-easy-sale-badge' ) }
+								{ __( 'Name', 'easy-sale-badges-for-woocommerce' ) }
 							</span>
 							<input
 								type="text"
@@ -373,7 +373,7 @@ export default function Badge() {
 						<div className="asnp-space-y-1">
 							<label className="asnp-inline-flex asnp-space-x-2 asnp-items-center">
 								<span className="asnp-field-title">
-									{ __( 'Status', 'asnp-easy-sale-badge' ) }
+									{ __( 'Status', 'easy-sale-badges-for-woocommerce' ) }
 								</span>
 								<Toggle
 									value={ 1 == badge.status }
@@ -385,7 +385,7 @@ export default function Badge() {
 							<label className="asnp-block">
 								{ __(
 									'Enable or disable it.',
-									'asnp-easy-sale-badge'
+									'easy-sale-badges-for-woocommerce'
 								) }
 							</label>
 						</div>

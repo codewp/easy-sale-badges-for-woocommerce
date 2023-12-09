@@ -122,7 +122,7 @@ final class Plugin {
 	 * Load Localisation files.
 	 */
 	protected function load_plugin_textdomain() {
-		load_plugin_textdomain( 'asnp-easy-sale-badge', false, basename( dirname( __DIR__ ) ) . '/languages' );
+		load_plugin_textdomain( 'easy-sale-badges-for-woocommerce', false, basename( dirname( __DIR__ ) ) . '/languages' );
 	}
 
 	public function includes() {
@@ -206,7 +206,7 @@ final class Plugin {
 		if ( ! $woocommerce_minimum_met ) {
 			$errors[] = sprintf(
 				/* translators: 1: URL of WooCommerce plugin, 2: The minimum WooCommerce version number */
-				__( 'The Sale Badges and Product Labels plugin requires <a href="%1$s">WooCommerce</a> %2$s or greater to be installed and active.', 'asnp-easy-sale-badge' ),
+				__( 'The Sale Badges and Product Labels plugin requires <a href="%1$s">WooCommerce</a> %2$s or greater to be installed and active.', 'easy-sale-badges-for-woocommerce' ),
 				'https://wordpress.org/plugins/woocommerce/',
 				$minimum_woocommerce_version
 			);
@@ -215,7 +215,7 @@ final class Plugin {
 		if ( ! $wordpress_minimum_met ) {
 			$errors[] = sprintf(
 				/* translators: 1: URL of WordPress.org, 2: The minimum WordPress version number */
-				__( 'The Sale Badges and Product Labels plugin requires <a href="%1$s">WordPress</a> %2$s or greater to be installed and active.', 'asnp-easy-sale-badge' ),
+				__( 'The Sale Badges and Product Labels plugin requires <a href="%1$s">WordPress</a> %2$s or greater to be installed and active.', 'easy-sale-badges-for-woocommerce' ),
 				'https://wordpress.org/',
 				$minimum_wordpress_version
 			);

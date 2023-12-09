@@ -12,7 +12,7 @@ import 'react-datetime/css/react-datetime.css';
 domReady( function () {
 	if ( 'function' === typeof ReactDOM.createRoot ) {
 		ReactDOM.createRoot(
-			document.getElementById( 'asnp-easy-sale-badge' )
+			document.getElementById( 'easy-sale-badges-for-woocommerce' )
 		).render(
 			<Router>
 				<App />
@@ -23,7 +23,7 @@ domReady( function () {
 			<Router>
 				<App />
 			</Router>,
-			document.getElementById( 'asnp-easy-sale-badge' )
+			document.getElementById( 'easy-sale-badges-for-woocommerce' )
 		);
 	}
 } );

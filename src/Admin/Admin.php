@@ -80,7 +80,7 @@ class Admin {
 
 		$links = array_merge(
 			$links,
-			[ '<a href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/" target="_blank" onMouseOver="this.style.color=\'#55ce5a\'" onMouseOut="this.style.color=\'#39b54a\'" style="color: #39b54a; font-weight: bold;">' . esc_html__( 'Go Pro', 'asnp-easy-sale-badge' ) . '</a>' ]
+			[ '<a href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/" target="_blank" onMouseOver="this.style.color=\'#55ce5a\'" onMouseOut="this.style.color=\'#39b54a\'" style="color: #39b54a; font-weight: bold;">' . esc_html__( 'Go Pro', 'easy-sale-badges-for-woocommerce' ) . '</a>' ]
 		);
 
 		return $links;
@@ -102,10 +102,10 @@ class Admin {
 			return $links;
 		}
 
-		$extra = [ '<a href="' . admin_url( 'admin.php?page=asnp-easy-sale-badge#/settings' ) . '">' . esc_html__( 'Settings', 'asnp-easy-sale-badge' ) . '</a>' ];
+		$extra = [ '<a href="' . admin_url( 'admin.php?page=easy-sale-badges-for-woocommerce#/settings' ) . '">' . esc_html__( 'Settings', 'easy-sale-badges-for-woocommerce' ) . '</a>' ];
 
 		if ( ! SaleBadges\is_pro_active() ) {
-			$extra[] = '<a href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/?utm_source=sale-badges-for-woocommerce&utm_campaign=go-pro&utm_medium=link" target="_blank" onMouseOver="this.style.color=\'#55ce5a\'" onMouseOut="this.style.color=\'#39b54a\'" style="color: #39b54a; font-weight: bold;">' . esc_html__( 'Go Pro', 'asnp-easy-sale-badge' ) . '</a>';
+			$extra[] = '<a href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/?utm_source=sale-badges-for-woocommerce&utm_campaign=go-pro&utm_medium=link" target="_blank" onMouseOver="this.style.color=\'#55ce5a\'" onMouseOut="this.style.color=\'#39b54a\'" style="color: #39b54a; font-weight: bold;">' . esc_html__( 'Go Pro', 'easy-sale-badges-for-woocommerce' ) . '</a>';
 		}
 
 		return array_merge( $links, $extra );
@@ -140,7 +140,7 @@ class Admin {
 
 		\WC_Admin_Notices::add_custom_notice(
 			$name,
-			'<p>' . __( '<strong>Black Friday Exclusive:</strong> SAVE up to 50% & access to <strong>Sale Badges for WooCommerce PRO</strong> features.', 'asnp-easy-sale-badge' ) . '<a class="button button-primary" style="margin-left: 10px; background: #5614d5; border-color: #5614d5;" target="_blank" href="https://asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/?utm_source=sale-badges-for-woocommerce&utm_campaign=black-friday&utm_medium=link">' . __( 'Grab The Offer', 'asnp-easy-sale-badge' ) . '</a></p>'
+			'<p>' . __( '<strong>Black Friday Exclusive:</strong> SAVE up to 50% & access to <strong>Sale Badges for WooCommerce PRO</strong> features.', 'easy-sale-badges-for-woocommerce' ) . '<a class="button button-primary" style="margin-left: 10px; background: #5614d5; border-color: #5614d5;" target="_blank" href="https://asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/?utm_source=sale-badges-for-woocommerce&utm_campaign=black-friday&utm_medium=link">' . __( 'Grab The Offer', 'easy-sale-badges-for-woocommerce' ) . '</a></p>'
 		);
 
 		update_option( $name . '_added', 1 );
