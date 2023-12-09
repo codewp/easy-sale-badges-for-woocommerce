@@ -9,7 +9,7 @@
  * Author: Asana Plugins
  * Author URI: http://www.asanaplugins.com/
  * License: http://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: asnp-easy-sale-badge
+ * Text Domain: easy-sale-badges-for-woocommerce
  * Domain Path: /languages
  * WC requires at least: 3.0
  * WC tested up to: 8.2.2
