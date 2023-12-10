@@ -6,7 +6,6 @@ defined( 'ABSPATH' ) || exit;
 
 use function AsanaPlugins\WooCommerce\SaleBadges\add_custom_style;
 use function AsanaPlugins\WooCommerce\SaleBadges\is_pro_active;
-use function AsanaPlugins\WooCommerce\SaleBadges\esc_html;
 
 function output_badges( $badges, $hide = false, $return = false ) {
 	if ( empty( $badges ) ) {
@@ -1115,7 +1114,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 	$output .= '<div class="asnp-esb-badge-'. absint( $badge->id ) .'">';
 	$output .= '<span class="asnp-esb-inner-span2-'. absint( $badge->id ) .'"></span>';
 	$output .= '<div class="asnp-esb-inner-span1-'. absint( $badge->id ) .'">';
-	$output .= '<div style="transform: ' . esc_attr( $horiz_and_vert ) . '; white-space: ' . esc_attr( $nowrap ) . '">' . esc_html( $label ) . '</div>';
+	$output .= '<div style="transform: ' . esc_attr( $horiz_and_vert ) . '; white-space: ' . esc_attr( $nowrap ) . '">' . wp_kses_post( $label ) . '</div>';
 	$output .= '</div>';
 	$output .= '</div>';
 	$output .= '</div>';
@@ -1123,8 +1122,8 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 	$output = apply_filters( 'asnp_wesb_css_badge', $output, $badge, $hide );
 
 	if ( $return ) {
-		return esc_html( $output );
+		return wp_kses_post( $output );
 	}
 
-	echo esc_html( $output );
+	echo wp_kses_post( $output );
 }
