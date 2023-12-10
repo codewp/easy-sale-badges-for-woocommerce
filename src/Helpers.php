@@ -265,3 +265,27 @@ function get_theme_single_container( $stylesheet = null, $template = null ) {
 
 	return '';
 }
+
+function esc_html( $content ) {
+	$allowed_html = apply_filters( 'asnp_wesb_allowed_html', [
+		'svg' => [
+			'class'   => true,
+			'xmlns'   => true,
+			'width'   => true,
+			'height'  => true,
+			'viewBox' => true,
+			'fill'    => true,
+		],
+		'path' => [
+			'd'                => true,
+			'fill'             => true,
+			'stroke'           => true,
+			'strokeWidth'      => true,
+			'strokeMiterlimit' => true,
+		],
+	] );
+
+    $allowed_html = array_merge( wp_kses_allowed_html( 'post' ), $allowed_html );
+
+    return wp_kses( $content, $allowed_html );
+}
