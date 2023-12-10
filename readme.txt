@@ -19,6 +19,7 @@ WooCommerce Sale Badges and Product Labels elevates your store’s appeal with c
 
 == Features ==
 
+https://youtu.be/_Mb92Ii4JKU
 
 == Video Tutorial ==
 
