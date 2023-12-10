@@ -17,32 +17,12 @@ class Admin {
 
 	public function init() {
 		$this->register_dependencies();
-		$this->update_checker();
 		$this->black_friday();
 
 		$this->container->get( Assets::class )->init();
 		$this->container->get( Menu::class )->init();
 
 		add_filter( 'plugin_action_links', array( $this, 'plugin_action_links' ), 10, 2 );
-	}
-
-	/**
-	 * Checking for plugin updates.
-	 *
-	 * @since  1.0.0
-	 *
-	 * @return void
-	 */
-	private function update_checker() {
-		if ( ! is_callable( '\Puc_v4_Factory::buildUpdateChecker' ) ) {
-			return;
-		}
-
-		\Puc_v4_Factory::buildUpdateChecker(
-			'https://wpupdate.asanaplugins.com/?action=get_metadata&slug=easy-sale-badges-for-woocommerce',
-			ASNP_WESB_PLUGIN_FILE,
-			'easy-sale-badges-for-woocommerce'
-		);
 	}
 
 	protected function register_dependencies() {
