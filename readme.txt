@@ -15,7 +15,7 @@ WooCommerce Sale Badges & Product Labels. Sale labels & countdown timers(PRO) fo
 
 WooCommerce Sale Badges and Product Labels elevates your store’s appeal with customized badges and countdown timers (PRO Version). Unlock the full potential of your WooCommerce store with captivating sale badges, product labels, and countdown timers. This all-in-one plugin empowers you to create eye-catching labels and scheduled badges for products, categories, and tags. Highlighting discount values, product quantities, ratings, shipping classes, stock status, and sale status, these labels provide valuable information to your customers. Plus, leverage the power of countdown timers to create urgency and drive conversions. With an intuitive interface, easily customize labels and replace default on-sale badges. Take your WooCommerce store to new heights with visually appealing badges, labels, and countdown timers tailored to your unique offerings.
 
-[FRONT-END DEMO](https://pricing-and-discounts.asanaplugins.com/demo/product/whatsapp-plugin-demo/) | [BACK-END DEMO](https://pricing-and-discounts.asanaplugins.com/?asnp_demo_plugin=easy-whatsapp) | [Ask Questions](https://www.asanaplugins.com/support/) | **[PRO WITH 50% DISCOUNT FOR $30](https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/)**
+[FRONT-END DEMO](https://pricing-and-discounts.asanaplugins.com/demo/shop/) | [BACK-END DEMO](https://pricing-and-discounts.asanaplugins.com/?asnp_demo_plugin=easy-sale-badges-for-woocommerce) | [Ask Questions](https://wordpress.org/support/plugin/easy-sale-badges-for-woocommerce/) | **[PRO WITH 50% DISCOUNT FOR $30](https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/)**
 
 == Features ==
 
@@ -115,7 +115,8 @@ If you would like to show a specific product sale badges, then use the below sho
 
 == 📕 Tutorials ==
 
-* <strong>[How to Add Product Labels in WooCommerce](https://www.asanaplugins.com/how-to-add-whatsapp-chat-to-wordpress/)</strong>
+* <strong>[How to Add Product Labels in WooCommerce](https://www.asanaplugins.com/how-to-add-product-labels-in-woocommerce/)</strong>
+* <strong>[Add Product Labels to WooCommerce Products](https://www.asanaplugins.com/add-product-labels-to-woocommerce-products-full-guide/)</strong>
 
 == 🚀 SOCIAL MEDIA LINKS ==
 
