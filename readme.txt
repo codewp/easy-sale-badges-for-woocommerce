@@ -6,7 +6,7 @@ Requires at least: 5.0
 Tested up to: 6.4
 Requires PHP: 5.6
 Stable tag: 1.1.0
-License: GPLv2 or later
+License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 WooCommerce Sale Badges & Product Labels. Sale labels & countdown timers(PRO) for products,categories,Onsale,out-of-stock items.

@@ -8,7 +8,8 @@
  * Version: 1.1.0
  * Author: Asana Plugins
  * Author URI: http://www.asanaplugins.com/
- * License: http://www.gnu.org/licenses/gpl-2.0.html
+ * License: GPL v2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: easy-sale-badges-for-woocommerce
  * Domain Path: /languages
  * WC requires at least: 3.0
