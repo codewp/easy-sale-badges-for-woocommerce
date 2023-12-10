@@ -122,7 +122,7 @@ final class Plugin {
 	 * Load Localisation files.
 	 */
 	protected function load_plugin_textdomain() {
-		load_plugin_textdomain( 'asnp-easy-sale-badge', false, basename( dirname( __DIR__ ) ) . '/languages' );
+		load_plugin_textdomain( 'easy-sale-badges-for-woocommerce', false, basename( dirname( __DIR__ ) ) . '/languages' );
 	}
 
 	public function includes() {
