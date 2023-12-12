@@ -1114,7 +1114,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 	$output .= '<div class="asnp-esb-badge-'. absint( $badge->id ) .'">';
 	$output .= '<span class="asnp-esb-inner-span2-'. absint( $badge->id ) .'"></span>';
 	$output .= '<div class="asnp-esb-inner-span1-'. absint( $badge->id ) .'">';
-	$output .= '<div style="transform: ' . esc_attr( $horiz_and_vert ) . '; white-space: ' . esc_attr( $nowrap ) . ';">' . wp_kses_post( $label ) . '</div>';
+	$output .= '<div style="white-space: ' . esc_attr( $nowrap ) . ';' . ( ! empty( $horiz_and_vert ) ? ' transform: ' . esc_attr( $horiz_and_vert ) . ';' : '' ) . '">' . wp_kses_post( $label ) . '</div>';
 	$output .= '</div>';
 	$output .= '</div>';
 	$output .= '</div>';
