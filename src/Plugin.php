@@ -272,26 +272,6 @@ final class Plugin {
 		}
 	}
 
-	public function upload_dir( $pathdata ) {
-		if ( empty( $_FILES['easySaleBadgeFile'] ) ) {
-			return $pathdata;
-		}
-
-		if ( empty( $pathdata['subdir'] ) ) {
-			$pathdata['subdir'] = '/easy_sale_badge_uploads' . ( ! empty( $_POST['id'] && 0 < (int) $_POST['id'] ) ? '/' . (int) $_POST['id'] : '' );
-			$pathdata['path']   = $pathdata['path'] . $pathdata['subdir'];
-			$pathdata['url']    = $pathdata['url'] . $pathdata['subdir'];
-		} else {
-			$new_subdir = '/easy_sale_badge_uploads' . ( ! empty( $_POST['id'] && 0 < (int) $_POST['id'] ) ? '/' . (int) $_POST['id'] : '' );
-
-			$pathdata['path']   = str_replace( $pathdata['subdir'], $new_subdir, $pathdata['path'] );
-			$pathdata['url']    = str_replace( $pathdata['subdir'], $new_subdir, $pathdata['url'] );
-			$pathdata['subdir'] = str_replace( $pathdata['subdir'], $new_subdir, $pathdata['subdir'] );
-		}
-
-		return $pathdata;
-	}
-
 	public function is_pro_active() {
 		return defined( 'ASNP_WESB_PRO_VERSION' );
 	}
