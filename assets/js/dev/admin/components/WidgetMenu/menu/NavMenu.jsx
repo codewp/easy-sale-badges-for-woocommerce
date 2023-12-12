@@ -134,7 +134,6 @@ const NavMenu = ( props ) => {
 					addPagesUrl={ props.addPagesUrl }
 					deletePageUrl={ props.deletePageUrl }
 					updatePagesUrl={ props.updatePagesUrl }
-					updateAvailability={ props.updateAvailability }
 					activeStatus={ activeStatus }
 				/>
 			</div>

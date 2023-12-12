@@ -77,7 +77,6 @@ const MenuItem = ( props ) => {
 				<Schedule
 					selectedDateFrom={ props.badge.selectedDateFrom }
 					selectedDateTo={ props.badge.selectedDateTo }
-					updateAvailability={ props.updateAvailability }
 					availability={ props.badge.availability }
 					alwaysOnline={ props.badge.alwaysOnline }
 					useTimezone={ props.badge.useTimezone }

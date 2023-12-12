@@ -303,17 +303,6 @@ export default function Badge() {
 		}
 	};
 
-	const updateAvailability = ( day, field, value ) => {
-		if ( ! badge.availability[ day ] ) {
-			return;
-		}
-
-		let availability = { ...badge.availability };
-		let updateDay = { ...badge.availability[ day ], [ field ]: value };
-		availability[ day ] = updateDay;
-		setBadge( ( prev ) => ( { ...prev, availability } ) );
-	};
-
 	return (
 		<BadgeContext.Provider
 			value={ {

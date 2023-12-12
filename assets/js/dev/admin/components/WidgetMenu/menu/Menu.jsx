@@ -9,7 +9,6 @@ const Menu = ( props ) => {
 			<NavMenu
 				badge={ props.badge }
 				onChange={ props.onChange }
-				updateAvailability={ props.updateAvailability }
 				updateDays={ props.updateDays }
 			/>
 		</DropProvider>
