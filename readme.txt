@@ -5,7 +5,7 @@ Tags: sale badges, product labels, WooCommerce badges, WooCommerce sale badges, 
 Requires at least: 5.0
 Tested up to: 6.4
 Requires PHP: 5.6
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
