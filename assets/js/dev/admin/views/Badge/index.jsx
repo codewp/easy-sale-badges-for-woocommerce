@@ -67,10 +67,8 @@ export default function Badge() {
 	const [ badge, setBadge ] = useState( { ...defaultBadge } );
 	const { getItem, dispatch } = useContext( BadgesContext );
 	const { setLoading, setMessage } = useContext( AppContext );
-	const [ badgeImageFile, setBadgeImageFile ] = useState( null );
 
 	useEffect( () => {
-		setBadgeImageFile( null );
 		if ( ! params.id || 'new' === params.id ) {
 			setBadge( { ...defaultBadge } );
 			return;
@@ -326,8 +324,6 @@ export default function Badge() {
 				addItem,
 				updateItem,
 				deleteItem,
-				badgeImageFile,
-				setBadgeImageFile,
 				addSchedule,
 				updateSchedule,
 				addGroupSchedule,
@@ -340,25 +336,37 @@ export default function Badge() {
 					<div className="asnp-max-w-lg asnp-grid asnp-grid-cols-1 asnp-gap-6">
 						<div className="asnp-badge-actions asnp-space-x-2 ">
 							<h1 className="asnp-heading-inline">
-								{ __( 'Badges', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Badges',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</h1>
 							<button
 								className="asnp-btn asnp-btn-primary asnp-w-[86.68px] asnp-h-[35.5px]"
 								type="button"
 								onClick={ save }
 							>
-								{ __( 'Save', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Save',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</button>
 							<Link
 								to={ `/` }
 								className="asnp-py-2 asnp-px-6 asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none asnp-btn-secondary asnp-w-[86.68px] asnp-h-[35.5px]"
 							>
-								{ __( 'Cancel', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Cancel',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</Link>
 						</div>
 						<label className="asnp-block asnp-space-y-1">
 							<span className="asnp-field-title">
-								{ __( 'Name', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Name',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</span>
 							<input
 								type="text"
@@ -373,7 +381,10 @@ export default function Badge() {
 						<div className="asnp-space-y-1">
 							<label className="asnp-inline-flex asnp-space-x-2 asnp-items-center">
 								<span className="asnp-field-title">
-									{ __( 'Status', 'easy-sale-badges-for-woocommerce' ) }
+									{ __(
+										'Status',
+										'easy-sale-badges-for-woocommerce'
+									) }
 								</span>
 								<Toggle
 									value={ 1 == badge.status }
