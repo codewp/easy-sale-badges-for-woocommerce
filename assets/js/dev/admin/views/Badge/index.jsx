@@ -395,7 +395,6 @@ export default function Badge() {
 							<Menu
 								badge={ badge }
 								onChange={ updateBadge }
-								updateAvailability={ updateAvailability }
 							/>
 						</div>
 						<div className="asnp-w-full asnp-bg-white asnp-flex">
