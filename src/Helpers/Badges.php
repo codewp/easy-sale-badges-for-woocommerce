@@ -1122,8 +1122,8 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 	$output = apply_filters( 'asnp_wesb_css_badge', $output, $badge, $hide );
 
 	if ( $return ) {
-		return wp_kses_post( $output );
+		return $output;
 	}
 
-	echo wp_kses_post( $output );
+	echo $output;
 }
