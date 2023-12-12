@@ -145,7 +145,6 @@ final class Plugin {
 		Hooks::init();
 
 		add_action( 'init', [ $this, 'add_shortcodes' ] );
-		add_filter( 'upload_dir', [ $this, 'upload_dir' ] );
 	}
 
 	public function add_shortcodes() {
