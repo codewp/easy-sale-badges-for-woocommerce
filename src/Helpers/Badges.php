@@ -437,7 +437,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 				$dynamic_styles .= ' height: ' . $height_cont_badge . ';';
 			}
 			if ( isset( $badge->badgePositionTop ) ) {
-					$dynamic_styles .= ' inset: ' . $inset_property . ';';
+				$dynamic_styles .= ' inset: ' . $inset_property . ';';
 			}
 			$dynamic_styles .= '}';
 
@@ -453,7 +453,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 				$dynamic_styles .= ' height: ' . $badge->heightBadge . 'px;';
 			}
 			if ( isset( $badge->widthBadge ) ) {
-					$dynamic_styles .= ' width: ' . $badge->widthBadge . 'px;';
+				$dynamic_styles .= ' width: ' . $badge->widthBadge . 'px;';
 			}
 			if ( isset( $badge->badgePositionX ) ) {
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '0px' ) . ';';
@@ -1114,7 +1114,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 	$output .= '<div class="asnp-esb-badge-'. absint( $badge->id ) .'">';
 	$output .= '<span class="asnp-esb-inner-span2-'. absint( $badge->id ) .'"></span>';
 	$output .= '<div class="asnp-esb-inner-span1-'. absint( $badge->id ) .'">';
-	$output .= '<div style="transform: ' . esc_attr( $horiz_and_vert ) . '; white-space: ' . esc_attr( $nowrap ) . '">' . wp_kses_post( $label ) . '</div>';
+	$output .= '<div style="transform: ' . esc_attr( $horiz_and_vert ) . '; white-space: ' . esc_attr( $nowrap ) . ';">' . wp_kses_post( $label ) . '</div>';
 	$output .= '</div>';
 	$output .= '</div>';
 	$output .= '</div>';
