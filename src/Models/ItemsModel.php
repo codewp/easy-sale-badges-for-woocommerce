@@ -86,6 +86,7 @@ class ItemsModel {
 
 	public static function get_categories( array $args = array() ) {
 		$defaults = array(
+			'taxonomy'           => 'product_cat',
 			'separator'          => '/',
 			'nicename'           => false,
 			'pad_counts'         => 1,
@@ -104,7 +105,7 @@ class ItemsModel {
 			$args['orderby']    = 'name';
 		}
 
-		$terms = get_terms( 'product_cat', apply_filters( 'asnp_wesb_get_categories_args', $args ) );
+		$terms = get_terms( apply_filters( 'asnp_wesb_get_categories_args', $args ) );
 		if ( empty( $terms ) ) {
 			return array();
 		}
@@ -126,11 +127,12 @@ class ItemsModel {
 		$args  = wp_parse_args(
 			$args,
 			array(
+				'taxonomy'   => 'product_tag',
 				'hide_empty' => 0,
 				'nicename'   => false,
 			)
 		);
-		$terms = get_terms( 'product_tag', apply_filters( 'asnp_wesb_get_tags_args', $args ) );
+		$terms = get_terms( apply_filters( 'asnp_wesb_get_tags_args', $args ) );
 		if ( empty( $terms ) ) {
 			return array();
 		}
