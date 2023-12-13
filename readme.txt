@@ -153,6 +153,12 @@ The plugin is rich in features while it is lightweight and fast.
 
 == Changelog ==
 
+= 1.2.0 =
+* Fix get_terms deprecated args issue.
+* Use escape functions on output sale badges.
+* Fix empty transform style issue.
+* Compatibility with WooCommerce 8.4.0
+
 = 1.1.0 =
 * Add - prefix to percentage discounts value.
 * Fix the Display issues of CSS Labels on Some of Themes.
