@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import { __ } from '@wordpress/i18n';
+import { BadgeContext } from '../../contexts/Badge';
 
 import './index.scss';
 
-const LabelTranslation = ( { show, setShow } ) => {
+const LabelTranslation = ( { show, setShow, labelTranslate } ) => {
+	const {
+		addTranslation,
+		deleteTranslation,
+		langTrans,
+		setLangTrans,
+		valueTrans,
+		setValueTrans,
+		updateTranslation,
+	} = useContext( BadgeContext );
+
 	return (
 		<div style={ { display: show ? 'block' : 'none' } }>
 			<div className="asnp-ew-modal-mask">
@@ -12,20 +23,25 @@ const LabelTranslation = ( { show, setShow } ) => {
 					className="asnp-ew-modal-wrapper"
 				>
 					<div
-						className="asnp-ew-modal-container"
+						className="asnp-ew-modal-container asnp-scrollBarTrans"
 						onClick={ ( e ) => {
 							e.stopPropagation();
 						} }
 					>
 						<div className="asnp-ew-modal-body">
-							<div className="asnp-field-title asnp-ml-2">
+							<div className="asnp-field-title asnp-ml-2 asnp-text-lg asnp-font-bold">
 								{ __(
 									'Translate Label',
 									'easy-sale-badges-for-woocommerce'
 								) }
 							</div>
 							<div className="asnp-w-full asnp-ml-2 asnp-flex asnp-mt-4">
-								<select className="asnp-select-field !asnp-w-60 asnp-mt-2">
+								<select
+									className="asnp-select-field !asnp-w-60 asnp-mt-2"
+									onChange={ ( e ) =>
+										setLangTrans( e.target.value )
+									}
+								>
 									<option value="af" lang="af">
 										{ __(
 											'Afrikaans',
@@ -69,28 +85,24 @@ const LabelTranslation = ( { show, setShow } ) => {
 										) }
 									</option>
 									<option value="az" lang="az">
-										
 										{ __(
 											'Azərbaycan dili',
 											'easy-sale-badges-for-woocommerce'
 										) }
 									</option>
 									<option value="bel" lang="be">
-										
 										{ __(
 											'Беларуская мова',
 											'easy-sale-badges-for-woocommerce'
 										) }
 									</option>
 									<option value="bg_BG" lang="bg">
-										
 										{ __(
 											'Български',
 											'easy-sale-badges-for-woocommerce'
 										) }
 									</option>
 									<option value="bn_BD" lang="bn">
-										
 										{ __(
 											'বাংলা',
 											'easy-sale-badges-for-woocommerce'
@@ -685,49 +697,57 @@ const LabelTranslation = ( { show, setShow } ) => {
 										) }
 									</option>
 									<option value="szl" lang="szl">
-										Ślōnskŏ gŏdka{ __(
+										Ślōnskŏ gŏdka
+										{ __(
 											'Kiswahili',
 											'easy-sale-badges-for-woocommerce'
 										) }
 									</option>
 									<option value="ta_IN" lang="ta">
-										தமிழ்{ __(
+										தமிழ்
+										{ __(
 											'Kiswahili',
 											'easy-sale-badges-for-woocommerce'
 										) }
 									</option>
 									<option value="ta_LK" lang="ta">
-										தமிழ்{ __(
+										தமிழ்
+										{ __(
 											'Kiswahili',
 											'easy-sale-badges-for-woocommerce'
 										) }
 									</option>
 									<option value="te" lang="te">
-										తెలుగు{ __(
+										తెలుగు
+										{ __(
 											'Kiswahili',
 											'easy-sale-badges-for-woocommerce'
 										) }
 									</option>
 									<option value="th" lang="th">
-										ไทย{ __(
+										ไทย
+										{ __(
 											'Kiswahili',
 											'easy-sale-badges-for-woocommerce'
 										) }
 									</option>
 									<option value="tl" lang="tl">
-										Tagalog{ __(
+										Tagalog
+										{ __(
 											'Kiswahili',
 											'easy-sale-badges-for-woocommerce'
 										) }
 									</option>
 									<option value="tr_TR" lang="tr">
-										Türkçe{ __(
+										Türkçe
+										{ __(
 											'Kiswahili',
 											'easy-sale-badges-for-woocommerce'
 										) }
 									</option>
 									<option value="tt_RU" lang="tt">
-										Татар теле{ __(
+										Татар теле
+										{ __(
 											'Kiswahili',
 											'easy-sale-badges-for-woocommerce'
 										) }
@@ -791,23 +811,86 @@ const LabelTranslation = ( { show, setShow } ) => {
 									<input
 										type="text"
 										className="asnp-block asnp-text-field !asnp-w-[20rem]"
+										value={ valueTrans }
+										onChange={ ( e ) =>
+											setValueTrans( e.target.value )
+										}
 									/>
 									<label className="asnp-block asnp-space-y-1 asnp-text-gray-500">
 										<p className="asnp-text-xs asnp-text-gray-400">
 											{ __(
-												'Add Translate',
+												'Add Translate Label.',
 												'easy-sale-badges-for-woocommerce'
 											) }
 										</p>
 									</label>
 								</div>
-								<button className="asnp-mb-4 asnp-ml-3 asnp-mt-2 asnp-btn-primary asnp-py-1 asnp-h-[2rem] asnp-w-[4rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none">
+								<button
+									className="asnp-mb-4 asnp-ml-3 asnp-mt-2 asnp-btn-primary asnp-py-1 asnp-h-[2rem] asnp-w-[4rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
+									onClick={ () =>
+										addTranslation( [
+											{
+												lang: langTrans,
+												value: valueTrans,
+											},
+										] )
+									}
+								>
 									{ __(
 										'Add',
 										'easy-sale-badges-for-woocommerce'
 									) }
 								</button>
 							</div>
+							{ Object.entries( labelTranslate ).map(
+								( [ lang, translation ], index ) => (
+									<div
+										key={ index }
+										className="asnp-w-full asnp-ml-2 asnp-flex asnp-mt-4"
+									>
+										<select
+											value={ lang }
+											className="asnp-select-field !asnp-w-60 asnp-mt-2"
+										>
+											<option value={ lang }>
+												{ lang }
+											</option>
+										</select>
+										<div className="asnp-ml-6">
+											<input
+												type="text"
+												className="asnp-block asnp-text-field !asnp-w-[20rem]"
+												value={ translation }
+												onChange={ ( e ) =>
+													updateTranslation(
+														lang,
+														e.target.value
+													)
+												}
+											/>
+											<label className="asnp-block asnp-space-y-1 asnp-text-gray-500">
+												<p className="asnp-text-xs asnp-text-gray-400">
+													{ __(
+														'Add Translate Label.',
+														'easy-sale-badges-for-woocommerce'
+													) }
+												</p>
+											</label>
+										</div>
+										<button
+											className="asnp-mb-4 asnp-ml-3 asnp-mt-2 asnp-btn-delete asnp-py-1 asnp-h-[2rem] asnp-w-[4rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
+											onClick={ () =>
+												deleteTranslation( lang )
+											}
+										>
+											{ __(
+												'Delete',
+												'easy-sale-badges-for-woocommerce'
+											) }
+										</button>
+									</div>
+								)
+							) }
 						</div>
 					</div>
 				</div>

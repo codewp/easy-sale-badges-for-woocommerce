@@ -60,7 +60,7 @@ const defaultBadge = {
 	woocommerceItemsConditions: 'any',
 	items: [ [ { ...initialItem } ] ],
 	schedule: [],
-	labelTranslate: {}
+	labelTranslate: {},
 };
 
 export default function Badge() {
@@ -68,6 +68,8 @@ export default function Badge() {
 	const [ badge, setBadge ] = useState( { ...defaultBadge } );
 	const { getItem, dispatch } = useContext( BadgesContext );
 	const { setLoading, setMessage } = useContext( AppContext );
+	const [ langTrans, setLangTrans ] = useState( '' );
+	const [ valueTrans, setValueTrans ] = useState( '' );
 
 	useEffect( () => {
 		if ( ! params.id || 'new' === params.id ) {
@@ -258,6 +260,47 @@ export default function Badge() {
 		} );
 	};
 
+	const addTranslation = ( translations ) => {
+		const updatedBadge = {
+			...badge,
+			labelTranslate: {
+				...badge.labelTranslate,
+				...translations.reduce( ( acc, { lang, value } ) => {
+					if ( ! acc[ lang ] ) {
+						acc[ lang ] = value;
+					}
+					return acc;
+				}, {} ),
+			},
+		};
+
+		setBadge( updatedBadge );
+		setValueTrans( '' );
+	};
+
+	const updateTranslation = ( langToUpdate, newTranslation ) => {
+		const updatedLabelTranslate = {
+			...badge.labelTranslate,
+			[ langToUpdate ]: newTranslation,
+		};
+
+		setBadge( {
+			...badge,
+			labelTranslate: updatedLabelTranslate,
+		} );
+	};
+
+	const deleteTranslation = ( langToDelete ) => {
+		const updatedLabelTranslate = { ...badge.labelTranslate };
+
+		delete updatedLabelTranslate[ langToDelete ];
+
+		setBadge( {
+			...badge,
+			labelTranslate: updatedLabelTranslate,
+		} );
+	};
+
 	const save = async () => {
 		try {
 			setLoading( true );
@@ -319,6 +362,13 @@ export default function Badge() {
 				addGroupSchedule,
 				updateDaysSchedule,
 				deleteSchedule,
+				addTranslation,
+				langTrans,
+				setLangTrans,
+				valueTrans,
+				setValueTrans,
+				deleteTranslation,
+				updateTranslation,
 			} }
 		>
 			<div className="asnp-relative">

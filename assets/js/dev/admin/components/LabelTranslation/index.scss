@@ -19,7 +19,7 @@
 	overflow: auto;
 	margin: 0px auto;
 	background-color: #fff;
-	border-radius: 5px;
+	border-radius: 10px;
 	box-shadow: 0 2px 8px rgba( 0, 0, 0, 0.33 );
 	transition: all 0.3s ease;
 	font-family: Helvetica, Arial, sans-serif;
@@ -29,4 +29,23 @@
 	padding: 10px;
 	height: auto;
 	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.asnp-scrollBarTrans {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.asnp-scrollBarTrans::-webkit-scrollbar {
+	width: 8px;
+	height: 5px;
+	display: block;
+}
+.asnp-scrollBarTrans::-webkit-scrollbar-thumb {
+	background: #9ca3af;
+	border-radius: 8px;
+}
+.asnp-scrollBarTrans::-webkit-scrollbar-thumb:hover {
+	background: rgb( 196, 201, 211 );
 }

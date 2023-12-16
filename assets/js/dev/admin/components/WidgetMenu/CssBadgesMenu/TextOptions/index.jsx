@@ -175,6 +175,7 @@ const TextOptions = ( props ) => {
 				<LabelTranslation
 					show={ props.show }
 					setShow={ props.setShow }
+					labelTranslate={ props.labelTranslate }
 				/>
 			) }
 		</div>
