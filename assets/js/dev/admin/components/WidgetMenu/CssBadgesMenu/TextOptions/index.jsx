@@ -3,6 +3,7 @@ import { __ } from '@wordpress/i18n';
 import Tippy from '@tippyjs/react';
 import ColorPicker from 'react-best-gradient-color-picker';
 import { IMAGES_URL, customColor } from '../../../../utils/constants';
+import LabelTranslation from '../../../LabelTranslation';
 
 const TextOptions = ( props ) => {
 	const [ disableLineHeight, setDisableLineHeight ] = useState( false );
@@ -39,6 +40,12 @@ const TextOptions = ( props ) => {
 						}
 					/>
 				</label>
+				<button
+					className="asnp-ml-3 asnp-mt-7 asnp-btn-primary asnp-py-1 asnp-h-[2rem] asnp-w-[6rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
+					onClick={ () => props.setShow( true ) }
+				>
+					{ __( 'Translate', 'easy-sale-badges-for-woocommerce' ) }
+				</button>
 				<label className="asnp-ml-10 asnp-mt-8 asnp-flex">
 					<input
 						className="asnp-form-check-input asnp-appearance-none asnp-h-4 asnp-w-4  asnp-border asnp-border-gray-300 asnp-rounded-sm asnp-bg-white checked:asnp-bg-indigo-600 checked:asnp-border-indigo-600 focus:asnp-outline-none asnp-transition asnp-duration-200 asnp-mt-1 asnp-align-top asnp-bg-no-repeat asnp-bg-center asnp-bg-contain asnp-float-left asnp-mr-2 asnp-cursor-pointer"
@@ -115,7 +122,10 @@ const TextOptions = ( props ) => {
 			<div className="asnp-flex asnp-mt-[2rem] asnp-w-full">
 				<label>
 					<span className="asnp-field-title">
-						{ __( 'Font Size (Pixel)', 'easy-sale-badges-for-woocommerce' ) }
+						{ __(
+							'Font Size (Pixel)',
+							'easy-sale-badges-for-woocommerce'
+						) }
 					</span>
 					<div className="asnp-w-[15rem]">
 						<input
@@ -133,7 +143,10 @@ const TextOptions = ( props ) => {
 				</label>
 				<label className="asnp-ml-10">
 					<span className="asnp-field-title">
-						{ __( 'Line Height (Pixel)', 'easy-sale-badges-for-woocommerce' ) }
+						{ __(
+							'Line Height (Pixel)',
+							'easy-sale-badges-for-woocommerce'
+						) }
 					</span>
 					<div className="asnp-w-[15rem]">
 						<input
@@ -158,6 +171,12 @@ const TextOptions = ( props ) => {
 					</div>
 				</label>
 			</div>
+			{ props.show === true && (
+				<LabelTranslation
+					show={ props.show }
+					setShow={ props.setShow }
+				/>
+			) }
 		</div>
 	);
 };

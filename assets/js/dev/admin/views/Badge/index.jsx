@@ -60,6 +60,7 @@ const defaultBadge = {
 	woocommerceItemsConditions: 'any',
 	items: [ [ { ...initialItem } ] ],
 	schedule: [],
+	labelTranslate: {}
 };
 
 export default function Badge() {

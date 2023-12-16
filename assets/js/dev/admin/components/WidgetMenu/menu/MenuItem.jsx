@@ -21,12 +21,15 @@ import './style.scss';
 
 const MenuItem = ( props ) => {
 	const [ showTextImg, setShowTextImg ] = useState( true );
+	const [ show, setShow ] = useState( false );
 
 	return (
 		<div className="asnp-w-full">
 			{ props.activeStatus == 1 && (
 				<div className="asnp-mt-3">
 					<TextOptions
+						show={show}
+						setShow={setShow}
 						onChange={ props.onChange }
 						badgeLabel={ props.badge.badgeLabel }
 						badgeStyles={ props.badge.badgeStyles }
