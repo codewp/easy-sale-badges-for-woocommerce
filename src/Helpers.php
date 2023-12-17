@@ -80,6 +80,11 @@ function get_term_hierarchy_name( $term_id, $taxonomy, $separator = '/', $nicena
 }
 
 function register_polyfills() {
+	static $registered;
+	if ( $registered ) {
+		return;
+	}
+
 	global $wp_version;
 
 	$handles = array(
@@ -105,6 +110,8 @@ function register_polyfills() {
 			);
 		}
 	}
+
+	$registered = true;
 }
 
 function is_pro_active() {
