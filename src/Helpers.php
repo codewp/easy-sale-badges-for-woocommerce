@@ -272,3 +272,8 @@ function get_theme_single_container( $stylesheet = null, $template = null ) {
 
 	return '';
 }
+
+function allowed_inline_styles( $styles ) {
+	$styles[] = 'display';
+	return $styles;
+}

@@ -1098,7 +1098,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 
 	add_custom_style( $dynamic_styles );
 
-	$class_names = 'asnp-esb-badge-element asnp-esb-productBadge asnp-esb-productBadge-'. absint( $badge->id ) .' ';
+	$class_names = 'asnp-esb-badge-element asnp-esb-productBadge asnp-esb-productBadge-'. absint( $badge->id );
 	if ( $hide ) {
 		$class_names .= ' asnp-esb-badge-hidden';
 	}
@@ -1106,6 +1106,8 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 	$class_names = apply_filters( 'asnp_wesb_css_badge_class_names', $class_names, $badge, $hide );
 
 	$label = apply_filters( 'asnp_wesb_css_badge_label', $badge->badgeLabel, $badge );
+
+	add_filter( 'safe_style_css', 'AsanaPlugins\WooCommerce\SaleBadges\allowed_inline_styles' );
 
 	// Css Badge
 	$output = '<div class="' . esc_attr( $class_names ) . '"' . ( $hide ? ' style="display: none;"' : '' ) . '>';
@@ -1118,10 +1120,13 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 	$output .= '</div>';
 
 	$output = apply_filters( 'asnp_wesb_css_badge', $output, $badge, $hide );
+	$output = wp_kses_post( $output );
+
+	remove_filter( 'safe_style_css', 'AsanaPlugins\WooCommerce\SaleBadges\allowed_inline_styles' );
 
 	if ( $return ) {
-		return wp_kses_post( $output );
+		return $output;
 	}
 
-	echo wp_kses_post( $output );
+	echo $output;
 }
