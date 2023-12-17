@@ -152,7 +152,13 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 
 	$nowrap = isset( $badge->badgeStyles ) && 'badge13' === $badge->badgeStyles ? 'normal' : 'nowrap';
 
-	$dynamic_styles = '';
+	$dynamic_styles = '.asnp-esb-inner-span4-'. absint( $badge->id ) .' {';
+	$dynamic_styles .= ' white-space: ' . esc_html( $nowrap ) . ';';
+	if ( ! empty( $horiz_and_vert ) ) {
+		$dynamic_styles .= ' transform: ' . esc_html( $horiz_and_vert ) . ';';
+	}
+	$dynamic_styles .= '}';
+
 	switch ( $badge->badgeStyles ) {
 		case 'badge1':
 			$dynamic_styles .= '.asnp-esb-productBadge-'. absint( $badge->id ) .' {';
@@ -229,13 +235,8 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( ! empty( $transform ) ) {
 				$dynamic_styles .= ' transform:' . $transform;
 			}
-
 			$dynamic_styles .= '}';
 
-			$dynamic_styles .= '.asnp-esb-inner-span4-'. absint( $badge->id ) .' {';
-			$dynamic_styles .= ' white-space: ' . esc_attr( $nowrap ) . ';';
-			$dynamic_styles .= ' transform: ' . esc_attr( $horiz_and_vert ) . ';';
-			$dynamic_styles .= '}';
 			break;
 
 		case 'badge2':
@@ -335,11 +336,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 
 			$dynamic_styles .= ' transform: ' . ( isset( $badge->badgePositionX ) && $badge->badgePositionX == 'right' ? 'rotate(0)' : 'rotate(180deg)' ) . ';';
 			$dynamic_styles .= '}';
-
-			$dynamic_styles .= '.asnp-esb-inner-span4-'. absint( $badge->id ) .' {';
-			$dynamic_styles .= ' white-space: ' . esc_attr( $nowrap ) . ';';
-			$dynamic_styles .= ' transform: ' . esc_attr( $horiz_and_vert ) . ';';
-			$dynamic_styles .= '}';
 		break;
 
 		case 'badge3':
@@ -435,11 +431,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 				$dynamic_styles .= ' background: ' . $badge->badgeColor . ';';
 			}
 			$dynamic_styles .= ' transform: ' . ( isset( $badge->badgePositionX ) && $badge->badgePositionX == 'right' ? 'skew( -1055deg )' : 'skew( -15deg )' ) . ';';
-			$dynamic_styles .= '}';
-
-			$dynamic_styles .= '.asnp-esb-inner-span4-'. absint( $badge->id ) .' {';
-			$dynamic_styles .= ' white-space: ' . esc_attr( $nowrap ) . ';';
-			$dynamic_styles .= ' transform: ' . esc_attr( $horiz_and_vert ) . ';';
 			$dynamic_styles .= '}';
 		break;
 
@@ -557,11 +548,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 				$dynamic_styles .= ' border-right: ' . ( $badge->badgePositionX == 'right' ? '15px solid ' . $badge->badgeColor . '' : 'none' ) . ';';
 			}
 			$dynamic_styles .= '}';
-
-			$dynamic_styles .= '.asnp-esb-inner-span4-'. absint( $badge->id ) .' {';
-			$dynamic_styles .= ' white-space: ' . esc_attr( $nowrap ) . ';';
-			$dynamic_styles .= ' transform: ' . esc_attr( $horiz_and_vert ) . ';';
-			$dynamic_styles .= '}';
 		break;
 
 		case 'badge5':
@@ -645,11 +631,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadge * 1.5 . 'px;';
 				$dynamic_styles .= ' top: ' . $badge->widthBadge / 12 . 'px;';
 			}
-			$dynamic_styles .= '}';
-
-			$dynamic_styles .= '.asnp-esb-inner-span4-'. absint( $badge->id ) .' {';
-			$dynamic_styles .= ' white-space: ' . esc_attr( $nowrap ) . ';';
-			$dynamic_styles .= ' transform: ' . esc_attr( $horiz_and_vert ) . ';';
 			$dynamic_styles .= '}';
 		break;
 
@@ -756,11 +737,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadge * 1.5 . 'px !important;';
 			}
 			$dynamic_styles .= '}';
-
-			$dynamic_styles .= '.asnp-esb-inner-span4-'. absint( $badge->id ) .' {';
-			$dynamic_styles .= ' white-space: ' . esc_attr( $nowrap ) . ';';
-			$dynamic_styles .= ' transform: ' . esc_attr( $horiz_and_vert ) . ';';
-			$dynamic_styles .= '}';
 		break;
 
 		case 'badge7':
@@ -854,11 +830,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= ' z-index: 1;';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= '}';
-			
-			$dynamic_styles .= '.asnp-esb-inner-span4-'. absint( $badge->id ) .' {';
-			$dynamic_styles .= ' white-space: ' . esc_attr( $nowrap ) . ';';
-			$dynamic_styles .= ' transform: ' . esc_attr( $horiz_and_vert ) . ';';
-			$dynamic_styles .= '}';			
 		break;
 
 		case 'badge8':
@@ -935,11 +906,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= ' top: 50%;';
 			$dynamic_styles .= ' z-index: 1;';
 			$dynamic_styles .= ' display: block;';
-			$dynamic_styles .= '}';
-
-			$dynamic_styles .= '.asnp-esb-inner-span4-'. absint( $badge->id ) .' {';
-			$dynamic_styles .= ' white-space: ' . esc_attr( $nowrap ) . ';';
-			$dynamic_styles .= ' transform: ' . esc_attr( $horiz_and_vert ) . ';';
 			$dynamic_styles .= '}';
 		break;
 
@@ -1040,11 +1006,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= ' z-index: 1;';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= '}';
-
-			$dynamic_styles .= '.asnp-esb-inner-span4-'. absint( $badge->id ) .' {';
-			$dynamic_styles .= ' white-space: ' . esc_attr( $nowrap ) . ';';
-			$dynamic_styles .= ' transform: ' . esc_attr( $horiz_and_vert ) . ';';
-			$dynamic_styles .= '}';
 		break;
 
 		case 'badge10':
@@ -1123,11 +1084,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= ' z-index: 1;';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= '}';
-
-			$dynamic_styles .= '.asnp-esb-inner-span4-'. absint( $badge->id ) .' {';
-			$dynamic_styles .= ' white-space: ' . esc_attr( $nowrap ) . ';';
-			$dynamic_styles .= ' transform: ' . esc_attr( $horiz_and_vert ) . ';';
-			$dynamic_styles .= '}';
 		break;
 	}
 
@@ -1164,8 +1120,8 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 	$output = apply_filters( 'asnp_wesb_css_badge', $output, $badge, $hide );
 
 	if ( $return ) {
-		return $output;
+		return wp_kses_post( $output );
 	}
 
-	echo $output;
+	echo wp_kses_post( $output );
 }
