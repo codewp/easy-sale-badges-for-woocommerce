@@ -871,7 +871,7 @@ const LabelTranslation = ( { show, setShow, labelTranslate } ) => {
 											<label className="asnp-block asnp-space-y-1 asnp-text-gray-500">
 												<p className="asnp-text-xs asnp-text-gray-400">
 													{ __(
-														'Add Translate Label.',
+														'Edit Translate Label.',
 														'easy-sale-badges-for-woocommerce'
 													) }
 												</p>
