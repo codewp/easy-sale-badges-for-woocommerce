@@ -27,7 +27,10 @@ const General = ( props ) => {
 				</div>
 				<label className="asnp-block asnp-space-y-1 asnp-text-gray-500">
 					<p className="asnp-text-xs asnp-text-gray-400">
-						{ __( 'Enable/Disable', 'easy-sale-badges-for-woocommerce' ) }
+						{ __(
+							'Enable/Disable',
+							'easy-sale-badges-for-woocommerce'
+						) }
 					</p>
 				</label>
 			</div>
@@ -110,7 +113,10 @@ const General = ( props ) => {
 							) }
 						</option>
 						<option value="shop_loop">
-							{ __( 'Shop loop', 'easy-sale-badges-for-woocommerce' ) }
+							{ __(
+								'Shop loop',
+								'easy-sale-badges-for-woocommerce'
+							) }
 						</option>
 						<option value="post_thumbnail_html">
 							{ __(
@@ -211,6 +217,12 @@ const General = ( props ) => {
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
+						<option value="post_thumbnail_html">
+							{ __(
+								'Post thumbnail html',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
 						<option value="none">
 							{ __( 'None', 'easy-sale-badges-for-woocommerce' ) }
 						</option>
@@ -270,7 +282,10 @@ const General = ( props ) => {
 						disabled
 					>
 						<option value="onImage">
-							{ __( 'On image', 'easy-sale-badges-for-woocommerce' ) }
+							{ __(
+								'On image',
+								'easy-sale-badges-for-woocommerce'
+							) }
 						</option>
 					</select>
 				</label>
