@@ -17,6 +17,14 @@ WooCommerce Sale Badges and Product Labels elevates your store’s appeal with c
 
 [FRONT-END DEMO](https://pricing-and-discounts.asanaplugins.com/demo/shop/) | [BACK-END DEMO](https://pricing-and-discounts.asanaplugins.com/?asnp_demo_plugin=easy-sale-badges-for-woocommerce) | [Ask Questions](https://wordpress.org/support/plugin/easy-sale-badges-for-woocommerce/) | **[PRO WITH 50% DISCOUNT FOR $30](https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/)** | **[Github](https://github.com/codewp/easy-sale-badges-for-woocommerce)**
 
+== Features ==
+
+
+
+== Video Tutorial ==
+
+https://youtu.be/aTHFT3ovCaw
+
 == SALE BADGES AND PRODUCT LABELS FOR WOOCOMMERCE ==
 
 Sale badges and product labels for WooCommerce are essential tools for e-commerce businesses to grab the attention of customers and increase sales. These badges and labels can be used to highlight special offers, discounts, limited-time promotions, or new arrivals. By using eye-catching designs and strategically placing them on product images, businesses can create a sense of urgency and persuade customers to make a purchase. With the ability to customize the appearance and placement of these badges and labels, WooCommerce provides businesses with a powerful tool to increase visibility and drive conversions in their online stores.
@@ -107,6 +115,7 @@ If you would like to show a specific product sale badges, then use the below sho
 
 == 📕 Tutorials ==
 
+* <strong>[WooCommerce Sale Badge Free Plugin](https://www.asanaplugins.com/woocommerce-sale-badge-free-plugin/)</strong>
 * <strong>[How to Add Product Labels in WooCommerce](https://www.asanaplugins.com/how-to-add-product-labels-in-woocommerce/)</strong>
 * <strong>[Add Product Labels to WooCommerce Products](https://www.asanaplugins.com/add-product-labels-to-woocommerce-products-full-guide/)</strong>
 
