@@ -167,7 +167,6 @@ The plugin is rich in features while it is lightweight and fast.
 * Fix Countdown Timer CSS issues.
 * Fix Upload Image issue.
 
-
 = 1.2.0 =
 * Fix get_terms deprecated args issue.
 * Use escape functions on output sale badges.
