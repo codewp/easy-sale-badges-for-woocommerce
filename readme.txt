@@ -54,7 +54,7 @@ In today's competitive market, it is essential for businesses to find effective 
 * 5 Advanced Labels
 * 8 Timers Template
 * Incorporate Gradient Colors
-* Implement Discount Rules
+* [Compatible with Discount Rules and Dynamic Pricing for WooCommerce](https://wordpress.org/plugins/easy-woocommerce-discounts/)
 * Add a Percentage Discount amount
 * Rotate CSS Labels, Image Labels, and Advanced Labels
 * Adjust the Position of CSS Labels, Image Labels, and Advanced Labels
@@ -105,13 +105,13 @@ Simply install and activate the plugin, and then follow the steps below to creat
 
 Sale Badges And Product Labels Plugin To Woocommerce has the below shortcodes.
 
-*[asnp_badge hide="1"] to use on the product page.
-*[asnp_badge] to use on the archive product or product listing page.
+* [asnp_badge hide="1"] to use on the product page.
+* [asnp_badge] to use on the archive product or product listing page.
 
 If you would like to show a specific product sale badges, then use the below shortcodes.
 
-*[asnp_badge product_id="7" hide="1"] to use on the product page, replace "7" with your product ID.
-*[asnp_badge product_id="7"] to use on the archive product or product listing page, replace "7" with your product ID.
+* [asnp_badge product_id="7" hide="1"] to use on the product page, replace "7" with your product ID.
+* [asnp_badge product_id="7"] to use on the archive product or product listing page, replace "7" with your product ID.
 
 == 📕 Tutorials ==
 
