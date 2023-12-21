@@ -5,7 +5,7 @@ Tags: sale badges, product labels, WooCommerce badges, WooCommerce sale badges, 
 Requires at least: 5.0
 Tested up to: 6.4
 Requires PHP: 5.6
-Stable tag: 1.2.0
+Stable tag: 1.3.0
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,7 +19,7 @@ WooCommerce Sale Badges and Product Labels elevates your store’s appeal with c
 
 == Features ==
 
-
+https://youtu.be/1d-ICc1tVTc
 
 == Video Tutorial ==
 
@@ -161,6 +161,12 @@ The plugin is rich in features while it is lightweight and fast.
 8. Percentage Discount amount.
 
 == Changelog ==
+
+= 1.3.0 =
+* Fix preview Label.
+* Fix Countdown Timer CSS issues.
+* Fix Upload Image issue.
+
 
 = 1.2.0 =
 * Fix get_terms deprecated args issue.
