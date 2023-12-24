@@ -15,7 +15,7 @@ WooCommerce Sale Badges & Product Labels. Sale labels & countdown timers(PRO) fo
 
 WooCommerce Sale Badges and Product Labels elevates your store’s appeal with customized badges and countdown timers (PRO Version). Unlock the full potential of your WooCommerce store with captivating sale badges, product labels, and countdown timers. This all-in-one plugin empowers you to create eye-catching labels and scheduled badges for products, categories, and tags. Highlighting discount values, product quantities, ratings, shipping classes, stock status, and sale status, these labels provide valuable information to your customers. Plus, leverage the power of countdown timers to create urgency and drive conversions. With an intuitive interface, easily customize labels and replace default on-sale badges. Take your WooCommerce store to new heights with visually appealing badges, labels, and countdown timers tailored to your unique offerings.
 
-[FRONT-END DEMO](https://pricing-and-discounts.asanaplugins.com/demo/shop/) | [BACK-END DEMO](https://pricing-and-discounts.asanaplugins.com/?asnp_demo_plugin=easy-sale-badges-for-woocommerce) | [Ask Questions](https://wordpress.org/support/plugin/easy-sale-badges-for-woocommerce/) | **[PRO WITH 50% DISCOUNT FOR $30](https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/)** | **[Github](https://github.com/codewp/easy-sale-badges-for-woocommerce)**
+[FRONT-END DEMO](https://pricing-and-discounts.asanaplugins.com/demo/shop/) | [BACK-END DEMO](https://pricing-and-discounts.asanaplugins.com/?asnp_demo_plugin=easy-sale-badges-for-woocommerce) | [Ask Questions](https://wordpress.org/support/plugin/easy-sale-badges-for-woocommerce/) | **[PRO WITH 50% DISCOUNT FOR $30](https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/)** | [Github](https://github.com/codewp/easy-sale-badges-for-woocommerce)
 
 == Features ==
 
@@ -163,7 +163,8 @@ The plugin is rich in features while it is lightweight and fast.
 == Changelog ==
 
 = 1.3.0 =
-* Fixed Preview Label.
+* Added post thumbnail html to the single product page supported hooks.
+* Fixed Preview Label issue.
 * Fixed Countdown Timer CSS issues.
 * Fixed Upload Image issue.
 
