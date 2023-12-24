@@ -163,9 +163,9 @@ The plugin is rich in features while it is lightweight and fast.
 == Changelog ==
 
 = 1.3.0 =
-* Fix Preview Label.
-* Fix Countdown Timer CSS issues.
-* Fix Upload Image issue.
+* Fixed Preview Label.
+* Fixed Countdown Timer CSS issues.
+* Fixed Upload Image issue.
 
 = 1.2.0 =
 * Fix get_terms deprecated args issue.
