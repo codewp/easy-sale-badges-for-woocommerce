@@ -32,6 +32,7 @@ const MenuItem = ( props ) => {
 						badgeStyles={ props.badge.badgeStyles }
 						textColor={ props.badge.textColor }
 						fontSizeText={ props.badge.fontSizeText }
+						fontWeightLabel={ props.badge.fontWeightLabel }
 						lineHeightText={ props.badge.lineHeightText }
 					/>
 					<BadgeStyles

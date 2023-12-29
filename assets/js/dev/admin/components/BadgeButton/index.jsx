@@ -244,6 +244,7 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 											style={ {
 												color: `${ badge.textColor }`,
 												fontSize: `${ badge.fontSizeText }px`,
+												fontWeight: `${ badge.fontWeightLabel }`,
 												lineHeight: `${ badge.lineHeightText }px`,
 												opacity: `${ badge.opacity }`,
 												borderTopLeftRadius: `${ badge.topLeftRadius }px`,

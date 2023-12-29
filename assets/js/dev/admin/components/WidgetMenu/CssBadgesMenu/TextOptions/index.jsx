@@ -115,9 +115,12 @@ const TextOptions = ( props ) => {
 			<div className="asnp-flex asnp-mt-[2rem] asnp-w-full">
 				<label>
 					<span className="asnp-field-title">
-						{ __( 'Font Size (Pixel)', 'easy-sale-badges-for-woocommerce' ) }
+						{ __(
+							'Font Size (Pixel)',
+							'easy-sale-badges-for-woocommerce'
+						) }
 					</span>
-					<div className="asnp-w-[15rem]">
+					<div className="asnp-w-[10rem]">
 						<input
 							type="number"
 							min="0"
@@ -133,9 +136,12 @@ const TextOptions = ( props ) => {
 				</label>
 				<label className="asnp-ml-10">
 					<span className="asnp-field-title">
-						{ __( 'Line Height (Pixel)', 'easy-sale-badges-for-woocommerce' ) }
+						{ __(
+							'Line Height (Pixel)',
+							'easy-sale-badges-for-woocommerce'
+						) }
 					</span>
-					<div className="asnp-w-[15rem]">
+					<div className="asnp-w-[10rem]">
 						<input
 							disabled={ disableLineHeight }
 							type="number"
@@ -155,6 +161,63 @@ const TextOptions = ( props ) => {
 								)
 							}
 						/>
+					</div>
+				</label>
+				<label className="asnp-ml-10">
+					<span className="asnp-field-title">
+						{ __(
+							'Font Weight',
+							'easy-sale-badges-for-woocommerce'
+						) }
+					</span>
+					<div className="asnp-w-[10rem]">
+						<select
+							className="asnp-select-field !asnp-w-48 asnp-mt-2"
+							value={ props.fontWeightLabel }
+							onChange={ ( e ) =>
+								props.onChange(
+									'fontWeightLabel',
+									e.target.value
+								)
+							}
+						>
+							<option value="500">
+								{ __(
+									'500',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</option>
+							<option value="600">
+								{ __(
+									'600',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</option>
+							<option value="normal">
+								{ __(
+									'Normal',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</option>
+							<option value="bold">
+								{ __(
+									'Bold',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</option>
+							<option value="bolder">
+								{ __(
+									'Bolder',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</option>
+							<option value="lighter">
+								{ __(
+									'Lighter',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</option>
+						</select>
 					</div>
 				</label>
 			</div>

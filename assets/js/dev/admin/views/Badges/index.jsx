@@ -110,6 +110,7 @@ export default function Badges() {
 					style={ {
 						color: `${ badge.textColor }`,
 						fontSize: `${ badge.fontSizeText }px`,
+						fontWeight: `${ badge.fontWeightLabel }`,
 						lineHeight: `${ badge.lineHeightText }px`,
 						borderTopLeftRadius: `${ badge.topLeftRadius }px`,
 						borderTopRightRadius: `${ badge.topRightRadius }px`,
