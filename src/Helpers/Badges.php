@@ -1115,7 +1115,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 	];
 	$dynamic_styles = apply_filters( 'asnp_wesb_css_badge_styles', $dynamic_styles, $badge, $extra_data );
 
-	add_custom_style( $dynamic_styles );
+	add_custom_style( $dynamic_styles, $badge );
 
 	$class_names = 'asnp-esb-badge-element asnp-esb-productBadge asnp-esb-productBadge-'. absint( $badge->id );
 	if ( $hide ) {

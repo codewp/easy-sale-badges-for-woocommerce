@@ -118,12 +118,12 @@ function is_pro_active() {
 	return defined( 'ASNP_WESB_PRO_VERSION' );
 }
 
-function add_custom_style( $style ) {
+function add_custom_style( $style, $badge = null ) {
 	if ( empty( $style ) ) {
 		return;
 	}
 
-	get_plugin()->container()->get( CustomStyles::class )->add_style( $style );
+	get_plugin()->container()->get( CustomStyles::class )->add_style( $style, $badge );
 }
 
 function display_sale_badges( $product, $hide = false, $return = false ) {
