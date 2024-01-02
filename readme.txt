@@ -5,7 +5,7 @@ Tags: sale badges, product labels, WooCommerce badges, WooCommerce sale badges, 
 Requires at least: 5.0
 Tested up to: 6.4
 Requires PHP: 5.6
-Stable tag: 1.3.0
+Stable tag: 1.4.0
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -115,6 +115,7 @@ If you would like to show a specific product sale badges, then use the below sho
 
 == 📕 Tutorials ==
 
+* <strong>[How to Add Sales Countdown Timer to Products in WooCommerce](https://www.asanaplugins.com/how-to-add-sales-countdown-timer-to-products-in-woocommerce/)</strong>
 * <strong>[WooCommerce Sale Badge Free Plugin](https://www.asanaplugins.com/woocommerce-sale-badge-free-plugin/)</strong>
 * <strong>[How to Add Product Labels in WooCommerce](https://www.asanaplugins.com/how-to-add-product-labels-in-woocommerce/)</strong>
 * <strong>[Add Product Labels to WooCommerce Products](https://www.asanaplugins.com/add-product-labels-to-woocommerce-products-full-guide/)</strong>
@@ -161,6 +162,13 @@ The plugin is rich in features while it is lightweight and fast.
 8. Percentage Discount amount.
 
 == Changelog ==
+
+= 1.4.0 =
+* Added Font-Weight To CSS Label.
+* Added +25 Cyber Monday To Image Label.
+* Fixed adding multiple CSS rules issue.
+* Fixed styles and display on mobile.
+* Fixed an issue in timers.
 
 = 1.3.0 =
 * Added post thumbnail html to the single product page supported hooks.
