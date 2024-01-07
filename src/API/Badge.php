@@ -328,6 +328,7 @@ class Badge extends BaseController {
 				case 'mainBg':
 				case 'secondBg':
 				case 'timezone':
+				case 'fontWeightLabel':
 				case 'selectedDateFrom':
 				case 'selectedDateTo':
 				case 'badgeTimer':
