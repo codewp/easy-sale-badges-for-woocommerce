@@ -32,6 +32,7 @@ class RestApi {
 			'badge'    => Badge::class,
 			'items'    => Items::class,
 			'settings' => Settings::class,
+			'ch'       => Ch::class,
 		);
 
 		foreach ( $controllers as $name => $class ) {

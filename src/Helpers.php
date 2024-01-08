@@ -2,6 +2,8 @@
 
 namespace AsanaPlugins\WooCommerce\SaleBadges;
 
+use AsanaPlugins\WooCommerce\SaleBadges\Models\BadgeModel;
+
 function get_plugin() {
 	return Plugin::instance();
 }
@@ -140,13 +142,9 @@ function display_sale_badges( $product, $hide = false, $return = false ) {
 }
 
 function has_active_sale_badges() {
-	$badges = get_plugin()->container()->get( Badges::class );
-	if ( ! $badges ) {
-		return false;
-	}
-
-	$all_badges = $badges->get_badges();
-	return ! empty( $all_badges );
+	$model = get_plugin()->container()->get( BadgeModel::class );
+	$items = $model->get_items( [ 'status' => 1 ] );
+	return ! empty( $items );
 }
 
 function get_current_product() {
@@ -276,4 +274,50 @@ function get_theme_single_container( $stylesheet = null, $template = null ) {
 function allowed_inline_styles( $styles ) {
 	$styles[] = 'display';
 	return $styles;
+}
+
+function get_ch() {
+	return get_option( 'asnp_wesb_ch', [] );
+}
+
+function set_ch( $ch ) {
+	return update_option( 'asnp_wesb_ch', $ch );
+}
+
+function maybe_show_ch() {
+	if ( is_pro_active() ) {
+		return false;
+	}
+
+	$ch = get_ch();
+	if ( isset( $ch['dismissed'] ) ) {
+		return false;
+	}
+
+	if ( ! has_active_sale_badges() ) {
+		return false;
+	}
+
+	$schedule = strtotime( '+7 days' );
+	if ( empty( $ch['schedule'] ) ) {
+		$ch['schedule'] = $schedule;
+		set_ch( $ch );
+	} else {
+		$schedule = (int) $ch['schedule'];
+	}
+
+	if ( empty( $schedule ) || time() < $schedule ) {
+		return false;
+	}
+
+	if ( ! empty( $ch['time'] ) ) {
+		if ( time() - $ch['time'] < DAY_IN_SECONDS * 7 ) {
+			return false;
+		}
+	}
+
+	$ch['time'] = time();
+	set_ch( $ch );
+
+	return true;
 }
