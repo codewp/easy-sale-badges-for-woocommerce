@@ -77,7 +77,7 @@ class Assets {
 		SaleBadges\register_polyfills();
 		wp_enqueue_style(
 			'asnp-wesb-ch',
-			$this->get_url( 'admin/ch/style', 'css' )
+			$this->get_url( 'ch/style', 'css' )
 		);
 		wp_enqueue_script(
 			'asnp-wesb-ch',

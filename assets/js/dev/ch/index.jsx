@@ -21,7 +21,7 @@ const maybeShow = () => {
 		return true;
 	}
 
-	const max = 4;
+	const max = 2;
 	const num = Math.floor( max / 2 );
 	const ch = Math.floor( Math.random() * max ) + 1;
 	return ch == num;
