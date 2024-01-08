@@ -284,6 +284,32 @@ function set_ch( $ch ) {
 	return update_option( 'asnp_wesb_ch', $ch );
 }
 
+function applicable_ch( array $ch ) {
+	if ( isset( $ch['show'] ) ) {
+		return true;
+	}
+
+	if ( ! empty( $ch['time'] ) ) {
+		if ( time() - $ch['time'] < DAY_IN_SECONDS * 7 ) {
+			return false;
+		}
+	}
+
+	$ch['time'] = time();
+
+	$max  = 2;
+	$num  = floor( $max / 2 );
+	$rand = rand( 1, $max );
+
+	if ( $rand == $num ) {
+		$ch['show'] = true;
+		set_ch( $ch );
+		return true;
+	}
+
+	return false;
+}
+
 function maybe_show_ch() {
 	if ( is_pro_active() ) {
 		return false;
@@ -310,14 +336,5 @@ function maybe_show_ch() {
 		return false;
 	}
 
-	if ( ! empty( $ch['time'] ) ) {
-		if ( time() - $ch['time'] < DAY_IN_SECONDS * 7 ) {
-			return false;
-		}
-	}
-
-	$ch['time'] = time();
-	set_ch( $ch );
-
-	return true;
+	return applicable_ch( $ch );
 }

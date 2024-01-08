@@ -37,7 +37,6 @@ export default function Ch() {
 	};
 
 	const clearStorage = () => {
-		localStorage.removeItem( 'asnp_wesb_show_ch' );
 		localStorage.removeItem( 'asnp_wesb_ch_id' );
 	};
 

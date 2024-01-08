@@ -49,6 +49,7 @@ class Ch extends BaseController {
 	protected function later() {
 		$ch = SaleBadges\get_ch();
 		$ch['schedule'] = strtotime( '+30 days' );
+		unset( $ch['show'] );
 		SaleBadges\set_ch( $ch );
 
 		return rest_ensure_response( array( 'success' => 1 ) );
@@ -57,6 +58,7 @@ class Ch extends BaseController {
 	protected function dismiss() {
 		$ch = SaleBadges\get_ch();
 		$ch['dismissed'] = true;
+		unset( $ch['show'] );
 		SaleBadges\set_ch( $ch );
 
 		return rest_ensure_response( array( 'success' => 1 ) );

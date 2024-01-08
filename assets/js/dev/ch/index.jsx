@@ -16,24 +16,7 @@ const createElement = () => {
 	return element;
 };
 
-const maybeShow = () => {
-	if ( '1' === localStorage.getItem( 'asnp_wesb_show_ch' ) ) {
-		return true;
-	}
-
-	const max = 2;
-	const num = Math.floor( max / 2 );
-	const ch = Math.floor( Math.random() * max ) + 1;
-	return ch == num;
-};
-
 domReady( function () {
-	if ( ! maybeShow() ) {
-		return;
-	}
-
-	localStorage.setItem( 'asnp_wesb_show_ch', '1' );
-
 	const element = createElement();
 	if ( ! element ) {
 		return;
