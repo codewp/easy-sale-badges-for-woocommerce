@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { __ } from '@wordpress/i18n';
 import { LockClosedIcon } from '@heroicons/react/solid';
 import TextOptions from './../CssBadgesMenu/TextOptions';
@@ -28,8 +28,8 @@ const MenuItem = ( props ) => {
 			{ props.activeStatus == 1 && (
 				<div className="asnp-mt-3">
 					<TextOptions
-						show={show}
-						setShow={setShow}
+						show={ show }
+						setShow={ setShow }
 						onChange={ props.onChange }
 						badgeLabel={ props.badge.badgeLabel }
 						badgeStyles={ props.badge.badgeStyles }
@@ -98,7 +98,10 @@ const MenuItem = ( props ) => {
 							target="_blank"
 						>
 							<button className="asnp-btn asnp-btn-delete !asnp-w-[14rem] asnp-flex asnp-text-center asnp-justify-center">
-								{ __( 'Go Pro', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Go Pro',
+									'easy-sale-badges-for-woocommerce'
+								) }
 								<LockClosedIcon
 									width="17"
 									height="17"
@@ -111,10 +114,16 @@ const MenuItem = ( props ) => {
 						<BadgeImageStyle />
 						<div>
 							<label className="asnp-block asnp-text-sm asnp-font-medium asnp-text-gray-700">
-								{ __( 'Custom Image', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Custom Image',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</label>
 							<button className="asnp-btn asnp-btn-primary asnp-mt-4 asnp-mb-4">
-								{ __( 'Upload Image', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Upload Image',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</button>
 						</div>
 						<Options />
@@ -130,7 +139,10 @@ const MenuItem = ( props ) => {
 							href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
 						>
 							<button className="asnp-btn asnp-btn-delete !asnp-w-[14rem] asnp-flex asnp-text-center asnp-justify-center">
-								{ __( 'Go Pro', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Go Pro',
+									'easy-sale-badges-for-woocommerce'
+								) }
 								<LockClosedIcon
 									width="17"
 									height="17"
