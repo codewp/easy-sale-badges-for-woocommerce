@@ -303,11 +303,11 @@ function applicable_ch( array $ch ) {
 
 	if ( $rand == $num ) {
 		$ch['show'] = true;
-		set_ch( $ch );
-		return true;
 	}
 
-	return false;
+	set_ch( $ch );
+
+	return $rand == $num;
 }
 
 function maybe_show_ch() {
