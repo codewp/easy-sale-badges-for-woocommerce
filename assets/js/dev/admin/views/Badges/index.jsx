@@ -94,8 +94,7 @@ export default function Badges() {
 			badge.badgeStyles == 'badge1' ||
 			badge.badgeStyles == 'badge2' ||
 			badge.badgeStyles == 'badge3' ||
-			badge.badgeStyles == 'badge4' ||
-			badge.badgeStyles == 'badge5'
+			badge.badgeStyles == 'badge4' 
 		) {
 			mtop = 15;
 		} else {

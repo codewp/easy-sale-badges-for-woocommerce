@@ -48,7 +48,7 @@ export default function App() {
 					</a>
 					<a
 						target="_blank"
-						href="https://www.asanaplugins.com/support/"
+						href="https://wordpress.org/support/plugin/easy-sale-badges-for-woocommerce/"
 					>
 						<button className="asnp-btn asnp-btn-primary asnp-ml-2 asnp-w-[8rem]">
 							{ __( 'Need help?', 'easy-sale-badges-for-woocommerce' ) }
