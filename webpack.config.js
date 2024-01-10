@@ -35,6 +35,7 @@ let adminConfig = {
 	mode: NODE_ENV,
 	entry: {
 		admin: './assets/js/dev/admin/index.js',
+		ch: './assets/js/dev/ch/index.jsx',
 	},
 	output: {
 		filename: './assets/js/admin/[name]/index.js',
