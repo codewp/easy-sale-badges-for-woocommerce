@@ -71,6 +71,72 @@ const MenuItem = ( props ) => {
 						badgePositionLeft={ props.badge.badgePositionLeft }
 						badgePositionRight={ props.badge.badgePositionRight }
 					/>
+					<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold asnp-text-red-600">
+						{ __(
+							'Animation Effects (Pro Version)',
+							'easy-sale-badges-for-woocommerce'
+						) }
+					</div>
+					<div className="asnp-flex asnp-mt-[2rem] asnp-w-full">
+						<label>
+							<span className="asnp-field-title">
+								{ __(
+									'Animation',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</span>
+							<div className="asnp-w-[10rem]">
+								<select
+									className="asnp-select-field !asnp-w-48 asnp-mt-2 !asnp-h-[2.4rem]"
+									disabled
+								>
+									<option value="none">
+										{ __(
+											'None',
+											'easy-sale-badges-for-woocommerce'
+										) }
+									</option>
+								</select>
+							</div>
+						</label>
+						<label className="asnp-ml-14">
+							<span className="asnp-field-title">
+								{ __(
+									'Iteration Count',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</span>
+							<div className="asnp-w-[10rem]">
+								<select
+									className="asnp-select-field !asnp-w-48 asnp-mt-2 !asnp-h-[2.4rem]"
+									disabled
+								>
+									<option value="infinite">
+										{ __(
+											'Infinite',
+											'easy-sale-badges-for-woocommerce'
+										) }
+									</option>
+								</select>
+							</div>
+						</label>
+						<label className="asnp-ml-14">
+							<span className="asnp-field-title">
+								{ __(
+									'Duration',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</span>
+							<div className="asnp-w-[10rem]">
+								<input
+									disabled
+									type="number"
+									className="asnp-text-field"
+									placeholder="0"
+								/>
+							</div>
+						</label>
+					</div>
 				</div>
 			) }
 
@@ -95,7 +161,10 @@ const MenuItem = ( props ) => {
 							target="_blank"
 						>
 							<button className="asnp-btn asnp-btn-delete !asnp-w-[14rem] asnp-flex asnp-text-center asnp-justify-center">
-								{ __( 'Go Pro', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Go Pro',
+									'easy-sale-badges-for-woocommerce'
+								) }
 								<LockClosedIcon
 									width="17"
 									height="17"
@@ -108,13 +177,85 @@ const MenuItem = ( props ) => {
 						<BadgeImageStyle />
 						<div>
 							<label className="asnp-block asnp-text-sm asnp-font-medium asnp-text-gray-700">
-								{ __( 'Custom Image', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Custom Image',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</label>
 							<button className="asnp-btn asnp-btn-primary asnp-mt-4 asnp-mb-4">
-								{ __( 'Upload Image', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Upload Image',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</button>
 						</div>
 						<Options />
+						<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold">
+							{ __(
+								'Animation Effects',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</div>
+						<div className="asnp-flex asnp-mt-[2rem] asnp-w-full">
+							<label>
+								<span className="asnp-field-title">
+									{ __(
+										'Animation',
+										'easy-sale-badges-for-woocommerce'
+									) }
+								</span>
+								<div className="asnp-w-[10rem]">
+									<select
+										className="asnp-select-field !asnp-w-48 asnp-mt-2 !asnp-h-[2.4rem]"
+										disabled
+									>
+										<option value="none">
+											{ __(
+												'None',
+												'easy-sale-badges-for-woocommerce'
+											) }
+										</option>
+									</select>
+								</div>
+							</label>
+							<label className="asnp-ml-14">
+								<span className="asnp-field-title">
+									{ __(
+										'Iteration Count',
+										'easy-sale-badges-for-woocommerce'
+									) }
+								</span>
+								<div className="asnp-w-[10rem]">
+									<select
+										className="asnp-select-field !asnp-w-48 asnp-mt-2 !asnp-h-[2.4rem]"
+										disabled
+									>
+										<option value="infinite">
+											{ __(
+												'Infinite',
+												'easy-sale-badges-for-woocommerce'
+											) }
+										</option>
+									</select>
+								</div>
+							</label>
+							<label className="asnp-ml-14">
+								<span className="asnp-field-title">
+									{ __(
+										'Duration',
+										'easy-sale-badges-for-woocommerce'
+									) }
+								</span>
+								<div className="asnp-w-[10rem]">
+									<input
+										disabled
+										type="number"
+										className="asnp-text-field"
+										placeholder="0"
+									/>
+								</div>
+							</label>
+						</div>
 					</div>
 				</div>
 			) }
@@ -127,7 +268,10 @@ const MenuItem = ( props ) => {
 							href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
 						>
 							<button className="asnp-btn asnp-btn-delete !asnp-w-[14rem] asnp-flex asnp-text-center asnp-justify-center">
-								{ __( 'Go Pro', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Go Pro',
+									'easy-sale-badges-for-woocommerce'
+								) }
 								<LockClosedIcon
 									width="17"
 									height="17"
