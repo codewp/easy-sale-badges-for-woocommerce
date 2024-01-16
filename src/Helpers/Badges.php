@@ -159,6 +159,22 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 	}
 	$dynamic_styles .= '}';
 
+	$styles = '';
+
+	if ( isset( $badge->animationSelect ) ) {
+		$styles .= ' animation-name: ' . esc_html( $badge->animationSelect ) . ';';
+	}
+	if ( isset( $badge->animateDuration ) ) {
+		$styles .= ' animation-duration: ' . esc_html( $badge->animateDuration ) . 's;';
+	}
+	if ( isset( $badge->animationCount ) ) {
+		$styles .= ' animation-iteration-count: ' . esc_html( $badge->animationCount ) . ';';
+	}
+
+	if ( ! empty( $styles ) ) {
+		$dynamic_styles .= '.asnp-esb-badge-'. absint( $badge->id ) . ' {' . $styles . '}';
+	}
+
 	switch ( $badge->badgeStyles ) {
 		case 'badge1':
 			$dynamic_styles .= '.asnp-esb-productBadge-'. absint( $badge->id ) .' {';
@@ -202,15 +218,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->fontWeightLabel ) ) {
 				$dynamic_styles .= ' font-weight: ' . $badge->fontWeightLabel . ';';
 			}
-			if ( isset( $badge->animateDuration ) ) {
-				$dynamic_styles .= ' animation-duration: ' . $badge->animateDuration . 's;';
-			}
-			if ( isset( $badge->animationCount ) ) {
-				$dynamic_styles .= ' animation-iteration-count: ' . $badge->animationCount . ';';
-			}
-			if ( isset( $badge->animationSelect ) ) {
-				$dynamic_styles .= ' animation-name: ' . $badge->animationSelect . ';';
-			}
 			if ( isset( $badge->lineHeightText ) ) {
 				$dynamic_styles .= ' line-height: ' . $badge->lineHeightText . 'px;';
 			}
@@ -247,7 +254,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 				$dynamic_styles .= ' transform:' . $transform;
 			}
 			$dynamic_styles .= '}';
-
 			break;
 
 		case 'badge2':
@@ -287,15 +293,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			}
 			if ( isset( $badge->fontWeightLabel ) ) {
 				$dynamic_styles .= ' font-weight: ' . $badge->fontWeightLabel . ';';
-			}
-			if ( isset( $badge->animateDuration ) ) {
-				$dynamic_styles .= ' animation-duration: ' . $badge->animateDuration . 's;';
-			}
-			if ( isset( $badge->animationCount ) ) {
-				$dynamic_styles .= ' animation-iteration-count: ' . $badge->animationCount . ';';
-			}
-			if ( isset( $badge->animationSelect ) ) {
-				$dynamic_styles .= ' animation-name: ' . $badge->animationSelect . ';';
 			}
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
@@ -398,15 +395,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->fontWeightLabel ) ) {
 				$dynamic_styles .= ' font-weight: ' . $badge->fontWeightLabel . ';';
 			}
-			if ( isset( $badge->animateDuration ) ) {
-				$dynamic_styles .= ' animation-duration: ' . $badge->animateDuration . 's;';
-			}
-			if ( isset( $badge->animationCount ) ) {
-				$dynamic_styles .= ' animation-iteration-count: ' . $badge->animationCount . ';';
-			}
-			if ( isset( $badge->animationSelect ) ) {
-				$dynamic_styles .= ' animation-name: ' . $badge->animationSelect . ';';
-			}
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
 			}
@@ -504,15 +492,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			}
 			if ( isset( $badge->fontWeightLabel ) ) {
 				$dynamic_styles .= ' font-weight: ' . $badge->fontWeightLabel . ';';
-			}
-			if ( isset( $badge->animateDuration ) ) {
-				$dynamic_styles .= ' animation-duration: ' . $badge->animateDuration . 's;';
-			}
-			if ( isset( $badge->animationCount ) ) {
-				$dynamic_styles .= ' animation-iteration-count: ' . $badge->animationCount . ';';
-			}
-			if ( isset( $badge->animationSelect ) ) {
-				$dynamic_styles .= ' animation-name: ' . $badge->animationSelect . ';';
 			}
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
@@ -627,15 +606,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->fontWeightLabel ) ) {
 				$dynamic_styles .= ' font-weight: ' . $badge->fontWeightLabel . ';';
 			}
-			if ( isset( $badge->animateDuration ) ) {
-				$dynamic_styles .= ' animation-duration: ' . $badge->animateDuration . 's;';
-			}
-			if ( isset( $badge->animationCount ) ) {
-				$dynamic_styles .= ' animation-iteration-count: ' . $badge->animationCount . ';';
-			}
-			if ( isset( $badge->animationSelect ) ) {
-				$dynamic_styles .= ' animation-name: ' . $badge->animationSelect . ';';
-			}
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
 			}
@@ -723,15 +693,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			}
 			if ( isset( $badge->fontWeightLabel ) ) {
 				$dynamic_styles .= ' font-weight: ' . $badge->fontWeightLabel . ';';
-			}
-			if ( isset( $badge->animateDuration ) ) {
-				$dynamic_styles .= ' animation-duration: ' . $badge->animateDuration . 's;';
-			}
-			if ( isset( $badge->animationCount ) ) {
-				$dynamic_styles .= ' animation-iteration-count: ' . $badge->animationCount . ';';
-			}
-			if ( isset( $badge->animationSelect ) ) {
-				$dynamic_styles .= ' animation-name: ' . $badge->animationSelect . ';';
 			}
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
@@ -841,15 +802,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->fontWeightLabel ) ) {
 				$dynamic_styles .= ' font-weight: ' . $badge->fontWeightLabel . ';';
 			}
-			if ( isset( $badge->animateDuration ) ) {
-				$dynamic_styles .= ' animation-duration: ' . $badge->animateDuration . 's;';
-			}
-			if ( isset( $badge->animationCount ) ) {
-				$dynamic_styles .= ' animation-iteration-count: ' . $badge->animationCount . ';';
-			}
-			if ( isset( $badge->animationSelect ) ) {
-				$dynamic_styles .= ' animation-name: ' . $badge->animationSelect . ';';
-			}
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
 			}
@@ -945,15 +897,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->fontWeightLabel ) ) {
 				$dynamic_styles .= ' font-weight: ' . $badge->fontWeightLabel . ';';
 			}
-			if ( isset( $badge->animateDuration ) ) {
-				$dynamic_styles .= ' animation-duration: ' . $badge->animateDuration . 's;';
-			}
-			if ( isset( $badge->animationCount ) ) {
-				$dynamic_styles .= ' animation-iteration-count: ' . $badge->animationCount . ';';
-			}
-			if ( isset( $badge->animationSelect ) ) {
-				$dynamic_styles .= ' animation-name: ' . $badge->animationSelect . ';';
-			}
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
 			}
@@ -1036,15 +979,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			}
 			if ( isset( $badge->fontWeightLabel ) ) {
 				$dynamic_styles .= ' font-weight: ' . $badge->fontWeightLabel . ';';
-			}
-			if ( isset( $badge->animateDuration ) ) {
-				$dynamic_styles .= ' animation-duration: ' . $badge->animateDuration . 's;';
-			}
-			if ( isset( $badge->animationCount ) ) {
-				$dynamic_styles .= ' animation-iteration-count: ' . $badge->animationCount . ';';
-			}
-			if ( isset( $badge->animationSelect ) ) {
-				$dynamic_styles .= ' animation-name: ' . $badge->animationSelect . ';';
 			}
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
@@ -1147,15 +1081,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			}
 			if ( isset( $badge->fontWeightLabel ) ) {
 				$dynamic_styles .= ' font-weight: ' . $badge->fontWeightLabel . ';';
-			}
-			if ( isset( $badge->animateDuration ) ) {
-				$dynamic_styles .= ' animation-duration: ' . $badge->animateDuration . 's;';
-			}
-			if ( isset( $badge->animationCount ) ) {
-				$dynamic_styles .= ' animation-iteration-count: ' . $badge->animationCount . ';';
-			}
-			if ( isset( $badge->animationSelect ) ) {
-				$dynamic_styles .= ' animation-name: ' . $badge->animationSelect . ';';
 			}
 			if ( isset( $badge->textColor ) ) {
 				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
