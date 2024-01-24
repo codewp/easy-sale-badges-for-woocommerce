@@ -167,6 +167,7 @@ The plugin is rich in features while it is lightweight and fast.
 = 1.6.0 =
 * Added +25 Buy 2 Get 1 Free Image Labels.
 * Added +20 Shipping Image Labels.
+* Compatibility with WooCommerce 8.5.1
 
 = 1.5.0 =
 * Added 10 Animation Effects to CSS Labels.
