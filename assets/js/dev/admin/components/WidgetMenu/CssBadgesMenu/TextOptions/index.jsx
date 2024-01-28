@@ -25,20 +25,62 @@ const TextOptions = ( props ) => {
 	return (
 		<div className="asnp-ew-line">
 			<div className="asnp-mt-8 asnp-flex">
-				<label className="asnp-w-[20rem]">
-					<span className="asnp-field-title">
-						{ __( 'Label', 'easy-sale-badges-for-woocommerce' ) }
-					</span>
-					<input
-						type="text"
-						className="asnp-text-field"
-						placeholder="Label"
-						value={ props.badgeLabel }
-						onChange={ ( e ) =>
-							props.onChange( 'badgeLabel', e.target.value )
-						}
-					/>
-				</label>
+				<div>
+					<label className="asnp-w-[20rem]">
+						<span className="asnp-field-title">
+							{ __(
+								'Label',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</span>
+						<input
+							type="text"
+							className="asnp-text-field"
+							placeholder="Label"
+							value={ props.badgeLabel }
+							onChange={ ( e ) =>
+								props.onChange( 'badgeLabel', e.target.value )
+							}
+						/>
+					</label>
+					<div className="asnp-block asnp-space-y-1 asnp-mt-1">
+						<p className="asnp-text-sm asnp-text-gray-400">
+							{ __(
+								'Use the following placeholders to display dynamic values. For example:',
+								'easy-sale-badges-for-woocommerce'
+							) }
+							<br />
+							<strong>
+								{ __(
+									"'Sale [save_percent]'",
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</strong>
+							{ __(
+								' will be rendered as ',
+								'easy-sale-badges-for-woocommerce'
+							) }
+							<strong>
+								{ __(
+									"'Sale 20%'",
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</strong>
+						</p>
+						<p className="asnp-text-sm asnp-text-gray-400">
+							{ __(
+								'placeholders : ',
+								'easy-sale-badges-for-woocommerce'
+							) }
+							<strong>
+								{ __(
+									'[price] [regular_price] [save_percent] [save_amount] [sale_ends] [qty] [symbol] [sku] [br]',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</strong>
+						</p>
+					</div>
+				</div>
 				<label className="asnp-ml-10 asnp-mt-8 asnp-flex">
 					<input
 						className="asnp-form-check-input asnp-appearance-none asnp-h-4 asnp-w-4  asnp-border asnp-border-gray-300 asnp-rounded-sm asnp-bg-white checked:asnp-bg-indigo-600 checked:asnp-border-indigo-600 focus:asnp-outline-none asnp-transition asnp-duration-200 asnp-mt-1 asnp-align-top asnp-bg-no-repeat asnp-bg-center asnp-bg-contain asnp-float-left asnp-mr-2 asnp-cursor-pointer"

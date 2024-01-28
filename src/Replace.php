@@ -19,16 +19,16 @@ class Replace {
 		}
 
         $placeholders = apply_filters( 'asnp_wesb_placeholders', [
-            '/{regular_price}/i' => 'regular_price',
-            '/{sale_price}/i' => 'sale_price',
-            '/{price}/i' => 'price',
-            '/{save_amount\s*\|*\s*([\d]*)\s*}/i' => 'save_amount',
-            '/{save_percent\s*\|*\s*([\d]*)\s*}/i' => 'save_percent',
-            '/{sale_ends}/i' => 'sale_ends',
-            '/{symbol}/i' => 'currency_symbol',
-            '/{qty}/i' => 'quantity',
-            '/{br}/i' => 'br',
-            '/{sku}/i' => 'sku',
+            '/[regular_price]/i' => 'regular_price',
+            '/[sale_price]/i' => 'sale_price',
+            '/[price]/i' => 'price',
+            '/[save_amount\s*\|*\s*([\d]*)\s*]/i' => 'save_amount',
+            '/[save_percent\s*\|*\s*([\d]*)\s*]/i' => 'save_percent',
+            '/[sale_ends]/i' => 'sale_ends',
+            '/[symbol]/i' => 'currency_symbol',
+            '/[qty]/i' => 'quantity',
+            '/[br]/i' => 'br',
+            '/[sku]/i' => 'sku',
         ] );
 
         if ( empty( $placeholders ) ) {
