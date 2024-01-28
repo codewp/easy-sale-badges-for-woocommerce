@@ -43,7 +43,7 @@ const TextOptions = ( props ) => {
 							}
 						/>
 					</label>
-					<div className="asnp-block asnp-space-y-1 asnp-mt-1">
+					<div className="asnp-block asnp-space-y-1 asnp-mt-1 asnp-w-[30rem]">
 						<p className="asnp-text-sm asnp-text-gray-400">
 							{ __(
 								'Use the following placeholders to display dynamic values. For example:',
