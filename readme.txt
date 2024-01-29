@@ -166,6 +166,7 @@ The plugin is rich in features while it is lightweight and fast.
 == Changelog ==
 
 = 1.6.0 =
+* Added Price, Sale Price, Regular Price, Save percent, Save Amount, Sale Ends, Currency Symbol, Quantity, sku, br, as Dynamic Placeholders to Labels.
 * Added +25 Buy 2 Get 1 Free Image Labels.
 * Added +20 Shipping Image Labels.
 * Compatibility with WooCommerce 8.5.1
