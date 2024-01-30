@@ -276,6 +276,78 @@ function allowed_inline_styles( $styles ) {
 	return $styles;
 }
 
+function get_saved_percent( $product ) {
+	if ( is_numeric( $product ) ) {
+		$product = wc_get_product( $product );
+	}
+
+	if ( ! $product ) {
+		return false;
+	}
+
+	if ( false !== strpos( $product->get_type(), 'variable' ) ) {
+		$prices         = $product->get_variation_prices();
+		$max_percentage = 0;
+		foreach( $prices['price'] as $key => $price ) {
+			// Only on sale variations
+			if ( $prices['regular_price'][ $key ] > $price ) {
+				$percentage = ( floatval( $prices['regular_price'][ $key ] ) - floatval( $price ) ) / floatval( $prices['regular_price'][ $key ] ) * 100;
+				if ( $percentage > $max_percentage ) {
+					$max_percentage = $percentage;
+				}
+			}
+		}
+		if ( 0 < $max_percentage ) {
+			return $max_percentage;
+		}
+	} else {
+		$regular_price = $product->get_regular_price();
+		$sale_price    = $product->get_sale_price();
+		if ( '' !== $sale_price && $sale_price < $regular_price ) {
+			return ( floatval( $regular_price ) - floatval( $sale_price ) ) / floatval( $regular_price ) * 100;
+		}
+	}
+
+	return false;
+}
+
+function get_saved_price( $product ) {
+	// Calculate saved price amount from product sale and regular price.
+	$product = is_numeric( $product ) ? wc_get_product( $product ) : $product;
+	if ( ! $product ) {
+		return false;
+	}
+
+	if ( ! $product->is_on_sale() ) {
+		return false;
+	}
+
+	if ( false !== strpos( $product->get_type(), 'variable' ) ) {
+		$prices     = $product->get_variation_prices();
+		$max_amount = 0;
+		foreach( $prices['price'] as $key => $price ) {
+			// Only on sale variations
+			if ( $prices['regular_price'][ $key ] > $price ) {
+				$amount = floatval( $prices['regular_price'][ $key ] ) - floatval( $price );
+				if ( $amount > $max_amount ) {
+					$max_amount = $amount;
+				}
+			}
+		}
+		if ( 0 < $max_amount ) {
+			return wc_price( $max_amount );
+		}
+	} else {
+		$regular_price = $product->get_regular_price();
+		$sale_price    = $product->get_sale_price();
+		if ( '' !== $sale_price && $sale_price < $regular_price ) {
+			return wc_price( floatval( $regular_price ) - floatval( $sale_price ) );
+		}
+	}
+
+	return false;
+}
+
 function get_ch() {
 	return get_option( 'asnp_wesb_ch', [] );
 }

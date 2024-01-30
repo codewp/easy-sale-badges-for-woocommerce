@@ -25,34 +25,80 @@ const TextOptions = ( props ) => {
 	return (
 		<div className="asnp-ew-line">
 			<div className="asnp-mt-8 asnp-flex">
-				<label className="asnp-w-[20rem]">
-					<span className="asnp-field-title">
-						{ __( 'Label', 'easy-sale-badges-for-woocommerce' ) }
-					</span>
-					<input
-						type="text"
-						className="asnp-text-field"
-						placeholder="Label"
-						value={ props.badgeLabel }
-						onChange={ ( e ) =>
-							props.onChange( 'badgeLabel', e.target.value )
-						}
-					/>
-				</label>
+				<div>
+					<label className="asnp-w-[20rem]">
+						<span className="asnp-field-title">
+							{ __(
+								'Label',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</span>
+						<input
+							type="text"
+							className="asnp-text-field"
+							placeholder="Label"
+							value={ props.badgeLabel }
+							onChange={ ( e ) =>
+								props.onChange( 'badgeLabel', e.target.value )
+							}
+						/>
+					</label>
+					<div className="asnp-block asnp-space-y-1 asnp-mt-1 asnp-w-[30rem]">
+						<p className="asnp-text-sm asnp-text-gray-400">
+							{ __(
+								'Use the following placeholders to display dynamic values. For example:',
+								'easy-sale-badges-for-woocommerce'
+							) }
+							<br />
+							<strong className="asnp-text-[#483d8b]">
+								{ __(
+									"'Sale [saved_percent]'",
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</strong>
+							{ __(
+								' will be rendered as ',
+								'easy-sale-badges-for-woocommerce'
+							) }
+							<strong className="asnp-text-[#483d8b]">
+								{ __(
+									"'Sale 20%'",
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</strong>
+						</p>
+						<p className="asnp-text-sm asnp-text-gray-400">
+							{ __(
+								'placeholders : ',
+								'easy-sale-badges-for-woocommerce'
+							) }
+							<strong className="asnp-text-[#483d8b]">
+								{ __(
+									'[price] [regular_price] [sale_price] [saved_percent] [saved_price] [sale_ends] [qty] [currency] [sku] [br]',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</strong>
+						</p>
+					</div>
+				</div>
 				<label className="asnp-ml-10 asnp-mt-8 asnp-flex">
 					<input
-						className="asnp-form-check-input asnp-appearance-none asnp-h-4 asnp-w-4  asnp-border asnp-border-gray-300 asnp-rounded-sm asnp-bg-white checked:asnp-bg-indigo-600 checked:asnp-border-indigo-600 focus:asnp-outline-none asnp-transition asnp-duration-200 asnp-mt-1 asnp-align-top asnp-bg-no-repeat asnp-bg-center asnp-bg-contain asnp-float-left asnp-mr-2 asnp-cursor-pointer"
+						className="asnp-form-check-input asnp-appearance-none asnp-h-4 asnp-w-4 asnp-border asnp-border-gray-300 asnp-rounded-sm !asnp-bg-white checked:asnp-bg-indigo-600 checked:asnp-border-indigo-600 focus:asnp-outline-none asnp-transition asnp-duration-200 asnp-mt-1 asnp-align-top asnp-bg-no-repeat asnp-bg-center asnp-bg-contain asnp-float-left asnp-mr-2 asnp-cursor-pointer"
 						type="checkbox"
-						disabled
+						id="inlineCheckbox3"
+						checked={ 1 == props.percentageDiscount }
+						onChange={ ( e ) =>
+							props.onChange(
+								'percentageDiscount',
+								e.target.checked ? 1 : 0
+							)
+						}
 					/>
 					<div className="asnp-flex asnp-font-semibold asnp-text-base">
 						{ __(
 							'Percentage Discount amount',
 							'asnp-easy-whatsapp'
 						) }
-						<div className="asnp-text-red-600 asnp-text-base asnp-uppercase asnp-ml-[0.3rem]">
-							{ __( '(Pro)', 'asnp-easy-whatsapp' ) }
-						</div>
 						<div className="asnp-ml-1 asnp-cursor-pointer asnp-mt-[0.2rem]">
 							<Tippy
 								interactive={ true }

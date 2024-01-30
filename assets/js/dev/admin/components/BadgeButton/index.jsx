@@ -213,6 +213,17 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 		}
 	}, [ badge.badgeStyles ] );
 
+	const updatedBadgeLabel = badge.badgeLabel
+		.replace( /\[regular_price\]/g, '100$' )
+		.replace( /\[price\]/g, '80$' )
+		.replace( /\[sale_price\]/g, '80$' )
+		.replace( /\[saved_percent\]/g, '20%' )
+		.replace( /\[saved_price\]/g, '20$' )
+		.replace( /\[sale_ends\]/g, '8 days' )
+		.replace( /\[currency\]/g, '$' )
+		.replace( /\[qty\]/g, '11' )
+		.replace( /\[sku\]/g, 'sku' );
+
 	return (
 		<div className="asnp-esb-wrapper">
 			<div className="asnp-esb-containerAd">
@@ -267,13 +278,21 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 														whiteSpace: `${ textNoWrap }`,
 													} }
 												>
-													{ badge.badgeLabel }
+													{ updatedBadgeLabel }
 												</div>
 											</StyledSpanOne>
 										</StyledSpan>
 									</div>
 								) }
 						</div>
+					</div>
+					<div className="asnp-mt-4 asnp-ml-40 asnp-text-base asnp-text-black">
+						<del className="asnp-text-gray-400">
+							{ __( '$100', 'easy-sale-badges-for-woocommerce' ) }
+						</del>
+						<span className="asnp-ml-1">
+							{ __( '$80', 'easy-sale-badges-for-woocommerce' ) }
+						</span>
 					</div>
 				</div>
 			</div>

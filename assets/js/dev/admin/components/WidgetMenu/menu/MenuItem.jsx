@@ -34,6 +34,7 @@ const MenuItem = ( props ) => {
 						fontSizeText={ props.badge.fontSizeText }
 						fontWeightLabel={ props.badge.fontWeightLabel }
 						lineHeightText={ props.badge.lineHeightText }
+						percentageDiscount={ props.badge.percentageDiscount }
 					/>
 					<BadgeStyles
 						onChange={ props.onChange }

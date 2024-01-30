@@ -61,6 +61,7 @@ const defaultBadge = {
 	items: [ [ { ...initialItem } ] ],
 	schedule: [],
 	fontWeightLabel: '600',
+	percentageDiscount: 0,
 };
 
 export default function Badge() {
