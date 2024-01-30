@@ -52,7 +52,7 @@ const TextOptions = ( props ) => {
 							<br />
 							<strong>
 								{ __(
-									"'Sale [save_percent]'",
+									"'Sale [saved_percent]'",
 									'easy-sale-badges-for-woocommerce'
 								) }
 							</strong>
@@ -74,7 +74,7 @@ const TextOptions = ( props ) => {
 							) }
 							<strong>
 								{ __(
-									'[price] [regular_price] [save_percent] [save_amount] [sale_ends] [qty] [symbol] [sku] [br]',
+									'[price] [regular_price] [saved_percent] [saved_price] [sale_ends] [qty] [currency] [sku] [br]',
 									'easy-sale-badges-for-woocommerce'
 								) }
 							</strong>
