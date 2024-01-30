@@ -143,6 +143,7 @@ final class Plugin {
 		$this->container->get( CustomStyles::class )->init();
 
 		Hooks::init();
+		Placeholder::init();
 
 		add_action( 'init', [ $this, 'add_shortcodes' ] );
 	}
