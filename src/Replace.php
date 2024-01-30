@@ -25,7 +25,7 @@ class Replace {
             '/[save_amount\s*\|*\s*([\d]*)\s*]/i' => 'save_amount',
             '/[save_percent\s*\|*\s*([\d]*)\s*]/i' => 'save_percent',
             '/[sale_ends]/i' => 'sale_ends',
-            '/[symbol]/i' => 'currency_symbol',
+            '/[currency]/i' => 'currency',
             '/[qty]/i' => 'quantity',
             '/[br]/i' => 'br',
             '/[sku]/i' => 'sku',

@@ -214,9 +214,15 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 	}, [ badge.badgeStyles ] );
 
 	const updatedBadgeLabel = badge.badgeLabel
-		.replace( /\[regular_price\]/g, '100' )
-		.replace( /\[price\]/g, '80' )
-		.replace( /\[save_percent\]/g, '20%' );
+		.replace( /\[regular_price\]/g, '100$' )
+		.replace( /\[price\]/g, '80$' )
+		.replace( /\[sale_price\]/g, '80$' )
+		.replace( /\[save_percent\]/g, '20%' )
+		.replace( /\[save_amount\]/g, '20$' )
+		.replace( /\[sale_ends\]/g, '8' )
+		.replace( /\[currency\]/g, '$' )
+		.replace( /\[qty\]/g, '11' )
+		.replace( /\[sku\]/g, 'sku' );
 
 	return (
 		<div className="asnp-esb-wrapper">
@@ -284,7 +290,7 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 						<del className="asnp-text-gray-400">
 							{ __( '$100', 'easy-sale-badges-for-woocommerce' ) }
 						</del>
-						<span className='asnp-ml-1'>
+						<span className="asnp-ml-1">
 							{ __( '$80', 'easy-sale-badges-for-woocommerce' ) }
 						</span>
 					</div>
