@@ -94,11 +94,11 @@ class Placeholder {
     }
 
     public static function regular_price( $label, $product ) {
-		return str_ireplace( '[price]', wc_price( $product->get_regular_price() ), $label );
+		return str_ireplace( '[regular_price]', wc_price( $product->get_regular_price() ), $label );
     }
 
     public static function sale_price( $label, $product ) {
-		return static::price( $label, $product );
+		return str_ireplace( '[sale_price]', wc_price( $product->get_price() ), $label );
     }
 
 	public static function saved_price( $label, $product ) {
