@@ -1,7 +1,7 @@
 === Sale Badges and Product Labels for WooCommerce ===
 Contributors: asanaplugins
 Donate link: https://www.asanaplugins.com/
-Tags: sale badges, product labels, woocommerce, WooCommerce sale badges, badges, WooCommerce badges, labels, plugin, shop, store, ecommerce, marketing, products, tags, product tags, product marks, product sign, sale product label, onsale product, woocommerce tags, custom labels, custom product badges, advanced product labels for woocommerce
+Tags: sale badges, product labels, woocommerce, badges, WooCommerce sale badges, WooCommerce badges, labels, plugin, shop, store, ecommerce, marketing, products, tags, product tags, product marks, product sign, sale product label, onsale product, woocommerce tags, custom labels, custom product badges, advanced product labels for woocommerce
 Requires at least: 5.0
 Tested up to: 6.4
 Requires PHP: 5.6
@@ -169,7 +169,7 @@ The plugin is rich in features while it is lightweight and fast.
 * Added Price, Sale Price, Regular Price, Save percent, Save Amount, Sale Ends, Currency Symbol, Quantity, sku, br, as Dynamic Placeholders to Labels.
 * Added +25 Buy 2 Get 1 Free Image Labels.
 * Added +20 Shipping Image Labels.
-* Compatibility with WooCommerce 8.5.1
+* Compatibility with WooCommerce 8.5.2
 
 = 1.5.0 =
 * Added 10 Animation Effects to CSS Labels.
