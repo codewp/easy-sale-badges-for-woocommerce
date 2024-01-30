@@ -90,15 +90,15 @@ class Placeholder {
     }
 
     public static function price( $label, $product ) {
-		return str_ireplace( '[price]', wc_price( $product->get_price() ), $label );
+		return str_ireplace( '[price]', wc_price( wc_get_price_to_display( $product ) ), $label );
     }
 
     public static function regular_price( $label, $product ) {
-		return str_ireplace( '[regular_price]', wc_price( $product->get_regular_price() ), $label );
+		return str_ireplace( '[regular_price]', wc_price( wc_get_price_to_display( $product, [ 'price' => $product->get_regular_price() ] ) ), $label );
     }
 
     public static function sale_price( $label, $product ) {
-		return str_ireplace( '[sale_price]', wc_price( $product->get_price() ), $label );
+		return str_ireplace( '[sale_price]', wc_price( wc_get_price_to_display( $product ) ), $label );
     }
 
 	public static function saved_price( $label, $product ) {
