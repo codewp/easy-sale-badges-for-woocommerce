@@ -77,7 +77,7 @@ class Placeholder {
         }
 
         foreach ( $placeholders as $placeholder => $method ) {
-            if ( false !== strpos( $label, $placeholder ) ) {
+            if ( false !== stripos( $label, $placeholder ) ) {
                 if ( is_callable( [ __CLASS__, $method ] ) ) {
                     $label = static::$method( $label, $product );
                 } else {
