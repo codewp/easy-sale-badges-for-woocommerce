@@ -81,7 +81,7 @@ class Placeholder {
                 if ( is_callable( [ __CLASS__, $method ] ) ) {
                     $label = static::$method( $label, $product );
                 } else {
-                    $label = apply_filters( 'asnp_wesb_label_placeholder_replace_' . $method, $label, $product, $badge );
+                    $label = apply_filters( 'asnp_wesb_label_placeholder_replace_' . $method, $label, $product );
                 }
             }
         }
@@ -141,16 +141,18 @@ class Placeholder {
 	public static function sale_ends( $label, $product ) {
 		if ( $product->is_on_sale() ) {
 			// calculate days until to sale ends.
-			$days = round( ( strtotime( $product->get_date_on_sale_to() ) - current_time( 'timestamp' ) ) / ( DAY_IN_SECONDS ) );
-			if ( 1 == $days ) {
-				$days = sprintf( __( '%d day', 'easy-sale-badges-for-woocommerce' ), 1 );
-			} elseif ( 1 < $days ) {
-				$days = sprintf( __( '%d days', 'easy-sale-badges-for-woocommerce' ), $days );
-			} else {
-				$days = '';
-			}
+			if ( $product->get_date_on_sale_to() && $product->get_date_on_sale_to()->getTimestamp() > current_time( 'timestamp' ) ) {
+				$days = round( ( $product->get_date_on_sale_to()->getTimestamp() - current_time( 'timestamp' ) ) / DAY_IN_SECONDS );
+				if ( 1 == $days ) {
+					$days = sprintf( __( '%d day', 'easy-sale-badges-for-woocommerce' ), 1 );
+				} elseif ( 1 < $days ) {
+					$days = sprintf( __( '%d days', 'easy-sale-badges-for-woocommerce' ), $days );
+				} else {
+					$days = '';
+				}
 
-			return str_ireplace( '[sale_ends]', $days, $label );
+				return str_ireplace( '[sale_ends]', $days, $label );
+			}
 		}
 
 		return str_ireplace( '[sale_ends]', '', $label );
@@ -160,7 +162,7 @@ class Placeholder {
 		return str_ireplace( '[currency]', get_woocommerce_currency_symbol(), $label );
 	}
 
-	public static function qty( $label, $product ) {
+	public static function quantity( $label, $product ) {
 		$max_quantity = $product->get_max_purchase_quantity();
 		$max_quantity = 0 < $max_quantity ? $max_quantity : '';
 		$label = str_ireplace( '[qty]', $max_quantity, $label );
