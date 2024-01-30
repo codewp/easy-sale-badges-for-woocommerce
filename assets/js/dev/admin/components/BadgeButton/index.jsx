@@ -219,7 +219,7 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 		.replace( /\[sale_price\]/g, '80$' )
 		.replace( /\[saved_percent\]/g, '20%' )
 		.replace( /\[saved_price\]/g, '20$' )
-		.replace( /\[sale_ends\]/g, '8' )
+		.replace( /\[sale_ends\]/g, '8 days' )
 		.replace( /\[currency\]/g, '$' )
 		.replace( /\[qty\]/g, '11' )
 		.replace( /\[sku\]/g, 'sku' );
