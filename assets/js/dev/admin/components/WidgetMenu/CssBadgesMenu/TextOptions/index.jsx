@@ -50,7 +50,7 @@ const TextOptions = ( props ) => {
 								'easy-sale-badges-for-woocommerce'
 							) }
 							<br />
-							<strong>
+							<strong className='asnp-text-[#483d8b]'>
 								{ __(
 									"'Sale [saved_percent]'",
 									'easy-sale-badges-for-woocommerce'
@@ -60,7 +60,7 @@ const TextOptions = ( props ) => {
 								' will be rendered as ',
 								'easy-sale-badges-for-woocommerce'
 							) }
-							<strong>
+							<strong className='asnp-text-[#483d8b]'>
 								{ __(
 									"'Sale 20%'",
 									'easy-sale-badges-for-woocommerce'
@@ -72,9 +72,9 @@ const TextOptions = ( props ) => {
 								'placeholders : ',
 								'easy-sale-badges-for-woocommerce'
 							) }
-							<strong>
+							<strong className='asnp-text-[#483d8b]'>
 								{ __(
-									'[price] [regular_price] [saved_percent] [saved_price] [sale_ends] [qty] [currency] [sku] [br]',
+									'[price] [regular_price] [sale_price] [saved_percent] [saved_price] [sale_ends] [qty] [currency] [sku] [br]',
 									'easy-sale-badges-for-woocommerce'
 								) }
 							</strong>
