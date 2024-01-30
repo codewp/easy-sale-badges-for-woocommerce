@@ -120,7 +120,7 @@ class Placeholder {
 	}
 
 	public static function saved_percent( $label, $product ) {
-		$percent = get_saved_price( $product );
+		$percent = get_saved_percent( $product );
 		if ( empty( $percent ) ) {
 			return str_ireplace( '[saved_percent]', '', $label );
 		}
