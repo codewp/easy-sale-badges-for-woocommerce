@@ -12,7 +12,7 @@ class Placeholder {
     }
 
 	public static function css_label( $label, $badge ) {
-		if ( ! $badge ) {
+		if ( empty( $label ) || ! $badge ) {
 			return $label;
 		}
 
@@ -32,7 +32,7 @@ class Placeholder {
 	}
 
 	public static function advanced_label( $label, $badge ) {
-		if ( ! $badge ) {
+		if ( empty( $label ) || ! $badge ) {
 			return $label;
 		}
 
@@ -67,7 +67,7 @@ class Placeholder {
 	}
 
     public static function replace( $label, $product ) {
-		if ( ! $product ) {
+		if ( empty( $label ) || ! $product ) {
 			return $label;
 		}
 
