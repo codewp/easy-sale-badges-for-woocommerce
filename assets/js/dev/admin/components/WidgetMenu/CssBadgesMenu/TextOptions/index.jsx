@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { __ } from '@wordpress/i18n';
+import { __, sprintf } from '@wordpress/i18n';
 import Tippy from '@tippyjs/react';
 import ColorPicker from 'react-best-gradient-color-picker';
 import { IMAGES_URL, customColor } from '../../../../utils/constants';
@@ -44,39 +44,24 @@ const TextOptions = ( props ) => {
 						/>
 					</label>
 					<div className="asnp-block asnp-space-y-1 asnp-mt-1 asnp-w-[30rem]">
+						<p
+							className="asnp-text-sm asnp-text-gray-400"
+							dangerouslySetInnerHTML={ {
+								__html: __(
+									"Use the following placeholders to display dynamic values. For example:<br/><strong className='asnp-text-[#483d8b]'>'Sale {saved_percent}'</strong> will be rendered as <strong className='asnp-text-[#483d8b]'>'Sale 20%'</strong>",
+									'easy-sale-badges-for-woocommerce'
+								),
+							} }
+						></p>
 						<p className="asnp-text-sm asnp-text-gray-400">
 							{ __(
-								'Use the following placeholders to display dynamic values. For example:',
+								'Placeholders:',
 								'easy-sale-badges-for-woocommerce'
-							) }
-							<br />
+							) + ' ' }
 							<strong className="asnp-text-[#483d8b]">
-								{ __(
-									"'Sale [saved_percent]'",
-									'easy-sale-badges-for-woocommerce'
-								) }
-							</strong>
-							{ __(
-								' will be rendered as ',
-								'easy-sale-badges-for-woocommerce'
-							) }
-							<strong className="asnp-text-[#483d8b]">
-								{ __(
-									"'Sale 20%'",
-									'easy-sale-badges-for-woocommerce'
-								) }
-							</strong>
-						</p>
-						<p className="asnp-text-sm asnp-text-gray-400">
-							{ __(
-								'placeholders : ',
-								'easy-sale-badges-for-woocommerce'
-							) }
-							<strong className="asnp-text-[#483d8b]">
-								{ __(
-									'[price] [regular_price] [sale_price] [saved_percent] [saved_price] [sale_ends] [qty] [currency] [sku] [br]',
-									'easy-sale-badges-for-woocommerce'
-								) }
+								{
+									'{price} {regular_price} {sale_price} {saved_percent} {saved_price} {sale_ends} {qty} {currency} {sku} {br}'
+								}
 							</strong>
 						</p>
 					</div>
@@ -150,7 +135,7 @@ const TextOptions = ( props ) => {
 										backgroundColor: `${ props.textColor }`,
 									} }
 									className={
-										'asnp-flex asnp-w-7 asnp-h-6 asnp-rounded-full asnp-my-2 '
+										'asnp-flex asnp-w-7 asnp-h-6 asnp-rounded-full asnp-my-2'
 									}
 								></div>
 							</div>

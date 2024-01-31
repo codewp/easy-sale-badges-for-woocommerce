@@ -53,16 +53,16 @@ class Placeholder {
 
 	public static function get_placeholders() {
 		return apply_filters( 'asnp_wesb_placeholders', [
-            '[regular_price]' => 'regular_price',
-            '[sale_price]' => 'sale_price',
-            '[price]' => 'price',
-            '[saved_price]' => 'saved_price',
-            '[saved_percent]' => 'saved_percent',
-            '[sale_ends]' => 'sale_ends',
-            '[currency]' => 'currency',
-            '[qty]' => 'quantity',
-            '[br]' => 'br',
-            '[sku]' => 'sku',
+            '{regular_price}' => 'regular_price',
+            '{sale_price}' => 'sale_price',
+            '{price}' => 'price',
+            '{saved_price}' => 'saved_price',
+            '{saved_percent}' => 'saved_percent',
+            '{sale_ends}' => 'sale_ends',
+            '{currency}' => 'currency',
+            '{qty}' => 'quantity',
+            '{br}' => 'br',
+            '{sku}' => 'sku',
         ] );
 	}
 
@@ -90,21 +90,21 @@ class Placeholder {
     }
 
     public static function price( $label, $product ) {
-		return str_ireplace( '[price]', wc_price( wc_get_price_to_display( $product ) ), $label );
+		return str_ireplace( '{price}', wc_price( wc_get_price_to_display( $product ) ), $label );
     }
 
     public static function regular_price( $label, $product ) {
-		return str_ireplace( '[regular_price]', wc_price( wc_get_price_to_display( $product, [ 'price' => $product->get_regular_price() ] ) ), $label );
+		return str_ireplace( '{regular_price}', wc_price( wc_get_price_to_display( $product, [ 'price' => $product->get_regular_price() ] ) ), $label );
     }
 
     public static function sale_price( $label, $product ) {
-		return str_ireplace( '[sale_price]', wc_price( wc_get_price_to_display( $product ) ), $label );
+		return str_ireplace( '{sale_price}', wc_price( wc_get_price_to_display( $product ) ), $label );
     }
 
 	public static function saved_price( $label, $product ) {
 		$price = get_saved_price( $product );
 		if ( empty( $price ) ) {
-			return str_ireplace( '[saved_price]', '', $label );
+			return str_ireplace( '{saved_price}', '', $label );
 		}
 
 		$price = apply_filters(
@@ -116,13 +116,13 @@ class Placeholder {
 			$product
 		);
 
-		return str_ireplace( '[saved_price]', $price, $label );
+		return str_ireplace( '{saved_price}', $price, $label );
 	}
 
 	public static function saved_percent( $label, $product ) {
 		$percent = get_saved_percent( $product );
 		if ( empty( $percent ) ) {
-			return str_ireplace( '[saved_percent]', '', $label );
+			return str_ireplace( '{saved_percent}', '', $label );
 		}
 
 		$percent = apply_filters(
@@ -135,7 +135,7 @@ class Placeholder {
 			$product
 		);
 
-		return str_ireplace( '[saved_percent]', $percent, $label );
+		return str_ireplace( '{saved_percent}', $percent, $label );
 	}
 
 	public static function sale_ends( $label, $product ) {
@@ -151,30 +151,30 @@ class Placeholder {
 					$days = '';
 				}
 
-				return str_ireplace( '[sale_ends]', $days, $label );
+				return str_ireplace( '{sale_ends}', $days, $label );
 			}
 		}
 
-		return str_ireplace( '[sale_ends]', '', $label );
+		return str_ireplace( '{sale_ends}', '', $label );
 	}
 
 	public static function currency( $label, $product ) {
-		return str_ireplace( '[currency]', get_woocommerce_currency_symbol(), $label );
+		return str_ireplace( '{currency}', get_woocommerce_currency_symbol(), $label );
 	}
 
 	public static function quantity( $label, $product ) {
 		$max_quantity = $product->get_max_purchase_quantity();
 		$max_quantity = 0 < $max_quantity ? $max_quantity : '';
-		$label = str_ireplace( '[qty]', $max_quantity, $label );
+		$label = str_ireplace( '{qty}', $max_quantity, $label );
 		return $label;
 	}
 
 	public static function br( $label, $product ) {
-		return str_ireplace( '[br]', '<br>', $label );
+		return str_ireplace( '{br}', '<br>', $label );
 	}
 
 	public static function sku( $label, $product ) {
-		return str_ireplace( '[sku]', $product->get_sku(), $label );
+		return str_ireplace( '{sku}', $product->get_sku(), $label );
 	}
 
 	public static function percentage_label( $label, $product ) {
