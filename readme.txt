@@ -1,7 +1,7 @@
 === Sale Badges and Product Labels for WooCommerce ===
 Contributors: asanaplugins
 Donate link: https://www.asanaplugins.com/
-Tags: sale badges, product labels, woocommerce, badges, WooCommerce sale badges, WooCommerce badges, labels, plugin, shop, store, ecommerce, marketing, products, tags, product tags, product marks, product sign, sale product label, onsale product, woocommerce tags, custom labels, custom product badges, advanced product labels for woocommerce
+Tags: sale badges, product labels, woocommerce, badges, WooCommerce badges, WooCommerce sale badges, labels, plugin, shop, store, ecommerce, marketing, products, tags, product tags, product marks, product sign, sale product label, onsale product, woocommerce tags, custom labels, custom product badges, advanced product labels for woocommerce
 Requires at least: 5.0
 Tested up to: 6.4
 Requires PHP: 5.6
