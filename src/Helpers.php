@@ -436,3 +436,5 @@ function translate( $label, $prop, $badge ) {
 
 
 }
+
+}
