@@ -1,77 +1,32 @@
-import { __ } from '@wordpress/i18n';
-
-export const defaultSettings = {
-	hideWooCommerceBadges: 0,
-	singlePosition: 'before_single_item_images',
-	loopPosition: 'woocommerce_product_get_image',
-	singleCustomHooks: '',
-	loopCustomHooks: '',
-	showBadgeProductPage: 1,
-	singleContainer: '',
-	timerPosition: 'outOfImage',
-};
-export const PLUGIN_URL = saleBadgeData.pluginUrl;
-export const IMAGES_URL = `${ PLUGIN_URL }assets/images/`;
-
-let serverTime = new Date( saleBadgeData.now );
-let initialLocalTime = Date.now();
-
-export const getNow = () => {
-	return new Date( serverTime.getTime() + ( Date.now() - initialLocalTime ) );
-};
-
-export const customColor = [
-	'rgb(255, 148, 148)',
-	'rgb(177, 178, 255)',
-	'rgb(250, 23, 49)',
-	'rgb(246, 24, 197)',
-	'rgb(132, 32, 225)',
-	'rgb(255, 255, 255)',
-	'rgb(33, 197, 153)',
-	'rgb(23, 188, 51)',
-	'rgb(229, 98, 17)',
-	'rgb(0, 132, 255)',
-	'rgb(32, 82, 149)',
-	'rgb(20, 66, 114)',
-	'rgb(0, 0, 0)',
-	'rgb(255, 135, 135)',
-	'rgb(188, 226, 158)',
-	'rgb(100, 92, 187)',
-	'rgb(183, 196, 207)',
-	'rgb(255, 176, 49)',
-];
-
-export default function BadgeCssandAdv( badge ) {
-	let badgeIcon = '';
-	let badgeIconOne = '';
-	let badgeIconTwo = '';
+export default function BadgePreview( badge ) {
+	let badgeIconPr = '';
+	let badgeIconOnePr = '';
+	let badgeIconTwoPr = '';
 	switch ( badge.badgeStyles ) {
 		case 'badge1':
-			badgeIcon = `background: ${ badge.badgeColor };
+			badgeIconPr = `background: ${ badge.badgeColor };
 			top: 0px;
-			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
-			right: ${ badge.badgePositionX == 'right' ? '0px' : '' };
-            height: ${ badge.heightBadge }px;
-			width: ${ badge.widthBadge }px;
+            height: 30px;
+			width: 60px;
 			position: absolute;
 			opacity: ${ badge.opacity };
 			text-align: center;
             text-shadow: none;
+            
 			`;
 			break;
 		case 'badge2':
-			badgeIcon = `
+			badgeIconPr = `
 			text-align: center;
 			display: inline-block;
 			position: absolute;
 			opacity: ${ badge.opacity };
-			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
-			right: ${ badge.badgePositionX == 'right' ? '0px' : '' };
 			top: 0px;
-			height: ${ badge.heightBadge }px;
-			width: ${ badge.widthBadge }px;
+			height: 30px;
+			width: 60px;
 			background:  ${ badge.badgeColor };
 			border-radius: 3px;
+            
 			&::before {
 				border-left-color: transparent !important;
 				display: inline-block;
@@ -92,16 +47,14 @@ export default function BadgeCssandAdv( badge ) {
 		`;
 			break;
 		case 'badge3':
-			badgeIcon = `
+			badgeIconPr = `
 			position: absolute;
 			background: ${ badge.badgeColor };
 			text-align: center;
 			border-radius: 3px;
 			opacity: ${ badge.opacity };
-			top: 0px;
-			left: 0px;
-            height:  ${ badge.heightBadge }px;
-			width: ${ badge.widthBadge }px;
+            height:  30px;
+			width: 60px;
 			line-height: 30px;
 			color: #fff;
 			&::after {
@@ -127,7 +80,7 @@ export default function BadgeCssandAdv( badge ) {
 		`;
 			break;
 		case 'badge4':
-			badgeIcon = `
+			badgeIconPr = `
 			border-radius: 3px;
 			padding: 0px 15px;
 			position: absolute;
@@ -135,10 +88,8 @@ export default function BadgeCssandAdv( badge ) {
 			display: inline-block;
 			background: ${ badge.badgeColor };
 			top: 0px;
-			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
-			right: ${ badge.badgePositionX == 'right' ? '0px' : '' };
-			height:  ${ badge.heightBadge }px;
-			width: ${ badge.widthBadge }px;
+			height:  30px;
+			width: 60px;
 			line-height: 30px;
 			box-sizing: border-box;
 			border-bottom-right-radius: '1px !important';
@@ -184,15 +135,15 @@ export default function BadgeCssandAdv( badge ) {
 		`;
 			break;
 		case 'badge5':
-			badgeIcon = `
+			badgeIconPr = `
 				position: absolute;
 				display: block;
-				width: ${ badge.widthBadge }px;
-				height: ${ badge.widthBadge }px;
+				width: 60px;
+				height: 60px;
 				text-align: center;
 				opacity: ${ badge.opacity };
 				overflow: hidden;
-				z-index: 10;
+				z-index: 10;               
 				transform: ${
 					( badge.badgePositionY == 'bottom' &&
 						badge.badgePositionX == 'left' &&
@@ -202,7 +153,7 @@ export default function BadgeCssandAdv( badge ) {
 						`rotateZ(90deg) !important` )
 				};
 			`;
-			badgeIconOne = `
+			badgeIconOnePr = `
 				background: ${ badge.badgeColor };
 				position: absolute;
 				text-align: center;
@@ -212,35 +163,33 @@ export default function BadgeCssandAdv( badge ) {
 						? 'rotate(45deg)'
 						: `rotate(315deg)`
 				} ;
-				width: ${ badge.widthBadge * 1.5 }px;
+				width: ${ 60 * 1.5 }px;
 				left: ${
 					badge.badgePositionX == 'right'
 						? ''
-						: `-${ badge.widthBadge / 2.4 }px`
+						: `-${ 60 / 2.4 }px`
 				};
 				right: ${
 					badge.badgePositionX == 'right'
-						? `-${ badge.widthBadge / 2.22 }px`
+						? `-${ 60 / 2.22 }px`
 						: ''
 				};
-				top: ${ badge.widthBadge / 7 }px ;
+				top: ${ 60 / 7 }px ;
 
 			`;
 			break;
 		case 'badge6':
-			badgeIcon = `
+			badgeIconPr = `
 			position: absolute;
-			height: ${ badge.widthBadge }px;
-			margin: 0;
+			height: 60px;
 			padding: 0;
 			opacity: ${ badge.opacity };
 			text-align: center;
 			top: 0px;
-			right: ${ badge.badgePositionX == 'right' ? '0px' : 'auto' };
-			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
-			width: ${ badge.widthBadge }px;
+			width: 60px;
 			font-weight: 400;
 			border-radius: 0;
+            
 			box-sizing: border-box;
 			transform: ${
 				( badge.badgePositionY == 'bottom' &&
@@ -253,7 +202,7 @@ export default function BadgeCssandAdv( badge ) {
 
 
 		`;
-			badgeIconOne = `
+			badgeIconOnePr = `
 			position: absolute;
 			z-index: 14;
 			top: 4.02px;
@@ -262,41 +211,39 @@ export default function BadgeCssandAdv( badge ) {
 					? 'rotate(45deg)'
 					: 'rotate(315deg)'
 			} ;
-			width: ${ badge.widthBadge * 1.5 }px !important;
+			width: ${ 60 * 1.5 }px !important;
 			text-align: center;
 			display: block;
 			left: ${ badge.badgePositionX == 'right' ? '0px' : 'auto' };
 			right: ${ badge.badgePositionX == 'right' ? '' : '0px' };
 		`;
-			badgeIconTwo = `width: 0;
+			badgeIconTwoPr = `width: 0;
 		    height: 0;
 		    border-right:${
 				badge.badgePositionX == 'right'
-					? `${ badge.widthBadge }px solid ${ badge.badgeColor }`
+					? `60px solid ${ badge.badgeColor }`
 					: 'none'
 			} ;
-		    border-bottom:${ badge.widthBadge }px solid transparent;
+		    border-bottom: 60px solid transparent;
 			border-left:${
 				badge.badgePositionX == 'right'
 					? ''
-					: `${ badge.widthBadge }px solid  ${ badge.badgeColor }`
+					: `60px solid  ${ badge.badgeColor }`
 			} ;
 		    z-index: 12;
 		    display: block;`;
 			break;
 		case 'badge7':
-			badgeIcon = `
+			badgeIconPr = `
 			background: ${ badge.badgeColor };
 			position: absolute;
 			z-index: 99;
 			top: 0px;
-			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
-			right:${ badge.badgePositionX == 'right' ? '0px' : '' };
-			height: ${ badge.widthBadge }px;
-			width: ${ badge.widthBadge }px;
+			height: 60px;
+			width: 60px;
 			border-radius: 3px;
 			text-align: center;`;
-			badgeIconOne = `
+			badgeIconOnePr = `
 			transform: translateY(-50%);
 			position: relative;
 			line-height: 16px;
@@ -306,19 +253,16 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			break;
 		case 'badge8':
-			badgeIcon = `
+			badgeIconPr = `
 			background: ${ badge.badgeColor };
-			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
-			right:${ badge.badgePositionX == 'right' ? '0px' : '' };
-			height: ${ badge.widthBadge }px;
-			width: ${ badge.widthBadge }px;
+			height: 60px;
+			width: 60px;
             position: absolute;
             z-index: 99;
             top: 0px;
-            left: 0px;
             border-radius: 50% !important;
             text-align: center;`;
-			badgeIconOne = `
+			badgeIconOnePr = `
 			transform: translateY(-50%);
 			position: relative;
 			line-height: 16px;
@@ -328,16 +272,15 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			break;
 		case 'badge9':
-			badgeIcon = `
+			badgeIconPr = `
 			display: block;
-			height: ${ badge.widthBadge / 1.66 }px !important;
-			width: ${ badge.widthBadge }px;
+			height: ${ 60 / 1.66 }px !important;
+			width: 60px;
 			background: ${ badge.badgeColor };
 			position: absolute;
 			z-index: 1;
 			opacity: ${ badge.opacity };
 			top: 0px;
-			left: 0px;
 			transform: translate3d(0, 0, 0);
 			border-top-right-radius: 3px;
 			border-top-left-radius: 3px;
@@ -354,7 +297,7 @@ export default function BadgeCssandAdv( badge ) {
 			left: 0;
 			}
 			`;
-			badgeIconOne = `
+			badgeIconOnePr = `
 			transform: translateY(-50%);
 			position: relative;
 			line-height: 16px;
@@ -364,22 +307,21 @@ export default function BadgeCssandAdv( badge ) {
 			`;
 			break;
 		case 'badge10':
-			badgeIcon = `
+			badgeIconPr = `
 			display: block;
-			height: ${ badge.widthBadge / 1.083 }px !important;
-			width: ${ badge.widthBadge }px;
+			height: ${ 60 / 1.083 }px !important;
+			width: 60px;            
 			background: ${ badge.badgeColor };
 			position: absolute;
 			z-index: 1;
 			opacity: ${ badge.opacity };
 			top: 0px;
-			left: 0px;
 			text-align: center;
-			border-radius: 3px 3px ${ badge.widthBadge / 2.38 }px ${
-				badge.widthBadge / 2.38
+			border-radius: 3px 3px ${ 60 / 2.38 }px ${
+				60 / 2.38
 			}px !important;
 			`;
-			badgeIconOne = `
+			badgeIconOnePr = `
 			transform: translateY(-50%);
 			position: relative;
 			line-height: 16px;
@@ -388,20 +330,11 @@ export default function BadgeCssandAdv( badge ) {
 			display: block;
 			`;
 			break;
-		default:
-			badgeIcon = `padding: 0 15px;
-			top: 0px;
-			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
-			right: ${ badge.badgePositionX == 'right' ? '0px' : '' };
-			height: ${ badge.heightBadge }px;
-			width: ${ badge.widthBadge }px;
-			opacity: ${ badge.opacity };
-			background: ${ badge.badgeColor };`;
 	}
 
 	return {
-		badgeIcon,
-		badgeIconOne,
-		badgeIconTwo,
+		badgeIconPr,
+		badgeIconOnePr,
+		badgeIconTwoPr,
 	};
 }

@@ -35,7 +35,9 @@ const MenuItem = ( props ) => {
 						badgeStyles={ props.badge.badgeStyles }
 						textColor={ props.badge.textColor }
 						fontSizeText={ props.badge.fontSizeText }
+						fontWeightLabel={ props.badge.fontWeightLabel }
 						lineHeightText={ props.badge.lineHeightText }
+						percentageDiscount={ props.badge.percentageDiscount }
 						labelTranslate={ props.badge.labelTranslate }
 					/>
 					<BadgeStyles
@@ -74,6 +76,72 @@ const MenuItem = ( props ) => {
 						badgePositionLeft={ props.badge.badgePositionLeft }
 						badgePositionRight={ props.badge.badgePositionRight }
 					/>
+					<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold asnp-text-red-600">
+						{ __(
+							'Animation Effects (Pro Version)',
+							'easy-sale-badges-for-woocommerce'
+						) }
+					</div>
+					<div className="asnp-flex asnp-mt-[2rem] asnp-w-full">
+						<label>
+							<span className="asnp-field-title">
+								{ __(
+									'Animation',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</span>
+							<div className="asnp-w-[10rem]">
+								<select
+									className="asnp-select-field !asnp-w-48 asnp-mt-2 !asnp-h-[2.4rem]"
+									disabled
+								>
+									<option value="none">
+										{ __(
+											'None',
+											'easy-sale-badges-for-woocommerce'
+										) }
+									</option>
+								</select>
+							</div>
+						</label>
+						<label className="asnp-ml-14">
+							<span className="asnp-field-title">
+								{ __(
+									'Iteration Count',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</span>
+							<div className="asnp-w-[10rem]">
+								<select
+									className="asnp-select-field !asnp-w-48 asnp-mt-2 !asnp-h-[2.4rem]"
+									disabled
+								>
+									<option value="infinite">
+										{ __(
+											'Infinite',
+											'easy-sale-badges-for-woocommerce'
+										) }
+									</option>
+								</select>
+							</div>
+						</label>
+						<label className="asnp-ml-14">
+							<span className="asnp-field-title">
+								{ __(
+									'Duration',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</span>
+							<div className="asnp-w-[10rem]">
+								<input
+									disabled
+									type="number"
+									className="asnp-text-field"
+									placeholder="0"
+								/>
+							</div>
+						</label>
+					</div>
 				</div>
 			) }
 
@@ -127,6 +195,72 @@ const MenuItem = ( props ) => {
 							</button>
 						</div>
 						<Options />
+						<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold">
+							{ __(
+								'Animation Effects',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</div>
+						<div className="asnp-flex asnp-mt-[2rem] asnp-w-full">
+							<label>
+								<span className="asnp-field-title">
+									{ __(
+										'Animation',
+										'easy-sale-badges-for-woocommerce'
+									) }
+								</span>
+								<div className="asnp-w-[10rem]">
+									<select
+										className="asnp-select-field !asnp-w-48 asnp-mt-2 !asnp-h-[2.4rem]"
+										disabled
+									>
+										<option value="none">
+											{ __(
+												'None',
+												'easy-sale-badges-for-woocommerce'
+											) }
+										</option>
+									</select>
+								</div>
+							</label>
+							<label className="asnp-ml-14">
+								<span className="asnp-field-title">
+									{ __(
+										'Iteration Count',
+										'easy-sale-badges-for-woocommerce'
+									) }
+								</span>
+								<div className="asnp-w-[10rem]">
+									<select
+										className="asnp-select-field !asnp-w-48 asnp-mt-2 !asnp-h-[2.4rem]"
+										disabled
+									>
+										<option value="infinite">
+											{ __(
+												'Infinite',
+												'easy-sale-badges-for-woocommerce'
+											) }
+										</option>
+									</select>
+								</div>
+							</label>
+							<label className="asnp-ml-14">
+								<span className="asnp-field-title">
+									{ __(
+										'Duration',
+										'easy-sale-badges-for-woocommerce'
+									) }
+								</span>
+								<div className="asnp-w-[10rem]">
+									<input
+										disabled
+										type="number"
+										className="asnp-text-field"
+										placeholder="0"
+									/>
+								</div>
+							</label>
+						</div>
 					</div>
 				</div>
 			) }

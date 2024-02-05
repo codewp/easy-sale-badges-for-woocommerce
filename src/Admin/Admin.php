@@ -82,7 +82,7 @@ class Admin {
 			return $links;
 		}
 
-		$extra = [ '<a href="' . admin_url( 'admin.php?page=easy-sale-badges-for-woocommerce#/settings' ) . '">' . esc_html__( 'Settings', 'easy-sale-badges-for-woocommerce' ) . '</a>' ];
+		$extra = [ '<a href="' . admin_url( 'admin.php?page=asnp-easy-sale-badge#/settings' ) . '">' . esc_html__( 'Settings', 'easy-sale-badges-for-woocommerce' ) . '</a>' ];
 
 		if ( ! SaleBadges\is_pro_active() ) {
 			$extra[] = '<a href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/?utm_source=sale-badges-for-woocommerce&utm_campaign=go-pro&utm_medium=link" target="_blank" onMouseOver="this.style.color=\'#55ce5a\'" onMouseOut="this.style.color=\'#39b54a\'" style="color: #39b54a; font-weight: bold;">' . esc_html__( 'Go Pro', 'easy-sale-badges-for-woocommerce' ) . '</a>';

@@ -71,7 +71,7 @@ class BadgeModel extends BaseModel {
 			return false;
 		}
 
-		$item = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $this->table_name WHERE id = %d LIMIT 1", $id ), $output );
+		$item = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM {$this->table_name} WHERE id = %d LIMIT 1", $id ), $output );
 		if ( $item ) {
 			$item = $this->get_item_options( $item );
 		}
@@ -152,7 +152,7 @@ class BadgeModel extends BaseModel {
 		$select_args[] = absint( $args['offset'] );
 		$select_args[] = absint( $args['number'] );
 
-		$items = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $this->table_name $where ORDER BY {$args['orderby']} {$args['order']} LIMIT %d,%d;", $select_args ), $args['output'] );
+		$items = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM {$this->table_name} $where ORDER BY {$args['orderby']} {$args['order']} LIMIT %d,%d;", $select_args ), $args['output'] );
 
 		if ( ! empty( $items ) ) {
 			for ( $i = 0; $i < count( $items ); $i++ ) {
@@ -194,7 +194,7 @@ class BadgeModel extends BaseModel {
 
 		global $wpdb;
 
-		$item = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $this->table_name WHERE id = %d LIMIT 1", $id ), ARRAY_A );
+		$item = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM {$this->table_name} WHERE id = %d LIMIT 1", $id ), ARRAY_A );
 		if ( ! $item ) {
 			return false;
 		}

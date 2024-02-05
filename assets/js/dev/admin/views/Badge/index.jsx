@@ -60,6 +60,8 @@ const defaultBadge = {
 	woocommerceItemsConditions: 'any',
 	items: [ [ { ...initialItem } ] ],
 	schedule: [],
+	fontWeightLabel: '600',
+	percentageDiscount: 0,
 	labelTranslate: {},
 };
 

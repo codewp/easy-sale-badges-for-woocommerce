@@ -89,6 +89,10 @@ class Hooks {
 				}
 				break;
 
+			case 'post_thumbnail_html':
+				add_filter( 'post_thumbnail_html', array( __CLASS__, 'post_thumbnail_html' ), 10, 4 );
+				break;
+
 			default:
 				add_action( $single_position, array( __CLASS__, 'single_dispaly_sale_badge' ), 99 );
 				break;
@@ -285,15 +289,22 @@ class Hooks {
 		}
 
 		if ( false === strpos( $image, '<div' ) ) {
-			$image = '<div class="asnp-sale-badge-image-wrapper" style="position:relative;">' . $image . $badge . '</div>';
+			$image = '<div class="asnp-sale-badge-image-wrapper" style="display: inline-block; position:relative;">' . $image . $badge . '</div>';
 		}
 
 		return $image;
 	}
 
 	public static function post_thumbnail_html( $image, $post_id, $post_thumbnail_id, $size ) {
-		if ( 'shop_catalog' !== $size ) {
+		if ( 'shop_catalog' !== $size && ! is_product_page() ) {
 			return $image;
+		}
+
+		if ( is_product_page() ) {
+			$product = wc_get_product( $post_id );
+			if ( ! is_a( $product, 'WC_Product' ) ) {
+				return $image;
+			}
 		}
 
 		$badge = display_sale_badges( $post_id, false, true );

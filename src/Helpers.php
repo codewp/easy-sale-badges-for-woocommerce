@@ -2,6 +2,8 @@
 
 namespace AsanaPlugins\WooCommerce\SaleBadges;
 
+use AsanaPlugins\WooCommerce\SaleBadges\Models\BadgeModel;
+
 function get_plugin() {
 	return Plugin::instance();
 }
@@ -80,6 +82,11 @@ function get_term_hierarchy_name( $term_id, $taxonomy, $separator = '/', $nicena
 }
 
 function register_polyfills() {
+	static $registered;
+	if ( $registered ) {
+		return;
+	}
+
 	global $wp_version;
 
 	$handles = array(
@@ -105,18 +112,20 @@ function register_polyfills() {
 			);
 		}
 	}
+
+	$registered = true;
 }
 
 function is_pro_active() {
 	return defined( 'ASNP_WESB_PRO_VERSION' );
 }
 
-function add_custom_style( $style ) {
+function add_custom_style( $style, $badge = null ) {
 	if ( empty( $style ) ) {
 		return;
 	}
 
-	get_plugin()->container()->get( CustomStyles::class )->add_style( $style );
+	get_plugin()->container()->get( CustomStyles::class )->add_style( $style, $badge );
 }
 
 function display_sale_badges( $product, $hide = false, $return = false ) {
@@ -133,13 +142,9 @@ function display_sale_badges( $product, $hide = false, $return = false ) {
 }
 
 function has_active_sale_badges() {
-	$badges = get_plugin()->container()->get( Badges::class );
-	if ( ! $badges ) {
-		return false;
-	}
-
-	$all_badges = $badges->get_badges();
-	return ! empty( $all_badges );
+	$model = get_plugin()->container()->get( BadgeModel::class );
+	$items = $model->get_items( [ 'status' => 1 ] );
+	return ! empty( $items );
 }
 
 function get_current_product() {
@@ -265,6 +270,145 @@ function get_theme_single_container( $stylesheet = null, $template = null ) {
 
 	return '';
 }
+
+function allowed_inline_styles( $styles ) {
+	$styles[] = 'display';
+	return $styles;
+}
+
+function get_saved_percent( $product ) {
+	if ( is_numeric( $product ) ) {
+		$product = wc_get_product( $product );
+	}
+
+	if ( ! $product ) {
+		return false;
+	}
+
+	if ( false !== strpos( $product->get_type(), 'variable' ) ) {
+		$prices         = $product->get_variation_prices();
+		$max_percentage = 0;
+		foreach( $prices['price'] as $key => $price ) {
+			// Only on sale variations
+			if ( $prices['regular_price'][ $key ] > $price ) {
+				$percentage = ( floatval( $prices['regular_price'][ $key ] ) - floatval( $price ) ) / floatval( $prices['regular_price'][ $key ] ) * 100;
+				if ( $percentage > $max_percentage ) {
+					$max_percentage = $percentage;
+				}
+			}
+		}
+		if ( 0 < $max_percentage ) {
+			return $max_percentage;
+		}
+	} else {
+		$regular_price = $product->get_regular_price();
+		$sale_price    = $product->get_sale_price();
+		if ( '' !== $sale_price && $sale_price < $regular_price ) {
+			return ( floatval( $regular_price ) - floatval( $sale_price ) ) / floatval( $regular_price ) * 100;
+		}
+	}
+
+	return false;
+}
+
+function get_saved_price( $product ) {
+	// Calculate saved price amount from product sale and regular price.
+	$product = is_numeric( $product ) ? wc_get_product( $product ) : $product;
+	if ( ! $product ) {
+		return false;
+	}
+
+	if ( ! $product->is_on_sale() ) {
+		return false;
+	}
+
+	if ( false !== strpos( $product->get_type(), 'variable' ) ) {
+		$prices     = $product->get_variation_prices();
+		$max_amount = 0;
+		foreach( $prices['price'] as $key => $price ) {
+			// Only on sale variations
+			if ( $prices['regular_price'][ $key ] > $price ) {
+				$amount = floatval( $prices['regular_price'][ $key ] ) - floatval( $price );
+				if ( $amount > $max_amount ) {
+					$max_amount = $amount;
+				}
+			}
+		}
+		if ( 0 < $max_amount ) {
+			return wc_price( $max_amount );
+		}
+	} else {
+		$regular_price = $product->get_regular_price();
+		$sale_price    = $product->get_sale_price();
+		if ( '' !== $sale_price && $sale_price < $regular_price ) {
+			return wc_price( floatval( $regular_price ) - floatval( $sale_price ) );
+		}
+	}
+
+	return false;
+}
+
+function get_ch() {
+	return get_option( 'asnp_wesb_ch', [] );
+}
+
+function set_ch( $ch ) {
+	return update_option( 'asnp_wesb_ch', $ch );
+}
+
+function applicable_ch( array $ch ) {
+	if ( isset( $ch['show'] ) ) {
+		return true;
+	}
+
+	if ( ! empty( $ch['time'] ) ) {
+		if ( time() - $ch['time'] < DAY_IN_SECONDS * 7 ) {
+			return false;
+		}
+	}
+
+	$ch['time'] = time();
+
+	$max  = 2;
+	$num  = floor( $max / 2 );
+	$rand = rand( 1, $max );
+
+	if ( $rand == $num ) {
+		$ch['show'] = true;
+	}
+
+	set_ch( $ch );
+
+	return $rand == $num;
+}
+
+function maybe_show_ch() {
+	if ( is_pro_active() ) {
+		return false;
+	}
+
+	$ch = get_ch();
+	if ( isset( $ch['dismissed'] ) ) {
+		return false;
+	}
+
+	if ( ! has_active_sale_badges() ) {
+		return false;
+	}
+
+	$schedule = strtotime( '+7 days' );
+	if ( empty( $ch['schedule'] ) ) {
+		$ch['schedule'] = $schedule;
+		set_ch( $ch );
+	} else {
+		$schedule = (int) $ch['schedule'];
+	}
+
+	if ( empty( $schedule ) || time() < $schedule ) {
+		return false;
+	}
+
+	return applicable_ch( $ch );
 
 function get_current_lang() {
 	static $current_lang;

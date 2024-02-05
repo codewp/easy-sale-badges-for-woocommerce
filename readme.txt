@@ -1,11 +1,11 @@
 === Sale Badges and Product Labels for WooCommerce ===
 Contributors: asanaplugins
 Donate link: https://www.asanaplugins.com/
-Tags: sale badges, product labels, WooCommerce badges, WooCommerce sale badges, badges, woocommerce, labels, plugin, shop, store, ecommerce, marketing, products, tags, product tags, product marks, product sign, sale product label, onsale product, woocommerce tags, custom labels, custom product badges, advanced product labels for woocommerce
+Tags: sale badges, product labels, woocommerce, badges, WooCommerce badges, WooCommerce sale badges, labels, plugin, shop, store, ecommerce, marketing, products, tags, product tags, product marks, product sign, sale product label, onsale product, woocommerce tags, custom labels, custom product badges, advanced product labels for woocommerce
 Requires at least: 5.0
 Tested up to: 6.4
 Requires PHP: 5.6
-Stable tag: 1.2.0
+Stable tag: 1.6.0
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,7 +15,15 @@ WooCommerce Sale Badges & Product Labels. Sale labels & countdown timers(PRO) fo
 
 WooCommerce Sale Badges and Product Labels elevates your store’s appeal with customized badges and countdown timers (PRO Version). Unlock the full potential of your WooCommerce store with captivating sale badges, product labels, and countdown timers. This all-in-one plugin empowers you to create eye-catching labels and scheduled badges for products, categories, and tags. Highlighting discount values, product quantities, ratings, shipping classes, stock status, and sale status, these labels provide valuable information to your customers. Plus, leverage the power of countdown timers to create urgency and drive conversions. With an intuitive interface, easily customize labels and replace default on-sale badges. Take your WooCommerce store to new heights with visually appealing badges, labels, and countdown timers tailored to your unique offerings.
 
-[FRONT-END DEMO](https://pricing-and-discounts.asanaplugins.com/demo/shop/) | [BACK-END DEMO](https://pricing-and-discounts.asanaplugins.com/?asnp_demo_plugin=easy-sale-badges-for-woocommerce) | [Ask Questions](https://wordpress.org/support/plugin/easy-sale-badges-for-woocommerce/) | **[PRO WITH 50% DISCOUNT FOR $30](https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/)** | **[Github](https://github.com/codewp/easy-sale-badges-for-woocommerce)**
+[FRONT-END DEMO](https://pricing-and-discounts.asanaplugins.com/demo/shop/) | [BACK-END DEMO](https://pricing-and-discounts.asanaplugins.com/?asnp_demo_plugin=easy-sale-badges-for-woocommerce) | [Ask Questions](https://wordpress.org/support/plugin/easy-sale-badges-for-woocommerce/) | **[PRO WITH 50% DISCOUNT FOR $30](https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/)** | [Github](https://github.com/codewp/easy-sale-badges-for-woocommerce)
+
+== Features ==
+
+https://youtu.be/1d-ICc1tVTc
+
+== Video Tutorial ==
+
+https://youtu.be/aTHFT3ovCaw
 
 == SALE BADGES AND PRODUCT LABELS FOR WOOCOMMERCE ==
 
@@ -45,8 +53,9 @@ In today's competitive market, it is essential for businesses to find effective 
 * Over 10 CSS Labels
 * 5 Advanced Labels
 * 8 Timers Template
+* Over 10 Animation Effects
 * Incorporate Gradient Colors
-* Implement Discount Rules
+* [Compatible with Discount Rules and Dynamic Pricing for WooCommerce](https://wordpress.org/plugins/easy-woocommerce-discounts/)
 * Add a Percentage Discount amount
 * Rotate CSS Labels, Image Labels, and Advanced Labels
 * Adjust the Position of CSS Labels, Image Labels, and Advanced Labels
@@ -97,16 +106,18 @@ Simply install and activate the plugin, and then follow the steps below to creat
 
 Sale Badges And Product Labels Plugin To Woocommerce has the below shortcodes.
 
-*[asnp_badge hide="1"] to use on the product page.
-*[asnp_badge] to use on the archive product or product listing page.
+* [asnp_badge hide="1"] to use on the product page.
+* [asnp_badge] to use on the archive product or product listing page.
 
 If you would like to show a specific product sale badges, then use the below shortcodes.
 
-*[asnp_badge product_id="7" hide="1"] to use on the product page, replace "7" with your product ID.
-*[asnp_badge product_id="7"] to use on the archive product or product listing page, replace "7" with your product ID.
+* [asnp_badge product_id="7" hide="1"] to use on the product page, replace "7" with your product ID.
+* [asnp_badge product_id="7"] to use on the archive product or product listing page, replace "7" with your product ID.
 
 == 📕 Tutorials ==
 
+* <strong>[How to Add Sales Countdown Timer to Products in WooCommerce](https://www.asanaplugins.com/how-to-add-sales-countdown-timer-to-products-in-woocommerce/)</strong>
+* <strong>[WooCommerce Sale Badge Free Plugin](https://www.asanaplugins.com/woocommerce-sale-badge-free-plugin/)</strong>
 * <strong>[How to Add Product Labels in WooCommerce](https://www.asanaplugins.com/how-to-add-product-labels-in-woocommerce/)</strong>
 * <strong>[Add Product Labels to WooCommerce Products](https://www.asanaplugins.com/add-product-labels-to-woocommerce-products-full-guide/)</strong>
 
@@ -142,16 +153,41 @@ The plugin is rich in features while it is lightweight and fast.
 
 == Screenshots ==
 
-1. Product Labels.
-2. Sale Badges.
-3. CSS Labels.
-4. Image Labels.
-5. Advanced Labels.
-6. Timer.
-7. Countdown Timer.
-8. Percentage Discount amount.
+1. Animation.
+2. Product Labels.
+3. Sale Badges.
+4. CSS Labels.
+5. Image Labels.
+6. Advanced Labels.
+7. Timer.
+8. Countdown Timer.
+9. Percentage Discount amount.
 
 == Changelog ==
+
+= 1.6.0 =
+* Added Price, Sale Price, Regular Price, Saved percent, Saved Price, Sale Ends, Currency, Quantity, sku, br, as Dynamic Placeholders to Labels.
+* Added +25 Buy 2 Get 1 Free Image Labels.
+* Added +20 Shipping Image Labels.
+* Added Percentage Discount amount To Free.
+* Compatibility with WooCommerce 8.5.2
+
+= 1.5.0 =
+* Added 10 Animation Effects to CSS Labels.
+* Added 10 Animation Effects to Image Labels.
+
+= 1.4.0 =
+* Added Font-Weight To CSS Label.
+* Added +25 Cyber Monday To Image Label.
+* Fixed adding multiple CSS rules issue.
+* Fixed styles and display on mobile.
+* Fixed an issue in timers.
+
+= 1.3.0 =
+* Added post thumbnail html to the single product page supported hooks.
+* Fixed Preview Label issue.
+* Fixed Countdown Timer CSS issues.
+* Fixed Upload Image issue.
 
 = 1.2.0 =
 * Fix get_terms deprecated args issue.

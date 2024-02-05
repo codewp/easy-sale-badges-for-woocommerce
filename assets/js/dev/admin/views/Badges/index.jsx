@@ -13,8 +13,45 @@ import WarningModal from '../../components/WarningModal';
 import { AppContext } from '../../contexts/App';
 import { TrashIcon, PencilIcon, DuplicateIcon } from '@heroicons/react/solid';
 import Alert from '../../components/Alert';
-import { IMAGES_URL } from './../../utils/constants';
 import Pagination from '../../components/Pagination';
+import styled, { StyleSheetManager } from 'styled-components';
+import BadgePreview from '../../utils/labelPreview';
+
+import './style.scss';
+
+const Span = styled.div`
+	${ ( props ) => props.badgeIconPr }
+`;
+
+const SpanOne = styled.div`
+	${ ( props ) => props.badgeIconOnePr }
+`;
+
+const SpanTwo = styled.div`
+	${ ( props ) => props.badgeIconTwoPr }
+`;
+
+const StyledSpan = ( props ) => (
+	<StyleSheetManager shouldForwardProp={ ( prop ) => prop !== 'badgeIconPr' }>
+		<Span { ...props } />
+	</StyleSheetManager>
+);
+
+const StyledSpanOne = ( props ) => (
+	<StyleSheetManager
+		shouldForwardProp={ ( prop ) => prop !== 'badgeIconOnePr' }
+	>
+		<SpanOne { ...props } />
+	</StyleSheetManager>
+);
+
+const StyledSpanTwo = ( props ) => (
+	<StyleSheetManager
+		shouldForwardProp={ ( prop ) => prop !== 'badgeIconTwoPr' }
+	>
+		<SpanTwo { ...props } />
+	</StyleSheetManager>
+);
 
 export default function Badges() {
 	const { state, dispatch } = useContext( BadgesContext );
@@ -49,12 +86,54 @@ export default function Badges() {
 	};
 
 	const previewImage = ( badge ) => {
+		const { badgeIconPr, badgeIconOnePr, badgeIconTwoPr } = BadgePreview(
+			badge
+		);
+		let mtop;
+		if (
+			badge.badgeStyles == 'badge1' ||
+			badge.badgeStyles == 'badge2' ||
+			badge.badgeStyles == 'badge3' ||
+			badge.badgeStyles == 'badge4' 
+		) {
+			mtop = 15;
+		} else {
+			mtop = 5;
+		}
+
+		let previewBadge = (
+			<div className="asnp-esb-productPreviewBadge">
+				<StyledSpan
+					badgeIconPr={ badgeIconPr }
+					className="asnp-esb-productPreviewBadge2"
+					style={ {
+						color: `${ badge.textColor }`,
+						fontSize: `${ badge.fontSizeText }px`,
+						fontWeight: `${ badge.fontWeightLabel }`,
+						lineHeight: `${ badge.lineHeightText }px`,
+						borderTopLeftRadius: `${ badge.topLeftRadius }px`,
+						borderTopRightRadius: `${ badge.topRightRadius }px`,
+						borderBottomLeftRadius: `${ badge.bottomLeftRadius }px`,
+						borderBottomRightRadius: `${ badge.bottomRightRadius }px`,
+						marginTop: `${ mtop }px`,
+					} }
+				>
+					<StyledSpanTwo
+						badgeIconTwoPr={ badgeIconTwoPr }
+					></StyledSpanTwo>
+					<StyledSpanOne badgeIconOnePr={ badgeIconOnePr }>
+						<div>{ badge.badgeLabel }</div>
+					</StyledSpanOne>
+				</StyledSpan>
+			</div>
+		);
+
 		if (
 			badge.imgbadge === 0 &&
 			badge.imgbadgeAdv === 0 &&
 			badge.useTimerBadge === 0
 		) {
-			return IMAGES_URL + badge.badgeStyles + '.png';
+			return previewBadge;
 		}
 
 		return '';
@@ -300,12 +379,7 @@ export default function Badges() {
 														className="focus:!asnp-shadow-none"
 														to={ `/badge/${ item.id }` }
 													>
-														<img
-															className="asnp-h-[3rem]"
-															src={ previewImage(
-																item
-															) }
-														/>
+														{ previewImage( item ) }
 													</Link>
 												</td>
 												<td className="asnp-px-6 asnp-py-4 asnp-whitespace-nowrap">
@@ -369,8 +443,14 @@ export default function Badges() {
 				<Pagination
 					current={ state.page }
 					total={ state.pages }
-					prevText={ __( 'Prev', 'easy-sale-badges-for-woocommerce' ) }
-					nextText={ __( 'Next', 'easy-sale-badges-for-woocommerce' ) }
+					prevText={ __(
+						'Prev',
+						'easy-sale-badges-for-woocommerce'
+					) }
+					nextText={ __(
+						'Next',
+						'easy-sale-badges-for-woocommerce'
+					) }
 					onClickPage={ ( value ) => getPageItems( value ) }
 				/>
 			) }
