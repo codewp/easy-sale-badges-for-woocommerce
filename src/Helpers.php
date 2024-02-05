@@ -265,3 +265,29 @@ function get_theme_single_container( $stylesheet = null, $template = null ) {
 
 	return '';
 }
+
+function get_current_lang() {
+	static $current_lang;
+	if ( isset( $current_lang ) ) {
+		return $current_lang;
+	}
+
+	$current_lang = false;
+	if ( class_exists( 'SitePress' ) ) {
+		$current_lang = apply_filters( 'wpml_current_language', null );
+	} elseif ( function_exists( 'pll_current_language' ) ) {
+		$current_lang = pll_current_language();
+	}
+}
+
+function translate( $label, $badge ) {
+	$current_lang = get_current_lang();
+	if ( ! $current_lang ) {
+		return $label;
+	}
+
+	if ( empty( $label ) ) {
+		return $label;
+	}
+
+}
