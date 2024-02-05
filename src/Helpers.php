@@ -280,14 +280,15 @@ function get_current_lang() {
 	}
 }
 
-function translate( $label, $badge ) {
+function translate( $label, $prop, $badge ) {
+	if ( empty( $label ) || empty( $prop ) ) {
+		return $label;
+	}
+
 	$current_lang = get_current_lang();
 	if ( ! $current_lang ) {
 		return $label;
 	}
 
-	if ( empty( $label ) ) {
-		return $label;
-	}
 
 }
