@@ -3,6 +3,7 @@ import { __, sprintf } from '@wordpress/i18n';
 import Tippy from '@tippyjs/react';
 import ColorPicker from 'react-best-gradient-color-picker';
 import { IMAGES_URL, customColor } from '../../../../utils/constants';
+import LabelTranslation from '../../../LabelTranslation';
 
 const TextOptions = ( props ) => {
 	const [ disableLineHeight, setDisableLineHeight ] = useState( false );
@@ -252,6 +253,13 @@ const TextOptions = ( props ) => {
 					</div>
 				</label>
 			</div>
+			{ props.show === true && (
+				<LabelTranslation
+					show={ props.show }
+					setShow={ props.setShow }
+					labelTranslate={ props.labelTranslate }
+				/>
+			) }
 		</div>
 	);
 };

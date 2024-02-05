@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { __ } from '@wordpress/i18n';
 import { LockClosedIcon } from '@heroicons/react/solid';
 import TextOptions from './../CssBadgesMenu/TextOptions';
@@ -21,12 +21,15 @@ import './style.scss';
 
 const MenuItem = ( props ) => {
 	const [ showTextImg, setShowTextImg ] = useState( true );
+	const [ show, setShow ] = useState( false );
 
 	return (
 		<div className="asnp-w-full">
 			{ props.activeStatus == 1 && (
 				<div className="asnp-mt-3">
 					<TextOptions
+						show={ show }
+						setShow={ setShow }
 						onChange={ props.onChange }
 						badgeLabel={ props.badge.badgeLabel }
 						badgeStyles={ props.badge.badgeStyles }
@@ -35,6 +38,7 @@ const MenuItem = ( props ) => {
 						fontWeightLabel={ props.badge.fontWeightLabel }
 						lineHeightText={ props.badge.lineHeightText }
 						percentageDiscount={ props.badge.percentageDiscount }
+						labelTranslate={ props.badge.labelTranslate }
 					/>
 					<BadgeStyles
 						onChange={ props.onChange }
