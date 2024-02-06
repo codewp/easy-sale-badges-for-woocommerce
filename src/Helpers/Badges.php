@@ -6,6 +6,7 @@ defined( 'ABSPATH' ) || exit;
 
 use function AsanaPlugins\WooCommerce\SaleBadges\add_custom_style;
 use function AsanaPlugins\WooCommerce\SaleBadges\is_pro_active;
+use function AsanaPlugins\WooCommerce\SaleBadges\translate;
 
 function output_badges( $badges, $hide = false, $return = false ) {
 	if ( empty( $badges ) ) {
