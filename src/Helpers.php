@@ -279,35 +279,35 @@ function allowed_inline_styles( $styles ) {
 function get_current_lang() {
 	static $current_lang;
 	if ( isset( $current_lang ) ) {
-	  return $current_lang;
+		return $current_lang;
 	}
-  
+
 	$current_lang = false;
 	if ( class_exists( 'SitePress' ) ) {
-	  $current_lang = apply_filters( 'wpml_current_language', null );
+		$current_lang = apply_filters( 'wpml_current_language', null );
 	} elseif ( function_exists( 'pll_current_language' ) ) {
-	  $current_lang = pll_current_language();
+		$current_lang = pll_current_language();
 	}
-  
+
 	return $current_lang;
-  }
-  
-  function translate( $label, $prop, $badge ) {
+}
+
+function translate( $label, $prop, $badge ) {
 	if ( empty( $label ) || empty( $prop ) ) {
-	  return $label;
+		return $label;
 	}
-  
+
 	$current_lang = get_current_lang();
 	if ( ! $current_lang ) {
-	  return $label;
+		return $label;
 	}
-  
+
 	if ( isset( $badge->{$prop} ) && ! empty( $badge->$prop[ $current_lang ] ) ) {
-	  return $badge->$prop[ $current_lang ];
+		return $badge->$prop[ $current_lang ];
 	}
-  
+
 	return $label;
-  }
+}
 
 function get_saved_percent( $product ) {
 	if ( is_numeric( $product ) ) {
