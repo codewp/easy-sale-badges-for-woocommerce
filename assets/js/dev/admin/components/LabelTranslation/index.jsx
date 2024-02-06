@@ -218,7 +218,7 @@ const LabelTranslation = ( { show, setShow, labelTranslate } ) => {
 								Object.entries( labelTranslate ).map(
 									( [ lang, translation ], index ) => {
 										const foundLang = translationLang.find(
-											( item ) => item.lang === lang
+											( item ) => item.value === lang
 										);
 										return (
 											<div
