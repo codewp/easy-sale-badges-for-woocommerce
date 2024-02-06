@@ -6,6 +6,7 @@ defined( 'ABSPATH' ) || exit;
 
 use function AsanaPlugins\WooCommerce\SaleBadges\add_custom_style;
 use function AsanaPlugins\WooCommerce\SaleBadges\is_pro_active;
+use function AsanaPlugins\WooCommerce\SaleBadges\translate;
 
 function output_badges( $badges, $hide = false, $return = false ) {
 	if ( empty( $badges ) ) {
@@ -1139,7 +1140,8 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 
 	$class_names = apply_filters( 'asnp_wesb_css_badge_class_names', $class_names, $badge, $hide );
 
-	$label = apply_filters( 'asnp_wesb_css_badge_label', $badge->badgeLabel, $badge );
+	$label = translate( $badge->badgeLabel, 'labelTranslate', $badge );
+	$label = apply_filters( 'asnp_wesb_css_badge_label', $label, $badge );
 
 	add_filter( 'safe_style_css', 'AsanaPlugins\WooCommerce\SaleBadges\allowed_inline_styles' );
 
