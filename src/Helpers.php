@@ -443,5 +443,3 @@ function maybe_show_ch() {
 
 	return applicable_ch( $ch );
 }
-
-}
