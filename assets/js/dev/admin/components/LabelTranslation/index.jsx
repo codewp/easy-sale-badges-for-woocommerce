@@ -34,7 +34,7 @@ const translationLang = [
 	{ value: 'el', label: 'Ελληνικά', lang: 'el' },
 	{ value: 'en_AU', label: 'English (Australia)', lang: 'en' },
 	{ value: 'en_GB', label: 'English (UK)', lang: 'en' },
-	{ value: '', label: 'English (United States)', lang: '' },
+	{ value: 'en_US', label: 'English (United States)', lang: 'en' },
 	{ value: 'en_CA', label: 'English (Canada)', lang: 'en' },
 	{ value: 'en_ZA', label: 'English (South Africa)', lang: 'en' },
 	{ value: 'en_NZ', label: 'English (New Zealand)', lang: 'en' },

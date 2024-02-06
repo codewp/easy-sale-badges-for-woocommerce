@@ -424,17 +424,18 @@ function get_current_lang() {
 	}
 }
 
-function translate( $label, $prop, $badge ) {
-	if ( empty( $label ) || empty( $prop ) ) {
-		return $label;
-	}
+function translate($label, $prop, $badge) {
+    if (empty($label) || empty($prop)) {
+        return $label;
+    }
 
-	$current_lang = get_current_lang();
-	if ( ! $current_lang ) {
-		return $label;
-	}
+    $current_lang = get_current_lang();
 
+    if ($current_lang && isset($badge->labelTranslate[$current_lang])) {
+        return $badge->labelTranslate[$current_lang];
+    }
 
+    return $label;
 }
 
 }
