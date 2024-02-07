@@ -10,8 +10,8 @@
 	transition: opacity 0.3s ease;
 }
 .asnp-ew-modal-wrapper {
-	display: table-cell;
-	vertical-align: middle;
+	position: relative;
+	top: 25%;
 }
 .asnp-ew-modal-container {
 	width: 695px;
