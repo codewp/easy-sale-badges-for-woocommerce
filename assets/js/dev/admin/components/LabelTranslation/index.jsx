@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { __ } from '@wordpress/i18n';
+import Select from 'react-select';
 import { BadgeContext } from '../../contexts/Badge';
 import { translationLang } from '../../utils/constants';
-import Select from 'react-select';
+import { XIcon } from '@heroicons/react/solid';
 
 import './index.scss';
-
 
 const LabelTranslation = ( { show, setShow, labelTranslate } ) => {
 	const {
@@ -32,16 +32,33 @@ const LabelTranslation = ( { show, setShow, labelTranslate } ) => {
 						} }
 					>
 						<div className="asnp-ew-modal-body">
-							<div className="asnp-field-title asnp-ml-2 asnp-text-lg asnp-font-bold">
-								{ __(
-									'Translate Label',
-									'easy-sale-badges-for-woocommerce'
-								) }
+							<div className="asnp-flex asnp-relative">
+								<div className="asnp-field-title asnp-ml-2 asnp-text-lg asnp-font-bold">
+									{ __(
+										'Translate Label',
+										'easy-sale-badges-for-woocommerce'
+									) }
+								</div>
+								<div className="asnp-right-1 asnp-absolute">
+									<div
+										className="asnp-cursor-pointer"
+										onClick={ () => setShow( false ) }
+									>
+										<XIcon
+											className="asnp-h-6 asnp-w-6"
+											color="red"
+										/>
+									</div>
+								</div>
 							</div>
 							<div className="asnp-w-full asnp-ml-2 asnp-flex asnp-mt-4 asnp-inputWeek">
 								<Select
 									className="!asnp-w-[15rem]"
-									onChange={ ( e ) => setLangTrans( e.lang ) }
+									onChange={ ( selectedOption ) => {
+										if ( selectedOption ) {
+											setLangTrans( selectedOption.lang );
+										}
+									} }
 									options={ translationLang }
 									isClearable={ true }
 									isDisabled={ false }
