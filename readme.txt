@@ -1,4 +1,4 @@
-=== Sale Badges and Product Labels for WooCommerce ===
+=== Badge and Product Label for WooCommerce ===
 Contributors: asanaplugins
 Donate link: https://www.asanaplugins.com/
 Tags: sale badges, product labels, woocommerce, badges, WooCommerce badges, WooCommerce sale badges, labels, plugin, shop, store, ecommerce, marketing, products, tags, product tags, product marks, product sign, sale product label, onsale product, woocommerce tags, custom labels, custom product badges, advanced product labels for woocommerce
@@ -9,11 +9,11 @@ Stable tag: 1.6.0
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WooCommerce Sale Badges & Product Labels. Sale labels & countdown timers(PRO) for products,categories,Onsale,out-of-stock items.
+WooCommerce Badge, Sale Badge, Sold Out Badge & Product Label. countdown timers(PRO) for products,categories,Onsale,out-of-stock items.
 
 == Description ==
 
-WooCommerce Sale Badges and Product Labels elevates your store’s appeal with customized badges and countdown timers (PRO Version). Unlock the full potential of your WooCommerce store with captivating sale badges, product labels, and countdown timers. This all-in-one plugin empowers you to create eye-catching labels and scheduled badges for products, categories, and tags. Highlighting discount values, product quantities, ratings, shipping classes, stock status, and sale status, these labels provide valuable information to your customers. Plus, leverage the power of countdown timers to create urgency and drive conversions. With an intuitive interface, easily customize labels and replace default on-sale badges. Take your WooCommerce store to new heights with visually appealing badges, labels, and countdown timers tailored to your unique offerings.
+WooCommerce Badge and Product Label elevate your store's appeal with customized badges and countdown timers (PRO Version). Enhance your WooCommerce store with sale badges, product labels, and countdown timers to drive sales. This all-in-one plugin empowers you to create eye-catching labels and scheduled badges for products, categories, and tags. Highlighting discount values, product quantities, ratings, shipping classes, stock status, and sale status, these labels provide valuable information to your customers. Plus, leverage the power of countdown timers to create urgency and drive conversions. With an intuitive interface, easily customize labels and replace default on-sale badges. Take your WooCommerce store to new heights with visually appealing badges, labels, and countdown timers tailored to your unique offerings.
 
 [FRONT-END DEMO](https://pricing-and-discounts.asanaplugins.com/demo/shop/) | [BACK-END DEMO](https://pricing-and-discounts.asanaplugins.com/?asnp_demo_plugin=easy-sale-badges-for-woocommerce) | [Ask Questions](https://wordpress.org/support/plugin/easy-sale-badges-for-woocommerce/) | **[PRO WITH 50% DISCOUNT FOR $30](https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/)** | [Github](https://github.com/codewp/easy-sale-badges-for-woocommerce)
 
@@ -25,78 +25,93 @@ https://youtu.be/1d-ICc1tVTc
 
 https://youtu.be/aTHFT3ovCaw
 
-== SALE BADGES AND PRODUCT LABELS FOR WOOCOMMERCE ==
+== ✅ BADGE AND PRODUCT LABEL FOR WOOCOMMERCE FEATURES ==
 
-Sale badges and product labels for WooCommerce are essential tools for e-commerce businesses to grab the attention of customers and increase sales. These badges and labels can be used to highlight special offers, discounts, limited-time promotions, or new arrivals. By using eye-catching designs and strategically placing them on product images, businesses can create a sense of urgency and persuade customers to make a purchase. With the ability to customize the appearance and placement of these badges and labels, WooCommerce provides businesses with a powerful tool to increase visibility and drive conversions in their online stores.
-
-== BOOST SALES WITH STRIKING PRODUCT LABELS ==
-
-In today's competitive market, it is essential for businesses to find effective ways to boost sales and grab the attention of potential customers. One powerful tool that can make a significant impact is striking product labels. These visually appealing labels have the power to captivate consumers and create a lasting impression. By incorporating eye-catching designs, vibrant colors, and compelling imagery, businesses can differentiate their products from competitors and attract more customers. Striking product labels not only enhance the overall appearance of the product but also convey key information about its features and benefits. With their ability to instantly grab attention and leave a lasting impression, striking product labels can undoubtedly contribute to a significant increase in sales for businesses.
-
-== ✅SALE BADGES AND PRODUCT LABELS FOR WOOCOMMERCE FREE FEATURES ==
-* Add Easy Custom labels on products
-* Access CSS label templates
-* Preview is available live for easy placement and customization
-* Add Badges to specific WooCommerce products, categories, or tags
-* Add Badges to "Is On Sale"
-* Add Badges to "In Stock" and "Out Of Stock"
-* Customize label attributes, including color, font size, line height, width, opacity, position, and much more
-* Transform And Rotate Css Labels
-* Set Toggle To the visibility of badges
-* Include an option to set an expiration date and time for badges
-* A unique feature for adjusting hooks that control the presentation of product labels, especially helpful if your theme encounters issues displaying them or if you wish to reposition the labels
+- **Create Custom labels on Products**
+- **Implemented multi-language support for the Labels** to enable labels to be displayed in various languages for enhanced accessibility.
+- **CSS label templates** Access pre-designed CSS label templates for quick and easy customization.
+- **Multiple labels available for a single product** Multiple labels can be applied to a single product.
+- **Preview is available live for easy placement and customization**
+- **Add Badge to specific WooCommerce Products**
+- **Add Badge to Categories**
+- **Add Badge to Tags**
+- **Add Badge to "Is On Sale"**
+- **Add Badge to "In Stock" and "Out Of Stock", "On Backorder"**
+- **Customize label attributes** including color, font size, line height, width, opacity, and much more.
+- **Schedule** Include an option to set an expiration date and time for badges.
+- **Position** Change Position And Rotate Css Labels And Reverse Text.
+- **Change Hooks** a unique feature for adjusting hooks that control the presentation of product labels, especially helpful if your theme encounters issues displaying them or if you wish to reposition the labels.
+- **Option To Hide WooCommerce On Sale Badges**
+- **Option to set z-index and Font weight for badges**
 
 **[PRO WITH 50% DISCOUNT FOR $30](https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/)**
 
-== ✅SALE BADGES AND PRODUCT LABELS FOR WOOCOMMERCE PRO FEATURES ==
-* Over 200 Image Labels
-* Over 10 CSS Labels
-* 5 Advanced Labels
-* 8 Timers Template
-* Over 10 Animation Effects
-* Incorporate Gradient Colors
-* [Compatible with Discount Rules and Dynamic Pricing for WooCommerce](https://wordpress.org/plugins/easy-woocommerce-discounts/)
-* Add a Percentage Discount amount
-* Rotate CSS Labels, Image Labels, and Advanced Labels
-* Adjust the Position of CSS Labels, Image Labels, and Advanced Labels
-* Include both Vertical and Horizontal Timers
-* Personalize Sale Timers with Styling Options
-* Sale Image Labels
-* Percentage Off Image Labels
-* Coming Soon Image Labels
-* Pre-Order Image Labels
-* Free Image Labels
-* Black Friday Image Labels
-* Valentine's Day Image Labels
+== ✅ BADGE AND PRODUCT LABEL FOR WOOCOMMERCE PRO FEATURES ==
+
+- **Over 200 Image Labels**
+- **Over 10 CSS Labels**
+- **5 Advanced Labels**
+- **8 Timers Template**
+- **Over 10 Animation Effects**
+- **Incorporate Gradient Colors**
+- **[Compatible with Discount Rules and Dynamic Pricing for WooCommerce](https://wordpress.org/plugins/easy-woocommerce-discounts/)**
+- **Rotate CSS Labels, Image Labels, and Advanced Labels**
+- **Adjust the Position of CSS Labels, Image Labels, and Advanced Labels**
+- **Include both Vertical and Horizontal Timers**
+- **Sale Image Labels**
+- **Percentage Off Image Labels**
+- **Coming Soon Image Labels**
+- **Pre-Order Image Labels**
+- **Free Image Labels**
+- **Black Friday Image Labels**
+- **Xmas Image Labels**
+- **Valentine's Day Image Labels**
+- **Buy 2 Get 1 Free Image Labels**
+- **Cyber Monday Image Labels**
+- **Shipping Image Labels**
+- **Sold Out Image Labels**
 
 == TESTED WITH MORE THAN 40+ THEMES ==
-* WoodMart 
-* Avada
-* Flatsome
-* The7
-* Divi
-* Betheme
-* Uncode 
-* Bridge 
-* Salient
-* Enfold 
-* JupiterX
-* XStore
-* Porto 
-* StoreFront 
-* Astra  
-* OceanWP 
-* And Much More
 
-== COMPATIBILITY  WITH  WOOCOMMERCE  PLUGINS ==
+- **Avada** 
+- **WoodMart**
+- **Flatsome** 
+- **The7** 
+- **Divi**
+- **Betheme**
+- **Uncode**
+- **Bridge**
+- **Salient**
+- **Enfold**
+- **JupiterX**
+- **XStore**
+- **Porto **
+- **StoreFront**
+- **Astra**
+- **OceanWP**
+- **And Much More**
 
-Sale Badges and Product Labels for WooCommerce has been tested and is fully compatible with the following WooCommerce plugins that you can integrate into your website :
+== BADGE AND PRODUCT LABEL FOR WOOCOMMERCE ==
+
+The badge and product label tool for WooCommerce is crucial for e-commerce businesses. It helps grab customers' attention and boost sales by highlighting special offers, discounts, new arrivals, or limited-time promotions. Placing them strategically on product images and Encouraging customers to make a purchase can be achieved by creating a sense of urgency. With the ability to customize their appearance and placement, online businesses can enhance their visibility and drive conversions effectively using WooCommerce.
+
+== BOOST SALES WITH AN EYE-CATCHING BADGE AND PRODUCT LABEL IN WOOCOMMERCE ==
+
+In today's competitive market, businesses need to find effective ways to boost sales and grab the attention of potential customers. A striking product label can be a powerful tool that can significantly impact. These visually appealing labels have the power to captivate consumers and create a lasting impression. By incorporating eye-catching designs, vibrant colors, and compelling imagery, businesses can differentiate their products from competitors and attract more customers. Striking product labels enhances the product's overall appearance and conveys information about its features and benefits. With their ability to instantly grab attention and leave a lasting impression, striking product labels can undoubtedly contribute to a significant increase in business sales.
+
+== CUSTOMIZATION OPTIONS FOR THE BADGE AND PRODUCT LABEL IN WOOCOMMERCE ==
+
+In WooCommerce, numerous customization options are available for badges and product labels. Store owners can customize the appearance and functionality of their stores to suit their specific needs. These options typically include changing the color, size, font, and position of badges and labels, providing flexibility in aligning them with the store's branding and design aesthetics. Additionally, store owners can often customize the text displayed on badges and labels, including promotional messages, product statuses, or other relevant information. With these customization options, users can create attractive badges and labels that communicate essential product information and enhance the customer shopping experience.
+
+== COMPATIBILITY WITH WOOCOMMERCE PLUGINS ==
+
+Badge and Product Label are fully compatible with the following WooCommerce plugins, which you can easily integrate into your website :
 
 * <strong>[Discount Rules and Dynamic Pricing for WooCommerce](https://wordpress.org/plugins/easy-woocommerce-discounts/)
 
-== HOW TO ADD THE SALE BADGES AND PRODUCT LABELS PLUGIN TO  WOOCOMMERCE PRODUCTS ==
+== HOW TO ADD THE BADGE AND PRODUCT LABEL PLUGIN TO WOOCOMMERCE PRODUCTS ==
 
-Simply install and activate the plugin, and then follow the steps below to create a Product Badge.
+Install and activate the plugin, then follow these steps to create a product badge.
 1. Choose between CSS Label, Image Label, Advanced Label, or Timer.
 2. Select a Label Style and customize it to your liking.
 3. Navigate to the 'Products' section, select a Condition, and save it.
@@ -104,7 +119,7 @@ Simply install and activate the plugin, and then follow the steps below to creat
 
 == SHORTCODES ==
 
-Sale Badges And Product Labels Plugin To Woocommerce has the below shortcodes.
+Badge and Product Label Plugin To Woocommerce has the below shortcodes.
 
 * [asnp_badge hide="1"] to use on the product page.
 * [asnp_badge] to use on the archive product or product listing page.
@@ -116,19 +131,20 @@ If you would like to show a specific product sale badges, then use the below sho
 
 == 📕 Tutorials ==
 
-* <strong>[How to Add Sales Countdown Timer to Products in WooCommerce](https://www.asanaplugins.com/how-to-add-sales-countdown-timer-to-products-in-woocommerce/)</strong>
-* <strong>[WooCommerce Sale Badge Free Plugin](https://www.asanaplugins.com/woocommerce-sale-badge-free-plugin/)</strong>
-* <strong>[How to Add Product Labels in WooCommerce](https://www.asanaplugins.com/how-to-add-product-labels-in-woocommerce/)</strong>
 * <strong>[Add Product Labels to WooCommerce Products](https://www.asanaplugins.com/add-product-labels-to-woocommerce-products-full-guide/)</strong>
+* <strong>[WooCommerce Sale Badge Free Plugin](https://www.asanaplugins.com/woocommerce-sale-badge-free-plugin/)</strong>
+* <strong>[How to Add Sales Countdown Timer to Products in WooCommerce](https://www.asanaplugins.com/how-to-add-sales-countdown-timer-to-products-in-woocommerce/)</strong>
+* <strong>[How to Add Product Labels in WooCommerce](https://www.asanaplugins.com/how-to-add-product-labels-in-woocommerce/)</strong>
+* <strong>[WooCommerce Sold Out Badge](https://www.asanaplugins.com/woocommerce-sold-out-badge/)</strong>
 
 == 🚀 SOCIAL MEDIA LINKS ==
 
 * <strong>[YouTube](https://www.youtube.com/@asanaplugins4913)</strong>
 * <strong>[Twitter](https://twitter.com/AsanaPlugins/)</strong>
 
-== 🚀 SALE BADGES AND PRODUCT LABELS PERFORMANCE ==
+== 🚀 BADGE AND PRODUCT LABEL PERFORMANCE ==
 
-The plugin is rich in features while it is lightweight and fast.
+The plugin is rich in features, while it is lightweight and fast.
 
 = Minimum Requirements =
 
