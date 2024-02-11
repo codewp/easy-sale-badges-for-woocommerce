@@ -5,7 +5,7 @@ Tags: sale badges, product labels, woocommerce, badges, WooCommerce badges, WooC
 Requires at least: 5.0
 Tested up to: 6.4
 Requires PHP: 5.6
-Stable tag: 1.6.0
+Stable tag: 1.7.0
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -180,6 +180,10 @@ The plugin is rich in features, while it is lightweight and fast.
 9. Percentage Discount amount.
 
 == Changelog ==
+
+= 1.7.0 =
+* Added multi-language support for CSS Label and Advanced Label.
+* Added +20 Sold Out Image Labels.
 
 = 1.6.0 =
 * Added Price, Sale Price, Regular Price, Saved percent, Saved Price, Sale Ends, Currency, Quantity, sku, br, as Dynamic Placeholders to Labels.
