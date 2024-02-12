@@ -9,7 +9,7 @@ Stable tag: 1.7.0
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WooCommerce Badge, Sale Badge, Sold Out Badge & Product Label. countdown timers(PRO) for products,categories,Onsale,out-of-stock items.
+WooCommerce Badge and Product Label, Sale Badge, Sold Out Badge. countdown timers(PRO) for products,categories,Onsale,out-of-stock items.
 
 == Description ==
 
