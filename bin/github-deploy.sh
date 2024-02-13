@@ -54,8 +54,8 @@ run_command() {
   fi
 }
 
-if ! [ -x "$(command -v hub)" ]; then
-  echo 'Error: hub is not installed. Install from https://github.com/github/hub' >&2
+if ! [ -x "$(command -v gh)" ]; then
+  echo 'Error: gh is not installed. Install from https://github.com/cli/cli' >&2
   exit 1
 fi
 
@@ -189,9 +189,9 @@ run_command "git push origin $BRANCH" false
 # Create the new release.
 if [ "$(echo "${DO_WP_DEPLOY:-n}" | tr "[:upper:]" "[:lower:]")" = "y" ]; then
 	if [ $IS_PRE_RELEASE = true ]; then
-		run_command "hub release create -m $VERSION -m 'Release of version $VERSION. See readme.txt for details.' -t $BRANCH --prerelease 'v${VERSION}'" false
+		run_command "gh release create v${VERSION} --title $VERSION --notes 'Release of version $VERSION. See readme.txt for details.' --target $BRANCH --prerelease" false
 	else
-		run_command "hub release create -m $VERSION -m 'Release of version $VERSION. See readme.txt for details.' -t $BRANCH 'v${VERSION}'" false
+		run_command "gh release create v${VERSION} --title $VERSION --notes 'Release of version $VERSION. See readme.txt for details.' --target $BRANCH" false
 	fi
 else
 	run_command "git tag 'v${VERSION}'" true
