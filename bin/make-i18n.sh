@@ -1,9 +1,8 @@
 #!/bin/sh
 
 # Check for required version
-WPCLI_MAJOR_VERSION=$(echo "$WPCLI_VERSION" | cut -c1)
-WPCLI_MINOR_VERSION=$(echo "$WPCLI_VERSION" | cut -c3)
-if [ "$WPCLI_MAJOR_VERSION" -lt "2" -o "$WPCLI_MAJOR_VERSION" -eq "2" -a "$WPCLI_MINOR_VERSION" -lt "1" ]; then
+WPCLI_VERSION=`wp cli version | cut -f2 -d' '`
+if [ ${WPCLI_VERSION:0:1} -lt "2" -o ${WPCLI_VERSION:0:1} -eq "2" -a ${WPCLI_VERSION:2:1} -lt "1" ]; then
 	echo WP-CLI version 2.1.0 or greater is required to make JSON translation files
 	exit
 fi
