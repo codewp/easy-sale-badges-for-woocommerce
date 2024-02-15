@@ -63,6 +63,8 @@ const defaultBadge = {
 	fontWeightLabel: '600',
 	percentageDiscount: 0,
 	labelTranslate: {},
+	badgeColorShadow: '#807e7e',
+	boxShadowWidth: '0',
 };
 
 export default function Badge() {

@@ -75,6 +75,8 @@ const MenuItem = ( props ) => {
 						badgePositionBottom={ props.badge.badgePositionBottom }
 						badgePositionLeft={ props.badge.badgePositionLeft }
 						badgePositionRight={ props.badge.badgePositionRight }
+						badgeColorShadow={props.badge.badgeColorShadow}
+						boxShadowWidth={props.badge.boxShadowWidth}
 					/>
 					<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold asnp-text-red-600">
 						{ __(

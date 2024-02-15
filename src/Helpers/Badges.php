@@ -176,6 +176,12 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 		$dynamic_styles .= '.asnp-esb-badge-'. absint( $badge->id ) . ' {' . $styles . '}';
 	}
 
+	$dynamic_styles .= '.asnp-esb-productBadge-'. absint( $badge->id ) .' {';
+		if (isset($badge->badgeColorShadow)) {
+			$dynamic_styles .= ' filter: drop-shadow(' . $badge->badgeColorShadow . ' ' . $badge->boxShadowWidth . 'px ' . $badge->boxShadowWidth . 'px ' . $badge->boxShadowWidth . 'px);';
+		}
+	$dynamic_styles .= '}';
+
 	switch ( $badge->badgeStyles ) {
 		case 'badge1':
 			$dynamic_styles .= '.asnp-esb-productBadge-'. absint( $badge->id ) .' {';
