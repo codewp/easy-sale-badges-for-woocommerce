@@ -321,6 +321,7 @@ class Badge extends BaseController {
 				case 'textColor':
 				case 'badgeStyles':
 				case 'badgeColor':
+				case 'badgeColorShadow':
 				case 'badgePositionY':
 				case 'badgePositionX':
 				case 'badgeImage':
@@ -360,6 +361,7 @@ class Badge extends BaseController {
 				case 'topRightRadius':
 				case 'paddingRightLeft':
 				case 'paddingTopBottom':
+				case 'boxShadowWidth':
 				case 'bottomLeftRadius':
 				case 'bottomRightRadius':
 					if ( isset( $value ) ) {

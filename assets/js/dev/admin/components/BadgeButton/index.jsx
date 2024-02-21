@@ -247,6 +247,7 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 											width: `${ widthContBadge }`,
 											height: `${ heightContBadge }`,
 											inset: `${ insetProperty }`,
+											filter: `drop-shadow(${ badge.badgeColorShadow } ${ badge.boxShadowWidth }px ${ badge.boxShadowWidth }px ${ badge.boxShadowWidth }px)`,
 										} }
 									>
 										<StyledSpan

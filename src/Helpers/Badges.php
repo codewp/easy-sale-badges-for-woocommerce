@@ -171,6 +171,9 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 	if ( isset( $badge->animationCount ) ) {
 		$styles .= ' animation-iteration-count: ' . esc_html( $badge->animationCount ) . ';';
 	}
+	if ( isset( $badge->boxShadowWidth ) && isset( $badge->badgeColorShadow ) ) {
+		$styles .= ' filter: drop-shadow(' . esc_html( $badge->badgeColorShadow ) . ' ' . esc_html( $badge->boxShadowWidth ) . 'px ' . esc_html( $badge->boxShadowWidth ) . 'px ' . esc_html( $badge->boxShadowWidth ) . 'px);';
+	}
 
 	if ( ! empty( $styles ) ) {
 		$dynamic_styles .= '.asnp-esb-badge-'. absint( $badge->id ) . ' {' . $styles . '}';
