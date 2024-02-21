@@ -5,7 +5,7 @@ Tags: sale badge, product label, woocommerce, badge, woocommerce badge, woocomme
 Requires at least: 5.0
 Tested up to: 6.4
 Requires PHP: 5.6
-Stable tag: 1.7.0
+Stable tag: 1.8.0
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,7 @@ https://youtu.be/aTHFT3ovCaw
 - **Change Hooks** a unique feature for adjusting hooks that control the presentation of product labels, especially helpful if your theme encounters issues displaying them or if you wish to reposition the labels.
 - **Option To Hide WooCommerce On Sale Badges**
 - **Option to set z-index and Font weight for badges**
+- **Implemented a shadow option for Labels**
 
 **[PRO WITH 50% DISCOUNT FOR $30](https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/)**
 
@@ -180,6 +181,10 @@ The plugin is rich in features, while it is lightweight and fast.
 9. Percentage Discount amount.
 
 == Changelog ==
+
+= 1.8.0 =
+* Added a Shadow Option for CSS Labels.
+* Compatibility with WooCommerce 8.6.1
 
 = 1.7.0 =
 * Added multi-language support for CSS Label and Advanced Label.
