@@ -146,7 +146,6 @@ const Position = ( props ) => {
 						<input
 							disabled={ disablePositionTop }
 							type="number"
-							min="0"
 							max="200"
 							className={
 								disablePositionTop
@@ -172,7 +171,6 @@ const Position = ( props ) => {
 						<input
 							disabled={ disablePositionButtom }
 							type="number"
-							min="0"
 							max="200"
 							className={
 								disablePositionButtom
@@ -198,7 +196,6 @@ const Position = ( props ) => {
 						<input
 							disabled={ disablePositionLeft }
 							type="number"
-							min="0"
 							max="200"
 							className={
 								disablePositionLeft
@@ -224,7 +221,6 @@ const Position = ( props ) => {
 						<input
 							disabled={ disablePositionRight }
 							type="number"
-							min="0"
 							max="200"
 							className={
 								disablePositionRight
