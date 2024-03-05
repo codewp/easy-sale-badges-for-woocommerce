@@ -5,7 +5,7 @@ Tags: sale badge, product label, woocommerce, badge, woocommerce badge, woocomme
 Requires at least: 5.0
 Tested up to: 6.4
 Requires PHP: 5.6
-Stable tag: 1.8.0
+Stable tag: 1.9.0
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,7 +51,7 @@ https://youtu.be/aTHFT3ovCaw
 
 - **Over 200 Image Labels**
 - **Over 10 CSS Labels**
-- **5 Advanced Labels**
+- **Over 5 Modern Badges**
 - **8 Timers Template**
 - **Over 10 Animation Effects**
 - **Incorporate Gradient Colors**
@@ -171,16 +171,19 @@ The plugin is rich in features, while it is lightweight and fast.
 == Screenshots ==
 
 1. Animation.
-2. Product Labels.
-3. Sale Badges.
-4. CSS Labels.
-5. Image Labels.
-6. Advanced Labels.
+2. Modern Badges.
+3. Product Labels.
+4. Sale Badges.
+5. CSS Labels.
+6. Image Labels.
 7. Timer.
 8. Countdown Timer.
 9. Percentage Discount amount.
 
 == Changelog ==
+
+= 1.9.0 =
+* Added more than 5 Modern Badges.
 
 = 1.8.0 =
 * Added a Shadow Option for CSS Labels.

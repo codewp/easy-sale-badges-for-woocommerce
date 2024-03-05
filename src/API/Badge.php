@@ -335,6 +335,20 @@ class Badge extends BaseController {
 				case 'animationCount':
 				case 'selectedDateFrom':
 				case 'selectedDateTo':
+				case 'fontWeightLabelAdv':
+				case 'widthAdvLabel':
+				case 'fontSizeAdvLabel':
+				case 'horizontalAdvLabelOne':
+				case 'horizontalAdvLabelTwo':
+				case 'horizontalAdvLabelThree':
+				case 'horizontalAdvLabelFour':
+				case 'horizontalAdvLabelFive':
+				case 'verticalAdvLabelOne':
+				case 'verticalAdvLabelTwo':
+				case 'verticalAdvLabelThree':
+				case 'verticalAdvLabelFour':
+				case 'verticalAdvLabelFive':
+				case 'fontFamily':
 				case 'badgeTimer':
 				case 'badgeLabelAdv':
 				case 'labelDayTimer':

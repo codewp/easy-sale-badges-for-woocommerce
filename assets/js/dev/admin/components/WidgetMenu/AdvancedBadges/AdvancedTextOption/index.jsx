@@ -10,12 +10,15 @@ const AdvancedTextOption = () => {
 			<div className="asnp-mt-8 asnp-flex asnp-w-full">
 				<label className="asnp-w-[20rem]">
 					<span className="asnp-field-title">
-						{ __( 'Advanced Label', 'easy-sale-badges-for-woocommerce' ) }
+						{ __(
+							'Modern Badges',
+							'easy-sale-badges-for-woocommerce'
+						) }
 					</span>
 					<input
 						type="text"
 						className="asnp-text-field"
-						placeholder="Advanced Label"
+						placeholder="SALE"
 						disabled
 					/>
 				</label>
@@ -85,7 +88,10 @@ const AdvancedTextOption = () => {
 			<div className="asnp-flex asnp-mt-[1rem] asnp-w-full">
 				<label>
 					<span className="asnp-field-title">
-						{ __( 'Font Size (Pixel)', 'easy-sale-badges-for-woocommerce' ) }
+						{ __(
+							'Font Size (Pixel)',
+							'easy-sale-badges-for-woocommerce'
+						) }
 					</span>
 					<div className="asnp-w-[10rem]">
 						<input
@@ -100,7 +106,10 @@ const AdvancedTextOption = () => {
 				</label>
 				<label className="asnp-ml-10">
 					<span className="asnp-field-title">
-						{ __( 'Line Height (Pixel)', 'easy-sale-badges-for-woocommerce' ) }
+						{ __(
+							'Line Height (Pixel)',
+							'easy-sale-badges-for-woocommerce'
+						) }
 					</span>
 					<div className="asnp-w-[10rem]">
 						<input
@@ -108,6 +117,76 @@ const AdvancedTextOption = () => {
 							className="asnp-text-field"
 							min="0"
 							max="100"
+							placeholder="0"
+							disabled
+						/>
+					</div>
+				</label>
+				<label className="asnp-ml-10">
+					<span className="asnp-field-title">
+						{ __(
+							'Font Weight',
+							'easy-sale-badges-for-woocommerce'
+						) }
+					</span>
+					<div className="asnp-w-[10rem]">
+						<input
+							type="number"
+							className="asnp-text-field"
+							min="0"
+							max="100"
+							placeholder="0"
+							disabled
+						/>
+					</div>
+				</label>
+			</div>
+			<div className="asnp-flex asnp-mt-[1.5rem] asnp-w-full">
+				<label>
+					<span className="asnp-field-title">
+						{ __(
+							'Width (Pixel)',
+							'easy-sale-badges-for-woocommerce-pro'
+						) }
+					</span>
+					<div className="asnp-w-[10rem]">
+						<input
+							type="number"
+							className="asnp-text-field"
+							min="0"
+							max="200"
+							placeholder="0"
+							disabled
+						/>
+					</div>
+				</label>
+				<label className="asnp-ml-10">
+					<span className="asnp-field-title">
+						{ __(
+							'Horizental',
+							'easy-sale-badges-for-woocommerce-pro'
+						) }
+					</span>
+					<div className="asnp-w-[10rem]">
+						<input
+							type="number"
+							className="asnp-text-field"
+							placeholder="0"
+							disabled
+						/>
+					</div>
+				</label>
+				<label className="asnp-ml-10">
+					<span className="asnp-field-title">
+						{ __(
+							'Vertical',
+							'easy-sale-badges-for-woocommerce-pro'
+						) }
+					</span>
+					<div className="asnp-w-[10rem]">
+						<input
+							type="number"
+							className="asnp-text-field"
 							placeholder="0"
 							disabled
 						/>

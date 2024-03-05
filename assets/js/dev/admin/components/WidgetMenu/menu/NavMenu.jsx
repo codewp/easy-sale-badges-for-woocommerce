@@ -91,7 +91,7 @@ const NavMenu = ( props ) => {
 						' asnp-nav-tab-item asnp-flex asnp-text-red-600'
 					}
 				>
-					{ __( 'Advanced Labels', 'easy-sale-badges-for-woocommerce' ) }
+					{ __( 'Modern Badges', 'easy-sale-badges-for-woocommerce' ) }
 					<div className="asnp-ml-[0.3rem]">
 						{ __( '(Pro)', 'easy-sale-badges-for-woocommerce' ) }
 					</div>
