@@ -295,7 +295,9 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 							<div
 								className="asnp-esb-productBadgeOut"
 								style={ {
-									width: `${ widthContBadge }`,
+									width: `100%`,
+									display: 'flex',
+									justifyContent: badge.badgePositionOutofImage,
 									height: `${ heightContBadge }`,
 									inset: `${ insetProperty }`,
 									filter: `drop-shadow(${ badge.badgeColorShadow } ${ badge.boxShadowWidth }px ${ badge.boxShadowWidth }px ${ badge.boxShadowWidth }px)`,
@@ -303,7 +305,7 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 							>
 								<StyledSpan
 									badgeIcon={ badgeIcon }
-									className="asnp-esb-productBadge2"
+									className="asnp-esb-productBadge2out"
 									style={ {
 										color: `${ badge.textColor }`,
 										fontSize: `${ badge.fontSizeText }px`,
@@ -336,7 +338,7 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 								</StyledSpan>
 							</div>
 						) }
-					<div className="asnp-mt-2 asnp-ml-40 asnp-text-base asnp-text-black">
+					<div className="asnp-mt-4 asnp-ml-40 asnp-text-base asnp-text-black">
 						<del className="asnp-text-gray-400">
 							{ __( '$100', 'easy-sale-badges-for-woocommerce' ) }
 						</del>

@@ -298,11 +298,11 @@ const Position = ( props ) => {
 								type="button"
 								className={
 									'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-l-lg asnp-border   asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-									( props.badgePositionX == 'left' &&
+									( props.badgePositionOutofImage == 'flex-start' &&
 										'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
 								}
 								onClick={ () => {
-									props.onChange( 'badgePositionX', 'left' );
+									props.onChange( 'badgePositionOutofImage', 'flex-start' );
 								} }
 							>
 								{ __(
@@ -314,12 +314,12 @@ const Position = ( props ) => {
 								type="button"
 								className={
 									'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-									( props.badgePositionX == 'center' &&
+									( props.badgePositionOutofImage == 'center' &&
 										'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
 								}
 								onClick={ () => {
 									props.onChange(
-										'badgePositionX',
+										'badgePositionOutofImage',
 										'center'
 									);
 								} }
@@ -333,11 +333,11 @@ const Position = ( props ) => {
 								type="button"
 								className={
 									'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-									( props.badgePositionX == 'right' &&
+									( props.badgePositionOutofImage == 'flex-end' &&
 										'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
 								}
 								onClick={ () => {
-									props.onChange( 'badgePositionX', 'right' );
+									props.onChange( 'badgePositionOutofImage', 'flex-end' );
 								} }
 							>
 								{ __(

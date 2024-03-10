@@ -181,10 +181,12 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 
 	if ( isset( $badge->cssLabelPosition ) && 'outOfImage' == $badge->cssLabelPosition) {
 		$dynamic_styles .= '.asnp-position-css-label {';
-			if ( isset( $badge->widthBadge ) ) {
-				$dynamic_styles .= ' justify-content: center;';
-			}
-			
+			if ( isset( $badge->badgePositionOutofImage ) ) {
+				$dynamic_styles .= ' justify-content: ' . $badge->badgePositionOutofImage . ';';
+				$dynamic_styles .= ' display: flex;';
+				$dynamic_styles .= ' width: 100% !important;';
+
+			}	
 		$dynamic_styles .= '}';	}
 
 	switch ( $badge->badgeStyles ) {

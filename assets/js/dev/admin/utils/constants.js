@@ -188,7 +188,6 @@ export default function BadgeCssandAdv( badge ) {
 			right: ${ badge.badgePositionX == 'right' ? '0px' : '' };
             height: ${ badge.heightBadge }px;
 			width: ${ badge.widthBadge }px;
-			position: absolute;
 			opacity: ${ badge.opacity };
 			text-align: center;
             text-shadow: none;
@@ -198,7 +197,6 @@ export default function BadgeCssandAdv( badge ) {
 			badgeIcon = `
 			text-align: center;
 			display: inline-block;
-			position: absolute;
 			opacity: ${ badge.opacity };
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
 			right: ${ badge.badgePositionX == 'right' ? '0px' : '' };
@@ -228,7 +226,6 @@ export default function BadgeCssandAdv( badge ) {
 			break;
 		case 'badge3':
 			badgeIcon = `
-			position: absolute;
 			background: ${ badge.badgeColor };
 			text-align: center;
 			border-radius: 3px;
@@ -265,7 +262,6 @@ export default function BadgeCssandAdv( badge ) {
 			badgeIcon = `
 			border-radius: 3px;
 			padding: 0px 15px;
-			position: absolute;
 			opacity: ${ badge.opacity };
 			display: inline-block;
 			background: ${ badge.badgeColor };
@@ -320,7 +316,6 @@ export default function BadgeCssandAdv( badge ) {
 			break;
 		case 'badge5':
 			badgeIcon = `
-				position: absolute;
 				display: block;
 				width: ${ badge.widthBadge }px;
 				height: ${ badge.widthBadge }px;
@@ -364,7 +359,6 @@ export default function BadgeCssandAdv( badge ) {
 			break;
 		case 'badge6':
 			badgeIcon = `
-			position: absolute;
 			height: ${ badge.widthBadge }px;
 			margin: 0;
 			padding: 0;
@@ -422,7 +416,6 @@ export default function BadgeCssandAdv( badge ) {
 		case 'badge7':
 			badgeIcon = `
 			background: ${ badge.badgeColor };
-			position: absolute;
 			z-index: 99;
 			top: 0px;
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
@@ -447,7 +440,6 @@ export default function BadgeCssandAdv( badge ) {
 			right:${ badge.badgePositionX == 'right' ? '0px' : '' };
 			height: ${ badge.widthBadge }px;
 			width: ${ badge.widthBadge }px;
-            position: absolute;
             z-index: 99;
             top: 0px;
             left: 0px;
@@ -468,7 +460,6 @@ export default function BadgeCssandAdv( badge ) {
 			height: ${ badge.widthBadge / 1.66 }px !important;
 			width: ${ badge.widthBadge }px;
 			background: ${ badge.badgeColor };
-			position: absolute;
 			z-index: 1;
 			opacity: ${ badge.opacity };
 			top: 0px;
@@ -504,7 +495,6 @@ export default function BadgeCssandAdv( badge ) {
 			height: ${ badge.widthBadge / 1.083 }px !important;
 			width: ${ badge.widthBadge }px;
 			background: ${ badge.badgeColor };
-			position: absolute;
 			z-index: 1;
 			opacity: ${ badge.opacity };
 			top: 0px;
