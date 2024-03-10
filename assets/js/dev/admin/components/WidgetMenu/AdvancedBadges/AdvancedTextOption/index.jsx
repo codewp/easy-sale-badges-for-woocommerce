@@ -163,7 +163,7 @@ const AdvancedTextOption = () => {
 				<label className="asnp-ml-10">
 					<span className="asnp-field-title">
 						{ __(
-							'Horizental',
+							'Horizontal',
 							'easy-sale-badges-for-woocommerce-pro'
 						) }
 					</span>

@@ -26,7 +26,42 @@ const MenuItem = ( props ) => {
 	return (
 		<div className="asnp-w-full">
 			{ props.activeStatus == 1 && (
-				<div className="asnp-mt-3">
+				<div className="asnp-mt-6">
+					<div>
+						<label className="asnp-block asnp-space-y-2 asnp-max-w-lg">
+							<div className="asnp-flex">
+								<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
+									{ __(
+										'CSS Label Position On Product Page',
+										'easy-sale-badges-for-woocommerce-pro'
+									) }
+								</div>
+							</div>
+							<select
+								className="asnp-block asnp-select-field md:asnp-w-2/3 !asnp-h-12"
+								value={ props.badge.cssLabelPosition }
+								onChange={ ( e ) =>
+									props.onChange(
+										'cssLabelPosition',
+										e.target.value
+									)
+								}
+							>
+								<option value="onImage">
+									{ __(
+										'On image',
+										'easy-sale-badges-for-woocommerce-pro'
+									) }
+								</option>
+								<option value="outOfImage">
+									{ __(
+										'Out of image',
+										'easy-sale-badges-for-woocommerce-pro'
+									) }
+								</option>
+							</select>
+						</label>
+					</div>
 					<TextOptions
 						show={ show }
 						setShow={ setShow }
@@ -77,6 +112,7 @@ const MenuItem = ( props ) => {
 						badgePositionRight={ props.badge.badgePositionRight }
 						badgeColorShadow={ props.badge.badgeColorShadow }
 						boxShadowWidth={ props.badge.boxShadowWidth }
+						cssLabelPosition={ props.badge.cssLabelPosition }
 					/>
 					<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold asnp-text-red-600">
 						{ __(

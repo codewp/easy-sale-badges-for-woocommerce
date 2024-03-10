@@ -65,6 +65,7 @@ const defaultBadge = {
 	labelTranslate: {},
 	badgeColorShadow: '#807e7e',
 	boxShadowWidth: '0',
+	cssLabelPosition: 'onImage',
 };
 
 export default function Badge() {

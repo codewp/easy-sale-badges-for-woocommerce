@@ -179,6 +179,14 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 		$dynamic_styles .= '.asnp-esb-badge-'. absint( $badge->id ) . ' {' . $styles . '}';
 	}
 
+	if ( isset( $badge->cssLabelPosition ) && 'outOfImage' == $badge->cssLabelPosition) {
+		$dynamic_styles .= '.asnp-position-css-label {';
+			if ( isset( $badge->widthBadge ) ) {
+				$dynamic_styles .= ' justify-content: center;';
+			}
+			
+		$dynamic_styles .= '}';	}
+
 	switch ( $badge->badgeStyles ) {
 		case 'badge1':
 			$dynamic_styles .= '.asnp-esb-productBadge-'. absint( $badge->id ) .' {';
@@ -207,7 +215,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadge . 'px;';
 			}
-			if ( isset( $badge->badgePositionX ) ) {
+			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition)) {
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '0px' ) . ';';
 			}
 			if ( isset( $badge->badgePositionX ) && 'right' === $badge->badgePositionX ) {
@@ -286,7 +294,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadge . 'px;';
 			}
-			if ( isset( $badge->badgePositionX ) ) {
+			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition)) {
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '0px' ) . ';';
 			}
 			if ( isset( $badge->badgePositionX ) && 'right' === $badge->badgePositionX ) {
@@ -1138,7 +1146,12 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 
 	$class_names = 'asnp-esb-badge-element asnp-esb-productBadge asnp-esb-productBadge-'. absint( $badge->id );
 	if ( $hide ) {
-		$class_names .= ' asnp-esb-badge-hidden';
+		if (isset( $badge->cssLabelPosition ) && 'outOfImage' == $badge->cssLabelPosition) {
+			$class_names .= ' asnp-esb-css-label-out-of-image asnp-position-css-label';
+			$hide = false;
+		} elseif (isset( $badge->cssLabelPosition ) && 'onImage' == $badge->cssLabelPosition) {
+			$class_names .= ' asnp-esb-badge-hidden asnp-esb-css-label-on-image';
+		}
 	}
 
 	$class_names = apply_filters( 'asnp_wesb_css_badge_class_names', $class_names, $badge, $hide );
