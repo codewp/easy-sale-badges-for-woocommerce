@@ -217,7 +217,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadge . 'px;';
 			}
-			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition)) {
+			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition )) {
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '0px' ) . ';';
 			}
 			if ( isset( $badge->badgePositionX ) && 'right' === $badge->badgePositionX ) {
@@ -296,7 +296,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadge . 'px;';
 			}
-			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition)) {
+			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition) ) {
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '0px' ) . ';';
 			}
 			if ( isset( $badge->badgePositionX ) && 'right' === $badge->badgePositionX ) {
@@ -397,7 +397,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadge . 'px;';
 			}
-			if ( isset( $badge->badgePositionX ) ) {
+			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition) ) {
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '0px' ) . ';';
 			}
 			if ( isset( $badge->badgePositionX ) && 'right' === $badge->badgePositionX ) {
@@ -495,7 +495,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadge . 'px;';
 			}
-			if ( isset( $badge->badgePositionX ) ) {
+			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition) ) {
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '0px' ) . ';';
 			}
 			if ( isset( $badge->badgePositionX ) && 'right' === $badge->badgePositionX ) {
@@ -660,7 +660,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 				$dynamic_styles .= ' background: ' . $badge->badgeColor . ';';
 			}
 
-			if ( isset( $badge->badgePositionX ) ) {
+			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition) ) {
 				$dynamic_styles .= ' transform: ' . ( $badge->badgePositionX == 'right' ? 'rotate(45deg)' : 'rotate(315deg)' ) . ';';
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? '' : '-'. $badge->widthBadge / 2.4  .'px' ) . ';';
 				$dynamic_styles .= ' right: ' . ( $badge->badgePositionX == 'right' ? '-'. $badge->widthBadge / 2.22  .'px' : '' ) . ';';
@@ -720,7 +720,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->zIndex ) ) {
 				$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
-			if ( isset( $badge->badgePositionX ) ) {
+			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition) ) {
 				$dynamic_styles .= ' right: ' . ( $badge->badgePositionX == 'right' ? '0px' : 'auto' ) . ';';
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '0px' ) . ';';
 			}
@@ -840,7 +840,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->zIndex ) ) {
 				$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
-			if ( isset( $badge->badgePositionX ) ) {
+			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition) ) {
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '0px' ) . ';';
 				$dynamic_styles .= ' right: ' . ( $badge->badgePositionX == 'right' ? '0px' : '' ) . ';';
 			}
@@ -923,7 +923,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->zIndex ) ) {
 				$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
-			if ( isset( $badge->badgePositionX ) ) {
+			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition) ) {
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '0px' ) . ';';
 				$dynamic_styles .= ' right: ' . ( $badge->badgePositionX == 'right' ? '0px' : '' ) . ';';
 			}
@@ -1006,7 +1006,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->zIndex ) ) {
 				$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
-			if ( isset( $badge->badgePositionX ) ) {
+			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition) ) {
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '0px' ) . ';';
 				$dynamic_styles .= ' right: ' . ( $badge->badgePositionX == 'right' ? '0px' : '' ) . ';';
 			}
@@ -1074,11 +1074,14 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' z-index: 1;';
 			$dynamic_styles .= ' top: 0px;';
-			$dynamic_styles .= ' left: 0px;';
 			$dynamic_styles .= ' transform: translate3d(0, 0, 0);';
 			$dynamic_styles .= ' border-top-right-radius: 3px;';
 			$dynamic_styles .= ' border-top-left-radius: 3px;';
 			$dynamic_styles .= ' text-align: center;';
+
+			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition) ) {
+				$dynamic_styles .= ' left: 0px;';
+			}
 
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background: ' . $badge->badgeColor . ';';
