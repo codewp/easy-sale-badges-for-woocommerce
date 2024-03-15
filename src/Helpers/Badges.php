@@ -1173,7 +1173,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 	$class_names .= ' asnp-esb-css-label-on-image';
 	}
 
-	if ( $hide && isset( $badge->cssLabelPosition ) && 'onImage' == $badge->cssLabelPosition ) {
+	if ( $hide ) {
 		$class_names .= ' asnp-esb-badge-hidden';
 	}
 

@@ -40,6 +40,33 @@ const MenuItem = ( props ) => {
 						percentageDiscount={ props.badge.percentageDiscount }
 						labelTranslate={ props.badge.labelTranslate }
 					/>
+
+					<BadgeStyles
+						onChange={ props.onChange }
+						badgeStyles={ props.badge.badgeStyles }
+					/>
+					<StyleOptions
+						onChange={ props.onChange }
+						badgeColor={ props.badge.badgeColor }
+						widthBadge={ props.badge.widthBadge }
+						badgeStyles={ props.badge.badgeStyles }
+						badgePositionX={ props.badge.badgePositionX }
+						heightBadge={ props.badge.heightBadge }
+						topLeftRadius={ props.badge.topLeftRadius }
+						topRightRadius={ props.badge.topRightRadius }
+						bottomLeftRadius={ props.badge.bottomLeftRadius }
+						bottomRightRadius={ props.badge.bottomRightRadius }
+						zIndex={ props.badge.zIndex }
+					/>
+					<Opacity
+						onChange={ props.onChange }
+						opacity={ props.badge.opacity }
+						rotationX={ props.badge.rotationX }
+						rotationY={ props.badge.rotationY }
+						rotationZ={ props.badge.rotationZ }
+						horizontal={ props.badge.horizontal }
+						vertical={ props.badge.vertical }
+					/>
 					<div className="asnp-mt-6 asnp-mb-6">
 						<label className="asnp-block asnp-space-y-2 asnp-max-w-lg">
 							<div className="asnp-flex">
@@ -75,32 +102,6 @@ const MenuItem = ( props ) => {
 							</select>
 						</label>
 					</div>
-					<BadgeStyles
-						onChange={ props.onChange }
-						badgeStyles={ props.badge.badgeStyles }
-					/>
-					<StyleOptions
-						onChange={ props.onChange }
-						badgeColor={ props.badge.badgeColor }
-						widthBadge={ props.badge.widthBadge }
-						badgeStyles={ props.badge.badgeStyles }
-						badgePositionX={ props.badge.badgePositionX }
-						heightBadge={ props.badge.heightBadge }
-						topLeftRadius={ props.badge.topLeftRadius }
-						topRightRadius={ props.badge.topRightRadius }
-						bottomLeftRadius={ props.badge.bottomLeftRadius }
-						bottomRightRadius={ props.badge.bottomRightRadius }
-						zIndex={ props.badge.zIndex }
-					/>
-					<Opacity
-						onChange={ props.onChange }
-						opacity={ props.badge.opacity }
-						rotationX={ props.badge.rotationX }
-						rotationY={ props.badge.rotationY }
-						rotationZ={ props.badge.rotationZ }
-						horizontal={ props.badge.horizontal }
-						vertical={ props.badge.vertical }
-					/>
 					<Position
 						onChange={ props.onChange }
 						badgeStyles={ props.badge.badgeStyles }
