@@ -26,14 +26,27 @@ const MenuItem = ( props ) => {
 	return (
 		<div className="asnp-w-full">
 			{ props.activeStatus == 1 && (
-				<div className="asnp-mt-6">
-					<div>
+				<div className="asnp-mt-6 asnp-mb-4">
+					<TextOptions
+						show={ show }
+						setShow={ setShow }
+						onChange={ props.onChange }
+						badgeLabel={ props.badge.badgeLabel }
+						badgeStyles={ props.badge.badgeStyles }
+						textColor={ props.badge.textColor }
+						fontSizeText={ props.badge.fontSizeText }
+						fontWeightLabel={ props.badge.fontWeightLabel }
+						lineHeightText={ props.badge.lineHeightText }
+						percentageDiscount={ props.badge.percentageDiscount }
+						labelTranslate={ props.badge.labelTranslate }
+					/>
+					<div className="asnp-mt-6 asnp-mb-6">
 						<label className="asnp-block asnp-space-y-2 asnp-max-w-lg">
 							<div className="asnp-flex">
 								<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
 									{ __(
-										'CSS Label Position On Product Page',
-										'easy-sale-badges-for-woocommerce-pro'
+										'CSS Label Position',
+										'easy-sale-badges-for-woocommerce'
 									) }
 								</div>
 							</div>
@@ -49,32 +62,19 @@ const MenuItem = ( props ) => {
 							>
 								<option value="onImage">
 									{ __(
-										'On image',
-										'easy-sale-badges-for-woocommerce-pro'
+										'On Image',
+										'easy-sale-badges-for-woocommerce'
 									) }
 								</option>
 								<option value="outOfImage">
 									{ __(
-										'Out of image',
-										'easy-sale-badges-for-woocommerce-pro'
+										'Out of Image',
+										'easy-sale-badges-for-woocommerce'
 									) }
 								</option>
 							</select>
 						</label>
 					</div>
-					<TextOptions
-						show={ show }
-						setShow={ setShow }
-						onChange={ props.onChange }
-						badgeLabel={ props.badge.badgeLabel }
-						badgeStyles={ props.badge.badgeStyles }
-						textColor={ props.badge.textColor }
-						fontSizeText={ props.badge.fontSizeText }
-						fontWeightLabel={ props.badge.fontWeightLabel }
-						lineHeightText={ props.badge.lineHeightText }
-						percentageDiscount={ props.badge.percentageDiscount }
-						labelTranslate={ props.badge.labelTranslate }
-					/>
 					<BadgeStyles
 						onChange={ props.onChange }
 						badgeStyles={ props.badge.badgeStyles }
@@ -113,7 +113,9 @@ const MenuItem = ( props ) => {
 						badgeColorShadow={ props.badge.badgeColorShadow }
 						boxShadowWidth={ props.badge.boxShadowWidth }
 						cssLabelPosition={ props.badge.cssLabelPosition }
-						badgePositionOutofImage={ props.badge.badgePositionOutofImage }
+						badgePositionOutofImage={
+							props.badge.badgePositionOutofImage
+						}
 					/>
 					<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold asnp-text-red-600">
 						{ __(

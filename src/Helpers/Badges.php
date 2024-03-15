@@ -204,10 +204,12 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-badge-'. absint( $badge->id ) .' {';
-			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' text-shadow: none;';
 
+			if ( isset( $badge->cssLabelPosition ) && ('onImage' == $badge->cssLabelPosition) ) {
+				$dynamic_styles .= ' position: absolute;';
+			}
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background: ' . $badge->badgeColor . ';';
 			}
@@ -217,7 +219,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadge . 'px;';
 			}
-			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition )) {
+			if ( isset( $badge->badgePositionX ) ) {
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '0px' ) . ';';
 			}
 			if ( isset( $badge->badgePositionX ) && 'right' === $badge->badgePositionX ) {
@@ -284,9 +286,11 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-badge-'. absint( $badge->id ) .' {';
-			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' text-shadow: none;';
+			if ( isset( $badge->cssLabelPosition ) && ('onImage' == $badge->cssLabelPosition) ) {
+				$dynamic_styles .= ' position: absolute;';
+			}
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background: ' . $badge->badgeColor . ';';
 			}
@@ -296,7 +300,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadge . 'px;';
 			}
-			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition) ) {
+			if ( isset( $badge->badgePositionX ) ) {
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '0px' ) . ';';
 			}
 			if ( isset( $badge->badgePositionX ) && 'right' === $badge->badgePositionX ) {
@@ -385,9 +389,11 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-badge-'. absint( $badge->id ) .' {';
-			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' text-shadow: none;';
+			if ( isset( $badge->cssLabelPosition ) && ('onImage' == $badge->cssLabelPosition) ) {
+				$dynamic_styles .= ' position: absolute;';
+			}
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background: ' . $badge->badgeColor . ';';
 			}
@@ -397,7 +403,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadge . 'px;';
 			}
-			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition) ) {
+			if ( isset( $badge->badgePositionX ) ) {
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '0px' ) . ';';
 			}
 			if ( isset( $badge->badgePositionX ) && 'right' === $badge->badgePositionX ) {
@@ -483,9 +489,11 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-badge-'. absint( $badge->id ) .' {';
-			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' text-shadow: none;';
+			if ( isset( $badge->cssLabelPosition ) && ('onImage' == $badge->cssLabelPosition) ) {
+				$dynamic_styles .= ' position: absolute;';
+			}
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background: ' . $badge->badgeColor . ';';
 			}
@@ -495,7 +503,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadge . 'px;';
 			}
-			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition) ) {
+			if ( isset( $badge->badgePositionX ) ) {
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '0px' ) . ';';
 			}
 			if ( isset( $badge->badgePositionX ) && 'right' === $badge->badgePositionX ) {
@@ -601,13 +609,15 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-badge-'. absint( $badge->id ) .' {';
-			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' text-shadow: none;';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' overflow: hidden;';
 			$dynamic_styles .= ' z-index: 10;';
 
+			if ( isset( $badge->cssLabelPosition ) && ('onImage' == $badge->cssLabelPosition) ) {
+				$dynamic_styles .= ' position: absolute;';
+			}
 			if ( isset( $badge->heightBadge ) ) {
 				$dynamic_styles .= ' height: ' . $badge->widthBadge . 'px;';
 			}
@@ -660,7 +670,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 				$dynamic_styles .= ' background: ' . $badge->badgeColor . ';';
 			}
 
-			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition) ) {
+			if ( isset( $badge->badgePositionX ) ) {
 				$dynamic_styles .= ' transform: ' . ( $badge->badgePositionX == 'right' ? 'rotate(45deg)' : 'rotate(315deg)' ) . ';';
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? '' : '-'. $badge->widthBadge / 2.4  .'px' ) . ';';
 				$dynamic_styles .= ' right: ' . ( $badge->badgePositionX == 'right' ? '-'. $badge->widthBadge / 2.22  .'px' : '' ) . ';';
@@ -687,7 +697,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-badge-'. absint( $badge->id ) .' {';
-			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' text-shadow: none;';
 			$dynamic_styles .= ' margin: 0;';
@@ -696,6 +705,9 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= ' border-radius: 0;';
 			$dynamic_styles .= ' box-sizing: border-box;';
 
+			if ( isset( $badge->cssLabelPosition ) && ('onImage' == $badge->cssLabelPosition) ) {
+				$dynamic_styles .= ' position: absolute;';
+			}
 			if ( isset( $badge->heightBadge ) ) {
 				$dynamic_styles .= ' height: ' . $badge->widthBadge . 'px;';
 			}
@@ -720,7 +732,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->zIndex ) ) {
 				$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
-			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition) ) {
+			if ( isset( $badge->badgePositionX ) ) {
 				$dynamic_styles .= ' right: ' . ( $badge->badgePositionX == 'right' ? '0px' : 'auto' ) . ';';
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '0px' ) . ';';
 			}
@@ -793,7 +805,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-badge-'. absint( $badge->id ) .' {';
-			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' text-shadow: none;';
 			$dynamic_styles .= ' top: 0px;';
@@ -801,6 +812,9 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= ' border-radius: 3px;;';
 			$dynamic_styles .= ' text-align: center;';
 
+			if ( isset( $badge->cssLabelPosition ) && ('onImage' == $badge->cssLabelPosition) ) {
+				$dynamic_styles .= ' position: absolute;';
+			}
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background: ' . $badge->badgeColor . ';';
 			}
@@ -840,7 +854,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->zIndex ) ) {
 				$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
-			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition) ) {
+			if ( isset( $badge->badgePositionX ) ) {
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '0px' ) . ';';
 				$dynamic_styles .= ' right: ' . ( $badge->badgePositionX == 'right' ? '0px' : '' ) . ';';
 			}
@@ -888,7 +902,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-badge-'. absint( $badge->id ) .' {';
-			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' text-shadow: none;';
 			$dynamic_styles .= ' top: 0px;';
@@ -896,6 +909,9 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= ' border-radius: 50% !important;';
 			$dynamic_styles .= '  z-index: 99;';
 
+			if ( isset( $badge->cssLabelPosition ) && ('onImage' == $badge->cssLabelPosition) ) {
+				$dynamic_styles .= ' position: absolute;';
+			}
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background: ' . $badge->badgeColor . ';';
 			}
@@ -923,7 +939,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->zIndex ) ) {
 				$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
-			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition) ) {
+			if ( isset( $badge->badgePositionX ) ) {
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '0px' ) . ';';
 				$dynamic_styles .= ' right: ' . ( $badge->badgePositionX == 'right' ? '0px' : '' ) . ';';
 			}
@@ -967,7 +983,6 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-badge-'. absint( $badge->id ) .' {';
-			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' text-shadow: none;';
 			$dynamic_styles .= ' display: block;';
@@ -979,6 +994,9 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= '  border-top-left-radius: 3px;';
 			$dynamic_styles .= '  text-align: center;';
 
+			if ( isset( $badge->cssLabelPosition ) && ('onImage' == $badge->cssLabelPosition) ) {
+				$dynamic_styles .= ' position: absolute;';
+			}
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background: ' . $badge->badgeColor . ';';
 			}
@@ -1006,7 +1024,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->zIndex ) ) {
 				$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
-			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition) ) {
+			if ( isset( $badge->badgePositionX ) ) {
 				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '0px' ) . ';';
 				$dynamic_styles .= ' right: ' . ( $badge->badgePositionX == 'right' ? '0px' : '' ) . ';';
 			}
@@ -1068,21 +1086,20 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.asnp-esb-badge-'. absint( $badge->id ) .' {';
-			$dynamic_styles .= ' position: absolute;';
 			$dynamic_styles .= ' text-align: center;';
 			$dynamic_styles .= ' text-shadow: none;';
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= ' z-index: 1;';
 			$dynamic_styles .= ' top: 0px;';
+			$dynamic_styles .= ' left: 0px;';
 			$dynamic_styles .= ' transform: translate3d(0, 0, 0);';
 			$dynamic_styles .= ' border-top-right-radius: 3px;';
 			$dynamic_styles .= ' border-top-left-radius: 3px;';
 			$dynamic_styles .= ' text-align: center;';
 
-			if ( isset( $badge->badgePositionX ) && ('onImage' == $badge->cssLabelPosition) ) {
-				$dynamic_styles .= ' left: 0px;';
+			if ( isset( $badge->cssLabelPosition ) && ('onImage' == $badge->cssLabelPosition) ) {
+				$dynamic_styles .= ' position: absolute;';
 			}
-
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background: ' . $badge->badgeColor . ';';
 			}
@@ -1150,13 +1167,14 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 	add_custom_style( $dynamic_styles, $badge );
 
 	$class_names = 'asnp-esb-badge-element asnp-esb-productBadge asnp-esb-productBadge-'. absint( $badge->id );
-	if ( $hide ) {
-		if (isset( $badge->cssLabelPosition ) && 'outOfImage' == $badge->cssLabelPosition) {
-			$class_names .= ' asnp-esb-css-label-out-of-image asnp-position-css-label';
-			$hide = false;
-		} elseif (isset( $badge->cssLabelPosition ) && 'onImage' == $badge->cssLabelPosition) {
-			$class_names .= ' asnp-esb-badge-hidden asnp-esb-css-label-on-image';
-		}
+	if ( isset( $badge->cssLabelPosition ) && 'outOfImage' == $badge->cssLabelPosition ) {
+	$class_names .= ' asnp-esb-css-label-out-of-image asnp-position-css-label';
+	} elseif ( isset( $badge->cssLabelPosition ) && 'onImage' == $badge->cssLabelPosition ) {
+	$class_names .= ' asnp-esb-css-label-on-image';
+	}
+
+	if ( $hide && isset( $badge->cssLabelPosition ) && 'onImage' == $badge->cssLabelPosition ) {
+		$class_names .= ' asnp-esb-badge-hidden';
 	}
 
 	$class_names = apply_filters( 'asnp_wesb_css_badge_class_names', $class_names, $badge, $hide );
