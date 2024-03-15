@@ -159,128 +159,6 @@ const Position = ( props ) => {
 								</div>
 							</div>
 						</div>
-						<div className="asnp-mt-8">
-							<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-								{ __(
-									'Label Position (Pixel)',
-									'easy-sale-badges-for-woocommerce'
-								) }
-							</span>
-						</div>
-						<div className="asnp-flex asnp-mt-3 asnp-mb-8">
-							<label>
-								<span className="asnp-field-title asnp-ml-6">
-									{ __(
-										'Top',
-										'easy-sale-badges-for-woocommerce'
-									) }
-								</span>
-								<div className="asnp-w-[10rem] asnp-ml-6">
-									<input
-										disabled={ disablePositionTop }
-										type="number"
-										max="200"
-										className={
-											disablePositionTop
-												? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
-												: 'asnp-text-field'
-										}
-										placeholder="0"
-										value={ props.badgePositionTop }
-										onChange={ ( e ) =>
-											props.onChange(
-												'badgePositionTop',
-												e.target.value
-											)
-										}
-									/>
-								</div>
-							</label>
-							<label>
-								<span className="asnp-field-title asnp-ml-6">
-									{ __(
-										'Bottom',
-										'easy-sale-badges-for-woocommerce'
-									) }
-								</span>
-								<div className="asnp-w-[10rem] asnp-ml-6">
-									<input
-										disabled={ disablePositionButtom }
-										type="number"
-										max="200"
-										className={
-											disablePositionButtom
-												? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
-												: 'asnp-text-field'
-										}
-										placeholder="0"
-										value={ props.badgePositionBottom }
-										onChange={ ( e ) =>
-											props.onChange(
-												'badgePositionBottom',
-												e.target.value
-											)
-										}
-									/>
-								</div>
-							</label>
-							<label>
-								<span className="asnp-field-title asnp-ml-6">
-									{ __(
-										'Left',
-										'easy-sale-badges-for-woocommerce'
-									) }
-								</span>
-								<div className="asnp-w-[10rem] asnp-ml-6">
-									<input
-										disabled={ disablePositionLeft }
-										type="number"
-										max="200"
-										className={
-											disablePositionLeft
-												? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
-												: 'asnp-text-field'
-										}
-										placeholder="0"
-										value={ props.badgePositionLeft }
-										onChange={ ( e ) =>
-											props.onChange(
-												'badgePositionLeft',
-												e.target.value
-											)
-										}
-									/>
-								</div>
-							</label>
-							<label>
-								<span className="asnp-field-title asnp-ml-6">
-									{ __(
-										'Right',
-										'easy-sale-badges-for-woocommerce'
-									) }
-								</span>
-								<div className="asnp-w-[10rem] asnp-ml-6">
-									<input
-										disabled={ disablePositionRight }
-										type="number"
-										max="200"
-										className={
-											disablePositionRight
-												? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
-												: 'asnp-text-field'
-										}
-										placeholder="0"
-										value={ props.badgePositionRight }
-										onChange={ ( e ) =>
-											props.onChange(
-												'badgePositionRight',
-												e.target.value
-											)
-										}
-									/>
-								</div>
-							</label>
-						</div>
 					</div>
 				) : (
 					<div className=" asnp-mt-6">
@@ -298,11 +176,15 @@ const Position = ( props ) => {
 								type="button"
 								className={
 									'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-l-lg asnp-border   asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-									( props.badgePositionOutofImage == 'flex-start' &&
+									( props.badgePositionOutofImage ==
+										'flex-start' &&
 										'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
 								}
 								onClick={ () => {
-									props.onChange( 'badgePositionOutofImage', 'flex-start' );
+									props.onChange(
+										'badgePositionOutofImage',
+										'flex-start'
+									);
 								} }
 							>
 								{ __(
@@ -314,7 +196,8 @@ const Position = ( props ) => {
 								type="button"
 								className={
 									'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-									( props.badgePositionOutofImage == 'center' &&
+									( props.badgePositionOutofImage ==
+										'center' &&
 										'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
 								}
 								onClick={ () => {
@@ -333,11 +216,15 @@ const Position = ( props ) => {
 								type="button"
 								className={
 									'asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700' +
-									( props.badgePositionOutofImage == 'flex-end' &&
+									( props.badgePositionOutofImage ==
+										'flex-end' &&
 										'asnp-border-blue-700 asnp-z-10 asnp-ring-2 asnp-ring-blue-700 asnp-text-blue-700' )
 								}
 								onClick={ () => {
-									props.onChange( 'badgePositionOutofImage', 'flex-end' );
+									props.onChange(
+										'badgePositionOutofImage',
+										'flex-end'
+									);
 								} }
 							>
 								{ __(
@@ -348,6 +235,122 @@ const Position = ( props ) => {
 						</div>
 					</div>
 				) }
+				<div className="asnp-mt-8">
+					<span className="asnp-field-title asnp-text-base asnp-font-semibold">
+						{ __(
+							'Label Position (Pixel)',
+							'easy-sale-badges-for-woocommerce'
+						) }
+					</span>
+				</div>
+				<div className="asnp-flex asnp-mt-3 asnp-mb-8">
+					<label>
+						<span className="asnp-field-title asnp-ml-6">
+							{ __( 'Top', 'easy-sale-badges-for-woocommerce' ) }
+						</span>
+						<div className="asnp-w-[10rem] asnp-ml-6">
+							<input
+								disabled={ disablePositionTop }
+								type="number"
+								max="200"
+								className={
+									disablePositionTop
+										? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
+										: 'asnp-text-field'
+								}
+								placeholder="0"
+								value={ props.badgePositionTop }
+								onChange={ ( e ) =>
+									props.onChange(
+										'badgePositionTop',
+										e.target.value
+									)
+								}
+							/>
+						</div>
+					</label>
+					<label>
+						<span className="asnp-field-title asnp-ml-6">
+							{ __(
+								'Bottom',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</span>
+						<div className="asnp-w-[10rem] asnp-ml-6">
+							<input
+								disabled={ disablePositionButtom }
+								type="number"
+								max="200"
+								className={
+									disablePositionButtom
+										? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
+										: 'asnp-text-field'
+								}
+								placeholder="0"
+								value={ props.badgePositionBottom }
+								onChange={ ( e ) =>
+									props.onChange(
+										'badgePositionBottom',
+										e.target.value
+									)
+								}
+							/>
+						</div>
+					</label>
+					<label>
+						<span className="asnp-field-title asnp-ml-6">
+							{ __( 'Left', 'easy-sale-badges-for-woocommerce' ) }
+						</span>
+						<div className="asnp-w-[10rem] asnp-ml-6">
+							<input
+								disabled={ disablePositionLeft }
+								type="number"
+								max="200"
+								className={
+									disablePositionLeft
+										? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
+										: 'asnp-text-field'
+								}
+								placeholder="0"
+								value={ props.badgePositionLeft }
+								onChange={ ( e ) =>
+									props.onChange(
+										'badgePositionLeft',
+										e.target.value
+									)
+								}
+							/>
+						</div>
+					</label>
+					<label>
+						<span className="asnp-field-title asnp-ml-6">
+							{ __(
+								'Right',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</span>
+						<div className="asnp-w-[10rem] asnp-ml-6">
+							<input
+								disabled={ disablePositionRight }
+								type="number"
+								max="200"
+								className={
+									disablePositionRight
+										? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
+										: 'asnp-text-field'
+								}
+								placeholder="0"
+								value={ props.badgePositionRight }
+								onChange={ ( e ) =>
+									props.onChange(
+										'badgePositionRight',
+										e.target.value
+									)
+								}
+							/>
+						</div>
+					</label>
+				</div>
 				<div className="asnp-flex asnp-mt-[2rem] asnp-w-full">
 					<div>
 						<Tippy
