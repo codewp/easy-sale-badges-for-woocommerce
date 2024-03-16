@@ -70,7 +70,7 @@ const MenuItem = ( props ) => {
 					<div className="asnp-mt-6 asnp-mb-6">
 						<label className="asnp-block asnp-space-y-2 asnp-max-w-lg">
 							<div className="asnp-flex">
-								<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
+								<div className="asnp-field-title asnp-ml-1 asnp-text-base asnp-font-semibold">
 									{ __(
 										'CSS Label Position',
 										'easy-sale-badges-for-woocommerce'
