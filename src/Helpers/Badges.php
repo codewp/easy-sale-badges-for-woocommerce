@@ -1168,12 +1168,18 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 
 	$class_names = 'asnp-esb-badge-element asnp-esb-productBadge asnp-esb-productBadge-'. absint( $badge->id );
 
-		if (isset( $badge->cssLabelPosition ) && 'outOfImage' == $badge->cssLabelPosition) {
-			$class_names .= ' asnp-esb-css-label-out-of-image asnp-position-css-label';
-			$hide = false;
-		} elseif (isset( $badge->cssLabelPosition ) && 'onImage' == $badge->cssLabelPosition) {
-			$class_names .= ' asnp-esb-badge-hidden asnp-esb-css-label-on-image';
+	if ( ! empty( $badge->cssLabelPosition ) ) {
+		if ( 'outOfImage' == $badge->cssLabelPosition ) {
+		  $class_names .= ' asnp-esb-css-label-out-of-image asnp-position-css-label';
+		  $hide = false;
+		} elseif ( 'onImage' == $badge->cssLabelPosition ) {
+		  $class_names .= ' asnp-esb-css-label-on-image';
 		}
+	}
+	
+	if ( $hide ) {
+		$class_names .= ' asnp-esb-badge-hidden';
+	}
 
 	$class_names = apply_filters( 'asnp_wesb_css_badge_class_names', $class_names, $badge, $hide );
 
