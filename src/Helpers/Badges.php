@@ -974,7 +974,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $width_cont_badge . ';';
 			}
-			if ( isset( $badge->heightBadge ) ) {
+			if ( isset( $badge->heightBadge ) &&isset( $badge->cssLabelPosition ) && ('onImage' == $badge->cssLabelPosition) ) {
 				$dynamic_styles .= ' height: ' . $height_cont_badge . ';';
 			}
 			if ( isset( $badge->badgePositionTop ) ) {
@@ -1077,7 +1077,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 			if ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $width_cont_badge . ';';
 			}
-			if ( isset( $badge->heightBadge ) ) {
+			if ( isset( $badge->heightBadge ) && isset( $badge->cssLabelPosition ) && ('onImage' == $badge->cssLabelPosition) ) {
 				$dynamic_styles .= ' height: ' . $height_cont_badge . ';';
 			}
 			if ( isset( $badge->badgePositionTop ) ) {

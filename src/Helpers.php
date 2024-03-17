@@ -191,14 +191,15 @@ function is_product_page() {
 	return false;
 }
 
-function get_theme_loop_position( $stylesheet = null, $template = null ) {
+function get_theme_loop_position( $stylesheet = null, $template = null, $badge = null ) {
 	$stylesheet = empty( $stylesheet ) ? get_stylesheet() : $stylesheet;
 	$template   = empty( $template ) ? get_template() : $template;
 
 	$stylesheet = ! empty( $stylesheet ) ? strtolower( $stylesheet ) : $stylesheet;
 	$template   = ! empty( $template ) ? strtolower( $template ) : $template;
 
-	$themes = [
+	if ( isset( $badge->cssLabelPosition ) && ('onImage' == $badge->cssLabelPosition) ) {
+		$themes = [
 		'avada'    	  => 'after_shop_loop_item_thumbnail',
 		'woodmart' 	  => 'after_shop_loop_item_thumbnail',
 		'porto'    	  => 'after_shop_loop_item_thumbnail',
@@ -211,6 +212,7 @@ function get_theme_loop_position( $stylesheet = null, $template = null ) {
 		'enfold'      => 'post_thumbnail_html',
 		'estore'      => 'after_shop_loop_item_thumbnail',
 	];
+	}
 
 	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
 		return $themes[ $stylesheet ];
@@ -223,19 +225,21 @@ function get_theme_loop_position( $stylesheet = null, $template = null ) {
 	return '';
 }
 
-function get_theme_single_position( $stylesheet = null, $template = null ) {
+function get_theme_single_position( $stylesheet = null, $template = null, $badge = null ) {
 	$stylesheet = empty( $stylesheet ) ? get_stylesheet() : $stylesheet;
 	$template   = empty( $template ) ? get_template() : $template;
 
 	$stylesheet = ! empty( $stylesheet ) ? strtolower( $stylesheet ) : $stylesheet;
 	$template   = ! empty( $template ) ? strtolower( $template ) : $template;
 
+	if ( isset( $badge->cssLabelPosition ) && ('onImage' == $badge->cssLabelPosition) ) {
 	$themes = [
 		'thegem'      => 'thegem_woocommerce_single_product_left',
 		'rehub-theme' => 'rh_woo_after_single_image',
 		'woodmart'    => 'woocommerce_single_product_summary',
 		'basel'       => 'woocommerce_before_single_product_summary',
 	];
+	}
 
 	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
 		return $themes[ $stylesheet ];
