@@ -34,7 +34,7 @@ function output_badge( $badge, $hide = false, $return = false, $out_of_image = f
 		}
 	} elseif ( isset( $badge->useTimerBadge ) && $badge->useTimerBadge == 1 ) {
 		if ( is_pro_active() ) {
-			return \AsanaPlugins\WooCommerce\SaleBadgesPro\Helpers\Badges\output_timer_badge( $badge, $hide, $return );
+			return \AsanaPlugins\WooCommerce\SaleBadgesPro\Helpers\Badges\output_timer_badge( $badge, $hide, $return, $out_of_image );
 		}
 	} elseif ( ! empty( $badge->badgeStyles ) ) {
 		return output_css_badge( $badge, $hide, $return, $out_of_image );
