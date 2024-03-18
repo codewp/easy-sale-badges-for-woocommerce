@@ -8,7 +8,6 @@ export const defaultSettings = {
 	loopCustomHooks: '',
 	showBadgeProductPage: 1,
 	singleContainer: '',
-	timerPosition: 'outOfImage',
 	loopOutOfImagePosition: 'before_shop_loop_item_title',
 	singleOutOfImagePosition: 'before_single_item_images',
 };

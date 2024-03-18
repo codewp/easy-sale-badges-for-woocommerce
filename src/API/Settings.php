@@ -67,7 +67,6 @@ class Settings extends BaseController {
 				case 'loopPosition':
 				case 'singleCustomHooks':
 				case 'loopCustomHooks':
-				case 'timerPosition':
 				case 'singleContainer':
 				case 'licenseKey':
 					$data[ $key ] = sanitize_text_field( $value );

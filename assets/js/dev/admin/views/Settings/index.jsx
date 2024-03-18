@@ -98,7 +98,6 @@ export default function Settings() {
 						singleOutOfImagePosition={
 							settings.singleOutOfImagePosition
 						}
-						timerPosition={ settings.timerPosition }
 						hideWooCommerceBadges={ settings.hideWooCommerceBadges }
 					/>
 				) }

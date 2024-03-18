@@ -514,30 +514,6 @@ const General = ( props ) => {
 				</label>
 			</div>
 
-			<div>
-				<label className="asnp-block asnp-space-y-2 asnp-max-w-lg">
-					<div className="asnp-flex">
-						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3  !asnp-text-red-400">
-							{ __(
-								'Timer badge position (Pro)',
-								'easy-sale-badges-for-woocommerce'
-							) }
-						</div>
-					</div>
-					<select
-						className="asnp-block asnp-select-field md:asnp-w-2/3 !asnp-h-12"
-						disabled
-					>
-						<option value="onImage">
-							{ __(
-								'On image',
-								'easy-sale-badges-for-woocommerce'
-							) }
-						</option>
-					</select>
-				</label>
-			</div>
-
 			<button
 				className="asnp-btn asnp-btn-primary asnp-mb-2 asnp-w-[8rem]"
 				type="button"
