@@ -58,6 +58,8 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 		if ( ! $out_of_image && 'outOfImage' === $badge->cssLabelPosition ) {
 			return '';
 		}
+	}elseif ( $out_of_image ) {
+	return '';
 	}
 
 	// If threshold is set, check the threshold time is reached.
