@@ -128,7 +128,7 @@ function add_custom_style( $style, $badge = null ) {
 	get_plugin()->container()->get( CustomStyles::class )->add_style( $style, $badge );
 }
 
-function display_sale_badges( $product, $hide = false, $return = false ) {
+function display_sale_badges( $product, $hide = false, $return = false, $out_of_image = false ) {
 	if ( ! $product ) {
 		return '';
 	}
@@ -138,7 +138,7 @@ function display_sale_badges( $product, $hide = false, $return = false ) {
 		return '';
 	}
 
-	return $badges->display_badges( $product, $hide, $return );
+	return $badges->display_badges( $product, $hide, $return, $out_of_image );
 }
 
 function has_active_sale_badges() {
@@ -191,15 +191,14 @@ function is_product_page() {
 	return false;
 }
 
-function get_theme_loop_position( $stylesheet = null, $template = null, $badge = null ) {
+function get_theme_loop_position( $stylesheet = null, $template = null ) {
 	$stylesheet = empty( $stylesheet ) ? get_stylesheet() : $stylesheet;
 	$template   = empty( $template ) ? get_template() : $template;
 
 	$stylesheet = ! empty( $stylesheet ) ? strtolower( $stylesheet ) : $stylesheet;
 	$template   = ! empty( $template ) ? strtolower( $template ) : $template;
 
-	if ( isset( $badge->cssLabelPosition ) && ('onImage' == $badge->cssLabelPosition) ) {
-		$themes = [
+	$themes = [
 		'avada'    	  => 'after_shop_loop_item_thumbnail',
 		'woodmart' 	  => 'after_shop_loop_item_thumbnail',
 		'porto'    	  => 'after_shop_loop_item_thumbnail',
@@ -212,7 +211,6 @@ function get_theme_loop_position( $stylesheet = null, $template = null, $badge =
 		'enfold'      => 'post_thumbnail_html',
 		'estore'      => 'after_shop_loop_item_thumbnail',
 	];
-	}
 
 	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
 		return $themes[ $stylesheet ];
@@ -225,21 +223,59 @@ function get_theme_loop_position( $stylesheet = null, $template = null, $badge =
 	return '';
 }
 
-function get_theme_single_position( $stylesheet = null, $template = null, $badge = null ) {
+function get_theme_out_of_image_loop_position( $stylesheet = null, $template = null ) {
 	$stylesheet = empty( $stylesheet ) ? get_stylesheet() : $stylesheet;
 	$template   = empty( $template ) ? get_template() : $template;
 
 	$stylesheet = ! empty( $stylesheet ) ? strtolower( $stylesheet ) : $stylesheet;
 	$template   = ! empty( $template ) ? strtolower( $template ) : $template;
 
-	if ( isset( $badge->cssLabelPosition ) && ('onImage' == $badge->cssLabelPosition) ) {
+	$themes = [];
+
+	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
+		return $themes[ $stylesheet ];
+	}
+
+	if ( ! empty( $template ) && isset( $themes[ $template ] ) ) {
+		return $themes[ $template ];
+	}
+
+	return '';
+}
+
+function get_theme_single_position( $stylesheet = null, $template = null ) {
+	$stylesheet = empty( $stylesheet ) ? get_stylesheet() : $stylesheet;
+	$template   = empty( $template ) ? get_template() : $template;
+
+	$stylesheet = ! empty( $stylesheet ) ? strtolower( $stylesheet ) : $stylesheet;
+	$template   = ! empty( $template ) ? strtolower( $template ) : $template;
+
 	$themes = [
 		'thegem'      => 'thegem_woocommerce_single_product_left',
 		'rehub-theme' => 'rh_woo_after_single_image',
 		'woodmart'    => 'woocommerce_single_product_summary',
 		'basel'       => 'woocommerce_before_single_product_summary',
 	];
+
+	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
+		return $themes[ $stylesheet ];
 	}
+
+	if ( ! empty( $template ) && isset( $themes[ $template ] ) ) {
+		return $themes[ $template ];
+	}
+
+	return '';
+}
+
+function get_theme_out_of_image_single_position( $stylesheet = null, $template = null ) {
+	$stylesheet = empty( $stylesheet ) ? get_stylesheet() : $stylesheet;
+	$template   = empty( $template ) ? get_template() : $template;
+
+	$stylesheet = ! empty( $stylesheet ) ? strtolower( $stylesheet ) : $stylesheet;
+	$template   = ! empty( $template ) ? strtolower( $template ) : $template;
+
+	$themes = [];
 
 	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
 		return $themes[ $stylesheet ];

@@ -8,14 +8,14 @@ use function AsanaPlugins\WooCommerce\SaleBadges\add_custom_style;
 use function AsanaPlugins\WooCommerce\SaleBadges\is_pro_active;
 use function AsanaPlugins\WooCommerce\SaleBadges\translate;
 
-function output_badges( $badges, $hide = false, $return = false ) {
+function output_badges( $badges, $hide = false, $return = false, $out_of_image = false ) {
 	if ( empty( $badges ) ) {
 		return '';
 	}
 
 	$output = '';
 	foreach ( $badges as $badge ) {
-		$out = output_badge( $badge, $hide, $return );
+		$out = output_badge( $badge, $hide, $return, $out_of_image );
 		if ( ! empty( $out ) ) {
 			$output .= $out;
 		}
@@ -23,7 +23,7 @@ function output_badges( $badges, $hide = false, $return = false ) {
 	return $output;
 }
 
-function output_badge( $badge, $hide = false, $return = false ) {
+function output_badge( $badge, $hide = false, $return = false, $out_of_image = false ) {
 	if ( isset( $badge->imgbadge ) && $badge->imgbadge == 1 ) {
 		if ( is_pro_active() ) {
 			return \AsanaPlugins\WooCommerce\SaleBadgesPro\Helpers\Badges\output_image_badge( $badge, $hide, $return );
@@ -37,7 +37,7 @@ function output_badge( $badge, $hide = false, $return = false ) {
 			return \AsanaPlugins\WooCommerce\SaleBadgesPro\Helpers\Badges\output_timer_badge( $badge, $hide, $return );
 		}
 	} elseif ( ! empty( $badge->badgeStyles ) ) {
-		return output_css_badge( $badge, $hide, $return );
+		return output_css_badge( $badge, $hide, $return, $out_of_image );
 	}
 
 	if ( $return ) {
@@ -45,9 +45,19 @@ function output_badge( $badge, $hide = false, $return = false ) {
 	}
 }
 
-function output_css_badge( $badge, $hide = false, $return = false ) {
+function output_css_badge( $badge, $hide = false, $return = false, $out_of_image = false ) {
 	if ( ! $badge ) {
 		return '';
+	}
+
+	if ( ! empty( $badge->cssLabelPosition ) ) {
+		if ( $out_of_image && 'onImage' === $badge->cssLabelPosition ) {
+			return '';
+		}
+
+		if ( ! $out_of_image && 'outOfImage' === $badge->cssLabelPosition ) {
+			return '';
+		}
 	}
 
 	// If threshold is set, check the threshold time is reached.
@@ -186,7 +196,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 				$dynamic_styles .= ' display: flex;';
 				$dynamic_styles .= ' width: 100% !important;';
 
-			}	
+			}
 		$dynamic_styles .= '}';	}
 
 	switch ( $badge->badgeStyles ) {
@@ -1176,7 +1186,7 @@ function output_css_badge( $badge, $hide = false, $return = false ) {
 		  $class_names .= ' asnp-esb-css-label-on-image';
 		}
 	}
-	
+
 	if ( $hide ) {
 		$class_names .= ' asnp-esb-badge-hidden';
 	}
