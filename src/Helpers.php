@@ -230,7 +230,11 @@ function get_theme_out_of_image_loop_position( $stylesheet = null, $template = n
 	$stylesheet = ! empty( $stylesheet ) ? strtolower( $stylesheet ) : $stylesheet;
 	$template   = ! empty( $template ) ? strtolower( $template ) : $template;
 
-	$themes = [];
+	$themes = [
+		'betheme' 	  => 'woocommerce_after_shop_loop_item_title',
+		'uncode'      => 'uncode_entry_visual_after_image',
+
+	];
 
 	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
 		return $themes[ $stylesheet ];
