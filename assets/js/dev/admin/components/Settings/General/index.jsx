@@ -39,9 +39,25 @@ const General = ( props ) => {
 					<div className="asnp-flex">
 						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
 							{ __(
-								'Sale Badge On Image Position On Archive Page',
+								'Sale Badge ',
 								'easy-sale-badges-for-woocommerce'
 							) }
+							<strong>
+								{ __(
+									'On Image',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</strong>
+							{ __(
+								' Position On ',
+								'easy-sale-badges-for-woocommerce'
+							) }
+							<strong>
+								{ __(
+									'Archive Page',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</strong>
 						</div>
 					</div>
 					<select
@@ -143,9 +159,25 @@ const General = ( props ) => {
 					<div className="asnp-flex">
 						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
 							{ __(
-								'Sale Badge Out Of Image Position On Archive Page',
+								'Sale Badge ',
 								'easy-sale-badges-for-woocommerce'
 							) }
+							<strong>
+								{ __(
+									'Out Of Image',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</strong>
+							{ __(
+								' Position On ',
+								'easy-sale-badges-for-woocommerce'
+							) }
+							<strong>
+								{ __(
+									'Archive Page',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</strong>
 						</div>
 					</div>
 					<select
@@ -276,9 +308,25 @@ const General = ( props ) => {
 					<div className="asnp-flex">
 						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
 							{ __(
-								'Sale Badge On Image Position On Product Page',
+								'Sale Badge ',
 								'easy-sale-badges-for-woocommerce'
 							) }
+							<strong>
+								{ __(
+									'On Image',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</strong>
+							{ __(
+								' Position On ',
+								'easy-sale-badges-for-woocommerce'
+							) }
+							<strong>
+								{ __(
+									'Product Page',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</strong>
 						</div>
 					</div>
 					<select
@@ -349,9 +397,25 @@ const General = ( props ) => {
 					<div className="asnp-flex">
 						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
 							{ __(
-								'Sale Badge Out of Image Position On Product Page',
+								'Sale Badge ',
 								'easy-sale-badges-for-woocommerce'
 							) }
+							<strong>
+								{ __(
+									'Out of Image',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</strong>
+							{ __(
+								' Position On ',
+								'easy-sale-badges-for-woocommerce'
+							) }
+							<strong>
+								{ __(
+									'Product Page',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</strong>
 						</div>
 					</div>
 					<select
