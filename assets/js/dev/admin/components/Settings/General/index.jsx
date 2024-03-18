@@ -148,7 +148,7 @@ const General = ( props ) => {
 				<label className="asnp-block asnp-space-y-1 asnp-text-gray-500">
 					<p className="asnp-text-xs asnp-text-gray-400">
 						{ __(
-							'Sale badge position for bulk, tiered, purchase, products group rules in the archive page.',
+							'badge position for bulk, tiered, purchase, products group rules in the archive page.',
 							'easy-sale-badges-for-woocommerce'
 						) }
 					</p>
