@@ -9,6 +9,8 @@ export const defaultSettings = {
 	showBadgeProductPage: 1,
 	singleContainer: '',
 	timerPosition: 'outOfImage',
+	loopOutOfImagePosition: 'woocommerce_product_get_image',
+	singleOutOfImagePosition: 'before_single_item_images',
 };
 export const PLUGIN_URL = saleBadgeData.pluginUrl;
 export const IMAGES_URL = `${ PLUGIN_URL }assets/images/`;

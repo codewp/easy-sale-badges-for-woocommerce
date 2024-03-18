@@ -39,7 +39,7 @@ const General = ( props ) => {
 					<div className="asnp-flex">
 						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
 							{ __(
-								'Sale Badge Position On Archive Page',
+								'Sale Badge On Image Position On Archive Page',
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</div>
@@ -49,6 +49,113 @@ const General = ( props ) => {
 						value={ props.loopPosition }
 						onChange={ ( e ) =>
 							props.onChange( 'loopPosition', e.target.value )
+						}
+					>
+						<option value="woocommerce_product_get_image">
+							{ __(
+								'Product get image',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="before_shop_loop_item_thumbnail">
+							{ __(
+								'Before product thumbnail',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="after_shop_loop_item_thumbnail">
+							{ __(
+								'After product thumbnail',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="before_shop_loop_item_title">
+							{ __(
+								'Before product title',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="after_shop_loop_item_title">
+							{ __(
+								'After product title',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+
+						<option value="before_shop_loop_item_rating">
+							{ __(
+								'Before product rating',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="after_shop_loop_item_rating">
+							{ __(
+								'After product rating',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="before_shop_loop_item_price">
+							{ __(
+								'Before product price',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="after_shop_loop_item_price">
+							{ __(
+								'After product price',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="after_shop_loop_item">
+							{ __(
+								'After shop loop item',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="shop_loop">
+							{ __(
+								'Shop loop',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="post_thumbnail_html">
+							{ __(
+								'Post thumbnail html',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="none">
+							{ __( 'None', 'easy-sale-badges-for-woocommerce' ) }
+						</option>
+					</select>
+				</label>
+				<label className="asnp-block asnp-space-y-1 asnp-text-gray-500">
+					<p className="asnp-text-xs asnp-text-gray-400">
+						{ __(
+							'Sale badge position for bulk, tiered, purchase, products group rules in the archive page.',
+							'easy-sale-badges-for-woocommerce'
+						) }
+					</p>
+				</label>
+			</div>
+			<div>
+				<label className="asnp-block asnp-space-y-2 asnp-max-w-lg">
+					<div className="asnp-flex">
+						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
+							{ __(
+								'Sale Badge Out Of Image Position On Archive Page',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</div>
+					</div>
+					<select
+						className="asnp-block asnp-select-field md:asnp-w-2/3"
+						value={ props.loopOutOfImagePosition }
+						onChange={ ( e ) =>
+							props.onChange(
+								'loopOutOfImagePosition',
+								e.target.value
+							)
 						}
 					>
 						<option value="woocommerce_product_get_image">
@@ -169,7 +276,7 @@ const General = ( props ) => {
 					<div className="asnp-flex">
 						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
 							{ __(
-								'Sale Badge Position On Product Page',
+								'Sale Badge On Image Position On Product Page',
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</div>
@@ -179,6 +286,82 @@ const General = ( props ) => {
 						value={ props.singlePosition }
 						onChange={ ( e ) =>
 							props.onChange( 'singlePosition', e.target.value )
+						}
+					>
+						<option value="before_single_item_images">
+							{ __(
+								'Before product images',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="after_single_item_images">
+							{ __(
+								'After product images',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="before_single_item_title">
+							{ __(
+								'Before product title',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="after_single_item_title">
+							{ __(
+								'After product title',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="before_single_item_price">
+							{ __(
+								'Before product price',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="after_single_item_price">
+							{ __(
+								'After product price',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="post_thumbnail_html">
+							{ __(
+								'Post thumbnail html',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="none">
+							{ __( 'None', 'easy-sale-badges-for-woocommerce' ) }
+						</option>
+					</select>
+				</label>
+				<label className="asnp-block asnp-space-y-1 asnp-text-gray-500">
+					<p className="asnp-text-xs asnp-text-gray-400">
+						{ __(
+							'Sale badge position for bulk, tiered, purchase, products group rules in the product page.',
+							'easy-sale-badges-for-woocommerce'
+						) }
+					</p>
+				</label>
+			</div>
+			<div>
+				<label className="asnp-block asnp-space-y-2 asnp-max-w-lg">
+					<div className="asnp-flex">
+						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
+							{ __(
+								'Sale Badge Out of Image Position On Product Page',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</div>
+					</div>
+					<select
+						className="asnp-block asnp-select-field md:asnp-w-2/3"
+						value={ props.singleOutOfImagePosition }
+						onChange={ ( e ) =>
+							props.onChange(
+								'singleOutOfImagePosition',
+								e.target.value
+							)
 						}
 					>
 						<option value="before_single_item_images">
