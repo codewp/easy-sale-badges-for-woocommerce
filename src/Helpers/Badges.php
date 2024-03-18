@@ -26,11 +26,11 @@ function output_badges( $badges, $hide = false, $return = false, $out_of_image =
 function output_badge( $badge, $hide = false, $return = false, $out_of_image = false ) {
 	if ( isset( $badge->imgbadge ) && $badge->imgbadge == 1 ) {
 		if ( is_pro_active() ) {
-			return \AsanaPlugins\WooCommerce\SaleBadgesPro\Helpers\Badges\output_image_badge( $badge, $hide, $return );
+			return \AsanaPlugins\WooCommerce\SaleBadgesPro\Helpers\Badges\output_image_badge( $badge, $hide, $return, $out_of_image );
 		}
 	} elseif ( isset( $badge->imgbadgeAdv ) && $badge->imgbadgeAdv == 1 ) {
 		if ( is_pro_active() ) {
-			return \AsanaPlugins\WooCommerce\SaleBadgesPro\Helpers\Badges\output_image_adv_badge( $badge, $hide, $return );
+			return \AsanaPlugins\WooCommerce\SaleBadgesPro\Helpers\Badges\output_image_adv_badge( $badge, $hide, $return, $out_of_image );
 		}
 	} elseif ( isset( $badge->useTimerBadge ) && $badge->useTimerBadge == 1 ) {
 		if ( is_pro_active() ) {
@@ -59,8 +59,8 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 			return '';
 		}
 	}elseif ( $out_of_image ) {
-	return '';
-	}
+			return '';
+	 	}
 
 	// If threshold is set, check the threshold time is reached.
 	if ( isset( $badge->selectedDateFrom ) && '' != $badge->selectedDateFrom ) {
