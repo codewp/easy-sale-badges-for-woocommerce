@@ -373,13 +373,13 @@ const Timer = () => {
 									className="asnp-block asnp-select-field md:asnp-w-2/3 !asnp-h-12"
 									disabled
 								>
-									<option value="onImage">
+									<option>
 										{ __(
 											'On Image',
 											'easy-sale-badges-for-woocommerce'
 										) }
 									</option>
-									<option value="outOfImage">
+									<option>
 										{ __(
 											'Out of Image',
 											'easy-sale-badges-for-woocommerce'
