@@ -233,7 +233,7 @@ function get_theme_out_of_image_loop_position( $stylesheet = null, $template = n
 	$themes = [
 		'betheme' 	  => 'woocommerce_after_shop_loop_item_title',
 		'uncode'      => 'uncode_entry_visual_after_image',
-
+		'oceanwp'      => 'ocean_before_archive_product_categories',
 	];
 
 	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {

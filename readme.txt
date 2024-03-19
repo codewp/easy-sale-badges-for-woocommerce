@@ -5,7 +5,7 @@ Tags: sale badge, product label, woocommerce, badge, woocommerce badge, woocomme
 Requires at least: 5.0
 Tested up to: 6.4
 Requires PHP: 5.6
-Stable tag: 1.9.0
+Stable tag: 2.0.0
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,7 @@ https://youtu.be/aTHFT3ovCaw
 == ✅ BADGE AND PRODUCT LABEL FOR WOOCOMMERCE FEATURES ==
 
 - **Create Custom labels on Products**
+- **Add Badge to Out Of Image Position**
 - **Implemented multi-language support for the Labels** to enable labels to be displayed in various languages for enhanced accessibility.
 - **CSS label templates** Access pre-designed CSS label templates for quick and easy customization.
 - **Multiple labels available for a single product** Multiple labels can be applied to a single product.
@@ -53,6 +54,7 @@ https://youtu.be/aTHFT3ovCaw
 - **Over 10 CSS Labels**
 - **Over 5 Modern Badges**
 - **8 Timers Template**
+- **Out of Image Position Option For Timers Countdown**
 - **Over 10 Animation Effects**
 - **Incorporate Gradient Colors**
 - **[Compatible with Discount Rules and Dynamic Pricing for WooCommerce](https://wordpress.org/plugins/easy-woocommerce-discounts/)**
@@ -181,6 +183,10 @@ The plugin is rich in features, while it is lightweight and fast.
 9. Percentage Discount amount.
 
 == Changelog ==
+
+= 2.0.0 =
+* Added Out Of Image Position Option For Badges.
+* Added Out Of Image Position Option For Timer Countdown (Pro Version).
 
 = 1.9.0 =
 * Added more than 5 Modern Badges.
