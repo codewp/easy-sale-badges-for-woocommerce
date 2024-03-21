@@ -126,7 +126,7 @@ const StyleOptions = ( props ) => {
 								disabled={ disableWidth }
 								type="number"
 								min="0"
-								max="200"
+								max="400"
 								className={
 									disableWidth
 										? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
@@ -152,7 +152,7 @@ const StyleOptions = ( props ) => {
 								disabled={ disableHeight }
 								type="number"
 								min="0"
-								max="200"
+								max="400"
 								className={
 									disableHeight
 										? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
