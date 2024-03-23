@@ -188,6 +188,7 @@ The plugin is rich in features, while it is lightweight and fast.
 * Added Out Of Image Position Option For Badges.
 * Added Out Of Image Position Option For Timer Countdown (Pro Version).
 * Compatibility with WooCommerce 8.7.0
+Note: Please help us spread the word with your 5-star review. ❤️😍 You can include your ideas in 5-star reviews as we always read them. 🌹
 
 = 1.9.0 =
 * Added more than 5 Modern Badges.
