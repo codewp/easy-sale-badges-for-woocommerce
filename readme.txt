@@ -176,11 +176,12 @@ The plugin is rich in features, while it is lightweight and fast.
 2. Modern Badges.
 3. Product Labels.
 4. Sale Badges.
-5. CSS Labels.
-6. Image Labels.
-7. Timer.
-8. Countdown Timer.
-9. Percentage Discount amount.
+5. Out of Image.
+6. CSS Labels.
+7. Image Labels.
+8. Timer.
+9. Countdown Timer.
+10. Percentage Discount amount.
 
 == Changelog ==
 
