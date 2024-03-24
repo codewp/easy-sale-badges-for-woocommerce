@@ -25,7 +25,7 @@ const TextOptions = ( props ) => {
 
 	return (
 		<div className="asnp-ew-line">
-			<div className="asnp-mt-8 asnp-flex">
+			<div className="asnp-mt-6 asnp-flex">
 				<div>
 					<label className="asnp-w-[20rem]">
 						<span className="asnp-field-title">

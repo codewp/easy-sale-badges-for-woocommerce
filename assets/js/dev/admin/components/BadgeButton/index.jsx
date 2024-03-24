@@ -240,7 +240,8 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 						>
 							{ badge.imgbadge == 0 &&
 								badge.imgbadgeAdv == 0 &&
-								badge.useTimerBadge == 0 && (
+								badge.useTimerBadge == 0 &&
+								badge.cssLabelPosition == 'onImage' && (
 									<div
 										className="asnp-esb-productBadge"
 										style={ {
@@ -287,6 +288,56 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 								) }
 						</div>
 					</div>
+					{ badge.imgbadge == 0 &&
+						badge.imgbadgeAdv == 0 &&
+						badge.useTimerBadge == 0 &&
+						badge.cssLabelPosition == 'outOfImage' && (
+							<div
+								className="asnp-esb-productBadgeOut"
+								style={ {
+									width: `100%`,
+									display: 'flex',
+									justifyContent: badge.badgePositionOutofImage,
+									height: `${ heightContBadge }`,
+									inset: `${ insetProperty }`,
+									filter: `drop-shadow(${ badge.badgeColorShadow } ${ badge.boxShadowWidth }px ${ badge.boxShadowWidth }px ${ badge.boxShadowWidth }px)`,
+								} }
+							>
+								<StyledSpan
+									badgeIcon={ badgeIcon }
+									className="asnp-esb-productBadge2out"
+									style={ {
+										color: `${ badge.textColor }`,
+										fontSize: `${ badge.fontSizeText }px`,
+										fontWeight: `${ badge.fontWeightLabel }`,
+										lineHeight: `${ badge.lineHeightText }px`,
+										opacity: `${ badge.opacity }`,
+										borderTopLeftRadius: `${ badge.topLeftRadius }px`,
+										borderTopRightRadius: `${ badge.topRightRadius }px`,
+										borderBottomLeftRadius: `${ badge.bottomLeftRadius }px`,
+										borderBottomRightRadius: `${ badge.bottomRightRadius }px`,
+										zIndex: `${ badge.zIndex }`,
+										transform: `rotateX(${ badge.rotationX }deg) rotateY(${ badge.rotationY }deg) rotateZ(${ badge.rotationZ }deg)`,
+									} }
+								>
+									<StyledSpanTwo
+										badgeIconTwo={ badgeIconTwo }
+									></StyledSpanTwo>
+									<StyledSpanOne
+										badgeIconOne={ badgeIconOne }
+									>
+										<div
+											style={ {
+												transform: `${ horizAndvert }`,
+												whiteSpace: `${ textNoWrap }`,
+											} }
+										>
+											{ updatedBadgeLabel }
+										</div>
+									</StyledSpanOne>
+								</StyledSpan>
+							</div>
+						) }
 					<div className="asnp-mt-4 asnp-ml-40 asnp-text-base asnp-text-black">
 						<del className="asnp-text-gray-400">
 							{ __( '$100', 'easy-sale-badges-for-woocommerce' ) }

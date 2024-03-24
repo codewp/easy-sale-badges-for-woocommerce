@@ -26,13 +26,13 @@ class Badges {
 		$this->badges = $badges;
 	}
 
-	public function display_badges( $product, $hide = false, $return = false ) {
+	public function display_badges( $product, $hide = false, $return = false, $out_of_image = false ) {
 		$badges = $this->get_valid_badges( $product );
 		if ( empty( $badges ) ) {
 			return '';
 		}
 
-		return output_badges( $badges, $hide, $return );
+		return output_badges( $badges, $hide, $return, $out_of_image );
 	}
 
 	public function get_valid_badges( $product ) {

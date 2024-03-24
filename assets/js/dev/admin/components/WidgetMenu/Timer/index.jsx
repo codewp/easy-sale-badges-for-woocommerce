@@ -37,7 +37,10 @@ const Timer = () => {
 				<div className="asnp-space-y-1 asnp-mt-4 ">
 					<label className="asnp-inline-flex asnp-space-x-2 asnp-items-center">
 						<span className="asnp-field-title">
-							{ __( 'Status', 'easy-sale-badges-for-woocommerce' ) }
+							{ __(
+								'Status',
+								'easy-sale-badges-for-woocommerce'
+							) }
 						</span>
 						<Toggle value="1" />
 					</label>
@@ -49,7 +52,10 @@ const Timer = () => {
 					</div>
 				</div>
 				<div className="asnp-w-[25rem] asnp-mt-4 asnp-text-lg asnp-font-semibold">
-					{ __( 'Pick A Start / End Date', 'easy-sale-badges-for-woocommerce' ) }
+					{ __(
+						'Pick A Start / End Date',
+						'easy-sale-badges-for-woocommerce'
+					) }
 				</div>
 				<div className="asnp-flex">
 					<div className="asnp-mt-3">
@@ -78,7 +84,10 @@ const Timer = () => {
 				<div className="asnp-ew-line">
 					<div className="asnp-mt-2">
 						<div className="asnp-w-[25rem] asnp-text-lg asnp-font-semibold">
-							{ __( 'Timer Styles', 'easy-sale-badges-for-woocommerce' ) }
+							{ __(
+								'Timer Styles',
+								'easy-sale-badges-for-woocommerce'
+							) }
 						</div>
 						<div className="asnp-relative asnp-mb-3 asnp-mt-3 asnp-h-[30rem] asnp-flex asnp-flex-col asnp-border-2 asnp-rounded-md asnp-pr-1 asnp-scrollBarImageB">
 							<div className="asnp-w-full asnp-ml-8 asnp-mt-4 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
@@ -119,7 +128,10 @@ const Timer = () => {
 							</div>
 							<div className="asnp-w-full asnp-ml-8 asnp-mt-1 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
 								<label>
-									{ __( 'Vertical', 'easy-sale-badges-for-woocommerce' ) }
+									{ __(
+										'Vertical',
+										'easy-sale-badges-for-woocommerce'
+									) }
 								</label>
 							</div>
 							<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-1 asnp-mb-4">
@@ -296,13 +308,19 @@ const Timer = () => {
 						</div>
 					</div>
 					<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold">
-						{ __( 'Extra Styles', 'easy-sale-badges-for-woocommerce' ) }
+						{ __(
+							'Extra Styles',
+							'easy-sale-badges-for-woocommerce'
+						) }
 					</div>
 
 					<div className="asnp-flex asnp-mt-2">
 						<label>
 							<span className="asnp-field-title">
-								{ __( 'z-index', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'z-index',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</span>
 							<div className="asnp-w-[25rem]">
 								<input
@@ -317,7 +335,10 @@ const Timer = () => {
 				<div className="asnp-ew-line asnp-mt-6">
 					<label className="asnp-space-y-1">
 						<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-							{ __( 'Opacity', 'easy-sale-badges-for-woocommerce' ) }
+							{ __(
+								'Opacity',
+								'easy-sale-badges-for-woocommerce'
+							) }
 						</span>
 					</label>
 					<div className="asnp-relative asnp-pt-1">
@@ -341,8 +362,32 @@ const Timer = () => {
 				<div className="asnp-ew-line asnp-mt-6">
 					<div className="asnp-mt-4">
 						<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-							{ __( 'Timer Position', 'easy-sale-badges-for-woocommerce' ) }
+							{ __(
+								'Timer Position',
+								'easy-sale-badges-for-woocommerce'
+							) }
 						</span>
+						<div className="asnp-mt-3 asnp-mb-6">
+							<label className="asnp-block asnp-space-y-2 asnp-max-w-lg">
+								<select
+									className="asnp-block asnp-select-field md:asnp-w-2/3 !asnp-h-12"
+									disabled
+								>
+									<option>
+										{ __(
+											'On Image',
+											'easy-sale-badges-for-woocommerce'
+										) }
+									</option>
+									<option>
+										{ __(
+											'Out of Image',
+											'easy-sale-badges-for-woocommerce'
+										) }
+									</option>
+								</select>
+							</label>
+						</div>
 						<div className="asnp-w-full asnp-flex asnp-rounded-md asnp-mt-3">
 							<div
 								className="asnp-w-[10rem] asnp-flex"
@@ -352,14 +397,20 @@ const Timer = () => {
 									type="button"
 									className="asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-l-lg asnp-border   asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700"
 								>
-									{ __( 'Top', 'easy-sale-badges-for-woocommerce' ) }
+									{ __(
+										'Top',
+										'easy-sale-badges-for-woocommerce'
+									) }
 								</button>
 
 								<button
 									type="button"
 									className="asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700"
 								>
-									{ __( 'Bottom', 'easy-sale-badges-for-woocommerce' ) }
+									{ __(
+										'Bottom',
+										'easy-sale-badges-for-woocommerce'
+									) }
 								</button>
 							</div>
 							<div
@@ -370,19 +421,28 @@ const Timer = () => {
 									type="button"
 									className="asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-l-lg asnp-border   asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700"
 								>
-									{ __( 'Left', 'easy-sale-badges-for-woocommerce' ) }
+									{ __(
+										'Left',
+										'easy-sale-badges-for-woocommerce'
+									) }
 								</button>
 								<button
 									type="button"
 									className="asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700"
 								>
-									{ __( 'Center', 'easy-sale-badges-for-woocommerce' ) }
+									{ __(
+										'Center',
+										'easy-sale-badges-for-woocommerce'
+									) }
 								</button>
 								<button
 									type="button"
 									className="asnp-py-2 asnp-px-4 asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-bg-white asnp-rounded-r-md asnp-border asnp-border-gray-200 hover:asnp-bg-gray-100 hover:asnp-text-blue-700"
 								>
-									{ __( 'Right', 'easy-sale-badges-for-woocommerce' ) }
+									{ __(
+										'Right',
+										'easy-sale-badges-for-woocommerce'
+									) }
 								</button>
 							</div>
 						</div>
@@ -416,7 +476,10 @@ const Timer = () => {
 						</label>
 						<label>
 							<span className="asnp-field-title asnp-ml-6">
-								{ __( 'Bottom', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Bottom',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</span>
 							<div className="asnp-w-[10rem] asnp-ml-6">
 								<input
@@ -431,7 +494,10 @@ const Timer = () => {
 						</label>
 						<label>
 							<span className="asnp-field-title asnp-ml-6">
-								{ __( 'Left', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Left',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</span>
 							<div className="asnp-w-[10rem] asnp-ml-6">
 								<input
@@ -446,7 +512,10 @@ const Timer = () => {
 						</label>
 						<label>
 							<span className="asnp-field-title asnp-ml-6">
-								{ __( 'Right', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Right',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</span>
 							<div className="asnp-w-[10rem] asnp-ml-6">
 								<input
@@ -462,13 +531,19 @@ const Timer = () => {
 					</div>
 					<div className="asnp-mt-8">
 						<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-							{ __( 'Labels', 'easy-sale-badges-for-woocommerce' ) }
+							{ __(
+								'Labels',
+								'easy-sale-badges-for-woocommerce'
+							) }
 						</span>
 					</div>
 					<div className="asnp-flex asnp-mt-3 asnp-mb-6">
 						<label>
 							<span className="asnp-field-title">
-								{ __( 'Days', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Days',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</span>
 							<div className="asnp-w-[11rem]">
 								<input
@@ -480,7 +555,10 @@ const Timer = () => {
 						</label>
 						<label>
 							<span className="asnp-field-title asnp-ml-7">
-								{ __( 'Hours', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Hours',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</span>
 							<div className="asnp-w-[11rem] asnp-ml-7">
 								<input
@@ -492,7 +570,10 @@ const Timer = () => {
 						</label>
 						<label>
 							<span className="asnp-field-title asnp-ml-7">
-								{ __( 'Minutes', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Minutes',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</span>
 							<div className="asnp-w-[11rem] asnp-ml-7">
 								<input
@@ -504,7 +585,10 @@ const Timer = () => {
 						</label>
 						<label>
 							<span className="asnp-field-title asnp-ml-7">
-								{ __( 'Seconds', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Seconds',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</span>
 							<div className="asnp-w-[11rem] asnp-ml-7">
 								<input

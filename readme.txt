@@ -1,11 +1,11 @@
 === Badge and Product Label for WooCommerce ===
 Contributors: asanaplugins
 Donate link: https://www.asanaplugins.com/
-Tags: sale badge, product label, woocommerce, badge, woocommerce badge, woocommerce sale badge, labels, plugin, shop, store, ecommerce, marketing, products, tags, product tags, product marks, product sign, sale product label, onsale product, woocommerce tags, custom labels, custom product badges, advanced product labels for woocommerce
+Tags: woocommerce badge, product label, woocommerce, badge, sale badge, label
 Requires at least: 5.0
 Tested up to: 6.4
 Requires PHP: 5.6
-Stable tag: 1.9.0
+Stable tag: 2.0.0
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,7 @@ https://youtu.be/aTHFT3ovCaw
 == ✅ BADGE AND PRODUCT LABEL FOR WOOCOMMERCE FEATURES ==
 
 - **Create Custom labels on Products**
+- **Add Badge to Out Of Image Position**
 - **Implemented multi-language support for the Labels** to enable labels to be displayed in various languages for enhanced accessibility.
 - **CSS label templates** Access pre-designed CSS label templates for quick and easy customization.
 - **Multiple labels available for a single product** Multiple labels can be applied to a single product.
@@ -53,6 +54,7 @@ https://youtu.be/aTHFT3ovCaw
 - **Over 10 CSS Labels**
 - **Over 5 Modern Badges**
 - **8 Timers Template**
+- **Out of Image Position Option For Timers Countdown**
 - **Over 10 Animation Effects**
 - **Incorporate Gradient Colors**
 - **[Compatible with Discount Rules and Dynamic Pricing for WooCommerce](https://wordpress.org/plugins/easy-woocommerce-discounts/)**
@@ -174,13 +176,20 @@ The plugin is rich in features, while it is lightweight and fast.
 2. Modern Badges.
 3. Product Labels.
 4. Sale Badges.
-5. CSS Labels.
-6. Image Labels.
-7. Timer.
-8. Countdown Timer.
-9. Percentage Discount amount.
+5. Out of Image.
+6. CSS Labels.
+7. Image Labels.
+8. Timer.
+9. Countdown Timer.
+10. Percentage Discount amount.
 
 == Changelog ==
+
+= 2.0.0 =
+* Added Out Of Image Position Option For Badges.
+* Added Out Of Image Position Option For Timer Countdown (Pro Version).
+* Compatibility with WooCommerce 8.7.0
+Note: Please help us spread the word with your 5-star review. ❤️😍 You can include your ideas in 5-star reviews as we always read them. 🌹
 
 = 1.9.0 =
 * Added more than 5 Modern Badges.

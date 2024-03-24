@@ -128,7 +128,7 @@ function add_custom_style( $style, $badge = null ) {
 	get_plugin()->container()->get( CustomStyles::class )->add_style( $style, $badge );
 }
 
-function display_sale_badges( $product, $hide = false, $return = false ) {
+function display_sale_badges( $product, $hide = false, $return = false, $out_of_image = false ) {
 	if ( ! $product ) {
 		return '';
 	}
@@ -138,7 +138,7 @@ function display_sale_badges( $product, $hide = false, $return = false ) {
 		return '';
 	}
 
-	return $badges->display_badges( $product, $hide, $return );
+	return $badges->display_badges( $product, $hide, $return, $out_of_image );
 }
 
 function has_active_sale_badges() {
@@ -223,6 +223,30 @@ function get_theme_loop_position( $stylesheet = null, $template = null ) {
 	return '';
 }
 
+function get_theme_out_of_image_loop_position( $stylesheet = null, $template = null ) {
+	$stylesheet = empty( $stylesheet ) ? get_stylesheet() : $stylesheet;
+	$template   = empty( $template ) ? get_template() : $template;
+
+	$stylesheet = ! empty( $stylesheet ) ? strtolower( $stylesheet ) : $stylesheet;
+	$template   = ! empty( $template ) ? strtolower( $template ) : $template;
+
+	$themes = [
+		'betheme' 	  => 'woocommerce_after_shop_loop_item_title',
+		'uncode'      => 'uncode_entry_visual_after_image',
+		'oceanwp'      => 'ocean_before_archive_product_categories',
+	];
+
+	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
+		return $themes[ $stylesheet ];
+	}
+
+	if ( ! empty( $template ) && isset( $themes[ $template ] ) ) {
+		return $themes[ $template ];
+	}
+
+	return '';
+}
+
 function get_theme_single_position( $stylesheet = null, $template = null ) {
 	$stylesheet = empty( $stylesheet ) ? get_stylesheet() : $stylesheet;
 	$template   = empty( $template ) ? get_template() : $template;
@@ -236,6 +260,26 @@ function get_theme_single_position( $stylesheet = null, $template = null ) {
 		'woodmart'    => 'woocommerce_single_product_summary',
 		'basel'       => 'woocommerce_before_single_product_summary',
 	];
+
+	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
+		return $themes[ $stylesheet ];
+	}
+
+	if ( ! empty( $template ) && isset( $themes[ $template ] ) ) {
+		return $themes[ $template ];
+	}
+
+	return '';
+}
+
+function get_theme_out_of_image_single_position( $stylesheet = null, $template = null ) {
+	$stylesheet = empty( $stylesheet ) ? get_stylesheet() : $stylesheet;
+	$template   = empty( $template ) ? get_template() : $template;
+
+	$stylesheet = ! empty( $stylesheet ) ? strtolower( $stylesheet ) : $stylesheet;
+	$template   = ! empty( $template ) ? strtolower( $template ) : $template;
+
+	$themes = [];
 
 	if ( ! empty( $stylesheet ) && isset( $themes[ $stylesheet ] ) ) {
 		return $themes[ $stylesheet ];

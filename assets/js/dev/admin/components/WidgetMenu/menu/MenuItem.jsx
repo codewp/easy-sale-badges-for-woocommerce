@@ -26,7 +26,7 @@ const MenuItem = ( props ) => {
 	return (
 		<div className="asnp-w-full">
 			{ props.activeStatus == 1 && (
-				<div className="asnp-mt-3">
+				<div className="asnp-mt-6 asnp-mb-4">
 					<TextOptions
 						show={ show }
 						setShow={ setShow }
@@ -40,6 +40,7 @@ const MenuItem = ( props ) => {
 						percentageDiscount={ props.badge.percentageDiscount }
 						labelTranslate={ props.badge.labelTranslate }
 					/>
+
 					<BadgeStyles
 						onChange={ props.onChange }
 						badgeStyles={ props.badge.badgeStyles }
@@ -66,6 +67,41 @@ const MenuItem = ( props ) => {
 						horizontal={ props.badge.horizontal }
 						vertical={ props.badge.vertical }
 					/>
+					<div className="asnp-mt-6 asnp-mb-6">
+						<label className="asnp-block asnp-space-y-2 asnp-max-w-lg">
+							<div className="asnp-flex">
+								<div className="asnp-field-title asnp-ml-1 asnp-text-base asnp-font-semibold">
+									{ __(
+										'CSS Label Position',
+										'easy-sale-badges-for-woocommerce'
+									) }
+								</div>
+							</div>
+							<select
+								className="asnp-block asnp-select-field md:asnp-w-2/3 !asnp-h-12"
+								value={ props.badge.cssLabelPosition }
+								onChange={ ( e ) =>
+									props.onChange(
+										'cssLabelPosition',
+										e.target.value
+									)
+								}
+							>
+								<option value="onImage">
+									{ __(
+										'On Image',
+										'easy-sale-badges-for-woocommerce'
+									) }
+								</option>
+								<option value="outOfImage">
+									{ __(
+										'Out of Image',
+										'easy-sale-badges-for-woocommerce'
+									) }
+								</option>
+							</select>
+						</label>
+					</div>
 					<Position
 						onChange={ props.onChange }
 						badgeStyles={ props.badge.badgeStyles }
@@ -77,6 +113,10 @@ const MenuItem = ( props ) => {
 						badgePositionRight={ props.badge.badgePositionRight }
 						badgeColorShadow={ props.badge.badgeColorShadow }
 						boxShadowWidth={ props.badge.boxShadowWidth }
+						cssLabelPosition={ props.badge.cssLabelPosition }
+						badgePositionOutofImage={
+							props.badge.badgePositionOutofImage
+						}
 					/>
 					<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold asnp-text-red-600">
 						{ __(

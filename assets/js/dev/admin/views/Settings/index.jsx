@@ -76,7 +76,10 @@ export default function Settings() {
 								: '' )
 						}
 					>
-						{ __( 'Product Page', 'easy-sale-badges-for-woocommerce' ) }
+						{ __(
+							'Product Page',
+							'easy-sale-badges-for-woocommerce'
+						) }
 					</a>
 				</nav>
 			</div>
@@ -89,7 +92,12 @@ export default function Settings() {
 						singlePosition={ settings.singlePosition }
 						singleCustomHooks={ settings.singleCustomHooks }
 						loopCustomHooks={ settings.loopCustomHooks }
-						timerPosition={ settings.timerPosition }
+						loopOutOfImagePosition={
+							settings.loopOutOfImagePosition
+						}
+						singleOutOfImagePosition={
+							settings.singleOutOfImagePosition
+						}
 						hideWooCommerceBadges={ settings.hideWooCommerceBadges }
 					/>
 				) }

@@ -60,9 +60,21 @@
 	position: absolute;
 }
 
+.asnp-esb-productBadgeOut {
+	position: relative;
+	margin-top: 20px;
+}
+
 .asnp-esb-productBadge2 {
+	position: absolute;
 	top: 0px;
 	left: 0px;
+	text-align: center;
+	text-shadow: none;
+	font-weight: 600;
+}
+
+.asnp-esb-productBadge2out {
 	text-align: center;
 	text-shadow: none;
 	font-weight: 600;
