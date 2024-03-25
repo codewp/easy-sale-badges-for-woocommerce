@@ -115,7 +115,7 @@ class Hooks {
 		$single_position = get_theme_out_of_image_single_position();
 
 		if ( empty( $single_position ) ) {
-			$single_position = get_plugin()->settings->get_setting( 'singleOutOfImagePosition', 'before_single_item_images' );
+			$single_position = get_plugin()->settings->get_setting( 'singleOutOfImagePosition', 'before_single_item_title' );
 		}
 
 		if ( empty( $single_position ) || 'none' === $single_position ) {
@@ -298,7 +298,7 @@ class Hooks {
 	public static function loop_out_of_image_hooks() {
 		$loop_position = get_theme_out_of_image_loop_position();
 		if ( empty( $loop_position ) ) {
-			$loop_position = get_plugin()->settings->get_setting( 'loopOutOfImagePosition', 'woocommerce_product_get_image' );
+			$loop_position = get_plugin()->settings->get_setting( 'loopOutOfImagePosition', 'before_shop_loop_item_title' );
 		}
 
 		if ( empty( $loop_position ) || 'none' === $loop_position ) {
