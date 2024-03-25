@@ -189,7 +189,7 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 
 	if ( empty( $badge->cssLabelPosition ) || 'onImage' === $badge->cssLabelPosition ) {
 		$styles .= ' position: absolute;';
-	  }
+	}
 
 	if ( ! empty( $styles ) ) {
 		$dynamic_styles .= '.asnp-esb-badge-'. absint( $badge->id ) . ' {' . $styles . '}';

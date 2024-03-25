@@ -185,6 +185,9 @@ The plugin is rich in features, while it is lightweight and fast.
 
 == Changelog ==
 
+= 2.0.2 =
+* Fixed Product Page Issue.
+
 = 2.0.1 =
 * Fix bug.
 
