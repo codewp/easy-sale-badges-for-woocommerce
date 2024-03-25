@@ -5,7 +5,7 @@ Tags: woocommerce badge, product label, woocommerce, badge, sale badge, label
 Requires at least: 5.0
 Tested up to: 6.4
 Requires PHP: 5.6
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -184,6 +184,9 @@ The plugin is rich in features, while it is lightweight and fast.
 10. Percentage Discount amount.
 
 == Changelog ==
+
+= 2.0.1 =
+* Fix bug.
 
 = 2.0.0 =
 * Added Out Of Image Position Option For Badges.
