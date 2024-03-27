@@ -85,6 +85,17 @@ export default function Badges() {
 		}
 	};
 
+	const positionBadge = ( badge ) => {
+		if (
+			! badge.cssLabelPosition ||
+			badge.cssLabelPosition === 'onImage'
+		) {
+			return 'On Image';
+		} else {
+			return 'Out of Image';
+		}
+	};
+
 	const previewImage = ( badge ) => {
 		const { badgeIconPr, badgeIconOnePr, badgeIconTwoPr } = BadgePreview(
 			badge
@@ -94,7 +105,7 @@ export default function Badges() {
 			badge.badgeStyles == 'badge1' ||
 			badge.badgeStyles == 'badge2' ||
 			badge.badgeStyles == 'badge3' ||
-			badge.badgeStyles == 'badge4' 
+			badge.badgeStyles == 'badge4'
 		) {
 			mtop = 15;
 		} else {
@@ -337,6 +348,15 @@ export default function Badges() {
 												className="asnp-px-6 asnp-py-3 asnp-text-left asnp-text-xs asnp-font-medium asnp-text-gray-500 asnp-uppercase asnp-tracking-wider"
 											>
 												{ __(
+													'Position',
+													'easy-sale-badges-for-woocommerce'
+												) }
+											</th>
+											<th
+												scope="col"
+												className="asnp-px-6 asnp-py-3 asnp-text-left asnp-text-xs asnp-font-medium asnp-text-gray-500 asnp-uppercase asnp-tracking-wider"
+											>
+												{ __(
 													'Status',
 													'easy-sale-badges-for-woocommerce'
 												) }
@@ -380,6 +400,16 @@ export default function Badges() {
 														to={ `/badge/${ item.id }` }
 													>
 														{ previewImage( item ) }
+													</Link>
+												</td>
+												<td className="asnp-px-6 asnp-whitespace-nowrap">
+													<Link
+														className="focus:!asnp-shadow-none"
+														to={ `/badge/${ item.id }` }
+													>
+														{ positionBadge(
+															item
+														) }
 													</Link>
 												</td>
 												<td className="asnp-px-6 asnp-py-4 asnp-whitespace-nowrap">
