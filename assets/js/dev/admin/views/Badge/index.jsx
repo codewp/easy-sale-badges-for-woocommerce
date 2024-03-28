@@ -41,7 +41,7 @@ const defaultBadge = {
 	topRightRadius: '3',
 	bottomLeftRadius: '3',
 	bottomRightRadius: '3',
-	zIndex: '9999',
+	zIndex: '5',
 	horizontal: 0,
 	vertical: 0,
 	badgePositionY: 'top',
