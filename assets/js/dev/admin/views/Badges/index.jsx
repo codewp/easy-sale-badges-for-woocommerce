@@ -87,14 +87,12 @@ export default function Badges() {
 
 	const positionBadge = ( badge ) => {
 		if (
-			badge.imgbadge == 0 &&
-			badge.imgbadgeAdv == 0 &&
-			badge.useTimerBadge == 0 &&
-			badge.cssLabelPosition == 'outOfImage'
+			! badge.cssLabelPosition ||
+			badge.cssLabelPosition === 'onImage'
 		) {
-			return 'Out of Image';
-		} else {
 			return 'On Image';
+		} else {
+			return 'Out of Image';
 		}
 	};
 
