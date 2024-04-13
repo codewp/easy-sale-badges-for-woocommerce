@@ -87,7 +87,8 @@ export default function Badges() {
 
 	const positionBadge = ( badge ) => {
 		if (
-			! badge.cssLabelPosition ||
+			( typeof badge.cssLabelPosition !== 'undefined' &&
+				! badge.cssLabelPosition ) ||
 			badge.cssLabelPosition === 'onImage'
 		) {
 			return 'On Image';
