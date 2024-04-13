@@ -85,16 +85,11 @@ export default function Badges() {
 		}
 	};
 
-	const positionBadge = ( badge ) => {
-		if (
-			( typeof badge.cssLabelPosition !== 'undefined' &&
-				! badge.cssLabelPosition ) ||
-			badge.cssLabelPosition === 'onImage'
-		) {
-			return 'On Image';
-		} else {
-			return 'Out of Image';
-		}
+	const badgePosition = ( badge ) => {
+		return 'undefined' !== typeof badge.cssLabelPosition &&
+			'outOfImage' === badge.cssLabelPosition
+			? ( 'Out of image', '' )
+			: ( 'On image', '' );
 	};
 
 	const previewImage = ( badge ) => {
@@ -408,7 +403,7 @@ export default function Badges() {
 														className="focus:!asnp-shadow-none"
 														to={ `/badge/${ item.id }` }
 													>
-														{ positionBadge(
+														{ badgePosition(
 															item
 														) }
 													</Link>
