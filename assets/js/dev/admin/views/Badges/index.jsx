@@ -88,8 +88,8 @@ export default function Badges() {
 	const badgePosition = ( badge ) => {
 		return 'undefined' !== typeof badge.cssLabelPosition &&
 			'outOfImage' === badge.cssLabelPosition
-			? ( 'Out of image', '' )
-			: ( 'On image', '' );
+			? __( 'Out of Image', 'easy-sale-badges-for-woocommerce' )
+			: __( 'On Image', 'easy-sale-badges-for-woocommerce' );
 	};
 
 	const previewImage = ( badge ) => {
