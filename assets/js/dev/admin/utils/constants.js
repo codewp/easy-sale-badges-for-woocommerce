@@ -2,6 +2,7 @@ import { __ } from '@wordpress/i18n';
 
 export const defaultSettings = {
 	hideWooCommerceBadges: 0,
+	negativeSign: 1,
 	singlePosition: 'before_single_item_images',
 	loopPosition: 'woocommerce_product_get_image',
 	singleCustomHooks: '',
