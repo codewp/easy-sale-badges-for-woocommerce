@@ -3,9 +3,9 @@ Contributors: asanaplugins
 Donate link: https://www.asanaplugins.com/
 Tags: woocommerce badge, product label, woocommerce, badge, sale badge, label
 Requires at least: 5.0
-Tested up to: 6.4
+Tested up to: 6.5
 Requires PHP: 5.6
-Stable tag: 2.0.2
+Stable tag: 2.1.0
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -184,6 +184,12 @@ The plugin is rich in features, while it is lightweight and fast.
 10. Percentage Discount amount.
 
 == Changelog ==
+
+= 2.1.0 =
+* Added Position Option To Badges List.
+* Added 20 New Image Badge.
+* Added 15 Special Offer Image Badge.
+Note: Please help us spread the word with your 5-star review. ❤️😍 You can include your ideas in 5-star reviews as we always read them. 🌹
 
 = 2.0.2 =
 * Fixed Product Page Issue.
