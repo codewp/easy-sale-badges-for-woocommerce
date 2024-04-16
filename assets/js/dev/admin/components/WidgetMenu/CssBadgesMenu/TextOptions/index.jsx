@@ -89,7 +89,7 @@ const TextOptions = ( props ) => {
 					<div className="asnp-flex asnp-font-semibold asnp-text-base">
 						{ __(
 							'Percentage Discount amount',
-							'asnp-easy-whatsapp'
+							'easy-sale-badges-for-woocommerce'
 						) }
 						<div className="asnp-ml-1 asnp-cursor-pointer asnp-mt-[0.2rem]">
 							<Tippy
@@ -99,7 +99,7 @@ const TextOptions = ( props ) => {
 									<div className="asnp-h-auto asnp-w-[15rem] asnp-rounded-lg asnp-p-[0.4rem] asnp-text-white asnp-rounded-bl-none asnp-ml-3">
 										{ __(
 											'Instead of displaying the label, showcase the percentage discount amount for products that are on sale.',
-											'asnp-easy-whatsapp'
+											'easy-sale-badges-for-woocommerce'
 										) }
 									</div>
 								}

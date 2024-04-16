@@ -90,7 +90,7 @@ const WooCommerce = () => {
 										>
 											{ __(
 												'Discount rules (Pro)',
-												'asnp-easy-whatsapp'
+												'easy-sale-badges-for-woocommerce'
 											) }
 										</option>
 									</select>
