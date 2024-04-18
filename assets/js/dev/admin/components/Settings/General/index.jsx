@@ -35,6 +35,32 @@ const General = ( props ) => {
 				</label>
 			</div>
 			<div>
+				<div className="asnp-flex asnp-flex-row md:asnp-w-[21rem] asnp-w-[20rem] asnp-justify-between">
+					<div className="asnp-field-title md:asnp-min-w-1/3">
+						{ __(
+							'Negative Sign',
+							'easy-sale-badges-for-woocommerce'
+						) }
+					</div>
+					<div>
+						<Toggle
+							value={ 1 == props.negativeSign }
+							onChange={ ( value ) =>
+								props.onChange( 'negativeSign', value ? 1 : 0 )
+							}
+						/>
+					</div>
+				</div>
+				<label className="asnp-block asnp-space-y-1 asnp-text-gray-500">
+					<p className="asnp-text-xs asnp-text-gray-400">
+						{ __(
+							'Add Negative Sign Before Percentage Discount.',
+							'easy-sale-badges-for-woocommerce'
+						) }
+					</p>
+				</label>
+			</div>
+			<div>
 				<label className="asnp-block asnp-space-y-2 asnp-max-w-lg">
 					<div className="asnp-flex">
 						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">

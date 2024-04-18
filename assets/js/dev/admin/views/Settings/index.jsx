@@ -99,6 +99,7 @@ export default function Settings() {
 							settings.singleOutOfImagePosition
 						}
 						hideWooCommerceBadges={ settings.hideWooCommerceBadges }
+						negativeSign={ settings.negativeSign }
 					/>
 				) }
 				{ 'productPage' === activeMenu && (

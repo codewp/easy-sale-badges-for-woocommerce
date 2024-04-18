@@ -107,10 +107,14 @@ class Placeholder {
 			return str_ireplace( '{saved_price}', '', $label );
 		}
 
+		$prefix = '';
+		if ( (int) get_plugin()->settings->get_setting( 'negativeSign', 1 ) ) {
+			$prefix = apply_filters( 'asnp_wesb_sale_flash_price_discount_prefix', '<span class="asnp-wesb-sale-flash-prefix">-</span>' );
+		}
+
 		$price = apply_filters(
 			'asnp_wesb_saved_price_label',
-			apply_filters( 'asnp_wesb_sale_flash_price_discount_prefix', '<span class="asnp-wesb-sale-flash-prefix">-</span>' ) .
-			$price,
+			$prefix . $price,
 			$price,
 			$label,
 			$product
@@ -125,10 +129,14 @@ class Placeholder {
 			return str_ireplace( '{saved_percent}', '', $label );
 		}
 
+		$prefix = '';
+		if ( (int) get_plugin()->settings->get_setting( 'negativeSign', 1 ) ) {
+			$prefix = apply_filters( 'asnp_wesb_sale_flash_percentage_discount_prefix', '<span class="asnp-wesb-sale-flash-prefix">-</span>' );
+		}
+
 		$percent = apply_filters(
 			'asnp_wesb_saved_percent_label',
-			apply_filters( 'asnp_wesb_sale_flash_percentage_discount_prefix', '<span class="asnp-wesb-sale-flash-prefix">-</span>' ) .
-			round( $percent ) .
+			$prefix . round( $percent ) .
 			apply_filters( 'asnp_wesb_sale_flash_percentage_symbol', '<span class="asnp-wesb-sale-flash-percentage-symbol">%</span>' ),
 			$percent,
 			$label,
@@ -183,10 +191,14 @@ class Placeholder {
 			return false;
 		}
 
+		$prefix = '';
+		if ( (int) get_plugin()->settings->get_setting( 'negativeSign', 1 ) ) {
+			$prefix = apply_filters( 'asnp_wesb_sale_flash_percentage_discount_prefix', '<span class="asnp-wesb-sale-flash-prefix">-</span>' );
+		}
+
 		return apply_filters(
 			'asnp_wesb_saved_percent_label',
-			apply_filters( 'asnp_wesb_sale_flash_percentage_discount_prefix', '<span class="asnp-wesb-sale-flash-prefix">-</span>' ) .
-			round( $percent ) .
+			$prefix . round( $percent ) .
 			apply_filters( 'asnp_wesb_sale_flash_percentage_symbol', '<span class="asnp-wesb-sale-flash-percentage-symbol">%</span>' ),
 			$percent,
 			$label,
