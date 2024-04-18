@@ -56,8 +56,6 @@ class Assets {
 					apply_filters( 'asnp_wesb_sale_badge_admin_script_translations', ASNP_WESB_ABSPATH . 'languages' )
 				);
 			}
-		} elseif ( 'dashboard' === $screen_id ) {
-			$this->show_ch();
 		}
 	}
 
@@ -69,26 +67,4 @@ class Assets {
 		return 'css' === $ext ? 'assets/css/' : 'assets/js/';
 	}
 
-	protected function show_ch() {
-		if ( ! SaleBadges\maybe_show_ch() ) {
-			return;
-		}
-
-		SaleBadges\register_polyfills();
-		wp_enqueue_style(
-			'asnp-wesb-ch',
-			$this->get_url( 'ch/style', 'css' )
-		);
-		wp_enqueue_script(
-			'asnp-wesb-ch',
-			$this->get_url( 'admin/ch/index', 'js' ),
-			array(
-				'react-dom',
-				'wp-i18n',
-				'wp-api-fetch',
-			),
-			ASNP_WESB_VERSION,
-			true
-		);
-	}
 }
