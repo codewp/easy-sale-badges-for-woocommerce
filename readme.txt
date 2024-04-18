@@ -186,7 +186,7 @@ The plugin is rich in features, while it is lightweight and fast.
 == Changelog ==
 
 = 2.2.0 =
-* Added an option to Enable or Disable the Negative Sign Before Percentage Discount.
+* Added an option to enable or disable the negative sign before percentage discount.
 * Compatibility with WooCommerce 8.8.2
 
 = 2.1.0 =
