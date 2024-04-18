@@ -34,10 +34,7 @@ const AdvancedTextOption = () => {
 							'easy-sale-badges-for-woocommerce'
 						) }
 						<div className="asnp-text-red-600 asnp-text-base asnp-uppercase asnp-ml-[0.3rem]">
-							{ __(
-								'(Pro)',
-								'easy-sale-badges-for-woocommerce'
-							) }
+							{ __( '(Pro)', 'easy-sale-badges-for-woocommerce' ) }
 						</div>
 						<div className="asnp-ml-1 asnp-cursor-pointer asnp-mt-[0.2rem]">
 							<Tippy
