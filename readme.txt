@@ -5,7 +5,7 @@ Tags: woocommerce badge, product label, woocommerce, badge, sale badge, label
 Requires at least: 5.0
 Tested up to: 6.5
 Requires PHP: 5.6
-Stable tag: 2.1.0
+Stable tag: 2.2.0
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -184,6 +184,10 @@ The plugin is rich in features, while it is lightweight and fast.
 10. Percentage Discount amount.
 
 == Changelog ==
+
+= 2.2.0 =
+* Added an option to Enable or Disable the Negative Sign Before Percentage Discount.
+* Compatibility with WooCommerce 8.8.2
 
 = 2.1.0 =
 * Added Position Option To Badges List.
