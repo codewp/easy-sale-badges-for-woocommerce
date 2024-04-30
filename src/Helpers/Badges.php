@@ -180,6 +180,9 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 	if ( isset( $badge->animateDuration ) ) {
 		$styles .= ' animation-duration: ' . esc_html( $badge->animateDuration ) . 's;';
 	}
+	if ( isset( $badge->fontFamilyLabel ) ) {
+		$dynamic_styles .= ' font-family: ' . $badge->fontFamilyLabel . ';';
+	}
 	if ( isset( $badge->animationCount ) ) {
 		$styles .= ' animation-iteration-count: ' . esc_html( $badge->animationCount ) . ';';
 	}

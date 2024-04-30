@@ -4,6 +4,7 @@ import Tippy from '@tippyjs/react';
 import ColorPicker from 'react-best-gradient-color-picker';
 import { IMAGES_URL, customColor } from '../../../../utils/constants';
 import LabelTranslation from '../../../LabelTranslation';
+import FontFamily from './../../../FontFamily';
 
 const TextOptions = ( props ) => {
 	const [ disableLineHeight, setDisableLineHeight ] = useState( false );
@@ -201,7 +202,9 @@ const TextOptions = ( props ) => {
 						/>
 					</div>
 				</label>
-				<label className="asnp-ml-10">
+			</div>
+			<div className="asnp-flex asnp-mt-[2rem] asnp-w-full">
+				<label>
 					<span className="asnp-field-title">
 						{ __(
 							'Font Weight',
@@ -210,7 +213,7 @@ const TextOptions = ( props ) => {
 					</span>
 					<div className="asnp-w-[10rem]">
 						<select
-							className="asnp-select-field !asnp-w-48 asnp-mt-2"
+							className="asnp-select-field !asnp-w-40 asnp-mt-2"
 							value={ props.fontWeightLabel }
 							onChange={ ( e ) =>
 								props.onChange(
@@ -256,6 +259,17 @@ const TextOptions = ( props ) => {
 								) }
 							</option>
 						</select>
+					</div>
+				</label>
+				<label className="asnp-ml-10">
+					<span className="asnp-field-title">
+						{ __( 'Font', 'easy-sale-badges-for-woocommerce' ) }
+					</span>
+					<div className="asnp-w-[10rem]">
+						<FontFamily
+							fontFamilyLabel={ props.fontFamilyLabel }
+							onChange={ props.onChange }
+						/>
 					</div>
 				</label>
 			</div>

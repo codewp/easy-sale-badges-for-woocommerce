@@ -330,6 +330,7 @@ class Badge extends BaseController {
 				case 'secondBg':
 				case 'timezone':
 				case 'fontWeightLabel':
+				case 'fontFamilyLabel':
 				case 'cssLabelPosition':
 				case 'timerPosition':
 				case 'badgePositionOutofImage':

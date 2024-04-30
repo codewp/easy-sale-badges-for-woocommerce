@@ -36,6 +36,7 @@ const MenuItem = ( props ) => {
 						textColor={ props.badge.textColor }
 						fontSizeText={ props.badge.fontSizeText }
 						fontWeightLabel={ props.badge.fontWeightLabel }
+						fontFamilyLabel={ props.badge.fontFamilyLabel }
 						lineHeightText={ props.badge.lineHeightText }
 						percentageDiscount={ props.badge.percentageDiscount }
 						labelTranslate={ props.badge.labelTranslate }

@@ -258,6 +258,7 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 												color: `${ badge.textColor }`,
 												fontSize: `${ badge.fontSizeText }px`,
 												fontWeight: `${ badge.fontWeightLabel }`,
+												fontFamily: `${ badge.fontFamilyLabel }`,
 												lineHeight: `${ badge.lineHeightText }px`,
 												opacity: `${ badge.opacity }`,
 												borderTopLeftRadius: `${ badge.topLeftRadius }px`,
@@ -297,7 +298,8 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 								style={ {
 									width: `100%`,
 									display: 'flex',
-									justifyContent: badge.badgePositionOutofImage,
+									justifyContent:
+										badge.badgePositionOutofImage,
 									height: `${ heightContBadge }`,
 									inset: `${ insetProperty }`,
 									filter: `drop-shadow(${ badge.badgeColorShadow } ${ badge.boxShadowWidth }px ${ badge.boxShadowWidth }px ${ badge.boxShadowWidth }px)`,
@@ -310,6 +312,7 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 										color: `${ badge.textColor }`,
 										fontSize: `${ badge.fontSizeText }px`,
 										fontWeight: `${ badge.fontWeightLabel }`,
+										fontFamily: `${ badge.fontFamilyLabel }`,
 										lineHeight: `${ badge.lineHeightText }px`,
 										opacity: `${ badge.opacity }`,
 										borderTopLeftRadius: `${ badge.topLeftRadius }px`,
