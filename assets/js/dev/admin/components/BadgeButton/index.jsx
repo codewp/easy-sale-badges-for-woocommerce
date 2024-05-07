@@ -232,8 +232,6 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 		} else if ( badge.badgeStyles === 'badge18' ) {
 			updateBadge( 'badgeColor', '#aa2bee' );
 			updateBadge( 'borderColor', '#760789' );
-		} else {
-			updateBadge( 'badgeColor', '#a12ca1' );
 		}
 	}, [ badge.badgeStyles ] );
 
