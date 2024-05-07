@@ -164,16 +164,8 @@ export default function BadgePreview( badge ) {
 						: `rotate(315deg)`
 				} ;
 				width: ${ 60 * 1.5 }px;
-				left: ${
-					badge.badgePositionX == 'right'
-						? ''
-						: `-${ 60 / 2.4 }px`
-				};
-				right: ${
-					badge.badgePositionX == 'right'
-						? `-${ 60 / 2.22 }px`
-						: ''
-				};
+				left: ${ badge.badgePositionX == 'right' ? '' : `-${ 60 / 2.4 }px` };
+				right: ${ badge.badgePositionX == 'right' ? `-${ 60 / 2.22 }px` : '' };
 				top: ${ 60 / 7 }px ;
 
 			`;
@@ -317,10 +309,108 @@ export default function BadgePreview( badge ) {
 			opacity: ${ badge.opacity };
 			top: 0px;
 			text-align: center;
-			border-radius: 3px 3px ${ 60 / 2.38 }px ${
-				60 / 2.38
-			}px !important;
+			border-radius: 3px 3px ${ 60 / 2.38 }px ${ 60 / 2.38 }px !important;
 			`;
+			badgeIconOnePr = `
+			transform: translateY(-50%);
+			position: relative;
+			line-height: 16px;
+			top: 50%;
+			z-index: 1;
+			display: block;
+			`;
+			break;
+		case 'badge14':
+			badgeIconPr = `
+			background: ${ badge.badgeColor };
+			height: 60px;
+			width: 60px;
+            position: absolute;
+            z-index: 99;
+            top: 0px;
+            border-radius: 61% 60% 63% 53%/66% 31% 92% 34% !important;
+			border:${ badge.borderWidth }px solid ${ badge.borderColor };
+            text-align: center;`;
+			badgeIconOnePr = `
+			transform: translateY(-50%);
+			position: relative;
+			line-height: 16px;
+			top: 50%;
+			z-index: 1;
+			display: block;
+			`;
+			break;
+		case 'badge15':
+			badgeIconPr = `
+			background: ${ badge.badgeColor };
+			height: 60px;
+			width: 60px;
+            position: absolute;
+            z-index: 99;
+            top: 0px;
+            border-radius: 19% 93% 55% 60%/50% 49% 61% 60% !important;
+			border:${ badge.borderWidth }px solid ${ badge.borderColor };
+            text-align: center;`;
+			badgeIconOnePr = `
+			transform: translateY(-50%);
+			position: relative;
+			line-height: 16px;
+			top: 50%;
+			z-index: 1;
+			display: block;
+			`;
+			break;
+		case 'badge16':
+			badgeIconPr = `
+			background: ${ badge.badgeColor };
+			height: 60px;
+			width: 60px;
+            position: absolute;
+            z-index: 99;
+            top: 0px;
+			border-radius: 70% 30% 30% 70% / 60% 40% 60% 40% !important;
+			border:${ badge.borderWidth }px solid ${ badge.borderColor };
+			text-align: center;`;
+			badgeIconOnePr = `
+			transform: translateY(-50%);
+			position: relative;
+			line-height: 16px;
+			top: 50%;
+			z-index: 1;
+			display: block;
+			`;
+			break;
+		case 'badge17':
+			badgeIconPr = `
+			background: ${ badge.badgeColor };
+			height: 60px;
+			width: 60px;
+            position: absolute;
+            z-index: 99;
+            top: 0px;
+            border-radius: 20% 80% 80% 20% / 50% 50% 50% 50% !important;
+			border:${ badge.borderWidth }px solid ${ badge.borderColor };
+			text-align: center;`;
+			badgeIconOnePr = `
+			transform: translateY(-50%);
+			position: relative;
+			line-height: 16px;
+			top: 50%;
+			z-index: 1;
+			display: block;
+			`;
+			break;
+		case 'badge18':
+			badgeIconPr = `
+			background: ${ badge.badgeColor };
+			height: 60px;
+			width: 60px;
+            position: absolute;
+            z-index: 99;
+            top: 0px;
+            border-radius: 50% 60% 60% 60% / 15% 66% 15% 66% !important;
+			border:${ badge.borderWidth }px solid ${ badge.borderColor };
+			text-align: center;`;
 			badgeIconOnePr = `
 			transform: translateY(-50%);
 			position: relative;

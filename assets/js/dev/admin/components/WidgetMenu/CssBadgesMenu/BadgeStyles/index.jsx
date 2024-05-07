@@ -11,7 +11,7 @@ const BadgeStyles = ( props ) => {
 				<div className="asnp-w-[25rem] asnp-text-lg asnp-font-semibold">
 					{ __( 'Label Styles', 'easy-sale-badges-for-woocommerce' ) }
 				</div>
-				<div className="asnp-relative asnp-w-[52rem] asnp-mb-3 asnp-mt-3 asnp-h-[18rem] asnp-pb-2 asnp-pt-2 asnp-flex asnp-flex-col asnp-border-[1px] asnp-border-gray-300 asnp-rounded-2xl">
+				<div className="asnp-relative asnp-w-[52rem] asnp-mb-3 asnp-mt-3 asnp-h-[25rem] asnp-pb-2 asnp-pt-2 asnp-flex asnp-flex-col asnp-border-[1px] asnp-border-gray-300 asnp-rounded-2xl">
 					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-8 asnp-ml-4">
 						<div
 							className={
@@ -213,6 +213,108 @@ const BadgeStyles = ( props ) => {
 							<img
 								className="asnp-h-full asnp-w-full asnp-border-none"
 								src={ IMAGES_URL + 'badge10.png' }
+							/>
+						</div>
+					</div>
+					<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-8 asnp-ml-4">
+						<div
+							className={
+								( props.badgeStyles === 'badge14'
+									? 'asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
+							}
+							onClick={ () => {
+								props.onChange( 'badgeStyles', 'badge14' );
+								props.onChange( 'badgeAdv', '' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'useTimerBadge', 0 );
+							} }
+						>
+							<img
+								className="asnp-h-full asnp-w-full asnp-border-none"
+								src={ IMAGES_URL + 'badge14.png' }
+							/>
+						</div>
+						<div
+							className={
+								( props.badgeStyles === 'badge15'
+									? 'asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
+							}
+							onClick={ () => {
+								props.onChange( 'badgeStyles', 'badge15' );
+								props.onChange( 'badgeAdv', '' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'useTimerBadge', 0 );
+							} }
+						>
+							<img
+								className="asnp-h-full asnp-w-full asnp-border-none"
+								src={ IMAGES_URL + 'badge15.png' }
+							/>
+						</div>
+						<div
+							className={
+								( props.badgeStyles === 'badge16'
+									? 'asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
+							}
+							onClick={ () => {
+								props.onChange( 'badgeStyles', 'badge16' );
+								props.onChange( 'badgeAdv', '' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'useTimerBadge', 0 );
+							} }
+						>
+							<img
+								className="asnp-h-full asnp-w-full asnp-border-none"
+								src={ IMAGES_URL + 'badge16.png' }
+							/>
+						</div>
+						<div
+							className={
+								( props.badgeStyles === 'badge17'
+									? 'asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
+							}
+							onClick={ () => {
+								props.onChange( 'badgeStyles', 'badge17' );
+								props.onChange( 'badgeAdv', '' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'useTimerBadge', 0 );
+							} }
+						>
+							<img
+								className="asnp-h-full asnp-w-full asnp-border-none"
+								src={ IMAGES_URL + 'badge17.png' }
+							/>
+						</div>
+						<div
+							className={
+								( props.badgeStyles === 'badge18'
+									? 'asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-4 asnp-containerImage hover:asnp-border-indigo-700'
+							}
+							onClick={ () => {
+								props.onChange( 'badgeStyles', 'badge18' );
+								props.onChange( 'badgeAdv', '' );
+								props.onChange( 'imgbadge', 0 );
+								props.onChange( 'imgbadgeAdv', 0 );
+								props.onChange( 'useTimerBadge', 0 );
+							} }
+						>
+							<img
+								className="asnp-h-full asnp-w-full asnp-border-none"
+								src={ IMAGES_URL + 'badge18.png' }
 							/>
 						</div>
 					</div>

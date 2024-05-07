@@ -386,9 +386,7 @@ const Position = ( props ) => {
 											style={ {
 												backgroundColor: `${ props.badgeColorShadow }`,
 											} }
-											className={
-												'asnp-flex asnp-w-7 asnp-h-6 asnp-rounded-full asnp-my-2 '
-											}
+											className="asnp-flex asnp-w-10 asnp-h-6 asnp-rounded-full asnp-my-2"
 										></div>
 									</div>
 								</div>

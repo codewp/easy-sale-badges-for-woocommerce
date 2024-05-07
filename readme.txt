@@ -28,6 +28,7 @@ https://youtu.be/aTHFT3ovCaw
 == ✅ BADGE AND PRODUCT LABEL FOR WOOCOMMERCE FEATURES ==
 
 - **Create Custom labels on Products**
+- **Add 15 CSS Label**
 - **Add Badge to Out Of Image Position**
 - **Implemented multi-language support for the Labels** to enable labels to be displayed in various languages for enhanced accessibility.
 - **CSS label templates** Access pre-designed CSS label templates for quick and easy customization.
@@ -51,7 +52,7 @@ https://youtu.be/aTHFT3ovCaw
 == ✅ BADGE AND PRODUCT LABEL FOR WOOCOMMERCE PRO FEATURES ==
 
 - **Over 200 Image Labels**
-- **Over 10 CSS Labels**
+- **Over 15 CSS Labels**
 - **Over 5 Modern Badges**
 - **8 Timers Template**
 - **Out of Image Position Option For Timers Countdown**

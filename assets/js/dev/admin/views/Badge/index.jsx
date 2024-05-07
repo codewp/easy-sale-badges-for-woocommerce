@@ -67,6 +67,8 @@ const defaultBadge = {
 	boxShadowWidth: '0',
 	cssLabelPosition: 'onImage',
 	badgePositionOutofImage: 'flex-start',
+	borderWidth: '2',
+	borderColor: '#9819fc',
 };
 
 export default function Badge() {

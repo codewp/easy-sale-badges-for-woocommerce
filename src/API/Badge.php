@@ -352,6 +352,8 @@ class Badge extends BaseController {
 				case 'verticalAdvLabelFour':
 				case 'verticalAdvLabelFive':
 				case 'fontFamily':
+				case 'borderColor':
+				case 'borderWidth':
 				case 'badgeTimer':
 				case 'badgeLabelAdv':
 				case 'labelDayTimer':
