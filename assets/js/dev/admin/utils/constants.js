@@ -23,6 +23,7 @@ export const getNow = () => {
 };
 
 export const customColor = [
+	'rgb(161, 44, 161)',
 	'rgb(255, 148, 148)',
 	'rgb(177, 178, 255)',
 	'rgb(250, 23, 49)',
@@ -34,7 +35,6 @@ export const customColor = [
 	'rgb(229, 98, 17)',
 	'rgb(0, 132, 255)',
 	'rgb(32, 82, 149)',
-	'rgb(161, 44, 161)',
 	'rgb(0, 0, 0)',
 	'rgb(255, 135, 135)',
 	'rgb(188, 226, 158)',
