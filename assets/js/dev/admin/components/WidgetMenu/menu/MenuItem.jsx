@@ -57,6 +57,8 @@ const MenuItem = ( props ) => {
 						bottomLeftRadius={ props.badge.bottomLeftRadius }
 						bottomRightRadius={ props.badge.bottomRightRadius }
 						zIndex={ props.badge.zIndex }
+						borderWidth={ props.badge.borderWidth }
+						borderColor={ props.badge.borderColor }
 					/>
 					<Opacity
 						onChange={ props.onChange }

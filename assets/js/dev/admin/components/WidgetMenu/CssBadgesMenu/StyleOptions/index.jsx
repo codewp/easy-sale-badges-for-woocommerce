@@ -9,6 +9,7 @@ const StyleOptions = ( props ) => {
 	const [ disableWidth, setDisabeWidth ] = useState( false );
 	const [ disableR, setDisableR ] = useState( false );
 	const [ disableL, setDisableL ] = useState( false );
+	const [ showBorder, setShowBorder ] = useState( false );
 
 	useEffect( () => {
 		if (
@@ -73,6 +74,20 @@ const StyleOptions = ( props ) => {
 		}
 	}, [ props.badgeStyles, props.badgePositionX ] );
 
+	useEffect( () => {
+		if (
+			props.badgeStyles == 'badge14' ||
+			props.badgeStyles == 'badge15' ||
+			props.badgeStyles == 'badge16' ||
+			props.badgeStyles == 'badge17' ||
+			props.badgeStyles == 'badge18'
+		) {
+			setShowBorder( true );
+		} else {
+			setShowBorder( false );
+		}
+	}, [ props.badgeStyles ] );
+
 	return (
 		<div className="asnp-ew-line">
 			<div className="asnp-w-[25rem]">
@@ -116,10 +131,58 @@ const StyleOptions = ( props ) => {
 						</label>
 					</Tippy>
 				</div>
+				{ showBorder === true && (
+					<div className="asnp-mt-[1rem]">
+						<Tippy
+							trigger="click"
+							interactive={ true }
+							placement={ 'bottom' }
+							content={
+								<div className="asnp-p-4">
+									<ColorPicker
+										value={ props.borderColor }
+										onChange={ ( color ) => {
+											props.onChange(
+												'borderColor',
+												color
+											);
+										} }
+										hideColorTypeBtns={ true }
+										presets={ customColor }
+									/>
+								</div>
+							}
+						>
+							<label className="asnp-inline-flex asnp-items-center asnp-w-full asnp-h-14 asnp-my-2">
+								<div className="asnp-h-15 asnp-w-full asnp-my-4  asnp-bg-gray-200 asnp-cursor-pointer  asnp-relative asnp-inline-flex asnp-items-center asnp-justify-center asnp-p-0.5 asnp-mb-2 asnp-mr-2 asnp-overflow-hidden asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-rounded-lg asnp-group asnp-group asnp-bg-gradient-to-br asnp-from-green-400 asnp-to-blue-600     ">
+									<div className="asnp-w-full asnp-flex asnp-relative asnp-px-5 asnp-py-2 asnp-transition-all asnp-ease-in asnp-duration-75 asnp-bg-white  asnp-rounded-md group-hover:asnp-bg-opacity-0">
+										<span className="asnp-flex asnp-w-[25rem] asnp-my-2">
+											{ __(
+												'Border Color',
+												'easy-sale-badges-for-woocommerce'
+											) }
+										</span>
+										<div
+											style={ {
+												backgroundColor: `${ props.borderColor }`,
+											} }
+											className={
+												'asnp-flex asnp-w-7 asnp-h-6 asnp-rounded-full asnp-my-2 '
+											}
+										></div>
+									</div>
+								</div>
+							</label>
+						</Tippy>
+					</div>
+				) }
 				<div className="asnp-flex asnp-mt-[1rem]">
 					<label>
 						<span className="asnp-field-title">
-							{ __( 'Width (Pixel)', 'easy-sale-badges-for-woocommerce' ) }
+							{ __(
+								'Width (Pixel)',
+								'easy-sale-badges-for-woocommerce'
+							) }
 						</span>
 						<div className="asnp-w-[11rem]">
 							<input
@@ -145,7 +208,10 @@ const StyleOptions = ( props ) => {
 					</label>
 					<label>
 						<span className="asnp-field-title asnp-ml-4">
-							{ __( 'Height (Pixel)', 'easy-sale-badges-for-woocommerce' ) }
+							{ __(
+								'Height (Pixel)',
+								'easy-sale-badges-for-woocommerce'
+							) }
 						</span>
 						<div className="asnp-w-[11rem] asnp-ml-4">
 							<input
@@ -169,14 +235,46 @@ const StyleOptions = ( props ) => {
 							/>
 						</div>
 					</label>
+					{ showBorder === true && (
+						<label>
+							<span className="asnp-field-title asnp-ml-4">
+								{ __(
+									'Border Width',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</span>
+							<div className="asnp-w-[7rem] asnp-ml-4">
+								<input
+									type="number"
+									min="0"
+									max="400"
+									className="asnp-text-field"
+									placeholder="0"
+									value={ props.borderWidth }
+									onChange={ ( e ) =>
+										props.onChange(
+											'borderWidth',
+											e.target.value
+										)
+									}
+								/>
+							</div>
+						</label>
+					) }
 				</div>
 				<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold">
-					{ __( 'Border Radius (Pixel)', 'easy-sale-badges-for-woocommerce' ) }
+					{ __(
+						'Border Radius (Pixel)',
+						'easy-sale-badges-for-woocommerce'
+					) }
 				</div>
 				<div className="asnp-flex asnp-mt-2">
 					<label>
 						<span className="asnp-field-title asnp-ml-4">
-							{ __( 'Top Left', 'easy-sale-badges-for-woocommerce' ) }
+							{ __(
+								'Top Left',
+								'easy-sale-badges-for-woocommerce'
+							) }
 						</span>
 						<div className="asnp-w-[10rem] asnp-ml-4">
 							<input
@@ -201,7 +299,10 @@ const StyleOptions = ( props ) => {
 					</label>
 					<label>
 						<span className="asnp-field-title asnp-ml-4">
-							{ __( 'Top Right', 'easy-sale-badges-for-woocommerce' ) }
+							{ __(
+								'Top Right',
+								'easy-sale-badges-for-woocommerce'
+							) }
 						</span>
 						<div className="asnp-w-[10rem] asnp-ml-4">
 							<input
@@ -226,7 +327,10 @@ const StyleOptions = ( props ) => {
 					</label>
 					<label>
 						<span className="asnp-field-title asnp-ml-4">
-							{ __( 'Bottom Left', 'easy-sale-badges-for-woocommerce' ) }
+							{ __(
+								'Bottom Left',
+								'easy-sale-badges-for-woocommerce'
+							) }
 						</span>
 						<div className="asnp-w-[10rem] asnp-ml-4">
 							<input
@@ -251,7 +355,10 @@ const StyleOptions = ( props ) => {
 					</label>
 					<label>
 						<span className="asnp-field-title asnp-ml-4">
-							{ __( 'Bottom Right', 'easy-sale-badges-for-woocommerce' ) }
+							{ __(
+								'Bottom Right',
+								'easy-sale-badges-for-woocommerce'
+							) }
 						</span>
 						<div className="asnp-w-[10rem] asnp-ml-4">
 							<input
@@ -282,7 +389,10 @@ const StyleOptions = ( props ) => {
 				<div className="asnp-flex asnp-mt-2">
 					<label>
 						<span className="asnp-field-title">
-							{ __( 'z-index', 'easy-sale-badges-for-woocommerce' ) }
+							{ __(
+								'z-index',
+								'easy-sale-badges-for-woocommerce'
+							) }
 						</span>
 						<div className="asnp-w-[25rem]">
 							<input

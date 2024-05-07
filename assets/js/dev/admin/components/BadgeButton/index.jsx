@@ -95,7 +95,12 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 		badge.badgeStyles == 'badge5' ||
 		badge.badgeStyles == 'badge6' ||
 		badge.badgeStyles == 'badge7' ||
-		badge.badgeStyles == 'badge8'
+		badge.badgeStyles == 'badge8' ||
+		badge.badgeStyles == 'badge14' ||
+		badge.badgeStyles == 'badge15' ||
+		badge.badgeStyles == 'badge16' ||
+		badge.badgeStyles == 'badge17' ||
+		badge.badgeStyles == 'badge18'
 	) {
 		heightContBadge = `${ badge.widthBadge }px`;
 	} else if (
@@ -211,6 +216,25 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 			setVert( 0 );
 			setRotationz( '0' );
 		}
+
+		if ( badge.badgeStyles === 'badge14' ) {
+			updateBadge( 'badgeColor', '#e56211' );
+			updateBadge( 'borderColor', '#e88b01' );
+		} else if ( badge.badgeStyles === 'badge15' ) {
+			updateBadge( 'badgeColor', '#fa1731' );
+			updateBadge( 'borderColor', '#ce3749' );
+		} else if ( badge.badgeStyles === 'badge16' ) {
+			updateBadge( 'badgeColor', '#21c599' );
+			updateBadge( 'borderColor', '#17bc33' );
+		} else if ( badge.badgeStyles === 'badge17' ) {
+			updateBadge( 'badgeColor', '#20cae1' );
+			updateBadge( 'borderColor', '#73a59a' );
+		} else if ( badge.badgeStyles === 'badge18' ) {
+			updateBadge( 'badgeColor', '#aa2bee' );
+			updateBadge( 'borderColor', '#760789' );
+		} else {
+			updateBadge( 'badgeColor', '#a12ca1' );
+		}
 	}, [ badge.badgeStyles ] );
 
 	const updatedBadgeLabel = badge.badgeLabel
@@ -297,7 +321,8 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 								style={ {
 									width: `100%`,
 									display: 'flex',
-									justifyContent: badge.badgePositionOutofImage,
+									justifyContent:
+										badge.badgePositionOutofImage,
 									height: `${ heightContBadge }`,
 									inset: `${ insetProperty }`,
 									filter: `drop-shadow(${ badge.badgeColorShadow } ${ badge.boxShadowWidth }px ${ badge.boxShadowWidth }px ${ badge.boxShadowWidth }px)`,

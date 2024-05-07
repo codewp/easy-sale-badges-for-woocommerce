@@ -93,6 +93,15 @@ const WooCommerce = () => {
 												'easy-sale-badges-for-woocommerce'
 											) }
 										</option>
+										<option
+											disabled
+											className="asnp-text-red-600"
+										>
+											{ __(
+												'Recently Added (Pro)',
+												'easy-sale-badges-for-woocommerce'
+											) }
+										</option>
 									</select>
 									{ showItemSelect(
 										badge.items[ groupIndex ][ index ].type
