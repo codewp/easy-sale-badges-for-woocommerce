@@ -336,6 +336,9 @@ class Badge extends BaseController {
 				case 'animationSelect':
 				case 'animateDuration':
 				case 'animationCount':
+				case 'animationSelectTimer':
+				case 'animateDurationTimer':
+				case 'animationCountTimer':
 				case 'selectedDateFrom':
 				case 'selectedDateTo':
 				case 'fontWeightLabelAdv':
