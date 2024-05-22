@@ -3,6 +3,8 @@
 namespace AsanaPlugins\WooCommerce\SaleBadges;
 
 use AsanaPlugins\WooCommerce\SaleBadges\Models\BadgeModel;
+use AsanaPlugins\WooCommerce\SaleBadges\Validator\ProductValidator;
+use AsanaPlugins\WooCommerce\SaleBadges\Validator\DateTimeValidator;
 use function AsanaPlugins\WooCommerce\SaleBadges\Helpers\Badges\output_badge;
 
 function get_plugin() {
@@ -158,6 +160,18 @@ function display_sale_badge( $id, $product, $hide = false, $return = false, $out
 	}
 
 	if ( ! isset( $badge->status ) || 1 != $badge->status ) {
+		return '';
+	}
+
+	if ( ! ProductValidator::valid_product( $badge, $product ) ) {
+		return '';
+	}
+
+	// Validate schedule if exists.
+	if (
+		! empty( $badge->schedule ) &&
+		! DateTimeValidator::is_valid_date_times( $badge->schedule )
+	) {
 		return '';
 	}
 
