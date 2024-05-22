@@ -23,7 +23,7 @@ class BadgeShortCode {
 
 		$hide = string_to_bool( $atts['hide'] );
 
-		return display_sale_badges( $product, $hide, true );
+		return display_sale_badges( $product, $hide, true, null );
 	}
 
 }

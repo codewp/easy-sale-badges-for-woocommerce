@@ -50,7 +50,7 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 		return '';
 	}
 
-	if ( ! empty( $badge->cssLabelPosition ) ) {
+	if ( null !== $out_of_image && ! empty( $badge->cssLabelPosition ) ) {
 		if ( $out_of_image && 'onImage' === $badge->cssLabelPosition ) {
 			return '';
 		}
@@ -58,9 +58,9 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 		if ( ! $out_of_image && 'outOfImage' === $badge->cssLabelPosition ) {
 			return '';
 		}
-	}elseif ( $out_of_image ) {
-			return '';
-	 	}
+	} elseif ( $out_of_image ) {
+		return '';
+	}
 
 	// If threshold is set, check the threshold time is reached.
 	if ( isset( $badge->selectedDateFrom ) && '' != $badge->selectedDateFrom ) {
@@ -124,7 +124,7 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 			$badge->badgeStyles == 'badge15' ||
 			$badge->badgeStyles == 'badge16' ||
 			$badge->badgeStyles == 'badge17' ||
-			$badge->badgeStyles == 'badge18' 
+			$badge->badgeStyles == 'badge18'
 		)
 	) {
 		$height_cont_badge = $badge->widthBadge . 'px';
@@ -972,7 +972,7 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 			if ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $width_cont_badge . ';';
 			}
-			if ( isset( $badge->heightBadge ) &&isset( $badge->cssLabelPosition ) && ('onImage' == $badge->cssLabelPosition) ) {
+			if ( isset( $badge->heightBadge ) && isset( $badge->cssLabelPosition ) && 'onImage' == $badge->cssLabelPosition ) {
 				$dynamic_styles .= ' height: ' . $height_cont_badge . ';';
 			}
 			if ( isset( $badge->badgePositionTop ) ) {
