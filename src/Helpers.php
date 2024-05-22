@@ -3,6 +3,7 @@
 namespace AsanaPlugins\WooCommerce\SaleBadges;
 
 use AsanaPlugins\WooCommerce\SaleBadges\Models\BadgeModel;
+use function AsanaPlugins\WooCommerce\SaleBadges\Helpers\Badges\output_badge;
 
 function get_plugin() {
 	return Plugin::instance();
@@ -139,6 +140,28 @@ function display_sale_badges( $product, $hide = false, $return = false, $out_of_
 	}
 
 	return $badges->display_badges( $product, $hide, $return, $out_of_image );
+}
+
+function display_sale_badge( $id, $product, $hide = false, $return = false, $out_of_image = false ) {
+	if ( ! $id || 0 >= $id ) {
+		return '';
+	}
+
+	if ( ! $product ) {
+		return '';
+	}
+
+	$model = get_plugin()->container()->get( BadgeModel::class );
+	$badge = $model->get_item( $id );
+	if ( ! $badge ) {
+		return '';
+	}
+
+	if ( ! isset( $badge->status ) || 1 != $badge->status ) {
+		return '';
+	}
+
+	return output_badge( $badge, $hide, $return, $out_of_image );
 }
 
 function has_active_sale_badges() {
