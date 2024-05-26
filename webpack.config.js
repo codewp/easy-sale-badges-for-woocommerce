@@ -24,11 +24,6 @@ const externals = {
 
 const aliases = {
 	'@easy-sale-badges/api': path.resolve( __dirname, 'assets/js/dev/api' ),
-	'@easy-sale-badges/base': path.resolve( __dirname, 'assets/js/dev/base' ),
-	'@easy-sale-badges/base-components': path.resolve(
-		__dirname,
-		'assets/js/dev/base/components'
-	),
 };
 
 let adminConfig = {

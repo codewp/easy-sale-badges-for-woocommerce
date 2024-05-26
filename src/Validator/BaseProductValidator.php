@@ -5,7 +5,7 @@ defined( 'ABSPATH' ) || exit;
 
 abstract class BaseProductValidator {
 
-	public static function valid_product( $badge, $product, $page = 0 ) {
+	public static function valid_product( $badge, $product ) {
 		if ( ! $badge || empty( $badge->items ) ) {
 			return false;
 		}
@@ -17,7 +17,7 @@ abstract class BaseProductValidator {
 
 			$valid = true;
 			foreach ( $group as $item ) {
-				if ( ! static::is_valid( $item, $product, $page ) ) {
+				if ( ! static::is_valid( $item, $product ) ) {
 					$valid = false;
 					break;
 				}
@@ -30,8 +30,8 @@ abstract class BaseProductValidator {
 		return false;
 	}
 
-	public static function is_valid( $item, $product, $page = 0 ) {
-		if ( empty( $item ) || ( ! $product && ! $page ) ) {
+	public static function is_valid( $item, $product ) {
+		if ( empty( $item ) || ! $product ) {
 			return false;
 		}
 
@@ -41,19 +41,14 @@ abstract class BaseProductValidator {
 
 		$is_valid = false;
 		if ( is_callable( [ static::class, $item['type'] ] ) ) {
-			if ( 'pages' === $item['type'] || 'all_pages' === $item['type'] ) {
-				$is_valid = static::{$item['type']}( $item, $page );
-			} else {
-				$is_valid = static::{$item['type']}( $item, $product );
-			}
+			$is_valid = static::{$item['type']}( $item, $product );
 		}
 
 		return apply_filters(
 			'asnp_wesb_product_validator_is_valid_' . $item['type'],
 			$is_valid,
 			$item,
-			$product,
-			$page
+			$product
 		);
 	}
 
@@ -208,7 +203,7 @@ abstract class BaseProductValidator {
 			return false;
 		}
 
-		$page = is_numeric( $page ) ? $page : $page->ID;
+		$page = ! empty( $page ) ? absint( $page ) : 0;
 		if ( 0 >= $page ) {
 			return false;
 		}
