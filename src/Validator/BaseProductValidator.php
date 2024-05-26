@@ -5,7 +5,7 @@ defined( 'ABSPATH' ) || exit;
 
 abstract class BaseProductValidator {
 
-	public static function valid_product( $badge, $product ) {
+	public static function valid_product( $badge, $product, $page = 0 ) {
 		if ( ! $badge || empty( $badge->items ) ) {
 			return false;
 		}
@@ -17,7 +17,7 @@ abstract class BaseProductValidator {
 
 			$valid = true;
 			foreach ( $group as $item ) {
-				if ( ! static::is_valid( $item, $product ) ) {
+				if ( ! static::is_valid( $item, $product, $page ) ) {
 					$valid = false;
 					break;
 				}
@@ -30,8 +30,8 @@ abstract class BaseProductValidator {
 		return false;
 	}
 
-	public static function is_valid( $item, $product ) {
-		if ( empty( $item ) || ! $product ) {
+	public static function is_valid( $item, $product, $page = 0 ) {
+		if ( empty( $item ) || ( ! $product && ! $page ) ) {
 			return false;
 		}
 
@@ -41,14 +41,19 @@ abstract class BaseProductValidator {
 
 		$is_valid = false;
 		if ( is_callable( [ static::class, $item['type'] ] ) ) {
-			$is_valid = static::{$item['type']}( $item, $product );
+			if ( 'pages' === $item['type'] || 'all_pages' === $item['type'] ) {
+				$is_valid = static::{$item['type']}( $item, $page );
+			} else {
+				$is_valid = static::{$item['type']}( $item, $product );
+			}
 		}
 
 		return apply_filters(
 			'asnp_wesb_product_validator_is_valid_' . $item['type'],
 			$is_valid,
 			$item,
-			$product
+			$product,
+			$page
 		);
 	}
 
@@ -184,6 +189,40 @@ abstract class BaseProductValidator {
 		}
 
 		return $product->is_on_sale();
+	}
+
+	public static function all_pages( $item, $page ) {
+		if ( empty( $item ) || ! $page ) {
+			return false;
+		}
+
+		return true;
+	}
+
+	public static function pages( $item, $page ) {
+		if ( empty( $item ) || ! $page ) {
+			return false;
+		}
+
+		if ( empty( $item['items'] ) ) {
+			return false;
+		}
+
+		$page = is_numeric( $page ) ? $page : $page->ID;
+		if ( 0 >= $page ) {
+			return false;
+		}
+
+		$items = static::get_items( $item['items'] );
+		if ( empty( $items ) ) {
+			return false;
+		}
+
+		if ( isset( $item->selectType ) && 'excluded' === $item->selectType ) {
+			return ! in_array( $page, $items );
+		}
+
+		return in_array( $page, $items );
 	}
 
 	protected static function get_items( $items ) {
