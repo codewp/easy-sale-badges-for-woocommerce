@@ -420,6 +420,31 @@ export default function BadgePreview( badge ) {
 			display: block;
 			`;
 			break;
+		case 'badge19':
+			badgeIconPr = `
+			border-bottom: solid ${ badge.borderWidth }px ${ badge.badgeColor };
+			border-radius: 0 !important;
+			top: 0px;
+            height: 30px;
+			width: 60px;
+			position: absolute;
+			opacity: ${ badge.opacity };
+			text-align: center;
+            text-shadow: none;
+			`;
+			break;
+		case 'badge20':
+			badgeIconPr = `
+			border: solid ${ badge.borderWidth }px ${ badge.badgeColor };
+			top: 0px;
+            height: 30px;
+			width: 60px;
+			position: absolute;
+			opacity: ${ badge.opacity };
+			text-align: center;
+            text-shadow: none;
+			`;
+			break;
 	}
 
 	return {

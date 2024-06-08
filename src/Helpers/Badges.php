@@ -1549,7 +1549,152 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= '}';
 		break;
+		case 'badge19':
+			$dynamic_styles .= '.asnp-esb-productBadge-'. absint( $badge->id ) .' {';
+			if ( isset( $badge->widthBadge ) ) {
+				$dynamic_styles .= ' width: ' . $width_cont_badge . ';';
+			}
+			if ( isset( $badge->heightBadge ) ) {
+				$dynamic_styles .= ' height: ' . $height_cont_badge . ';';
+			}
+			if ( isset( $badge->badgePositionTop ) ) {
+				$dynamic_styles .= ' inset: ' . $inset_property . ';';
+			}
+			$dynamic_styles .= '}';
 
+			$dynamic_styles .= '.asnp-esb-badge-'. absint( $badge->id ) .' {';
+			$dynamic_styles .= ' text-align: center;';
+			$dynamic_styles .= ' text-shadow: none;';
+			$dynamic_styles .= ' border-radius: 0;';
+
+			if ( isset( $badge->badgeColor ) && isset( $badge->borderWidth ) ) {
+				$dynamic_styles .= ' border-bottom: ' . $badge->borderWidth . 'px solid '. $badge->badgeColor .';';
+			}
+			if ( isset( $badge->heightBadge ) ) {
+				$dynamic_styles .= ' height: ' . $badge->heightBadge . 'px;';
+			}
+			if ( isset( $badge->widthBadge ) ) {
+				$dynamic_styles .= ' width: ' . $badge->widthBadge . 'px;';
+			}
+			if ( isset( $badge->badgePositionX ) ) {
+				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '0px' ) . ';';
+			}
+			if ( isset( $badge->badgePositionX ) && 'right' === $badge->badgePositionX ) {
+				$dynamic_styles .= ' right: 0px;';
+			}
+			if ( isset( $badge->textColor ) ) {
+				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
+			}
+			if ( isset( $badge->fontSizeText ) ) {
+				$dynamic_styles .= ' font-size: ' . $badge->fontSizeText . 'px;';
+			}
+			if ( isset( $badge->fontWeightLabel ) ) {
+				$dynamic_styles .= ' font-weight: ' . $badge->fontWeightLabel . ';';
+			}
+			if ( isset( $badge->lineHeightText ) ) {
+				$dynamic_styles .= ' line-height: ' . $badge->lineHeightText . 'px;';
+			}
+			if ( isset( $badge->opacity ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			}			
+			if ( isset( $badge->zIndex ) ) {
+				$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
+			}
+
+			$transform = '';
+			if ( isset( $badge->rotationX ) ) {
+				$transform .= ' rotateX(' . esc_html( $badge->rotationX ) . 'deg)';
+			}
+			if ( isset( $badge->rotationY ) ) {
+				$transform .= ' rotateY(' . esc_html( $badge->rotationY ) . 'deg) ';
+			}
+			if ( isset( $badge->rotationZ ) ) {
+				$transform .= ' rotateZ(' . esc_html( $badge->rotationZ ) . 'deg);';
+			}
+			if ( ! empty( $transform ) ) {
+				$dynamic_styles .= ' transform:' . $transform;
+			}
+			$dynamic_styles .= '}';
+			break;
+		case 'badge20':
+			$dynamic_styles .= '.asnp-esb-productBadge-'. absint( $badge->id ) .' {';
+			if ( isset( $badge->widthBadge ) ) {
+				$dynamic_styles .= ' width: ' . $width_cont_badge . ';';
+			}
+			if ( isset( $badge->heightBadge ) ) {
+				$dynamic_styles .= ' height: ' . $height_cont_badge . ';';
+			}
+			if ( isset( $badge->badgePositionTop ) ) {
+				$dynamic_styles .= ' inset: ' . $inset_property . ';';
+			}
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.asnp-esb-badge-'. absint( $badge->id ) .' {';
+			$dynamic_styles .= ' text-align: center;';
+			$dynamic_styles .= ' text-shadow: none;';
+
+			if ( isset( $badge->badgeColor ) && isset( $badge->borderWidth ) ) {
+				$dynamic_styles .= ' border: ' . $badge->borderWidth . 'px solid '. $badge->badgeColor .';';
+			}
+			if ( isset( $badge->heightBadge ) ) {
+				$dynamic_styles .= ' height: ' . $badge->heightBadge . 'px;';
+			}
+			if ( isset( $badge->widthBadge ) ) {
+				$dynamic_styles .= ' width: ' . $badge->widthBadge . 'px;';
+			}
+			if ( isset( $badge->badgePositionX ) ) {
+				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? 'auto' : '0px' ) . ';';
+			}
+			if ( isset( $badge->badgePositionX ) && 'right' === $badge->badgePositionX ) {
+				$dynamic_styles .= ' right: 0px;';
+			}
+			if ( isset( $badge->textColor ) ) {
+				$dynamic_styles .= ' color: ' . $badge->textColor . ';';
+			}
+			if ( isset( $badge->fontSizeText ) ) {
+				$dynamic_styles .= ' font-size: ' . $badge->fontSizeText . 'px;';
+			}
+			if ( isset( $badge->fontWeightLabel ) ) {
+				$dynamic_styles .= ' font-weight: ' . $badge->fontWeightLabel . ';';
+			}
+			if ( isset( $badge->lineHeightText ) ) {
+				$dynamic_styles .= ' line-height: ' . $badge->lineHeightText . 'px;';
+			}
+			if ( isset( $badge->opacity ) ) {
+				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
+			}	
+			if ( isset( $badge->topLeftRadius ) ) {
+				$dynamic_styles .= ' border-top-left-radius: ' . $badge->topLeftRadius . 'px;';
+			}
+			if ( isset( $badge->topRightRadius ) ) {
+				$dynamic_styles .= ' border-top-right-radius: ' . $badge->topRightRadius . 'px;';
+			}
+			if ( isset( $badge->bottomLeftRadius ) ) {
+				$dynamic_styles .= ' border-bottom-left-radius: ' . $badge->bottomLeftRadius . 'px;';
+			}
+			if ( isset( $badge->bottomRightRadius ) ) {
+				$dynamic_styles .= ' border-bottom-right-radius: ' . $badge->bottomRightRadius . 'px;';
+			}		
+			if ( isset( $badge->zIndex ) ) {
+				$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
+			}
+
+			$transform = '';
+			if ( isset( $badge->rotationX ) ) {
+				$transform .= ' rotateX(' . esc_html( $badge->rotationX ) . 'deg)';
+			}
+			if ( isset( $badge->rotationY ) ) {
+				$transform .= ' rotateY(' . esc_html( $badge->rotationY ) . 'deg) ';
+			}
+			if ( isset( $badge->rotationZ ) ) {
+				$transform .= ' rotateZ(' . esc_html( $badge->rotationZ ) . 'deg);';
+			}
+			if ( ! empty( $transform ) ) {
+				$dynamic_styles .= ' transform:' . $transform;
+			}
+			$dynamic_styles .= '}';
+			break;
+					
 	}
 
 	$extra_data     = [

@@ -53,13 +53,20 @@ const StyleOptions = ( props ) => {
 			props.badgeStyles == 'badge10' ||
 			props.badgeStyles == 'badge11' ||
 			props.badgeStyles == 'badge12' ||
-			props.badgeStyles == 'badge13'
+			props.badgeStyles == 'badge13' ||
+			props.badgeStyles == 'badge14' ||
+			props.badgeStyles == 'badge15' ||
+			props.badgeStyles == 'badge16' ||
+			props.badgeStyles == 'badge17' ||
+			props.badgeStyles == 'badge18' ||
+			props.badgeStyles == 'badge19'
 		) {
 			setDisableR( true );
 			setDisableL( true );
 		} else if (
 			props.badgeStyles == 'badge1' ||
-			props.badgeStyles == 'badge7'
+			props.badgeStyles == 'badge7' ||
+			props.badgeStyles == 'badge20'
 		) {
 			setDisableR( false );
 			setDisableL( false );
@@ -235,7 +242,9 @@ const StyleOptions = ( props ) => {
 							/>
 						</div>
 					</label>
-					{ showBorder === true && (
+					{ ( props.badgeStyles === 'badge19' ||
+						props.badgeStyles === 'badge20' ||
+						showBorder === true ) && (
 						<label>
 							<span className="asnp-field-title asnp-ml-4">
 								{ __(

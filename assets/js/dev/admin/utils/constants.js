@@ -625,6 +625,33 @@ export default function BadgeCssandAdv( badge ) {
 			display: block;
 			`;
 			break;
+		case 'badge19':
+			badgeIcon = `
+			border-bottom: solid ${ badge.borderWidth }px ${ badge.badgeColor };
+			border-radius: 0 !important;
+			top: 0px;
+			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
+			right: ${ badge.badgePositionX == 'right' ? '0px' : '' };
+            height: ${ badge.heightBadge }px;
+			width: ${ badge.widthBadge }px;
+			opacity: ${ badge.opacity };
+			text-align: center;
+            text-shadow: none;
+			`;
+			break;
+		case 'badge20':
+			badgeIcon = `
+			border: solid ${ badge.borderWidth }px ${ badge.badgeColor };
+			top: 0px;
+			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
+			right: ${ badge.badgePositionX == 'right' ? '0px' : '' };
+            height: ${ badge.heightBadge }px;
+			width: ${ badge.widthBadge }px;
+			opacity: ${ badge.opacity };
+			text-align: center;
+            text-shadow: none;
+			`;
+			break;
 		default:
 			badgeIcon = `padding: 0 15px;
 			top: 0px;
