@@ -32,7 +32,7 @@ const Timer = () => {
 			) }
 			<div className="asnp-opacity-50">
 				<div className="asnp-w-[25rem] asnp-mt-2 asnp-text-lg asnp-font-semibold">
-					{ __( 'Timer', 'easy-sale-badges-for-woocommerce' ) }
+					{ __( 'Countdown Timer', 'easy-sale-badges-for-woocommerce' ) }
 				</div>
 				<div className="asnp-space-y-1 asnp-mt-4 ">
 					<label className="asnp-inline-flex asnp-space-x-2 asnp-items-center">

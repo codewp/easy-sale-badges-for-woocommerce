@@ -189,7 +189,7 @@ The plugin is rich in features, while it is lightweight and fast.
 = 2.5.0 =
 * Added a new condition for featured products.
 * Added two new CSS labels.
-* Added animation effect to Timer countdown.
+* Added animation effect to Countdown Timer.
 * Compatibility with WooCommerce 8.9.2
 
 = 2.4.0 =
