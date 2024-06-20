@@ -79,7 +79,7 @@ abstract class BaseProductValidator {
 			return false;
 		}
 
-		if ( isset( $item->selectType ) && 'excluded' === $item->selectType ) {
+ 		if ( isset( $item['selectType'] ) && 'excluded' === $item['selectType'] ) {
 			return ! in_array( $product, $items );
 		}
 
@@ -110,7 +110,7 @@ abstract class BaseProductValidator {
 			return false;
 		}
 
-		if ( isset( $item->selectType ) && 'excluded' === $item->selectType ) {
+		if ( isset( $item['selectType'] ) && 'excluded' === $item['selectType'] ) {
 			return empty( array_intersect( $product_categories, $categories ) );
 		}
 
@@ -141,7 +141,7 @@ abstract class BaseProductValidator {
 			return false;
 		}
 
-		if ( isset( $item->selectType ) && 'excluded' === $item->selectType ) {
+		if ( isset( $item['selectType'] ) && 'excluded' === $item['selectType'] ) {
 			return empty( array_intersect( $product_tags, $tags ) );
 		}
 
