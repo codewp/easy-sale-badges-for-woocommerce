@@ -186,6 +186,40 @@ abstract class BaseProductValidator {
 		return $product->is_on_sale();
 	}
 
+	public static function all_pages( $item, $page ) {
+		if ( empty( $item ) || ! $page ) {
+			return false;
+		}
+
+		return true;
+	}
+
+	public static function pages( $item, $page ) {
+		if ( empty( $item ) || ! $page ) {
+			return false;
+		}
+
+		if ( empty( $item['items'] ) ) {
+			return false;
+		}
+
+		$page = ! empty( $page ) ? absint( $page ) : 0;
+		if ( 0 >= $page ) {
+			return false;
+		}
+
+		$items = static::get_items( $item['items'] );
+		if ( empty( $items ) ) {
+			return false;
+		}
+
+		if ( isset( $item->selectType ) && 'excluded' === $item->selectType ) {
+			return ! in_array( $page, $items );
+		}
+
+		return in_array( $page, $items );
+	}
+
 	protected static function get_items( $items ) {
 		if ( empty( $items ) ) {
 			return [];

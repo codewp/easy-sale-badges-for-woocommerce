@@ -120,7 +120,7 @@ const MenuItem = ( props ) => {
 							props.badge.badgePositionOutofImage
 						}
 					/>
-					<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold asnp-text-red-600">
+					<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold">
 						{ __(
 							'Animation Effects (Pro Version)',
 							'easy-sale-badges-for-woocommerce'

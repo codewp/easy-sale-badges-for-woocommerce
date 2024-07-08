@@ -11,6 +11,7 @@ import Snackbar from './../../components/Snackbar';
 import { BadgesContextProvider } from '../../contexts/Badges';
 import { AppContext } from '../../contexts/App';
 import { defaultSettings } from '../../utils/constants';
+import Banner from '../../components/Banner';
 import * as SettingsApi from '@easy-sale-badges/api/settings';
 
 export default function App() {
@@ -43,7 +44,10 @@ export default function App() {
 						href="https://wordpress.org/support/plugin/easy-sale-badges-for-woocommerce/reviews/"
 					>
 						<button className="asnp-btn asnp-btn-primary asnp-ml-2 asnp-w-[8rem]">
-							{ __( '5-Star Review', 'easy-sale-badges-for-woocommerce' ) }
+							{ __(
+								'5-Star Review',
+								'easy-sale-badges-for-woocommerce'
+							) }
 						</button>
 					</a>
 					<a
@@ -51,7 +55,10 @@ export default function App() {
 						href="https://wordpress.org/support/plugin/easy-sale-badges-for-woocommerce/"
 					>
 						<button className="asnp-btn asnp-btn-primary asnp-ml-2 asnp-w-[8rem]">
-							{ __( 'Need help?', 'easy-sale-badges-for-woocommerce' ) }
+							{ __(
+								'Need help?',
+								'easy-sale-badges-for-woocommerce'
+							) }
 						</button>
 					</a>
 				</div>
@@ -69,6 +76,21 @@ export default function App() {
 						{ __( 'Badges', 'easy-sale-badges-for-woocommerce' ) }
 					</NavLink>
 					<NavLink
+						to="/banners"
+						className={ ( { isActive } ) =>
+							'asnp-nav-tab-item' +
+							( isActive ||
+							-1 !== location.pathname.search( 'banner/' )
+								? ' asnp-nav-tab-active'
+								: '' )
+						}
+					>
+						{ __(
+							'Notification Bar',
+							'easy-sale-badges-for-woocommerce'
+						) }
+					</NavLink>
+					<NavLink
 						to="/settings"
 						className={ ( { isActive } ) =>
 							'asnp-nav-tab-item' +
@@ -82,7 +104,10 @@ export default function App() {
 						className="asnp-nav-tab-item asnp-ew-goPro"
 						href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
 					>
-						{ __( 'Go PRO UP to 75% OFF', 'easy-sale-badges-for-woocommerce' ) }
+						{ __(
+							'Go PRO UP to 75% OFF',
+							'easy-sale-badges-for-woocommerce'
+						) }
 					</a>
 					<a
 						target="_blank"
@@ -122,6 +147,10 @@ export default function App() {
 									<Route
 										path="badge/:id"
 										element={ <Badge /> }
+									/>
+									<Route
+										path="banners"
+										element={ <Banner /> }
 									/>
 									<Route
 										path="settings"
