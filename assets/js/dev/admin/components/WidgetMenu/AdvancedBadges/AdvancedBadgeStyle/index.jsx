@@ -11,7 +11,7 @@ const AdvancedBadgeStyle = () => {
 				<div className="asnp-text-lg asnp-font-semibold">
 					{ __(
 						'Modern Badge Styles',
-						'easy-sale-badges-for-woocommerce-pro'
+						'easy-sale-badges-for-woocommerce'
 					) }
 				</div>
 				<div className="asnp-relative asnp-w-[47rem] asnp-mb-3 asnp-mt-3 asnp-h-[20rem] asnp-flex asnp-flex-col  asnp-border-gray-300 asnp-border-[1px] asnp-rounded-2xl asnp-pr-1 asnp-overflow-auto scrollbar:!w-1.5 scrollbar:!h-1.5 scrollbar:bg-transparent scrollbar-track:!bg-slate-100 scrollbar-thumb:!bg-slate-300">

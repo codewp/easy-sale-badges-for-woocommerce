@@ -1,0 +1,52 @@
+.asnp-esb-wrapper {
+	height: 100%;
+	width: 100%;
+}
+.asnp-esb-wrapper a {
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: 'Source Sans Pro', 'HelveticaNeue-Light',
+		'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial,
+		'Lucida Grande', sans-serif;
+	line-height: 1.618;
+	text-rendering: optimizeLegibility;
+	font-weight: 400;
+}
+.asnp-ew-textAreaBlock4 {
+	width: 100% !important;
+	padding-top: 0.5rem !important;
+	padding-bottom: 0.5rem !important;
+	padding-left: 1rem !important;
+	padding-right: 1rem !important;
+	height: 150px;
+	border: 2px solid #cbd5e0 !important;
+	color: #4a5568 !important;
+	font-size: 1rem !important;
+	outline: none !important;
+	box-shadow: none !important;
+	transition: border-color 0.2s ease-in-out !important;
+	cursor: text !important;
+}
+
+.asnp-ew-textAreaBlock4:hover {
+	border-color: #4f46e5 !important;
+}
+.asnp-esb-containerBannerTemplate {
+	width: 50rem;
+	height: 7rem;
+	display: flex;
+	border-radius: 1rem;
+	justify-content: center;
+	border-width: 1px;
+	cursor: pointer;
+	&:hover {
+		box-shadow: 0 0 10px rgba( 24, 23, 24, 0.2 );
+	}
+}
+.asnp-esb-containerBannerTemplateLabel {
+	width: 50rem;
+	display: flex;
+	justify-content: center;
+	font-weight: 600;
+	cursor: pointer;
+}
