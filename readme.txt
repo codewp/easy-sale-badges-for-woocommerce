@@ -5,15 +5,15 @@ Tags: woocommerce badge, product label, woocommerce, badge, sale badge, notifica
 Requires at least: 5.0
 Tested up to: 6.5
 Requires PHP: 5.6
-Stable tag: 2.6.0
+Stable tag: 3.0.0
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WooCommerce Badge and Product Label, Sale Badge, Sold Out Badge, countdown timers(PRO), Notification Bar (PRO), Onsale, out-of-stock badge.
+WooCommerce Badge and Product Label, Sale Badge, Sold Out Badge, Countdown Timer (PRO), Notification Bar (PRO), Onsale, out-of-stock badge.
 
 == Description ==
 
-WooCommerce Badge and Product Label elevate your store's appeal with customized badges and countdown timers (PRO Version). Enhance your WooCommerce store with sale badges, product labels, and countdown timers to drive sales. This all-in-one plugin empowers you to create eye-catching labels and scheduled badges for products, categories, and tags. Highlighting discount values, product quantities, ratings, shipping classes, stock status, and sale status, these labels provide valuable information to your customers. Plus, leverage the power of countdown timers to create urgency and drive conversions. With an intuitive interface, easily customize labels and replace default on-sale badges. Take your WooCommerce store to new heights with visually appealing badges, labels, and countdown timers tailored to your unique offerings.
+WooCommerce Badge and Product Label elevate your store's appeal with customized badges and countdown timers (PRO Version) and notification bar (PRO Version). Enhance your WooCommerce store with sale badges, product labels, and countdown timers to drive sales. This all-in-one plugin empowers you to create eye-catching labels and scheduled badges for products, categories, and tags. Highlighting discount values, product quantities, ratings, shipping classes, stock status, and sale status, these labels provide valuable information to your customers. Plus, leverage the power of countdown timers to create urgency and drive conversions. With an intuitive interface, easily customize labels and replace default on-sale badges. Take your WooCommerce store to new heights with visually appealing badges, labels, and countdown timers tailored to your unique offerings.
 
 [FRONT-END DEMO](https://pricing-and-discounts.asanaplugins.com/demo/shop/) | [BACK-END DEMO](https://pricing-and-discounts.asanaplugins.com/?asnp_demo_plugin=easy-sale-badges-for-woocommerce) | [Ask Questions](https://wordpress.org/support/plugin/easy-sale-badges-for-woocommerce/) | **[PRO WITH 50% DISCOUNT FOR $30](https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/)** | [Github](https://github.com/codewp/easy-sale-badges-for-woocommerce)
 
@@ -108,7 +108,7 @@ In today's competitive market, businesses need to find effective ways to boost s
 
 In WooCommerce, numerous customization options are available for badges and product labels. Store owners can customize the appearance and functionality of their stores to suit their specific needs. These options typically include changing the color, size, font, and position of badges and labels, providing flexibility in aligning them with the store's branding and design aesthetics. Additionally, store owners can often customize the text displayed on badges and labels, including promotional messages, product statuses, or other relevant information. With these customization options, users can create attractive badges and labels that communicate essential product information and enhance the customer shopping experience.
 
-==  CUSTOMIZABLE NOTIFICATION BAR FOR WOOCOMMERCE ==
+==  CUSTOMIZABLE NOTIFICATION BAR FOR WOOCOMMERCE (PRO VERSION) ==
 
 Enhance your WooCommerce store with the Customizable Notification Bar, a powerful tool designed to boost user engagement and drive sales. This versatile notification bar allows you to create personalized messages tailored to your customers, promoting special offers, new arrivals, and important updates in real-time. Featuring a Countdown Timer, you can create a sense of urgency, encouraging quicker purchases and increasing conversions. With a variety of design options and seamless integration, the Customizable Notification Bar ensures your notifications stand out without disrupting the shopping experience. Easy to set up and fully responsive, this tool is essential for capturing your audience's attention effectively and fostering a better connection with your customers.
 
@@ -178,9 +178,9 @@ The plugin is rich in features, while it is lightweight and fast.
 
 == Screenshots ==
 
-1. Notification Bar.
-2. Animation.
-3. Modern Badges.
+1. Animation.
+2. Modern Badges.
+3. Notification Bar.
 4. Product Labels.
 5. Sale Badges.
 6. Out of Image.
@@ -192,7 +192,7 @@ The plugin is rich in features, while it is lightweight and fast.
 
 == Changelog ==
 
-= 2.6.0 =
+= 3.0.0 =
 * Added Notification Bar (Pro Version).
 * Compatibility with WooCommerce 9.0.2
 
