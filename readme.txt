@@ -108,7 +108,7 @@ In today's competitive market, businesses need to find effective ways to boost s
 
 In WooCommerce, numerous customization options are available for badges and product labels. Store owners can customize the appearance and functionality of their stores to suit their specific needs. These options typically include changing the color, size, font, and position of badges and labels, providing flexibility in aligning them with the store's branding and design aesthetics. Additionally, store owners can often customize the text displayed on badges and labels, including promotional messages, product statuses, or other relevant information. With these customization options, users can create attractive badges and labels that communicate essential product information and enhance the customer shopping experience.
 
-==  CUSTOMIZABLE NOTIFICATION BAR FOR WOOCOMMERCE (PRO VERSION) ==
+== CUSTOMIZABLE NOTIFICATION BAR FOR WOOCOMMERCE (PRO VERSION) ==
 
 Enhance your WooCommerce store with the Customizable Notification Bar, a powerful tool designed to boost user engagement and drive sales. This versatile notification bar allows you to create personalized messages tailored to your customers, promoting special offers, new arrivals, and important updates in real-time. Featuring a Countdown Timer, you can create a sense of urgency, encouraging quicker purchases and increasing conversions. With a variety of design options and seamless integration, the Customizable Notification Bar ensures your notifications stand out without disrupting the shopping experience. Easy to set up and fully responsive, this tool is essential for capturing your audience's attention effectively and fostering a better connection with your customers.
 
