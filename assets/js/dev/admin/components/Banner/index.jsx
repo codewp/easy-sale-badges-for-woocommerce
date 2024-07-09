@@ -132,6 +132,16 @@ const Banner = () => {
 						</div>
 					</div>
 				</div>
+				<div className="asnp-w-full asnp-flex asnp-mt-2">
+					<div className="asnp-w-full asnp-bg-white asnp-h-[8rem] asnp-p-4">
+						<label className="asnp-text-lg asnp-font-bold">
+							{ __(
+								'Preview',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</label>
+					</div>
+				</div>
 				<div className="asnp-relative asnp-h-full asnp-w-full asnp-border-2 asnp-my-2">
 					<div className="asnp-relative asnp-flex asnp-w-full asnp-bg-white">
 						<BannerForm />
