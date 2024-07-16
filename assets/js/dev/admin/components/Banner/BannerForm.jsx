@@ -892,6 +892,55 @@ const BannerForm = () => {
 											</option>
 											<option>
 												{ __(
+													'Cart page',
+													'easy-sale-badges-for-woocommerce'
+												) }
+											</option>
+											<option>
+												{ __(
+													'Checkout page',
+													'easy-sale-badges-for-woocommerce'
+												) }
+											</option>
+											<option>
+												{ __(
+													'Shop page',
+													'easy-sale-badges-for-woocommerce'
+												) }
+											</option>
+											<option>
+												{ __(
+													'Product page',
+													'easy-sale-badges-for-woocommerce'
+												) }
+											</option>
+											<option>
+												{ __(
+													'Product category page',
+													'easy-sale-badges-for-woocommerce'
+												) }
+											</option>
+											<option>
+												{ __(
+													'Home page',
+													'easy-sale-badges-for-woocommerce'
+												) }
+											</option>
+											<option>
+												{ __(
+													'Front page',
+													'easy-sale-badges-for-woocommerce'
+												) }
+											</option>
+										</optgroup>
+										<optgroup
+											label={ __(
+												'Posts',
+												'easy-sale-badges-for-woocommerce'
+											) }
+										>
+											<option>
+												{ __(
 													'Posts',
 													'easy-sale-badges-for-woocommerce'
 												) }

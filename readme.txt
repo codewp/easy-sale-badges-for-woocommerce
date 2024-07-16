@@ -5,7 +5,7 @@ Tags: woocommerce badge, product label, woocommerce, badge, sale badge, notifica
 Requires at least: 5.0
 Tested up to: 6.5
 Requires PHP: 5.6
-Stable tag: 3.0.0
+Stable tag: 3.1.0
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -191,6 +191,12 @@ The plugin is rich in features, while it is lightweight and fast.
 11. Percentage Discount amount.
 
 == Changelog ==
+
+= 3.1.0 =
+* Added new conditions for the notification bar, including shop page, cart page, product page, checkout page, product category page, home page, and front page.
+* Fixed display issue of the notification bar on the shop page.
+* Fixed the button URL issue in the notification bar.
+* Compatibility with WooCommerce 9.1.2
 
 = 3.0.0 =
 * Added Notification Bar (Pro Version).
