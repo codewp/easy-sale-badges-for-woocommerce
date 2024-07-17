@@ -195,6 +195,7 @@ The plugin is rich in features, while it is lightweight and fast.
 = 3.1.0 =
 * Added new conditions for the notification bar, including shop page, cart page, product page, checkout page, product category page, home page, and front page.
 * Fixed display issue of the notification bar on the shop page.
+* Fixed the countdown timer issue on the notification bar.
 * Compatibility with WooCommerce 9.1.2
 
 = 3.0.0 =
