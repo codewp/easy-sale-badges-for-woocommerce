@@ -3,9 +3,9 @@ Contributors: asanaplugins
 Donate link: https://www.asanaplugins.com/
 Tags: woocommerce badge, product label, woocommerce, badge, sale badge, notification bar, label
 Requires at least: 5.0
-Tested up to: 6.5
+Tested up to: 6.6
 Requires PHP: 5.6
-Stable tag: 3.1.0
+Stable tag: 3.1.1
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -191,6 +191,10 @@ The plugin is rich in features, while it is lightweight and fast.
 11. Percentage Discount amount.
 
 == Changelog ==
+
+= 3.1.1 =
+* Fixed issue of the notification bar (Pro Version).
+* Compatibility with WooCommerce 9.1.4
 
 = 3.1.0 =
 * Added new conditions for the notification bar, including shop page, cart page, product page, checkout page, product category page, home page, and front page.
