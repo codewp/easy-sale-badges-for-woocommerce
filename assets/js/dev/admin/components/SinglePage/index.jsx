@@ -32,9 +32,9 @@ const SinglePage = ( props ) => {
 							'easy-sale-badges-for-woocommerce'
 						) }
 					</h2>
-					<input
+					<textarea
 						type="text"
-						className="asnp-block asnp-text-field !asnp-w-[20rem]"
+						className="asnp-block asnp-text-field !asnp-w-[25rem]"
 						value={ props.singleContainer }
 						onChange={ ( e ) =>
 							props.onChange( 'singleContainer', e.target.value )
