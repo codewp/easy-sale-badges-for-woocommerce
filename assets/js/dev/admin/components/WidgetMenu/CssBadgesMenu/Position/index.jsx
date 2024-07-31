@@ -189,7 +189,7 @@ const Position = ( props ) => {
 							>
 								{ __(
 									'Left',
-									'easy-sale-badges-for-woocommerce-pro'
+									'easy-sale-badges-for-woocommerce'
 								) }
 							</button>
 							<button
@@ -209,7 +209,7 @@ const Position = ( props ) => {
 							>
 								{ __(
 									'Center',
-									'easy-sale-badges-for-woocommerce-pro'
+									'easy-sale-badges-for-woocommerce'
 								) }
 							</button>
 							<button
@@ -229,7 +229,7 @@ const Position = ( props ) => {
 							>
 								{ __(
 									'Right',
-									'easy-sale-badges-for-woocommerce-pro'
+									'easy-sale-badges-for-woocommerce'
 								) }
 							</button>
 						</div>

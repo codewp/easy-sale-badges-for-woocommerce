@@ -146,7 +146,7 @@ const AdvancedTextOption = () => {
 					<span className="asnp-field-title">
 						{ __(
 							'Width (Pixel)',
-							'easy-sale-badges-for-woocommerce-pro'
+							'easy-sale-badges-for-woocommerce'
 						) }
 					</span>
 					<div className="asnp-w-[10rem]">
@@ -164,7 +164,7 @@ const AdvancedTextOption = () => {
 					<span className="asnp-field-title">
 						{ __(
 							'Horizontal',
-							'easy-sale-badges-for-woocommerce-pro'
+							'easy-sale-badges-for-woocommerce'
 						) }
 					</span>
 					<div className="asnp-w-[10rem]">
@@ -180,7 +180,7 @@ const AdvancedTextOption = () => {
 					<span className="asnp-field-title">
 						{ __(
 							'Vertical',
-							'easy-sale-badges-for-woocommerce-pro'
+							'easy-sale-badges-for-woocommerce'
 						) }
 					</span>
 					<div className="asnp-w-[10rem]">

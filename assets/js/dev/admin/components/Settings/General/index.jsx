@@ -404,6 +404,12 @@ const General = ( props ) => {
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
+						<option value="elementor/element/woocommerce-product-images/section_product_gallery_style/before_section_end">
+							{ __(
+								'Elementor product images',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
 						<option value="none">
 							{ __( 'None', 'easy-sale-badges-for-woocommerce' ) }
 						</option>
@@ -493,6 +499,30 @@ const General = ( props ) => {
 						<option value="post_thumbnail_html">
 							{ __(
 								'Post thumbnail html',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="elementor/element/woocommerce-product-images/section_product_gallery_style/before_section_end">
+							{ __(
+								'Before product images in elementor',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="elementor/element/woocommerce-product-content/section_style/before_section_end">
+							{ __(
+								'After product title in elementor',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="elementor/element/woocommerce-product-price/section_price_style/before_section_end">
+							{ __(
+								'Before product price in elementor',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="elementor/element/woocommerce-product-add-to-cart/section_layout/before_section_end">
+							{ __(
+								'Before add to cart in elementor',
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
