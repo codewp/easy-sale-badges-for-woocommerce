@@ -504,25 +504,25 @@ const General = ( props ) => {
 						</option>
 						<option value="elementor/element/woocommerce-product-images/section_product_gallery_style/before_section_end">
 							{ __(
-								'Before product images in elementor',
+								'Elementor before product images',
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
 						<option value="elementor/element/woocommerce-product-content/section_style/before_section_end">
 							{ __(
-								'After product title in elementor',
+								'Elementor after product title',
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
 						<option value="elementor/element/woocommerce-product-price/section_price_style/before_section_end">
 							{ __(
-								'Before product price in elementor',
+								'Elementor before product price',
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
 						<option value="elementor/element/woocommerce-product-add-to-cart/section_layout/before_section_end">
 							{ __(
-								'Before add to cart in elementor',
+								'Elementor before add to cart',
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
