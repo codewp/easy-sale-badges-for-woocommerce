@@ -195,6 +195,7 @@ The plugin is rich in features, while it is lightweight and fast.
 
 = 3.2.0 =
 * Added support for Elementor plugin.
+* Fixed an issue with the display of badges for product variations on the archive page.
 
 = 3.1.1 =
 * Fixed issue of the notification bar (Pro Version).
