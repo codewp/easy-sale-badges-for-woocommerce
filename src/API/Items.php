@@ -56,7 +56,7 @@ class Items extends BaseController {
 				$items = ItemsModel::search_products(
 					array(
 						'search' => $search,
-						'type'   => array_merge( array_keys( wc_get_product_types() ), 'variation' ),
+						'type'   => array_merge( array_keys( wc_get_product_types() ), ['variation'] ),
 					)
 				);
 			  } elseif ( 'categories' === $request['type'] ) {
@@ -104,7 +104,7 @@ class Items extends BaseController {
 			if ( 'products' === $request['type'] ) {
 				$items = ItemsModel::get_products(
 				  array(
-					'type'    => array_merge( array_keys( wc_get_product_types() ), 'variation' ),
+					'type'    => array_merge( array_keys( wc_get_product_types() ), ['variation'] ),
 					'include' => $items,
 				  )
 				);
