@@ -69,8 +69,8 @@ abstract class BaseProductValidator {
 			return false;
 		}
 
-		$product = is_numeric( $product ) ? $product : $product->get_id();
-		if ( 0 >= $product ) {
+		$product = is_numeric( $product ) ? wc_get_product( $product ) : $product;
+		if ( ! $product ) {
 			return false;
 		}
 
@@ -79,11 +79,14 @@ abstract class BaseProductValidator {
 			return false;
 		}
 
+		$product_id = $product->get_id();
+		$parent_id  = $product->is_type( 'variation' ) ? $product->get_parent_id() : 0;
+
  		if ( isset( $item['selectType'] ) && 'excluded' === $item['selectType'] ) {
-			return ! in_array( $product, $items );
+			return ! in_array( $product_id, $items ) && ( 0 == $parent_id || ! in_array( $parent_id, $items ) );
 		}
 
-		return in_array( $product, $items );
+		return in_array( $product_id, $items ) || ( 0 < $parent_id && in_array( $parent_id, $items ) );
 	}
 
 	public static function categories( $item, $product ) {
@@ -95,8 +98,8 @@ abstract class BaseProductValidator {
 			return false;
 		}
 
-		$product = is_numeric( $product ) ? $product : $product->get_id();
-		if ( 0 >= $product ) {
+		$product = is_numeric( $product ) ? wc_get_product( $product ) : $product;
+		if ( ! $product ) {
 			return false;
 		}
 
@@ -105,6 +108,7 @@ abstract class BaseProductValidator {
 			return false;
 		}
 
+		$product            = $product->is_type( 'variation' ) ? $product->get_parent_id() : $product->get_id();
 		$product_categories = wc_get_product_cat_ids( $product );
 		if ( empty( $product_categories ) ) {
 			return false;
@@ -126,8 +130,8 @@ abstract class BaseProductValidator {
 			return false;
 		}
 
-		$product = is_numeric( $product ) ? $product : $product->get_id();
-		if ( 0 >= $product ) {
+		$product = is_numeric( $product ) ? wc_get_product( $product ) : $product;
+		if ( ! $product ) {
 			return false;
 		}
 
@@ -136,6 +140,7 @@ abstract class BaseProductValidator {
 			return true;
 		}
 
+		$product      = $product->is_type( 'variation' ) ? $product->get_parent_id() : $product->get_id();
 		$product_tags = wc_get_product_term_ids( $product, 'product_tag' );
 		if ( empty( $product_tags ) ) {
 			return false;
