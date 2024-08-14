@@ -17,6 +17,7 @@ const NavMenu = ( props ) => {
 		<div className="asnp-bg-white asnp-p-4">
 			<nav className="asnp-flex asnp-flex-col sm:asnp-flex-row ">
 				<a
+					style={ { textWrap: 'nowrap' } }
 					href="#"
 					onClick={ ( e ) => {
 						e.preventDefault();
@@ -32,6 +33,7 @@ const NavMenu = ( props ) => {
 				</a>
 
 				<a
+					style={ { textWrap: 'nowrap' } }
 					href="#"
 					onClick={ ( e ) => {
 						e.preventDefault();
@@ -46,6 +48,7 @@ const NavMenu = ( props ) => {
 					{ __( 'Schedule', 'easy-sale-badges-for-woocommerce' ) }
 				</a>
 				<a
+					style={ { textWrap: 'nowrap' } }
 					href="#"
 					onClick={ ( e ) => {
 						e.preventDefault();
@@ -57,9 +60,13 @@ const NavMenu = ( props ) => {
 							: '' ) + ' asnp-nav-tab-item'
 					}
 				>
-					{ __( 'Products', 'easy-sale-badges-for-woocommerce' ) }
+					{ __(
+						'Products & Conditions',
+						'easy-sale-badges-for-woocommerce'
+					) }
 				</a>
 				<a
+					style={ { textWrap: 'nowrap' } }
 					href="#"
 					onClick={ ( e ) => {
 						e.preventDefault();
@@ -79,6 +86,7 @@ const NavMenu = ( props ) => {
 					<LockClosedIcon width="20" height="20" />
 				</a>
 				<a
+					style={ { textWrap: 'nowrap' } }
 					href="#"
 					onClick={ ( e ) => {
 						e.preventDefault();
@@ -91,13 +99,17 @@ const NavMenu = ( props ) => {
 						' asnp-nav-tab-item asnp-flex asnp-text-red-600'
 					}
 				>
-					{ __( 'Modern Badges', 'easy-sale-badges-for-woocommerce' ) }
+					{ __(
+						'Modern Badges',
+						'easy-sale-badges-for-woocommerce'
+					) }
 					<div className="asnp-ml-[0.3rem]">
 						{ __( '(Pro)', 'easy-sale-badges-for-woocommerce' ) }
 					</div>
 					<LockClosedIcon width="20" height="20" />
 				</a>
 				<a
+					style={ { textWrap: 'nowrap' } }
 					href="#"
 					onClick={ ( e ) => {
 						e.preventDefault();
@@ -114,7 +126,7 @@ const NavMenu = ( props ) => {
 					<div className="asnp-ml-[0.3rem]">
 						{ __( '(Pro)', 'easy-sale-badges-for-woocommerce' ) }
 					</div>
-						<LockClosedIcon width="20" height="20" />
+					<LockClosedIcon width="20" height="20" />
 				</a>
 			</nav>
 			<div className="asnp-w-[49rem] md:asnp-w-[52rem] lg:asnp-w-[56rem]">
