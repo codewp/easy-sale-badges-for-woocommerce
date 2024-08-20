@@ -467,7 +467,7 @@ function maybe_get_exact_item_id( $id, $type = 'product' ) {
 		return absint( $id );
 	}
 
-	return apply_filters( 'wccs_exact_item_id', absint( $id ), $type );
+	return apply_filters( 'asnp_wesb_exact_item_id', absint( $id ), $type );
 }
 
 function maybe_get_exact_category_id( $id ) {
@@ -483,8 +483,8 @@ function maybe_get_exact_product( $product ) {
 		return $product;
 	}
 
-	if ( $product instanceof WC_Product ) {
-		return apply_filters( 'wccs_exact_product', $product );
+	if ( $product instanceof \WC_Product ) {
+		return apply_filters( 'asnp_wesb_exact_product', $product );
 	} elseif ( is_numeric( $product ) ) {
 		return self::maybe_get_exact_item_id( $product, 'product' );
 	}

@@ -9,8 +9,8 @@ class Compatibility {
 	public static function init() {
 		// WPML compatibility.
 		if ( function_exists( 'wpml_loaded' ) ) {
-		  Wpml::init();
+			WPML::init();
 		}
-	  }
+	}
 
 }
