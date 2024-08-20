@@ -471,11 +471,11 @@ function maybe_get_exact_item_id( $id, $type = 'product' ) {
 }
 
 function maybe_get_exact_category_id( $id ) {
-	return self::maybe_get_exact_item_id( $id, 'product_cat' );
+	return maybe_get_exact_item_id( $id, 'product_cat' );
 }
 
 function maybe_get_exact_tag_id( $id ) {
-	return self::maybe_get_exact_item_id( $id, 'product_tag' );
+	return maybe_get_exact_item_id( $id, 'product_tag' );
 }
 
 function maybe_get_exact_product( $product ) {
@@ -486,7 +486,7 @@ function maybe_get_exact_product( $product ) {
 	if ( $product instanceof \WC_Product ) {
 		return apply_filters( 'asnp_wesb_exact_product', $product );
 	} elseif ( is_numeric( $product ) ) {
-		return self::maybe_get_exact_item_id( $product, 'product' );
+		return maybe_get_exact_item_id( $product, 'product' );
 	}
 
 	return $product;

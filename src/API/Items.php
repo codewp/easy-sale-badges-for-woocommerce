@@ -59,13 +59,13 @@ class Items extends BaseController {
 						'type'   => array_merge( array_keys( wc_get_product_types() ), ['variation'] ),
 					)
 				);
-			  } elseif ( 'categories' === $request['type'] ) {
+			} elseif ( 'categories' === $request['type'] ) {
 				$items = ItemsModel::get_categories( array( 'name__like' => $search ) );
-			  } elseif ( 'tags' === $request['type'] ) {
+			} elseif ( 'tags' === $request['type'] ) {
 				$items = ItemsModel::get_tags( array( 'name__like' => $search ) );
-			  } else {
+			} else {
 				$items = apply_filters( 'asnp_wesb_items_api_' . __FUNCTION__, $items, $search, $request );
-			  }
+			}
 
 			return rest_ensure_response( [
 				'items' => $items,
@@ -105,16 +105,16 @@ class Items extends BaseController {
 				$items = ItemsModel::get_products(
 				  array(
 					'type'    => array_merge( array_keys( wc_get_product_types() ), ['variation'] ),
-					'include' => $items,
+					'include' => array_map( 'AsanaPlugins\WooCommerce\SaleBadges\maybe_get_exact_item_id', $items ),
 				  )
 				);
-			  } elseif ( 'categories' === $request['type'] ) {
-				$items = ItemsModel::get_categories( array( 'include' => $items ) );
-			  }  elseif ( 'tags' === $request['type'] ) {
-				$items = ItemsModel::get_tags( array( 'include' => $items ) );
-			  } else {
+			} elseif ( 'categories' === $request['type'] ) {
+				$items = ItemsModel::get_categories( array( 'include' => array_map( 'AsanaPlugins\WooCommerce\SaleBadges\maybe_get_exact_category_id', $items ) ) );
+			}  elseif ( 'tags' === $request['type'] ) {
+				$items = ItemsModel::get_tags( array( 'include' => array_map( 'AsanaPlugins\WooCommerce\SaleBadges\maybe_get_exact_tag_id', $items ) ) );
+			} else {
 				$items = apply_filters( 'asnp_wesb_items_api_' . __FUNCTION__, [], $items, $request );
-			  }
+			}
 
 			return rest_ensure_response( [
 				'items' => $items,

@@ -78,6 +78,7 @@ abstract class BaseProductValidator {
 		if ( empty( $items ) ) {
 			return false;
 		}
+		$items = array_map( 'AsanaPlugins\WooCommerce\SaleBadges\maybe_get_exact_item_id', $items );
 
 		$product_id = $product->get_id();
 		$parent_id  = $product->is_type( 'variation' ) ? $product->get_parent_id() : 0;
@@ -107,6 +108,7 @@ abstract class BaseProductValidator {
 		if ( empty( $categories ) ) {
 			return false;
 		}
+		$categories = array_map( 'AsanaPlugins\WooCommerce\SaleBadges\maybe_get_exact_category_id', $categories );
 
 		$product            = $product->is_type( 'variation' ) ? $product->get_parent_id() : $product->get_id();
 		$product_categories = wc_get_product_cat_ids( $product );
@@ -139,6 +141,7 @@ abstract class BaseProductValidator {
 		if ( empty( $tags ) ) {
 			return true;
 		}
+		$tags = array_map( 'AsanaPlugins\WooCommerce\SaleBadges\maybe_get_exact_tag_id', $tags );
 
 		$product      = $product->is_type( 'variation' ) ? $product->get_parent_id() : $product->get_id();
 		$product_tags = wc_get_product_term_ids( $product, 'product_tag' );
