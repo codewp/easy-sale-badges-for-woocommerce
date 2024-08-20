@@ -461,3 +461,33 @@ function get_saved_price( $product ) {
 
 	return false;
 }
+
+function maybe_get_exact_item_id( $id, $type = 'product' ) {
+	if ( ! is_numeric( $id ) || 0 >= $id ) {
+		return absint( $id );
+	}
+
+	return apply_filters( 'wccs_exact_item_id', absint( $id ), $type );
+}
+
+function maybe_get_exact_category_id( $id ) {
+	return self::maybe_get_exact_item_id( $id, 'product_cat' );
+}
+
+function maybe_get_exact_tag_id( $id ) {
+	return self::maybe_get_exact_item_id( $id, 'product_tag' );
+}
+
+function maybe_get_exact_product( $product ) {
+	if ( ! $product ) {
+		return $product;
+	}
+
+	if ( $product instanceof WC_Product ) {
+		return apply_filters( 'wccs_exact_product', $product );
+	} elseif ( is_numeric( $product ) ) {
+		return self::maybe_get_exact_item_id( $product, 'product' );
+	}
+
+	return $product;
+}
