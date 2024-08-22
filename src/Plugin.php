@@ -7,6 +7,7 @@ use AsanaPlugins\WooCommerce\SaleBadges\Admin\Admin;
 use AsanaPlugins\WooCommerce\SaleBadges\API\RestApi;
 use AsanaPlugins\WooCommerce\SaleBadges\Models\BadgeModel;
 use AsanaPlugins\WooCommerce\SaleBadges\ShortCode\BadgeShortCode;
+use AsanaPlugins\WooCommerce\SaleBadges\Compatibilities\Compatibility;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -144,6 +145,7 @@ final class Plugin {
 
 		Hooks::init();
 		Placeholder::init();
+		Compatibility::init();
 
 		add_action( 'init', [ $this, 'add_shortcodes' ] );
 	}
