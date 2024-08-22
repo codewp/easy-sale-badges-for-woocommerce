@@ -61,7 +61,7 @@ const NavMenu = ( props ) => {
 					}
 				>
 					{ __(
-						'Products & Conditions',
+						'Products',
 						'easy-sale-badges-for-woocommerce'
 					) }
 				</a>
