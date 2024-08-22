@@ -5,7 +5,7 @@ Tags: woocommerce badge, product label, woocommerce, badge, sale badge, notifica
 Requires at least: 5.0
 Tested up to: 6.6
 Requires PHP: 5.6
-Stable tag: 3.2.0
+Stable tag: 3.3.0
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,7 @@ https://youtu.be/aTHFT3ovCaw
 - **Add 15 CSS Label**
 - **Add Badge to Out Of Image Position**
 - **Provide support for the Elementor plugin**
+- **Provide support for the WPML plugin**
 - **Implemented multi-language support for the Labels** to enable labels to be displayed in various languages for enhanced accessibility.
 - **CSS label templates** Access pre-designed CSS label templates for quick and easy customization.
 - **Multiple labels available for a single product** Multiple labels can be applied to a single product.
@@ -192,6 +193,10 @@ The plugin is rich in features, while it is lightweight and fast.
 11. Percentage Discount amount.
 
 == Changelog ==
+
+= 3.3.0 =
+* Added support for WPML plugin.
+* Compatibility with WooCommerce 9.2.1
 
 = 3.2.0 =
 * Added support for Elementor plugin.
