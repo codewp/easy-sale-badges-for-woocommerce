@@ -4,11 +4,7 @@ namespace AsanaPlugins\WooCommerce\SaleBadges\Compatibilities;
 
 defined( 'ABSPATH' ) || exit;
 
-/**
- * Easy WooCommerce Discounts compatibility with WPML.
- *
- * @since 4.9.0
- */
+
 class WPML {
 
     public static function init() {
