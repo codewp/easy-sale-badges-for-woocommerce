@@ -5,7 +5,7 @@ Tags: woocommerce badge, product label, woocommerce, badge, sale badge, notifica
 Requires at least: 5.0
 Tested up to: 6.6
 Requires PHP: 5.6
-Stable tag: 3.3.0
+Stable tag: 3.3.1
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -193,6 +193,10 @@ The plugin is rich in features, while it is lightweight and fast.
 11. Percentage Discount amount.
 
 == Changelog ==
+
+= 3.3.1 =
+* Fixed WPML compatibility issue.
+* Compatibility with WooCommerce 9.2.2
 
 = 3.3.0 =
 * Added support for WPML plugin.
