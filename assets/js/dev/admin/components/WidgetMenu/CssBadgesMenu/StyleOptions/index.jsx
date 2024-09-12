@@ -184,11 +184,11 @@ const StyleOptions = ( props ) => {
 					</div>
 				) }
 				
-				<div className="asnp-flex asnp-mt-[1rem]">
+				<div className="asnp-flex asnp-mt-[2rem]">
 					<label>
 						<span className="asnp-field-title">
 							{ __(
-								'Width on Archive Page (Pixel)',
+								'Width on Archive Page (Px)',
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</span>
@@ -215,13 +215,13 @@ const StyleOptions = ( props ) => {
 						</div>
 					</label>
 					<label>
-						<span className="asnp-field-title asnp-ml-4">
+						<span className="asnp-field-title asnp-ml-6">
 							{ __(
 								'Height (Pixel)',
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</span>
-						<div className="asnp-w-[11rem] asnp-ml-4">
+						<div className="asnp-w-[11rem] asnp-ml-6">
 							<input
 								disabled={ disableHeight }
 								type="number"
@@ -247,13 +247,13 @@ const StyleOptions = ( props ) => {
 						props.badgeStyles === 'badge20' ||
 						showBorder === true ) && (
 						<label>
-							<span className="asnp-field-title asnp-ml-4">
+							<span className="asnp-field-title asnp-ml-6">
 								{ __(
 									'Border Width',
 									'easy-sale-badges-for-woocommerce'
 								) }
 							</span>
-							<div className="asnp-w-[7rem] asnp-ml-4">
+							<div className="asnp-w-[7rem] asnp-ml-6">
 								<input
 									type="number"
 									min="0"
@@ -276,7 +276,7 @@ const StyleOptions = ( props ) => {
 					<label>
 						<span className="asnp-field-title">
 							{ __(
-								'Width on Product Page (Pixel)',
+								'Width on Product Page (Px)',
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</span>
@@ -303,13 +303,13 @@ const StyleOptions = ( props ) => {
 						</div>
 					</label>
 					<label>
-						<span className="asnp-field-title asnp-ml-4">
+						<span className="asnp-field-title asnp-ml-6">
 							{ __(
 								'Height (Pixel)',
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</span>
-						<div className="asnp-w-[11rem] asnp-ml-4">
+						<div className="asnp-w-[11rem] asnp-ml-6">
 							<input
 								disabled={ disableHeight }
 								type="number"
@@ -335,13 +335,13 @@ const StyleOptions = ( props ) => {
 						props.badgeStyles === 'badge20' ||
 						showBorder === true ) && (
 						<label>
-							<span className="asnp-field-title asnp-ml-4">
+							<span className="asnp-field-title asnp-ml-6">
 								{ __(
 									'Border Width',
 									'easy-sale-badges-for-woocommerce'
 								) }
 							</span>
-							<div className="asnp-w-[7rem] asnp-ml-4">
+							<div className="asnp-w-[7rem] asnp-ml-6">
 								<input
 									type="number"
 									min="0"
