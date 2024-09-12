@@ -256,7 +256,29 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 		<div className="asnp-esb-wrapper">
 			<div className="asnp-esb-containerAd">
 				<div className="asnp-esb-product">
-					<label className="asnp-esb-productLable">
+					<div className="asnp">
+						<select
+							className="asnp-select-field"
+							value={ badge.sizePage }
+							onChange={ ( e ) =>
+								updateBadge( 'sizePage', e.target.value )
+							}
+						>
+							<option value="archivePage">
+								{ __(
+									'Archive Page',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</option>
+							<option value="singlePage">
+								{ __(
+									'Product Page',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</option>
+						</select>
+					</div>
+					<label className="asnp-esb-productLable asnp-mt-4">
 						{ __( 'Preview ', 'easy-sale-badges-for-woocommerce' ) }
 						{ __( textPrev, 'easy-sale-badges-for-woocommerce' ) }
 					</label>
