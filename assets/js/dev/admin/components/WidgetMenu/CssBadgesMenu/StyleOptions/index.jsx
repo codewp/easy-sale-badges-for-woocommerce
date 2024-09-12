@@ -183,214 +183,183 @@ const StyleOptions = ( props ) => {
 						</Tippy>
 					</div>
 				) }
+				
+				<div className="asnp-flex asnp-mt-[1rem]">
+					<label>
+						<span className="asnp-field-title">
+							{ __(
+								'Width on Archive Page (Pixel)',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</span>
+						<div className="asnp-w-[11rem]">
+							<input
+								disabled={ disableWidth }
+								type="number"
+								min="0"
+								max="400"
+								className={
+									disableWidth
+										? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
+										: 'asnp-text-field'
+								}
+								placeholder="0"
+								value={ props.widthBadge }
+								onChange={ ( e ) =>
+									props.onChange(
+										'widthBadge',
+										e.target.value
+									)
+								}
+							/>
+						</div>
+					</label>
+					<label>
+						<span className="asnp-field-title asnp-ml-4">
+							{ __(
+								'Height (Pixel)',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</span>
+						<div className="asnp-w-[11rem] asnp-ml-4">
+							<input
+								disabled={ disableHeight }
+								type="number"
+								min="0"
+								max="400"
+								className={
+									disableHeight
+										? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
+										: 'asnp-text-field'
+								}
+								placeholder="0"
+								value={ props.heightBadge }
+								onChange={ ( e ) =>
+									props.onChange(
+										'heightBadge',
+										e.target.value
+									)
+								}
+							/>
+						</div>
+					</label>
+					{ ( props.badgeStyles === 'badge19' ||
+						props.badgeStyles === 'badge20' ||
+						showBorder === true ) && (
+						<label>
+							<span className="asnp-field-title asnp-ml-4">
+								{ __(
+									'Border Width',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</span>
+							<div className="asnp-w-[7rem] asnp-ml-4">
+								<input
+									type="number"
+									min="0"
+									max="400"
+									className="asnp-text-field"
+									placeholder="0"
+									value={ props.borderWidth }
+									onChange={ ( e ) =>
+										props.onChange(
+											'borderWidth',
+											e.target.value
+										)
+									}
+								/>
+							</div>
+						</label>
+					) }
+				</div>
 				<div className="asnp-flex asnp-mt-[2rem]">
 					<label>
 						<span className="asnp-field-title">
-							{ __( 'Page', 'easy-sale-badges-for-woocommerce' ) }
+							{ __(
+								'Width on Product Page (Pixel)',
+								'easy-sale-badges-for-woocommerce'
+							) }
 						</span>
-						<div className="asnp-w-[10rem]">
-							<select
-								className="asnp-select-field !asnp-w-48 asnp-mt-2"
-								value={ props.sizePage }
-								onChange={ ( e ) =>
-									props.onChange( 'sizePage', e.target.value )
+						<div className="asnp-w-[11rem]">
+							<input
+								disabled={ disableWidth }
+								type="number"
+								min="0"
+								max="400"
+								className={
+									disableWidth
+										? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
+										: 'asnp-text-field'
 								}
-							>
-								<option value="archivePage">
-									{ __(
-										'Archive Page',
-										'easy-sale-badges-for-woocommerce'
-									) }
-								</option>
-								<option value="singlePage">
-									{ __(
-										'Product Page',
-										'easy-sale-badges-for-woocommerce'
-									) }
-								</option>
-							</select>
+								placeholder="0"
+								value={ props.singleWidthBadge }
+								onChange={ ( e ) =>
+									props.onChange(
+										'singleWidthBadge',
+										e.target.value
+									)
+								}
+							/>
 						</div>
 					</label>
+					<label>
+						<span className="asnp-field-title asnp-ml-4">
+							{ __(
+								'Height (Pixel)',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</span>
+						<div className="asnp-w-[11rem] asnp-ml-4">
+							<input
+								disabled={ disableHeight }
+								type="number"
+								min="0"
+								max="400"
+								className={
+									disableHeight
+										? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
+										: 'asnp-text-field'
+								}
+								placeholder="0"
+								value={ props.heightBadge }
+								onChange={ ( e ) =>
+									props.onChange(
+										'heightBadge',
+										e.target.value
+									)
+								}
+							/>
+						</div>
+					</label>
+					{ ( props.badgeStyles === 'badge19' ||
+						props.badgeStyles === 'badge20' ||
+						showBorder === true ) && (
+						<label>
+							<span className="asnp-field-title asnp-ml-4">
+								{ __(
+									'Border Width',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</span>
+							<div className="asnp-w-[7rem] asnp-ml-4">
+								<input
+									type="number"
+									min="0"
+									max="400"
+									className="asnp-text-field"
+									placeholder="0"
+									value={ props.borderWidth }
+									onChange={ ( e ) =>
+										props.onChange(
+											'borderWidth',
+											e.target.value
+										)
+									}
+								/>
+							</div>
+						</label>
+					) }
 				</div>
-				{ props.sizePage === 'archivePage' ? (
-					<div className="asnp-flex asnp-mt-[1rem]">
-						<label>
-							<span className="asnp-field-title">
-								{ __(
-									'Width (Pixel)',
-									'easy-sale-badges-for-woocommerce'
-								) }
-							</span>
-							<div className="asnp-w-[11rem]">
-								<input
-									disabled={ disableWidth }
-									type="number"
-									min="0"
-									max="400"
-									className={
-										disableWidth
-											? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
-											: 'asnp-text-field'
-									}
-									placeholder="0"
-									value={ props.widthBadge }
-									onChange={ ( e ) =>
-										props.onChange(
-											'widthBadge',
-											e.target.value
-										)
-									}
-								/>
-							</div>
-						</label>
-						<label>
-							<span className="asnp-field-title asnp-ml-4">
-								{ __(
-									'Height (Pixel)',
-									'easy-sale-badges-for-woocommerce'
-								) }
-							</span>
-							<div className="asnp-w-[11rem] asnp-ml-4">
-								<input
-									disabled={ disableHeight }
-									type="number"
-									min="0"
-									max="400"
-									className={
-										disableHeight
-											? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
-											: 'asnp-text-field'
-									}
-									placeholder="0"
-									value={ props.heightBadge }
-									onChange={ ( e ) =>
-										props.onChange(
-											'heightBadge',
-											e.target.value
-										)
-									}
-								/>
-							</div>
-						</label>
-						{ ( props.badgeStyles === 'badge19' ||
-							props.badgeStyles === 'badge20' ||
-							showBorder === true ) && (
-							<label>
-								<span className="asnp-field-title asnp-ml-4">
-									{ __(
-										'Border Width',
-										'easy-sale-badges-for-woocommerce'
-									) }
-								</span>
-								<div className="asnp-w-[7rem] asnp-ml-4">
-									<input
-										type="number"
-										min="0"
-										max="400"
-										className="asnp-text-field"
-										placeholder="0"
-										value={ props.borderWidth }
-										onChange={ ( e ) =>
-											props.onChange(
-												'borderWidth',
-												e.target.value
-											)
-										}
-									/>
-								</div>
-							</label>
-						) }
-					</div>
-				) : (
-					<div className="asnp-flex asnp-mt-[1rem]">
-						<label>
-							<span className="asnp-field-title">
-								{ __(
-									'Width (Pixel)',
-									'easy-sale-badges-for-woocommerce'
-								) }
-							</span>
-							<div className="asnp-w-[11rem]">
-								<input
-									disabled={ disableWidth }
-									type="number"
-									min="0"
-									max="400"
-									className={
-										disableWidth
-											? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
-											: 'asnp-text-field'
-									}
-									placeholder="0"
-									value={ props.singleWidthBadge }
-									onChange={ ( e ) =>
-										props.onChange(
-											'singleWidthBadge',
-											e.target.value
-										)
-									}
-								/>
-							</div>
-						</label>
-						<label>
-							<span className="asnp-field-title asnp-ml-4">
-								{ __(
-									'Height (Pixel)',
-									'easy-sale-badges-for-woocommerce'
-								) }
-							</span>
-							<div className="asnp-w-[11rem] asnp-ml-4">
-								<input
-									disabled={ disableHeight }
-									type="number"
-									min="0"
-									max="400"
-									className={
-										disableHeight
-											? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
-											: 'asnp-text-field'
-									}
-									placeholder="0"
-									value={ props.heightBadge }
-									onChange={ ( e ) =>
-										props.onChange(
-											'heightBadge',
-											e.target.value
-										)
-									}
-								/>
-							</div>
-						</label>
-						{ ( props.badgeStyles === 'badge19' ||
-							props.badgeStyles === 'badge20' ||
-							showBorder === true ) && (
-							<label>
-								<span className="asnp-field-title asnp-ml-4">
-									{ __(
-										'Border Width',
-										'easy-sale-badges-for-woocommerce'
-									) }
-								</span>
-								<div className="asnp-w-[7rem] asnp-ml-4">
-									<input
-										type="number"
-										min="0"
-										max="400"
-										className="asnp-text-field"
-										placeholder="0"
-										value={ props.borderWidth }
-										onChange={ ( e ) =>
-											props.onChange(
-												'borderWidth',
-												e.target.value
-											)
-										}
-									/>
-								</div>
-							</label>
-						) }
-					</div>
-				) }
 				<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold">
 					{ __(
 						'Border Radius (Pixel)',

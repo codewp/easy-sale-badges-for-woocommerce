@@ -250,7 +250,7 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 	if ( badge.sizePage === 'archivePage' ) {
 		textPrev = '(Archive Page)';
 	} else {
-		textPrev = '(Single Page)';
+		textPrev = '(Product Page)';
 	}
 	return (
 		<div className="asnp-esb-wrapper">
