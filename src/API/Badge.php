@@ -356,6 +356,7 @@ class Badge extends BaseController {
 				case 'verticalAdvLabelFive':
 				case 'fontFamily':
 				case 'borderColor':
+				case 'singleWidthBadge':
 				case 'borderWidth':
 				case 'badgeTimer':
 				case 'badgeLabelAdv':

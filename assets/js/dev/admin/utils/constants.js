@@ -189,7 +189,11 @@ export default function BadgeCssandAdv( badge ) {
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
 			right: ${ badge.badgePositionX == 'right' ? '0px' : '' };
             height: ${ badge.heightBadge }px;
-			width: ${ badge.widthBadge }px;
+			width: ${
+				badge.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge.singleWidthBadge }px`
+			};
 			opacity: ${ badge.opacity };
 			text-align: center;
             text-shadow: none;

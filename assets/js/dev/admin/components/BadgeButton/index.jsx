@@ -246,12 +246,19 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 		.replace( /\{qty\}/g, '11' )
 		.replace( /\{sku\}/g, 'sku' );
 
+	let textPrev = '(Archive Page)';
+	if ( badge.sizePage === 'archivePage' ) {
+		textPrev = '(Archive Page)';
+	} else {
+		textPrev = '(Single Page)';
+	}
 	return (
 		<div className="asnp-esb-wrapper">
 			<div className="asnp-esb-containerAd">
 				<div className="asnp-esb-product">
 					<label className="asnp-esb-productLable">
-						{ __( 'Preview', 'easy-sale-badges-for-woocommerce' ) }
+						{ __( 'Preview ', 'easy-sale-badges-for-woocommerce' ) }
+						{ __( textPrev, 'easy-sale-badges-for-woocommerce' ) }
 					</label>
 					<div className="asnp-esb-product2">
 						<div

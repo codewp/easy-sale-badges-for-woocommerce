@@ -49,6 +49,8 @@ const MenuItem = ( props ) => {
 						onChange={ props.onChange }
 						badgeColor={ props.badge.badgeColor }
 						widthBadge={ props.badge.widthBadge }
+						singleWidthBadge={ props.badge.singleWidthBadge }
+						sizePage={ props.badge.sizePage }
 						badgeStyles={ props.badge.badgeStyles }
 						badgePositionX={ props.badge.badgePositionX }
 						heightBadge={ props.badge.heightBadge }
