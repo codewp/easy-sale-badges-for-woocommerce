@@ -301,7 +301,7 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 			}
 			if ( isset( $badge->singleWidthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->singleWidthBadge  . 'px;';
-			} else {
+			} elseif ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadge  . 'px;';
 			}
 			if ( isset( $badge->badgePositionX ) ) {
@@ -447,7 +447,7 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 			}
 			if ( isset( $badge->singleWidthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->singleWidthBadge  . 'px;';
-			} else {
+			} elseif ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadge  . 'px;';
 			}
 			if ( isset( $badge->badgePositionX ) ) {
@@ -613,7 +613,7 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 			}
 			if ( isset( $badge->singleWidthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->singleWidthBadge  . 'px;';
-			} else {
+			} elseif ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadge  . 'px;';
 			}
 			if ( isset( $badge->badgePositionX ) ) {
@@ -779,7 +779,7 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 			}
 			if ( isset( $badge->singleWidthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->singleWidthBadge  . 'px;';
-			} else {
+			} elseif ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadge  . 'px;';
 			}
 			if ( isset( $badge->badgePositionX ) ) {
@@ -950,7 +950,7 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 			}
 			if ( isset( $badge->singleWidthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->singleWidthBadge  . 'px;';
-			} else {
+			} elseif ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadge  . 'px;';
 			}
 			if ( isset( $badge->fontSizeText ) ) {
@@ -1096,7 +1096,7 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 			}
 			if ( isset( $badge->singleWidthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->singleWidthBadge  . 'px;';
-			} else {
+			} elseif ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadge  . 'px;';
 			}
 			if ( isset( $badge->fontSizeText ) ) {
