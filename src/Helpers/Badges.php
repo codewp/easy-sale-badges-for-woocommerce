@@ -2164,12 +2164,14 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 			$dynamic_styles .= ' top: 0px;';
 			$dynamic_styles .= ' left: 0px;';
 			$dynamic_styles .= ' border-radius: 70% 30% 30% 70% / 60% 40% 60% 40% !important;';
-			$dynamic_styles .= '  z-index: 99;';
+			$dynamic_styles .= ' z-index: 99;';
 
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background: ' . $badge->badgeColor . ';';
 			}
-			if ( isset( $badge->heightBadge ) ) {
+			if ( isset( $badge->singleHeightBadge ) ) {
+				$dynamic_styles .= ' height: ' . $badge->singleWidthBadge . 'px;';
+			} elseif ( isset( $badge->heightBadge ) ) {
 				$dynamic_styles .= ' height: ' . $badge->widthBadge . 'px;';
 			}
 			if ( isset( $badge->singleWidthBadge ) ) {
@@ -2310,7 +2312,9 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background: ' . $badge->badgeColor . ';';
 			}
-			if ( isset( $badge->heightBadge ) ) {
+			if ( isset( $badge->singleHeightBadge ) ) {
+				$dynamic_styles .= ' height: ' . $badge->singleWidthBadge . 'px;';
+			} elseif ( isset( $badge->heightBadge ) ) {
 				$dynamic_styles .= ' height: ' . $badge->widthBadge . 'px;';
 			}
 			if ( isset( $badge->singleWidthBadge ) ) {
@@ -2450,7 +2454,9 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 			if ( isset( $badge->badgeColor ) ) {
 				$dynamic_styles .= ' background: ' . $badge->badgeColor . ';';
 			}
-			if ( isset( $badge->heightBadge ) ) {
+			if ( isset( $badge->singleHeightBadge ) ) {
+				$dynamic_styles .= ' height: ' . $badge->singleWidthBadge . 'px;';
+			} elseif ( isset( $badge->heightBadge ) ) {
 				$dynamic_styles .= ' height: ' . $badge->widthBadge . 'px;';
 			}
 			if ( isset( $badge->singleWidthBadge ) ) {
@@ -2583,7 +2589,9 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 			if ( isset( $badge->badgeColor ) && isset( $badge->borderWidth ) ) {
 				$dynamic_styles .= ' border-bottom: ' . $badge->borderWidth . 'px solid '. $badge->badgeColor .';';
 			}
-			if ( isset( $badge->heightBadge ) ) {
+			if ( isset( $badge->singleHeightBadge ) ) {
+				$dynamic_styles .= ' height: ' . $badge->singleHeightBadge . 'px;';
+			} elseif ( isset( $badge->heightBadge ) ) {
 				$dynamic_styles .= ' height: ' . $badge->heightBadge . 'px;';
 			}
 			if ( isset( $badge->singleWidthBadge ) ) {
@@ -2716,7 +2724,9 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 			if ( isset( $badge->badgeColor ) && isset( $badge->borderWidth ) ) {
 				$dynamic_styles .= ' border: ' . $badge->borderWidth . 'px solid '. $badge->badgeColor .';';
 			}
-			if ( isset( $badge->heightBadge ) ) {
+			if ( isset( $badge->singleHeightBadge ) ) {
+				$dynamic_styles .= ' height: ' . $badge->singleHeightBadge . 'px;';
+			} elseif ( isset( $badge->heightBadge ) ) {
 				$dynamic_styles .= ' height: ' . $badge->heightBadge . 'px;';
 			}
 			if ( isset( $badge->singleWidthBadge ) ) {
