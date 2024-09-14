@@ -50,6 +50,7 @@ const MenuItem = ( props ) => {
 						badgeColor={ props.badge.badgeColor }
 						widthBadge={ props.badge.widthBadge }
 						singleWidthBadge={ props.badge.singleWidthBadge }
+						singleHeightBadge={ props.badge.singleHeightBadge }
 						badgeStyles={ props.badge.badgeStyles }
 						badgePositionX={ props.badge.badgePositionX }
 						heightBadge={ props.badge.heightBadge }

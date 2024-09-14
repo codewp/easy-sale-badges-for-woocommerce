@@ -71,6 +71,7 @@ const defaultBadge = {
 	borderColor: '#9819fc',
 	sizePage: 'archivePage',
 	singleWidthBadge: '70',
+	singleHeightBadge: '30',
 };
 
 export default function Badge() {

@@ -217,7 +217,7 @@ const StyleOptions = ( props ) => {
 					<label>
 						<span className="asnp-field-title asnp-ml-6">
 							{ __(
-								'Height (Pixel)',
+								'Height on Archive Page (Px)',
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</span>
@@ -305,7 +305,7 @@ const StyleOptions = ( props ) => {
 					<label>
 						<span className="asnp-field-title asnp-ml-6">
 							{ __(
-								'Height (Pixel)',
+								'Height on Product Page (Px)',
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</span>
@@ -321,10 +321,10 @@ const StyleOptions = ( props ) => {
 										: 'asnp-text-field'
 								}
 								placeholder="0"
-								value={ props.heightBadge }
+								value={ props.singleHeightBadge }
 								onChange={ ( e ) =>
 									props.onChange(
-										'heightBadge',
+										'singleHeightBadge',
 										e.target.value
 									)
 								}
