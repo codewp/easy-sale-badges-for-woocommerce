@@ -70,7 +70,7 @@ const defaultBadge = {
 	borderWidth: '2',
 	borderColor: '#9819fc',
 	sizePage: 'archivePage',
-	singleWidthBadge: '70',
+	singleWidthBadge: '60',
 	singleHeightBadge: '30',
 };
 
