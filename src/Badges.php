@@ -7,6 +7,7 @@ defined( 'ABSPATH' ) || exit;
 use AsanaPlugins\WooCommerce\SaleBadges\Validator\ProductValidator;
 use AsanaPlugins\WooCommerce\SaleBadges\Validator\DateTimeValidator;
 use function AsanaPlugins\WooCommerce\SaleBadges\Helpers\Badges\output_badges;
+use function AsanaPlugins\WooCommerce\SaleBadges\Helpers\Badges\get_dynamic_styles;
 
 class Badges {
 
@@ -70,5 +71,13 @@ class Badges {
 
 		return $badges;
 	}
+
+	public function get_dynamic_styles() {
+		if ( empty( $this->badges ) ) {
+		  return '';
+		}
+	
+		return get_dynamic_styles( $this->badges );
+	  }
 
 }
