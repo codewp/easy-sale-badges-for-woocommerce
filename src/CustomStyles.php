@@ -40,9 +40,20 @@ class CustomStyles {
 	}
 
 	public function output_styles() {
-		if ( ! empty( $this->styles ) ) {
-			echo "\n<style id='asnp-wesb-inline-style'>\n" . wp_kses_post( $this->styles ) . "\n</style>\n";
+		if ( 
+		  ! is_ajax() && 
+		  ! is_admin() && 
+		  (int) ASNP_WESB()->settings->get_setting( 'loadDynamicStyles', 0 ) 
+		) {
+		  $badges = get_plugin()->container()->get( Badges::class );
+		  if ( ! $badges ) {
+			$badges->get_dynamic_styles();
+		  }
 		}
-	}
+	
+		if ( ! empty( $this->styles ) ) {
+		  echo "\n<style id='asnp-wesb-inline-style'>\n" . wp_kses_post( $this->styles ) . "\n</style>\n";
+		}
+	  }
 
 }
