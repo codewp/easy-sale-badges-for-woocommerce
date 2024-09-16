@@ -8,6 +8,22 @@ use function AsanaPlugins\WooCommerce\SaleBadges\add_custom_style;
 use function AsanaPlugins\WooCommerce\SaleBadges\is_pro_active;
 use function AsanaPlugins\WooCommerce\SaleBadges\translate;
 
+
+function get_dynamic_styles($badges, $hide = false, $return = false, $out_of_image = false){
+	if ( empty( $badges ) ) {
+		return '';
+	}
+
+	$styles = '';
+	foreach ( $badges as $badge ) {
+		$style = output_badge( $badge, $hide, $return, $out_of_image );
+		if ( ! empty( $style ) ) {
+			$styles .= $style;
+		}
+	}
+	return $styles;
+}
+
 function output_badges( $badges, $hide = false, $return = false, $out_of_image = false ) {
 	if ( empty( $badges ) ) {
 		return '';
