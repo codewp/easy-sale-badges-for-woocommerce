@@ -45,7 +45,7 @@ function output_badge( $badge, $hide = false, $return = false, $out_of_image = f
 	}
 }
 
-function output_css_badge( $badge, $hide = false, $return = false, $out_of_image = false ) {
+function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false  ) {
 	if ( ! $badge ) {
 		return '';
 	}
@@ -1704,7 +1704,18 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 		'height_cont_badge' => $height_cont_badge,
 		'horiz_and_vert'    => $horiz_and_vert,
 	];
-	$dynamic_styles = apply_filters( 'asnp_wesb_css_badge_styles', $dynamic_styles, $badge, $extra_data );
+	$dynamic_styles = apply_filters( 'asnp_wesb_css_badge_styles', $dynamic_styles, $badge, $extra_data );	
+
+	return $dynamic_styles;
+
+}
+
+function output_css_badge( $badge, $hide = false, $return = false, $out_of_image = false ) {
+	if ( ! $badge ) {
+		return '';
+	}
+
+	$dynamic_styles = css_badge_dynamic_styles( $badge, $hide, $out_of_image );
 
 	add_custom_style( $dynamic_styles, $badge );
 
