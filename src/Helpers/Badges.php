@@ -8,22 +8,6 @@ use function AsanaPlugins\WooCommerce\SaleBadges\add_custom_style;
 use function AsanaPlugins\WooCommerce\SaleBadges\is_pro_active;
 use function AsanaPlugins\WooCommerce\SaleBadges\translate;
 
-
-function get_dynamic_styles($badges, $hide = false, $return = false, $out_of_image = false){
-	if ( empty( $badges ) ) {
-		return '';
-	}
-
-	$styles = '';
-	foreach ( $badges as $badge ) {
-		$style = output_badge( $badge, $hide, $return, $out_of_image );
-		if ( ! empty( $style ) ) {
-			$styles .= $style;
-		}
-	}
-	return $styles;
-}
-
 function output_badges( $badges, $hide = false, $return = false, $out_of_image = false ) {
 	if ( empty( $badges ) ) {
 		return '';
@@ -59,6 +43,56 @@ function output_badge( $badge, $hide = false, $return = false, $out_of_image = f
 	if ( $return ) {
 		return '';
 	}
+}
+
+function output_css_badge( $badge, $hide = false, $return = false, $out_of_image = false ) {
+	if ( ! $badge ) {
+		return '';
+	}
+
+	$dynamic_styles = css_badge_dynamic_styles( $badge, $hide, $out_of_image );
+	add_custom_style( $dynamic_styles, $badge );
+
+	$class_names = 'asnp-esb-badge-element asnp-esb-productBadge asnp-esb-productBadge-'. absint( $badge->id );
+
+	if ( ! empty( $badge->cssLabelPosition ) && 'outOfImage' === $badge->cssLabelPosition ) {
+		$class_names .= ' asnp-esb-css-label-out-of-image asnp-position-css-label';
+		$hide = false;
+	  } else {
+		$class_names .= ' asnp-esb-css-label-on-image';
+	  }
+
+	if ( $hide ) {
+		$class_names .= ' asnp-esb-badge-hidden';
+	}
+
+	$class_names = apply_filters( 'asnp_wesb_css_badge_class_names', $class_names, $badge, $hide );
+
+	$label = translate( $badge->badgeLabel, 'labelTranslate', $badge );
+	$label = apply_filters( 'asnp_wesb_css_badge_label', $label, $badge );
+
+	add_filter( 'safe_style_css', 'AsanaPlugins\WooCommerce\SaleBadges\allowed_inline_styles' );
+
+	// Css Badge
+	$output = '<div class="' . esc_attr( $class_names ) . '"' . ( $hide ? ' style="display: none;"' : '' ) . '>';
+	$output .= '<div class="asnp-esb-badge-'. absint( $badge->id ) .'">';
+	$output .= '<span class="asnp-esb-inner-span2-'. absint( $badge->id ) .'"></span>';
+	$output .= '<div class="asnp-esb-inner-span1-'. absint( $badge->id ) .'">';
+	$output .= '<div class="asnp-esb-inner-span4-'. absint( $badge->id ) .'">' . wp_kses_post( $label ) . '</div>';
+	$output .= '</div>';
+	$output .= '</div>';
+	$output .= '</div>';
+
+	$output = apply_filters( 'asnp_wesb_css_badge', $output, $badge, $hide );
+	$output = wp_kses_post( $output );
+
+	remove_filter( 'safe_style_css', 'AsanaPlugins\WooCommerce\SaleBadges\allowed_inline_styles' );
+
+	if ( $return ) {
+		return $output;
+	}
+
+	echo $output;
 }
 
 function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false  ) {
@@ -1612,7 +1646,7 @@ function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false 
 			}
 			if ( isset( $badge->opacity ) ) {
 				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
-			}			
+			}
 			if ( isset( $badge->zIndex ) ) {
 				$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
@@ -1678,7 +1712,7 @@ function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false 
 			}
 			if ( isset( $badge->opacity ) ) {
 				$dynamic_styles .= ' opacity: ' . $badge->opacity . ';';
-			}	
+			}
 			if ( isset( $badge->topLeftRadius ) ) {
 				$dynamic_styles .= ' border-top-left-radius: ' . $badge->topLeftRadius . 'px;';
 			}
@@ -1690,7 +1724,7 @@ function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false 
 			}
 			if ( isset( $badge->bottomRightRadius ) ) {
 				$dynamic_styles .= ' border-bottom-right-radius: ' . $badge->bottomRightRadius . 'px;';
-			}		
+			}
 			if ( isset( $badge->zIndex ) ) {
 				$dynamic_styles .= ' z-index: ' . $badge->zIndex . ';';
 			}
@@ -1710,7 +1744,7 @@ function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false 
 			}
 			$dynamic_styles .= '}';
 			break;
-					
+
 	}
 
 	$extra_data     = [
@@ -1720,59 +1754,43 @@ function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false 
 		'height_cont_badge' => $height_cont_badge,
 		'horiz_and_vert'    => $horiz_and_vert,
 	];
-	$dynamic_styles = apply_filters( 'asnp_wesb_css_badge_styles', $dynamic_styles, $badge, $extra_data );	
+	$dynamic_styles = apply_filters( 'asnp_wesb_css_badge_styles', $dynamic_styles, $badge, $extra_data );
 
 	return $dynamic_styles;
 
 }
 
-function output_css_badge( $badge, $hide = false, $return = false, $out_of_image = false ) {
-	if ( ! $badge ) {
+function get_dynamic_styles( $badges, $hide = false, $return = false, $out_of_image = false ) {
+	if ( empty( $badges ) ) {
 		return '';
 	}
 
-	$dynamic_styles = css_badge_dynamic_styles( $badge, $hide, $out_of_image );
+	$styles = '';
+	foreach ( $badges as $badge ) {
+		$style = get_dynamic_style( $badge, $hide, $return, $out_of_image );
+		if ( ! empty( $style ) ) {
+			$styles .= $style;
+		}
+	}
+	return $styles;
+}
 
-	add_custom_style( $dynamic_styles, $badge );
-
-	$class_names = 'asnp-esb-badge-element asnp-esb-productBadge asnp-esb-productBadge-'. absint( $badge->id );
-
-	if ( ! empty( $badge->cssLabelPosition ) && 'outOfImage' === $badge->cssLabelPosition ) {
-		$class_names .= ' asnp-esb-css-label-out-of-image asnp-position-css-label';
-		$hide = false;
-	  } else {
-		$class_names .= ' asnp-esb-css-label-on-image';
-	  }
-
-	if ( $hide ) {
-		$class_names .= ' asnp-esb-badge-hidden';
+function get_dynamic_style( $badge, $hide, $out_of_image ) {
+	if ( isset( $badge->imgbadge ) && $badge->imgbadge == 1 ) {
+		if ( is_pro_active() ) {
+			return \AsanaPlugins\WooCommerce\SaleBadgesPro\Helpers\Badges\image_badge_dynamic_styles( $badge, $hide, $out_of_image );
+		}
+	} elseif ( isset( $badge->imgbadgeAdv ) && $badge->imgbadgeAdv == 1 ) {
+		if ( is_pro_active() ) {
+			return \AsanaPlugins\WooCommerce\SaleBadgesPro\Helpers\Badges\image_adv_badge_dynamic_styles( $badge, $hide, $out_of_image );
+		}
+	} elseif ( isset( $badge->useTimerBadge ) && $badge->useTimerBadge == 1 ) {
+		if ( is_pro_active() ) {
+			return \AsanaPlugins\WooCommerce\SaleBadgesPro\Helpers\Badges\timer_badge_dynamic_styles( $badge, $hide, $out_of_image );
+		}
+	} elseif ( ! empty( $badge->badgeStyles ) ) {
+		return css_badge_dynamic_styles( $badge, $hide, $out_of_image );
 	}
 
-	$class_names = apply_filters( 'asnp_wesb_css_badge_class_names', $class_names, $badge, $hide );
-
-	$label = translate( $badge->badgeLabel, 'labelTranslate', $badge );
-	$label = apply_filters( 'asnp_wesb_css_badge_label', $label, $badge );
-
-	add_filter( 'safe_style_css', 'AsanaPlugins\WooCommerce\SaleBadges\allowed_inline_styles' );
-
-	// Css Badge
-	$output = '<div class="' . esc_attr( $class_names ) . '"' . ( $hide ? ' style="display: none;"' : '' ) . '>';
-	$output .= '<div class="asnp-esb-badge-'. absint( $badge->id ) .'">';
-	$output .= '<span class="asnp-esb-inner-span2-'. absint( $badge->id ) .'"></span>';
-	$output .= '<div class="asnp-esb-inner-span1-'. absint( $badge->id ) .'">';
-	$output .= '<div class="asnp-esb-inner-span4-'. absint( $badge->id ) .'">' . wp_kses_post( $label ) . '</div>';
-	$output .= '</div>';
-	$output .= '</div>';
-	$output .= '</div>';
-
-	$output = apply_filters( 'asnp_wesb_css_badge', $output, $badge, $hide );
-	$output = wp_kses_post( $output );
-
-	remove_filter( 'safe_style_css', 'AsanaPlugins\WooCommerce\SaleBadges\allowed_inline_styles' );
-
-	if ( $return ) {
-		return $output;
-	}
-
-	echo $output;
+	return '';
 }

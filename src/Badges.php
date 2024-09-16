@@ -74,10 +74,10 @@ class Badges {
 
 	public function get_dynamic_styles() {
 		if ( empty( $this->badges ) ) {
-		  return '';
+			return '';
 		}
-	
+
 		return get_dynamic_styles( $this->badges );
-	  }
+	}
 
 }
