@@ -100,6 +100,7 @@ export default function Settings() {
 						}
 						hideWooCommerceBadges={ settings.hideWooCommerceBadges }
 						negativeSign={ settings.negativeSign }
+						loadDynamicStyles={ settings.loadDynamicStyles }
 					/>
 				) }
 				{ 'productPage' === activeMenu && (
