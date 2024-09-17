@@ -116,8 +116,11 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 	echo $output;
 }
 
-function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false  ) {	
-	
+function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false  ) {
+	if ( ! $badge ) {
+		return '';
+	}
+
 	if ( null !== $out_of_image && ! empty( $badge->cssLabelPosition ) ) {
 		if ( $out_of_image && 'onImage' === $badge->cssLabelPosition ) {
 			return '';
@@ -1769,10 +1772,13 @@ function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false 
 	$dynamic_styles = apply_filters( 'asnp_wesb_css_badge_styles', $dynamic_styles, $badge, $extra_data );
 
 	return $dynamic_styles;
-
 }
 
 function get_dynamic_style( $badge, $hide = false, $out_of_image = false ) {
+	if ( ! $badge ) {
+		return '';
+	}
+
 	if ( isset( $badge->imgbadge ) && $badge->imgbadge == 1 ) {
 		if ( is_pro_active() ) {
 			return \AsanaPlugins\WooCommerce\SaleBadgesPro\Helpers\Badges\image_badge_dynamic_styles( $badge, $hide, $out_of_image );
