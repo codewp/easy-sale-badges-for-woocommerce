@@ -1750,6 +1750,7 @@ function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false 
 		'horiz_and_vert'    => $horiz_and_vert,
 	];
 	$dynamic_styles = apply_filters( 'asnp_wesb_css_badge_styles', $dynamic_styles, $badge, $extra_data );
+	
 	add_custom_style( $dynamic_styles, $badge );
 
 	return $dynamic_styles;
