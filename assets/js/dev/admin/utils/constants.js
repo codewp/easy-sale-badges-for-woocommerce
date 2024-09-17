@@ -8,6 +8,7 @@ export const defaultSettings = {
 	singleCustomHooks: '',
 	loopCustomHooks: '',
 	showBadgeProductPage: 1,
+	loadDynamicStyles: 0,
 	singleContainer: '',
 	loopOutOfImagePosition: 'before_shop_loop_item_title',
 	singleOutOfImagePosition: 'before_single_item_title',

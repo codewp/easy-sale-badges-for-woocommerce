@@ -61,6 +61,32 @@ const General = ( props ) => {
 				</label>
 			</div>
 			<div>
+				<div className="asnp-flex asnp-flex-row md:asnp-w-[21rem] asnp-w-[20rem] asnp-justify-between">
+					<div className="asnp-field-title md:asnp-min-w-1/3">
+						{ __(
+							'Preload Dynamic Styles on Archive Pages',
+							'easy-sale-badges-for-woocommerce'
+						) }
+					</div>
+					<div>
+						<Toggle
+							value={ 1 == props.loadDynamicStyles }
+							onChange={ ( value ) =>
+								props.onChange( 'loadDynamicStyles', value ? 1 : 0 )
+							}
+						/>
+					</div>
+				</div>
+				<label className="asnp-block asnp-space-y-1 asnp-text-gray-500">
+					<p className="asnp-text-xs asnp-text-gray-400">
+						{ __(
+							'Load all dynamic styles on product archive pages during the first load. Useful when using AJAX requests or infinite scroll to ensure consistent styling as products are dynamically loaded.',
+							'easy-sale-badges-for-woocommerce'
+						) }
+					</p>
+				</label>
+			</div>
+			<div>
 				<label className="asnp-block asnp-space-y-2 asnp-max-w-lg">
 					<div className="asnp-flex">
 						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">

@@ -11,6 +11,13 @@ class CustomStyles {
 	protected $badges = [];
 
 	public function init() {
+		if ( has_action( 'woocommerce_after_shop_loop' ) ) {
+			add_action( 'woocommerce_after_shop_loop', [ $this, 'load_dynamic_styles' ] );
+		} elseif ( has_action( 'woocommerce_before_shop_loop' ) ) {
+			add_action( 'woocommerce_before_shop_loop', [ $this, 'load_dynamic_styles' ] );
+		} else {
+			add_action( 'wp_footer', [ $this, 'load_dynamic_styles' ], 5 );
+		}
 		add_action( 'wp_footer', array( $this, 'output_styles' ) );
 	}
 
@@ -42,6 +49,21 @@ class CustomStyles {
 	public function output_styles() {
 		if ( ! empty( $this->styles ) ) {
 			echo "\n<style id='asnp-wesb-inline-style'>\n" . wp_kses_post( $this->styles ) . "\n</style>\n";
+		}
+	}
+
+	public function load_dynamic_styles() {
+		if ( is_admin() || is_ajax() ) {
+			return;
+		}
+
+		if ( (int) ASNP_WESB()->settings->get_setting( 'loadDynamicStyles', 0 ) ) {
+			$badges = get_plugin()->container()->get( Badges::class );
+			if ( ! $badges ) {
+				return;
+			}
+
+			$badges->add_dynamic_styles();
 		}
 	}
 
