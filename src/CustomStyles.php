@@ -63,7 +63,7 @@ class CustomStyles {
 				return;
 			}
 
-			$this->add_style( $badges->get_dynamic_styles() );
+			$badges->add_dynamic_styles();
 		}
 	}
 

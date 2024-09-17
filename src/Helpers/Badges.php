@@ -1775,7 +1775,7 @@ function get_dynamic_styles( $badges, $hide = false, $return = false, $out_of_im
 	return $styles;
 }
 
-function get_dynamic_style( $badge, $hide, $out_of_image ) {
+function get_dynamic_style( $badge, $hide = false, $out_of_image = false ) {
 	if ( isset( $badge->imgbadge ) && $badge->imgbadge == 1 ) {
 		if ( is_pro_active() ) {
 			return \AsanaPlugins\WooCommerce\SaleBadgesPro\Helpers\Badges\image_badge_dynamic_styles( $badge, $hide, $out_of_image );
