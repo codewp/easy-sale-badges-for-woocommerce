@@ -245,13 +245,13 @@ function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false 
 
 	if ( isset( $badge->cssLabelPosition ) && 'outOfImage' == $badge->cssLabelPosition) {
 		$dynamic_styles .= '.asnp-position-css-label {';
-			if ( isset( $badge->badgePositionOutofImage ) ) {
-				$dynamic_styles .= ' justify-content: ' . $badge->badgePositionOutofImage . ';';
-				$dynamic_styles .= ' display: flex;';
-				$dynamic_styles .= ' width: 100% !important;';
-
-			}
-		$dynamic_styles .= '}';	}
+		if ( isset( $badge->badgePositionOutofImage ) ) {
+			$dynamic_styles .= ' justify-content: ' . $badge->badgePositionOutofImage . ';';
+			$dynamic_styles .= ' display: flex;';
+			$dynamic_styles .= ' width: 100% !important;';
+		}
+		$dynamic_styles .= '}';
+	}
 
 	switch ( $badge->badgeStyles ) {
 		case 'badge1':
@@ -1512,6 +1512,7 @@ function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false 
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= '}';
 		break;
+
 		case 'badge18':
 			$dynamic_styles .= '.asnp-esb-productBadge-'. absint( $badge->id ) .' {';
 			if ( isset( $badge->widthBadge ) ) {
@@ -1592,6 +1593,7 @@ function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false 
 			$dynamic_styles .= ' display: block;';
 			$dynamic_styles .= '}';
 		break;
+
 		case 'badge19':
 			$dynamic_styles .= '.asnp-esb-productBadge-'. absint( $badge->id ) .' {';
 			if ( isset( $badge->widthBadge ) ) {
@@ -1659,6 +1661,7 @@ function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false 
 			}
 			$dynamic_styles .= '}';
 			break;
+
 		case 'badge20':
 			$dynamic_styles .= '.asnp-esb-productBadge-'. absint( $badge->id ) .' {';
 			if ( isset( $badge->widthBadge ) ) {
@@ -1737,10 +1740,9 @@ function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false 
 			}
 			$dynamic_styles .= '}';
 			break;
-
 	}
 
-	$extra_data     = [
+	$extra_data = [
 		'hide'              => $hide,
 		'inset_property'    => $inset_property,
 		'width_cont_badge'  => $width_cont_badge,
