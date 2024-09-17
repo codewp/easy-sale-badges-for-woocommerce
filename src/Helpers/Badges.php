@@ -50,8 +50,25 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 		return '';
 	}
 
-	$dynamic_styles = css_badge_dynamic_styles( $badge, $hide, $out_of_image );
-	add_custom_style( $dynamic_styles, $badge );
+	if ( null !== $out_of_image && ! empty( $badge->cssLabelPosition ) ) {
+		if ( $out_of_image && 'onImage' === $badge->cssLabelPosition ) {
+			return '';
+		}
+
+		if ( ! $out_of_image && 'outOfImage' === $badge->cssLabelPosition ) {
+			return '';
+		}
+	} elseif ( $out_of_image ) {
+		return '';
+	}
+
+	// If threshold is set, check the threshold time is reached.
+	if ( isset( $badge->selectedDateFrom ) && '' != $badge->selectedDateFrom ) {
+		$now = current_time( 'timestamp' );
+		if ( 0 > $now - strtotime( $badge->selectedDateFrom, $now ) ) {
+			return '';
+		}
+	}
 
 	$class_names = 'asnp-esb-badge-element asnp-esb-productBadge asnp-esb-productBadge-'. absint( $badge->id );
 
@@ -95,31 +112,7 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 	echo $output;
 }
 
-function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false  ) {
-	if ( ! $badge ) {
-		return '';
-	}
-
-	if ( null !== $out_of_image && ! empty( $badge->cssLabelPosition ) ) {
-		if ( $out_of_image && 'onImage' === $badge->cssLabelPosition ) {
-			return '';
-		}
-
-		if ( ! $out_of_image && 'outOfImage' === $badge->cssLabelPosition ) {
-			return '';
-		}
-	} elseif ( $out_of_image ) {
-		return '';
-	}
-
-	// If threshold is set, check the threshold time is reached.
-	if ( isset( $badge->selectedDateFrom ) && '' != $badge->selectedDateFrom ) {
-		$now = current_time( 'timestamp' );
-		if ( 0 > $now - strtotime( $badge->selectedDateFrom, $now ) ) {
-			return '';
-		}
-	}
-
+function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false  ) {	
 	$inset_property = '';
 	if ( ! empty( $badge->badgePositionX ) && ! empty( $badge->badgePositionY ) ) {
 		if ( 'top' === $badge->badgePositionY ) {
@@ -1755,6 +1748,7 @@ function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false 
 		'horiz_and_vert'    => $horiz_and_vert,
 	];
 	$dynamic_styles = apply_filters( 'asnp_wesb_css_badge_styles', $dynamic_styles, $badge, $extra_data );
+	add_custom_style( $dynamic_styles, $badge );
 
 	return $dynamic_styles;
 
