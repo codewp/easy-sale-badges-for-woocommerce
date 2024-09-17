@@ -83,6 +83,10 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 		$class_names .= ' asnp-esb-badge-hidden';
 	}
 
+	$dynamic_styles = css_badge_dynamic_styles( $badge, $hide, $out_of_image );
+	
+	add_custom_style( $dynamic_styles, $badge );
+
 	$class_names = apply_filters( 'asnp_wesb_css_badge_class_names', $class_names, $badge, $hide );
 
 	$label = translate( $badge->badgeLabel, 'labelTranslate', $badge );
@@ -1750,8 +1754,6 @@ function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false 
 		'horiz_and_vert'    => $horiz_and_vert,
 	];
 	$dynamic_styles = apply_filters( 'asnp_wesb_css_badge_styles', $dynamic_styles, $badge, $extra_data );
-	
-	add_custom_style( $dynamic_styles, $badge );
 
 	return $dynamic_styles;
 
