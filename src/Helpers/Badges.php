@@ -84,7 +84,7 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 	}
 
 	$dynamic_styles = css_badge_dynamic_styles( $badge, $hide, $out_of_image );
-	
+
 	add_custom_style( $dynamic_styles, $badge );
 
 	$class_names = apply_filters( 'asnp_wesb_css_badge_class_names', $class_names, $badge, $hide );
@@ -117,6 +117,19 @@ function output_css_badge( $badge, $hide = false, $return = false, $out_of_image
 }
 
 function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false  ) {	
+	
+	if ( null !== $out_of_image && ! empty( $badge->cssLabelPosition ) ) {
+		if ( $out_of_image && 'onImage' === $badge->cssLabelPosition ) {
+			return '';
+		}
+
+		if ( ! $out_of_image && 'outOfImage' === $badge->cssLabelPosition ) {
+			return '';
+		}
+	} elseif ( $out_of_image ) {
+		return '';
+	}
+
 	$inset_property = '';
 	if ( ! empty( $badge->badgePositionX ) && ! empty( $badge->badgePositionY ) ) {
 		if ( 'top' === $badge->badgePositionY ) {
