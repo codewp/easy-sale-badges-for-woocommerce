@@ -78,7 +78,19 @@ class Badges {
 		}
 
 		foreach ( $this->badges as $badge ) {
-			$style = get_dynamic_style( $badge );
+			$out_of_image = false;
+			if ( isset( $badge->cssLabelPosition ) && 'outOfImage' === $badge->cssLabelPosition ) {
+				if ( isset( $badge->useTimerBadge ) && 1 == $badge->useTimerBadge ) {
+					$out_of_image = true;
+				} elseif (
+					( ! isset( $badge->imgbadge ) || 0 == $badge->imgbadge ) &&
+					( ! isset( $badge->imgbadgeAdv ) || 0 == $badge->imgbadgeAdv )
+				) {
+					$out_of_image = true;
+				}
+			}
+
+			$style = get_dynamic_style( $badge, false, $out_of_image );
 			if ( ! empty( $style ) ) {
 				add_custom_style( $style, $badge );
 			}

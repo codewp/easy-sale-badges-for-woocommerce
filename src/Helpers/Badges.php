@@ -1760,21 +1760,6 @@ function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false 
 
 }
 
-function get_dynamic_styles( $badges, $hide = false, $return = false, $out_of_image = false ) {
-	if ( empty( $badges ) ) {
-		return '';
-	}
-
-	$styles = '';
-	foreach ( $badges as $badge ) {
-		$style = get_dynamic_style( $badge, $hide, $return, $out_of_image );
-		if ( ! empty( $style ) ) {
-			$styles .= $style;
-		}
-	}
-	return $styles;
-}
-
 function get_dynamic_style( $badge, $hide = false, $out_of_image = false ) {
 	if ( isset( $badge->imgbadge ) && $badge->imgbadge == 1 ) {
 		if ( is_pro_active() ) {
