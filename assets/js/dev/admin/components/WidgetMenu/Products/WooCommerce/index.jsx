@@ -26,7 +26,10 @@ const WooCommerce = () => {
 						{ groupIndex >= 1 && (
 							<label className="asnp-block asnp-space-y-1">
 								<span className="asnp-field-title">
-									{ __( 'Or', 'easy-sale-badges-for-woocommerce' ) }
+									{ __(
+										'Or',
+										'easy-sale-badges-for-woocommerce'
+									) }
 								</span>
 							</label>
 						) }
@@ -108,6 +111,24 @@ const WooCommerce = () => {
 										>
 											{ __(
 												'Featured Products (Pro)',
+												'easy-sale-badges-for-woocommerce'
+											) }
+										</option>
+										<option
+											disabled
+											className="asnp-text-red-600"
+										>
+											{ __(
+												'Product Attributes (Pro)',
+												'easy-sale-badges-for-woocommerce'
+											) }
+										</option>
+										<option
+											disabled
+											className="asnp-text-red-600"
+										>
+											{ __(
+												'Product Custom Attributes (Pro)',
 												'easy-sale-badges-for-woocommerce'
 											) }
 										</option>
@@ -279,7 +300,10 @@ const WooCommerce = () => {
 					{ badge.items.length > 1 && (
 						<label className="asnp-block asnp-space-y-1">
 							<span className="asnp-field-title">
-								{ __( 'Or', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Or',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</span>
 						</label>
 					) }
@@ -290,7 +314,10 @@ const WooCommerce = () => {
 						} }
 					>
 						{ sprintf(
-							__( '%s Or Group', 'easy-sale-badges-for-woocommerce' ),
+							__(
+								'%s Or Group',
+								'easy-sale-badges-for-woocommerce'
+							),
 							'+'
 						) }
 					</button>
