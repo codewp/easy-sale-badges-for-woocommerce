@@ -26,8 +26,8 @@ const TextOptions = ( props ) => {
 	return (
 		<div className="asnp-ew-line">
 			<div className="asnp-mt-6 asnp-flex">
-				<div>
-					<label className="asnp-w-[20rem]">
+				<div className="md:asnp-w-[15rem] lg:asnp-w-[20rem] xl:asnp-w-[25rem]">
+					<label>
 						<span className="asnp-field-title">
 							{ __(
 								'Label',
@@ -86,7 +86,7 @@ const TextOptions = ( props ) => {
 							)
 						}
 					/>
-					<div className="asnp-flex asnp-font-semibold asnp-text-base">
+					<div className="asnp-flex asnp-font-semibold asnp-text-sm">
 						{ __(
 							'Percentage Discount amount',
 							'easy-sale-badges-for-woocommerce'

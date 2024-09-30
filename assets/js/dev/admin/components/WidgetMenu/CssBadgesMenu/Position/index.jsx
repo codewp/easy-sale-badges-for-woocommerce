@@ -245,10 +245,10 @@ const Position = ( props ) => {
 				</div>
 				<div className="asnp-flex asnp-mt-3 asnp-mb-8">
 					<label>
-						<span className="asnp-field-title asnp-ml-6">
+						<span className="asnp-field-title asnp-ml-4 xl:asnp-ml-6">
 							{ __( 'Top', 'easy-sale-badges-for-woocommerce' ) }
 						</span>
-						<div className="asnp-w-[10rem] asnp-ml-6">
+						<div className="asnp-w-[7rem] asnp-ml-4 xl:asnp-w-[9rem] xl:asnp-ml-6">
 							<input
 								disabled={ disablePositionTop }
 								type="number"
@@ -270,13 +270,13 @@ const Position = ( props ) => {
 						</div>
 					</label>
 					<label>
-						<span className="asnp-field-title asnp-ml-6">
+						<span className="asnp-field-title asnp-ml-4 xl:asnp-ml-6">
 							{ __(
 								'Bottom',
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</span>
-						<div className="asnp-w-[10rem] asnp-ml-6">
+						<div className="asnp-w-[7rem] asnp-ml-4 xl:asnp-w-[9rem] xl:asnp-ml-6">
 							<input
 								disabled={ disablePositionButtom }
 								type="number"
@@ -298,10 +298,10 @@ const Position = ( props ) => {
 						</div>
 					</label>
 					<label>
-						<span className="asnp-field-title asnp-ml-6">
+						<span className="asnp-field-title asnp-ml-4 xl:asnp-ml-6">
 							{ __( 'Left', 'easy-sale-badges-for-woocommerce' ) }
 						</span>
-						<div className="asnp-w-[10rem] asnp-ml-6">
+						<div className="asnp-w-[7rem] asnp-ml-4 xl:asnp-w-[9rem] xl:asnp-ml-6">
 							<input
 								disabled={ disablePositionLeft }
 								type="number"
@@ -323,13 +323,13 @@ const Position = ( props ) => {
 						</div>
 					</label>
 					<label>
-						<span className="asnp-field-title asnp-ml-6">
+						<span className="asnp-field-title asnp-ml-4 xl:asnp-ml-6">
 							{ __(
 								'Right',
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</span>
-						<div className="asnp-w-[10rem] asnp-ml-6">
+						<div className="asnp-w-[7rem] asnp-ml-4 xl:asnp-w-[9rem] xl:asnp-ml-6">
 							<input
 								disabled={ disablePositionRight }
 								type="number"
