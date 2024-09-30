@@ -137,7 +137,7 @@ const WooCommerce = () => {
 										badge.items[ groupIndex ][ index ].type
 									) && (
 										<select
-											className="asnp-select-field !asnp-w-48 asnp-mt-2 asnp-ml-4"
+											className="asnp-select-field !asnp-w-32 asnp-mt-2 asnp-ml-4"
 											value={
 												badge.items[ groupIndex ][
 													index
