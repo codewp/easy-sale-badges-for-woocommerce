@@ -129,7 +129,7 @@ const NavMenu = ( props ) => {
 					<LockClosedIcon width="20" height="20" />
 				</a>
 			</nav>
-			<div className="asnp-w-[49rem] md:asnp-w-[52rem] lg:asnp-w-[56rem]">
+			<div className="asnp-w-[44rem] md:asnp-w-[46rem] lg:asnp-w-[50rem] xl:asnp-w-[56rem]">
 				<MenuItem
 					badge={ props.badge }
 					onChange={ props.onChange }

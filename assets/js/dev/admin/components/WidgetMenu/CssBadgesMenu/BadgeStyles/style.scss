@@ -24,7 +24,26 @@
 	justify-content: center;
 	border-width: 1px;
 	cursor: pointer;
+
 	&:hover {
 		box-shadow: 0 0 10px rgba( 24, 23, 24, 0.2 );
+	}
+
+	/* Medium devices (Tablets, >=768px) */
+	@media ( min-width: 768px ) {
+		width: 8rem;
+		height: 7rem;
+	}
+
+	/* Large devices (Laptops, >=1024px) */
+	@media ( min-width: 1024px ) {
+		width: 7rem;
+		height: 6rem;
+	}
+
+	/* Extra-large devices (Desktops, >=1280px) */
+	@media ( min-width: 1280px ) {
+		width: 8rem;
+		height: 7rem;
 	}
 }

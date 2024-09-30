@@ -15,16 +15,3 @@
 .asnp-scrollBarImageB::-webkit-scrollbar-thumb:hover {
 	background: rgb( 196, 201, 211 );
 }
-
-.asnp-containerImage {
-	width: 8rem;
-	height: 7rem;
-	display: flex;
-	border-radius: 1rem;
-	justify-content: center;
-	border-width: 1px;
-	cursor: pointer;
-	&:hover {
-		box-shadow: 0 0 10px rgba( 24, 23, 24, 0.2 );
-	}
-}
