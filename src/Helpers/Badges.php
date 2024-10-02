@@ -139,14 +139,10 @@ function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false 
 			if ( 'left' === $badge->badgePositionX ) {
 				if ( isset( $badge->badgePositionTop ) && isset( $badge->badgePositionLeft ) ) {
 					$inset_property = $badge->badgePositionTop . 'px auto auto ' . $badge->badgePositionLeft . 'px';
-				} elseif ( isset( $badge->badgeStyles ) && $badge->badgeStyles == 'badge11' ) {
-					$inset_property = $badge->badgePositionTop . 'px auto auto 0px';	
 				}
 			} elseif ( 'right' === $badge->badgePositionX ) {
 				if ( isset( $badge->badgePositionTop ) && isset( $badge->badgePositionRight ) ) {
 					$inset_property = $badge->badgePositionTop . 'px ' . $badge->badgePositionRight . 'px auto auto';
-				} elseif ( isset( $badge->badgeStyles ) && $badge->badgeStyles == 'badge11' ) {
-					$inset_property = $badge->badgePositionTop . 'px 0px auto auto';
 				}
 			} elseif ( 'center' === $badge->badgePositionX ) {
 				if ( isset( $badge->badgePositionTop ) ) {
@@ -157,14 +153,10 @@ function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false 
 			if ( 'left' === $badge->badgePositionX ) {
 				if ( isset( $badge->badgePositionBottom ) && isset( $badge->badgePositionLeft ) ) {
 					$inset_property = 'auto auto ' . $badge->badgePositionBottom . 'px ' . $badge->badgePositionLeft . 'px';
-				} elseif ( isset( $badge->badgeStyles ) && $badge->badgeStyles == 'badge11' ) {
-					$inset_property = 'auto auto ' . $badge->badgePositionBottom . 'px 0px';
 				}
 			} elseif ( 'right' === $badge->badgePositionX ) {
 				if ( isset( $badge->badgePositionBottom ) && isset( $badge->badgePositionRight ) ) {
 					$inset_property = 'auto ' . $badge->badgePositionRight . 'px ' . $badge->badgePositionBottom . 'px auto';
-				} elseif ( isset( $badge->badgeStyles ) && $badge->badgeStyles == 'badge11' ) {
-					$inset_property = 'auto 0px ' . $badge->badgePositionBottom . 'px auto';
 				}
 			} elseif ( 'center' === $badge->badgePositionX ) {
 				if ( isset( $badge->badgePositionBottom ) ) {
