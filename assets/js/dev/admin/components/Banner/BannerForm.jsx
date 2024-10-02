@@ -69,7 +69,7 @@ const BannerForm = () => {
 							: '' ) + ' asnp-nav-tab-item'
 					}
 				>
-					{ __( 'Animation', 'easy-sale-badges-for-woocommerce' ) }
+					{ __( 'Theme & Animation', 'easy-sale-badges-for-woocommerce' ) }
 				</a>
 				<a
 					href="#"
@@ -1010,6 +1010,41 @@ const BannerForm = () => {
 			) }
 			{ activeMenu === 'animation' && (
 				<div className="asnp-p-4">
+					<div className="asnp-w-[20rem] asnp-text-lg asnp-font-semibold">
+						{ __(
+							'Themes',
+							'easy-sale-badges-for-woocommerce-pro'
+						) }
+					</div>
+					<div className="asnp-relative asnp-w-[38rem] asnp-mb-3 asnp-mt-3 asnp-h-[10rem] asnp-flex asnp-flex-col  asnp-border-gray-300 asnp-border-[1px] asnp-rounded-2xl asnp-pr-1">
+						<div className="asnp-w-[38rem]  asnp-ml-8 asnp-mt-8 asnp-mb-2 asnp-text-red-700 asnp-flex asnp-justify-center asnp-font-medium asnp-text-base">
+							<a
+								target="_blank"
+								href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
+							>
+								<button className="asnp-btn asnp-btn-primary">
+									{ __(
+										'+15 Theme on Pro Version',
+										'easy-sale-badges-for-woocommerce'
+									) }
+								</button>
+							</a>
+						</div>
+					</div>
+					<div className="asnp-mt-6">
+						<label className="asnp-block asnp-text-sm asnp-font-medium asnp-text-gray-700">
+							{ __(
+								'Custom Theme',
+								'easy-sale-badges-for-woocommerce-pro'
+							) }
+						</label>
+						<button className="asnp-btn asnp-btn-primary asnp-mt-4 asnp-mb-4">
+							{ __(
+								'Upload',
+								'easy-sale-badges-for-woocommerce-pro'
+							) }
+						</button>
+					</div>
 					<div className="asnp-w-[20rem] asnp-mt-2 asnp-text-lg asnp-font-semibold">
 						{ __(
 							'Animation Effect',
