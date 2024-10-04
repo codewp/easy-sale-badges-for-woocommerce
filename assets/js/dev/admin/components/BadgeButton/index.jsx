@@ -254,12 +254,8 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 						{ __( 'Preview', 'easy-sale-badges-for-woocommerce' ) }
 					</label>
 					<div className="asnp-esb-product2">
-						<div
-							className="asnp-esb-productImg"
-							style={ {
-								backgroundImage: `url(${ IMAGES_URL }headphone-k.png)`,
-							} }
-						>
+						<div className="asnp-esb-productImg">
+							<img src={ IMAGES_URL + 'headphone-k.png' } />
 							{ badge.imgbadge == 0 &&
 								badge.imgbadgeAdv == 0 &&
 								badge.useTimerBadge == 0 &&
@@ -361,7 +357,7 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 								</StyledSpan>
 							</div>
 						) }
-					<div className="asnp-mt-4 asnp-ml-40 asnp-text-base asnp-text-black">
+					<div className="asnp-mt-4 asnp-flex asnp-justify-center asnp-w-full asnp-text-base asnp-text-black">
 						<del className="asnp-text-gray-400">
 							{ __( '$100', 'easy-sale-badges-for-woocommerce' ) }
 						</del>
