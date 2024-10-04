@@ -247,7 +247,7 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 		.replace( /\{sku\}/g, 'sku' );
 
 	return (
-		<div className="asnp-esb-wrapper">
+		<div>
 			<div className="asnp-esb-containerAd">
 				<div className="asnp-esb-product">
 					<label className="asnp-esb-productLable">

@@ -60,10 +60,7 @@ const NavMenu = ( props ) => {
 							: '' ) + ' asnp-nav-tab-item'
 					}
 				>
-					{ __(
-						'Products',
-						'easy-sale-badges-for-woocommerce'
-					) }
+					{ __( 'Products', 'easy-sale-badges-for-woocommerce' ) }
 				</a>
 				<a
 					style={ { textWrap: 'nowrap' } }
@@ -129,7 +126,7 @@ const NavMenu = ( props ) => {
 					<LockClosedIcon width="20" height="20" />
 				</a>
 			</nav>
-			<div className="asnp-w-[44rem] md:asnp-w-[46rem] lg:asnp-w-[50rem] xl:asnp-w-[56rem]">
+			<div className="asnp-w-[44rem] md:asnp-w-[46rem] lg:asnp-w-[50rem] xl:asnp-w-[62rem]">
 				<MenuItem
 					badge={ props.badge }
 					onChange={ props.onChange }
