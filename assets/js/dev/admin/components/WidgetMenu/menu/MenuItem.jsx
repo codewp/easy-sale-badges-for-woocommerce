@@ -349,9 +349,9 @@ const MenuItem = ( props ) => {
 										'easy-sale-badges-for-woocommerce'
 									) }
 								</span>
-								<div className="asnp-w-[10rem]">
+								<div >
 									<select
-										className="asnp-select-field !asnp-w-48 asnp-mt-2 !asnp-h-[2.4rem]"
+										className="asnp-select-field asnp-mt-2 !asnp-h-[2.4rem]"
 										disabled
 									>
 										<option value="none">
@@ -370,9 +370,9 @@ const MenuItem = ( props ) => {
 										'easy-sale-badges-for-woocommerce'
 									) }
 								</span>
-								<div className="asnp-w-[10rem]">
+								<div>
 									<select
-										className="asnp-select-field !asnp-w-48 asnp-mt-2 !asnp-h-[2.4rem]"
+										className="asnp-select-field asnp-mt-2 !asnp-h-[2.4rem]"
 										disabled
 									>
 										<option value="infinite">
@@ -391,11 +391,11 @@ const MenuItem = ( props ) => {
 										'easy-sale-badges-for-woocommerce'
 									) }
 								</span>
-								<div className="asnp-w-[10rem]">
+								<div>
 									<input
 										disabled
 										type="number"
-										className="asnp-text-field"
+										className="asnp-text-field !asnp-w-16"
 										placeholder="0"
 									/>
 								</div>
