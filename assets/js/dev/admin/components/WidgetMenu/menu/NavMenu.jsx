@@ -14,8 +14,8 @@ const NavMenu = ( props ) => {
 	};
 
 	return (
-		<div className="asnp-bg-white asnp-p-4">
-			<nav className="asnp-flex asnp-flex-col sm:asnp-flex-row ">
+		<div className="asnp-p-4">
+			<nav className="asnp-flex asnp-flex-col xl:asnp-flex-row ">
 				<a
 					style={ { textWrap: 'nowrap' } }
 					href="#"
@@ -126,7 +126,7 @@ const NavMenu = ( props ) => {
 					<LockClosedIcon width="20" height="20" />
 				</a>
 			</nav>
-			<div className="asnp-w-[44rem] md:asnp-w-[46rem] lg:asnp-w-[50rem] xl:asnp-w-[62rem]">
+			<div>
 				<MenuItem
 					badge={ props.badge }
 					onChange={ props.onChange }

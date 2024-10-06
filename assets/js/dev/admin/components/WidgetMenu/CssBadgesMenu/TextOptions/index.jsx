@@ -68,48 +68,48 @@ const TextOptions = ( props ) => {
 					</div>
 				</div>
 				<button
-					className="asnp-ml-3 asnp-mt-7 asnp-btn-primary asnp-py-1 asnp-h-[2rem] asnp-w-[6rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
+					className="asnp-ml-6 asnp-mt-7 asnp-btn-primary asnp-py-1 asnp-h-[2rem] asnp-w-[6rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
 					onClick={ () => props.setShow( true ) }
 				>
 					{ __( 'Translate', 'easy-sale-badges-for-woocommerce' ) }
 				</button>
-				<label className="asnp-ml-10 asnp-mt-8 asnp-flex">
-					<input
-						className="asnp-form-check-input asnp-appearance-none asnp-h-4 asnp-w-4 asnp-border asnp-border-gray-300 asnp-rounded-sm !asnp-bg-white checked:asnp-bg-indigo-600 checked:asnp-border-indigo-600 focus:asnp-outline-none asnp-transition asnp-duration-200 asnp-mt-1 asnp-align-top asnp-bg-no-repeat asnp-bg-center asnp-bg-contain asnp-float-left asnp-mr-2 asnp-cursor-pointer"
-						type="checkbox"
-						id="inlineCheckbox3"
-						checked={ 1 == props.percentageDiscount }
-						onChange={ ( e ) =>
-							props.onChange(
-								'percentageDiscount',
-								e.target.checked ? 1 : 0
-							)
-						}
-					/>
-					<div className="asnp-flex asnp-font-semibold asnp-text-sm">
-						{ __(
-							'Percentage Discount amount',
-							'easy-sale-badges-for-woocommerce'
-						) }
-						<div className="asnp-ml-1 asnp-cursor-pointer asnp-mt-[0.2rem]">
-							<Tippy
-								interactive={ true }
-								placement={ 'top-start' }
-								content={
-									<div className="asnp-h-auto asnp-w-[15rem] asnp-rounded-lg asnp-p-[0.4rem] asnp-text-white asnp-rounded-bl-none asnp-ml-3">
-										{ __(
-											'Instead of displaying the label, showcase the percentage discount amount for products that are on sale.',
-											'easy-sale-badges-for-woocommerce'
-										) }
-									</div>
-								}
-							>
-								<img src={ IMAGES_URL + 'quest.svg' } />
-							</Tippy>
-						</div>
-					</div>
-				</label>
 			</div>
+			<label className="asnp-mt-8 asnp-flex">
+				<input
+					className="asnp-form-check-input asnp-appearance-none asnp-h-4 asnp-w-4 asnp-border asnp-border-gray-300 asnp-rounded-sm !asnp-bg-white checked:asnp-bg-indigo-600 checked:asnp-border-indigo-600 focus:asnp-outline-none asnp-transition asnp-duration-200 asnp-mt-1 asnp-align-top asnp-bg-no-repeat asnp-bg-center asnp-bg-contain asnp-float-left asnp-mr-2 asnp-cursor-pointer"
+					type="checkbox"
+					id="inlineCheckbox3"
+					checked={ 1 == props.percentageDiscount }
+					onChange={ ( e ) =>
+						props.onChange(
+							'percentageDiscount',
+							e.target.checked ? 1 : 0
+						)
+					}
+				/>
+				<div className="asnp-flex asnp-font-semibold asnp-text-base">
+					{ __(
+						'Percentage Discount amount',
+						'easy-sale-badges-for-woocommerce'
+					) }
+					<div className="asnp-ml-1 asnp-cursor-pointer asnp-mt-[0.2rem]">
+						<Tippy
+							interactive={ true }
+							placement={ 'top-start' }
+							content={
+								<div className="asnp-h-auto asnp-w-[15rem] asnp-rounded-lg asnp-p-[0.4rem] asnp-text-white asnp-rounded-bl-none asnp-ml-3">
+									{ __(
+										'Instead of displaying the label, showcase the percentage discount amount for products that are on sale.',
+										'easy-sale-badges-for-woocommerce'
+									) }
+								</div>
+							}
+						>
+							<img src={ IMAGES_URL + 'quest.svg' } />
+						</Tippy>
+					</div>
+				</div>
+			</label>
 			<div className="asnp-mt-3 asnp-w-[25rem]">
 				<Tippy
 					trigger="click"
@@ -158,7 +158,7 @@ const TextOptions = ( props ) => {
 							'easy-sale-badges-for-woocommerce'
 						) }
 					</span>
-					<div className="asnp-w-[10rem]">
+					<div>
 						<input
 							type="number"
 							min="0"
@@ -179,7 +179,7 @@ const TextOptions = ( props ) => {
 							'easy-sale-badges-for-woocommerce'
 						) }
 					</span>
-					<div className="asnp-w-[10rem]">
+					<div>
 						<input
 							disabled={ disableLineHeight }
 							type="number"
@@ -208,9 +208,9 @@ const TextOptions = ( props ) => {
 							'easy-sale-badges-for-woocommerce'
 						) }
 					</span>
-					<div className="asnp-w-[10rem]">
+					<div>
 						<select
-							className="asnp-select-field !asnp-w-48 asnp-mt-2"
+							className="asnp-select-field asnp-mt-1"
 							value={ props.fontWeightLabel }
 							onChange={ ( e ) =>
 								props.onChange(

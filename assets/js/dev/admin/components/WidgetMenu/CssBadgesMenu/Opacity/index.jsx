@@ -33,59 +33,55 @@ const Opacity = ( props ) => {
 				<div className="asnp-w-full">
 					<label>
 						<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-							{ __( 'Rotation', 'easy-sale-badges-for-woocommerce' ) }
+							{ __(
+								'Rotation',
+								'easy-sale-badges-for-woocommerce'
+							) }
 						</span>
 					</label>
-					<div className="asnp-flex">
-						<div className="asnp-relative asnp-pt-1">
-							<input
-								type="range"
-								className="asnp-form-range asnp-w-[21rem] asnp-h-6 asnp-p-0 asnp-bg-transparent focus:asnp-outline-none focus:asnp-ring-0 focus:asnp-shadow-none asnp-cursor-pointer"
-								min="0"
-								max="360"
-								step="3.6"
-								value={ props.rotationX }
-								onChange={ ( e ) =>
-									props.onChange(
-										'rotationX',
-										e.target.value
-									)
-								}
-							/>
-							<div className="asnp-w-[21rem] asnp-flex asnp-text-xs">
-								<span className="asnp-w-[10.5rem] asnp-flex asnp-justify-start">
-									0%
-								</span>
 
-								<span className="asnp-w-[10.5rem] asnp-flex asnp-justify-end">
-									100%
-								</span>
-							</div>
+					<div className="asnp-relative asnp-pt-1">
+						<input
+							type="range"
+							className="asnp-form-range asnp-w-[21rem] asnp-h-6 asnp-p-0 asnp-bg-transparent focus:asnp-outline-none focus:asnp-ring-0 focus:asnp-shadow-none asnp-cursor-pointer"
+							min="0"
+							max="360"
+							step="3.6"
+							value={ props.rotationX }
+							onChange={ ( e ) =>
+								props.onChange( 'rotationX', e.target.value )
+							}
+						/>
+						<div className="asnp-w-[21rem] asnp-flex asnp-text-xs">
+							<span className="asnp-w-[10.5rem] asnp-flex asnp-justify-start">
+								0%
+							</span>
+
+							<span className="asnp-w-[10.5rem] asnp-flex asnp-justify-end">
+								100%
+							</span>
 						</div>
-						<div className="asnp-relative asnp-pt-1 asnp-ml-8">
-							<input
-								type="range"
-								className="asnp-form-range asnp-w-[21rem] asnp-h-6 asnp-p-0 asnp-bg-transparent focus:asnp-outline-none focus:asnp-ring-0 focus:asnp-shadow-none asnp-cursor-pointer"
-								min="0"
-								max="360"
-								step="3.6"
-								value={ props.rotationY }
-								onChange={ ( e ) =>
-									props.onChange(
-										'rotationY',
-										e.target.value
-									)
-								}
-							/>
-							<div className="asnp-w-[21rem] asnp-flex asnp-text-xs">
-								<span className="asnp-w-[10.5rem] asnp-flex asnp-justify-start">
-									0%
-								</span>
+					</div>
+					<div className="asnp-relative asnp-pt-1 asnp-mt-4">
+						<input
+							type="range"
+							className="asnp-form-range asnp-w-[21rem] asnp-h-6 asnp-p-0 asnp-bg-transparent focus:asnp-outline-none focus:asnp-ring-0 focus:asnp-shadow-none asnp-cursor-pointer"
+							min="0"
+							max="360"
+							step="3.6"
+							value={ props.rotationY }
+							onChange={ ( e ) =>
+								props.onChange( 'rotationY', e.target.value )
+							}
+						/>
+						<div className="asnp-w-[21rem] asnp-flex asnp-text-xs">
+							<span className="asnp-w-[10.5rem] asnp-flex asnp-justify-start">
+								0%
+							</span>
 
-								<span className="asnp-w-[10.5rem] asnp-flex asnp-justify-end">
-									100%
-								</span>
-							</div>
+							<span className="asnp-w-[10.5rem] asnp-flex asnp-justify-end">
+								100%
+							</span>
 						</div>
 					</div>
 					<div className="asnp-relative asnp-pt-1 asnp-mt-4">
@@ -137,7 +133,10 @@ const Opacity = ( props ) => {
 								className="asnp-form-check-label asnp-inline-block asnp-text-gray-800 asnp-cursor-pointer asnp-text-base asnp-font-normal"
 								htmlFor="inlineCheckbox1"
 							>
-								{ __( 'Horizontal', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Horizontal',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</label>
 						</div>
 					</div>
@@ -160,7 +159,10 @@ const Opacity = ( props ) => {
 								className="asnp-form-check-label asnp-inline-block asnp-text-gray-800 asnp-cursor-pointer asnp-text-base asnp-font-normal"
 								htmlFor="inlineCheckbox2"
 							>
-								{ __( 'Vertical', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Vertical',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</label>
 						</div>
 					</div>
