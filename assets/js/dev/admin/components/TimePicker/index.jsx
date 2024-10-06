@@ -8,7 +8,7 @@ const TimePicker = ( { onChange, badge, groupIndex, index } ) => {
 				{ __( 'Start:', 'easy-sale-badges-for-woocommerce' ) }
 			</div>
 			<select
-				className="asnp-ml-2 asnp-select-field"
+				className="asnp-ml-2 asnp-select-field !asnp-w-[5rem]"
 				value={ badge.schedule[ groupIndex ][ index ].startTime }
 				onChange={ ( e ) =>
 					onChange( groupIndex, index, 'startTime', e.target.value )
@@ -69,7 +69,7 @@ const TimePicker = ( { onChange, badge, groupIndex, index } ) => {
 				{ __( 'End:', 'easy-sale-badges-for-woocommerce' ) }
 			</div>
 			<select
-				className="asnp-ml-2 asnp-select-field"
+				className="asnp-ml-2 asnp-select-field !asnp-w-[5rem]"
 				value={ badge.schedule[ groupIndex ][ index ].endTime }
 				onChange={ ( e ) =>
 					onChange( groupIndex, index, 'endTime', e.target.value )

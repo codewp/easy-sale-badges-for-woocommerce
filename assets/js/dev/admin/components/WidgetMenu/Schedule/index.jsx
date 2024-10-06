@@ -35,7 +35,10 @@ const Schedule = () => {
 					{ groupIndex >= 1 && (
 						<label className="asnp-block asnp-space-y-1">
 							<span className="asnp-field-title">
-								{ __( 'Or', 'easy-sale-badges-for-woocommerce' ) }
+								{ __(
+									'Or',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</span>
 						</label>
 					) }
@@ -45,7 +48,7 @@ const Schedule = () => {
 							className="asnp-w-full asnp-mb-4 asnp-flex asnp-mt-5"
 						>
 							<select
-								className="asnp-select-field !asnp-w-48 asnp-mt-5"
+								className="asnp-select-field xl:!asnp-w-28 asnp-mt-5"
 								value={
 									badge.schedule[ groupIndex ][ index ].type
 								}
@@ -59,7 +62,10 @@ const Schedule = () => {
 								}
 							>
 								<option value={ 'date' }>
-									{ __( 'Date', 'easy-sale-badges-for-woocommerce' ) }
+									{ __(
+										'Date',
+										'easy-sale-badges-for-woocommerce'
+									) }
 								</option>
 
 								<option value={ 'dateTime' }>
@@ -70,10 +76,16 @@ const Schedule = () => {
 								</option>
 
 								<option value={ 'time' }>
-									{ __( 'Time', 'easy-sale-badges-for-woocommerce' ) }
+									{ __(
+										'Time',
+										'easy-sale-badges-for-woocommerce'
+									) }
 								</option>
 								<option value={ 'days' }>
-									{ __( 'Days', 'easy-sale-badges-for-woocommerce' ) }
+									{ __(
+										'Days',
+										'easy-sale-badges-for-woocommerce'
+									) }
 								</option>
 							</select>
 							{ badge.schedule[ groupIndex ][ index ].type ===
@@ -238,14 +250,17 @@ const Schedule = () => {
 								</div>
 							) }
 
-							<div className="asnp-itemselect asnp-ml-5 asnp-flex asnp-mt-4">
+							<div className="asnp-itemselect asnp-ml-4 asnp-flex asnp-mt-4">
 								<button
 									className="asnp-mb-4 asnp-ml-3 asnp-mt-2 asnp-btn-primary asnp-py-1 asnp-h-[2rem] asnp-w-[4rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
 									onClick={ () =>
 										addSchedule( groupIndex, index + 1 )
 									}
 								>
-									{ __( 'And', 'easy-sale-badges-for-woocommerce' ) }
+									{ __(
+										'And',
+										'easy-sale-badges-for-woocommerce'
+									) }
 								</button>
 								<button
 									className="asnp-mb-4 asnp-mt-2 asnp-ml-3 asnp-btn-delete asnp-py-1 asnp-h-[2rem] asnp-w-[4rem] asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none"
@@ -253,7 +268,10 @@ const Schedule = () => {
 										deleteSchedule( groupIndex, index )
 									}
 								>
-									{ __( 'Delete', 'easy-sale-badges-for-woocommerce' ) }
+									{ __(
+										'Delete',
+										'easy-sale-badges-for-woocommerce'
+									) }
 								</button>
 							</div>
 						</div>
@@ -277,10 +295,16 @@ const Schedule = () => {
 				>
 					{ badge.schedule.length
 						? sprintf(
-								__( '%s Or Group', 'easy-sale-badges-for-woocommerce' ),
+								__(
+									'%s Or Group',
+									'easy-sale-badges-for-woocommerce'
+								),
 								'+'
 						  )
-						: __( 'Add Schedule', 'easy-sale-badges-for-woocommerce' ) }
+						: __(
+								'Add Schedule',
+								'easy-sale-badges-for-woocommerce'
+						  ) }
 				</button>
 			</div>
 		</div>
