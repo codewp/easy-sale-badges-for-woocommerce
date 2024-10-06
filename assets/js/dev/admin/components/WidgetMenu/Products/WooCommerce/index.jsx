@@ -37,7 +37,7 @@ const WooCommerce = () => {
 							<div key={ index }>
 								<div className="asnp-w-full asnp-mb-4 asnp-flex asnp-mt-5">
 									<select
-										className="asnp-select-field !asnp-w-48 asnp-mt-2"
+										className="asnp-select-field asnp-mt-2"
 										value={
 											badge.items[ groupIndex ][ index ]
 												.type
@@ -137,7 +137,7 @@ const WooCommerce = () => {
 										badge.items[ groupIndex ][ index ].type
 									) && (
 										<select
-											className="asnp-select-field !asnp-w-32 asnp-mt-2 asnp-ml-4"
+											className="asnp-select-field asnp-mt-2 asnp-ml-4"
 											value={
 												badge.items[ groupIndex ][
 													index
@@ -199,7 +199,7 @@ const WooCommerce = () => {
 										{ badge.items[ groupIndex ][ index ]
 											.type == 'stock_status' && (
 											<select
-												className="asnp-select-field !asnp-w-[16rem] asnp-mt-2 asnp-ml-4"
+												className="asnp-select-field !asnp-w-[12rem] asnp-mt-2 asnp-ml-4"
 												value={
 													badge.items[ groupIndex ][
 														index
@@ -237,7 +237,7 @@ const WooCommerce = () => {
 										{ badge.items[ groupIndex ][ index ]
 											.type == 'is_on_sale' && (
 											<select
-												className="asnp-select-field !asnp-w-48 asnp-mt-2 asnp-ml-4"
+												className="asnp-select-field !asnp-w-32 asnp-mt-2 asnp-ml-4"
 												value={
 													badge.items[ groupIndex ][
 														index

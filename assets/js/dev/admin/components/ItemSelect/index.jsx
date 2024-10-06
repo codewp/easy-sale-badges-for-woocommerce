@@ -72,7 +72,7 @@ export default function ItemsSelect( {
 
 	return (
 		<AsyncSelect
-			className="!asnp-w-[16rem] xl:!asnp-w-[19rem]"
+			className="!asnp-w-[15rem] xl:!asnp-w-[16rem] 2xl:!asnp-w-[19rem]"
 			value={ selectedOption }
 			onChange={ updateSelect }
 			isMulti={ isMulti }
