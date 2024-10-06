@@ -15,7 +15,7 @@ const NavMenu = ( props ) => {
 
 	return (
 		<div className="asnp-p-4">
-			<nav className="asnp-flex asnp-flex-col xl:asnp-flex-row ">
+			<nav className="asnp-flex asnp-flex-row asnp-flex-wrap">
 				<a
 					style={ { textWrap: 'nowrap' } }
 					href="#"
