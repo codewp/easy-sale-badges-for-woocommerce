@@ -453,7 +453,7 @@ export default function Badge() {
 						<div className="asnp-relative  asnp-w-[65%] asnp-flex asnp-bg-white asnp-border-2 asnp-my-4">
 							<Menu badge={ badge } onChange={ updateBadge } />
 						</div>
-						<div className="asnp-flex asnp-w-[33%]">
+						<div className="asnp-flex">
 							<BadgeButton
 								IMAGES_URL={ IMAGES_URL }
 								badge={ badge }
