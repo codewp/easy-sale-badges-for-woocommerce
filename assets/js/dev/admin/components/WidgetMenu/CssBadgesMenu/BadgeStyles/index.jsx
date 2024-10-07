@@ -11,7 +11,7 @@ const BadgeStyles = ( props ) => {
 				<div className="asnp-w-[25rem] asnp-text-lg asnp-font-semibold">
 					{ __( 'Label Styles', 'easy-sale-badges-for-woocommerce' ) }
 				</div>
-				<div className="asnp-inline-block asnp-scrollBarImageB asnp-p-4 asnp-relative asnp-mb-3 asnp-mt-3 asnp-h-[42rem] asnp-pb-2 asnp-border-[1px] asnp-border-gray-300 asnp-rounded-2xl">
+				<div className="asnp-inline-block asnp-scrollBarImageB asnp-p-4 asnp-relative asnp-mb-3 asnp-mt-3 asnp-h-[35rem] asnp-pb-2 asnp-border-[1px] asnp-border-gray-300 asnp-rounded-2xl">
 					<div className="asnp-grid asnp-gap-4 2xl:asnp-grid-cols-5 xl:asnp-grid-cols-4 lg:asnp-grid-cols-3 md:asnp-grid-cols-2 sm:asnp-grid-cols-1">
 						<div
 							className={
