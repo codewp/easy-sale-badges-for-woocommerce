@@ -7,7 +7,7 @@ import './style.scss';
 const BadgeStyles = ( props ) => {
 	return (
 		<div className="asnp-ew-line">
-			<div className="asnp-mt-2">
+			<div className="asnp-mt-6">
 				<div className="asnp-w-[25rem] asnp-text-lg asnp-font-semibold">
 					{ __( 'Label Styles', 'easy-sale-badges-for-woocommerce' ) }
 				</div>
