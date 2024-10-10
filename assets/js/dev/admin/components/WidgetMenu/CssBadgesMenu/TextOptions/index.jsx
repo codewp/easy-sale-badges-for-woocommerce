@@ -87,7 +87,7 @@ const TextOptions = ( props ) => {
 						)
 					}
 				/>
-				<div className="asnp-flex asnp-font-semibold asnp-text-base">
+				<div className="asnp-flex asnp-font-semibold asnp-text-base asnp-cursor-pointer">
 					{ __(
 						'Percentage Discount amount',
 						'easy-sale-badges-for-woocommerce'
