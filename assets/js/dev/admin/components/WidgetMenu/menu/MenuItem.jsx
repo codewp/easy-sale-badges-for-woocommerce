@@ -134,9 +134,9 @@ const MenuItem = ( props ) => {
 									'easy-sale-badges-for-woocommerce'
 								) }
 							</span>
-							<div className="asnp-w-[10rem]">
+							<div className="xl:asnp-w-[10rem]">
 								<select
-									className="asnp-select-field !asnp-w-48 asnp-mt-2 !asnp-h-[2.4rem]"
+									className="asnp-select-field xl:!asnp-w-48 asnp-mt-2 !asnp-h-[2.4rem]"
 									disabled
 								>
 									<option value="none">
@@ -155,9 +155,9 @@ const MenuItem = ( props ) => {
 									'easy-sale-badges-for-woocommerce'
 								) }
 							</span>
-							<div className="asnp-w-[10rem]">
+							<div className="xl:asnp-w-[10rem]">
 								<select
-									className="asnp-select-field !asnp-w-48 asnp-mt-2 !asnp-h-[2.4rem]"
+									className="asnp-select-field xl:!asnp-w-48 asnp-mt-2 !asnp-h-[2.4rem]"
 									disabled
 								>
 									<option value="infinite">
@@ -176,11 +176,11 @@ const MenuItem = ( props ) => {
 									'easy-sale-badges-for-woocommerce'
 								) }
 							</span>
-							<div className="asnp-w-[10rem]">
+							<div>
 								<input
 									disabled
 									type="number"
-									className="asnp-text-field"
+									className="asnp-text-field !asnp-w-16"
 									placeholder="0"
 								/>
 							</div>
@@ -253,9 +253,9 @@ const MenuItem = ( props ) => {
 										'easy-sale-badges-for-woocommerce'
 									) }
 								</span>
-								<div className="asnp-w-[10rem]">
+								<div>
 									<select
-										className="asnp-select-field !asnp-w-48 asnp-mt-2 !asnp-h-[2.4rem]"
+										className="asnp-select-field asnp-mt-2 !asnp-h-[2.4rem]"
 										disabled
 									>
 										<option value="none">
@@ -274,9 +274,9 @@ const MenuItem = ( props ) => {
 										'easy-sale-badges-for-woocommerce'
 									) }
 								</span>
-								<div className="asnp-w-[10rem]">
+								<div>
 									<select
-										className="asnp-select-field !asnp-w-48 asnp-mt-2 !asnp-h-[2.4rem]"
+										className="asnp-select-field asnp-mt-2 !asnp-h-[2.4rem]"
 										disabled
 									>
 										<option value="infinite">
@@ -295,11 +295,11 @@ const MenuItem = ( props ) => {
 										'easy-sale-badges-for-woocommerce'
 									) }
 								</span>
-								<div className="asnp-w-[10rem]">
+								<div>
 									<input
 										disabled
 										type="number"
-										className="asnp-text-field"
+										className="asnp-text-field !asnp-w-20"
 										placeholder="0"
 									/>
 								</div>
@@ -335,7 +335,7 @@ const MenuItem = ( props ) => {
 						<AdvancedOptions />
 						<AdvancedOpacityAndPos />
 						<PositionDisable />
-						<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold asnp-text-red-600">
+						<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold">
 							{ __(
 								'Animation Effects (Pro Version)',
 								'easy-sale-badges-for-woocommerce'
@@ -349,9 +349,9 @@ const MenuItem = ( props ) => {
 										'easy-sale-badges-for-woocommerce'
 									) }
 								</span>
-								<div className="asnp-w-[10rem]">
+								<div >
 									<select
-										className="asnp-select-field !asnp-w-48 asnp-mt-2 !asnp-h-[2.4rem]"
+										className="asnp-select-field asnp-mt-2 !asnp-h-[2.4rem]"
 										disabled
 									>
 										<option value="none">
@@ -370,9 +370,9 @@ const MenuItem = ( props ) => {
 										'easy-sale-badges-for-woocommerce'
 									) }
 								</span>
-								<div className="asnp-w-[10rem]">
+								<div>
 									<select
-										className="asnp-select-field !asnp-w-48 asnp-mt-2 !asnp-h-[2.4rem]"
+										className="asnp-select-field asnp-mt-2 !asnp-h-[2.4rem]"
 										disabled
 									>
 										<option value="infinite">
@@ -391,11 +391,11 @@ const MenuItem = ( props ) => {
 										'easy-sale-badges-for-woocommerce'
 									) }
 								</span>
-								<div className="asnp-w-[10rem]">
+								<div>
 									<input
 										disabled
 										type="number"
-										className="asnp-text-field"
+										className="asnp-text-field !asnp-w-16"
 										placeholder="0"
 									/>
 								</div>

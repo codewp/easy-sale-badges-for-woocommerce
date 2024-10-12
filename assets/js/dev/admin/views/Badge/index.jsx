@@ -449,11 +449,11 @@ export default function Badge() {
 							</label>
 						</div>
 					</div>
-					<div className="asnp-relative asnp-h-full asnp-w-full asnp-border-2 asnp-my-4 asnp-flex">
-						<div className="asnp-relative asnp-flex md:asnp-w-[50rem] lg:asnp-w-[54rem] xl:asnp-w-[56rem] asnp-w-[47rem] asnp-bg-white">
+					<div className="asnp-relative asnp-h-full asnp-w-full asnp-flex asnp-flex-col-reverse md:asnp-flex-row">
+						<div className="asnp-relative asnp-w-[68%] asnp-flex asnp-bg-white asnp-border-2 asnp-my-4">
 							<Menu badge={ badge } onChange={ updateBadge } />
 						</div>
-						<div className="asnp-w-full asnp-bg-white asnp-flex">
+						<div className="asnp-flex">
 							<BadgeButton
 								IMAGES_URL={ IMAGES_URL }
 								badge={ badge }

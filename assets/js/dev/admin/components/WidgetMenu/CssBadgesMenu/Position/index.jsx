@@ -248,7 +248,7 @@ const Position = ( props ) => {
 						<span className="asnp-field-title asnp-ml-4 xl:asnp-ml-6">
 							{ __( 'Top', 'easy-sale-badges-for-woocommerce' ) }
 						</span>
-						<div className="asnp-w-[7rem] asnp-ml-4 xl:asnp-w-[9rem] xl:asnp-ml-6">
+						<div className="asnp-w-[7rem] asnp-ml-4 xl:asnp-w-[8rem] xl:asnp-ml-6">
 							<input
 								disabled={ disablePositionTop }
 								type="number"
@@ -276,7 +276,7 @@ const Position = ( props ) => {
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</span>
-						<div className="asnp-w-[7rem] asnp-ml-4 xl:asnp-w-[9rem] xl:asnp-ml-6">
+						<div className="asnp-w-[7rem] asnp-ml-4 xl:asnp-w-[8rem] xl:asnp-ml-6">
 							<input
 								disabled={ disablePositionButtom }
 								type="number"
@@ -301,7 +301,7 @@ const Position = ( props ) => {
 						<span className="asnp-field-title asnp-ml-4 xl:asnp-ml-6">
 							{ __( 'Left', 'easy-sale-badges-for-woocommerce' ) }
 						</span>
-						<div className="asnp-w-[7rem] asnp-ml-4 xl:asnp-w-[9rem] xl:asnp-ml-6">
+						<div className="asnp-w-[7rem] asnp-ml-4 xl:asnp-w-[8rem] xl:asnp-ml-6">
 							<input
 								disabled={ disablePositionLeft }
 								type="number"
@@ -329,7 +329,7 @@ const Position = ( props ) => {
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</span>
-						<div className="asnp-w-[7rem] asnp-ml-4 xl:asnp-w-[9rem] xl:asnp-ml-6">
+						<div className="asnp-w-[7rem] asnp-ml-4 xl:asnp-w-[8rem] xl:asnp-ml-6">
 							<input
 								disabled={ disablePositionRight }
 								type="number"
@@ -400,7 +400,7 @@ const Position = ( props ) => {
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</span>
-						<div className="asnp-w-[10rem]">
+						<div>
 							<input
 								type="number"
 								min="0"

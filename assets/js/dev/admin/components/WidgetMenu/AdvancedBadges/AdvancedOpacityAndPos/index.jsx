@@ -3,7 +3,7 @@ import { __ } from '@wordpress/i18n';
 
 const AdvancedOpacityAndPos = () => {
 	return (
-		<div className="asnp-ew-line">
+		<div className="asnp-ew-line asnp-mt-4">
 			<label className="asnp-space-y-1">
 				<span className="asnp-field-title asnp-text-base asnp-font-semibold">
 					{ __( 'Opacity', 'easy-sale-badges-for-woocommerce' ) }

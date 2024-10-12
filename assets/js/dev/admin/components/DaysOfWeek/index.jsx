@@ -33,7 +33,7 @@ export default function DaysOfWeekSelect( {
 
 	return (
 		<Select
-			className="!asnp-w-[20rem]"
+			className="md:!asnp-w-[12rem] lg:!asnp-w-[14rem] xl:!asnp-w-[16rem] 2xl:!asnp-w-[18rem]"
 			value={ selectedOption }
 			onChange={ updateSelect }
 			isMulti={ isMulti }

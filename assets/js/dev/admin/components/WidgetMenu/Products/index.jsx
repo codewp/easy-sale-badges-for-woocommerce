@@ -9,7 +9,7 @@ const Products = ( props ) => {
 				{ __( 'Products', 'easy-sale-badges-for-woocommerce' ) }
 			</div>
 			<div className="asnp-mt-3">
-				<div className="asnp-flex">
+				<div className="asnp-flex asnp-flex-wrap">
 					<p className="asnp-field-title">
 						{ __(
 							'To select the',

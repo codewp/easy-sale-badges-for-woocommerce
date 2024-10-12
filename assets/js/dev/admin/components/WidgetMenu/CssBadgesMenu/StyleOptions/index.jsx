@@ -285,7 +285,7 @@ const StyleOptions = ( props ) => {
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</span>
-						<div className="asnp-w-[6rem] xl:asnp-w-[10rem] asnp-ml-4">
+						<div className="asnp-w-[6rem] xl:asnp-w-[8rem] asnp-ml-4">
 							<input
 								disabled={ disableL }
 								type="number"
@@ -313,7 +313,7 @@ const StyleOptions = ( props ) => {
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</span>
-						<div className="asnp-w-[6rem] xl:asnp-w-[10rem] asnp-ml-8 xl:asnp-ml-4">
+						<div className="asnp-w-[6rem] xl:asnp-w-[8rem] asnp-ml-8 xl:asnp-ml-4">
 							<input
 								disabled={ disableR }
 								type="number"
@@ -341,7 +341,7 @@ const StyleOptions = ( props ) => {
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</span>
-						<div className="asnp-w-[6rem] xl:asnp-w-[10rem] asnp-ml-8 xl:asnp-ml-4">
+						<div className="asnp-w-[6rem] xl:asnp-w-[8rem] asnp-ml-8 xl:asnp-ml-4">
 							<input
 								disabled={ disableL }
 								type="number"
@@ -369,7 +369,7 @@ const StyleOptions = ( props ) => {
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</span>
-						<div className="asnp-w-[6rem] xl:asnp-w-[10rem] asnp-ml-8 xl:asnp-ml-4">
+						<div className="asnp-w-[6rem] xl:asnp-w-[8rem] asnp-ml-8 xl:asnp-ml-4">
 							<input
 								disabled={ disableR }
 								type="number"
