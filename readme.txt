@@ -196,6 +196,7 @@ The plugin is rich in features, while it is lightweight and fast.
 
 = 3.6.1 =
 * Fixed placeholder issue.
+* Fixed dispaly notification bar issue.
 
 = 3.6.0 =
 * Improved styling in the admin panel.
