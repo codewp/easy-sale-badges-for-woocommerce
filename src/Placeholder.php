@@ -44,7 +44,7 @@ class Placeholder {
 		$product = is_numeric( $product ) ? wc_get_product( $product ) : $product;
 
 		if ( ! empty( $badge->percentageDiscountAdv ) ) {
-			$percent = static::percentage_label( $label, $product );
+			$percent = static::percentage_label_adv( $label, $product );
 			if ( ! empty( $percent ) ) {
 				return $percent;
 			}
@@ -206,6 +206,20 @@ class Placeholder {
 			$label,
 			$product
 		);
+	}
+
+	public static function percentage_label_adv( $label, $product ) {
+		$percent = get_saved_percent( $product );
+		if ( empty( $percent ) ) {
+			return false;
+		}
+
+		$prefix = '';
+		if ( (int) get_plugin()->settings->get_setting( 'negativeSign', 1 ) ) {
+			$prefix = '-';
+		}
+
+		return $prefix . round( $percent ) . '%';
 	}
 
 }
