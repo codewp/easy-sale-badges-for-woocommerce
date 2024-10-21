@@ -195,8 +195,10 @@ The plugin is rich in features, while it is lightweight and fast.
 == Changelog ==
 
 = 3.6.1 =
-* Fixed placeholder issue.
+* Fixed the placeholder issue.
+* Fixed the badge display issue in WoodMart AJAX tab.
 * Fixed dispaly notification bar issue.
+* Fixed the display issue for percentage discounts in the Modern Badge.
 
 = 3.6.0 =
 * Improved styling in the admin panel.
