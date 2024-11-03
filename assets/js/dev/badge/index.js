@@ -45,12 +45,40 @@ jQuery( window ).on(
 			}
 
 			if ( ! moved ) {
-				moved = moveBadge(
+				if (
+					jQuery( '.woocommerce-product-gallery .flex-viewport' )
+						.length
+				) {
+					moved = moveBadge(
+						jQuery( '.woocommerce-product-gallery .flex-viewport' ),
+						badge
+					);
+				} else if (
 					jQuery(
-						'.woocommerce-product-gallery:first, .woocommerce-product-gallery--with-images:first'
-					),
-					badge
-				);
+						'.woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image'
+					).length
+				) {
+					moved = moveBadge(
+						jQuery(
+							'.woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image'
+						),
+						badge
+					);
+				} else if (
+					jQuery( '.woocommerce-product-gallery__wrapper' ).length
+				) {
+					moved = moveBadge(
+						jQuery( '.woocommerce-product-gallery__wrapper' ),
+						badge
+					);
+				} else {
+					moved = moveBadge(
+						jQuery(
+							'.woocommerce-product-gallery:first, .woocommerce-product-gallery--with-images:first'
+						),
+						badge
+					);
+				}
 			}
 
 			if ( ! moved ) {
