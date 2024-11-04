@@ -40,7 +40,7 @@ const plugins = [
 	},
 	{
 		id: 4,
-		name: 'Shipping-Discount',
+		name: 'Shipping Discount for WooCommerce',
 		description:
 			'WooCommerce Shipping Discount plugin is a coupon plugin that can add a discount for shipping methods based on conditions. With the Shipping Coupon for WooCommerce, you can offer a deal for your customers to spend more on your store to get a discount on the shipping or free shipping.',
 		imageUrl: IMAGES_URL + 'Shipping-Discount.png',
