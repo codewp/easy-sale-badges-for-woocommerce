@@ -13,6 +13,7 @@ import { AppContext } from '../../contexts/App';
 import { defaultSettings } from '../../utils/constants';
 import Banner from '../../components/Banner';
 import * as SettingsApi from '@easy-sale-badges/api/settings';
+import BlackFriday from '../../components/BlackFriday';
 
 export default function App() {
 	const location = useLocation();
@@ -99,6 +100,15 @@ export default function App() {
 					>
 						{ __( 'Settings', 'easy-sale-badges-for-woocommerce' ) }
 					</NavLink>
+					<NavLink
+						to="/blackFriday"
+						className={ ( { isActive } ) =>
+							'asnp-ew-blFriday asnp-nav-tab-item' +
+							( isActive ? ' asnp-nav-tab-active' : '' )
+						}
+					>
+						{ __( 'Black Friday!', 'easy-sale-badges-for-woocommerce' ) }
+					</NavLink>
 					<a
 						target="_blank"
 						className="asnp-nav-tab-item asnp-ew-goPro"
@@ -155,6 +165,10 @@ export default function App() {
 									<Route
 										path="settings"
 										element={ <Settings /> }
+									/>
+									<Route
+										path="blackFriday"
+										element={ <BlackFriday /> }
 									/>
 								</Route>
 							</Routes>

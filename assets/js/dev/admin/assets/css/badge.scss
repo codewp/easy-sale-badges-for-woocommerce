@@ -30,10 +30,10 @@
 	border-color: rgb( 23, 184, 23 );
 }
 .asnp-ew-tryPro {
-	color: rgb(184, 23, 23) !important;
+	color: rgb( 184, 23, 23 ) !important;
 	font-weight: 700 !important;
 	border-bottom-width: 2px;
-	border-color: rgb(184, 23, 23);
+	border-color: rgb( 184, 23, 23 );
 }
 
 /* Notices */
@@ -54,4 +54,25 @@ body.overflow-hidden {
 			box-shadow: unset;
 		}
 	}
+}
+
+@keyframes flash {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.3;
+	}
+}
+
+.asnp-ew-blFriday {
+	color: black !important;
+	font-weight: 700 !important;
+	border-bottom-width: 2px;
+	border-color: black;
+}
+
+.asnp-ew-blFriday:not( .asnp-nav-tab-active ) {
+	animation: flash 1.5s infinite ease-in-out;
 }
