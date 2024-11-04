@@ -40,6 +40,17 @@ const plugins = [
 	},
 	{
 		id: 4,
+		name: 'WooCommerce Sale Badges and Product Labels',
+		description:
+			'The WooCommerce Sale Badges and Product Labels plugin enhances your stores appeal by offering custom badges and countdown timers. Unleash the full potential of your WooCommerce store with attractive sale badges, product labels, and countdown timers. This all-in-one plugin empowers you to create eye-catching labels and scheduled badges for products,…',
+		imageUrl: IMAGES_URL + 'woocommerce-badge-product-labels.webp',
+		activeInstall: '2,000+',
+		free_link: '',
+		pro_link:
+			'https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/',
+	},
+	{
+		id: 5,
 		name: 'Shipping Discount for WooCommerce',
 		description:
 			'WooCommerce Shipping Discount plugin is a coupon plugin that can add a discount for shipping methods based on conditions. With the Shipping Coupon for WooCommerce, you can offer a deal for your customers to spend more on your store to get a discount on the shipping or free shipping.',
@@ -50,7 +61,7 @@ const plugins = [
 			'https://www.asanaplugins.com/product/shipping-discount-woocommerce/',
 	},
 	{
-		id: 5,
+		id: 6,
 		name: 'URL Coupons for WooCommerce',
 		description:
 			'URL Coupons for WooCommerce adds unique URLs for coupons and when a customer visits that unique URL it will apply the discount to the cart. You can use the WooCommerce URL Coupons plugin to automate coupons on your site. WooCommerce URL Coupons plugin is a useful tool to create marketing…',
@@ -61,7 +72,7 @@ const plugins = [
 			'https://www.asanaplugins.com/product/url-coupons-for-woocommerce/',
 	},
 	{
-		id: 6,
+		id: 7,
 		name: 'ChatGPT AI Content Writing and WhatsApp for WordPress',
 		description:
 			'ChatGpt and WhatsApp Chat for WordPress Plugin allow you to support your customers via WhatsApp and AI Bot. You can add the WhatsApp floating button, ChatGPT AI BOT, ChatGPT AI Assistant, widget, and chat button to your website easily. Engage your customers and give the best support to them by…',
