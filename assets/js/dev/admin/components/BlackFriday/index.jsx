@@ -85,7 +85,14 @@ const BlackFriday = () => {
 				</div>
 			</div>
 
-			<div className="asnp-flex">
+			<div className="asnp-flex asnp-space-x-4">
+				<a
+					href="https://pricing-and-discounts.asanaplugins.com/"
+					target="_blank"
+					className="asnp-bg-black hover:asnp-bg-gray-800 asnp-text-white asnp-font-semibold asnp-py-3 asnp-px-6 asnp-rounded-lg asnp-shadow-md asnp-transition asnp-duration-200"
+				>
+					{ __( 'Try Pro', 'easy-sale-badges-for-woocommerce' ) }
+				</a>
 				<a
 					href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
 					target="_blank"
