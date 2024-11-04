@@ -45,44 +45,42 @@ jQuery( window ).on(
 			}
 
 			if ( ! moved ) {
-				if (
-					jQuery( '.woocommerce-product-gallery .flex-viewport' )
-						.length
-				) {
-					moved = moveBadge(
-						jQuery( '.woocommerce-product-gallery .flex-viewport' ),
-						badge
-					);
-				} else if (
-					jQuery(
-						'.woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image'
-					).length
-				) {
-					moved = moveBadge(
-						jQuery(
-							'.woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image'
-						),
-						badge
-					);
-				} else if (
-					jQuery( '.woocommerce-product-gallery__wrapper' ).length
-				) {
-					moved = moveBadge(
-						jQuery( '.woocommerce-product-gallery__wrapper' ),
-						badge
-					);
-				} else {
-					moved = moveBadge(
-						jQuery(
-							'.woocommerce-product-gallery:first, .woocommerce-product-gallery--with-images:first'
-						),
-						badge
-					);
-				}
+				container = getImageContainer();
+				moved = moveBadge( jQuery( container ), badge );
 			}
 
 			if ( ! moved ) {
 				moved = moveBadge( jQuery( '.images' ), badge );
+			}
+		};
+
+		const getImageContainer = () => {
+			const themes = {
+				flatsome: '.woocommerce-product-gallery .flex-viewport',
+				uncode: 'uncode_entry_visual_after_image',
+			};
+
+			const stylesheet = asnpWesbBadgeData?.stylesheet;
+			const template = asnpWesbBadgeData?.template;
+
+			if ( stylesheet && themes[ stylesheet ] ) {
+				if ( jQuery( themes[ stylesheet ] ).length ) {
+					return themes[ stylesheet ];
+				}
+			}
+
+			if ( template && themes[ template ] ) {
+				if ( jQuery( themes[ template ] ).length ) {
+					return themes[ template ];
+				}
+			}
+
+			if (
+				jQuery( '.woocommerce-product-gallery .flex-viewport' ).length
+			) {
+				return '.woocommerce-product-gallery .flex-viewport';
+			} else {
+				return '.woocommerce-product-gallery:first, .woocommerce-product-gallery--with-images:first';
 			}
 		};
 
