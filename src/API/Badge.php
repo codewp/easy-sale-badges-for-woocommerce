@@ -358,6 +358,10 @@ class Badge extends BaseController {
 				case 'borderColor':
 				case 'borderWidth':
 				case 'badgeTimer':
+				case 'fontSizeLabelTimerStyle1':
+				case 'fontSizeMessageTimerStyle1':
+				case 'textColorTimerStyle1':
+				case 'textTimerStyle1':	
 				case 'badgeLabelAdv':
 				case 'labelDayTimer':
 				case 'labelHoursTimer':
