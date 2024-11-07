@@ -69,7 +69,10 @@ const BannerForm = () => {
 							: '' ) + ' asnp-nav-tab-item'
 					}
 				>
-					{ __( 'Theme & Animation', 'easy-sale-badges-for-woocommerce' ) }
+					{ __(
+						'Theme & Animation',
+						'easy-sale-badges-for-woocommerce'
+					) }
 				</a>
 				<a
 					href="#"
@@ -1003,6 +1006,54 @@ const BannerForm = () => {
 										</optgroup>
 									</select>
 								</div>
+							</div>
+						</div>
+						<div className="asnp-mt-8 asnp-border-t-2 asnp-border-solid asnp-border-gray-400 asnp-w-full"></div>
+						<div className="asnp-mt-6">
+							<div className="asnp-w-[25rem] asnp-mt-2 asnp-text-lg asnp-font-semibold">
+								{ __(
+									'Conditions',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</div>
+							<div className="asnp-w-full asnp-mt-2 asnp-mb-4">
+								<select
+									className="asnp-select-field !asnp-w-48 asnp-mt-2"
+									defaultValue="Is logged in (Pro)"
+								>
+									<optgroup
+										label={ __(
+											'Customer',
+											'easy-sale-badges-for-woocommerce'
+										) }
+									>
+										<option disabled>
+											{ __(
+												'Is logged in (Pro)',
+												'easy-sale-badges-for-woocommerce'
+											) }
+										</option>
+										<option disabled>
+											{ __(
+												'User role (Pro)',
+												'easy-sale-badges-for-woocommerce'
+											) }
+										</option>
+									</optgroup>
+									<optgroup
+										label={ __(
+											'Customer value',
+											'easy-sale-badges-for-woocommerce'
+										) }
+									>
+										<option disabled>
+											{ __(
+												'Money spent (Pro)',
+												'easy-sale-badges-for-woocommerce'
+											) }
+										</option>
+									</optgroup>
+								</select>
 							</div>
 						</div>
 					</div>
