@@ -132,6 +132,42 @@ const WooCommerce = () => {
 												'easy-sale-badges-for-woocommerce'
 											) }
 										</option>
+										<option
+											disabled
+											className="asnp-text-red-600"
+										>
+											{ __(
+												'Quantity (Pro)',
+												'easy-sale-badges-for-woocommerce'
+											) }
+										</option>
+										<option
+											disabled
+											className="asnp-text-red-600"
+										>
+											{ __(
+												'Price (Pro)',
+												'easy-sale-badges-for-woocommerce'
+											) }
+										</option>
+										<option
+											disabled
+											className="asnp-text-red-600"
+										>
+											{ __(
+												'Sale Price (Pro)',
+												'easy-sale-badges-for-woocommerce'
+											) }
+										</option>
+										<option
+											disabled
+											className="asnp-text-red-600"
+										>
+											{ __(
+												'Regular Price (Pro)',
+												'easy-sale-badges-for-woocommerce'
+											) }
+										</option>
 									</select>
 									{ showItemSelect(
 										badge.items[ groupIndex ][ index ].type
