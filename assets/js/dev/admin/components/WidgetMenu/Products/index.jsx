@@ -34,7 +34,7 @@ const Products = ( props ) => {
 					</p>
 				</div>
 				<WooCommerce onChange={ props.onChange } />
-				<div className="asnp-border-t-2 asnp-border-solid asnp-border-gray-400 asnp-w-full"></div>
+				<div className="asnp-mt-4 asnp-border-t-2 asnp-border-solid asnp-border-gray-400 asnp-w-full"></div>
 				<div className="asnp-mt-4">
 					<div className="asnp-w-[25rem] asnp-mt-2 asnp-text-lg asnp-font-semibold">
 						{ __(
