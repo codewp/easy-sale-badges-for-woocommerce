@@ -60,7 +60,7 @@ const NavMenu = ( props ) => {
 							: '' ) + ' asnp-nav-tab-item'
 					}
 				>
-					{ __( 'Products', 'easy-sale-badges-for-woocommerce' ) }
+					{ __( 'Products & Conditions', 'easy-sale-badges-for-woocommerce' ) }
 				</a>
 				<a
 					style={ { textWrap: 'nowrap' } }
