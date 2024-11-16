@@ -71,7 +71,7 @@ const Banner = () => {
 									'easy-sale-badges-for-woocommerce'
 								) }
 							</div>
-							<div className="asnp-relative asnp-w-full asnp-bg-white asnp-mb-3 asnp-mt-3 asnp-h-[23rem] asnp-flex asnp-flex-col asnp-border-2 asnp-rounded-md asnp-p-4">
+							<div className="asnp-relative asnp-w-full asnp-bg-white asnp-mb-3 asnp-mt-3 asnp-h-auto asnp-flex asnp-flex-col asnp-border-2 asnp-rounded-md asnp-p-4">
 								<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-2">
 									<div className="asnp-border-gray-400 asnp-py-8 asnp-px-4 asnp-esb-containerBannerTemplate hover:asnp-border-indigo-700">
 										<img
@@ -124,6 +124,22 @@ const Banner = () => {
 									<div className="asnp-esb-containerBannerTemplateLabel">
 										{ __(
 											'Countdown Timer Bar 2',
+											'easy-sale-badges-for-woocommerce'
+										) }
+									</div>
+								</div>
+								<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-2">
+									<div className="asnp-border-gray-400 asnp-py-10 asnp-px-4 asnp-esb-containerBannerTemplate hover:asnp-border-indigo-700">
+										<img
+											className="asnp-h-full asnp-w-full asnp-border-none asnp-object-cover"
+											src={ IMAGES_URL + 'bar5.png' }
+										/>
+									</div>
+								</div>
+								<div className="asnp-w-full asnp-flex asnp-pb-2 asnp-space-x-5 asnp-ml-2">
+									<div className="asnp-esb-containerBannerTemplateLabel">
+										{ __(
+											'Free Shipping Bar',
 											'easy-sale-badges-for-woocommerce'
 										) }
 									</div>
