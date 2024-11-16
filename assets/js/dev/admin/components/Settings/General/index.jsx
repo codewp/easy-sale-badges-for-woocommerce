@@ -72,7 +72,10 @@ const General = ( props ) => {
 						<Toggle
 							value={ 1 == props.loadDynamicStyles }
 							onChange={ ( value ) =>
-								props.onChange( 'loadDynamicStyles', value ? 1 : 0 )
+								props.onChange(
+									'loadDynamicStyles',
+									value ? 1 : 0
+								)
 							}
 						/>
 					</div>
@@ -531,6 +534,12 @@ const General = ( props ) => {
 						<option value="post_thumbnail_html">
 							{ __(
 								'Post thumbnail html',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="woocommerce_product_thumbnails">
+							{ __(
+								'Product Thumbnails',
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
