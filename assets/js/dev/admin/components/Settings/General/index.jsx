@@ -430,6 +430,12 @@ const General = ( props ) => {
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
+						<option value="woocommerce_product_thumbnails">
+							{ __(
+								'Product Thumbnails',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
 						<option value="elementor/element/woocommerce-product-images/section_product_gallery_style/before_section_end">
 							{ __(
 								'Elementor product images',

@@ -94,6 +94,10 @@ class Hooks {
 			case 'post_thumbnail_html':
 				add_filter( 'post_thumbnail_html', array( __CLASS__, 'post_thumbnail_html' ), 10, 4 );
 				break;
+				
+			case 'woocommerce_product_thumbnails':
+				add_filter( 'woocommerce_product_thumbnails', array( __CLASS__, 'woocommerce_product_thumbnails' ), 10, 4 );
+				break;
 
 			default:
 				add_action( $single_position, array( __CLASS__, 'single_dispaly_sale_badge' ), 99 );
