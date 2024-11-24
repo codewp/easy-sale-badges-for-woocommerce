@@ -133,7 +133,7 @@ class Admin {
 			date( 'Y' ) . '-11-30',
 			'<strong>Black Friday Exclusive:</strong> SAVE up to 75% & get access to <strong>WooCommerce Product Bundles Pro</strong> features.',
 			'Grab The Offer',
-			'https://asanaplugins.com/product/woocommerce-product-bundles/?utm_source=easy-product-bundles-woocommerce-plugin&utm_campaign=black-friday&utm_medium=link',
+			'https://asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/?utm_source=woocommerce-sale-badges-and-product-labels&utm_campaign=black-friday&utm_medium=link',
 			'#5614d5'
 		);
 		$this->add_offer_notice(
@@ -142,7 +142,7 @@ class Admin {
 			date( 'Y' ) . '-12-10',
 			'<strong>Cyber Monday Exclusive:</strong> Save up to 75% on <strong>WooCommerce Product Bundles Pro</strong>. Limited Time Only!',
 			'Claim Your Deal',
-			'https://asanaplugins.com/product/woocommerce-product-bundles/?utm_source=easy-product-bundles-woocommerce-plugin&utm_campaign=cyber-monday&utm_medium=link',
+			'https://asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/?utm_source=woocommerce-sale-badges-and-product-labels&utm_campaign=cyber-monday&utm_medium=link',
 			'#00aaff'
 		);
 		$this->add_offer_notice(
@@ -151,7 +151,7 @@ class Admin {
 			date( 'Y' ) . '-12-31',
 			'<strong>Holiday Cheer:</strong> Get up to 75% OFF <strong>WooCommerce Product Bundles Pro</strong> this festive season.',
 			'Shop Now',
-			'https://asanaplugins.com/product/woocommerce-product-bundles/?utm_source=easy-product-bundles-woocommerce-plugin&utm_campaign=holiday-discount&utm_medium=link',
+			'https://asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/?utm_source=woocommerce-sale-badges-and-product-labels&utm_campaign=holiday-discount&utm_medium=link',
 			'#28a745'
 		);
 		$this->add_offer_notice(
@@ -160,7 +160,7 @@ class Admin {
 			date( 'Y' ) . '-01-10',
 			'<strong>New Year Sale:</strong> Kickstart your projects with up to 75% OFF <strong>WooCommerce Product Bundles Pro</strong>!',
 			'Get The Deal',
-			'https://asanaplugins.com/product/woocommerce-product-bundles/?utm_source=easy-product-bundles-woocommerce-plugin&utm_campaign=new-year-sale&utm_medium=link',
+			'https://asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/?utm_source=woocommerce-sale-badges-and-product-labels&utm_campaign=new-year-sale&utm_medium=link',
 			'#ff5733'
 		);
 		$this->add_offer_notice(
@@ -169,7 +169,7 @@ class Admin {
 			date( 'Y' ) . '-03-30',
 			'<strong>Spring Into Savings:</strong> Get up to 75% OFF <strong>WooCommerce Product Bundles Pro</strong>. Refresh your store this season!',
 			'Spring Deals',
-			'https://asanaplugins.com/product/woocommerce-product-bundles/?utm_source=easy-product-bundles-woocommerce-plugin&utm_campaign=spring-sale&utm_medium=link',
+			'https://asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/?utm_source=woocommerce-sale-badges-and-product-labels&utm_campaign=spring-sale&utm_medium=link',
 			'#5cb85c'
 		);
 		$this->add_offer_notice(
@@ -178,7 +178,7 @@ class Admin {
 			date( 'Y' ) . '-06-25',
 			'<strong>Sizzling Summer Sale:</strong> Save up to 75% on <strong>WooCommerce Product Bundles Pro</strong>. Limited time only!',
 			'Cool Deals',
-			'https://asanaplugins.com/product/woocommerce-product-bundles/?utm_source=easy-product-bundles-woocommerce-plugin&utm_campaign=summer-sale&utm_medium=link',
+			'https://asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/?utm_source=woocommerce-sale-badges-and-product-labels&utm_campaign=summer-sale&utm_medium=link',
 			'#ff5733'
 		);
 		$this->add_offer_notice(
@@ -187,7 +187,7 @@ class Admin {
 			date( 'Y' ) . '-10-31',
 			'<strong>Halloween Spooktacular:</strong> Scare away high prices! Get up to 75% OFF <strong>WooCommerce Product Bundles Pro</strong>. No tricks, just treats!',
 			'Shop Spooky Deals',
-			'https://asanaplugins.com/product/woocommerce-product-bundles/?utm_source=easy-product-bundles-woocommerce-plugin&utm_campaign=halloween-sale&utm_medium=link',
+			'https://asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/?utm_source=woocommerce-sale-badges-and-product-labels&utm_campaign=halloween-sale&utm_medium=link',
 			'#ff4500'
 		);
 	}
