@@ -439,6 +439,12 @@ const General = ( props ) => {
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
+						<option value="woodmart_on_product_image">
+							{ __(
+								'Woodmart',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
 						<option value="elementor/element/woocommerce-product-images/section_product_gallery_style/before_section_end">
 							{ __(
 								'Elementor product images',
@@ -540,6 +546,12 @@ const General = ( props ) => {
 						<option value="woocommerce_product_thumbnails">
 							{ __(
 								'Product Thumbnails',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="woodmart_on_product_image">
+							{ __(
+								'Woodmart',
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>

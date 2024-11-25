@@ -17,6 +17,7 @@ import Pagination from '../../components/Pagination';
 import styled, { StyleSheetManager } from 'styled-components';
 import BadgePreview from '../../utils/labelPreview';
 import BlackFridayBanner from '../../components/BlackFriday/BlackFridayBanner';
+import Cybermonday from '../../components/Offers/Cybermonday';
 
 import './style.scss';
 
@@ -275,9 +276,31 @@ export default function Badges() {
 		}
 	};
 
+	const currentDate = new Date();
+	const year = currentDate.getFullYear();
+
+	const blackFridayStartDate = new Date( `${ year }-11-20` );
+	const blackFridayEndDate = new Date( `${ year }-11-30` );
+	const cyberMondayStartDate = new Date( `${ year }-12-01` );
+	const cyberMondayEndDate = new Date( `${ year }-12-10` );
+
+	let bannerContent = null;
+
+	if (
+		currentDate >= blackFridayStartDate &&
+		currentDate <= blackFridayEndDate
+	) {
+		bannerContent = <BlackFridayBanner />;
+	} else if (
+		currentDate >= cyberMondayStartDate &&
+		currentDate <= cyberMondayEndDate
+	) {
+		bannerContent = <Cybermonday />;
+	}
+
 	return (
 		<div>
-			<BlackFridayBanner />
+			{ bannerContent }
 			<div className="asnp-flex asnp-space-x-2">
 				<h1 className="asnp-heading-inline">
 					{ __( 'Badges', 'easy-sale-badges-for-woocommerce' ) }
