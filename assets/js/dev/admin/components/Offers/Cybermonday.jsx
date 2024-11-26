@@ -19,7 +19,7 @@ const Cybermonday = () => {
 			target="_blank"
 		>
 			<div className="asnp-banner">
-				<h1 className='asnp-banner-tp'>
+				<h1 className="asnp-banner-tp">
 					{ __(
 						'Cyber Monday Exclusive',
 						'easy-sale-badges-for-woocommerce'
@@ -31,18 +31,17 @@ const Cybermonday = () => {
 						'easy-sale-badges-for-woocommerce'
 					) }
 				</p>
-				<p className="asnp-text-limit">
-					{ __(
-						'Limited Time Only!',
-						'easy-sale-badges-for-woocommerce'
-					) }
-				</p>
-				<button className="asnp-btn asnp-bg-yellow-500 asnp-text-white hover:asnp-text-white hover:asnp-bg-yellow-700 focus:asnp-text-white focus:asnp-outline-none !asnp-mt-4">
-					{ __(
-						'Buy Now!',
-						'easy-sale-badges-for-woocommerce'
-					) }
-				</button>
+				<div className="asnp-flex asnp-justify-center">
+					<p className="asnp-text-limit">
+						{ __(
+							'Limited Time Only!',
+							'easy-sale-badges-for-woocommerce'
+						) }
+					</p>
+					<button className="asnp-btn asnp-bg-yellow-500 asnp-text-white hover:asnp-text-white hover:asnp-bg-yellow-700 focus:asnp-text-white focus:asnp-outline-none !asnp-ml-4">
+						{ __( 'Buy Now!', 'easy-sale-badges-for-woocommerce' ) }
+					</button>
+				</div>
 			</div>
 			<button
 				type="button"
