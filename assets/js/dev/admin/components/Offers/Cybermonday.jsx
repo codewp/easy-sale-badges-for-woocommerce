@@ -6,9 +6,23 @@ import './style.scss';
 const Cybermonday = () => {
 	const [ show, setShow ] = useState( true );
 
+	useEffect( () => {
+		// Check if the banner was dismissed and calculate time elapsed
+		const dismissalTime = localStorage.getItem( 'bannerDismissalTime' );
+		if ( dismissalTime ) {
+			const timeElapsed = Date.now() - parseInt( dismissalTime, 10 );
+			// Show the banner again if more than a day has passed
+			if ( timeElapsed < 24 * 60 * 60 * 1000 ) {
+				setShow( false );
+			}
+		}
+	}, [] );
+
 	const deleteBanner = ( e ) => {
 		e.preventDefault();
 		setShow( false );
+		// Save the dismissal time in localStorage
+		localStorage.setItem( 'bannerDismissalTime', Date.now().toString() );
 	};
 
 	return (
