@@ -7,14 +7,14 @@ const BlackFriday = () => {
 		<div className="asnp-bg-white asnp-rounded-lg asnp-shadow-2xl asnp-text-gray-800 asnp-min-h-screen asnp-flex asnp-flex-col asnp-items-center asnp-py-12 asnp-px-4">
 			<h1 className="asnp-text-5xl md:asnp-text-6xl asnp-font-bold asnp-text-center asnp-mb-6 asnp-text-black">
 				{ __(
-					'Boost Your Black Friday Sales with Powerful Tools!',
+					'Boost Your Black Friday & Cyber Monday Sales with Powerful Tools!',
 					'easy-sale-badges-for-woocommerce'
 				) }
 			</h1>
 
 			<p className="asnp-text-lg md:asnp-text-xl asnp-text-gray-600 asnp-text-center asnp-mb-10 asnp-max-w-2xl">
 				{ __(
-					'Drive higher visibility and sales impact this Black Friday with eye-catching sale badges and notification bars, crafted to capture attention and boost conversion rates for WooCommerce.',
+					'Drive higher visibility and sales impact this Black Friday and Cyber Monday with eye-catching sale badges and notification bars, crafted to capture attention and boost conversion rates for WooCommerce.',
 					'easy-sale-badges-for-woocommerce'
 				) }
 			</p>
@@ -71,6 +71,84 @@ const BlackFriday = () => {
 							<li>
 								{ __(
 									'Expanded product conditions for greater flexibility',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</li>
+							<li>
+								{ __(
+									'Conditions based on user login status, user roles, and total money spent',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</li>
+							<li>
+								{ __(
+									'Over 10 Animation Effects',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</li>
+							<li>
+								{ __(
+									'Rotate CSS Labels, Image Labels, and Advanced Labels',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</li>
+							<li>
+								{ __(
+									'Sale Image Labels',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</li>
+							<li>
+								{ __(
+									'Percentage Off Image Labels',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</li>
+							<li>
+								{ __(
+									'Coming Soon Image Labels',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</li>
+							<li>
+								{ __(
+									'Pre-Order Image Labels',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</li>
+							<li>
+								{ __(
+									'Free Image Labels',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</li>
+							<li>
+								{ __(
+									'Black Friday Image Labels',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</li>
+							<li>
+								{ __(
+									'Cyber Monday Image Labels',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</li>
+							<li>
+								{ __(
+									'Xmas Image Labels',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</li>
+							<li>
+								{ __(
+									'Buy 2 Get 1 Free Image Labels',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</li>
+							<li>
+								{ __(
+									'Shipping Image Labels',
 									'easy-sale-badges-for-woocommerce'
 								) }
 							</li>
