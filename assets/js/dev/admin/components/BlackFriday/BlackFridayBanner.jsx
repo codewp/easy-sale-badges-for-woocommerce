@@ -1,73 +1,43 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { __ } from '@wordpress/i18n';
 import { IMAGES_URL } from './../../utils/constants';
 
 const BlackFridayBanner = () => {
 	const [ show, setShow ] = useState( true );
-	const [ bannerData, setBannerData ] = useState( null );
-
-	const offers = [
-		{
-			id: 'black_friday',
-			startDate: `${ new Date().getFullYear() }-11-20`,
-			endDate: `${ new Date().getFullYear() }-11-30`,
-			imgSrc: 'Black-Friday-badge.png',
-			altText: 'Black Friday OFFER',
-			link:
-				'https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/',
-		},
-		{
-			id: 'cyber_monday',
-			startDate: `${ new Date().getFullYear() }-12-01`,
-			endDate: `${ new Date().getFullYear() }-12-10`,
-			imgSrc: 'Cyber-Monday-badge.png',
-			altText: 'Cyber Monday OFFER',
-			link:
-				'https://asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/',
-		},
-	];
-
-	useEffect( () => {
-		const today = new Date();
-		const closedUntil = localStorage.getItem( 'bannerClosedUntil' );
-		const closedDate = closedUntil ? new Date( closedUntil ) : null;
-
-		// Check if the banner should remain hidden
-		if ( closedDate && today < closedDate ) {
-			setShow( false );
-		} else {
-			const activeOffer = offers.find( ( offer ) => {
-				const start = new Date( offer.startDate );
-				const end = new Date( offer.endDate );
-				return today >= start && today <= end;
-			} );
-			setBannerData( activeOffer || null );
-		}
-	}, [ offers ] );
 
 	const deleteBanner = ( e ) => {
 		e.preventDefault();
-		const tomorrow = new Date();
-		tomorrow.setDate( tomorrow.getDate() + 1 );
-		localStorage.setItem( 'bannerClosedUntil', tomorrow.toISOString() );
 		setShow( false );
 	};
 
-	if ( ! show || ! bannerData ) {
+	const isApplicable = () => {
+		const currentDate = new Date();
+		const year = currentDate.getFullYear();
+
+		const start = new Date( `${ year }-11-20T00:00:00` );
+		const end = new Date( `${ year }-12-10T23:59:59` );
+
+		return currentDate >= start && currentDate <= end;
+	};
+
+	if ( ! isApplicable() ) {
 		return null;
 	}
 
 	return (
-		<div className="asnp-m-4 asnp-relative">
+		<div
+			className="asnp-m-4 asnp-relative"
+			style={ { display: `${ show === false ? 'none' : 'block' }` } }
+		>
 			<a
 				className="focus:asnp-shadow-none focus:asnp-outline-none"
-				href={ bannerData.link }
+				href="https://asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
 				target="_blank"
-				rel="noopener noreferrer"
 			>
 				<img
-					src={ `${ IMAGES_URL }${ bannerData.imgSrc }` }
-					alt={ bannerData.altText }
+					className="asnp-rounded"
+					src={ IMAGES_URL + 'CB-BF-Badge.png' }
+					alt="Black Friday OFFER"
 				/>
 			</a>
 			<button
