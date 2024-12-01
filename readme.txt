@@ -199,6 +199,7 @@ The plugin is rich in features, while it is lightweight and fast.
 
 = 3.10.0 =
 * Added evergreen To Countdown Timer (Pro version).
+* Fix text editor issue in the notification bar (Pro version).
 
 = 3.9.3 =
 * Added Cyber Monday offer.
