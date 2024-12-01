@@ -118,7 +118,7 @@ export default function App() {
 						}
 					>
 						{ __(
-							'Black Friday!',
+							'Cyber Monday!',
 							'easy-sale-badges-for-woocommerce'
 						) }
 					</NavLink>
