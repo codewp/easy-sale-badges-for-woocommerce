@@ -7,22 +7,30 @@ const BlackFriday = () => {
 		<div className="asnp-bg-white asnp-rounded-lg asnp-shadow-2xl asnp-text-gray-800 asnp-min-h-screen asnp-flex asnp-flex-col asnp-items-center asnp-py-12 asnp-px-4">
 			<h1 className="asnp-text-5xl md:asnp-text-6xl asnp-font-bold asnp-text-center asnp-mb-6 asnp-text-black">
 				{ __(
-					'Boost Your Black Friday & Cyber Monday Sales with Powerful Tools!',
+					'Boost Your Christmas Sales with Powerful Tools!',
 					'easy-sale-badges-for-woocommerce'
 				) }
 			</h1>
 
 			<p className="asnp-text-lg md:asnp-text-xl asnp-text-gray-600 asnp-text-center asnp-mb-10 asnp-max-w-2xl">
 				{ __(
-					'Drive higher visibility and sales impact this Black Friday and Cyber Monday with eye-catching sale badges and notification bars, crafted to capture attention and boost conversion rates for WooCommerce.',
+					'Drive higher visibility and sales impact this Christmas with eye-catching sale badges and notification bars, crafted to capture attention and boost conversion rates for WooCommerce.',
 					'easy-sale-badges-for-woocommerce'
 				) }
 			</p>
 
 			<div className="asnp-mb-10">
 				<img
-					src={ IMAGES_URL + 'badgeBlackFriday.png' }
-					alt="Black Friday Badges"
+					src={ IMAGES_URL + 'Christmas-bn.png' }
+					alt="Christmas Badges"
+					className="asnp-w-full asnp-max-w-6xl asnp-rounded-lg asnp-shadow-lg asnp-cursor-pointer hover:asnp-shadow-2xl"
+				/>
+			</div>
+
+			<div className="asnp-mb-10">
+				<img
+					src={ IMAGES_URL + 'CountdownTimer-Banner.png' }
+					alt="Countdown Timers"
 					className="asnp-w-full asnp-max-w-6xl asnp-rounded-lg asnp-shadow-lg asnp-cursor-pointer hover:asnp-shadow-2xl"
 				/>
 			</div>

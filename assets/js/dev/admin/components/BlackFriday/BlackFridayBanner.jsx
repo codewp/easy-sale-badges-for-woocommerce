@@ -15,7 +15,7 @@ const BlackFridayBanner = () => {
 		const year = currentDate.getFullYear();
 
 		const start = new Date( `${ year }-11-20T00:00:00` );
-		const end = new Date( `${ year }-12-10T23:59:59` );
+		const end = new Date( `${ year }-12-31T23:59:59` );
 
 		return currentDate >= start && currentDate <= end;
 	};
@@ -36,8 +36,8 @@ const BlackFridayBanner = () => {
 			>
 				<img
 					className="asnp-rounded"
-					src={ IMAGES_URL + 'CB-BF-Badge.png' }
-					alt="Black Friday OFFER"
+					src={ IMAGES_URL + 'Christmas-banner-badge.png' }
+					alt="Christmas OFFER"
 				/>
 			</a>
 			<button
