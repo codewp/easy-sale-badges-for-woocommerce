@@ -45,16 +45,42 @@ jQuery( window ).on(
 			}
 
 			if ( ! moved ) {
-				moved = moveBadge(
-					jQuery(
-						'.woocommerce-product-gallery:first, .woocommerce-product-gallery--with-images:first'
-					),
-					badge
-				);
+				container = getImageContainer();
+				moved = moveBadge( jQuery( container ), badge );
 			}
 
 			if ( ! moved ) {
 				moved = moveBadge( jQuery( '.images' ), badge );
+			}
+		};
+
+		const getImageContainer = () => {
+			const themes = {
+				flatsome: '.woocommerce-product-gallery .flex-viewport',
+				uncode: 'uncode_entry_visual_after_image',
+			};
+
+			const stylesheet = asnpWesbBadgeData?.stylesheet;
+			const template = asnpWesbBadgeData?.template;
+
+			if ( stylesheet && themes[ stylesheet ] ) {
+				if ( jQuery( themes[ stylesheet ] ).length ) {
+					return themes[ stylesheet ];
+				}
+			}
+
+			if ( template && themes[ template ] ) {
+				if ( jQuery( themes[ template ] ).length ) {
+					return themes[ template ];
+				}
+			}
+
+			if (
+				jQuery( '.woocommerce-product-gallery .flex-viewport' ).length
+			) {
+				return '.woocommerce-product-gallery .flex-viewport';
+			} else {
+				return '.woocommerce-product-gallery:first, .woocommerce-product-gallery--with-images:first';
 			}
 		};
 
