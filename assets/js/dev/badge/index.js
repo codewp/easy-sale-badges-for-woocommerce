@@ -56,8 +56,7 @@ jQuery( window ).on(
 
 		const getImageContainer = () => {
 			const themes = {
-				flatsome: '.woocommerce-product-gallery .flex-viewport',
-				uncode: 'uncode_entry_visual_after_image',
+				porto: '.woocommerce-product-gallery:first .product-images',
 			};
 
 			const stylesheet = asnpWesbBadgeData?.stylesheet;
