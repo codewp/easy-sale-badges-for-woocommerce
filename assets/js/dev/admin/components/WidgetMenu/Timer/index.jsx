@@ -54,6 +54,30 @@ const Timer = () => {
 						) }
 					</div>
 				</div>
+				<div className="asnp-flex asnp-mt-4">
+					<label className="asnp-w-[15rem]">
+						<span className="asnp-field-title asnp-text-lg asnp-font-semibold">
+							{ __(
+								'Countdown Timer Mode',
+								'easy-sale-badges-for-woocommerce-pro'
+							) }
+						</span>
+						<select className="asnp-select-field asnp-mt-2">
+							<option>
+								{ __(
+									'Pick A Start / End Date',
+									'easy-sale-badges-for-woocommerce-pro'
+								) }
+							</option>
+							<option>
+								{ __(
+									'Evergreen',
+									'easy-sale-badges-for-woocommerce-pro'
+								) }
+							</option>
+						</select>
+					</label>
+				</div>
 				<div className="asnp-w-[25rem] asnp-mt-4 asnp-text-lg asnp-font-semibold">
 					{ __(
 						'Pick A Start / End Date',
@@ -112,6 +136,22 @@ const Timer = () => {
 									<img
 										className="asnp-h-full asnp-w-full asnp-border-none"
 										src={ IMAGES_URL + 'badgeTimer2.png' }
+									/>
+								</div>
+								<div className="asnp-border-gray-400 asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700">
+									<img
+										className="asnp-h-full asnp-w-full asnp-border-none"
+										src={
+											IMAGES_URL + 'countdownTimer1.png'
+										}
+									/>
+								</div>
+								<div className="asnp-border-gray-400 asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700">
+									<img
+										className="asnp-h-full asnp-w-full asnp-border-none"
+										src={
+											IMAGES_URL + 'countdownTimer2.png'
+										}
 									/>
 								</div>
 								<div className="asnp-border-gray-400 asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700">
