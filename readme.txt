@@ -199,6 +199,7 @@ The plugin is rich in features, while it is lightweight and fast.
 
 = 3.11.0 =
 * Fixed an issue with product labels and badges on the product gallery page.
+* Fixed the CSS styling for buttons on the notification bar.
 * Compatibility with WooCommerce 9.4.3
 
 = 3.10.0 =
