@@ -6,21 +6,22 @@ const ChristmasBanner = () => {
 	const [ show, setShow ] = useState( true );
 
 	useEffect( () => {
-		const neverShow = localStorage.getItem( 'ChristmasBannerNeverShow' );
-		if ( neverShow === 'true' ) {
-			setShow( false );
+		const closeBannerDate = localStorage.getItem( 'closeBannerDate' ); //Get banner close date from localStorage
+		const nowDate = new Date(); // Get now date and time
+		if ( closeBannerDate ) {
+			const storedBannerDate = new Date( closeBannerDate ); // Convert string back to Date object
+			// Check if less than 24 hours have passed since the banner was closed
+			if ( nowDate - storedBannerDate < 24 * 60 * 60 * 1000 ) {
+				setShow( false ); // Hide the banner if less than 24 hours
+			}
 		}
 	}, [] );
 
 	const deleteBanner = ( e ) => {
 		e.preventDefault();
-		setShow( false );
-	};
-
-	const neverShowAgain = ( e ) => {
-		e.preventDefault();
-		localStorage.setItem( 'ChristmasBannerNeverShow', 'true' );
-		setShow( false );
+		setShow( false ); // Hide the banner immediately
+		const closeDate = new Date();
+		localStorage.setItem( 'closeBannerDate', closeDate.toISOString() ); // Save the banner close date in ISO format
 	};
 
 	const isApplicable = () => {
@@ -33,50 +34,36 @@ const ChristmasBanner = () => {
 		return currentDate >= start && currentDate <= end;
 	};
 
-	if ( ! isApplicable() || ! show ) {
+	if ( ! isApplicable() ) {
 		return null;
 	}
 
 	return (
-		<a
-			className="asnp-relative asnp-rounded asnp-mb-4"
-			style={ {
-				backgroundImage: `url(${ IMAGES_URL }/Christmas-banner-badge.png)`,
-				display: 'block',
-				width: '100%',
-				height: '168px',
-			} }
-			href="https://asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
-			target="_blank"
-			rel="noopener noreferrer"
+		<div
+			className="asnp-m-4 asnp-relative"
+			style={ { display: `${ show === false ? 'none' : 'block' }` } }
 		>
-			<div className="asnp-flex asnp-gap-2 asnp-float-right">
-				<button
-					type="button"
-					className="notice-dismiss focus:asnp-shadow-none focus:asnp-outline-none"
-					onClick={ deleteBanner }
-				>
-					<span className="screen-reader-text">
-						{ __(
-							'Maybe Later',
-							'easy-sale-badges-for-woocommerce'
-						) }
-					</span>
-				</button>
-				<button
-					type="button"
-					className="asnp-relative asnp-top-1 asnp-right-10 asnp-btn-delete asnp-btn focus:asnp-shadow-none focus:asnp-outline-none"
-					onClick={ neverShowAgain }
-				>
-					<span>
-						{ __(
-							'Never Show Again',
-							'easy-sale-badges-for-woocommerce'
-						) }
-					</span>
-				</button>
-			</div>
-		</a>
+			<a
+				className="focus:asnp-shadow-none focus:asnp-outline-none"
+				href="https://asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
+				target="_blank"
+			>
+				<img
+					className="asnp-rounded"
+					src={ IMAGES_URL + 'Christmas-banner-badge.png' }
+					alt="Christmas OFFER"
+				/>
+			</a>
+			<button
+				type="button"
+				className="notice-dismiss focus:asnp-shadow-none focus:asnp-outline-none"
+				onClick={ deleteBanner }
+			>
+				<span className="screen-reader-text">
+					{ __( 'Maybe Later', 'easy-sale-badges-for-woocommerce' ) }
+				</span>
+			</button>
+		</div>
 	);
 };
 
