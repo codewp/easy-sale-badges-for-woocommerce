@@ -6,7 +6,7 @@ const ChristmasBanner = () => {
 	const [ show, setShow ] = useState( true );
 
 	useEffect( () => {
-		const closeBannerDate = localStorage.getItem( 'closeBannerDate' ); //Get banner close date from localStorage
+		const closeBannerDate = localStorage.getItem( 'bannerHiddenUntil' ); //Get banner close date from localStorage
 		const nowDate = new Date(); // Get now date and time
 		if ( closeBannerDate ) {
 			const storedBannerDate = new Date( closeBannerDate ); // Convert string back to Date object
@@ -21,7 +21,7 @@ const ChristmasBanner = () => {
 		e.preventDefault();
 		setShow( false ); // Hide the banner immediately
 		const closeDate = new Date();
-		localStorage.setItem( 'closeBannerDate', closeDate.toISOString() ); // Save the banner close date in ISO format
+		localStorage.setItem( 'bannerHiddenUntil', closeDate.toISOString() ); // Save the banner close date in ISO format
 	};
 
 	const isApplicable = () => {
