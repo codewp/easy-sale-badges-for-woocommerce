@@ -38,14 +38,25 @@ const ChristmasBanner = () => {
 	}
 
 	return (
-		<div className="asnp-m-4 asnp-relative">
-			<div className="asnp-flex asnp-gap-2 asnp-mb-2 asnp-float-right">
+		<a
+			className="asnp-m-4 asnp-relative asnp-rounded"
+			style={ {
+				backgroundImage: `url(${ IMAGES_URL }/Christmas-banner-badge.png)`,
+				display: 'block',
+				width: '100%',
+				height: '168px',
+			} }
+			href="https://asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<div className="asnp-flex asnp-gap-2 asnp-float-right">
 				<button
 					type="button"
-					className="asnp-btn-primary asnp-btn focus:asnp-shadow-none focus:asnp-outline-none"
+					className="notice-dismiss focus:asnp-shadow-none focus:asnp-outline-none"
 					onClick={ deleteBanner }
 				>
-					<span>
+					<span className="screen-reader-text">
 						{ __(
 							'Maybe Later',
 							'easy-sale-badges-for-woocommerce'
@@ -54,7 +65,7 @@ const ChristmasBanner = () => {
 				</button>
 				<button
 					type="button"
-					className="asnp-btn-delete asnp-btn focus:asnp-shadow-none focus:asnp-outline-none"
+					className="asnp-relative asnp-top-1 asnp-right-10 asnp-btn-delete asnp-btn focus:asnp-shadow-none focus:asnp-outline-none"
 					onClick={ neverShowAgain }
 				>
 					<span>
@@ -65,19 +76,7 @@ const ChristmasBanner = () => {
 					</span>
 				</button>
 			</div>
-			<a
-				className="focus:asnp-shadow-none focus:asnp-outline-none"
-				href="https://asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<img
-					className="asnp-rounded"
-					src={ IMAGES_URL + 'Christmas-banner-badge.png' }
-					alt="Christmas OFFER"
-				/>
-			</a>
-		</div>
+		</a>
 	);
 };
 
