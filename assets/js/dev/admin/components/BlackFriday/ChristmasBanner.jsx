@@ -39,7 +39,7 @@ const ChristmasBanner = () => {
 
 	return (
 		<a
-			className="asnp-m-4 asnp-relative asnp-rounded"
+			className="asnp-relative asnp-rounded"
 			style={ {
 				backgroundImage: `url(${ IMAGES_URL }/Christmas-banner-badge.png)`,
 				display: 'block',
