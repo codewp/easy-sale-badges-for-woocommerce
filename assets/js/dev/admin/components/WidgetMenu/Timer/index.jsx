@@ -126,6 +126,30 @@ const Timer = () => {
 								</label>
 							</div>
 							<div className="asnp-grid asnp-gap-4 asnp-grid-cols-1 xl:asnp-grid-cols-2 sm:asnp-grid-cols-1">
+								<div className="asnp-border-gray-400 asnp-p-10 asnp-containerBadgeTimer hover:asnp-border-indigo-700">
+									<img
+										className="asnp-h-full asnp-w-full asnp-border-none asnp-object-cover"
+										src={
+											IMAGES_URL + 'countdownTimer3.png'
+										}
+									/>
+								</div>
+								<div className="asnp-border-gray-400 asnp-p-8 asnp-containerBadgeTimer hover:asnp-border-indigo-700">
+									<img
+										className="asnp-h-full asnp-w-full asnp-border-none asnp-object-cover"
+										src={
+											IMAGES_URL + 'countdownTimer4.png'
+										}
+									/>
+								</div>
+								<div className="asnp-border-gray-400 asnp-p-10 asnp-containerBadgeTimer hover:asnp-border-indigo-700">
+									<img
+										className="asnp-h-full asnp-w-full asnp-border-none asnp-object-cover"
+										src={
+											IMAGES_URL + 'countdownTimer5.png'
+										}
+									/>
+								</div>
 								<div className="asnp-border-gray-400 asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700">
 									<img
 										className="asnp-h-full asnp-w-full asnp-border-none"
