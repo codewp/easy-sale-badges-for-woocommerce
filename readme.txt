@@ -60,7 +60,7 @@ https://youtu.be/aTHFT3ovCaw
 - **Over 5 Modern Badges**
 - **Conditions based on user login status, user roles, and total money spent**
 - **Product conditions to include quantity, regular price, sale price, and total price**
-- **8 Countdown Timers Template**
+- **Over 10 Countdown Timers Template**
 - **Out of Image Position Option For Countdown Timers**
 - **Over 10 Animation Effects**
 - **Incorporate Gradient Colors**
