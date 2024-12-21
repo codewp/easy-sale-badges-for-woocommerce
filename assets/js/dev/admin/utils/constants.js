@@ -573,10 +573,34 @@ export default function BadgeCssandAdv( badge ) {
 			border-top-left-radius: 3px;
 			text-align: center;
 			&::after {
-			border-top: ${ badge.widthBadge / 4 }px solid ${ badge.badgeColor } !important;
-			border-right: ${ badge.widthBadge / 2 }px solid transparent !important;
-			border-left: ${ badge.widthBadge / 2 }px solid transparent !important;
-			top: ${ badge.widthBadge / 1.66 }px !important;
+			border-top: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge / 4 }px solid ${
+							badge.badgeColor
+					  } !important`
+					: `${ badge.singleWidthBadge / 4 }px solid ${
+							badge.badgeColor
+					  } !important`
+			};
+			border-right: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge / 2 }px solid transparent !important`
+					: `${
+							badge.singleWidthBadge / 2
+					  }px solid transparent !important`
+			};
+			border-left: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge / 2 }px solid transparent !important`
+					: `${
+							badge.singleWidthBadge / 2
+					  }px solid transparent !important`
+			};
+			top: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge / 1.66 }px !important`
+					: `${ badge.singleWidthBadge / 1.66 }px !important`
+			};
 			content: "";
 			width: 0;
 			height: 0;

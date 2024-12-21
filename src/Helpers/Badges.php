@@ -1584,6 +1584,29 @@ function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false 
 			}
 			$dynamic_styles .= '}';
 
+			$dynamic_styles .= '.single .asnp-esb-badge-'. absint( $badge->id ) .'::after {';
+			if ( isset( $badge->singleWidthBadge ) ) {
+				$dynamic_styles .= ' border-top: ' .   $badge->singleWidthBadge / 4  . 'px solid ' .   $badge->badgeColor  . '!important;';
+				$dynamic_styles .= ' border-right: ' .   $badge->singleWidthBadge / 2  . 'px solid transparent !important;';
+				$dynamic_styles .= ' border-left: ' .   $badge->singleWidthBadge / 2  . 'px solid transparent !important;';
+				$dynamic_styles .= ' top: ' .   $badge->singleWidthBadge / 1.66  . 'px !important;';
+			} elseif ( isset( $badge->widthBadge ) ) {
+				$dynamic_styles .= ' border-top: ' .   $badge->widthBadge / 4  . 'px solid ' .   $badge->badgeColor  . '!important;';
+				$dynamic_styles .= ' border-right: ' .   $badge->widthBadge / 2  . 'px solid transparent !important;';
+				$dynamic_styles .= ' border-left: ' .   $badge->widthBadge / 2  . 'px solid transparent !important;';
+				$dynamic_styles .= ' top: ' .   $badge->widthBadge / 1.66  . 'px !important;';
+			}
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.related .asnp-esb-badge-'. absint( $badge->id ) .'::after {';
+			if ( isset( $badge->widthBadge ) ) {
+				$dynamic_styles .= ' border-top: ' .   $badge->widthBadge / 4  . 'px solid ' .   $badge->badgeColor  . '!important;';
+				$dynamic_styles .= ' border-right: ' .   $badge->widthBadge / 2  . 'px solid transparent !important;';
+				$dynamic_styles .= ' border-left: ' .   $badge->widthBadge / 2  . 'px solid transparent !important;';
+				$dynamic_styles .= ' top: ' .   $badge->widthBadge / 1.66  . 'px !important;';
+			}
+			$dynamic_styles .= '}';
+
 			$dynamic_styles .= '.asnp-esb-inner-span1-'. absint( $badge->id ) .' {';
 			$dynamic_styles .= ' transform: translateY(-50%);';
 			$dynamic_styles .= ' position: relative;';
