@@ -6,23 +6,6 @@ import { IMAGES_URL, customColor } from '../../../../utils/constants';
 import LabelTranslation from '../../../LabelTranslation';
 
 const TextOptions = ( props ) => {
-	const [ disableLineHeight, setDisableLineHeight ] = useState( false );
-
-	useEffect( () => {
-		if (
-			props.badgeStyles == 'badge7' ||
-			props.badgeStyles == 'badge8' ||
-			props.badgeStyles == 'badge9' ||
-			props.badgeStyles == 'badge10' ||
-			props.badgeStyles == 'badge11' ||
-			props.badgeStyles == 'badge12'
-		) {
-			setDisableLineHeight( true );
-		} else {
-			setDisableLineHeight( false );
-		}
-	}, [ props.badgeStyles ] );
-
 	return (
 		<div className="asnp-ew-line">
 			<div className="asnp-mt-6 asnp-flex">
@@ -150,115 +133,7 @@ const TextOptions = ( props ) => {
 					</label>
 				</Tippy>
 			</div>
-			<div className="asnp-flex asnp-mt-[2rem] asnp-w-full">
-				<label>
-					<span className="asnp-field-title">
-						{ __(
-							'Font Size (Pixel)',
-							'easy-sale-badges-for-woocommerce'
-						) }
-					</span>
-					<div>
-						<input
-							type="number"
-							min="0"
-							max="40"
-							className="asnp-text-field"
-							placeholder="0"
-							value={ props.fontSizeText }
-							onChange={ ( e ) =>
-								props.onChange( 'fontSizeText', e.target.value )
-							}
-						/>
-					</div>
-				</label>
-				<label className="asnp-ml-10">
-					<span className="asnp-field-title">
-						{ __(
-							'Line Height (Pixel)',
-							'easy-sale-badges-for-woocommerce'
-						) }
-					</span>
-					<div>
-						<input
-							disabled={ disableLineHeight }
-							type="number"
-							className={
-								disableLineHeight
-									? 'asnp-text-field asnp-opacity-20 asnp-cursor-not-allowed'
-									: 'asnp-text-field'
-							}
-							min="0"
-							max="100"
-							placeholder="0"
-							value={ props.lineHeightText }
-							onChange={ ( e ) =>
-								props.onChange(
-									'lineHeightText',
-									e.target.value
-								)
-							}
-						/>
-					</div>
-				</label>
-				<label className="asnp-ml-10">
-					<span className="asnp-field-title">
-						{ __(
-							'Font Weight',
-							'easy-sale-badges-for-woocommerce'
-						) }
-					</span>
-					<div>
-						<select
-							className="asnp-select-field asnp-mt-1"
-							value={ props.fontWeightLabel }
-							onChange={ ( e ) =>
-								props.onChange(
-									'fontWeightLabel',
-									e.target.value
-								)
-							}
-						>
-							<option value="500">
-								{ __(
-									'500',
-									'easy-sale-badges-for-woocommerce'
-								) }
-							</option>
-							<option value="600">
-								{ __(
-									'600',
-									'easy-sale-badges-for-woocommerce'
-								) }
-							</option>
-							<option value="normal">
-								{ __(
-									'Normal',
-									'easy-sale-badges-for-woocommerce'
-								) }
-							</option>
-							<option value="bold">
-								{ __(
-									'Bold',
-									'easy-sale-badges-for-woocommerce'
-								) }
-							</option>
-							<option value="bolder">
-								{ __(
-									'Bolder',
-									'easy-sale-badges-for-woocommerce'
-								) }
-							</option>
-							<option value="lighter">
-								{ __(
-									'Lighter',
-									'easy-sale-badges-for-woocommerce'
-								) }
-							</option>
-						</select>
-					</div>
-				</label>
-			</div>
+
 			{ props.show === true && (
 				<LabelTranslation
 					show={ props.show }
