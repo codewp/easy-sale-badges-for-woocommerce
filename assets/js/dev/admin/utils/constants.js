@@ -625,20 +625,26 @@ export default function BadgeCssandAdv( badge ) {
 					? `${ badge.widthBadge / 1.083 }px !important`
 					: `${ badge?.singleWidthBadge / 1.083 }px !important`
 			};
-				width: ${
-					badge?.sizePage === 'archivePage'
-						? `${ badge.widthBadge }px`
-						: `${ badge?.singleWidthBadge }px`
-				};
+			width: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
 			background: ${ badge.badgeColor };
 			z-index: 1;
 			opacity: ${ badge.opacity };
 			top: 0px;
 			left: 0px;
 			text-align: center;
-			border-radius: 3px 3px ${ badge.widthBadge / 2.38 }px ${
-				badge.widthBadge / 2.38
-			}px !important;
+			border-radius: ${
+				badge?.sizePage === 'archivePage'
+					? `3px 3px ${ badge.widthBadge / 2.38 }px ${
+							badge.widthBadge / 2.38
+					  }px !important`
+					: `3px 3px ${ badge.singleWidthBadge / 2.38 }px ${
+							badge.singleWidthBadge / 2.38
+					  }px !important`
+			};
 			`;
 			badgeIconOne = `
 			transform: translateY(-50%);
