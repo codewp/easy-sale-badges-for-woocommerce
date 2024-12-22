@@ -263,7 +263,7 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 		<div>
 			<div className="asnp-esb-containerAd">
 				<div className="asnp-esb-product">
-					<div className="asnp">
+					<div>
 						<select
 							className="asnp-select-field"
 							value={ badge?.sizePage }
