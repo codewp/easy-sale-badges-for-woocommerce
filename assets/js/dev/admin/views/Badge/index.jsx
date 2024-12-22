@@ -65,6 +65,8 @@ const defaultBadge = {
 	labelTranslate: {},
 	badgeColorShadow: '#807e7e',
 	boxShadowWidth: '0',
+	showOnProductPage: 1,
+	showOnArchivePage: 1,
 	cssLabelPosition: 'onImage',
 	badgePositionOutofImage: 'flex-start',
 	borderWidth: '2',
@@ -447,6 +449,52 @@ export default function Badge() {
 									'easy-sale-badges-for-woocommerce'
 								) }
 							</label>
+						</div>
+						<div className="asnp-flex">
+							<div className="asnp-flex">
+								<label className="asnp-flex asnp-cursor-pointer">
+									<input
+										className="asnp-form-check-input asnp-appearance-none asnp-h-4 asnp-w-4 asnp-border asnp-border-gray-300 asnp-rounded-sm !asnp-bg-white checked:asnp-bg-indigo-600 checked:asnp-border-indigo-600 focus:asnp-outline-none asnp-transition asnp-duration-200 asnp-mt-1 asnp-align-top asnp-bg-no-repeat asnp-bg-center asnp-bg-contain asnp-float-left asnp-mr-2 asnp-cursor-pointer"
+										type="checkbox"
+										id="inlineCheckbox3"
+										checked={ 1 == badge.showOnArchivePage }
+										onChange={ ( e ) =>
+											updateBadge(
+												'showOnArchivePage',
+												e.target.checked ? 1 : 0
+											)
+										}
+									/>
+									<div className="asnp-field-title asnp-mt-[2px]">
+										{ __(
+											'Display on Archive Page',
+											'easy-sale-badges-for-woocommerce-pro'
+										) }
+									</div>
+								</label>
+							</div>
+							<div className="asnp-ml-6">
+								<label className="asnp-flex asnp-cursor-pointer">
+									<input
+										className="asnp-form-check-input asnp-appearance-none asnp-h-4 asnp-w-4 asnp-border asnp-border-gray-300 asnp-rounded-sm !asnp-bg-white checked:asnp-bg-indigo-600 checked:asnp-border-indigo-600 focus:asnp-outline-none asnp-transition asnp-duration-200 asnp-mt-1 asnp-align-top asnp-bg-no-repeat asnp-bg-center asnp-bg-contain asnp-float-left asnp-mr-2 asnp-cursor-pointer"
+										type="checkbox"
+										id="inlineCheckbox2"
+										checked={ 1 == badge.showOnProductPage }
+										onChange={ ( e ) =>
+											updateBadge(
+												'showOnProductPage',
+												e.target.checked ? 1 : 0
+											)
+										}
+									/>
+									<div className="asnp-field-title asnp-mt-[2px]">
+										{ __(
+											'Display on Product Page',
+											'easy-sale-badges-for-woocommerce-pro'
+										) }
+									</div>
+								</label>
+							</div>
 						</div>
 					</div>
 					<div className="asnp-relative asnp-h-full asnp-w-full asnp-flex asnp-flex-col-reverse md:asnp-flex-row">
