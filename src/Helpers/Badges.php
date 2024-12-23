@@ -1124,7 +1124,7 @@ function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false 
 			$dynamic_styles .= '}';
 
 			$dynamic_styles .= '.single .asnp-esb-inner-span2-'. absint( $badge->id ) .' {';
-			if ( isset( $badge->badgePositionX ) ) {
+			if ( isset( $badge->singleWidthBadge ) ) {
 				$dynamic_styles .= ' border-right: ' . ( $badge->badgePositionX == 'right' ? '' . $badge->singleWidthBadge .'px solid '. $badge->badgeColor . '' : 'none' ) . ';';
 				$dynamic_styles .= ' border-left: ' . ( $badge->badgePositionX == 'right' ? '' : '' . $badge->singleWidthBadge .'px solid '. $badge->badgeColor . '' ) . ';';
 			} elseif ( isset( $badge->badgePositionX ) ) {
