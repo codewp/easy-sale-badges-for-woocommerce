@@ -198,8 +198,8 @@ The plugin is rich in features, while it is lightweight and fast.
 == Changelog ==
 
 = 3.13.0 =
-* Added an option to diplay on product page or archive page(pro version).
-* Fixed countdown timer format issue(pro version).
+* Added an option to display badges on product pages or archive pages (Pro version).
+* Fixed a formatting issue with the countdown timer (Pro version).
 * Compatibility with WooCommerce 9.5.1
 Note: Help us spread the word by leaving a 5-star review. ❤️😍 Feel free to share your ideas in your review, as we always value your feedback. 🌹
 
