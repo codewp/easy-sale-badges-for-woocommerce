@@ -197,9 +197,13 @@ The plugin is rich in features, while it is lightweight and fast.
 
 == Changelog ==
 
+= 3.13.0 =
+* Added an option to customize the size of CSS badges and image labels directly on the product page.
+* Compatibility with WooCommerce 9.5.1
+Note: Help us spread the word by leaving a 5-star review. ❤️😍 Feel free to share your ideas in your review, as we always value your feedback. 🌹
+
 = 3.12.0 =
 * Added 5 new templates to the Countdown Timer (Pro version).
-Note: Help us spread the word by leaving a 5-star review. ❤️😍 Feel free to share your ideas in your review, as we always value your feedback. 🌹
 
 = 3.11.0 =
 * Fixed an issue with product labels and badges on the product gallery page.
