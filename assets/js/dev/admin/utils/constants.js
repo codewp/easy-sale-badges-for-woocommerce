@@ -185,6 +185,8 @@ export default function BadgeCssandAdv( badge ) {
 	let badgeIconTwo = '';
 	let borderRightStyle6;
 	let borderLefttStyle6;
+	let rightBadge5;
+	let leftBadge5;
 
 	if ( badge?.sizePage === 'archivePage' ) {
 		if ( badge.badgePositionX === 'right' ) {
@@ -211,6 +213,34 @@ export default function BadgeCssandAdv( badge ) {
 			borderLefttStyle6 = '';
 		} else {
 			borderLefttStyle6 = `${ badge.singleWidthBadge }px solid ${ badge.badgeColor }`;
+		}
+	}
+
+	if ( badge?.sizePage === 'archivePage' ) {
+		if ( badge.badgePositionX === 'right' ) {
+			leftBadge5 = '';
+		} else {
+			leftBadge5 = `-${ badge.widthBadge / 2.4 }px`;
+		}
+	} else {
+		if ( badge.badgePositionX === 'right' ) {
+			leftBadge5 = '';
+		} else {
+			leftBadge5 = `-${ badge.singleWidthBadge / 2.4 }px`;
+		}
+	}
+
+	if ( badge?.sizePage === 'archivePage' ) {
+		if ( badge.badgePositionX === 'right' ) {
+			rightBadge5 = `-${ badge.widthBadge / 2.22 }px`;
+		} else {
+			rightBadge5 = '';
+		}
+	} else {
+		if ( badge.badgePositionX === 'right' ) {
+			rightBadge5 = `-${ badge.singleWidthBadge / 2.22 }px`;
+		} else {
+			rightBadge5 = '';
 		}
 	}
 
@@ -416,19 +446,18 @@ export default function BadgeCssandAdv( badge ) {
 						? 'rotate(45deg)'
 						: `rotate(315deg)`
 				} ;
-				width: ${ badge.widthBadge * 1.5 }px;
-				left: ${
-					badge.badgePositionX == 'right'
-						? ''
-						: `-${ badge.widthBadge / 2.4 }px`
+				width: ${
+					badge?.sizePage === 'archivePage'
+						? `${ badge.widthBadge * 1.5 }px`
+						: `${ badge?.singleWidthBadge * 1.5 }px`
 				};
-				right: ${
-					badge.badgePositionX == 'right'
-						? `-${ badge.widthBadge / 2.22 }px`
-						: ''
+				left: ${ leftBadge5 };
+				right: ${ rightBadge5 };
+				top: ${
+					badge?.sizePage === 'archivePage'
+						? `${ badge.widthBadge / 7 }px`
+						: `${ badge?.singleWidthBadge / 7 }px`
 				};
-				top: ${ badge.widthBadge / 7 }px ;
-
 			`;
 			break;
 		case 'badge6':

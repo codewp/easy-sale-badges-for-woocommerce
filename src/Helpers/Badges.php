@@ -1001,7 +1001,36 @@ function css_badge_dynamic_styles( $badge, $hide = false, $out_of_image = false 
 
 			if ( isset( $badge->widthBadge ) ) {
 				$dynamic_styles .= ' width: ' . $badge->widthBadge * 1.5 . 'px;';
-				$dynamic_styles .= ' top: ' . $badge->widthBadge / 12 . 'px;';
+				$dynamic_styles .= ' top: ' . $badge->widthBadge / 7 . 'px;';
+			}
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.single .asnp-esb-inner-span1-'. absint( $badge->id ) .' {';
+			if ( isset( $badge->singleWidthBadge ) ) {
+				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? '' : '-'. $badge->singleWidthBadge / 2.4  .'px' ) . ';';
+				$dynamic_styles .= ' right: ' . ( $badge->badgePositionX == 'right' ? '-'. $badge->singleWidthBadge / 2.22  .'px' : '' ) . ';';
+			} elseif ( isset( $badge->widthBadge ) ) {
+				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? '' : '-'. $badge->widthBadge / 2.4  .'px' ) . ';';
+				$dynamic_styles .= ' right: ' . ( $badge->badgePositionX == 'right' ? '-'. $badge->widthBadge / 2.22  .'px' : '' ) . ';';
+			}
+			if ( isset( $badge->singleWidthBadge ) ) {
+				$dynamic_styles .= ' width: ' . $badge->singleWidthBadge * 1.5 . 'px;';
+				$dynamic_styles .= ' top: ' . $badge->singleWidthBadge / 7 . 'px;';
+			} elseif ( isset( $badge->widthBadge ) ) {
+				$dynamic_styles .= ' width: ' . $badge->widthBadge * 1.5 . 'px;';
+				$dynamic_styles .= ' top: ' . $badge->widthBadge / 7 . 'px;';
+			}
+			$dynamic_styles .= '}';
+
+			$dynamic_styles .= '.related .asnp-esb-inner-span1-'. absint( $badge->id ) .' {';
+			if ( isset( $badge->badgePositionX ) ) {
+				$dynamic_styles .= ' transform: ' . ( $badge->badgePositionX == 'right' ? 'rotate(45deg)' : 'rotate(315deg)' ) . ';';
+				$dynamic_styles .= ' left: ' . ( $badge->badgePositionX == 'right' ? '' : '-'. $badge->widthBadge / 2.4  .'px' ) . ';';
+				$dynamic_styles .= ' right: ' . ( $badge->badgePositionX == 'right' ? '-'. $badge->widthBadge / 2.22  .'px' : '' ) . ';';
+			}
+			if ( isset( $badge->widthBadge ) ) {
+				$dynamic_styles .= ' width: ' . $badge->widthBadge * 1.5 . 'px;';
+				$dynamic_styles .= ' top: ' . $badge->widthBadge / 7 . 'px;';
 			}
 			$dynamic_styles .= '}';
 		break;
