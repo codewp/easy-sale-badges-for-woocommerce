@@ -61,7 +61,7 @@ export default function Settings() {
 								: '' )
 						}
 					>
-						{ __( 'General ', 'easy-sale-badges-for-woocommerce' ) }
+						{ __( 'General', 'easy-sale-badges-for-woocommerce' ) }
 					</a>
 					<a
 						href="#"
