@@ -103,21 +103,25 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 		badge.badgeStyles == 'badge18'
 	) {
 		heightContBadge = `${ badge.widthBadge }px`;
+		heightContBadge = `${ badge.singleWidthBadge }px`;
 	} else if (
 		badge.badgeStyles == 'badge9' ||
 		badge.badgeStyles == 'badge10'
 	) {
 		heightContBadge = `${ badge.widthBadge - 15 }px`;
+		heightContBadge = `${ badge.singleWidthBadge - 15 }px`;
 	} else if ( badge.badgeStyles == 'badge12' ) {
 		heightContBadge = '';
 	} else {
 		heightContBadge = `${ badge.heightBadge }px`;
+		heightContBadge = `${ badge.singleHeightBadge }px`;
 	}
 
 	if ( badge.badgeStyles == 'badge11' ) {
 		widthContBadge = '100%';
 	} else {
 		widthContBadge = `${ badge.widthBadge }px`;
+		widthContBadge = `${ badge.singleWidthBadge }px`;
 	}
 
 	useEffect( () => {
@@ -128,6 +132,7 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 			badge.badgePositionX === 'left'
 		) {
 			updateBadge( 'heightBadge', '30' );
+			updateBadge( 'singleHeightBadge', '30' );
 			updateBadge( 'topRightRadius', '0' );
 			updateBadge( 'bottomRightRadius', '0' );
 		} else if (
@@ -137,6 +142,7 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 			badge.badgePositionX === 'right'
 		) {
 			updateBadge( 'heightBadge', '30' );
+			updateBadge( 'singleHeightBadge', '30' );
 			updateBadge( 'topLeftRadius', '0' );
 			updateBadge( 'bottomLeftRadius', '0' );
 		} else if (
@@ -246,12 +252,42 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 		.replace( /\{qty\}/g, '11' )
 		.replace( /\{sku\}/g, 'sku' );
 
+	let textPrev = '(Archive Page)';
+	if ( badge?.sizePage === 'archivePage' ) {
+		textPrev = '(Archive Page)';
+	} else {
+		textPrev = '(Product Page)';
+	}
+
 	return (
 		<div>
 			<div className="asnp-esb-containerAd">
 				<div className="asnp-esb-product">
-					<label className="asnp-esb-productLable">
-						{ __( 'Preview', 'easy-sale-badges-for-woocommerce' ) }
+					<div>
+						<select
+							className="asnp-select-field"
+							value={ badge?.sizePage }
+							onChange={ ( e ) =>
+								updateBadge( 'sizePage', e.target.value )
+							}
+						>
+							<option value="archivePage">
+								{ __(
+									'Archive Page',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</option>
+							<option value="singlePage">
+								{ __(
+									'Product Page',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</option>
+						</select>
+					</div>
+					<label className="asnp-esb-productLable asnp-mt-4">
+						{ __( 'Preview ', 'easy-sale-badges-for-woocommerce' ) }
+						{ __( textPrev, 'easy-sale-badges-for-woocommerce' ) }
 					</label>
 					<div className="asnp-esb-product2">
 						<div className="asnp-esb-productImg">
@@ -274,9 +310,24 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 											className="asnp-esb-productBadge2"
 											style={ {
 												color: `${ badge.textColor }`,
-												fontSize: `${ badge.fontSizeText }px`,
-												fontWeight: `${ badge.fontWeightLabel }`,
-												lineHeight: `${ badge.lineHeightText }px`,
+												fontSize: `${
+													badge?.sizePage ===
+													'archivePage'
+														? `${ badge.fontSizeText }px`
+														: `${ badge?.singleFontSizeText }px`
+												}`,
+												fontWeight: `${
+													badge?.sizePage ===
+													'archivePage'
+														? `${ badge.fontWeightLabel }`
+														: `${ badge?.singleFontWeightLabel }`
+												}`,
+												lineHeight: `${
+													badge?.sizePage ===
+													'archivePage'
+														? `${ badge.lineHeightText }px`
+														: `${ badge?.singleLineHeightText }px`
+												}`,
 												opacity: `${ badge.opacity }`,
 												borderTopLeftRadius: `${ badge.topLeftRadius }px`,
 												borderTopRightRadius: `${ badge.topRightRadius }px`,

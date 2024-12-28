@@ -69,6 +69,12 @@ const defaultBadge = {
 	badgePositionOutofImage: 'flex-start',
 	borderWidth: '2',
 	borderColor: '#9819fc',
+	sizePage: 'archivePage',
+	singleWidthBadge: '60',
+	singleHeightBadge: '30',
+	singleFontSizeText: '14',
+	singleLineHeightText: '30',
+	singleFontWeightLabel: '600',
 };
 
 export default function Badge() {

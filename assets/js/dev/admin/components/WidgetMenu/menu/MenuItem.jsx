@@ -34,9 +34,6 @@ const MenuItem = ( props ) => {
 						badgeLabel={ props.badge.badgeLabel }
 						badgeStyles={ props.badge.badgeStyles }
 						textColor={ props.badge.textColor }
-						fontSizeText={ props.badge.fontSizeText }
-						fontWeightLabel={ props.badge.fontWeightLabel }
-						lineHeightText={ props.badge.lineHeightText }
 						percentageDiscount={ props.badge.percentageDiscount }
 						labelTranslate={ props.badge.labelTranslate }
 					/>
@@ -49,6 +46,8 @@ const MenuItem = ( props ) => {
 						onChange={ props.onChange }
 						badgeColor={ props.badge.badgeColor }
 						widthBadge={ props.badge.widthBadge }
+						singleWidthBadge={ props.badge.singleWidthBadge }
+						singleHeightBadge={ props.badge.singleHeightBadge }
 						badgeStyles={ props.badge.badgeStyles }
 						badgePositionX={ props.badge.badgePositionX }
 						heightBadge={ props.badge.heightBadge }
@@ -59,6 +58,16 @@ const MenuItem = ( props ) => {
 						zIndex={ props.badge.zIndex }
 						borderWidth={ props.badge.borderWidth }
 						borderColor={ props.badge.borderColor }
+						fontSizeText={ props.badge.fontSizeText }
+						fontWeightLabel={ props.badge.fontWeightLabel }
+						lineHeightText={ props.badge.lineHeightText }
+						singleFontSizeText={ props.badge.singleFontSizeText }
+						singleFontWeightLabel={
+							props.badge.singleFontWeightLabel
+						}
+						singleLineHeightText={
+							props.badge.singleLineHeightText
+						}
 					/>
 					<Opacity
 						onChange={ props.onChange }
@@ -349,7 +358,7 @@ const MenuItem = ( props ) => {
 										'easy-sale-badges-for-woocommerce'
 									) }
 								</span>
-								<div >
+								<div>
 									<select
 										className="asnp-select-field asnp-mt-2 !asnp-h-[2.4rem]"
 										disabled

@@ -183,14 +183,83 @@ export default function BadgeCssandAdv( badge ) {
 	let badgeIcon = '';
 	let badgeIconOne = '';
 	let badgeIconTwo = '';
+	let borderRightStyle6;
+	let borderLefttStyle6;
+	let rightBadge5;
+	let leftBadge5;
+
+	if ( badge?.sizePage === 'archivePage' ) {
+		if ( badge.badgePositionX === 'right' ) {
+			borderRightStyle6 = `${ badge.widthBadge }px solid ${ badge.badgeColor }`;
+		} else {
+			borderRightStyle6 = 'none';
+		}
+	} else {
+		if ( badge.badgePositionX === 'right' ) {
+			borderRightStyle6 = `${ badge.singleWidthBadge }px solid ${ badge.badgeColor }`;
+		} else {
+			borderRightStyle6 = 'none';
+		}
+	}
+
+	if ( badge?.sizePage === 'archivePage' ) {
+		if ( badge.badgePositionX === 'right' ) {
+			borderLefttStyle6 = '';
+		} else {
+			borderLefttStyle6 = `${ badge.widthBadge }px solid ${ badge.badgeColor }`;
+		}
+	} else {
+		if ( badge.badgePositionX === 'right' ) {
+			borderLefttStyle6 = '';
+		} else {
+			borderLefttStyle6 = `${ badge.singleWidthBadge }px solid ${ badge.badgeColor }`;
+		}
+	}
+
+	if ( badge?.sizePage === 'archivePage' ) {
+		if ( badge.badgePositionX === 'right' ) {
+			leftBadge5 = '';
+		} else {
+			leftBadge5 = `-${ badge.widthBadge / 2.4 }px`;
+		}
+	} else {
+		if ( badge.badgePositionX === 'right' ) {
+			leftBadge5 = '';
+		} else {
+			leftBadge5 = `-${ badge.singleWidthBadge / 2.4 }px`;
+		}
+	}
+
+	if ( badge?.sizePage === 'archivePage' ) {
+		if ( badge.badgePositionX === 'right' ) {
+			rightBadge5 = `-${ badge.widthBadge / 2.22 }px`;
+		} else {
+			rightBadge5 = '';
+		}
+	} else {
+		if ( badge.badgePositionX === 'right' ) {
+			rightBadge5 = `-${ badge.singleWidthBadge / 2.22 }px`;
+		} else {
+			rightBadge5 = '';
+		}
+	}
+
 	switch ( badge.badgeStyles ) {
 		case 'badge1':
 			badgeIcon = `background: ${ badge.badgeColor };
 			top: 0px;
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
 			right: ${ badge.badgePositionX == 'right' ? '0px' : '' };
-            height: ${ badge.heightBadge }px;
-			width: ${ badge.widthBadge }px;
+            height: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.heightBadge }px`
+					: `${ badge?.singleHeightBadge }px`
+			};
+			width: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
 			opacity: ${ badge.opacity };
 			text-align: center;
             text-shadow: none;
@@ -204,8 +273,16 @@ export default function BadgeCssandAdv( badge ) {
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
 			right: ${ badge.badgePositionX == 'right' ? '0px' : '' };
 			top: 0px;
-			height: ${ badge.heightBadge }px;
-			width: ${ badge.widthBadge }px;
+			height: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.heightBadge }px`
+					: `${ badge?.singleHeightBadge }px`
+			};
+			width: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
 			background:  ${ badge.badgeColor };
 			border-radius: 3px;
 			&::before {
@@ -235,8 +312,16 @@ export default function BadgeCssandAdv( badge ) {
 			opacity: ${ badge.opacity };
 			top: 0px;
 			left: 0px;
-            height:  ${ badge.heightBadge }px;
-			width: ${ badge.widthBadge }px;
+            height: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.heightBadge }px`
+					: `${ badge?.singleHeightBadge }px`
+			};
+			width: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
 			line-height: 30px;
 			color: #fff;
 			&::after {
@@ -271,8 +356,16 @@ export default function BadgeCssandAdv( badge ) {
 			top: 0px;
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
 			right: ${ badge.badgePositionX == 'right' ? '0px' : '' };
-			height:  ${ badge.heightBadge }px;
-			width: ${ badge.widthBadge }px;
+			height: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.heightBadge }px`
+					: `${ badge?.singleHeightBadge }px`
+			};
+			width: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
 			line-height: 30px;
 			box-sizing: border-box;
 			border-bottom-right-radius: '1px !important';
@@ -320,8 +413,16 @@ export default function BadgeCssandAdv( badge ) {
 		case 'badge5':
 			badgeIcon = `
 				display: block;
-				width: ${ badge.widthBadge }px;
-				height: ${ badge.widthBadge }px;
+				height: ${
+					badge?.sizePage === 'archivePage'
+						? `${ badge.widthBadge }px`
+						: `${ badge?.singleWidthBadge }px`
+				};
+				width: ${
+					badge?.sizePage === 'archivePage'
+						? `${ badge.widthBadge }px`
+						: `${ badge?.singleWidthBadge }px`
+				};
 				text-align: center;
 				opacity: ${ badge.opacity };
 				overflow: hidden;
@@ -345,24 +446,32 @@ export default function BadgeCssandAdv( badge ) {
 						? 'rotate(45deg)'
 						: `rotate(315deg)`
 				} ;
-				width: ${ badge.widthBadge * 1.5 }px;
-				left: ${
-					badge.badgePositionX == 'right'
-						? ''
-						: `-${ badge.widthBadge / 2.4 }px`
+				width: ${
+					badge?.sizePage === 'archivePage'
+						? `${ badge.widthBadge * 1.5 }px`
+						: `${ badge?.singleWidthBadge * 1.5 }px`
 				};
-				right: ${
-					badge.badgePositionX == 'right'
-						? `-${ badge.widthBadge / 2.22 }px`
-						: ''
+				left: ${ leftBadge5 };
+				right: ${ rightBadge5 };
+				top: ${
+					badge?.sizePage === 'archivePage'
+						? `${ badge.widthBadge / 7 }px`
+						: `${ badge?.singleWidthBadge / 7 }px`
 				};
-				top: ${ badge.widthBadge / 7 }px ;
-
 			`;
 			break;
 		case 'badge6':
 			badgeIcon = `
-			height: ${ badge.widthBadge }px;
+			height: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
+			width: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
 			margin: 0;
 			padding: 0;
 			opacity: ${ badge.opacity };
@@ -370,7 +479,6 @@ export default function BadgeCssandAdv( badge ) {
 			top: 0px;
 			right: ${ badge.badgePositionX == 'right' ? '0px' : 'auto' };
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
-			width: ${ badge.widthBadge }px;
 			font-weight: 400;
 			border-radius: 0;
 			box-sizing: border-box;
@@ -382,8 +490,6 @@ export default function BadgeCssandAdv( badge ) {
 					badge.badgePositionX == 'right' &&
 					`rotateZ(90deg) !important` )
 			};
-
-
 		`;
 			badgeIconOne = `
 			position: absolute;
@@ -394,7 +500,11 @@ export default function BadgeCssandAdv( badge ) {
 					? 'rotate(45deg)'
 					: 'rotate(315deg)'
 			} ;
-			width: ${ badge.widthBadge * 1.5 }px !important;
+			width: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge * 1.5 }px !important`
+					: `${ badge?.singleWidthBadge * 1.5 }px !important`
+			};
 			text-align: center;
 			display: block;
 			left: ${ badge.badgePositionX == 'right' ? '0px' : 'auto' };
@@ -402,17 +512,13 @@ export default function BadgeCssandAdv( badge ) {
 		`;
 			badgeIconTwo = `width: 0;
 		    height: 0;
-		    border-right:${
-				badge.badgePositionX == 'right'
-					? `${ badge.widthBadge }px solid ${ badge.badgeColor }`
-					: 'none'
-			} ;
-		    border-bottom:${ badge.widthBadge }px solid transparent;
-			border-left:${
-				badge.badgePositionX == 'right'
-					? ''
-					: `${ badge.widthBadge }px solid  ${ badge.badgeColor }`
-			} ;
+		    border-right:${ borderRightStyle6 } ;
+		    border-bottom:${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px solid transparent`
+					: `${ badge.singleWidthBadge }px solid transparent`
+			};
+			border-left:${ borderLefttStyle6 } ;
 		    z-index: 12;
 		    display: block;`;
 			break;
@@ -423,8 +529,16 @@ export default function BadgeCssandAdv( badge ) {
 			top: 0px;
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
 			right:${ badge.badgePositionX == 'right' ? '0px' : '' };
-			height: ${ badge.widthBadge }px;
-			width: ${ badge.widthBadge }px;
+			height: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
+			width: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
 			border-radius: 3px;
 			text-align: center;`;
 			badgeIconOne = `
@@ -441,8 +555,16 @@ export default function BadgeCssandAdv( badge ) {
 			background: ${ badge.badgeColor };
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
 			right:${ badge.badgePositionX == 'right' ? '0px' : '' };
-			height: ${ badge.widthBadge }px;
-			width: ${ badge.widthBadge }px;
+			height: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
+			width: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
             z-index: 99;
             top: 0px;
             left: 0px;
@@ -460,8 +582,16 @@ export default function BadgeCssandAdv( badge ) {
 		case 'badge9':
 			badgeIcon = `
 			display: block;
-			height: ${ badge.widthBadge / 1.66 }px !important;
-			width: ${ badge.widthBadge }px;
+			height: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge / 1.66 }px !important`
+					: `${ badge?.singleWidthBadge / 1.66 }px !important`
+			};
+			width: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
 			background: ${ badge.badgeColor };
 			z-index: 1;
 			opacity: ${ badge.opacity };
@@ -472,10 +602,34 @@ export default function BadgeCssandAdv( badge ) {
 			border-top-left-radius: 3px;
 			text-align: center;
 			&::after {
-			border-top: ${ badge.widthBadge / 4 }px solid ${ badge.badgeColor } !important;
-			border-right: ${ badge.widthBadge / 2 }px solid transparent !important;
-			border-left: ${ badge.widthBadge / 2 }px solid transparent !important;
-			top: ${ badge.widthBadge / 1.66 }px !important;
+			border-top: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge / 4 }px solid ${
+							badge.badgeColor
+					  } !important`
+					: `${ badge.singleWidthBadge / 4 }px solid ${
+							badge.badgeColor
+					  } !important`
+			};
+			border-right: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge / 2 }px solid transparent !important`
+					: `${
+							badge.singleWidthBadge / 2
+					  }px solid transparent !important`
+			};
+			border-left: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge / 2 }px solid transparent !important`
+					: `${
+							badge.singleWidthBadge / 2
+					  }px solid transparent !important`
+			};
+			top: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge / 1.66 }px !important`
+					: `${ badge.singleWidthBadge / 1.66 }px !important`
+			};
 			content: "";
 			width: 0;
 			height: 0;
@@ -495,17 +649,31 @@ export default function BadgeCssandAdv( badge ) {
 		case 'badge10':
 			badgeIcon = `
 			display: block;
-			height: ${ badge.widthBadge / 1.083 }px !important;
-			width: ${ badge.widthBadge }px;
+			height: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge / 1.083 }px !important`
+					: `${ badge?.singleWidthBadge / 1.083 }px !important`
+			};
+			width: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
 			background: ${ badge.badgeColor };
 			z-index: 1;
 			opacity: ${ badge.opacity };
 			top: 0px;
 			left: 0px;
 			text-align: center;
-			border-radius: 3px 3px ${ badge.widthBadge / 2.38 }px ${
-				badge.widthBadge / 2.38
-			}px !important;
+			border-radius: ${
+				badge?.sizePage === 'archivePage'
+					? `3px 3px ${ badge.widthBadge / 2.38 }px ${
+							badge.widthBadge / 2.38
+					  }px !important`
+					: `3px 3px ${ badge.singleWidthBadge / 2.38 }px ${
+							badge.singleWidthBadge / 2.38
+					  }px !important`
+			};
 			`;
 			badgeIconOne = `
 			transform: translateY(-50%);
@@ -521,8 +689,16 @@ export default function BadgeCssandAdv( badge ) {
 			background: ${ badge.badgeColor };
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
 			right:${ badge.badgePositionX == 'right' ? '0px' : '' };
-			height: ${ badge.widthBadge }px;
-			width: ${ badge.widthBadge }px;
+			height: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
+			width: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
             z-index: 99;
             top: 0px;
             left: 0px;
@@ -543,8 +719,16 @@ export default function BadgeCssandAdv( badge ) {
 			background: ${ badge.badgeColor };
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
 			right:${ badge.badgePositionX == 'right' ? '0px' : '' };
-			height: ${ badge.widthBadge }px;
-			width: ${ badge.widthBadge }px;
+			height: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
+			width: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};;
             z-index: 99;
             top: 0px;
             left: 0px;
@@ -565,8 +749,16 @@ export default function BadgeCssandAdv( badge ) {
 			background: ${ badge.badgeColor };
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
 			right:${ badge.badgePositionX == 'right' ? '0px' : '' };
-			height: ${ badge.widthBadge }px;
-			width: ${ badge.widthBadge }px;
+			height: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
+			width: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
             z-index: 99;
             top: 0px;
             left: 0px;
@@ -587,8 +779,16 @@ export default function BadgeCssandAdv( badge ) {
 			background: ${ badge.badgeColor };
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
 			right:${ badge.badgePositionX == 'right' ? '0px' : '' };
-			height: ${ badge.widthBadge }px;
-			width: ${ badge.widthBadge }px;
+			height: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
+			width: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
             z-index: 99;
             top: 0px;
             left: 0px;
@@ -609,8 +809,16 @@ export default function BadgeCssandAdv( badge ) {
 			background: ${ badge.badgeColor };
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
 			right:${ badge.badgePositionX == 'right' ? '0px' : '' };
-			height: ${ badge.widthBadge }px;
-			width: ${ badge.widthBadge }px;
+			height: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
+			width: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
             z-index: 99;
             top: 0px;
             left: 0px;
@@ -633,8 +841,16 @@ export default function BadgeCssandAdv( badge ) {
 			top: 0px;
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
 			right: ${ badge.badgePositionX == 'right' ? '0px' : '' };
-            height: ${ badge.heightBadge }px;
-			width: ${ badge.widthBadge }px;
+            height: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.heightBadge }px`
+					: `${ badge?.singleHeightBadge }px`
+			};
+			width: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
 			opacity: ${ badge.opacity };
 			text-align: center;
             text-shadow: none;
@@ -646,8 +862,16 @@ export default function BadgeCssandAdv( badge ) {
 			top: 0px;
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
 			right: ${ badge.badgePositionX == 'right' ? '0px' : '' };
-            height: ${ badge.heightBadge }px;
-			width: ${ badge.widthBadge }px;
+            height: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.heightBadge }px`
+					: `${ badge?.singleHeightBadge }px`
+			};
+			width: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
 			opacity: ${ badge.opacity };
 			text-align: center;
             text-shadow: none;
@@ -658,8 +882,16 @@ export default function BadgeCssandAdv( badge ) {
 			top: 0px;
 			left: ${ badge.badgePositionX == 'right' ? 'auto' : '0px' };
 			right: ${ badge.badgePositionX == 'right' ? '0px' : '' };
-			height: ${ badge.heightBadge }px;
-			width: ${ badge.widthBadge }px;
+			height: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.heightBadge }px`
+					: `${ badge?.singleHeightBadge }px`
+			};
+			width: ${
+				badge?.sizePage === 'archivePage'
+					? `${ badge.widthBadge }px`
+					: `${ badge?.singleWidthBadge }px`
+			};
 			opacity: ${ badge.opacity };
 			background: ${ badge.badgeColor };`;
 	}
