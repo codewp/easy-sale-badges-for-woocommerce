@@ -68,9 +68,13 @@ class Settings extends BaseController {
 				case 'singleCustomHooks':
 				case 'loopCustomHooks':
 				case 'singleContainer':
-				case 'limitSalesPopup':
 				case 'licenseKey':
 					$data[ $key ] = sanitize_text_field( $value );
+					break;
+				
+				// Integer options.
+				case 'limitSalesPopup':
+					$data[ $key ] = SaleBadges\string_to_bool( $value ) ? 1 : 0;
 					break;
 
 				// Boolean values.
