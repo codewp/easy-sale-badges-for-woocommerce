@@ -74,7 +74,7 @@ class Settings extends BaseController {
 				
 				// Integer options.
 				case 'limitSalesPopup':
-					$data[ $key ] = SaleBadges\string_to_bool( $value ) ? 1 : 0;
+					$data[ $key ] = absint( $value );
 					break;
 
 				// Boolean values.
