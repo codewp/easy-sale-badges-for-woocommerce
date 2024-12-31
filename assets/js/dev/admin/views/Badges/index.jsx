@@ -16,7 +16,6 @@ import Alert from '../../components/Alert';
 import Pagination from '../../components/Pagination';
 import styled, { StyleSheetManager } from 'styled-components';
 import BadgePreview from '../../utils/labelPreview';
-import ChristmasBanner from '../../components/BlackFriday/ChristmasBanner';
 
 import './style.scss';
 
@@ -277,7 +276,6 @@ export default function Badges() {
 
 	return (
 		<div>
-			<ChristmasBanner />
 			<div className="asnp-flex asnp-space-x-2">
 				<h1 className="asnp-heading-inline">
 					{ __( 'Badges', 'easy-sale-badges-for-woocommerce' ) }
