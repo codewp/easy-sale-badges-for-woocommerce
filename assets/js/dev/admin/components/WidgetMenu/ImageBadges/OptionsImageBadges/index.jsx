@@ -9,11 +9,11 @@ const Options = () => {
 				<label>
 					<span className="asnp-field-title">
 						{ __(
-							'Size (Pixel)',
+							'Size on Archive Page (Pixel)',
 							'easy-sale-badges-for-woocommerce'
 						) }
 					</span>
-					<div className="asnp-w-[10rem]">
+					<div className="asnp-w-[11rem]">
 						<input
 							type="number"
 							min="0"
@@ -26,9 +26,29 @@ const Options = () => {
 				</label>
 				<label>
 					<span className="asnp-field-title asnp-ml-4">
+						{ __(
+							'Size on Product Page (Pixel)',
+							'easy-sale-badges-for-woocommerce'
+						) }
+					</span>
+					<div className="asnp-w-[11rem] asnp-ml-4">
+						<input
+							type="number"
+							min="0"
+							max="200"
+							className="asnp-text-field"
+							placeholder="0"
+							disabled
+						/>
+					</div>
+				</label>
+			</div>
+			<div className="asnp-flex asnp-mt-[2rem]">
+				<label>
+					<span className="asnp-field-title">
 						{ __( 'z-index', 'easy-sale-badges-for-woocommerce' ) }
 					</span>
-					<div className="asnp-w-[10rem] asnp-ml-4">
+					<div className="asnp-w-[11rem]">
 						<input
 							type="number"
 							min="0"
