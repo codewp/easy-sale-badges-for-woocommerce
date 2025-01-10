@@ -68,6 +68,9 @@ class Settings extends BaseController {
 				case 'singleCustomHooks':
 				case 'loopCustomHooks':
 				case 'singleContainer':
+				case 'positionEmbed':
+				case 'cssSelectorEmbed':
+				case 'customHooksEmbed':
 				case 'licenseKey':
 					$data[ $key ] = sanitize_text_field( $value );
 					break;
