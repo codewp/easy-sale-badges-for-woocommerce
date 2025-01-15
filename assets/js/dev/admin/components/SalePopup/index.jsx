@@ -217,7 +217,7 @@ const SalePopup = () => {
 							{ activeMenuPopup === 'content' && (
 								<div className="asnp-p-4">
 									<div className="asnp-mt-4 asnp-flex">
-										<label className="asnp-w-[25rem]">
+										<label>
 											<span className="asnp-field-title asnp-text-lg asnp-font-semibold">
 												{ __(
 													'Top Message',
@@ -231,7 +231,7 @@ const SalePopup = () => {
 											/>
 										</label>
 									</div>
-									<div className="asnp-block asnp-space-y-1 asnp-mt-1 asnp-w-[30rem]">
+									<div className="asnp-block asnp-space-y-1 asnp-mt-1">
 										<p
 											className="asnp-text-sm asnp-text-gray-600"
 											dangerouslySetInnerHTML={ {
@@ -254,7 +254,7 @@ const SalePopup = () => {
 										</p>
 									</div>
 									<div className="asnp-mt-8 asnp-flex">
-										<label className="asnp-w-[25rem]">
+										<label>
 											<span className="asnp-field-title asnp-text-lg asnp-font-semibold">
 												{ __(
 													'Content Message',
@@ -268,7 +268,7 @@ const SalePopup = () => {
 											/>
 										</label>
 									</div>
-									<div className="asnp-block asnp-space-y-1 asnp-mt-1 asnp-w-[30rem]">
+									<div className="asnp-block asnp-space-y-1 asnp-mt-1">
 										<p
 											className="asnp-text-sm asnp-text-gray-600"
 											dangerouslySetInnerHTML={ {
@@ -291,7 +291,7 @@ const SalePopup = () => {
 										</p>
 									</div>
 									<div className="asnp-mt-8 asnp-flex">
-										<label className="asnp-w-[25rem]">
+										<label>
 											<span className="asnp-field-title asnp-text-lg asnp-font-semibold">
 												{ __(
 													'Time',
@@ -305,7 +305,7 @@ const SalePopup = () => {
 											/>
 										</label>
 									</div>
-									<div className="asnp-block asnp-space-y-1 asnp-mt-1 asnp-w-[30rem]">
+									<div className="asnp-block asnp-space-y-1 asnp-mt-1">
 										<p
 											className="asnp-text-sm asnp-text-gray-600"
 											dangerouslySetInnerHTML={ {

@@ -135,7 +135,7 @@ const SalesPopupForm = () => {
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</div>
-						<div className="asnp-w-[17rem]">
+						<div className="asnp-w-[10rem]">
 							<input
 								type="number"
 								className="asnp-block asnp-text-field"
@@ -151,7 +151,7 @@ const SalesPopupForm = () => {
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</div>
-						<div className="asnp-w-[17rem]">
+						<div className="asnp-w-[10rem]">
 							<input
 								type="number"
 								className="asnp-block asnp-text-field"
