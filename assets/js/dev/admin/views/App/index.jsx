@@ -15,6 +15,7 @@ import Banner from '../../components/Banner';
 import * as SettingsApi from '@easy-sale-badges/api/settings';
 import BlackFriday from '../../components/BlackFriday';
 import AppPlugins from '../../components/AppPlugins';
+import SalePopup from '../../components/SalePopup';
 
 export default function App() {
 	const location = useLocation();
@@ -89,6 +90,21 @@ export default function App() {
 					>
 						{ __(
 							'Notification Bar',
+							'easy-sale-badges-for-woocommerce'
+						) }
+					</NavLink>
+					<NavLink
+						to="/salepopups"
+						className={ ( { isActive } ) =>
+							'asnp-nav-tab-item' +
+							( isActive ||
+							-1 !== location.pathname.search( 'salepopup/' )
+								? ' asnp-nav-tab-active'
+								: '' )
+						}
+					>
+						{ __(
+							'Sales Popup',
 							'easy-sale-badges-for-woocommerce'
 						) }
 					</NavLink>
@@ -175,6 +191,10 @@ export default function App() {
 									<Route
 										path="banners"
 										element={ <Banner /> }
+									/>
+									<Route
+										path="salepopups"
+										element={ <SalePopup /> }
 									/>
 									<Route
 										path="settings"
