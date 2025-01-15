@@ -160,25 +160,6 @@ const SalePopup = () => {
 										'easy-sale-badges-for-woocommerce'
 									) }
 								</a>
-
-								<a
-									href="#"
-									onClick={ ( e ) => {
-										e.preventDefault();
-										setActiveMenuPopup( 'theme' );
-									} }
-									className={
-										( 'theme' === activeMenuPopup
-											? ' asnp-nav-tab-active'
-											: '' ) + ' asnp-nav-tab-item'
-									}
-								>
-									{ __(
-										'Theme & Styles',
-										'easy-sale-badges-for-woocommerce'
-									) }
-								</a>
-
 								<a
 									href="#"
 									onClick={ ( e ) => {
@@ -193,6 +174,23 @@ const SalePopup = () => {
 								>
 									{ __(
 										'Colors',
+										'easy-sale-badges-for-woocommerce'
+									) }
+								</a>
+								<a
+									href="#"
+									onClick={ ( e ) => {
+										e.preventDefault();
+										setActiveMenuPopup( 'theme' );
+									} }
+									className={
+										( 'theme' === activeMenuPopup
+											? ' asnp-nav-tab-active'
+											: '' ) + ' asnp-nav-tab-item'
+									}
+								>
+									{ __(
+										'Theme & Styles',
 										'easy-sale-badges-for-woocommerce'
 									) }
 								</a>
@@ -760,18 +758,18 @@ const SalePopup = () => {
 								</div>
 							) }
 							{ activeMenuPopup === 'colors' && (
-								<div className="asnp-p-4 asnp-h-[50rem]">
-									<div className="asnp-w-[20rem] asnp-text-lg asnp-font-semibold">
+								<div className="asnp-p-4 asnp-h-auto">
+									<div className="asnp-text-lg asnp-font-semibold">
 										{ __(
 											'Colors',
 											'easy-sale-badges-for-woocommerce'
 										) }
 									</div>
-									<div className="asnp-mt-4 asnp-flex">
+									<div className="asnp-mt-4 asnp-grid asnp-gap-4 md:asnp-grid-cols-1 lg:asnp-grid-cols-1 xl:asnp-grid-cols-1 2xl:asnp-grid-cols-3">
 										<div className="asnp-flex">
 											<div className="asnp-w-[18rem]">
 												<label className="asnp-inline-flex asnp-items-center asnp-w-full asnp-h-14 asnp-my-2">
-													<div className="asnp-h-15 asnp-w-full asnp-my-4  asnp-bg-gray-200 asnp-cursor-pointer  asnp-relative asnp-inline-flex asnp-items-center asnp-justify-center asnp-p-0.5 asnp-mb-2 asnp-mr-2 asnp-overflow-hidden asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-rounded-lg asnp-group asnp-group asnp-bg-gradient-to-br asnp-from-green-400 asnp-to-blue-600     ">
+													<div className="asnp-h-15 asnp-w-full asnp-my-4  asnp-bg-gray-200 asnp-cursor-pointer  asnp-relative asnp-inline-flex asnp-items-center asnp-justify-center asnp-p-0.5 asnp-mb-2 asnp-mr-2 asnp-overflow-hidden asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-rounded-lg asnp-group asnp-group asnp-bg-gradient-to-br asnp-from-green-400 asnp-to-blue-600">
 														<div className=" asnp-w-full asnp-flex asnp-relative asnp-px-5 asnp-py-2 asnp-transition-all asnp-ease-in asnp-duration-75 asnp-bg-white  asnp-rounded-md group-hover:asnp-bg-opacity-0">
 															<span className="asnp-flex asnp-w-[25rem] asnp-my-2">
 																{ __(
@@ -788,7 +786,7 @@ const SalePopup = () => {
 										<div className="asnp-flex">
 											<div className="asnp-w-[18rem] asnp-ml-4">
 												<label className="asnp-inline-flex asnp-items-center asnp-w-full asnp-h-14 asnp-my-2">
-													<div className="asnp-h-15 asnp-w-full asnp-my-4  asnp-bg-gray-200 asnp-cursor-pointer  asnp-relative asnp-inline-flex asnp-items-center asnp-justify-center asnp-p-0.5 asnp-mb-2 asnp-mr-2 asnp-overflow-hidden asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-rounded-lg asnp-group asnp-group asnp-bg-gradient-to-br asnp-from-green-400 asnp-to-blue-600     ">
+													<div className="asnp-h-15 asnp-w-full asnp-my-4  asnp-bg-gray-200 asnp-cursor-pointer  asnp-relative asnp-inline-flex asnp-items-center asnp-justify-center asnp-p-0.5 asnp-mb-2 asnp-mr-2 asnp-overflow-hidden asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-rounded-lg asnp-group asnp-group asnp-bg-gradient-to-br asnp-from-green-400 asnp-to-blue-600">
 														<div className=" asnp-w-full asnp-flex asnp-relative asnp-px-5 asnp-py-2 asnp-transition-all asnp-ease-in asnp-duration-75 asnp-bg-white  asnp-rounded-md group-hover:asnp-bg-opacity-0">
 															<span className="asnp-flex asnp-w-[25rem] asnp-my-2">
 																{ __(
@@ -804,7 +802,7 @@ const SalePopup = () => {
 										</div>
 										<div className="asnp-w-[18rem] asnp-ml-4">
 											<label className="asnp-inline-flex asnp-items-center asnp-w-full asnp-h-14 asnp-my-2">
-												<div className="asnp-h-15 asnp-w-full asnp-my-4  asnp-bg-gray-200 asnp-cursor-pointer  asnp-relative asnp-inline-flex asnp-items-center asnp-justify-center asnp-p-0.5 asnp-mb-2 asnp-mr-2 asnp-overflow-hidden asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-rounded-lg asnp-group asnp-group asnp-bg-gradient-to-br asnp-from-green-400 asnp-to-blue-600     ">
+												<div className="asnp-h-15 asnp-w-full asnp-my-4  asnp-bg-gray-200 asnp-cursor-pointer  asnp-relative asnp-inline-flex asnp-items-center asnp-justify-center asnp-p-0.5 asnp-mb-2 asnp-mr-2 asnp-overflow-hidden asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-rounded-lg asnp-group asnp-group asnp-bg-gradient-to-br asnp-from-green-400 asnp-to-blue-600">
 													<div className=" asnp-w-full asnp-flex asnp-relative asnp-px-5 asnp-py-2 asnp-transition-all asnp-ease-in asnp-duration-75 asnp-bg-white  asnp-rounded-md group-hover:asnp-bg-opacity-0">
 														<span className="asnp-flex asnp-w-[25rem] asnp-my-2">
 															{ __(
@@ -817,11 +815,9 @@ const SalePopup = () => {
 												</div>
 											</label>
 										</div>
-									</div>
-									<div className="asnp-mt-4 asnp-flex">
 										<div className="asnp-w-[18rem]">
 											<label className="asnp-inline-flex asnp-items-center asnp-w-full asnp-h-14 asnp-my-2">
-												<div className="asnp-h-15 asnp-w-full asnp-my-4  asnp-bg-gray-200 asnp-cursor-pointer  asnp-relative asnp-inline-flex asnp-items-center asnp-justify-center asnp-p-0.5 asnp-mb-2 asnp-mr-2 asnp-overflow-hidden asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-rounded-lg asnp-group asnp-group asnp-bg-gradient-to-br asnp-from-green-400 asnp-to-blue-600     ">
+												<div className="asnp-h-15 asnp-w-full asnp-my-4  asnp-bg-gray-200 asnp-cursor-pointer  asnp-relative asnp-inline-flex asnp-items-center asnp-justify-center asnp-p-0.5 asnp-mb-2 asnp-mr-2 asnp-overflow-hidden asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-rounded-lg asnp-group asnp-group asnp-bg-gradient-to-br asnp-from-green-400 asnp-to-blue-600">
 													<div className=" asnp-w-full asnp-flex asnp-relative asnp-px-5 asnp-py-2 asnp-transition-all asnp-ease-in asnp-duration-75 asnp-bg-white  asnp-rounded-md group-hover:asnp-bg-opacity-0">
 														<span className="asnp-flex asnp-w-[25rem] asnp-my-2">
 															{ __(
@@ -836,7 +832,7 @@ const SalePopup = () => {
 										</div>
 										<div className="asnp-w-[18rem] asnp-ml-4">
 											<label className="asnp-inline-flex asnp-items-center asnp-w-full asnp-h-14 asnp-my-2">
-												<div className="asnp-h-15 asnp-w-full asnp-my-4  asnp-bg-gray-200 asnp-cursor-pointer  asnp-relative asnp-inline-flex asnp-items-center asnp-justify-center asnp-p-0.5 asnp-mb-2 asnp-mr-2 asnp-overflow-hidden asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-rounded-lg asnp-group asnp-group asnp-bg-gradient-to-br asnp-from-green-400 asnp-to-blue-600     ">
+												<div className="asnp-h-15 asnp-w-full asnp-my-4  asnp-bg-gray-200 asnp-cursor-pointer  asnp-relative asnp-inline-flex asnp-items-center asnp-justify-center asnp-p-0.5 asnp-mb-2 asnp-mr-2 asnp-overflow-hidden asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-rounded-lg asnp-group asnp-group asnp-bg-gradient-to-br asnp-from-green-400 asnp-to-blue-600">
 													<div className=" asnp-w-full asnp-flex asnp-relative asnp-px-5 asnp-py-2 asnp-transition-all asnp-ease-in asnp-duration-75 asnp-bg-white  asnp-rounded-md group-hover:asnp-bg-opacity-0">
 														<span className="asnp-flex asnp-w-[25rem] asnp-my-2">
 															{ __(
@@ -851,7 +847,7 @@ const SalePopup = () => {
 										</div>
 										<div className="asnp-w-[18rem] asnp-ml-4">
 											<label className="asnp-inline-flex asnp-items-center asnp-w-full asnp-h-14 asnp-my-2">
-												<div className="asnp-h-15 asnp-w-full asnp-my-4  asnp-bg-gray-200 asnp-cursor-pointer  asnp-relative asnp-inline-flex asnp-items-center asnp-justify-center asnp-p-0.5 asnp-mb-2 asnp-mr-2 asnp-overflow-hidden asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-rounded-lg asnp-group asnp-group asnp-bg-gradient-to-br asnp-from-green-400 asnp-to-blue-600     ">
+												<div className="asnp-h-15 asnp-w-full asnp-my-4  asnp-bg-gray-200 asnp-cursor-pointer  asnp-relative asnp-inline-flex asnp-items-center asnp-justify-center asnp-p-0.5 asnp-mb-2 asnp-mr-2 asnp-overflow-hidden asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-rounded-lg asnp-group asnp-group asnp-bg-gradient-to-br asnp-from-green-400 asnp-to-blue-600">
 													<div className=" asnp-w-full asnp-flex asnp-relative asnp-px-5 asnp-py-2 asnp-transition-all asnp-ease-in asnp-duration-75 asnp-bg-white  asnp-rounded-md group-hover:asnp-bg-opacity-0">
 														<span className="asnp-flex asnp-w-[25rem] asnp-my-2">
 															{ __(
@@ -868,7 +864,7 @@ const SalePopup = () => {
 									<div className="asnp-mt-4 asnp-flex">
 										<div className="asnp-w-[18rem]">
 											<label className="asnp-inline-flex asnp-items-center asnp-w-full asnp-h-14 asnp-my-2">
-												<div className="asnp-h-15 asnp-w-full asnp-my-4  asnp-bg-gray-200 asnp-cursor-pointer  asnp-relative asnp-inline-flex asnp-items-center asnp-justify-center asnp-p-0.5 asnp-mb-2 asnp-mr-2 asnp-overflow-hidden asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-rounded-lg asnp-group asnp-group asnp-bg-gradient-to-br asnp-from-green-400 asnp-to-blue-600     ">
+												<div className="asnp-h-15 asnp-w-full asnp-my-4  asnp-bg-gray-200 asnp-cursor-pointer  asnp-relative asnp-inline-flex asnp-items-center asnp-justify-center asnp-p-0.5 asnp-mb-2 asnp-mr-2 asnp-overflow-hidden asnp-text-sm asnp-font-medium asnp-text-gray-900 asnp-rounded-lg asnp-group asnp-group asnp-bg-gradient-to-br asnp-from-green-400 asnp-to-blue-600">
 													<div className=" asnp-w-full asnp-flex asnp-relative asnp-px-5 asnp-py-2 asnp-transition-all asnp-ease-in asnp-duration-75 asnp-bg-white  asnp-rounded-md group-hover:asnp-bg-opacity-0">
 														<span className="asnp-flex asnp-w-[25rem] asnp-my-2">
 															{ __(
