@@ -358,7 +358,7 @@ const SalePopup = () => {
 											'easy-sale-badges-for-woocommerce'
 										) }
 									</div>
-									<div className="asnp-relative asnp-w-[34rem] asnp-mb-3 asnp-mt-3 asnp-h-auto asnp-flex asnp-flex-col asnp-border-gray-300 asnp-border-[1px] asnp-rounded-2xl asnp-p-2">
+									<div className="asnp-relative asnp-w-[30rem] asnp-mb-3 asnp-mt-3 asnp-h-auto asnp-flex asnp-flex-col asnp-border-gray-300 asnp-border-[1px] asnp-rounded-2xl asnp-p-2">
 										<div className="asnp-flex asnp-flex-wrap">
 											<div
 												className="asnp-border-gray-400 asnp-p-5 asnp-pallettePopCont hover:asnp-border-indigo-700"
