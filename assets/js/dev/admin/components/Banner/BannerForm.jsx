@@ -1064,7 +1064,7 @@ const BannerForm = () => {
 					<div className="asnp-w-[20rem] asnp-text-lg asnp-font-semibold">
 						{ __(
 							'Themes',
-							'easy-sale-badges-for-woocommerce-pro'
+							'easy-sale-badges-for-woocommerce'
 						) }
 					</div>
 					<div className="asnp-relative asnp-w-[38rem] asnp-mb-3 asnp-mt-3 asnp-h-[10rem] asnp-flex asnp-flex-col  asnp-border-gray-300 asnp-border-[1px] asnp-rounded-2xl asnp-pr-1">
@@ -1086,13 +1086,13 @@ const BannerForm = () => {
 						<label className="asnp-block asnp-text-sm asnp-font-medium asnp-text-gray-700">
 							{ __(
 								'Custom Theme',
-								'easy-sale-badges-for-woocommerce-pro'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</label>
 						<button className="asnp-btn asnp-btn-primary asnp-mt-4 asnp-mb-4">
 							{ __(
 								'Upload',
-								'easy-sale-badges-for-woocommerce-pro'
+								'easy-sale-badges-for-woocommerce'
 							) }
 						</button>
 					</div>
