@@ -198,6 +198,23 @@ const SalePopup = () => {
 									href="#"
 									onClick={ ( e ) => {
 										e.preventDefault();
+										setActiveMenuPopup( 'schedule' );
+									} }
+									className={
+										( 'schedule' === activeMenuPopup
+											? ' asnp-nav-tab-active'
+											: '' ) + ' asnp-nav-tab-item'
+									}
+								>
+									{ __(
+										'Schedule',
+										'easy-sale-badges-for-woocommerce'
+									) }
+								</a>
+								<a
+									href="#"
+									onClick={ ( e ) => {
+										e.preventDefault();
 										setActiveMenuPopup( 'targeting' );
 									} }
 									className={
@@ -876,6 +893,52 @@ const SalePopup = () => {
 													</div>
 												</div>
 											</label>
+										</div>
+									</div>
+								</div>
+							) }
+							{ activeMenuPopup === 'schedule' && (
+								<div className="asnp-p-4">
+									<div className="asnp-w-[20rem] asnp-text-lg asnp-font-semibold">
+										{ __(
+											'Schedule',
+											'easy-sale-badges-for-woocommerce'
+										) }
+									</div>
+									<div>
+										<div>
+											<div className="asnp-w-full asnp-mb-4">
+												<div className="asnp-w-full asnp-mb-4 asnp-flex">
+													<select className="asnp-select-field !asnp-w-48 asnp-mt-2">
+														<option>
+															{ __(
+																'Date',
+																'easy-sale-badges-for-woocommerce'
+															) }
+														</option>
+
+														<option>
+															{ __(
+																'Date Time',
+																'easy-sale-badges-for-woocommerce'
+															) }
+														</option>
+
+														<option>
+															{ __(
+																'Time',
+																'easy-sale-badges-for-woocommerce'
+															) }
+														</option>
+														<option>
+															{ __(
+																'Days',
+																'easy-sale-badges-for-woocommerce'
+															) }
+														</option>
+													</select>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
