@@ -35,18 +35,6 @@ const SalePopup = () => {
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</h1>
-						<button
-							className="asnp-btn asnp-btn-primary asnp-w-[86.68px] asnp-h-[35.5px]"
-							type="button"
-						>
-							{ __( 'Save', 'easy-sale-badges-for-woocommerce' ) }
-						</button>
-						<button className="asnp-py-2 asnp-px-6 asnp-font-semibold asnp-shadow-md asnp-rounded-lg focus:asnp-shadow-none asnp-btn-secondary asnp-w-[86.68px] asnp-h-[35.5px]">
-							{ __(
-								'Cancel',
-								'easy-sale-badges-for-woocommerce'
-							) }
-						</button>
 					</div>
 					<label className="asnp-block asnp-space-y-1">
 						<span className="asnp-field-title">
