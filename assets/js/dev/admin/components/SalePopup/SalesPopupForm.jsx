@@ -168,12 +168,6 @@ const SalesPopupForm = () => {
 							'easy-sale-badges-for-woocommerce'
 						) }
 					</span>
-					<Toggle
-						value={ 0 }
-						onChange={ ( value ) =>
-							onChange( 'multiOrder', value ? 1 : 0 )
-						}
-					/>
 				</label>
 			</div>
 			<div className="asnp-w-[20rem] asnp-mt-6 asnp-text-lg asnp-font-semibold">
