@@ -1,6 +1,6 @@
 {
 	"name": "easy-sale-badges-for-woocommerce",
-	"version": "3.14.0",
+	"version": "4.0.0",
 	"private": true,
 	"scripts": {
 		"prepack": "npm install && npm run lint && npm run test && npm run build",
