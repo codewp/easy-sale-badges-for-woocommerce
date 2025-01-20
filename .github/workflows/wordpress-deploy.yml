@@ -7,6 +7,15 @@ jobs:
         name: New Release
         runs-on: ubuntu-latest
         steps:
+            - name: Wait until midnight UTC
+              run: |
+                  current_hour=$(date -u +"%H")
+                  current_minute=$(date -u +"%M")
+                  hours_left=$((24 - current_hour))
+                  minutes_left=$((60 - current_minute))
+                  total_minutes=$(( (hours_left * 60) - (60 - minutes_left) ))
+                  echo "Waiting for $total_minutes minutes until midnight UTC."
+                  sleep $((total_minutes * 60))
             - name: Checkout code
               uses: actions/checkout@v3
             - name: WordPress Plugin Deploy
