@@ -138,6 +138,23 @@ export default function App() {
 							'easy-sale-badges-for-woocommerce'
 						) }
 					</NavLink>
+					<a
+						target="_blank"
+						className="asnp-nav-tab-item asnp-ew-goPro"
+						href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
+					>
+						{ __(
+							'Go PRO',
+							'easy-sale-badges-for-woocommerce'
+						) }
+					</a>
+					<a
+						target="_blank"
+						className="asnp-nav-tab-item asnp-ew-tryPro"
+						href="https://pricing-and-discounts.asanaplugins.com/"
+					>
+						{ __( 'Try Pro', 'easy-sale-badges-for-woocommerce' ) }
+					</a>
 				</nav>
 			</div>
 			<AppContext.Provider
