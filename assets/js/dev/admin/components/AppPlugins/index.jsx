@@ -22,7 +22,7 @@ const plugins = [
 		description:
 			'WooCommerce Product Bundles plugin allows you to bundle your products together, offer them at a discount, and increase sales. Today everyone is using product bundles to up-sell and cross-sell their products. WooCommerce Product Bundles cover almost every bundling use case like discount packages, Assembled Products,   custom products, gift products, bulk offers, BOGO.',
 		imageUrl: IMAGES_URL + 'woocommerce-product-bundles.webp',
-		activeInstall: '3,000+',
+		activeInstall: '4,000+',
 		free_link:
 			'https://wordpress.org/plugins/easy-product-bundles-for-woocommerce/',
 		pro_link:
@@ -44,7 +44,7 @@ const plugins = [
 		description:
 			'The WooCommerce Sale Badges and Product Labels plugin enhances your stores appeal by offering custom badges and countdown timers. Unleash the full potential of your WooCommerce store with attractive sale badges, product labels, and countdown timers. This all-in-one plugin empowers you to create eye-catching labels and scheduled badges for products,…',
 		imageUrl: IMAGES_URL + 'woocommerce-badge-product-labels.webp',
-		activeInstall: '2,000+',
+		activeInstall: '3,000+',
 		free_link: '',
 		pro_link:
 			'https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/',

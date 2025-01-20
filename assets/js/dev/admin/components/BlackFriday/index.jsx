@@ -13,13 +13,13 @@ const BlackFriday = () => {
 			</h1>
 			<p className="asnp-text-lg md:asnp-text-xl asnp-text-gray-600 asnp-text-center asnp-mb-10 asnp-max-w-2xl">
 				{ __(
-					'Boost visibility and drive sales with eye-catching sale badges and notification bars designed to grab attention and maximize conversion rates for your WooCommerce store.',
+					'Boost visibility and drive sales with eye-catching sale badges, sales popup, and notification bars designed to grab attention and maximize conversion rates for your WooCommerce store.',
 					'easy-sale-badges-for-woocommerce'
 				) }
 			</p>
 			<div className="asnp-mb-10">
 				<img
-					src={ IMAGES_URL + 'ProVers-bn.png' }
+					src={ IMAGES_URL + 'ProVersion-bn.png' }
 					className="asnp-w-full asnp-max-w-6xl asnp-rounded-lg asnp-shadow-lg asnp-cursor-pointer hover:asnp-shadow-2xl"
 				/>
 			</div>
@@ -47,6 +47,12 @@ const BlackFriday = () => {
 							) }
 						</h3>
 						<ul className="asnp-list-disc asnp-pl-6 asnp-text-gray-700">
+							<li>
+								{ __(
+									'Sales Pop up',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</li>
 							<li>
 								{ __(
 									'Advanced sale badges with animations',
