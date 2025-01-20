@@ -83,19 +83,19 @@ const SalePopup = () => {
 								</div>
 								<div className="asnp-border-gray-400 asnp-p-3 asnp-esb-salespopupTemplate hover:asnp-border-indigo-700">
 									<img
-										src={ IMAGES_URL + 'salepop2.png' }
+										src={ IMAGES_URL + 'salepopTemp2.png' }
 										className="asnp-h-full asnp-w-full asnp-border-none"
 									/>
 								</div>
 								<div className="asnp-border-gray-400 asnp-p-3 asnp-esb-salespopupTemplate hover:asnp-border-indigo-700">
 									<img
-										src={ IMAGES_URL + 'salepop3.png' }
+										src={ IMAGES_URL + 'salepopTemp3.png' }
 										className="asnp-h-full asnp-w-full asnp-border-none"
 									/>
 								</div>
 								<div className="asnp-border-gray-400 asnp-p-3 asnp-esb-salespopupTemplate hover:asnp-border-indigo-700">
 									<img
-										src={ IMAGES_URL + 'salepop4.png' }
+										src={ IMAGES_URL + 'salepopTemp4.png' }
 										className="asnp-h-full asnp-w-full asnp-border-none"
 									/>
 								</div>
