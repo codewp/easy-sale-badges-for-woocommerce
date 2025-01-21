@@ -200,7 +200,7 @@ The plugin is rich in features, while it is lightweight and fast.
 
 = 4.0.0 =
 * Added Sales Pop up (Pro Version).
-* Compatibility with WooCommerce 9.5.2
+* Compatibility with WooCommerce 9.6.0
 Note: Help us spread the word by leaving a 5-star review. ❤️😍 Feel free to share your ideas in your review, as we always value your feedback.🌹
 
 = 3.14.0 =
