@@ -16,6 +16,7 @@ import * as SettingsApi from '@easy-sale-badges/api/settings';
 import BlackFriday from '../../components/BlackFriday';
 import AppPlugins from '../../components/AppPlugins';
 import SalePopup from '../../components/SalePopup';
+import Embed from '../../components/Embed';
 
 export default function App() {
 	const location = useLocation();
@@ -109,6 +110,18 @@ export default function App() {
 						) }
 					</NavLink>
 					<NavLink
+						to="/embeds"
+						className={ ( { isActive } ) =>
+							'asnp-nav-tab-item' +
+							( isActive ||
+							-1 !== location.pathname.search( 'embed/' )
+								? ' asnp-nav-tab-active'
+								: '' )
+						}
+					>
+						{ __( 'Embed', 'easy-sale-badges-for-woocommerce' ) }
+					</NavLink>
+					<NavLink
 						to="/settings"
 						className={ ( { isActive } ) =>
 							'asnp-nav-tab-item' +
@@ -143,10 +156,7 @@ export default function App() {
 						className="asnp-nav-tab-item asnp-ew-goPro"
 						href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
 					>
-						{ __(
-							'Go PRO',
-							'easy-sale-badges-for-woocommerce'
-						) }
+						{ __( 'Go PRO', 'easy-sale-badges-for-woocommerce' ) }
 					</a>
 					<a
 						target="_blank"
@@ -194,6 +204,10 @@ export default function App() {
 									<Route
 										path="salepopups"
 										element={ <SalePopup /> }
+									/>
+									<Route
+										path="embeds"
+										element={ <Embed /> }
 									/>
 									<Route
 										path="settings"
