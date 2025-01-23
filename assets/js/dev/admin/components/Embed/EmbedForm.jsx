@@ -99,10 +99,7 @@ const EmbedForm = () => {
 							: '' ) + ' asnp-nav-tab-item'
 					}
 				>
-					{ __(
-						'Targeting',
-						'easy-sale-badges-for-woocommerce'
-					) }
+					{ __( 'Targeting', 'easy-sale-badges-for-woocommerce' ) }
 				</a>
 			</nav>
 			{ activeMenuEmbeds === 'embedContent' && (
@@ -327,6 +324,62 @@ const EmbedForm = () => {
 			) }
 			{ activeMenuEmbeds === 'embedTheme' && (
 				<div>
+					<div className="asnp-mt-6 asnp-text-lg asnp-font-semibold">
+						{ __(
+							'Themes',
+							'easy-sale-badges-for-woocommerce-pro'
+						) }
+					</div>
+					<div className="asnp-mt-3">
+						<label>
+							<span className="asnp-field-title">
+								{ __(
+									'Templates',
+									'easy-sale-badges-for-woocommerce-pro'
+								) }
+							</span>
+							<div>
+								<select className="asnp-select-field xl:!asnp-w-48 asnp-mt-2">
+									<option>
+										{ __(
+											'Default',
+											'easy-sale-badges-for-woocommerce-pro'
+										) }
+									</option>
+									<option>
+										{ __(
+											'Red Rush',
+											'easy-sale-badges-for-woocommerce-pro'
+										) }
+									</option>
+									<option>
+										{ __(
+											'Night Mode',
+											'easy-sale-badges-for-woocommerce-pro'
+										) }
+									</option>
+									<option>
+										{ __(
+											'Blue Exclusive',
+											'easy-sale-badges-for-woocommerce-pro'
+										) }
+									</option>
+									<option>
+										{ __(
+											'Golden Hour',
+											'easy-sale-badges-for-woocommerce-pro'
+										) }
+									</option>
+									<option>
+										{ __(
+											'Cool Breeze',
+											'easy-sale-badges-for-woocommerce-pro'
+										) }
+									</option>
+								</select>
+							</div>
+						</label>
+					</div>
 					<div className="asnp-mt-4 asnp-text-lg asnp-font-semibold">
 						{ __(
 							'Gradient Palette',
