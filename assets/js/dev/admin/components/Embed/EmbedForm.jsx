@@ -22,25 +22,23 @@ const EmbedForm = () => {
 				>
 					{ __( 'Content', 'easy-sale-badges-for-woocommerce' ) }
 				</a>
-				{ embed.type === 'countdownTimer' && (
-					<a
-						href="#"
-						onClick={ ( e ) => {
-							e.preventDefault();
-							setActiveMenuEmbeds( 'embedTimer' );
-						} }
-						className={
-							( 'embedTimer' === activeMenuEmbeds
-								? ' asnp-nav-tab-active'
-								: '' ) + ' asnp-nav-tab-item'
-						}
-					>
-						{ __(
-							'Countdown Timer',
-							'easy-sale-badges-for-woocommerce'
-						) }
-					</a>
-				) }
+				<a
+					href="#"
+					onClick={ ( e ) => {
+						e.preventDefault();
+						setActiveMenuEmbeds( 'embedTimer' );
+					} }
+					className={
+						( 'embedTimer' === activeMenuEmbeds
+							? ' asnp-nav-tab-active'
+							: '' ) + ' asnp-nav-tab-item'
+					}
+				>
+					{ __(
+						'Countdown Timer',
+						'easy-sale-badges-for-woocommerce'
+					) }
+				</a>
 				<a
 					href="#"
 					onClick={ ( e ) => {

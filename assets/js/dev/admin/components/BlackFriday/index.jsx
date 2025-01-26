@@ -7,19 +7,51 @@ const BlackFriday = () => {
 		<div className="asnp-bg-white asnp-rounded-lg asnp-shadow-2xl asnp-text-gray-800 asnp-min-h-screen asnp-flex asnp-flex-col asnp-items-center asnp-py-12 asnp-px-4">
 			<h1 className="asnp-text-5xl md:asnp-text-6xl asnp-font-bold asnp-text-center asnp-mb-6 asnp-text-black">
 				{ __(
-					'Boost Your Sales with Powerful Tools!',
+					'Boost Your Sales with All-in-One Powerful Tools!',
 					'easy-sale-badges-for-woocommerce'
 				) }
 			</h1>
 			<p className="asnp-text-lg md:asnp-text-xl asnp-text-gray-600 asnp-text-center asnp-mb-10 asnp-max-w-2xl">
 				{ __(
-					'Boost visibility and drive sales with eye-catching sale badges, sales popup, and notification bars designed to grab attention and maximize conversion rates for your WooCommerce store.',
+					'Boost visibility and drive sales with eye-catching sale badges, sales popups, notification bars, countdown timers, countdown stock, and announcements designed to grab attention and maximize conversion rates for your WooCommerce store.',
 					'easy-sale-badges-for-woocommerce'
 				) }
 			</p>
+			<div className="asnp-flex asnp-space-x-4">
+				<a
+					href="https://pricing-and-discounts.asanaplugins.com/"
+					target="_blank"
+					className="asnp-bg-black hover:asnp-bg-gray-800 asnp-text-white asnp-font-semibold asnp-py-3 asnp-px-6 asnp-rounded-lg asnp-shadow-md asnp-transition asnp-duration-200"
+				>
+					{ __( 'Try Pro', 'easy-sale-badges-for-woocommerce' ) }
+				</a>
+				<a
+					href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
+					target="_blank"
+					className="asnp-bg-red-600 hover:asnp-bg-red-700 asnp-text-white asnp-font-semibold asnp-py-3 asnp-px-6 asnp-rounded-lg asnp-shadow-md asnp-transition asnp-duration-200"
+				>
+					{ __(
+						'Upgrade to Pro',
+						'easy-sale-badges-for-woocommerce'
+					) }
+				</a>
+			</div>
+			<div className="asnp-mb-10 asnp-mt-10">
+				<img
+					src={ IMAGES_URL + 'all-in-one.png' }
+					className="asnp-w-full asnp-max-w-6xl asnp-rounded-lg asnp-shadow-lg asnp-cursor-pointer hover:asnp-shadow-2xl"
+				/>
+			</div>
 			<div className="asnp-mb-10">
 				<img
 					src={ IMAGES_URL + 'ProVersion-bn.png' }
+					className="asnp-w-full asnp-max-w-6xl asnp-rounded-lg asnp-shadow-lg asnp-cursor-pointer hover:asnp-shadow-2xl"
+				/>
+			</div>
+			<div className="asnp-mb-10">
+				<img
+					src={ IMAGES_URL + 'embedsPro.png' }
+					alt="Embeds"
 					className="asnp-w-full asnp-max-w-6xl asnp-rounded-lg asnp-shadow-lg asnp-cursor-pointer hover:asnp-shadow-2xl"
 				/>
 			</div>
@@ -47,6 +79,24 @@ const BlackFriday = () => {
 							) }
 						</h3>
 						<ul className="asnp-list-disc asnp-pl-6 asnp-text-gray-700">
+							<li>
+								{ __(
+									'Countdown Stock',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</li>
+							<li>
+								{ __(
+									'Countdown Timer',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</li>
+							<li>
+								{ __(
+									'Announcement',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</li>
 							<li>
 								{ __(
 									'Sales Pop up',

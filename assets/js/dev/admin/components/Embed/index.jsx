@@ -3,9 +3,9 @@ import { __ } from '@wordpress/i18n';
 import { IMAGES_URL } from '../../utils/constants';
 import Toggle from '../Toggle';
 import { LockClosedIcon } from '@heroicons/react/solid';
+import EmbedForm from './EmbedForm';
 
 import './style.scss';
-import EmbedForm from './EmbedForm';
 
 const Embed = () => {
 	return (
@@ -63,49 +63,44 @@ const Embed = () => {
 						</label>
 					</div>
 				</div>
-				<div className="asnp-w-full asnp-flex asnp-mt-4">
-					<div className="asnp-w-full asnp-text-lg asnp-font-semibold">
-						{ __(
-							'Embed Type',
-							'easy-sale-badges-for-woocommerce'
-						) }
-					</div>
-					<div className="asnp-relative asnp-w-full asnp-bg-white asnp-mb-3 asnp-mt-1 asnp-border-2 asnp-rounded-md asnp-p-4">
-						<div className="asnp-flex asnp-flex-wrap">
-							<div className="asnp-text-center asnp-mb-5">
-								<div className="asnp-border-gray-400 asnp-p-4 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
-									<img className="asnp-h-full asnp-w-full asnp-border-none asnp-object-cover" />
-								</div>
-								<div className="asnp-mt-2">
-									{ __(
-										'Countdown Timer',
-										'easy-sale-badges-for-woocommerce'
-									) }
-								</div>
+				<div className="asnp-w-full asnp-mt-4 asnp-text-lg asnp-font-semibold">
+					{ __( 'Embed Type', 'easy-sale-badges-for-woocommerce' ) }
+				</div>
+				<div className="asnp-relative asnp-w-full asnp-bg-white asnp-mb-3 asnp-mt-1 asnp-border-2 asnp-rounded-md asnp-p-4">
+					<div className="asnp-flex asnp-flex-wrap">
+						<div className="asnp-text-center asnp-mb-5">
+							<div className="asnp-border-gray-400 asnp-p-5 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
+								<img className="asnp-h-full asnp-w-full asnp-border-none asnp-object-cover" />
 							</div>
-
-							<div className="asnp-text-center asnp-mb-5">
-								<div className="asnp-border-gray-400 asnp-p-4 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
-									<img className="asnp-h-full asnp-w-full asnp-border-none asnp-object-cover" />
-								</div>
-								<div className="asnp-mt-2">
-									{ __(
-										'Countdown Stock',
-										'easy-sale-badges-for-woocommerce'
-									) }
-								</div>
+							<div className="asnp-mt-2">
+								{ __(
+									'Countdown Timer',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</div>
+						</div>
 
-							<div className="asnp-text-center asnp-mb-5">
-								<div className="asnp-border-gray-400 asnp-p-4 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
-									<img className="asnp-h-full asnp-w-full asnp-border-none asnp-object-cover" />
-								</div>
-								<div className="asnp-mt-2">
-									{ __(
-										'Announcement',
-										'easy-sale-badges-for-woocommerce'
-									) }
-								</div>
+						<div className="asnp-text-center asnp-mb-5">
+							<div className="asnp-border-gray-400 asnp-px-4 asnp-py-8 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
+								<img className="asnp-h-full asnp-w-full asnp-border-none asnp-object-contain" />
+							</div>
+							<div className="asnp-mt-2">
+								{ __(
+									'Countdown Stock',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</div>
+						</div>
+
+						<div className="asnp-text-center asnp-mb-5">
+							<div className="asnp-border-gray-400 asnp-p-5 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
+								<img className="asnp-h-full asnp-w-full asnp-border-none asnp-object-cover" />
+							</div>
+							<div className="asnp-mt-2">
+								{ __(
+									'Announcement',
+									'easy-sale-badges-for-woocommerce'
+								) }
 							</div>
 						</div>
 					</div>
