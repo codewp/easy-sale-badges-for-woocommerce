@@ -464,7 +464,7 @@ const EmbedForm = () => {
 						<label>
 							<span className="asnp-field-title">
 								{ __(
-									'Font Size Top Message (Pixel)',
+									'Top Message Font Size (Pixel)',
 									'easy-sale-badges-for-woocommerce'
 								) }
 							</span>
@@ -481,7 +481,7 @@ const EmbedForm = () => {
 						<label className="asnp-ml-10">
 							<span className="asnp-field-title">
 								{ __(
-									'Font Size Bottom Message (Pixel)',
+									'Bottom Message Font Size (Pixel)',
 									'easy-sale-badges-for-woocommerce'
 								) }
 							</span>
@@ -503,7 +503,7 @@ const EmbedForm = () => {
 						<label>
 							<span className="asnp-field-title">
 								{ __(
-									'Font Top Message',
+									'Top Message Font',
 									'easy-sale-badges-for-woocommerce'
 								) }
 							</span>
@@ -581,7 +581,7 @@ const EmbedForm = () => {
 						<label className="asnp-ml-10">
 							<span className="asnp-field-title">
 								{ __(
-									'Font Bottom Message',
+									'Bottom Message Font',
 									'easy-sale-badges-for-woocommerce'
 								) }
 							</span>
@@ -667,7 +667,7 @@ const EmbedForm = () => {
 						<label>
 							<span className="asnp-field-title">
 								{ __(
-									'Font Weight Top Message',
+									'Top Message Font Weight',
 									'easy-sale-badges-for-woocommerce'
 								) }
 							</span>
@@ -733,7 +733,7 @@ const EmbedForm = () => {
 						<label className="asnp-ml-10">
 							<span className="asnp-field-title">
 								{ __(
-									'Font Weight Bottom Message',
+									'Bottom Message Font Weight',
 									'easy-sale-badges-for-woocommerce'
 								) }
 							</span>

@@ -462,7 +462,7 @@ const SalePopup = () => {
 										<label>
 											<span className="asnp-field-title">
 												{ __(
-													'Font Size Top Message (Pixel)',
+													'Top Message Font Size (Pixel)',
 													'easy-sale-badges-for-woocommerce'
 												) }
 											</span>
@@ -479,7 +479,7 @@ const SalePopup = () => {
 										<label className="asnp-ml-10">
 											<span className="asnp-field-title">
 												{ __(
-													'Font Size Content Message (Pixel)',
+													'Content Message Font Size (Pixel)',
 													'easy-sale-badges-for-woocommerce'
 												) }
 											</span>
@@ -504,7 +504,7 @@ const SalePopup = () => {
 										<label>
 											<span className="asnp-field-title">
 												{ __(
-													'Font Weight Top Message',
+													'Top Message Font Weight',
 													'easy-sale-badges-for-woocommerce'
 												) }
 											</span>
@@ -570,7 +570,7 @@ const SalePopup = () => {
 										<label className="asnp-ml-10">
 											<span className="asnp-field-title">
 												{ __(
-													'Font Weight Content Message',
+													'Content Message Font Weight',
 													'easy-sale-badges-for-woocommerce'
 												) }
 											</span>
