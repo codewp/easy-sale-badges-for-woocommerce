@@ -205,6 +205,7 @@ The plugin is rich in features, while it is lightweight and fast.
 * Added Countdown timer for embeds (Pro Version).
 * Added Countdown stock for embeds (Pro Version).
 * Added Announcement feature for embeds (Pro Version).
+* Fixed bug in quantity.
 Note: Help us spread the word by leaving a 5-star review. ❤️😍 Feel free to share your ideas in your review, as we always value your feedback.🌹
 
 = 4.0.0 =
