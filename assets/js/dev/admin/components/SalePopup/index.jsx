@@ -1176,6 +1176,11 @@ const SalePopup = () => {
 										'Preview',
 										'easy-sale-badges-for-woocommerce'
 									) }
+									<LockClosedIcon
+										width="17"
+										height="17"
+										className="asnp-ml-1 asnp-mt-1"
+									/>
 								</label>
 							</div>
 						</div>

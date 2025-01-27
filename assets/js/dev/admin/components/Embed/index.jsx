@@ -70,7 +70,10 @@ const Embed = () => {
 					<div className="asnp-flex asnp-flex-wrap">
 						<div className="asnp-text-center asnp-mb-5">
 							<div className="asnp-border-gray-400 asnp-p-5 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
-								<img className="asnp-h-full asnp-w-full asnp-border-none asnp-object-cover" />
+								<img
+									src={ IMAGES_URL + 'embed-timer.png' }
+									className="asnp-h-full asnp-w-full asnp-border-none"
+								/>
 							</div>
 							<div className="asnp-mt-2">
 								{ __(
@@ -82,7 +85,10 @@ const Embed = () => {
 
 						<div className="asnp-text-center asnp-mb-5">
 							<div className="asnp-border-gray-400 asnp-px-4 asnp-py-8 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
-								<img className="asnp-h-full asnp-w-full asnp-border-none asnp-object-contain" />
+								<img
+									src={ IMAGES_URL + 'embed-stock.png' }
+									className="asnp-h-full asnp-w-full asnp-border-none asnp-object-contain"
+								/>
 							</div>
 							<div className="asnp-mt-2">
 								{ __(
@@ -94,7 +100,10 @@ const Embed = () => {
 
 						<div className="asnp-text-center asnp-mb-5">
 							<div className="asnp-border-gray-400 asnp-p-5 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
-								<img className="asnp-h-full asnp-w-full asnp-border-none asnp-object-cover" />
+								<img
+									src={ IMAGES_URL + 'embed-annouc.png' }
+									className="asnp-h-full asnp-w-full asnp-border-none"
+								/>
 							</div>
 							<div className="asnp-mt-2">
 								{ __(
@@ -117,6 +126,11 @@ const Embed = () => {
 										'Preview',
 										'easy-sale-badges-for-woocommerce'
 									) }
+									<LockClosedIcon
+										width="17"
+										height="17"
+										className="asnp-ml-1 asnp-mt-1"
+									/>
 								</label>
 							</div>
 						</div>
