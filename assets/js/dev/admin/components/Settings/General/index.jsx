@@ -537,6 +537,30 @@ const General = ( props ) => {
 								'easy-sale-badges-for-woocommerce'
 							) }
 						</option>
+						<option value="before_add_to_cart_button">
+							{ __(
+								'Before Add to Cart button',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="after_add_to_cart_button">
+							{ __(
+								'After Add to Cart button',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="before_add_to_cart_form">
+							{ __(
+								'Before Add to Cart form',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
+						<option value="after_add_to_cart_form">
+							{ __(
+								'After Add to Cart form',
+								'easy-sale-badges-for-woocommerce'
+							) }
+						</option>
 						<option value="post_thumbnail_html">
 							{ __(
 								'Post thumbnail html',
