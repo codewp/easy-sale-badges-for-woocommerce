@@ -42,30 +42,6 @@ export default function App() {
 	return (
 		<div className="asnp-app">
 			<div className="asnp-bg-white">
-				<div className="asnp-float-right asnp-pt-3 asnp-pr-6">
-					<a
-						target="_blank"
-						href="https://wordpress.org/support/plugin/easy-sale-badges-for-woocommerce/reviews/"
-					>
-						<button className="asnp-btn asnp-btn-primary asnp-ml-2 asnp-w-[8rem]">
-							{ __(
-								'5-Star Review',
-								'easy-sale-badges-for-woocommerce'
-							) }
-						</button>
-					</a>
-					<a
-						target="_blank"
-						href="https://wordpress.org/support/plugin/easy-sale-badges-for-woocommerce/"
-					>
-						<button className="asnp-btn asnp-btn-primary asnp-ml-2 asnp-w-[8rem]">
-							{ __(
-								'Need help?',
-								'easy-sale-badges-for-woocommerce'
-							) }
-						</button>
-					</a>
-				</div>
 				<nav className="asnp-flex asnp-flex-col sm:asnp-flex-row">
 					<NavLink
 						to="/"
@@ -156,7 +132,7 @@ export default function App() {
 						className="asnp-nav-tab-item asnp-ew-goPro"
 						href="https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/"
 					>
-						{ __( 'Go PRO', 'easy-sale-badges-for-woocommerce' ) }
+						{ __( 'Go PRO UP to 75% OFF', 'easy-sale-badges-for-woocommerce' ) }
 					</a>
 					<a
 						target="_blank"
@@ -164,6 +140,26 @@ export default function App() {
 						href="https://pricing-and-discounts.asanaplugins.com/"
 					>
 						{ __( 'Try Pro', 'easy-sale-badges-for-woocommerce' ) }
+					</a>
+					<a
+						target="_blank"
+						className="asnp-nav-tab-item asnp-text-indigo-400"
+						href="https://wordpress.org/support/plugin/easy-sale-badges-for-woocommerce/"
+					>
+						{ __(
+							'Need help?',
+							'easy-sale-badges-for-woocommerce'
+						) }
+					</a>
+					<a
+						target="_blank"
+						className="asnp-nav-tab-item asnp-text-indigo-400"
+						href="https://wordpress.org/support/plugin/easy-sale-badges-for-woocommerce/reviews/"
+					>
+						{ __(
+							'5-Star Review',
+							'easy-sale-badges-for-woocommerce'
+						) }
 					</a>
 				</nav>
 			</div>
