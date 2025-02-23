@@ -102,7 +102,13 @@ const SalePopup = () => {
 
 								<div className="asnp-border-gray-400 asnp-p-3 asnp-esb-salespopupTemplate hover:asnp-border-indigo-700">
 									<img
-										src={ IMAGES_URL + 'salepop5.png' }
+										src={ IMAGES_URL + 'salepopTemp5.png' }
+										className="asnp-h-full asnp-w-full asnp-border-none"
+									/>
+								</div>
+								<div className="asnp-border-gray-400 asnp-p-6 asnp-esb-salespopupTemplate hover:asnp-border-indigo-700">
+									<img
+										src={ IMAGES_URL + 'salepopTemp6.png' }
 										className="asnp-h-full asnp-w-full asnp-border-none"
 									/>
 								</div>
