@@ -25,7 +25,7 @@ use AsanaPlugins\WooCommerce\SaleBadges\Plugin;
 
 // Plugin version.
 if ( ! defined( 'ASNP_WESB_VERSION' ) ) {
-	define( 'ASNP_WESB_VERSION', '5.2.0' );
+	define( 'ASNP_WESB_VERSION', '5.3.0' );
 }
 
 /**
