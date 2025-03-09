@@ -101,6 +101,20 @@ const Embed = () => {
 						<div className="asnp-text-center asnp-mb-5">
 							<div className="asnp-border-gray-400 asnp-p-5 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
 								<img
+									src={ IMAGES_URL + 'embed-banner.png' }
+									className="asnp-h-full asnp-w-full asnp-border-none"
+								/>
+							</div>
+							<div className="asnp-mt-2">
+								{ __(
+									'Banner',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</div>
+						</div>
+						<div className="asnp-text-center asnp-mb-5">
+							<div className="asnp-border-gray-400 asnp-p-5 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
+								<img
 									src={ IMAGES_URL + 'embed-annouc.png' }
 									className="asnp-h-full asnp-w-full asnp-border-none"
 								/>
