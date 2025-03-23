@@ -132,6 +132,34 @@ const Banner = () => {
 									<div className="asnp-border-gray-400 asnp-py-10 asnp-px-4 asnp-esb-containerBannerTemplate hover:asnp-border-indigo-700">
 										<img
 											className="asnp-h-full asnp-w-full asnp-border-none asnp-object-cover"
+											src={ IMAGES_URL + 'bar6.png' }
+										/>
+									</div>
+									<div className="asnp-border-gray-400 asnp-py-10 asnp-px-4 asnp-esb-containerBannerTemplate hover:asnp-border-indigo-700">
+										<img
+											className="asnp-h-full asnp-w-full asnp-border-none asnp-object-cover"
+											src={ IMAGES_URL + 'bar7.png' }
+										/>
+									</div>
+								</div>
+								<div className="asnp-w-full asnp-flex asnp-pb-2 asnp-space-x-5 asnp-ml-2">
+									<div className="asnp-esb-containerBannerTemplateLabel">
+										{ __(
+											'Multi Bar',
+											'easy-sale-badges-for-woocommerce'
+										) }
+									</div>
+									<div className="asnp-esb-containerBannerTemplateLabel">
+										{ __(
+											'Infinity Bar',
+											'easy-sale-badges-for-woocommerce'
+										) }
+									</div>
+								</div>
+								<div className="asnp-w-full asnp-flex asnp-py-2 asnp-space-x-5 asnp-ml-2">
+									<div className="asnp-border-gray-400 asnp-py-10 asnp-px-4 asnp-esb-containerBannerTemplate hover:asnp-border-indigo-700">
+										<img
+											className="asnp-h-full asnp-w-full asnp-border-none asnp-object-cover"
 											src={ IMAGES_URL + 'bar5.png' }
 										/>
 									</div>
