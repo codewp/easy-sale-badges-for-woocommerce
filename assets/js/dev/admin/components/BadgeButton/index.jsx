@@ -250,7 +250,8 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 		.replace( /\{sale_ends\}/g, '8 days' )
 		.replace( /\{currency\}/g, '$' )
 		.replace( /\{qty\}/g, '11' )
-		.replace( /\{sku\}/g, 'sku' );
+		.replace( /\{sku\}/g, 'sku' )
+		.replace( /\{br\}/g, '<br />' );
 
 	let textPrev = '(Archive Page)';
 	if ( badge?.sizePage === 'archivePage' ) {
@@ -344,13 +345,14 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 												badgeIconOne={ badgeIconOne }
 											>
 												<div
+													dangerouslySetInnerHTML={ {
+														__html: updatedBadgeLabel,
+													} }
 													style={ {
 														transform: `${ horizAndvert }`,
 														whiteSpace: `${ textNoWrap }`,
 													} }
-												>
-													{ updatedBadgeLabel }
-												</div>
+												></div>
 											</StyledSpanOne>
 										</StyledSpan>
 									</div>
@@ -397,13 +399,14 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 										badgeIconOne={ badgeIconOne }
 									>
 										<div
+											dangerouslySetInnerHTML={ {
+												__html: updatedBadgeLabel,
+											} }
 											style={ {
 												transform: `${ horizAndvert }`,
 												whiteSpace: `${ textNoWrap }`,
 											} }
-										>
-											{ updatedBadgeLabel }
-										</div>
+										></div>
 									</StyledSpanOne>
 								</StyledSpan>
 							</div>
