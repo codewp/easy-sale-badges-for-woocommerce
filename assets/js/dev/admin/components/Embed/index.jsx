@@ -101,6 +101,48 @@ const Embed = () => {
 						<div className="asnp-text-center asnp-mb-5">
 							<div className="asnp-border-gray-400 asnp-p-5 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
 								<img
+									src={ IMAGES_URL + 'embed-banne.png' }
+									className="asnp-h-full asnp-w-full asnp-border-none"
+								/>
+							</div>
+							<div className="asnp-mt-2">
+								{ __(
+									'Payment Icons',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</div>
+						</div>
+						<div className="asnp-text-center asnp-mb-5">
+							<div className="asnp-border-gray-400 asnp-p-5 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
+								<img
+									src={ IMAGES_URL + 'embed-banne.png' }
+									className="asnp-h-full asnp-w-full asnp-border-none"
+								/>
+							</div>
+							<div className="asnp-mt-2">
+								{ __(
+									'Social Media Icons',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</div>
+						</div>
+						<div className="asnp-text-center asnp-mb-5">
+							<div className="asnp-border-gray-400 asnp-p-5 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
+								<img
+									src={ IMAGES_URL + 'embed-banne.png' }
+									className="asnp-h-full asnp-w-full asnp-border-none"
+								/>
+							</div>
+							<div className="asnp-mt-2">
+								{ __(
+									'Badges',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</div>
+						</div>
+						<div className="asnp-text-center asnp-mb-5">
+							<div className="asnp-border-gray-400 asnp-p-5 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
+								<img
 									src={ IMAGES_URL + 'embed-banner.png' }
 									className="asnp-h-full asnp-w-full asnp-border-none"
 								/>
