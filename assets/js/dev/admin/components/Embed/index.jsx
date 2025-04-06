@@ -99,9 +99,9 @@ const Embed = () => {
 						</div>
 
 						<div className="asnp-text-center asnp-mb-5">
-							<div className="asnp-border-gray-400 asnp-p-5 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
+							<div className="asnp-border-gray-400 asnp-p-8 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
 								<img
-									src={ IMAGES_URL + 'embed-banne.png' }
+									src={ IMAGES_URL + 'embed-payment.png' }
 									className="asnp-h-full asnp-w-full asnp-border-none"
 								/>
 							</div>
@@ -113,9 +113,9 @@ const Embed = () => {
 							</div>
 						</div>
 						<div className="asnp-text-center asnp-mb-5">
-							<div className="asnp-border-gray-400 asnp-p-5 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
+							<div className="asnp-border-gray-400 asnp-p-12 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
 								<img
-									src={ IMAGES_URL + 'embed-banne.png' }
+									src={ IMAGES_URL + 'embed-social-media.png' }
 									className="asnp-h-full asnp-w-full asnp-border-none"
 								/>
 							</div>
@@ -127,9 +127,9 @@ const Embed = () => {
 							</div>
 						</div>
 						<div className="asnp-text-center asnp-mb-5">
-							<div className="asnp-border-gray-400 asnp-p-5 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
+							<div className="asnp-border-gray-400 asnp-p-6 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
 								<img
-									src={ IMAGES_URL + 'embed-banne.png' }
+									src={ IMAGES_URL + 'embed-badges.png' }
 									className="asnp-h-full asnp-w-full asnp-border-none"
 								/>
 							</div>
