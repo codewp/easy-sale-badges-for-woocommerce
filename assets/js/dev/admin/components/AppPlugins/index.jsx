@@ -43,7 +43,7 @@ const plugins = [
 		name: 'WooCommerce Sale Badges and Product Labels',
 		description:
 			'The WooCommerce Sale Badges and Product Labels plugin enhances your stores appeal by offering custom badges and countdown timers. Unleash the full potential of your WooCommerce store with attractive sale badges, product labels, and countdown timers. This all-in-one plugin empowers you to create eye-catching labels and scheduled badges for products,…',
-		imageUrl: IMAGES_URL + 'woocommerce-badge-product-labels.webp',
+		imageUrl: IMAGES_URL + 'woocommerce-sale-badge-product-labels.webp',
 		activeInstall: '4,000+',
 		free_link: '',
 		pro_link:
