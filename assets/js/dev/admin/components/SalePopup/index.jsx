@@ -65,6 +65,49 @@ const SalePopup = () => {
 						</label>
 					</div>
 				</div>
+				<div className="asnp-w-full asnp-mt-4">
+					<div className="asnp-w-full asnp-text-lg asnp-font-semibold">
+						{ __(
+							'Popup Type',
+							'easy-sale-badges-for-woocommerce-pro'
+						) }
+					</div>
+					<div className="asnp-relative asnp-w-full asnp-bg-white asnp-mb-3 asnp-mt-1 asnp-border-2 asnp-rounded-md asnp-p-4">
+						<div className="asnp-flex asnp-flex-wrap">
+							<div className="asnp-text-center asnp-mb-5">
+								<div className="asnp-border-gray-400 asnp-p-8 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
+									<img
+										className="asnp-h-full asnp-w-full asnp-border-none"
+										src={ IMAGES_URL + 'salepop1.png' }
+									/>
+								</div>
+								<div className="asnp-mt-2">
+									{ __(
+										'Order',
+										'easy-sale-badges-for-woocommerce-pro'
+									) }
+								</div>
+							</div>
+
+							<div className="asnp-text-center asnp-mb-5">
+								<div className="asnp-border-gray-400 asnp-p-8 asnp-esb-embedTemplate hover:asnp-border-indigo-700">
+									<img
+										className="asnp-h-full asnp-w-full asnp-border-none asnp-object-contain"
+										src={
+											IMAGES_URL + 'discountPopTemp1.png'
+										}
+									/>
+								</div>
+								<div className="asnp-mt-2">
+									{ __(
+										'Discount',
+										'easy-sale-badges-for-woocommerce-pro'
+									) }
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div className="asnp-w-full asnp-flex asnp-mt-4">
 					<div className="asnp-w-full">
 						<div className="asnp-w-full asnp-text-lg asnp-font-semibold">
