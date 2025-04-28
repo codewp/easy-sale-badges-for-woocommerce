@@ -69,7 +69,7 @@ const SalePopup = () => {
 					<div className="asnp-w-full asnp-text-lg asnp-font-semibold">
 						{ __(
 							'Popup Type',
-							'easy-sale-badges-for-woocommerce-pro'
+							'easy-sale-badges-for-woocommerce'
 						) }
 					</div>
 					<div className="asnp-relative asnp-w-full asnp-bg-white asnp-mb-3 asnp-mt-1 asnp-border-2 asnp-rounded-md asnp-p-4">
@@ -84,7 +84,7 @@ const SalePopup = () => {
 								<div className="asnp-mt-2">
 									{ __(
 										'Order',
-										'easy-sale-badges-for-woocommerce-pro'
+										'easy-sale-badges-for-woocommerce'
 									) }
 								</div>
 							</div>
@@ -101,7 +101,7 @@ const SalePopup = () => {
 								<div className="asnp-mt-2">
 									{ __(
 										'Discount',
-										'easy-sale-badges-for-woocommerce-pro'
+										'easy-sale-badges-for-woocommerce'
 									) }
 								</div>
 							</div>
