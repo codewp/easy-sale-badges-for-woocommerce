@@ -208,6 +208,7 @@ The plugin is rich in features, while it is lightweight and fast.
 
 = 5.6.0 =
 * Added Discount Popup (Pro Version).
+* Ensured compatibility with WordPress version 6.8
 * Compatibility with WooCommerce 9.8.2
 Note: Help us spread the word by leaving a 5-star review. ❤️😍 Feel free to share your ideas in your review, as we always value your feedback.🌹
 
