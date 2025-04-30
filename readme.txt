@@ -25,6 +25,23 @@ https://youtu.be/1d-ICc1tVTc
 
 https://youtu.be/aTHFT3ovCaw
 
+== Examples of Badges and Product Labels for WooCommerce ==
+
+* <strong>[Product Label Displaying Percentage Discount](https://pricing-and-discounts.asanaplugins.com/demo/product/album/)</strong>
+* <strong>[Product Label](https://pricing-and-discounts.asanaplugins.com/demo/product/album/)</strong>
+* <strong>[Image Badge (PRO)](https://pricing-and-discounts.asanaplugins.com/demo/product/hoodie/)</strong>
+* <strong>[Countdown Timer (PRO)](https://pricing-and-discounts.asanaplugins.com/demo/product/beanie/)</strong>
+* <strong>[Countdown Timer with Progress Bar (PRO)](https://pricing-and-discounts.asanaplugins.com/demo/product/cooling-pc-fans/)</strong>
+* <strong>[Countdown Stock (PRO)](https://pricing-and-discounts.asanaplugins.com/demo/product/beanie/)</strong>
+* <strong>[Countdown Timer Bar (PRO)](https://pricing-and-discounts.asanaplugins.com/demo/product/hoodie/)</strong>
+* <strong>[Multi Bar (PRO)](https://pricing-and-discounts.asanaplugins.com/demo/product/beanie/)</strong>
+* <strong>[Infinity Bar (PRO)](https://pricing-and-discounts.asanaplugins.com/demo/product/belt/)</strong>
+* <strong>[Sales Popup (PRO)](https://pricing-and-discounts.asanaplugins.com/demo/shop/)</strong>
+* <strong>[Banner (PRO)](https://pricing-and-discounts.asanaplugins.com/demo/product/beanie/)</strong>
+* <strong>[Announcement (PRO)](https://pricing-and-discounts.asanaplugins.com/demo/product/belt/)</strong>
+* <strong>[Payment Icons (PRO)](https://pricing-and-discounts.asanaplugins.com/demo/product/cap/)</strong>
+* <strong>[Social Media Icons (PRO)](https://pricing-and-discounts.asanaplugins.com/demo/product/belt/)</strong>
+
 == ✅ Badge And Product Label For WooCommerce Features ==
 
 - **Create Custom labels on Products**
