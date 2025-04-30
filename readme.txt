@@ -3,7 +3,7 @@ Contributors: asanaplugins
 Donate link: https://www.asanaplugins.com/
 Tags: woocommerce badge, product label, woocommerce, badge, sale badge, notification bar, label
 Requires at least: 5.0
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 5.6
 Stable tag: 5.6.0
 License: GPL v2 or later
