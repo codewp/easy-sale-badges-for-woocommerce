@@ -27,7 +27,7 @@ https://youtu.be/aTHFT3ovCaw
 
 == Examples of Badges and Product Labels for WooCommerce ==
 
-* <strong>[Product Label Displaying Percentage Discount](https://pricing-and-discounts.asanaplugins.com/demo/product/album/)</strong>
+* <strong>[Product Label Displaying Percentage Discount](https://pricing-and-discounts.asanaplugins.com/demo/shop/)</strong>
 * <strong>[Product Label](https://pricing-and-discounts.asanaplugins.com/demo/product/album/)</strong>
 * <strong>[Image Badge (PRO)](https://pricing-and-discounts.asanaplugins.com/demo/product/hoodie/)</strong>
 * <strong>[Countdown Timer (PRO)](https://pricing-and-discounts.asanaplugins.com/demo/product/beanie/)</strong>
