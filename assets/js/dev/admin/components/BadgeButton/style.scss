@@ -56,10 +56,131 @@
 	font-weight: 600;
 }
 
+.asnp-esb-timerStyle1Container {
+	display: flex;
+	margin-top: 25px;
+}
+.asnp-esb-timerStyle3ContainerOut {
+	display: flex;
+	margin-top: 25px;
+}
+
+.asnp-esb-timerStyle3ContainerOn {
+	display: flex;
+	position: absolute;
+}
+.asnp-esb-timerStyle1wrap {
+	display: flex;
+	justify-content: center;
+}
+.asnp-esb-timerStyle1Text {
+	margin-left: 5px;
+	padding-top: 4px;
+}
+.asnp-esb-timerStyle1DayTime {
+	margin-left: 5px;
+	padding-top: 4px;
+	font-weight: 700;
+	text-shadow: 0px 2px 1px rgba( 0, 0, 0, 0.15 );
+}
+.asnp-esb-timerStyle1Day {
+	font-weight: 600;
+	padding-top: 4px;
+	text-shadow: 0px 2px 1px rgba( 0, 0, 0, 0.15 );
+	margin-left: 5px;
+}
+.asnp-esb-timerStyle1Div {
+	display: grid;
+	gap: 1px;
+	grid-template-columns: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+	opacity: 1;
+}
+.asnp-esb-timerStyle3Div {
+	display: grid;
+	gap: 1px;
+	grid-template-columns: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+	opacity: 1;
+}
+
+.asnp-esb-timerStyle1Cont {
+	border-radius: 10px;
+	display: inline-block;
+	padding: 5px;
+}
+.asnp-esb-timerStyle3Cont {
+	border-radius: 10px;
+	display: inline-block;
+}
+
+.asnp-esb-timerDateStyle1 {
+	font-weight: 700;
+	text-shadow: 0px 2px 1px rgba( 0, 0, 0, 0.15 );
+}
+.asnp-esb-timerDateStyle3 {
+	font-weight: 700;
+	text-shadow: 0px 2px 1px rgba( 0, 0, 0, 0.15 );
+}
+.asnp-esb-timerStyle2Container {
+	margin-top: 25px;
+}
+.asnp-esb-timerStyle2Text {
+	display: block;
+}
+.asnp-esb-timerStyle2DayTime {
+	padding-top: 4px;
+	font-weight: 700;
+	text-shadow: 0px 2px 1px rgba( 0, 0, 0, 0.15 );
+}
+.asnp-esb-timerStyle2Day {
+	font-weight: 600;
+	padding-top: 4px;
+	text-shadow: 0px 2px 1px rgba( 0, 0, 0, 0.15 );
+	margin-left: 5px;
+}
+.asnp-esb-timerStyle2ProgreesBarCont {
+	width: 100%;
+	border-radius: 10px;
+	margin: 8px 0;
+	background-color: #efefef;
+}
+.asnp-esb-timerStyle2ProgreesBar {
+	display: block;
+	height: 10px;
+	border-radius: 10px;
+	transition: width 500ms ease-in-out;
+}
+.asnp-esb-timerStyle2DaaayTime {
+	display: flex;
+}
+
 .asnp-esb-productBadge2out {
 	text-align: center;
 	text-shadow: none;
 	font-weight: 600;
+}
+
+.asnp-esb-productBadgeOutTimer {
+	position: relative;
+	margin-top: 15px;
+	width: 235px;
+}
+
+.asnp-esb-productBadgeOutTimerVertical {
+	position: relative;
+	margin-top: 15px;
+	width: 60px;
+}
+.asnp-esb-productBadgeOutTimerStyle1 {
+	display: flex;
+	justify-content: center;
+	margin-left: 5px;
+	position: relative;
+}
+
+.asnp-esb-productBadgeOutTimerStyle2 {
+	margin-left: 5px;
+	position: relative;
+	width: 120px;
 }
 
 .asnp-esb-svg1 {

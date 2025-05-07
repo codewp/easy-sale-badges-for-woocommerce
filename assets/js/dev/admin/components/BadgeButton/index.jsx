@@ -2,12 +2,33 @@ import React, { useState, useEffect } from 'react';
 import { __ } from '@wordpress/i18n';
 import styled, { StyleSheetManager } from 'styled-components';
 import { toBool } from './../../utils';
-import BadgeCssandAdv from '../../utils/constants';
+import BadgeCssandAdv, {
+	getRemainingTime,
+	initTimes,
+	getNow,
+} from '../../utils/constants';
+import TimerStyle3 from './TimerStyle3';
 
 import './style.scss';
 
 const Span = styled.div`
 	${ ( props ) => props.badgeIcon }
+`;
+
+const Div = styled.div`
+	${ ( props ) => props.badgeTimerDiv }
+`;
+
+const DivOne = styled.div`
+	${ ( props ) => props.badgeTimerCont }
+`;
+
+const Time = styled.div`
+	${ ( props ) => props.TimerDate }
+`;
+
+const LabelTimer = styled.div`
+	${ ( props ) => props.Label }
 `;
 
 const SpanOne = styled.div`
@@ -40,12 +61,149 @@ const StyledSpanTwo = ( props ) => (
 	</StyleSheetManager>
 );
 
+const StyledSpanDiv = ( props ) => (
+	<StyleSheetManager
+		shouldForwardProp={ ( prop ) => prop !== 'badgeTimerDiv' }
+	>
+		<Div { ...props } />
+	</StyleSheetManager>
+);
+
+const StyledSpanDivOne = ( props ) => (
+	<StyleSheetManager
+		shouldForwardProp={ ( prop ) => prop !== 'badgeTimerCont' }
+	>
+		<DivOne { ...props } />
+	</StyleSheetManager>
+);
+
+const StyledSpanTime = ( props ) => (
+	<StyleSheetManager shouldForwardProp={ ( prop ) => prop !== 'TimerDate' }>
+		<Time { ...props } />
+	</StyleSheetManager>
+);
+const StyledSpanLabelTimer = ( props ) => (
+	<StyleSheetManager shouldForwardProp={ ( prop ) => prop !== 'Label' }>
+		<LabelTimer { ...props } />
+	</StyleSheetManager>
+);
+
 const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
-	const { badgeIcon, badgeIconOne, badgeIconTwo } = BadgeCssandAdv( badge );
+	const {
+		badgeIcon,
+		badgeIconOne,
+		badgeIconTwo,
+		badgeTimerDiv,
+		badgeTimerCont,
+		TimerDate,
+		Label,
+	} = BadgeCssandAdv( badge );
+
+	useEffect( () => {
+		initTimes();
+	}, [] );
 
 	const [ horiz, setHoriz ] = useState( toBool( badge.horizontal ) );
 	const [ vert, setVert ] = useState( toBool( badge.vertical ) );
 	const [ rotationz, setRotationz ] = useState( badge.rotationZ );
+	const [ timer, setTimer ] = useState( {
+		days: '00',
+		hours: '00',
+		minutes: '00',
+		seconds: '00',
+		progress: 0,
+	} );
+	const [ endTime, setEndTime ] = useState( null );
+
+	/**
+	 * Updates the timer based on the badge's timerMode and other settings.
+	 */
+	const updateTimer = () => {
+		let timeDifference;
+		let progress = 0;
+
+		const timerMode = badge?.timerMode || 'fromToDate';
+		if ( timerMode === 'fromToDate' ) {
+			const toDate = new Date(
+				badge.selectedDateTo.replace( /-/g, '/' )
+			);
+			timeDifference = getRemainingTime( toDate );
+
+			if (
+				typeof badge.badgeTimer !== 'undefined' &&
+				badge.badgeTimer === 'style2'
+			) {
+				const currentDate = getNow();
+				const startDate = new Date(
+					badge.selectedDateFrom.replace( /-/g, '/' )
+				);
+				const elapsed = currentDate - startDate;
+				const total = toDate - startDate;
+				progress = 100 - ( elapsed / total ) * 100;
+			}
+		} else if ( timerMode === 'evergreen' && endTime ) {
+			const now = Date.now();
+			timeDifference = endTime - now;
+
+			if ( badge.badgeTimer === 'style2' ) {
+				const evergreenTime = badge.evergreen * 60 * 1000;
+				const elapsed = evergreenTime - timeDifference;
+				progress = Math.max(
+					0,
+					100 - ( elapsed / evergreenTime ) * 100
+				);
+			}
+		} else {
+			return; // Unsupported timer mode or missing endTime
+		}
+
+		if ( timeDifference > 0 ) {
+			const days = Math.floor( timeDifference / ( 1000 * 60 * 60 * 24 ) );
+			const hours = Math.floor(
+				( timeDifference % ( 1000 * 60 * 60 * 24 ) ) /
+					( 1000 * 60 * 60 )
+			);
+			const minutes = Math.floor(
+				( timeDifference % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 )
+			);
+			const seconds = Math.floor(
+				( timeDifference % ( 1000 * 60 ) ) / 1000
+			);
+
+			setTimer( {
+				days: String( days ).padStart( 2, '0' ),
+				hours: String( hours ).padStart( 2, '0' ),
+				minutes: String( minutes ).padStart( 2, '0' ),
+				seconds: String( seconds ).padStart( 2, '0' ),
+				progress,
+			} );
+		} else {
+			setTimer( {
+				days: '00',
+				hours: '00',
+				minutes: '00',
+				seconds: '00',
+				progress: 0,
+			} );
+		}
+	};
+
+	// UseEffect to manage timer updates
+	useEffect( () => {
+		let interval;
+
+		const timerMode = badge?.timerMode || 'fromToDate';
+		if ( timerMode === 'fromToDate' ) {
+			interval = setInterval( updateTimer, 1000 );
+		}
+
+		return () => clearInterval( interval );
+	}, [
+		badge.timerMode,
+		badge.selectedDateTo,
+		badge.selectedDateFrom,
+		endTime,
+	] );
 
 	let insetProperty = '';
 
@@ -357,6 +515,148 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 										</StyledSpan>
 									</div>
 								) }
+							{ badge.useTimerBadge == 1 &&
+								badge.timerPosition == 'onImage' &&
+								badge.badgeTimer == 'style3' && (
+									<div
+										className="asnp-esb-timerStyle3ContainerOn"
+										style={ {
+											inset: `${ insetProperty }`,
+											opacity: `${ badge.opacityTimer }`,
+											zIndex: `${ badge.zIndex }`,
+											animationName: `${ badge.animationSelectTimer }`,
+											animationDuration: `${ badge.animateDurationTimer }s`,
+											animationIterationCount: `${ badge.animationCountTimer }`,
+										} }
+									>
+										<TimerStyle3
+											timer={ timer }
+											badge={ badge }
+										/>
+									</div>
+								) }
+
+							{ badge.useTimerBadge == 1 &&
+								badge.timerPosition == 'onImage' &&
+								[
+									'timer1',
+									'timer2',
+									'timer3',
+									'timer4',
+									'timer5',
+									'timer6',
+									'timer7',
+									'timer8',
+								].includes( badge.badgeTimer ) && (
+									<div
+										className="asnp-esb-productBadge"
+										style={ {
+											inset: `${ insetProperty }`,
+											opacity: `${ badge.opacityTimer }`,
+											zIndex: `${ badge.zIndex }`,
+											animationName: `${ badge.animationSelectTimer }`,
+											animationDuration: `${ badge.animateDurationTimer }s`,
+											animationIterationCount: `${ badge.animationCountTimer }`,
+										} }
+									>
+										<StyledSpanDiv
+											badgeTimerDiv={ badgeTimerDiv }
+										>
+											<StyledSpanDivOne
+												style={ {
+													padding: `${ badge.paddingTopBottom }px ${ badge.paddingRightLeft }px`,
+												} }
+												badgeTimerCont={
+													badgeTimerCont
+												}
+											>
+												<StyledSpanTime
+													TimerDate={ TimerDate }
+													style={ {
+														fontSize: `${ badge.fontSizeLabelTimer }px`,
+														lineHeight: `${ badge.lineHeightLabelTimer }px`,
+													} }
+												>
+													{ timer.days }
+												</StyledSpanTime>
+												<StyledSpanLabelTimer
+													Label={ Label }
+												>
+													{ badge.labelDayTimer }
+												</StyledSpanLabelTimer>
+											</StyledSpanDivOne>
+											<StyledSpanDivOne
+												style={ {
+													padding: `${ badge.paddingTopBottom }px ${ badge.paddingRightLeft }px`,
+												} }
+												badgeTimerCont={
+													badgeTimerCont
+												}
+											>
+												<StyledSpanTime
+													TimerDate={ TimerDate }
+													style={ {
+														fontSize: `${ badge.fontSizeLabelTimer }px`,
+														lineHeight: `${ badge.lineHeightLabelTimer }px`,
+													} }
+												>
+													{ timer.hours }
+												</StyledSpanTime>
+												<StyledSpanLabelTimer
+													Label={ Label }
+												>
+													{ badge.labelHoursTimer }
+												</StyledSpanLabelTimer>
+											</StyledSpanDivOne>
+											<StyledSpanDivOne
+												style={ {
+													padding: `${ badge.paddingTopBottom }px ${ badge.paddingRightLeft }px`,
+												} }
+												badgeTimerCont={
+													badgeTimerCont
+												}
+											>
+												<StyledSpanTime
+													TimerDate={ TimerDate }
+													style={ {
+														fontSize: `${ badge.fontSizeLabelTimer }px`,
+														lineHeight: `${ badge.lineHeightLabelTimer }px`,
+													} }
+												>
+													{ timer.minutes }
+												</StyledSpanTime>
+												<StyledSpanLabelTimer
+													Label={ Label }
+												>
+													{ badge.labelMinTimer }
+												</StyledSpanLabelTimer>
+											</StyledSpanDivOne>
+											<StyledSpanDivOne
+												style={ {
+													padding: `${ badge.paddingTopBottom }px ${ badge.paddingRightLeft }px`,
+												} }
+												badgeTimerCont={
+													badgeTimerCont
+												}
+											>
+												<StyledSpanTime
+													TimerDate={ TimerDate }
+													style={ {
+														fontSize: `${ badge.fontSizeLabelTimer }px`,
+														lineHeight: `${ badge.lineHeightLabelTimer }px`,
+													} }
+												>
+													{ timer.seconds }
+												</StyledSpanTime>
+												<StyledSpanLabelTimer
+													Label={ Label }
+												>
+													{ badge.labelSecTimer }
+												</StyledSpanLabelTimer>
+											</StyledSpanDivOne>
+										</StyledSpanDiv>
+									</div>
+								) }
 						</div>
 					</div>
 					{ badge.imgbadge == 0 &&
@@ -411,6 +711,136 @@ const BadgeButton = ( { badge, IMAGES_URL = '', updateBadge } ) => {
 								</StyledSpan>
 							</div>
 						) }
+					{ badge.useTimerBadge == 1 &&
+						badge.timerPosition == 'outOfImage' &&
+						[
+							'timer1',
+							'timer2',
+							'timer3',
+							'timer4',
+							'timer5',
+							'timer6',
+							'timer7',
+							'timer8',
+						].includes( badge.badgeTimer ) && (
+							<div
+								className={
+									[
+										'timer1',
+										'timer2',
+										'timer3',
+										'timer4',
+									].includes( badge.badgeTimer )
+										? 'asnp-esb-productBadgeOutTimer'
+										: 'asnp-esb-productBadgeOutTimerVertical'
+								}
+								style={ {
+									inset: `${ insetProperty }`,
+									opacity: `${ badge.opacityTimer }`,
+									zIndex: `${ badge.zIndex }`,
+									animationName: `${ badge.animationSelectTimer }`,
+									animationDuration: `${ badge.animateDurationTimer }s`,
+									animationIterationCount: `${ badge.animationCountTimer }`,
+								} }
+							>
+								<StyledSpanDiv badgeTimerDiv={ badgeTimerDiv }>
+									<StyledSpanDivOne
+										style={ {
+											padding: `${ badge.paddingTopBottom }px ${ badge.paddingRightLeft }px`,
+										} }
+										badgeTimerCont={ badgeTimerCont }
+									>
+										<StyledSpanTime
+											TimerDate={ TimerDate }
+											style={ {
+												fontSize: `${ badge.fontSizeLabelTimer }px`,
+												lineHeight: `${ badge.lineHeightLabelTimer }px`,
+											} }
+										>
+											{ timer.days }
+										</StyledSpanTime>
+										<StyledSpanLabelTimer Label={ Label }>
+											{ badge.labelDayTimer }
+										</StyledSpanLabelTimer>
+									</StyledSpanDivOne>
+									<StyledSpanDivOne
+										style={ {
+											padding: `${ badge.paddingTopBottom }px ${ badge.paddingRightLeft }px`,
+										} }
+										badgeTimerCont={ badgeTimerCont }
+									>
+										<StyledSpanTime
+											TimerDate={ TimerDate }
+											style={ {
+												fontSize: `${ badge.fontSizeLabelTimer }px`,
+												lineHeight: `${ badge.lineHeightLabelTimer }px`,
+											} }
+										>
+											{ timer.hours }
+										</StyledSpanTime>
+										<StyledSpanLabelTimer Label={ Label }>
+											{ badge.labelHoursTimer }
+										</StyledSpanLabelTimer>
+									</StyledSpanDivOne>
+									<StyledSpanDivOne
+										style={ {
+											padding: `${ badge.paddingTopBottom }px ${ badge.paddingRightLeft }px`,
+										} }
+										badgeTimerCont={ badgeTimerCont }
+									>
+										<StyledSpanTime
+											TimerDate={ TimerDate }
+											style={ {
+												fontSize: `${ badge.fontSizeLabelTimer }px`,
+												lineHeight: `${ badge.lineHeightLabelTimer }px`,
+											} }
+										>
+											{ timer.minutes }
+										</StyledSpanTime>
+										<StyledSpanLabelTimer Label={ Label }>
+											{ badge.labelMinTimer }
+										</StyledSpanLabelTimer>
+									</StyledSpanDivOne>
+									<StyledSpanDivOne
+										style={ {
+											padding: `${ badge.paddingTopBottom }px ${ badge.paddingRightLeft }px`,
+										} }
+										badgeTimerCont={ badgeTimerCont }
+									>
+										<StyledSpanTime
+											TimerDate={ TimerDate }
+											style={ {
+												fontSize: `${ badge.fontSizeLabelTimer }px`,
+												lineHeight: `${ badge.lineHeightLabelTimer }px`,
+											} }
+										>
+											{ timer.seconds }
+										</StyledSpanTime>
+										<StyledSpanLabelTimer Label={ Label }>
+											{ badge.labelSecTimer }
+										</StyledSpanLabelTimer>
+									</StyledSpanDivOne>
+								</StyledSpanDiv>
+							</div>
+						) }
+
+					{ badge.useTimerBadge == 1 &&
+						badge.timerPosition == 'outOfImage' &&
+						badge.badgeTimer == 'style3' && (
+							<div
+								className="asnp-esb-timerStyle3ContainerOut"
+								style={ {
+									opacity: `${ badge.opacityTimer }`,
+									zIndex: `${ badge.zIndex }`,
+									animationName: `${ badge.animationSelectTimer }`,
+									animationDuration: `${ badge.animateDurationTimer }s`,
+									animationIterationCount: `${ badge.animationCountTimer }`,
+								} }
+							>
+								<TimerStyle3 timer={ timer } badge={ badge } />
+							</div>
+						) }
+
 					<div className="asnp-mt-4 asnp-flex asnp-justify-center asnp-w-full asnp-text-base asnp-text-black">
 						<del className="asnp-text-gray-400">
 							{ __( '$100', 'easy-sale-badges-for-woocommerce' ) }

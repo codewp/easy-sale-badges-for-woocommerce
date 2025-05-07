@@ -23,6 +23,41 @@ export const getNow = () => {
 	return new Date( serverTime.getTime() + ( Date.now() - initialLocalTime ) );
 };
 
+export const initTimes = () => {
+	serverTime = new Date( saleBadgeData.now );
+	initialLocalTime = Date.now();
+};
+
+export const getRemainingTime = ( toDate ) => {
+	const currentServerTime = getNow();
+
+	return toDate.getTime() - currentServerTime.getTime();
+};
+
+export const getTime = ( remainingTime ) => {
+	if ( 0 >= remainingTime * 1 ) {
+		return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+	}
+
+	remainingTime *= 1;
+
+	const days = Math.floor( remainingTime / ( 1000 * 60 * 60 * 24 ) );
+	const hours = Math.floor(
+		( remainingTime % ( 1000 * 60 * 60 * 24 ) ) / ( 1000 * 60 * 60 )
+	);
+	const minutes = Math.floor(
+		( remainingTime % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 )
+	);
+	const seconds = Math.floor( ( remainingTime % ( 1000 * 60 ) ) / 1000 );
+
+	return {
+		days: String( days ).padStart( 2, '0' ),
+		hours: String( hours ).padStart( 2, '0' ),
+		minutes: String( minutes ).padStart( 2, '0' ),
+		seconds: String( seconds ).padStart( 2, '0' ),
+	};
+};
+
 export const customColor = [
 	'rgb(161, 44, 161)',
 	'rgb(255, 148, 148)',
@@ -187,6 +222,10 @@ export default function BadgeCssandAdv( badge ) {
 	let borderLefttStyle6;
 	let rightBadge5;
 	let leftBadge5;
+	let badgeTimerDiv = '';
+	let badgeTimerCont = '';
+	let TimerDate = '';
+	let Label = '';
 
 	if ( badge?.sizePage === 'archivePage' ) {
 		if ( badge.badgePositionX === 'right' ) {
@@ -896,9 +935,67 @@ export default function BadgeCssandAdv( badge ) {
 			background: ${ badge.badgeColor };`;
 	}
 
+	switch ( badge.badgeTimer ) {
+		case 'timer1':
+			badgeTimerDiv = `
+			display: grid;
+			height: 59px;
+			gap: 5px;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			color: ${ badge.textColor };
+			opacity: ${ badge.opacity };
+			background: ${ badge.bgColorTimer };
+			border-radius: 10px;
+			`;
+			badgeTimerCont = `
+			display: inline-block;
+			`;
+			TimerDate = `
+			display: block;
+			font-weight: 700;
+			text-shadow: 0px 2px 1px rgba(0,0,0,0.15);
+			`;
+			Label = `
+			display: block;
+			font-weight: 400;
+			font-size: 10px;
+			line-height: 11px;
+			text-shadow: 0px 2px 1px rgba(0,0,0,0.15);`;
+			break;
+		default:
+			badgeTimerDiv = `
+			display: grid;
+			height: 59px;
+			gap: 5px;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			color: ${ badge.textColor };
+			opacity: ${ badge.opacity };
+			background: ${ badge.bgColorTimer };
+			border-radius: 10px;
+			`;
+			badgeTimerCont = `
+			display: inline-block;
+			`;
+			TimerDate = `
+			display: block;
+			font-weight: 700;
+			text-shadow: 0px 2px 1px rgba(0,0,0,0.15);
+			`;
+			Label = `
+			display: block;
+			font-weight: 400;
+			font-size: 10px;
+			line-height: 11px;
+			text-shadow: 0px 2px 1px rgba(0,0,0,0.15);`;
+	}
+
 	return {
 		badgeIcon,
 		badgeIconOne,
 		badgeIconTwo,
+		badgeTimerDiv,
+		badgeTimerCont,
+		TimerDate,
+		Label,
 	};
 }

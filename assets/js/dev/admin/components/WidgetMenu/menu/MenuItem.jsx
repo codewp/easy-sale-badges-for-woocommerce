@@ -413,7 +413,49 @@ const MenuItem = ( props ) => {
 					</div>
 				</div>
 			) }
-			{ props.activeStatus == 6 && <Timer /> }
+			{ props.activeStatus == 6 && (
+				<Timer
+					onChange={ props.onChange }
+					useTimerBadge={ props.badge.useTimerBadge }
+					textColor={ props.badge.textColor }
+					bgColorTimer={ props.badge.bgColorTimer }
+					fontSizeLabelTimer={ props.badge.fontSizeLabelTimer }
+					lineHeightLabelTimer={ props.badge.lineHeightLabelTimer }
+					badgePositionY={ props.badge.badgePositionY }
+					badgePositionX={ props.badge.badgePositionX }
+					badgePositionTop={ props.badge.badgePositionTop }
+					badgePositionBottom={ props.badge.badgePositionBottom }
+					badgePositionLeft={ props.badge.badgePositionLeft }
+					badgePositionRight={ props.badge.badgePositionRight }
+					zIndexTimer={ props.badge.zIndexTimer }
+					opacityTimer={ props.badge.opacityTimer }
+					labelDayTimer={ props.badge.labelDayTimer }
+					labelHoursTimer={ props.badge.labelHoursTimer }
+					labelMinTimer={ props.badge.labelMinTimer }
+					labelSecTimer={ props.badge.labelSecTimer }
+					selectedDateFrom={ props.badge.selectedDateFrom }
+					selectedDateTo={ props.badge.selectedDateTo }
+					badgeTimer={ props.badge.badgeTimer }
+					textTimerStyle1={ props.badge.textTimerStyle1 }
+					textColorTimerStyle1={ props.badge.textColorTimerStyle1 }
+					fontSizeLabelTimerStyle1={
+						props.badge.fontSizeLabelTimerStyle1
+					}
+					fontSizeMessageTimerStyle1={
+						props.badge.fontSizeMessageTimerStyle1
+					}
+					paddingTopBottom={ props.badge.paddingTopBottom }
+					paddingRightLeft={ props.badge.paddingRightLeft }
+					timerPosition={ props.badge.timerPosition }
+					paddingTimerStyle={ props.badge.paddingTimerStyle }
+					timerMode={ props.badge.timerMode }
+					evergreen={ props.badge.evergreen }
+					evergreenOption={ props.badge.evergreenOption }
+					animateDurationTimer={ props.badge.animateDurationTimer }
+					animationCountTimer={ props.badge.animationCountTimer }
+					animationSelectTimer={ props.badge.animationSelectTimer }
+				/>
+			) }
 		</div>
 	);
 };
