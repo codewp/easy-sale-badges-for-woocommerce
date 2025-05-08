@@ -5,7 +5,7 @@ Tags: woocommerce badge, product label, woocommerce, badge, sale badge, notifica
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 5.6.0
+Stable tag: 5.6.1
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -223,11 +223,15 @@ The plugin is rich in features, while it is lightweight and fast.
 
 == Changelog ==
 
+= 5.6.1 =
+* Translation support added for Sales Popup and Discount Popup (Pro version).
+* Compatibility with WooCommerce 9.8.4
+Note: Help us spread the word by leaving a 5-star review. ❤️😍 Feel free to share your ideas in your review, as we always value your feedback.🌹
+
 = 5.6.0 =
 * Added Discount Popup (Pro Version).
 * Ensured compatibility with WordPress version 6.8
 * Compatibility with WooCommerce 9.8.2
-Note: Help us spread the word by leaving a 5-star review. ❤️😍 Feel free to share your ideas in your review, as we always value your feedback.🌹
 
 = 5.5.0 =
 * Added Trust Badges to the Embeds options (Pro Version).
