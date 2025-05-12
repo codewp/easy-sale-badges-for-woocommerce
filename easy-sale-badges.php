@@ -13,7 +13,7 @@
  * Text Domain: easy-sale-badges-for-woocommerce
  * Domain Path: /languages
  * WC requires at least: 3.0
- * WC tested up to: 9.8.4
+ * WC tested up to: 9.8.5
  * Requires Plugins: woocommerce 
  *
  * Copyright 2023 Asana Plugins (http://www.asanaplugins.com/)
