@@ -99,6 +99,7 @@ const defaultBadge = {
 	fontSizeMessageTimerStyle1: '16',
 	textColorTimerStyle1: '#000',
 	textTimerStyle1: 'Sale Ending in',
+	posOutTimerStyle1: 'center',
 };
 
 export default function Badge() {

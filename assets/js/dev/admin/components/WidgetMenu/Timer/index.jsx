@@ -1165,6 +1165,54 @@ const Timer = ( props ) => {
 							</div>
 						) }
 				</div>
+				{ 'undefined' !== typeof props.badgeTimer &&
+					props.badgeTimer === 'style1' &&
+					props.timerPosition === 'outOfImage' && (
+						<>
+							<div className="asnp-mt-8">
+								<span className="asnp-field-title asnp-text-base asnp-font-semibold">
+									{ __(
+										'Timer Position Out of Image on Archive Page',
+										'easy-sale-badges-for-woocommerce'
+									) }
+								</span>
+							</div>
+							<div className="asnp-mt-2 asnp-mb-6">
+								<label className="asnp-block asnp-space-y-2 asnp-max-w-lg">
+									<select
+										className="asnp-block asnp-select-field md:asnp-w-2/3 !asnp-h-12"
+										value={ props.posOutTimerStyle1 }
+										onChange={ ( e ) =>
+											props.onChange(
+												'posOutTimerStyle1',
+												e.target.value
+											)
+										}
+									>
+										<option value="flex-start">
+											{ __(
+												'Left',
+												'easy-sale-badges-for-woocommerce'
+											) }
+										</option>
+										<option value="center">
+											{ __(
+												'Center',
+												'easy-sale-badges-for-woocommerce'
+											) }
+										</option>
+										<option value="flex-end">
+											{ __(
+												'Right',
+												'easy-sale-badges-for-woocommerce'
+											) }
+										</option>
+									</select>
+								</label>
+							</div>
+						</>
+					) }
+
 				<div className="asnp-mt-8">
 					<span className="asnp-field-title asnp-text-base asnp-font-semibold">
 						{ __(

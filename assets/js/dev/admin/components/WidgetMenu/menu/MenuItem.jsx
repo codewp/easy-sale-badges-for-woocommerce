@@ -454,6 +454,7 @@ const MenuItem = ( props ) => {
 					animateDurationTimer={ props.badge.animateDurationTimer }
 					animationCountTimer={ props.badge.animationCountTimer }
 					animationSelectTimer={ props.badge.animationSelectTimer }
+					posOutTimerStyle1={ props.badge.posOutTimerStyle1 }
 				/>
 			) }
 		</div>

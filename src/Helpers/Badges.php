@@ -2853,7 +2853,9 @@ function timer_badge_dynamic_styles( $badge, $hide = false, $out_of_image = fals
 			$dynamic_styles .= '.archive .asnp-esb-timerStyle3ContainerOut-'. absint( $badge->id ) .' {';
 			$dynamic_styles .= ' display: flex;';
 			$dynamic_styles .= ' margin-top: 10px;';
-			$dynamic_styles .= ' justify-content: center;';
+			if ( isset( $badge->posOutTimerStyle1 ) ) {
+				$dynamic_styles .= ' justify-content: ' . $badge->posOutTimerStyle1 . ';';
+			}
 			$dynamic_styles .= '}';
 						
 			$dynamic_styles .= '.asnp-esb-tdot {';
