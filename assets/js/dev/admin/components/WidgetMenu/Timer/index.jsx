@@ -1166,7 +1166,7 @@ const Timer = ( props ) => {
 						) }
 				</div>
 				{ 'undefined' !== typeof props.badgeTimer &&
-					props.badgeTimer === 'style1' &&
+					props.badgeTimer === 'style3' &&
 					props.timerPosition === 'outOfImage' && (
 						<>
 							<div className="asnp-mt-8">
