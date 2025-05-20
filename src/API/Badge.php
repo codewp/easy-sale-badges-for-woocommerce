@@ -380,6 +380,7 @@ class Badge extends BaseController {
 				case 'labelSecTimer':
 				case 'bgColorTimer':
 				case 'timerFullWidthBgColor':
+				case 'posOutTimerStyle1':
 					if ( isset( $value ) ) {
 						$options[ $key ] = sanitize_text_field( $value );
 					} elseif ( isset( $defaults[ $key ] ) ) {
