@@ -128,7 +128,7 @@ const Timer = ( props ) => {
 						) }
 					</div>
 					<div className="asnp-relative asnp-inline-block asnp-mb-3 asnp-mt-3 asnp-h-[30rem] asnp-border-2 asnp-rounded-md asnp-p-4 asnp-scrollBarImageB">
-						<div className="asnp-w-full asnp-ml-8 asnp-mt-4 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
+						<div className="asnp-w-full asnp-ml-2 asnp-mt-4 asnp-mb-2 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
 							<label>
 								{ __(
 									'Horizontal',
@@ -181,6 +181,16 @@ const Timer = ( props ) => {
 									src={ IMAGES_URL + 'badgeTimer1.png' }
 								/>
 							</div>
+						</div>
+						<div className="asnp-w-full asnp-ml-2 asnp-mt-4 asnp-mb-2 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
+							<label>
+								{ __(
+									'Pro Version',
+									'easy-sale-badges-for-woocommerce'
+								) }
+							</label>
+						</div>
+						<div className="asnp-grid asnp-gap-4 asnp-grid-cols-1 xl:asnp-grid-cols-2 sm:asnp-grid-cols-1">
 							<div
 								style={ {
 									cursor: 'not-allowed',
@@ -348,7 +358,7 @@ const Timer = ( props ) => {
 									</div>
 								) }
 						</div>
-						<div className="asnp-w-full asnp-ml-8 asnp-mt-1 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
+						<div className="asnp-w-full asnp-ml-2 asnp-mt-1 asnp-mb-2 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
 							<label>
 								{ __(
 									'Vertical',

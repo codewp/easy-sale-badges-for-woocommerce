@@ -67,8 +67,40 @@ jQuery( window ).on(
 				let remainingTime;
 				let remainingTimeProgress = 0;
 
-				remainingTime = timer.remainingTime * 1;
-				remainingTimeProgress = timer.remainingTimeProgress * 1;
+				if ( timer.timerMode === 'evergreen' ) {
+					const storedEndTimeKey = `everGreenEndTime_${ timer.id }`;
+					const storedStartTimeKey = `everGreenStartTime_${ timer.id }`;
+					const now = Date.now();
+					let storedEndTime = localStorage.getItem(
+						storedEndTimeKey
+					);
+					let storedStartTime = localStorage.getItem(
+						storedStartTimeKey
+					);
+					const evergreenDuration = timer.evergreen; // Already in milliseconds
+
+					if (
+						storedEndTime &&
+						now < parseInt( storedEndTime, 10 )
+					) {
+						remainingTime = parseInt( storedEndTime, 10 ) - now;
+						if (
+							storedStartTime &&
+							now > parseInt( storedEndTime, 10 )
+						) {
+							remainingTimeProgress =
+								now - parseInt( storedEndTime, 10 );
+						}
+					} else {
+						const newEndTime = now + evergreenDuration;
+						remainingTime = evergreenDuration;
+						localStorage.setItem( storedEndTimeKey, newEndTime );
+						localStorage.setItem( storedStartTimeKey, now );
+					}
+				} else {
+					remainingTime = timer.remainingTime * 1;
+					remainingTimeProgress = timer.remainingTimeProgress * 1;
+				}
 
 				const element = elements[ i ];
 				const interval = setInterval( () => {
@@ -77,9 +109,24 @@ jQuery( window ).on(
 					remainingTimeProgress += 1000;
 
 					if ( ! time ) {
-						clearInterval( interval );
-						element.style.display = 'none';
-						return;
+						if (
+							'evergreen' === timer?.timerMode &&
+							'repeat' === timer?.evergreenOption
+						) {
+							const now = Date.now();
+							const newEndTime = now + timer.evergreen;
+							remainingTime = timer.evergreen;
+							remainingTimeProgress = 0;
+							localStorage.setItem(
+								storedEndTimeKey,
+								newEndTime
+							);
+							localStorage.setItem( storedStartTimeKey, now );
+						} else {
+							clearInterval( interval );
+							element.style.display = 'none';
+							return;
+						}
 					} else {
 						const selectTimerDays = element.querySelector(
 							'.asnp-esb-daysT'
@@ -103,8 +150,14 @@ jQuery( window ).on(
 						);
 						if ( progressBar ) {
 							const totalDuration =
-								new Date( timer.dateTo.replace( /-/g, '/' ) ) -
-								new Date( timer.dateFrom.replace( /-/g, '/' ) );
+								timer.timerMode === 'evergreen'
+									? timer.evergreen
+									: new Date(
+											timer.dateTo.replace( /-/g, '/' )
+									  ) -
+									  new Date(
+											timer.dateFrom.replace( /-/g, '/' )
+									  );
 							const progressPercentage =
 								100 -
 								( remainingTimeProgress / totalDuration ) * 100;
@@ -148,6 +201,18 @@ jQuery( window ).on(
 			}
 		};
 
+		const initTimers = () => {
+			if (
+				'undefined' !== typeof asnpWesbBadgeData &&
+				'undefined' !== typeof asnpWesbBadgeData.timers &&
+				asnpWesbBadgeData.timers.length
+			) {
+				asnpWesbBadgeData.timers.map( ( timer ) =>
+					timerBadge( timer )
+				);
+			}
+		};
+
 		const getImageContainer = () => {
 			const themes = {
 				porto: '.woocommerce-product-gallery:first .product-images',
@@ -169,16 +234,6 @@ jQuery( window ).on(
 			}
 
 			if (
-				'undefined' !== typeof asnpWesbBadgeData &&
-				'undefined' !== typeof asnpWesbBadgeData.timers &&
-				asnpWesbBadgeData.timers.length
-			) {
-				asnpWesbBadgeData.timers.map( ( timer ) =>
-					timerBadge( timer )
-				);
-			}
-
-			if (
 				jQuery( '.woocommerce-product-gallery .flex-viewport' ).length
 			) {
 				return '.woocommerce-product-gallery .flex-viewport';
@@ -188,5 +243,6 @@ jQuery( window ).on(
 		};
 
 		init();
+		initTimers();
 	}
 );

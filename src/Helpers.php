@@ -534,7 +534,7 @@ function localize_timer_badge( $badge ) {
 		return;
 	}
 
-	if ( empty( $badge->selectedDateTo ) ) {
+	if ( empty( $badge->selectedDateTo ) && empty( $badge->evergreen ) ) {
 		return;
 	}
 
@@ -552,8 +552,11 @@ function localize_timer_badge( $badge ) {
 		'id'                    => absint( $badge->id ),
 		'dateFrom'              => ! empty( $badge->selectedDateFrom ) ? sanitize_text_field( $badge->selectedDateFrom ) : '',
 		'dateTo'                => ! empty( $badge->selectedDateTo ) ? sanitize_text_field( $badge->selectedDateTo ) : '',
+		'remainingTimeProgress' => ( $now - strtotime( $badge->selectedDateFrom, $now ) ) * 1000,
 		'remainingTime'         => ! empty( $badge->selectedDateTo ) ? ( strtotime( $badge->selectedDateTo, $now ) - $now ) * 1000 : 0,
+        'evergreen'             => ! empty( $badge->evergreen ) ? absint( $badge->evergreen ) * 60 * 1000 : 0,
         'timerMode'             => ! empty( $badge->timerMode ) ? sanitize_text_field( $badge->timerMode ) : 'fromToDate',
+        'evergreenOption'       => ! empty( $badge->evergreenOption ) ? sanitize_text_field( $badge->evergreenOption ) : 'endClose',
     ];
 
     if ( $timer['remainingTime'] > 0 || $timer['evergreen'] > 0 ) {
