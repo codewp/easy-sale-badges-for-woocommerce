@@ -52,6 +52,24 @@ const NavMenu = ( props ) => {
 					href="#"
 					onClick={ ( e ) => {
 						e.preventDefault();
+						setPage( '6', 'timer' );
+					} }
+					className={
+						( 'timer' === activeMenu
+							? ' asnp-nav-tab-active'
+							: '' ) + ' asnp-nav-tab-item'
+					}
+				>
+					{ __(
+						'Countdown Timer',
+						'easy-sale-badges-for-woocommerce'
+					) }
+				</a>
+				<a
+					style={ { textWrap: 'nowrap' } }
+					href="#"
+					onClick={ ( e ) => {
+						e.preventDefault();
 						setPage( '3', 'products' );
 					} }
 					className={
@@ -60,7 +78,10 @@ const NavMenu = ( props ) => {
 							: '' ) + ' asnp-nav-tab-item'
 					}
 				>
-					{ __( 'Products & Conditions', 'easy-sale-badges-for-woocommerce' ) }
+					{ __(
+						'Products & Conditions',
+						'easy-sale-badges-for-woocommerce'
+					) }
 				</a>
 				<a
 					style={ { textWrap: 'nowrap' } }
@@ -100,26 +121,6 @@ const NavMenu = ( props ) => {
 						'Modern Badges',
 						'easy-sale-badges-for-woocommerce'
 					) }
-					<div className="asnp-ml-[0.3rem]">
-						{ __( '(Pro)', 'easy-sale-badges-for-woocommerce' ) }
-					</div>
-					<LockClosedIcon width="20" height="20" />
-				</a>
-				<a
-					style={ { textWrap: 'nowrap' } }
-					href="#"
-					onClick={ ( e ) => {
-						e.preventDefault();
-						setPage( '6', 'timer' );
-					} }
-					className={
-						( 'timer' === activeMenu
-							? ' asnp-nav-tab-active'
-							: '' ) +
-						' asnp-nav-tab-item asnp-flex asnp-text-red-600'
-					}
-				>
-					{ __( 'Countdown Timer', 'easy-sale-badges-for-woocommerce' ) }
 					<div className="asnp-ml-[0.3rem]">
 						{ __( '(Pro)', 'easy-sale-badges-for-woocommerce' ) }
 					</div>

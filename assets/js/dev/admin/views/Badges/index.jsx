@@ -16,6 +16,7 @@ import Alert from '../../components/Alert';
 import Pagination from '../../components/Pagination';
 import styled, { StyleSheetManager } from 'styled-components';
 import BadgePreview from '../../utils/labelPreview';
+import { IMAGES_URL } from '../../utils/constants';
 
 import './style.scss';
 
@@ -136,6 +137,11 @@ export default function Badges() {
 			</div>
 		);
 
+		const styleToImageMap = {
+			timer1: 'badgeTimer1.png',
+			style3: 'countdownTimer3.png',
+		};
+
 		if (
 			badge.imgbadge === 0 &&
 			badge.imgbadgeAdv === 0 &&
@@ -144,7 +150,22 @@ export default function Badges() {
 			return previewBadge;
 		}
 
-		return '';
+		const getImageSource = ( key ) =>
+			styleToImageMap.hasOwnProperty( key )
+				? IMAGES_URL + styleToImageMap[ key ]
+				: '';
+
+		const imagePreview =
+			badge.useTimerBadge === 1 ? (
+				<img
+					className="asnp-h-[3rem]"
+					src={ getImageSource( badge.badgeTimer ) }
+				/>
+			) : (
+				''
+			);
+
+		return imagePreview;
 	};
 
 	const duplicate = async ( id ) => {
