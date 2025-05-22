@@ -1343,94 +1343,105 @@ const Timer = ( props ) => {
 						</div>
 					</label>
 				</div>
-				<div className="asnp-mt-8">
-					<span className="asnp-field-title asnp-text-base asnp-font-semibold">
-						{ __( 'Labels', 'easy-sale-badges-for-woocommerce' ) }
-					</span>
-				</div>
-				<div className="asnp-flex asnp-mt-3 asnp-mb-6">
-					<label>
-						<span className="asnp-field-title asnp-ml-4">
-							{ __( 'Days', 'easy-sale-badges-for-woocommerce' ) }
-						</span>
-						<div className="asnp-w-[7rem] xl:asnp-w-[8rem]">
-							<input
-								type="text"
-								className="asnp-text-field"
-								value={ props.labelDayTimer }
-								onChange={ ( e ) =>
-									props.onChange(
-										'labelDayTimer',
-										e.target.value
-									)
-								}
-							/>
-						</div>
-					</label>
-					<label>
-						<span className="asnp-field-title asnp-ml-4 xl:asnp-ml-6">
-							{ __(
-								'Hours',
-								'easy-sale-badges-for-woocommerce'
-							) }
-						</span>
-						<div className="asnp-w-[7rem] asnp-ml-4 xl:asnp-w-[8rem] xl:asnp-ml-6">
-							<input
-								type="text"
-								className="asnp-text-field"
-								value={ props.labelHoursTimer }
-								onChange={ ( e ) =>
-									props.onChange(
-										'labelHoursTimer',
-										e.target.value
-									)
-								}
-							/>
-						</div>
-					</label>
-					<label>
-						<span className="asnp-field-title asnp-ml-4 xl:asnp-ml-6">
-							{ __(
-								'Minutes',
-								'easy-sale-badges-for-woocommerce'
-							) }
-						</span>
-						<div className="asnp-w-[7rem] asnp-ml-4 xl:asnp-w-[8rem] xl:asnp-ml-6">
-							<input
-								type="text"
-								className="asnp-text-field"
-								value={ props.labelMinTimer }
-								onChange={ ( e ) =>
-									props.onChange(
-										'labelMinTimer',
-										e.target.value
-									)
-								}
-							/>
-						</div>
-					</label>
-					<label>
-						<span className="asnp-field-title asnp-ml-4 xl:asnp-ml-6">
-							{ __(
-								'Seconds',
-								'easy-sale-badges-for-woocommerce'
-							) }
-						</span>
-						<div className="asnp-w-[7rem] asnp-ml-4 xl:asnp-w-[8rem] xl:asnp-ml-6">
-							<input
-								type="text"
-								className="asnp-text-field"
-								value={ props.labelSecTimer }
-								onChange={ ( e ) =>
-									props.onChange(
-										'labelSecTimer',
-										e.target.value
-									)
-								}
-							/>
-						</div>
-					</label>
-				</div>
+				{ 'undefined' !== typeof props.badgeTimer &&
+					props.badgeTimer === 'timer1' && (
+						<>
+							<div className="asnp-mt-8">
+								<span className="asnp-field-title asnp-text-base asnp-font-semibold">
+									{ __(
+										'Labels',
+										'easy-sale-badges-for-woocommerce'
+									) }
+								</span>
+							</div>
+							<div className="asnp-flex asnp-mt-3 asnp-mb-6">
+								<label>
+									<span className="asnp-field-title asnp-ml-4">
+										{ __(
+											'Days',
+											'easy-sale-badges-for-woocommerce'
+										) }
+									</span>
+									<div className="asnp-w-[7rem] xl:asnp-w-[8rem]">
+										<input
+											type="text"
+											className="asnp-text-field"
+											value={ props.labelDayTimer }
+											onChange={ ( e ) =>
+												props.onChange(
+													'labelDayTimer',
+													e.target.value
+												)
+											}
+										/>
+									</div>
+								</label>
+								<label>
+									<span className="asnp-field-title asnp-ml-4 xl:asnp-ml-6">
+										{ __(
+											'Hours',
+											'easy-sale-badges-for-woocommerce'
+										) }
+									</span>
+									<div className="asnp-w-[7rem] asnp-ml-4 xl:asnp-w-[8rem] xl:asnp-ml-6">
+										<input
+											type="text"
+											className="asnp-text-field"
+											value={ props.labelHoursTimer }
+											onChange={ ( e ) =>
+												props.onChange(
+													'labelHoursTimer',
+													e.target.value
+												)
+											}
+										/>
+									</div>
+								</label>
+								<label>
+									<span className="asnp-field-title asnp-ml-4 xl:asnp-ml-6">
+										{ __(
+											'Minutes',
+											'easy-sale-badges-for-woocommerce'
+										) }
+									</span>
+									<div className="asnp-w-[7rem] asnp-ml-4 xl:asnp-w-[8rem] xl:asnp-ml-6">
+										<input
+											type="text"
+											className="asnp-text-field"
+											value={ props.labelMinTimer }
+											onChange={ ( e ) =>
+												props.onChange(
+													'labelMinTimer',
+													e.target.value
+												)
+											}
+										/>
+									</div>
+								</label>
+								<label>
+									<span className="asnp-field-title asnp-ml-4 xl:asnp-ml-6">
+										{ __(
+											'Seconds',
+											'easy-sale-badges-for-woocommerce'
+										) }
+									</span>
+									<div className="asnp-w-[7rem] asnp-ml-4 xl:asnp-w-[8rem] xl:asnp-ml-6">
+										<input
+											type="text"
+											className="asnp-text-field"
+											value={ props.labelSecTimer }
+											onChange={ ( e ) =>
+												props.onChange(
+													'labelSecTimer',
+													e.target.value
+												)
+											}
+										/>
+									</div>
+								</label>
+							</div>
+						</>
+					) }
 			</div>
 			<div>
 				<div className="asnp-w-[25rem] asnp-mt-8 asnp-text-lg asnp-font-semibold">

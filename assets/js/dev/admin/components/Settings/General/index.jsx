@@ -94,7 +94,7 @@ const General = ( props ) => {
 					<div className="asnp-flex">
 						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
 							{ __(
-								'Badge ',
+								'Badge and Countdown Timer ',
 								'easy-sale-badges-for-woocommerce'
 							) }
 							<strong>
@@ -214,7 +214,7 @@ const General = ( props ) => {
 					<div className="asnp-flex">
 						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
 							{ __(
-								'Badge ',
+								'Badge and Countdown Timer ',
 								'easy-sale-badges-for-woocommerce'
 							) }
 							<strong>
@@ -363,7 +363,7 @@ const General = ( props ) => {
 					<div className="asnp-flex">
 						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
 							{ __(
-								'Badge ',
+								'Badge and Countdown Timer ',
 								'easy-sale-badges-for-woocommerce'
 							) }
 							<strong>
@@ -470,7 +470,7 @@ const General = ( props ) => {
 					<div className="asnp-flex">
 						<div className="asnp-field-title asnp-ml-1 md:asnp-min-w-1/3 ">
 							{ __(
-								'Badge ',
+								'Badge and Countdown Timer ',
 								'easy-sale-badges-for-woocommerce'
 							) }
 							<strong>
