@@ -248,6 +248,46 @@ const Timer = ( props ) => {
 									opacity: '0.5',
 								} }
 								className={
+									( selected === 16
+										? 'asnp-border-indigo-700'
+										: 'asnp-border-gray-400' ) +
+									' asnp-p-10 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
+								}
+							>
+								<img
+									className="asnp-h-full asnp-w-full asnp-border-none asnp-object-cover"
+									src={
+										IMAGES_URL +
+										'countdownTimeFullWidth.png'
+									}
+								/>
+							</div>
+							<div
+								style={ {
+									cursor: 'not-allowed',
+									opacity: '0.5',
+								} }
+								className={
+									( selected === 17
+										? 'asnp-border-indigo-700'
+										: 'asnp-border-gray-400' ) +
+									' asnp-p-10 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
+								}
+							>
+								<img
+									className="asnp-h-full asnp-w-full asnp-border-none asnp-object-cover"
+									src={
+										IMAGES_URL +
+										'countdownTimeFullWidth2.png'
+									}
+								/>
+							</div>
+							<div
+								style={ {
+									cursor: 'not-allowed',
+									opacity: '0.5',
+								} }
+								className={
 									( selected === 15
 										? 'asnp-border-indigo-700'
 										: 'asnp-border-gray-400' ) +

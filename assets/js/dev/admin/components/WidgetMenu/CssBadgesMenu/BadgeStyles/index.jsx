@@ -353,6 +353,57 @@ const BadgeStyles = ( props ) => {
 								src={ IMAGES_URL + 'badge20.png' }
 							/>
 						</div>
+						<div
+							style={ {
+								cursor: 'not-allowed',
+								opacity: '0.5',
+							} }
+							className={
+								( props.badgeStyles === 'badge11'
+									? 'asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-p-3 asnp-containerImage hover:asnp-border-indigo-700'
+							}
+						>
+							<img
+								className="asnp-h-full asnp-w-full asnp-border-none"
+								src={ IMAGES_URL + 'badge11.png' }
+							/>
+						</div>
+						<div
+							style={ {
+								cursor: 'not-allowed',
+								opacity: '0.5',
+							} }
+							className={
+								( props.badgeStyles === 'badge12'
+									? 'asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-py-6 asnp-px-4 asnp-containerImage hover:asnp-border-indigo-700'
+							}
+						>
+							<img
+								className="asnp-h-full asnp-w-full asnp-border-none"
+								src={ IMAGES_URL + 'badge12.png' }
+							/>
+						</div>
+						<div
+							style={ {
+								cursor: 'not-allowed',
+								opacity: '0.5',
+							} }
+							className={
+								( props.badgeStyles === 'badge13'
+									? 'asnp-border-indigo-700'
+									: 'asnp-border-gray-400' ) +
+								' asnp-py-1 asnp-px-6 asnp-containerImage hover:asnp-border-indigo-700'
+							}
+						>
+							<img
+								className="asnp-h-full asnp-w-full asnp-border-none"
+								src={ IMAGES_URL + 'badge13.png' }
+							/>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -223,10 +223,14 @@ The plugin is rich in features, while it is lightweight and fast.
 
 == Changelog ==
 
+= 5.7.0 =
+* Introduced Countdown Timer feature in the Free version.
+* Added a new style for the Countdown Timer positioned on the image (Pro version).
+Note: Help us spread the word by leaving a 5-star review. ❤️😍 Feel free to share your ideas in your review, as we always value your feedback.🌹
+
 = 5.6.1 =
 * Translation support added for Sales Popup and Discount Popup (Pro version).
 * Compatibility with WooCommerce 9.8.5
-Note: Help us spread the word by leaving a 5-star review. ❤️😍 Feel free to share your ideas in your review, as we always value your feedback.🌹
 
 = 5.6.0 =
 * Added Discount Popup (Pro Version).
