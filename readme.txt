@@ -1,7 +1,7 @@
 === Badge and Product Label for WooCommerce ===
 Contributors: asanaplugins
 Donate link: https://www.asanaplugins.com/
-Tags: woocommerce badge, product label, woocommerce, badge, sale badge, notification bar, label
+Tags: woocommerce badge, product label, woocommerce, badge, sale badge, Countdown Timer, notification bar, label
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 5.6
@@ -9,11 +9,11 @@ Stable tag: 5.7.0
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WooCommerce Badge and Product Label, Sale Badge, Sold Out Badge, Countdown Timer (PRO), Notification Bar (PRO), Onsale, out-of-stock badge.
+WooCommerce Badge and Product Label, Sale Badge, Sold Out Badge, Countdown Timer, Notification Bar (PRO), Onsale, out-of-stock badge.
 
 == Description ==
 
-WooCommerce Badge and Product Label elevate your store's appeal with customized badges and countdown timers (PRO Version) and notification bar (PRO Version). Enhance your WooCommerce store with sale badges, product labels, and countdown timers to drive sales. This all-in-one plugin empowers you to create eye-catching labels and scheduled badges for products, categories, and tags. Highlighting discount values, product quantities, ratings, shipping classes, stock status, and sale status, these labels provide valuable information to your customers. Plus, leverage the power of countdown timers to create urgency and drive conversions. With an intuitive interface, easily customize labels and replace default on-sale badges. Take your WooCommerce store to new heights with visually appealing badges, labels, and countdown timers tailored to your unique offerings.
+WooCommerce Badge and Product Label elevate your store's appeal with customized badges and countdown timers and notification bar (PRO Version). Enhance your WooCommerce store with sale badges, product labels, and countdown timers to drive sales. This all-in-one plugin empowers you to create eye-catching labels and scheduled badges for products, categories, and tags. Highlighting discount values, product quantities, ratings, shipping classes, stock status, and sale status, these labels provide valuable information to your customers. Plus, leverage the power of countdown timers to create urgency and drive conversions. With an intuitive interface, easily customize labels and replace default on-sale badges. Take your WooCommerce store to new heights with visually appealing badges, labels, and countdown timers tailored to your unique offerings.
 
 [FRONT-END DEMO](https://pricing-and-discounts.asanaplugins.com/demo/shop/) | [BACK-END DEMO](https://pricing-and-discounts.asanaplugins.com/?asnp_demo_plugin=easy-sale-badges-for-woocommerce) | [Ask Questions](https://wordpress.org/support/plugin/easy-sale-badges-for-woocommerce/) | **[PRO WITH UP TO 75% DISCOUNT](https://www.asanaplugins.com/product/woocommerce-sale-badges-and-product-labels/)** | [Github](https://github.com/codewp/easy-sale-badges-for-woocommerce)
 
@@ -46,6 +46,7 @@ https://youtu.be/aTHFT3ovCaw
 
 - **Create Custom labels on Products**
 - **Add 15 CSS Label**
+- **Add Countdown Timer**
 - **Add Badge to Out Of Image Position**
 - **Provide support for the Elementor plugin**
 - **Provide support for the WPML plugin**
