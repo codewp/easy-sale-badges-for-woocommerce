@@ -8,7 +8,6 @@ class Assets {
 
 	protected $timers = [];
 
-
 	public function init() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts' ), 15 );
 		add_action( 'wp_footer', array( $this, 'localize_scripts' ), 15 );
