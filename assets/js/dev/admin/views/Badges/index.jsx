@@ -59,6 +59,7 @@ export default function Badges() {
 	const { loading, setLoading, setMessage } = useContext( AppContext );
 	const [ showDeleteModal, setShowDeleteModal ] = useState( false );
 	const [ deleteId, setDeleteId ] = useState( 0 );
+	const [ selectedIds, setSelectedIds ] = useState( [] );
 
 	useEffect( () => {
 		setLoading( state.isLoading );
@@ -294,7 +295,60 @@ export default function Badges() {
 			console.error( error.message );
 		}
 	};
+	
+	const toggleSelectAll = () => {
+		if ( selectedIds.length === state.items.length ) {
+			setSelectedIds( [] );
+		} else {
+			setSelectedIds( state.items.map( ( item ) => item.id ) );
+		}
+	};
 
+	const toggleSelect = ( id ) => {
+		setSelectedIds( ( prev ) =>
+			prev.includes( id )
+				? prev.filter( ( i ) => i !== id )
+				: [ ...prev, id ]
+		);
+	};
+
+	const deleteSelectedItems = async () => {
+		if ( ! selectedIds.length ) return;
+
+		if (
+			! confirm(
+				__(
+					'Are you sure you want to delete selected items?',
+					'easy-sale-badges-for-woocommerce'
+				)
+			)
+		) {
+			return;
+		}
+
+		setLoading( true );
+		try {
+			await Promise.all(
+				selectedIds.map( ( id ) => BadgeApi.deleteItem( id ) )
+			);
+			await itemRemoved( state, dispatch );
+			setSelectedIds( [] );
+			setMessage( {
+				message: __(
+					'Selected badges deleted successfully.',
+					'easy-sale-badges-for-woocommerce'
+				),
+				type: 'success',
+			} );
+		} catch ( error ) {
+			setMessage( {
+				message: error.message,
+				type: 'error',
+			} );
+		} finally {
+			setLoading( false );
+		}
+	};
 	return (
 		<div>
 			<div className="asnp-flex asnp-space-x-2">
@@ -304,7 +358,19 @@ export default function Badges() {
 				<Link to={ `/badge/new` } className="asnp-btn asnp-btn-primary">
 					{ __( 'Add New', 'easy-sale-badges-for-woocommerce' ) }
 				</Link>
+				{ state.items.length > 0 && (
+					<button
+						onClick={ deleteSelectedItems }
+						className="asnp-btn asnp-btn-delete asnp-ml-4"
+					>
+						{ __(
+							'Delete Selected',
+							'easy-sale-badges-for-woocommerce'
+						) }
+					</button>
+				) }
 			</div>
+
 			{ ! state.isLoading && ! loading && ! state.items.length && (
 				<Alert
 					message={ __(
@@ -325,6 +391,16 @@ export default function Badges() {
 								>
 									<thead className="asnp-bg-gray-50">
 										<tr>
+											<th className="asnp-px-4 asnp-py-3 asnp-text-left asnp-text-xs asnp-font-medium asnp-text-gray-500 asnp-uppercase asnp-tracking-wider">
+												<input
+													type="checkbox"
+													checked={
+														selectedIds.length ===
+														state.items.length
+													}
+													onChange={ toggleSelectAll }
+												/>
+											</th>
 											<th
 												scope="col"
 												className="asnp-px-6 asnp-py-3 asnp-text-left asnp-text-xs asnp-font-medium asnp-text-gray-500 asnp-uppercase asnp-tracking-wider"
@@ -393,6 +469,19 @@ export default function Badges() {
 									<tbody className="asnp-bg-white asnp-divide-y asnp-divide-gray-200">
 										{ state.items.map( ( item ) => (
 											<tr key={ item.id }>
+												<td className="asnp-px-4 asnp-py-4 asnp-whitespace-nowrap">
+													<input
+														type="checkbox"
+														checked={ selectedIds.includes(
+															item.id
+														) }
+														onChange={ () =>
+															toggleSelect(
+																item.id
+															)
+														}
+													/>
+												</td>
 												<td className="asnp-px-6 asnp-py-4 asnp-whitespace-nowrap">
 													{ item.id }
 												</td>
