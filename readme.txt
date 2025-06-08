@@ -224,10 +224,13 @@ The plugin is rich in features, while it is lightweight and fast.
 
 == Changelog ==
 
+= 5.7.1 =
+* Added translation support for the Notification Bar (Pro version)
+Note: Help us spread the word by leaving a 5-star review. ❤️😍 Feel free to share your ideas in your review, as we always value your feedback.🌹
+
 = 5.7.0 =
 * Introduced Countdown Timer feature in the Free version.
 * Added a new style for the Countdown Timer positioned on the image (Pro version).
-Note: Help us spread the word by leaving a 5-star review. ❤️😍 Feel free to share your ideas in your review, as we always value your feedback.🌹
 
 = 5.6.1 =
 * Translation support added for Sales Popup and Discount Popup (Pro version).
