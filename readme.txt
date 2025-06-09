@@ -210,17 +210,17 @@ The plugin is rich in features, while it is lightweight and fast.
 
 == Screenshots ==
 
-1. Animation.
-2. Modern Badges.
-3. Notification Bar.
-4. Product Labels.
-5. Sale Badges.
-6. Out of Image.
-7. CSS Labels.
-8. Image Labels.
-9. Timer.
-10. Countdown Timer.
-11. Percentage Discount amount.
+1. Product Badges.
+2. Product Badges with Percentage Discount.
+3. Countdown Timer.
+4. Product Labels Out of Image.
+5. Notification Bar.
+6. Animation.
+7. Sale Badges.
+8. Modern Badges.
+9. Css Label.
+10. Image Label.
+11. Timer.
 
 == Changelog ==
 
