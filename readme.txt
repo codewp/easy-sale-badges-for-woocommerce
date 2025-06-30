@@ -1,4 +1,4 @@
-=== Badge and Product Label for WooCommerce ===
+=== Product Badge, Label, Countdown Timer for WooCommerce - Sale Booster ===
 Contributors: asanaplugins
 Donate link: https://www.asanaplugins.com/
 Tags: woocommerce badge, product label, woocommerce, badge, sale badge, Countdown Timer, notification bar, label
