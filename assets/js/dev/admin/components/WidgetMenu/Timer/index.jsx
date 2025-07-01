@@ -191,6 +191,52 @@ const Timer = ( props ) => {
 							</label>
 						</div>
 						<div className="asnp-grid asnp-gap-4 asnp-grid-cols-1 xl:asnp-grid-cols-2 sm:asnp-grid-cols-1">
+							{ 'undefined' !== typeof props.timerPosition &&
+								props.timerPosition === 'outOfImage' && (
+									<div
+										style={ {
+											cursor: 'not-allowed',
+											opacity: '0.5',
+										} }
+										className={
+											( selected === 9
+												? 'asnp-border-indigo-700'
+												: 'asnp-border-gray-400' ) +
+											' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
+										}
+									>
+										<img
+											className="asnp-h-full asnp-w-full asnp-border-none"
+											src={
+												IMAGES_URL +
+												'countdownTimer1.png'
+											}
+										/>
+									</div>
+								) }
+							{ 'undefined' !== typeof props.timerPosition &&
+								props.timerPosition === 'outOfImage' && (
+									<div
+										style={ {
+											cursor: 'not-allowed',
+											opacity: '0.5',
+										} }
+										className={
+											( selected === 10
+												? 'asnp-border-indigo-700'
+												: 'asnp-border-gray-400' ) +
+											' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
+										}
+									>
+										<img
+											className="asnp-h-full asnp-w-full asnp-border-none"
+											src={
+												IMAGES_URL +
+												'countdownTimer2.png'
+											}
+										/>
+									</div>
+								) }
 							<div
 								style={ {
 									cursor: 'not-allowed',
@@ -351,52 +397,6 @@ const Timer = ( props ) => {
 									src={ IMAGES_URL + 'badgeTimer4.png' }
 								/>
 							</div>
-							{ 'undefined' !== typeof props.timerPosition &&
-								props.timerPosition === 'outOfImage' && (
-									<div
-										style={ {
-											cursor: 'not-allowed',
-											opacity: '0.5',
-										} }
-										className={
-											( selected === 9
-												? 'asnp-border-indigo-700'
-												: 'asnp-border-gray-400' ) +
-											' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
-										}
-									>
-										<img
-											className="asnp-h-full asnp-w-full asnp-border-none"
-											src={
-												IMAGES_URL +
-												'countdownTimer1.png'
-											}
-										/>
-									</div>
-								) }
-							{ 'undefined' !== typeof props.timerPosition &&
-								props.timerPosition === 'outOfImage' && (
-									<div
-										style={ {
-											cursor: 'not-allowed',
-											opacity: '0.5',
-										} }
-										className={
-											( selected === 10
-												? 'asnp-border-indigo-700'
-												: 'asnp-border-gray-400' ) +
-											' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
-										}
-									>
-										<img
-											className="asnp-h-full asnp-w-full asnp-border-none"
-											src={
-												IMAGES_URL +
-												'countdownTimer2.png'
-											}
-										/>
-									</div>
-								) }
 						</div>
 						<div className="asnp-w-full asnp-ml-2 asnp-mt-1 asnp-mb-2 asnp-text-gray-700 asnp-block asnp-font-medium asnp-text-base">
 							<label>
