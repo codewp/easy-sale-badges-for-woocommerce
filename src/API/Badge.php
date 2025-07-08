@@ -407,10 +407,8 @@ class Badge extends BaseController {
 				case 'timerFullWidthStyleHeight':
 				case 'timerFullWidthStyleHeight2':
 				case 'fontSizeLabelTimerFullWidthProductPage':
-				case 'widthCtBorderArch':
-				case 'widthCtBorderProd':
-				case 'heightCtBorderArch':
-				case 'heightCtBorderProd':
+				case 'sizeCtBorderArch':
+				case 'sizeCtBorderPro':
 					if ( isset( $value ) ) {
 						$options[ $key ] = absint( $value );
 					} elseif ( isset( $defaults[ $key ] ) ) {
