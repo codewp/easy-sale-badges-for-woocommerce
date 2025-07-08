@@ -148,6 +148,9 @@ jQuery( window ).on(
 						const progressBar = element.querySelector(
 							'.asnp-esb-timerStyle2ProgreesBarCalc'
 						);
+						const progressBorder = element.querySelectorAll(
+							'.asnp-esb-timerStyle2borderBarCalc-' + timer.id
+						);
 						if ( progressBar ) {
 							const totalDuration =
 								timer.timerMode === 'evergreen'
@@ -162,6 +165,65 @@ jQuery( window ).on(
 								100 -
 								( remainingTimeProgress / totalDuration ) * 100;
 							progressBar.style.width = progressPercentage + '%';
+						}
+
+						if ( progressBorder ) {
+							progressBorder.forEach( ( circleContainer ) => {
+								const days = parseInt(
+									element.querySelector( '.asnp-esb-daysT' )
+										?.innerText || 0
+								);
+								const hours = parseInt(
+									element.querySelector( '.asnp-esb-hoursT' )
+										?.innerText || 0
+								);
+								const minutes = parseInt(
+									element.querySelector( '.asnp-esb-minT' )
+										?.innerText || 0
+								);
+								const seconds = parseInt(
+									element.querySelector( '.asnp-esb-secT' )
+										?.innerText || 0
+								);
+
+								const updateCircle = (
+									selector,
+									value,
+									max
+								) => {
+									const circle = circleContainer.querySelector(
+										selector
+									);
+									if ( circle ) {
+										const percent = ( value / max ) * 100;
+										circle.setAttribute(
+											'stroke-dasharray',
+											`${ percent },100`
+										);
+									}
+								};
+
+								updateCircle(
+									'.asnp-esb-progress-days-' + timer.id,
+									days,
+									99
+								);
+								updateCircle(
+									'.asnp-esb-progress-hours-' + timer.id,
+									hours,
+									24
+								);
+								updateCircle(
+									'.asnp-esb-progress-min-' + timer.id,
+									minutes,
+									60
+								);
+								updateCircle(
+									'.asnp-esb-progress-sec-' + timer.id,
+									seconds,
+									60
+								);
+							} );
 						}
 
 						if ( 'none' === element.style.display ) {
