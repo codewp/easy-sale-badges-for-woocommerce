@@ -10,8 +10,8 @@ export const defaultSettings = {
 	showBadgeProductPage: 1,
 	loadDynamicStyles: 0,
 	singleContainer: '',
-	loopOutOfImagePosition: 'before_shop_loop_item_title',
-	singleOutOfImagePosition: 'before_single_item_title',
+	loopOutOfImagePosition: 'after_shop_loop_item_title',
+	singleOutOfImagePosition: 'after_single_item_title',
 };
 export const PLUGIN_URL = saleBadgeData.pluginUrl;
 export const IMAGES_URL = `${ PLUGIN_URL }assets/images/`;
