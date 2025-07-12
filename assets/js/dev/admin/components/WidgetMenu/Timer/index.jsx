@@ -191,6 +191,25 @@ const Timer = ( props ) => {
 							</label>
 						</div>
 						<div className="asnp-grid asnp-gap-4 asnp-grid-cols-1 xl:asnp-grid-cols-2 sm:asnp-grid-cols-1">
+							<div
+								style={ {
+									cursor: 'not-allowed',
+									opacity: '0.5',
+								} }
+								className={
+									( selected === 18
+										? 'asnp-border-indigo-700'
+										: 'asnp-border-gray-400' ) +
+									' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
+								}
+							>
+								<img
+									className="asnp-h-full asnp-w-full asnp-border-none asnp-object-cover"
+									src={
+										IMAGES_URL + 'countdownTimeBorder.png'
+									}
+								/>
+							</div>
 							{ 'undefined' !== typeof props.timerPosition &&
 								props.timerPosition === 'outOfImage' && (
 									<div
