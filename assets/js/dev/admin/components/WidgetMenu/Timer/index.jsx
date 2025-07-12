@@ -200,7 +200,7 @@ const Timer = ( props ) => {
 									( selected === 18
 										? 'asnp-border-indigo-700'
 										: 'asnp-border-gray-400' ) +
-									' asnp-p-8 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
+									' asnp-py-8 asnp-px-4 asnp-containerBadgeTimer hover:asnp-border-indigo-700'
 								}
 							>
 								<img
