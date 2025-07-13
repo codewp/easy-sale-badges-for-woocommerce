@@ -384,6 +384,8 @@ class Badge extends BaseController {
 				case 'borderProgressBg':
 				case 'textTimerBorderPosArch':
 				case 'textTimerBorderPosPro':
+				case 'timerBorderPosPro':
+				case 'timerBorderPosArch':
 					if ( isset( $value ) ) {
 						$options[ $key ] = sanitize_text_field( $value );
 					} elseif ( isset( $defaults[ $key ] ) ) {
