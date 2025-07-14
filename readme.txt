@@ -226,7 +226,7 @@ The plugin is rich in features, while it is lightweight and fast.
 
 = 5.9.0 =
 * Added a new style to the Countdown Timer (Pro version).
-* Compatibility with WooCommerce 9.9.5
+* Compatibility with WooCommerce 10.0.2
 Note: Help us spread the word by leaving a 5-star review. ❤️😍 Feel free to share your ideas in your review, as we always value your feedback.🌹
 
 = 5.8.0 =
