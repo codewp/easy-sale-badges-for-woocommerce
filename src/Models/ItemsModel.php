@@ -86,51 +86,7 @@ class ItemsModel {
 			$data_name = $product->get_title();
 			if ( $product->is_type( 'variation' ) ) {
 				$data_name = $product->get_title();
-
-				// Attempt to load variation attributes from meta if available
-				$extra_data = array(
-					'attributes' => array(),
-				);
-
-				$variation_attributes = $product->get_variation_attributes();
-
-				foreach ( $variation_attributes as $attr_name => $attr_value ) {
-					$taxonomy_label = wc_attribute_label( str_replace( 'attribute_', '', $attr_name ) );
-					$term_label = $attr_value;
-
-					// Try to get nice term label if it's a taxonomy
-					if ( taxonomy_exists( str_replace( 'attribute_', '', $attr_name ) ) ) {
-						$term = get_term_by( 'slug', $attr_value, str_replace( 'attribute_', '', $attr_name ) );
-						if ( $term && ! is_wp_error( $term ) ) {
-							$term_label = $term->name;
-						}
-					}
-
-					$extra_data['attributes'][] = array(
-						'name'  => $taxonomy_label,
-						'label' => $term_label,
-					);
-				}
-
-				if ( ! empty( $extra_data['attributes'] ) ) {
-					$attributes = [];
-					foreach ( $extra_data['attributes'] as $attribute ) {
-						$attributes[] = esc_html( $attribute['name'] ) . ':' . esc_html( $attribute['label'] );
-					}
-					if ( ! empty( $attributes ) ) {
-						$data_name .= ' ' . implode( ', ', $attributes );
-					}
-				} else {
-					$data_name .= ' ' . wc_get_formatted_variation( $product, true );
-				}
-			}
-			// === End custom name logic ===
-
-			if ( 'variation' === $product->get_type() ) {
-				$formatted_variation_list = wc_get_formatted_variation( $product, true );
-				$text                     = sprintf( '%2$s (%1$s)', $identifier, $product->get_title() ) . ' ' . $formatted_variation_list;
-			} else {
-				$text = sprintf( '%2$s (%1$s)', $identifier, $product->get_title() );
+				$data_name .= ' ' . wc_get_formatted_variation( $product, true );
 			}
 
 			$regular_price = '' !== $product->get_regular_price() ? wc_get_price_to_display( $product, [ 'price' => $product->get_regular_price() ] ) : '';
